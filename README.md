@@ -22,12 +22,29 @@ more images with different content.
 
 Українською: [README_UK.md](README_UK.md).
 
+## What is here now
+
+The kernel-built golden image does not exist yet. In its place there is
+**`image-v0-ztest`**, built with OpenZFS userland only (`ztest` + `zdb`, no
+kernel module, no root, no disks): three pools — mirror, raidz2 inside a
+mirror wrapper, draid1 — with genuine OpenZFS metadata but no zvols. Its
+oracle is in `oracle/`, its description in [IMAGE.md](IMAGE.md), and the
+first run of the damage matrix against it in
+[reports/image-v0-ztest](reports/image-v0-ztest/README.md): 17 applicable
+cases, all passed, no defects.
+
+The member files themselves are not in git; rebuild them with
+`tests/golden/build-ztest-image.sh` in zvolrescue (about three minutes) or
+fetch them from the `image-v0-ztest` release. Their SHA-256 sums are in
+`oracle/SHA256SUMS-release.txt`.
+
 ## Layout
 
 | Path | What |
 |---|---|
 | GitHub Releases | image members, `zstd`-compressed, one file each, plus `SHA256SUMS` — never in git (see below) |
-| `oracle/` | volume hashes per snapshot, `zdb -d`/`zdb -l` captures, `zpool status`, key material of the test datasets |
+| `oracle/<pool>/` | dataset inventory, `zdb` captures, labels, layout, keys — the recorded truth of each pool |
+| `reports/<tag>/` | damage-matrix runs against that image: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
 | `IMAGE.md` | how the image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history |
 
