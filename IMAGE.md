@@ -109,6 +109,17 @@ redundancy group.
 
 Nothing here was produced by zvolrescue.
 
+## A caveat about this particular build
+
+`ztest` picks its topology, datasets and writes at random, so a rebuild
+produces a *different* image. The oracle in `oracle/` and the sums below
+describe exactly the build listed here. If those member files are never
+published, treat this image as a record of one run rather than a fixture:
+rebuild with `tests/golden/build-ztest-image.sh`, and the new oracle
+replaces this one. The kernel-built golden image (`image-v1`) will be the
+first fixture worth pinning, because it is built by a script that decides
+the layout instead of ztest.
+
 ## Release files
 
 `<pool>-<role>.img.zst` — the members, one file per role. Unpack with

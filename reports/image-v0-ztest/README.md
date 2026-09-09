@@ -40,6 +40,10 @@ and verify every block of every object.
 
 ## Reading the result
 
+*This run is tied to one particular ztest build (see the caveat in
+[IMAGE.md](../../IMAGE.md)); the numbers describe that build, not a
+fixture anyone else can reproduce byte for byte.*
+
 No defects: on every applicable case the tool either produced the data the
 oracle recorded, or used redundancy and produced it, or refused with a
 reason and offered nothing. Inputs were unchanged after every run.
