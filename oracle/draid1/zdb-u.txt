@@ -1,0 +1,12 @@
+
+Uberblock:
+	magic = 0000000000bab10c
+	version = 5000
+	txg = 678
+	guid_sum = 8608674748009434079
+	timestamp = 1788988528 UTC = Wed Sep  9 21:15:28 2026
+	mmp_magic = 00000000a11cea11
+	mmp_delay = 0
+	mmp_valid = 0
+	checkpoint_txg = 0
+

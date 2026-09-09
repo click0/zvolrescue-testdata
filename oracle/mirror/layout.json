@@ -1,0 +1,42 @@
+{
+ "pool": "ztest",
+ "image_tag": "image-v0-ztest",
+ "source": "ztest",
+ "kernel": false,
+ "volumes": false,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "mirror",
+   "members": [
+    "t0-mirror-0",
+    "t0-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-mirror-0": {
+   "file": "ztest.0a",
+   "guid": "4047209923073797906",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t0-mirror-1": {
+   "file": "ztest.1b",
+   "guid": "5947620172203515270",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  }
+ }
+}

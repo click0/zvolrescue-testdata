@@ -1,0 +1,8 @@
+t0-raidz2-0 ztest.0a
+t0-raidz2-1 ztest.1a
+t0-raidz2-2 ztest.2a
+t0-raidz2-3 ztest.3a
+t1-raidz2-0 ztest.4a
+t1-raidz2-1 ztest.5a
+t1-raidz2-2 ztest.6a
+t1-raidz2-3 ztest.7a

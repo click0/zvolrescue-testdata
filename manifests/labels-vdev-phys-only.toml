@@ -24,5 +24,10 @@ range = "-240KiB..-128KiB"
 pattern = "zeros"
 
 [expect]
-outcome = "bit-exact"
+# With its four vdev_phys nvlists gone the member has no identity, so the
+# pool treats it as absent and redundancy carries the reads. A mirror hands
+# the copy over directly; parity vdevs rebuild the column. Re-identifying
+# such a member from its surviving uberblocks is F-61.
+outcome = "reconstructed"
+by_group_kind = { mirror = "bit-exact" }
 volumes = "all"

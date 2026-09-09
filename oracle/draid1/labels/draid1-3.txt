@@ -1,0 +1,146 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'ztest'
+    state: 0
+    txg: 325
+    pool_guid: 7861223386094465743
+    errata: 0
+    hostid: 322419188
+    hostname: 'vm'
+    top_guid: 5388340069518887720
+    guid: 10095090402737699300
+    vdev_children: 1
+    vdev_tree:
+        type: 'draid'
+        id: 0
+        guid: 5388340069518887720
+        nparity: 1
+        draid_ndata: 2
+        draid_nspares: 1
+        draid_ngroups: 5
+        metaslab_array: 85
+        metaslab_shift: 28
+        ashift: 12
+        asize: 3271557120
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 17743344930636363324
+            path: '/home/user/golden/pools/draid1/ztest.0a'
+            DTL: 119
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 2433706993398452023
+            path: '/home/user/golden/pools/draid1/ztest.1a'
+            DTL: 118
+            create_txg: 4
+        children[2]:
+            type: 'file'
+            id: 2
+            guid: 18224492663183071254
+            path: '/home/user/golden/pools/draid1/ztest.2a'
+            DTL: 117
+            create_txg: 4
+        children[3]:
+            type: 'file'
+            id: 3
+            guid: 10095090402737699300
+            path: '/home/user/golden/pools/draid1/ztest.3a'
+            DTL: 116
+            create_txg: 4
+        children[4]:
+            type: 'file'
+            id: 4
+            guid: 12625527194648820677
+            path: '/home/user/golden/pools/draid1/ztest.4a'
+            DTL: 115
+            create_txg: 4
+        children[5]:
+            type: 'file'
+            id: 5
+            guid: 10235116691215651156
+            path: '/home/user/golden/pools/draid1/ztest.5a'
+            DTL: 114
+            create_txg: 4
+        children[6]:
+            type: 'file'
+            id: 6
+            guid: 14572051509539998424
+            path: '/home/user/golden/pools/draid1/ztest.6a'
+            DTL: 113
+            create_txg: 4
+        children[7]:
+            type: 'file'
+            id: 7
+            guid: 6853361252004266428
+            path: '/home/user/golden/pools/draid1/ztest.7a'
+            DTL: 112
+            create_txg: 4
+        children[8]:
+            type: 'file'
+            id: 8
+            guid: 1610518527688783064
+            path: '/home/user/golden/pools/draid1/ztest.8a'
+            DTL: 111
+            create_txg: 4
+        children[9]:
+            type: 'file'
+            id: 9
+            guid: 9762769771738370171
+            path: '/home/user/golden/pools/draid1/ztest.9a'
+            DTL: 110
+            create_txg: 4
+        children[10]:
+            type: 'file'
+            id: 10
+            guid: 16775725362714696963
+            path: '/home/user/golden/pools/draid1/ztest.10a'
+            DTL: 103
+            create_txg: 4
+        children[11]:
+            type: 'file'
+            id: 11
+            guid: 4564928340576220560
+            path: '/home/user/golden/pools/draid1/ztest.11a'
+            DTL: 102
+            create_txg: 4
+        children[12]:
+            type: 'file'
+            id: 12
+            guid: 3520291332482260054
+            path: '/home/user/golden/pools/draid1/ztest.12a'
+            DTL: 87
+            create_txg: 4
+        children[13]:
+            type: 'file'
+            id: 13
+            guid: 13385931583469400394
+            path: '/home/user/golden/pools/draid1/ztest.13a'
+            DTL: 25
+            create_txg: 4
+        children[14]:
+            type: 'file'
+            id: 14
+            guid: 7952023181999238067
+            path: '/home/user/golden/pools/draid1/ztest.14a'
+            DTL: 24
+            create_txg: 4
+        children[15]:
+            type: 'file'
+            id: 15
+            guid: 11024928217748753301
+            path: '/home/user/golden/pools/draid1/ztest.15a'
+            DTL: 17
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        org.openzfs:draid
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

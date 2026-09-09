@@ -1,0 +1,270 @@
+[
+ {
+  "id": "combo-1",
+  "description": "Front labels of a raidz2 member gone AND garbage in another raidz2 member AND one mirror half missing",
+  "expected": "reconstructed",
+  "notes": [
+   "no member matching {'kind': 'mirror', 'leaf': 1}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "data-bit-flips",
+  "description": "Single bit flips scattered over a draid1 member",
+  "expected": "reconstructed",
+  "notes": [
+   "no member matching {'kind': 'draid1', 'leaf': 3}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "data-mirror-both-halves",
+  "description": "Garbage on both mirror halves at different places",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'mirror', 'leaf': 0}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "data-raidz-column",
+  "description": "16 MiB of garbage in the data area of one raidz2 member",
+  "expected": "reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-all-four",
+  "description": "All four labels of one raidz2 member zeroed: the member has no identity, the pool still has parity",
+  "expected": "reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-front-pair",
+  "description": "Both front labels (L0, L1) of one raidz2 member zeroed; rear pair intact",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-one-l0",
+  "description": "Label L0 of one raidz2 member zeroed",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-rear-pair",
+  "description": "Both rear labels (L2, L3) of one mirror member zeroed",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'mirror', 'leaf': 0}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-rings-forged-txg",
+  "description": "Uberblock rings of one member replaced by the rings of an older image tag (valid but stale)",
+  "expected": "bit-exact",
+  "notes": [
+   "this image has no older-self material"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-rings-only",
+  "description": "Only the four uberblock rings of one mirror member zeroed; vdev_phys intact, the other mirror half is fine",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'mirror', 'leaf': 1}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "labels-vdev-phys-only",
+  "description": "Only the four vdev_phys nvlists of one draid1 member zeroed; every uberblock ring intact",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'draid1', 'leaf': 0}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "member-missing-beyond-parity",
+  "description": "Three raidz2 members absent: beyond parity, must refuse cleanly",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "refused",
+   "refused_detail": "32  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 3  fletcher4: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 1  fletcher4: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
+   "counts": "14 datasets, 283 objects, 333 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "member-missing-raidz2",
+  "description": "One raidz2 member absent",
+  "expected": "reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "member-missing-two-raidz2",
+  "description": "Two raidz2 members absent (the parity limit)",
+  "expected": "reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "member-older-self",
+  "description": "One draid1 member replaced by its own copy from an earlier point of the build (everything verifies, nothing is current)",
+  "expected": "reconstructed",
+  "notes": [
+   "no member matching {'kind': 'draid1', 'leaf': 1}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "metadata-crypto-key-object",
+  "description": "Every copy of the DSL crypto key ZAP of secret-raw overwritten",
+  "expected": "refused",
+  "notes": [
+   "target secret-raw:crypto-key: only objset/dnode-block are located from zdb"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "metadata-dnode-block",
+  "description": "Every copy of the dnode block holding vm/disk-16k object 1 overwritten",
+  "expected": "refused",
+  "notes": [
+   "target vm/disk-16k:dnode-block not found in the zdb capture"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "metadata-mos-one-copy",
+  "description": "One DVA of the MOS objset block overwritten; the other copies are fine",
+  "expected": "reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "partition-gpt-rewritten",
+  "description": "First 1 MiB of a member overwritten with a fresh GPT (as a careless installer would)",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "14 datasets, 296 objects, 338 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "partition-start-shifted",
+  "description": "A member image shifted forward by 2048 sectors (the partition was re-created at another offset)",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'mirror', 'leaf': 0}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ },
+ {
+  "id": "partition-tail-truncated",
+  "description": "Last 8 MiB of a member cut off (rear labels gone, device shorter than asize)",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'kind': 'draid1', 'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "raidz2"
+ }
+]

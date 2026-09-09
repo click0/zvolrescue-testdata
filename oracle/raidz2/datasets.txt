@@ -1,0 +1,32 @@
+Dataset mos [META], ID 0, cr_txg 4, 3.03M, 173 objects
+Dataset ztest/ds_1 [OTHER], ID 16, cr_txg 41, 7.74M, 15 objects
+Dataset ztest/temp_2@3 [OTHER], ID 552, cr_txg 956, 326K, 5 objects
+Dataset ztest/temp_2 [OTHER], ID 465, cr_txg 914, 326K, 5 objects
+Dataset ztest/temp_1@2 [OTHER], ID 576, cr_txg 971, 116K, 5 objects
+Dataset ztest/temp_1 [OTHER], ID 566, cr_txg 965, 116K, 5 objects
+Dataset ztest/ds_2 [OTHER], ID 94, cr_txg 43, 7.56M, 15 objects
+Dataset ztest/ds_0@0 [OTHER], ID 357, cr_txg 833, 5.93M, 16 objects
+Dataset ztest/ds_0 [OTHER], ID 5, cr_txg 6, 6.10M, 16 objects
+Dataset ztest/temp_3@1 [OTHER], ID 545, cr_txg 952, 459K, 5 objects
+Dataset ztest/temp_3 [OTHER], ID 513, cr_txg 942, 366K, 5 objects
+Dataset ztest/temp_0 [OTHER], ID 538, cr_txg 949, 116K, 1 objects
+Dataset ztest/ds_3@3 [OTHER], ID 155, cr_txg 425, 3.89M, 15 objects
+Dataset ztest/ds_3 [OTHER], ID 103, cr_txg 45, 7.99M, 15 objects
+Dataset ztest [ZPL], ID 54, cr_txg 1, 11.6K, 0 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 12 is correct
+Verified sha512 feature refcount of 4 is correct
+Verified skein feature refcount of 3 is correct
+Verified edonr feature refcount of 2 is correct
+Verified userobj_accounting feature refcount of 0 is correct
+Verified encryption feature refcount of 9 is correct
+Verified project_quota feature refcount of 0 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 10 is correct
+Verified zilsaxattr feature refcount of 7 is correct
+Verified blake3 feature refcount of 4 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct

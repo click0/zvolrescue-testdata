@@ -1,0 +1,120 @@
+
+MOS Configuration:
+        version: 5000
+        name: 'ztest'
+        state: 0
+        txg: 1030
+        pool_guid: 7781325853063801321
+        errata: 0
+        hostid: 322419188
+        hostname: 'vm'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 2
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 7781325853063801321
+            create_txg: 4
+            com.klarasystems:vdev_zap_root: 66
+            children[0]:
+                type: 'mirror'
+                id: 0
+                guid: 11974714547887784727
+                metaslab_array: 72
+                metaslab_shift: 25
+                ashift: 12
+                asize: 517996544
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 67
+                children[0]:
+                    type: 'raidz'
+                    id: 0
+                    guid: 1625347539083675018
+                    nparity: 2
+                    create_txg: 4
+                    children[0]:
+                        type: 'file'
+                        id: 0
+                        guid: 16942524657484803534
+                        path: '/home/user/golden/pools/raidz2/ztest.0a'
+                        DTL: 31
+                        create_txg: 4
+                        com.delphix:vdev_zap_leaf: 68
+                    children[1]:
+                        type: 'file'
+                        id: 1
+                        guid: 15222067081126932603
+                        path: '/home/user/golden/pools/raidz2/ztest.1a'
+                        DTL: 30
+                        create_txg: 4
+                        com.delphix:vdev_zap_leaf: 69
+                    children[2]:
+                        type: 'file'
+                        id: 2
+                        guid: 4140445396398325282
+                        path: '/home/user/golden/pools/raidz2/ztest.2a'
+                        DTL: 29
+                        create_txg: 4
+                        com.delphix:vdev_zap_leaf: 70
+                    children[3]:
+                        type: 'file'
+                        id: 3
+                        guid: 9440618559310348143
+                        path: '/home/user/golden/pools/raidz2/ztest.3a'
+                        DTL: 28
+                        create_txg: 4
+                        com.delphix:vdev_zap_leaf: 71
+            children[1]:
+                type: 'mirror'
+                id: 1
+                guid: 4931199369543172597
+                metaslab_array: 207
+                metaslab_shift: 25
+                ashift: 12
+                asize: 517996544
+                is_log: 0
+                create_txg: 461
+                com.delphix:vdev_zap_top: 197
+                children[0]:
+                    type: 'raidz'
+                    id: 0
+                    guid: 12881895683628783656
+                    nparity: 2
+                    create_txg: 461
+                    children[0]:
+                        type: 'file'
+                        id: 0
+                        guid: 1825323122004289808
+                        path: '/home/user/golden/pools/raidz2/ztest.4a'
+                        DTL: 98
+                        create_txg: 461
+                        com.delphix:vdev_zap_leaf: 198
+                    children[1]:
+                        type: 'file'
+                        id: 1
+                        guid: 1851323150902476440
+                        path: '/home/user/golden/pools/raidz2/ztest.5a'
+                        DTL: 96
+                        create_txg: 461
+                        com.delphix:vdev_zap_leaf: 199
+                    children[2]:
+                        type: 'file'
+                        id: 2
+                        guid: 17393269830350553959
+                        path: '/home/user/golden/pools/raidz2/ztest.6a'
+                        DTL: 90
+                        create_txg: 461
+                        com.delphix:vdev_zap_leaf: 200
+                    children[3]:
+                        type: 'file'
+                        id: 3
+                        guid: 14397440641945032551
+                        path: '/home/user/golden/pools/raidz2/ztest.7a'
+                        DTL: 89
+                        create_txg: 461
+                        com.delphix:vdev_zap_leaf: 201
+        features_for_read:
+            com.delphix:hole_birth
+            com.delphix:embedded_data
+            com.klarasystems:vdev_zaps_v2

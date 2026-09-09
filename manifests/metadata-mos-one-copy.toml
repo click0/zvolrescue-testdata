@@ -8,6 +8,9 @@ target = { object = "mos:objset", copy = 0 }
 pattern = "random"
 
 [expect]
+# On a mirror the other copy is read directly; on raidz/dRAID the copy
+# lives in a stripe, so its column is rebuilt from parity.
 outcome = "bit-exact"
+by_group_kind = { raidz1 = "reconstructed", raidz2 = "reconstructed", raidz3 = "reconstructed", draid1 = "reconstructed", draid2 = "reconstructed" }
 volumes = "all"
 evidence = ["dva 0", "Mismatch"]

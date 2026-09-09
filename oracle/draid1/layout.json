@@ -1,0 +1,171 @@
+{
+ "pool": "ztest",
+ "image_tag": "image-v0-ztest",
+ "source": "ztest",
+ "kernel": false,
+ "volumes": false,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "draid1",
+   "members": [
+    "t0-draid1-0",
+    "t0-draid1-1",
+    "t0-draid1-2",
+    "t0-draid1-3",
+    "t0-draid1-4",
+    "t0-draid1-5",
+    "t0-draid1-6",
+    "t0-draid1-7",
+    "t0-draid1-8",
+    "t0-draid1-9",
+    "t0-draid1-10",
+    "t0-draid1-11",
+    "t0-draid1-12",
+    "t0-draid1-13",
+    "t0-draid1-14",
+    "t0-draid1-15"
+   ],
+   "groups": [
+    {
+     "kind": "draid1",
+     "nparity": 1,
+     "ndata": 2,
+     "nspares": 1,
+     "count": 16
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-draid1-0": {
+   "file": "ztest.0a",
+   "guid": "17743344930636363324",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 0
+  },
+  "t0-draid1-1": {
+   "file": "ztest.1a",
+   "guid": "2433706993398452023",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 1
+  },
+  "t0-draid1-2": {
+   "file": "ztest.2a",
+   "guid": "18224492663183071254",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 2
+  },
+  "t0-draid1-3": {
+   "file": "ztest.3a",
+   "guid": "10095090402737699300",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 3
+  },
+  "t0-draid1-4": {
+   "file": "ztest.4a",
+   "guid": "12625527194648820677",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 4
+  },
+  "t0-draid1-5": {
+   "file": "ztest.5a",
+   "guid": "10235116691215651156",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 5
+  },
+  "t0-draid1-6": {
+   "file": "ztest.6a",
+   "guid": "14572051509539998424",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 6
+  },
+  "t0-draid1-7": {
+   "file": "ztest.7a",
+   "guid": "6853361252004266428",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 7
+  },
+  "t0-draid1-8": {
+   "file": "ztest.8a",
+   "guid": "1610518527688783064",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 8
+  },
+  "t0-draid1-9": {
+   "file": "ztest.9a",
+   "guid": "9762769771738370171",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 9
+  },
+  "t0-draid1-10": {
+   "file": "ztest.10a",
+   "guid": "16775725362714696963",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 10
+  },
+  "t0-draid1-11": {
+   "file": "ztest.11a",
+   "guid": "4564928340576220560",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 11
+  },
+  "t0-draid1-12": {
+   "file": "ztest.12a",
+   "guid": "3520291332482260054",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 12
+  },
+  "t0-draid1-13": {
+   "file": "ztest.13a",
+   "guid": "13385931583469400394",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 13
+  },
+  "t0-draid1-14": {
+   "file": "ztest.14a",
+   "guid": "7952023181999238067",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 14
+  },
+  "t0-draid1-15": {
+   "file": "ztest.15a",
+   "guid": "11024928217748753301",
+   "top": 0,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 15
+  }
+ }
+}

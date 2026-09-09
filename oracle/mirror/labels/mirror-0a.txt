@@ -1,0 +1,43 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'ztest'
+    state: 0
+    txg: 1645
+    pool_guid: 13072863537766372078
+    errata: 0
+    hostid: 322419188
+    hostname: 'vm'
+    top_guid: 13048060114602851144
+    guid: 4047209923073797906
+    vdev_children: 1
+    vdev_tree:
+        type: 'mirror'
+        id: 0
+        guid: 13048060114602851144
+        metaslab_array: 70
+        metaslab_shift: 24
+        ashift: 12
+        asize: 125566976
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 4047209923073797906
+            path: '/home/user/golden/pools/mirror/ztest.0a'
+            DTL: 228
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 5947620172203515270
+            path: '/home/user/golden/pools/mirror/ztest.1b'
+            DTL: 209
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

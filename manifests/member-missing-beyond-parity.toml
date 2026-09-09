@@ -16,5 +16,8 @@ member = "raidz2-2"
 pattern = "missing"
 
 [expect]
+# Beyond parity: every block that lived only on this top-level vdev must be
+# refused with a reason, and nothing may be presented as good. Datasets whose
+# metadata has copies elsewhere stay listable — that is not a failure.
 outcome = "refused"
 volumes = "all"

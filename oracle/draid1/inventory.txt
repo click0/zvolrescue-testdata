@@ -1,0 +1,13 @@
+ztest 1 0
+ztest/ds_0 6 16
+ztest/ds_0@0 423 15
+ztest/ds_1 46 15
+ztest/ds_1@1 324 14
+ztest/ds_2 48 15
+ztest/ds_3 50 15
+ztest/ds_3@3 586 15
+ztest/temp_0 634 1
+ztest/temp_1 630 5
+ztest/temp_1@2 648 5
+ztest/temp_2 643 5
+ztest/temp_3 632 1

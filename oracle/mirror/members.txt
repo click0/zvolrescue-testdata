@@ -1,0 +1,2 @@
+t0-mirror-0 ztest.0a
+t0-mirror-1 ztest.1b

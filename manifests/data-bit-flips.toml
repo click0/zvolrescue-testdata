@@ -9,5 +9,8 @@ range = "8MiB..400MiB"
 pattern = "flip-bits:64"
 
 [expect]
-outcome = "reconstructed"
+# Flips land wherever they land: on a lightly filled pool most hit free
+# space and nothing needs rebuilding, on a full one they corrupt live
+# columns. Both are correct; silently wrong data is not.
+outcome = ["bit-exact", "reconstructed"]
 volumes = "all"
