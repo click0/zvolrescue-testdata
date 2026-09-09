@@ -28,7 +28,13 @@ evidence = ["label L0 missing", "label L2 used"]   # substrings the evidence log
 ```
 
 `expect.outcome` is derived from the redundancy ZFS guarantees for the
-damage, not from what the tool does today. A run that lands anywhere else
+damage, not from what the tool does today. `bit-exact` means every judged
+volume hashed equal to the oracle without any use of redundancy;
+`reconstructed` means the hashes are equal but the evidence log shows
+redundancy at work (a member reported missing, a mirror half skipped, a
+parity or combinatorial reconstruction); `refused` means the tool stopped
+with exit 3 for every judged volume and presented no partial output as
+good. A run that lands anywhere else
 is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
 
