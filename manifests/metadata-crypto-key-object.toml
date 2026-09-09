@@ -1,0 +1,12 @@
+id = "metadata-crypto-key-object"
+description = "Every copy of the DSL crypto key ZAP of secret-raw overwritten"
+classes = ["metadata"]
+
+
+[[damage]]
+target = { object = "secret-raw:crypto-key", copy = "all" }
+pattern = "random"
+
+[expect]
+outcome = "refused"
+volumes = ["golden/secret-raw/disk"]

@@ -1,0 +1,13 @@
+id = "metadata-mos-one-copy"
+description = "One DVA of the MOS objset block overwritten; the other copies are fine"
+classes = ["metadata"]
+
+
+[[damage]]
+target = { object = "mos:objset", copy = 0 }
+pattern = "random"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+evidence = ["dva 0", "Mismatch"]

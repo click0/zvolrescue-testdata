@@ -19,7 +19,7 @@ classes = ["labels"]          # for combination bookkeeping
 [[damage]]
 member = "raidz2-1"           # member name from IMAGE.md
 range = "0..512KiB"           # byte range in the member; sizes in KiB/MiB/GiB
-pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | older-self:<image-tag>
+pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | missing | older-self:<source>
 
 [expect]
 outcome = "bit-exact"         # bit-exact | reconstructed | refused | (never "defect")
@@ -32,9 +32,31 @@ damage, not from what the tool does today. A run that lands anywhere else
 is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
 
-`older-self:<tag>` overwrites the range with the same range taken from an
-earlier image tag — the "member replaced by an older copy of itself" case,
-where everything verifies but is not the newest.
+Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
+negative start counts from the end of the member (`-512KiB..` is the last
+512 KiB), `0..` is the whole member. Patterns: `zeros`, `random` (seeded per
+manifest, so reproducible), `flip-bits:<n>` (n single-bit flips spread over
+the range), `shift:<sectors>` (the member's content moved forward, the
+image grows), `truncate` (the range is cut off, the image shrinks),
+`missing` (the member is not passed to the tool at all; no range), and
+`older-self:<source>` — the range is replaced by the same range of an
+earlier consistent copy of the member (`image-v1-round6` = the `round6-*`
+release files of tag `image-v1`): the "member replaced by an older copy of
+itself" case, where everything verifies but nothing is current.
+
+A damage may also name a structure instead of a range:
+
+```toml
+[[damage]]
+target = { object = "vm/disk-16k:dnode-block", copy = "all" }   # or copy = 0 / 1 / 2
+pattern = "random"
+```
+
+`object` is `<dataset>:<what>` with `what` one of `objset`, `dnode-block`
+(the dnode array block holding object 1), `crypto-key` (the DSL crypto key
+ZAP), or `mos:objset`. The harness resolves it to member/offset/size from
+the oracle's `zdb` captures — never from the tool under test — and
+overwrites the chosen DVA copies.
 
 ## Classes
 
@@ -47,5 +69,12 @@ where everything verifies but is not the newest.
 | `member` | whole member missing, member replaced by an older copy of itself |
 
 Combinations are pairs and triples of variants across members and
-top-level vdevs. A subset marked `held_out = true` is not run during
-development, only before a release.
+top-level vdevs (`combo-<n>.toml`). A manifest with `held_out = true` is
+not run during development, only before a release.
+
+The first set (22 manifests) covers each class at least once against the
+`image-v1` layout: members `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3`
+(see `oracle/layout.json` once the image is built). Expected outcomes are
+stated from ZFS redundancy; where the current tool is known to fall short
+(zero-point search, F-60..F-67), the manifest says so in a comment and the
+run is a known defect until the feature lands.

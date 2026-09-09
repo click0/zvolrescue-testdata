@@ -1,0 +1,18 @@
+id = "data-mirror-both-halves"
+description = "Garbage on both mirror halves at different places"
+classes = ["data"]
+
+
+[[damage]]
+member = "mirror-0a"
+range = "32MiB..40MiB"
+pattern = "random"
+
+[[damage]]
+member = "mirror-0b"
+range = "48MiB..56MiB"
+pattern = "random"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

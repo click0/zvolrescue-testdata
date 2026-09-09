@@ -1,0 +1,13 @@
+id = "partition-gpt-rewritten"
+description = "First 1 MiB of a member overwritten with a fresh GPT (as a careless installer would)"
+classes = ["partition"]
+
+
+[[damage]]
+member = "raidz2-3"
+range = "0..1MiB"
+pattern = "random"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

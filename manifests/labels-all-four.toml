@@ -1,0 +1,21 @@
+id = "labels-all-four"
+description = "All four labels of one raidz2 member zeroed: the member has no identity, the pool still has parity"
+classes = ["labels"]
+
+
+[[damage]]
+member = "raidz2-2"
+range = "0..512KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "raidz2-2"
+range = "-512KiB.."
+pattern = "zeros"
+
+[expect]
+# Without F-60..F-67 the member is unknown to the pool: raidz2 must still
+# reconstruct from the other three (one column missing).
+outcome = "reconstructed"
+volumes = "all"
+evidence = ["raidz2-2", "MISSING"]

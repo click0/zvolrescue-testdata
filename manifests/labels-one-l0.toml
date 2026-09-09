@@ -1,0 +1,14 @@
+id = "labels-one-l0"
+description = "Label L0 of one raidz2 member zeroed"
+classes = ["labels"]
+
+
+[[damage]]
+member = "raidz2-1"
+range = "0..256KiB"
+pattern = "zeros"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+evidence = ["raidz2-1", "L0"]

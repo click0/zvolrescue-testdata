@@ -1,0 +1,13 @@
+id = "partition-tail-truncated"
+description = "Last 8 MiB of a member cut off (rear labels gone, device shorter than asize)"
+classes = ["partition"]
+
+
+[[damage]]
+member = "draid1-2"
+range = "-8MiB.."
+pattern = "truncate"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

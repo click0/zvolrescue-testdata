@@ -1,0 +1,15 @@
+id = "partition-start-shifted"
+description = "A member image shifted forward by 2048 sectors (the partition was re-created at another offset)"
+classes = ["partition"]
+
+
+[[damage]]
+member = "mirror-0a"
+range = "0.."
+pattern = "shift:2048"
+
+[expect]
+# Needs the zero-point search (F-60..F-67). Until then the member reads
+# as damaged and the mirror half carries it.
+outcome = "bit-exact"
+volumes = "all"

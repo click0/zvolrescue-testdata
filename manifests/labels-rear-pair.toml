@@ -1,0 +1,13 @@
+id = "labels-rear-pair"
+description = "Both rear labels (L2, L3) of one mirror member zeroed"
+classes = ["labels"]
+
+
+[[damage]]
+member = "mirror-0a"
+range = "-512KiB.."
+pattern = "zeros"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

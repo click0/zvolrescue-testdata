@@ -1,0 +1,28 @@
+id = "labels-vdev-phys-only"
+description = "Only the four vdev_phys nvlists of one draid1 member zeroed; every uberblock ring intact"
+classes = ["labels"]
+
+
+[[damage]]
+member = "draid1-0"
+range = "16KiB..128KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "draid1-0"
+range = "272KiB..384KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "draid1-0"
+range = "-496KiB..-384KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "draid1-0"
+range = "-240KiB..-128KiB"
+pattern = "zeros"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

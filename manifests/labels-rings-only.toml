@@ -1,0 +1,28 @@
+id = "labels-rings-only"
+description = "Only the four uberblock rings of one mirror member zeroed; vdev_phys intact, the other mirror half is fine"
+classes = ["labels"]
+
+
+[[damage]]
+member = "mirror-0b"
+range = "128KiB..256KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "mirror-0b"
+range = "384KiB..512KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "mirror-0b"
+range = "-384KiB..-256KiB"
+pattern = "zeros"
+
+[[damage]]
+member = "mirror-0b"
+range = "-128KiB.."
+pattern = "zeros"
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"

@@ -1,0 +1,13 @@
+id = "data-bit-flips"
+description = "Single bit flips scattered over a draid1 member"
+classes = ["data"]
+
+
+[[damage]]
+member = "draid1-3"
+range = "8MiB..400MiB"
+pattern = "flip-bits:64"
+
+[expect]
+outcome = "reconstructed"
+volumes = "all"
