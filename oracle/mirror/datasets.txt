@@ -1,31 +1,36 @@
-Dataset mos [META], ID 0, cr_txg 4, 1.82M, 129 objects
-Dataset ztest/temp_0@0 [OTHER], ID 332, cr_txg 1406, 176K, 5 objects
-Dataset ztest/temp_0 [OTHER], ID 320, cr_txg 1398, 432K, 5 objects
-Dataset ztest/ds_2@2 [OTHER], ID 26, cr_txg 1210, 3.43M, 15 objects
-Dataset ztest/ds_2 [OTHER], ID 30, cr_txg 68, 3.34M, 15 objects
-Dataset ztest/temp_3 [OTHER], ID 505, cr_txg 1541, 88K, 1 objects
-Dataset ztest/ds_1@1 [OTHER], ID 575, cr_txg 1051, 3.01M, 15 objects
-Dataset ztest/ds_1 [OTHER], ID 22, cr_txg 67, 3.20M, 15 objects
-Dataset ztest/ds_3 [OTHER], ID 82, cr_txg 70, 3.16M, 15 objects
-Dataset ztest/temp_1@2 [OTHER], ID 576, cr_txg 1600, 92K, 5 objects
-Dataset ztest/temp_1 [OTHER], ID 530, cr_txg 1558, 92K, 5 objects
-Dataset ztest/ds_0 [OTHER], ID 5, cr_txg 6, 4.28M, 15 objects
-Dataset ztest/temp_2 [OTHER], ID 276, cr_txg 1369, 168K, 5 objects
+Dataset mos [META], ID 0, cr_txg 4, 2.41M, 147 objects
+Dataset ztest/ds_3@3 [OTHER], ID 192, cr_txg 1431, 1.68M, 14 objects
+Dataset ztest/ds_3 [OTHER], ID 80, cr_txg 41, 2.28M, 14 objects
+Dataset ztest/temp_3@0 [OTHER], ID 577, cr_txg 1775, 188K, 5 objects
+Dataset ztest/temp_3@2 [OTHER], ID 605, cr_txg 1796, 180K, 5 objects
+Dataset ztest/temp_3@1 [OTHER], ID 588, cr_txg 1783, 88K, 5 objects
+Dataset ztest/temp_3 [OTHER], ID 552, cr_txg 1755, 180K, 5 objects
+Dataset ztest/ds_0@0 [OTHER], ID 197, cr_txg 782, 3.11M, 15 objects
+Dataset ztest/ds_0 [OTHER], ID 5, cr_txg 6, 4.38M, 15 objects
+Dataset ztest/temp_0@0 [OTHER], ID 525, cr_txg 1026, 140K, 5 objects
+Dataset ztest/temp_0 [OTHER], ID 519, cr_txg 1024, 268K, 5 objects
+Dataset ztest/ds_2@2 [OTHER], ID 289, cr_txg 844, 2.91M, 15 objects
+Dataset ztest/ds_2 [OTHER], ID 29, cr_txg 40, 4.71M, 15 objects
+Dataset ztest/temp_2@0 [OTHER], ID 825, cr_txg 1255, 1.03M, 5 objects
+Dataset ztest/temp_2 [OTHER], ID 793, cr_txg 1228, 1.03M, 5 objects
+Dataset ztest/ds_1@1 [OTHER], ID 688, cr_txg 1143, 3.49M, 15 objects
+Dataset ztest/ds_1 [OTHER], ID 18, cr_txg 39, 4.32M, 15 objects
+Dataset ztest/temp_1 [OTHER], ID 679, cr_txg 1138, 88K, 1 objects
 Dataset ztest [ZPL], ID 54, cr_txg 1, 8K, 0 objects
 Verified large_blocks feature refcount of 0 is correct
-Verified large_dnode feature refcount of 11 is correct
-Verified sha512 feature refcount of 4 is correct
-Verified skein feature refcount of 3 is correct
-Verified edonr feature refcount of 3 is correct
+Verified large_dnode feature refcount of 16 is correct
+Verified sha512 feature refcount of 6 is correct
+Verified skein feature refcount of 4 is correct
+Verified edonr feature refcount of 4 is correct
 Verified userobj_accounting feature refcount of 0 is correct
-Verified encryption feature refcount of 6 is correct
+Verified encryption feature refcount of 11 is correct
 Verified project_quota feature refcount of 0 is correct
 Verified redaction_bookmarks feature refcount of 0 is correct
 Verified redacted_datasets feature refcount of 0 is correct
 Verified bookmark_written feature refcount of 0 is correct
 Verified livelist feature refcount of 0 is correct
-Verified zstd_compress feature refcount of 8 is correct
-Verified zilsaxattr feature refcount of 7 is correct
-Verified blake3 feature refcount of 2 is correct
+Verified zstd_compress feature refcount of 14 is correct
+Verified zilsaxattr feature refcount of 8 is correct
+Verified blake3 feature refcount of 4 is correct
 Verified device_removal feature refcount of 0 is correct
 Verified indirect_refcount feature refcount of 0 is correct

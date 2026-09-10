@@ -40,7 +40,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -55,43 +55,8 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "4096  locate: ERROR every copy failed its checksum; 1  sha256 encrypted: ERROR every copy failed its checksum; 1  sha512: ERROR every copy failed its checksum",
-   "counts": "13 datasets, 245 objects, 200 blocks"
-  },
-  "inputs_unchanged": true,
-  "actual": "refused",
-  "verdict": "pass",
-  "image": "mirror"
- },
- {
-  "id": "combo-held-front-labels-everywhere",
-  "description": "Front label pair of the first four members zeroed; the rear pairs are untouched",
-  "expected": "bit-exact",
-  "notes": [
-   "no member matching {'leaf': 2}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "combo-held-labels-plus-two-missing",
-  "description": "Two members absent and a third stripped of all four labels",
-  "expected": "refused",
-  "notes": [
-   "no member matching {'leaf': 2}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "combo-held-rings-two-members",
-  "description": "Every uberblock ring of two members zeroed; their vdev_phys nvlists survive",
-  "expected": "refused",
-  "notes": [],
-  "outcomes": {
-   "pool": "refused"
+   "refused_detail": "2  blake3: ERROR every copy failed its checksum; 640  dnode: every copy failed its checksum; 1  fletcher4: ERROR every copy failed its checksum",
+   "counts": "18 datasets, 286 objects, 248 blocks"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -106,7 +71,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -145,7 +110,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -160,7 +125,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -170,13 +135,15 @@
  {
   "id": "combo-shift-plus-member-gone",
   "description": "One member shifted by 2048 sectors, another absent: two members unusable at once",
-  "expected": "refused",
+  "expected": "bit-exact | reconstructed",
   "notes": [],
   "outcomes": {
-   "pool": "refused"
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
-  "actual": "refused",
+  "actual": "bit-exact",
   "verdict": "pass",
   "image": "mirror"
  },
@@ -199,7 +166,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -227,8 +194,23 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "4096  locate: ERROR every copy failed its checksum",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "refused_detail": "16384  locate: ERROR every copy failed its checksum",
+   "counts": "18 datasets, 306 objects, 259 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-vdev-phys-gone-and-member-missing",
+  "description": "One member's four vdev_phys nvlists zeroed while another member is absent: redundancy alone no longer covers it",
+  "expected": "refused",
+  "notes": [
+   "told about t0-mirror-0.img"
+  ],
+  "outcomes": {
+   "pool": "refused"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -243,7 +225,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -258,7 +240,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -273,7 +255,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -288,7 +270,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -303,8 +285,8 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "4096  locate: ERROR every copy failed its checksum; 1  sha256 encrypted: ERROR every copy failed its checksum; 1  sha512: ERROR every copy failed its checksum",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "refused_detail": "2  blake3: ERROR every copy failed its checksum; 640  dnode: every copy failed its checksum; 1  fletcher4: ERROR every copy failed its checksum",
+   "counts": "18 datasets, 286 objects, 248 blocks"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -319,7 +301,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -334,7 +316,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -349,7 +331,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -364,7 +346,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -379,7 +361,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -394,7 +376,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -409,7 +391,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -461,7 +443,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -476,7 +458,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -491,7 +473,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -506,7 +488,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "13 datasets, 245 objects, 200 blocks"
+   "counts": "18 datasets, 306 objects, 263 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",

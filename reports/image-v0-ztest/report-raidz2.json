@@ -7,8 +7,8 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "32  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 3  fletcher4: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 1  fletcher4: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
-   "counts": "14 datasets, 283 objects, 333 blocks"
+   "refused_detail": "2  blake3: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 2272  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 96  dnode: not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
+   "counts": "15 datasets, 198 objects, 193 blocks"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -19,15 +19,11 @@
   "id": "combo-across-tops",
   "description": "One member absent in each of two top-level vdevs",
   "expected": "bit-exact | reconstructed",
-  "notes": [],
-  "outcomes": {
-   "datasets": "ok",
-   "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
-  },
-  "inputs_unchanged": true,
-  "actual": "reconstructed",
-  "verdict": "pass",
+  "notes": [
+   "no member matching {'leaf': 0, 'top': 1}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
   "image": "raidz2"
  },
  {
@@ -38,7 +34,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -53,7 +49,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -68,56 +64,10 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
-  "verdict": "pass",
-  "image": "raidz2"
- },
- {
-  "id": "combo-held-front-labels-everywhere",
-  "description": "Front label pair of the first four members zeroed; the rear pairs are untouched",
-  "expected": "bit-exact",
-  "notes": [],
-  "outcomes": {
-   "datasets": "ok",
-   "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
-  },
-  "inputs_unchanged": true,
-  "actual": "bit-exact",
-  "verdict": "pass",
-  "image": "raidz2"
- },
- {
-  "id": "combo-held-labels-plus-two-missing",
-  "description": "Two members absent and a third stripped of all four labels",
-  "expected": "refused",
-  "notes": [],
-  "outcomes": {
-   "datasets": "ok",
-   "blocks": "refused",
-   "refused_detail": "32  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 3  fletcher4: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 1  fletcher4: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
-   "counts": "14 datasets, 283 objects, 333 blocks"
-  },
-  "inputs_unchanged": true,
-  "actual": "refused",
-  "verdict": "pass",
-  "image": "raidz2"
- },
- {
-  "id": "combo-held-rings-two-members",
-  "description": "Every uberblock ring of two members zeroed; their vdev_phys nvlists survive",
-  "expected": "bit-exact | reconstructed",
-  "notes": [],
-  "outcomes": {
-   "datasets": "ok",
-   "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
-  },
-  "inputs_unchanged": true,
-  "actual": "bit-exact",
   "verdict": "pass",
   "image": "raidz2"
  },
@@ -129,7 +79,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -144,7 +94,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -159,7 +109,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -174,7 +124,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -189,7 +139,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -204,7 +154,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -219,8 +169,8 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "14  sha256: ERROR every copy failed its checksum",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "refused_detail": "1  objset ztest/ds_3@3: every copy failed its checksum",
+   "counts": "15 datasets, 280 objects, 238 blocks"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -235,7 +185,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -250,7 +200,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -265,7 +215,24 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "raidz2"
+ },
+ {
+  "id": "combo-vdev-phys-gone-and-member-missing",
+  "description": "One member's four vdev_phys nvlists zeroed while another member is absent: redundancy alone no longer covers it",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "told about t0-raidz2-0.img"
+  ],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -280,7 +247,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -295,10 +262,10 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
-  "actual": "reconstructed",
+  "actual": "bit-exact",
   "verdict": "pass",
   "image": "raidz2"
  },
@@ -310,7 +277,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -325,7 +292,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -340,7 +307,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -355,7 +322,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -370,7 +337,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -385,7 +352,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -400,7 +367,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -415,7 +382,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -430,7 +397,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -445,7 +412,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -460,8 +427,8 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "refused",
-   "refused_detail": "32  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 3  fletcher4: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 1  fletcher4: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
-   "counts": "14 datasets, 283 objects, 333 blocks"
+   "refused_detail": "2  blake3: ERROR not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 2272  dnode: not recoverable: 1 data column(s) missing, only 0 parity column(s) readable; 96  dnode: not recoverable: 2 data column(s) missing, only 1 parity column(s) readable",
+   "counts": "15 datasets, 198 objects, 193 blocks"
   },
   "inputs_unchanged": true,
   "actual": "refused",
@@ -476,7 +443,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -504,7 +471,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "reconstructed",
@@ -519,7 +486,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",
@@ -534,10 +501,10 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
-  "actual": "reconstructed",
+  "actual": "bit-exact",
   "verdict": "pass",
   "image": "raidz2"
  },
@@ -549,7 +516,7 @@
   "outcomes": {
    "datasets": "ok",
    "blocks": "ok",
-   "counts": "14 datasets, 296 objects, 338 blocks"
+   "counts": "15 datasets, 294 objects, 244 blocks"
   },
   "inputs_unchanged": true,
   "actual": "bit-exact",

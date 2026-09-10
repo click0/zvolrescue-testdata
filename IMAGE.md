@@ -1,8 +1,8 @@
 # The interim golden image (image-v0-ztest)
 
-Built 2026-09-09T21:49:32Z on Linux 6.18.44-fc-v24 x86_64 with OpenZFS userland
-(OpenZFS (version not reported)), **no kernel module**: `ztest` created and exercised the pools
-entirely in user space, `zdb` recorded the oracle.
+Built 2026-09-10T08:16:17Z on Linux 6.18.44-fc-v24 x86_64 with OpenZFS userland
+OpenZFS (version not reported), **no kernel module**: `ztest` created and exercised the
+pools entirely in user space.
 
 ## What this is and is not
 
@@ -31,125 +31,112 @@ redundancy group.
 
 | Pool | Top-level vdev | Shape | Members (role → file) |
 |---|---|---|---|
-| mirror | 0 | mirror | `t0-mirror-0` → `ztest.0a`, `t0-mirror-1` → `ztest.1b` |
+| mirror | 0 | mirror | `t0-mirror-0` → `ztest.0a`, `t0-mirror-1` → `ztest.1a` |
 | raidz2 | 0 | mirror of raidz2 | `t0-raidz2-0` → `ztest.0a`, `t0-raidz2-1` → `ztest.1a`, `t0-raidz2-2` → `ztest.2a`, `t0-raidz2-3` → `ztest.3a` |
-| raidz2 | 1 | mirror of raidz2 | `t1-raidz2-0` → `ztest.4a`, `t1-raidz2-1` → `ztest.5a`, `t1-raidz2-2` → `ztest.6a`, `t1-raidz2-3` → `ztest.7a` |
 | draid1 | 0 | draid1 | `t0-draid1-0` → `ztest.0a`, `t0-draid1-1` → `ztest.1a`, `t0-draid1-2` → `ztest.2a`, `t0-draid1-3` → `ztest.3a`, `t0-draid1-4` → `ztest.4a`, `t0-draid1-5` → `ztest.5a`, `t0-draid1-6` → `ztest.6a`, `t0-draid1-7` → `ztest.7a`, `t0-draid1-8` → `ztest.8a`, `t0-draid1-9` → `ztest.9a`, `t0-draid1-10` → `ztest.10a`, `t0-draid1-11` → `ztest.11a`, `t0-draid1-12` → `ztest.12a`, `t0-draid1-13` → `ztest.13a`, `t0-draid1-14` → `ztest.14a`, `t0-draid1-15` → `ztest.15a` |
 
 ## Datasets
 
 ### mirror
 
-| Dataset | Creation TXG | Objects |
-|---|---|---|
-| `ztest` | 1 | 0 |
-| `ztest/ds_0` | 6 | 15 |
-| `ztest/ds_1` | 67 | 15 |
-| `ztest/ds_1@1` | 1051 | 15 |
-| `ztest/ds_2` | 68 | 15 |
-| `ztest/ds_2@2` | 1210 | 15 |
-| `ztest/ds_3` | 70 | 15 |
-| `ztest/temp_0` | 1398 | 5 |
-| `ztest/temp_0@0` | 1406 | 5 |
-| `ztest/temp_1` | 1558 | 5 |
-| `ztest/temp_1@2` | 1600 | 5 |
-| `ztest/temp_2` | 1369 | 5 |
-| `ztest/temp_3` | 1541 | 1 |
+```
+ztest 1 0
+ztest/ds_0 6 15
+ztest/ds_0@0 782 15
+ztest/ds_1 39 15
+ztest/ds_1@1 1143 15
+ztest/ds_2 40 15
+ztest/ds_2@2 844 15
+ztest/ds_3 41 14
+ztest/ds_3@3 1431 14
+ztest/temp_0 1024 5
+ztest/temp_0@0 1026 5
+ztest/temp_1 1138 1
+ztest/temp_2 1228 5
+ztest/temp_2@0 1255 5
+ztest/temp_3 1755 5
+ztest/temp_3@0 1775 5
+ztest/temp_3@1 1783 5
+ztest/temp_3@2 1796 5
+```
 
 ### raidz2
 
-| Dataset | Creation TXG | Objects |
-|---|---|---|
-| `ztest` | 1 | 0 |
-| `ztest/ds_0` | 6 | 16 |
-| `ztest/ds_0@0` | 833 | 16 |
-| `ztest/ds_1` | 41 | 15 |
-| `ztest/ds_2` | 43 | 15 |
-| `ztest/ds_3` | 45 | 15 |
-| `ztest/ds_3@3` | 425 | 15 |
-| `ztest/temp_0` | 949 | 1 |
-| `ztest/temp_1` | 965 | 5 |
-| `ztest/temp_1@2` | 971 | 5 |
-| `ztest/temp_2` | 914 | 5 |
-| `ztest/temp_2@3` | 956 | 5 |
-| `ztest/temp_3` | 942 | 5 |
-| `ztest/temp_3@1` | 952 | 5 |
+```
+ztest 1 0
+ztest/ds_0 6 15
+ztest/ds_1 73 15
+ztest/ds_1@1 936 15
+ztest/ds_2 75 14
+ztest/ds_2@2 936 14
+ztest/ds_3 77 14
+ztest/ds_3@3 517 14
+ztest/temp_0 993 5
+ztest/temp_1 1041 5
+ztest/temp_1@2 1052 5
+ztest/temp_1@3 1068 5
+ztest/temp_2 1161 5
+ztest/temp_2@0 1162 5
+ztest/temp_3 1272 5
+```
 
 ### draid1
 
-| Dataset | Creation TXG | Objects |
-|---|---|---|
-| `ztest` | 1 | 0 |
-| `ztest/ds_0` | 6 | 16 |
-| `ztest/ds_0@0` | 423 | 15 |
-| `ztest/ds_1` | 46 | 15 |
-| `ztest/ds_1@1` | 324 | 14 |
-| `ztest/ds_2` | 48 | 15 |
-| `ztest/ds_3` | 50 | 15 |
-| `ztest/ds_3@3` | 586 | 15 |
-| `ztest/temp_0` | 634 | 1 |
-| `ztest/temp_1` | 630 | 5 |
-| `ztest/temp_1@2` | 648 | 5 |
-| `ztest/temp_2` | 643 | 5 |
-| `ztest/temp_3` | 632 | 1 |
+```
+ztest 1 0
+ztest/ds_0 6 16
+ztest/ds_0@0 1122 16
+ztest/ds_1 43 14
+ztest/ds_1@1 619 14
+ztest/ds_2 45 15
+ztest/ds_3 47 14
+ztest/ds_3@3 862 14
+ztest/temp_0 1126 1
+ztest/temp_1 1123 5
+ztest/temp_1@0 1136 5
+ztest/temp_2 1064 5
+ztest/temp_2@0 1067 5
+ztest/temp_3 965 5
+ztest/temp_3@0 967 5
+```
 
 ## Oracle
 
-`oracle/<pool>/`:
-
-| File | Content |
-|---|---|
-| `inventory.txt` | dataset, creation TXG, object count — from `zdb -d` |
-| `datasets.txt` | `zdb -d` verbatim |
-| `zdb-dddd.txt` | every object with its block pointers and the checksums ZFS recorded |
-| `zdb-C.txt`, `zdb-u.txt` | pool configuration and uberblock |
-| `labels/<role>.txt` | `zdb -l` of that member |
-| `layout.json`, `members.txt` | roles, files, GUIDs, topology |
-| `keys/raw.key` | ztest's fixed wrapping key (it protects nothing) |
-
-Nothing here was produced by zvolrescue.
-
-## A caveat about this particular build
-
-`ztest` picks its topology, datasets and writes at random, so a rebuild
-produces a *different* image. The oracle in `oracle/` and the sums below
-describe exactly the build listed here. If those member files are never
-published, treat this image as a record of one run rather than a fixture:
-rebuild with `tests/golden/build-ztest-image.sh`, and the new oracle
-replaces this one. The kernel-built golden image (`image-v1`) will be the
-first fixture worth pinning, because it is built by a script that decides
-the layout instead of ztest.
+`oracle/<pool>/`: `inventory.txt` (dataset, creation TXG, object count — from
+`zdb -d`), `datasets.txt`, `zdb-dddd.txt` (every object with its block
+pointers and the checksums ZFS recorded), `zdb-C.txt`, `zdb-u.txt`,
+`labels/<role>.txt` (`zdb -l`), `members.txt`, `layout.json`, `keys/raw.key`
+(ztest's fixed wrapping key). Nothing here was produced by zvolrescue.
 
 ## Release files
 
-`<pool>-<role>.img.zst` — the members, one file per role. Unpack with
-`zstd -d` into a directory per pool and point the harness at it.
+`<pool>-<role>.img.zst` are the published members, one file per role.
+There is no `older-self` material in this image: ztest cannot be resumed
+on an existing pool without a cachefile it does not leave behind, so a
+member cannot be captured at two points of the same pool\'s life. Manifests
+using that pattern are skipped until the kernel-built image exists.
 
 ```
-c5123326163eb35eb978132a66ec6f6d820f960fbe1b85853d014cd924fa3d60  draid1-t0-draid1-0.img.zst
-549abbb6c3337096e723bd5aa716d441693643d1c579de9f9f997b8ba400fbed  draid1-t0-draid1-1.img.zst
-ac528a86faf115215c966b3933bd2ad7e47d31220b8f1c4acc21dea76827a281  draid1-t0-draid1-10.img.zst
-84a795ba9c64badf79558e3620307d080d88036a5cbc5bc880998b3e4eacfd26  draid1-t0-draid1-11.img.zst
-506e34772e3adb4a615fc4c131db9763ea7e6094dc9617cb2bcc4e3db137a090  draid1-t0-draid1-12.img.zst
-f24e2a22468d16dd9e22ff23b71a7a20c90978def57bebf3a36aea867b8eb5ce  draid1-t0-draid1-13.img.zst
-a73e83ee3a8dab1951eda80a5892199f99e1226111a752e2a6fd35fe511800dc  draid1-t0-draid1-14.img.zst
-329eeb7b226872a9467c5313e8385ccea678bf2ac7ba968ccb082b26ae3beaa2  draid1-t0-draid1-15.img.zst
-44e464e9d32ea2a8ae886249f2387926c6ed96ee2f2d90e545e63a3bb3db43f2  draid1-t0-draid1-2.img.zst
-c817bcc9705aef710b0ed0dfab092ea77068185d889321dcd22446f5c680f3ca  draid1-t0-draid1-3.img.zst
-b2fda7e3eecf5cc3b45086adcbe462ae20d98a104b16c97ce1e637eb3b8d25e0  draid1-t0-draid1-4.img.zst
-3ed3586d45f11101abe4a3d05e75ffd2cd5bc141166d7acc428a6f7fb048c09b  draid1-t0-draid1-5.img.zst
-0bd8e92b7741ba875ebf6f0e2bfdeaa520b967d2a14d87aa095bf8ff6339d82d  draid1-t0-draid1-6.img.zst
-9295aa7cac29a9d54dde8db2e5964f6002c62e936c55a201c2b6beb25c47eae9  draid1-t0-draid1-7.img.zst
-70bab9c6e7e3df6de71ae40b88ef622678a6801ad3ca7e81c50e75863b127c49  draid1-t0-draid1-8.img.zst
-b2d1c0a635b4a42ba88bb989ea71dec7f0d471c18ef9398bf7555cd43273ffe2  draid1-t0-draid1-9.img.zst
-eaa77c98112f9f00b4d821c4dce9538fbba1b1ac4cdd1726f9f1b5b6214f4aeb  mirror-t0-mirror-0.img.zst
-ad8ba475f1ddda5fb0c7ed881cee8b71f145c280aa9614f7965dbb9f0d2c270e  mirror-t0-mirror-1.img.zst
-450f30ebfc866e8059a3707c0063f51ac11f2f004f359abbca6ba8f6cb7ba060  raidz2-t0-raidz2-0.img.zst
-a00d87c052de3cd9c1ad1530f3f5b3391ada13218b64ee6be5ae3194da61bd96  raidz2-t0-raidz2-1.img.zst
-f191c00385e4b0869488306679c472576cffbb57a2ce54afba4db5350c4d18a6  raidz2-t0-raidz2-2.img.zst
-bb1cc770e486f6abe31b3478e123ab7895fa6d13e8935375b3e96ff0b7a81f64  raidz2-t0-raidz2-3.img.zst
-e9f581d182e3e1f07c2e8d876625ac4ed803e2bc24aee7225feae047a028be2c  raidz2-t1-raidz2-0.img.zst
-7d24ebf763eabeb320fa047f8362f329106fcc240e4797eb82d3c24ccfa699a3  raidz2-t1-raidz2-1.img.zst
-85ee4d7548c9bd81c461fb606483ef7abd0e3528f3b0c4631343bc57800f71f4  raidz2-t1-raidz2-2.img.zst
-ca13190c9827007481066e62504c2c258acfb5a763cd46ad612265260234beff  raidz2-t1-raidz2-3.img.zst
+d2840d23316695e8ab2301c79dd6c6e314648911770d97e12b000107ab777e83  draid1-t0-draid1-0.img.zst
+decb10a311db1c6a76fbd75a49d2e29125a8e123e944d38bb64f0d8a8d16b2da  draid1-t0-draid1-1.img.zst
+7d890192bfd505ba49483292a9aaca9b675dd003bc3080f6f755e6d294dde7b6  draid1-t0-draid1-10.img.zst
+0318d907530ac953dffe606d276c36152a215a134e79995b5da1152ed19cc06c  draid1-t0-draid1-11.img.zst
+474f2ad4160f1d38af8f675c3cb2243eb46abb59b51c2449248f3f63cc922731  draid1-t0-draid1-12.img.zst
+b212f36a0cc8494b3df1dd52905053789b741184c1b97ff1d4a610822b255d52  draid1-t0-draid1-13.img.zst
+4026aa6a53e827455ffa3a71e938cb346a35b5540326a41e2b3c7d3856288d72  draid1-t0-draid1-14.img.zst
+1ef1a6c602cc8729413e2c06c230c64c5aeb86d715263ed39234e63847164ee5  draid1-t0-draid1-15.img.zst
+58e56ae7c534c3b775d807baeface01a9e504722cc501951d31a5b7025ecf539  draid1-t0-draid1-2.img.zst
+c69dbd38944c069fefd046be7eeea11a5731b61820cb513f1914d6846c37e9f9  draid1-t0-draid1-3.img.zst
+8b024dda9a602bcedb0abc2e1a6c38402cd56e686f2942a5f8d50fe05d9fa26d  draid1-t0-draid1-4.img.zst
+7c272300727ce0f2e0edb9d1ac754993521ba1b52724e5ad0883dc13cdf9bb2c  draid1-t0-draid1-5.img.zst
+fa7792e521ddfafabff55431527997c7efb6dc7a84a0ae8766e800f431a4aecd  draid1-t0-draid1-6.img.zst
+d2ccdbffa6589ad1c258ca7829abce8e7f463d5980fc58e6dd6b9d57d91cf7cb  draid1-t0-draid1-7.img.zst
+0391f5e15c39548245afcaf825b470dd39c6271fb726a4c0b937722fe501b8ce  draid1-t0-draid1-8.img.zst
+2e6afdb532c65fc38dc47a33575e9fe5a43a0971c2bb5c634c407faabb28050e  draid1-t0-draid1-9.img.zst
+6e35ef05bda5f355a2a25392a4ab828376ed0a189095039681aceb1afa2c073a  mirror-t0-mirror-0.img.zst
+4b2eca9e08a302598f29a8dba6fe80304442639dbf6096cac76e0e23cb870a00  mirror-t0-mirror-1.img.zst
+ec350e9a4102c3909c859dff5ac427778ae8f4518b4359eb7ea346a2211863b1  raidz2-t0-raidz2-0.img.zst
+a148af6f2083d66ea102e2a50f376609519e8ca8df39cf342358031c3dc7e085  raidz2-t0-raidz2-1.img.zst
+5c200c6771b183c342dcac429a1c2a74b6a1b792247cb2a92d17e2e4552387a4  raidz2-t0-raidz2-2.img.zst
+affcf4817912a3a4037d03e5ea79a8c1e6a4602cc58c5a49ca10bc2e91c648e2  raidz2-t0-raidz2-3.img.zst
 ```

@@ -3,46 +3,69 @@ MOS Configuration:
         version: 5000
         name: 'ztest'
         state: 0
-        txg: 1645
-        pool_guid: 13072863537766372078
+        txg: 1924
+        pool_guid: 5529097491589395777
         errata: 0
         hostid: 322419188
         hostname: 'vm'
         com.delphix:has_per_vdev_zaps
-        vdev_children: 1
+        vdev_children: 2
         vdev_tree:
             type: 'root'
             id: 0
-            guid: 13072863537766372078
+            guid: 5529097491589395777
             create_txg: 4
             com.klarasystems:vdev_zap_root: 66
             children[0]:
                 type: 'mirror'
                 id: 0
-                guid: 13048060114602851144
+                guid: 16896674657967183068
                 metaslab_array: 70
                 metaslab_shift: 24
                 ashift: 12
-                asize: 125566976
+                asize: 129499136
                 is_log: 0
                 create_txg: 4
                 com.delphix:vdev_zap_top: 67
                 children[0]:
                     type: 'file'
                     id: 0
-                    guid: 4047209923073797906
-                    path: '/home/user/golden/pools/mirror/ztest.0a'
-                    DTL: 228
+                    guid: 8175068008047356163
+                    path: '/tmp/golden/pools/mirror/ztest.0a'
                     create_txg: 4
                     com.delphix:vdev_zap_leaf: 68
                 children[1]:
                     type: 'file'
                     id: 1
-                    guid: 5947620172203515270
-                    path: '/home/user/golden/pools/mirror/ztest.1b'
-                    DTL: 209
+                    guid: 3251071148079370464
+                    path: '/tmp/golden/pools/mirror/ztest.1a'
                     create_txg: 4
-                    com.delphix:vdev_zap_leaf: 207
+                    com.delphix:vdev_zap_leaf: 69
+            children[1]:
+                type: 'mirror'
+                id: 1
+                guid: 2505275820874412413
+                metaslab_array: 674
+                metaslab_shift: 24
+                ashift: 12
+                asize: 129499136
+                is_log: 1
+                create_txg: 1856
+                com.delphix:vdev_zap_top: 666
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 15795509382088707937
+                    path: '/tmp/golden/pools/mirror/ztest.2a'
+                    create_txg: 1856
+                    com.delphix:vdev_zap_leaf: 667
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 15558796489063522280
+                    path: '/tmp/golden/pools/mirror/ztest.3a'
+                    create_txg: 1856
+                    com.delphix:vdev_zap_leaf: 668
         features_for_read:
             com.delphix:hole_birth
             com.delphix:embedded_data

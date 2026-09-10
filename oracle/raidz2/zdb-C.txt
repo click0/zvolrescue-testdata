@@ -3,8 +3,8 @@ MOS Configuration:
         version: 5000
         name: 'ztest'
         state: 0
-        txg: 1030
-        pool_guid: 7781325853063801321
+        txg: 504
+        pool_guid: 15396078683390236106
         errata: 0
         hostid: 322419188
         hostname: 'vm'
@@ -13,13 +13,13 @@ MOS Configuration:
         vdev_tree:
             type: 'root'
             id: 0
-            guid: 7781325853063801321
+            guid: 15396078683390236106
             create_txg: 4
             com.klarasystems:vdev_zap_root: 66
             children[0]:
                 type: 'mirror'
                 id: 0
-                guid: 11974714547887784727
+                guid: 14383838733827186565
                 metaslab_array: 72
                 metaslab_shift: 25
                 ashift: 12
@@ -30,90 +30,82 @@ MOS Configuration:
                 children[0]:
                     type: 'raidz'
                     id: 0
-                    guid: 1625347539083675018
+                    guid: 666177873023023904
                     nparity: 2
                     create_txg: 4
                     children[0]:
                         type: 'file'
                         id: 0
-                        guid: 16942524657484803534
-                        path: '/home/user/golden/pools/raidz2/ztest.0a'
-                        DTL: 31
+                        guid: 16769149877292416068
+                        path: '/tmp/golden/pools/raidz2/ztest.0a'
                         create_txg: 4
                         com.delphix:vdev_zap_leaf: 68
                     children[1]:
                         type: 'file'
                         id: 1
-                        guid: 15222067081126932603
-                        path: '/home/user/golden/pools/raidz2/ztest.1a'
-                        DTL: 30
+                        guid: 17759841339111146702
+                        path: '/tmp/golden/pools/raidz2/ztest.1a'
                         create_txg: 4
                         com.delphix:vdev_zap_leaf: 69
                     children[2]:
                         type: 'file'
                         id: 2
-                        guid: 4140445396398325282
-                        path: '/home/user/golden/pools/raidz2/ztest.2a'
-                        DTL: 29
+                        guid: 17324645364836205134
+                        path: '/tmp/golden/pools/raidz2/ztest.2a'
                         create_txg: 4
                         com.delphix:vdev_zap_leaf: 70
                     children[3]:
                         type: 'file'
                         id: 3
-                        guid: 9440618559310348143
-                        path: '/home/user/golden/pools/raidz2/ztest.3a'
-                        DTL: 28
+                        guid: 7978933479325016290
+                        path: '/tmp/golden/pools/raidz2/ztest.3a'
                         create_txg: 4
                         com.delphix:vdev_zap_leaf: 71
             children[1]:
                 type: 'mirror'
                 id: 1
-                guid: 4931199369543172597
-                metaslab_array: 207
+                guid: 16967566044631007059
+                metaslab_array: 89
                 metaslab_shift: 25
                 ashift: 12
                 asize: 517996544
-                is_log: 0
-                create_txg: 461
-                com.delphix:vdev_zap_top: 197
+                is_log: 1
+                create_txg: 502
+                com.delphix:vdev_zap_top: 15
                 children[0]:
                     type: 'raidz'
                     id: 0
-                    guid: 12881895683628783656
+                    guid: 3387730822188227877
                     nparity: 2
-                    create_txg: 461
+                    create_txg: 502
                     children[0]:
                         type: 'file'
                         id: 0
-                        guid: 1825323122004289808
-                        path: '/home/user/golden/pools/raidz2/ztest.4a'
-                        DTL: 98
-                        create_txg: 461
-                        com.delphix:vdev_zap_leaf: 198
+                        guid: 2835835171137656359
+                        path: '/tmp/golden/pools/raidz2/ztest.4a'
+                        create_txg: 502
+                        com.delphix:vdev_zap_leaf: 16
                     children[1]:
                         type: 'file'
                         id: 1
-                        guid: 1851323150902476440
-                        path: '/home/user/golden/pools/raidz2/ztest.5a'
-                        DTL: 96
-                        create_txg: 461
-                        com.delphix:vdev_zap_leaf: 199
+                        guid: 6081839043733148351
+                        path: '/tmp/golden/pools/raidz2/ztest.5a'
+                        create_txg: 502
+                        com.delphix:vdev_zap_leaf: 17
                     children[2]:
                         type: 'file'
                         id: 2
-                        guid: 17393269830350553959
-                        path: '/home/user/golden/pools/raidz2/ztest.6a'
-                        DTL: 90
-                        create_txg: 461
-                        com.delphix:vdev_zap_leaf: 200
+                        guid: 15513275768191181727
+                        path: '/tmp/golden/pools/raidz2/ztest.6a'
+                        create_txg: 502
+                        com.delphix:vdev_zap_leaf: 18
                     children[3]:
                         type: 'file'
                         id: 3
-                        guid: 14397440641945032551
-                        path: '/home/user/golden/pools/raidz2/ztest.7a'
-                        DTL: 89
-                        create_txg: 461
-                        com.delphix:vdev_zap_leaf: 201
+                        guid: 9652092015545099883
+                        path: '/tmp/golden/pools/raidz2/ztest.7a'
+                        create_txg: 502
+                        com.delphix:vdev_zap_leaf: 19
         features_for_read:
             com.delphix:hole_birth
             com.delphix:embedded_data

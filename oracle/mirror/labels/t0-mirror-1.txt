@@ -4,37 +4,35 @@ LABEL 0
     version: 5000
     name: 'ztest'
     state: 0
-    txg: 1645
-    pool_guid: 13072863537766372078
+    txg: 1924
+    pool_guid: 5529097491589395777
     errata: 0
     hostid: 322419188
     hostname: 'vm'
-    top_guid: 13048060114602851144
-    guid: 5947620172203515270
-    vdev_children: 1
+    top_guid: 16896674657967183068
+    guid: 3251071148079370464
+    vdev_children: 2
     vdev_tree:
         type: 'mirror'
         id: 0
-        guid: 13048060114602851144
+        guid: 16896674657967183068
         metaslab_array: 70
         metaslab_shift: 24
         ashift: 12
-        asize: 125566976
+        asize: 129499136
         is_log: 0
         create_txg: 4
         children[0]:
             type: 'file'
             id: 0
-            guid: 4047209923073797906
-            path: '/home/user/golden/pools/mirror/ztest.0a'
-            DTL: 228
+            guid: 8175068008047356163
+            path: '/tmp/golden/pools/mirror/ztest.0a'
             create_txg: 4
         children[1]:
             type: 'file'
             id: 1
-            guid: 5947620172203515270
-            path: '/home/user/golden/pools/mirror/ztest.1b'
-            DTL: 209
+            guid: 3251071148079370464
+            path: '/tmp/golden/pools/mirror/ztest.1a'
             create_txg: 4
     features_for_read:
         com.delphix:hole_birth

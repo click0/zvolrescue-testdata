@@ -1,0 +1,27 @@
+id = "combo-vdev-phys-gone-and-member-missing"
+description = "One member's four vdev_phys nvlists zeroed while another member is absent: redundancy alone no longer covers it"
+classes = ["labels", "missing"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+
+# The label-less member carries nothing that places it in the topology,
+# so the operator asserts it belongs and the tool works out which leaf by
+# reading through it (SPEC F-62).
+[recovery]
+assume_members = [{ leaf = 0 }]
+
+[expect]
+# A two-way mirror has nothing left: one leaf is gone and the other has
+# no configuration, so no pool can be assembled at all. Wider vdevs still
+# have a labelled member to describe the topology, and the assertion puts
+# the label-less one back into it.
+outcome = "recovered"
+by_group_kind = { mirror = "refused" }
+volumes = "all"

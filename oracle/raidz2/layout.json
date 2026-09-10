@@ -22,29 +22,12 @@
      "count": 4
     }
    ]
-  },
-  {
-   "index": 1,
-   "kind": "mirror",
-   "members": [
-    "t1-raidz2-0",
-    "t1-raidz2-1",
-    "t1-raidz2-2",
-    "t1-raidz2-3"
-   ],
-   "groups": [
-    {
-     "kind": "raidz2",
-     "nparity": 2,
-     "count": 4
-    }
-   ]
   }
  ],
  "members": {
   "t0-raidz2-0": {
    "file": "ztest.0a",
-   "guid": "16942524657484803534",
+   "guid": "16769149877292416068",
    "top": 0,
    "group": 0,
    "group_kind": "raidz2",
@@ -52,7 +35,7 @@
   },
   "t0-raidz2-1": {
    "file": "ztest.1a",
-   "guid": "15222067081126932603",
+   "guid": "17759841339111146702",
    "top": 0,
    "group": 0,
    "group_kind": "raidz2",
@@ -60,7 +43,7 @@
   },
   "t0-raidz2-2": {
    "file": "ztest.2a",
-   "guid": "4140445396398325282",
+   "guid": "17324645364836205134",
    "top": 0,
    "group": 0,
    "group_kind": "raidz2",
@@ -68,40 +51,8 @@
   },
   "t0-raidz2-3": {
    "file": "ztest.3a",
-   "guid": "9440618559310348143",
+   "guid": "7978933479325016290",
    "top": 0,
-   "group": 0,
-   "group_kind": "raidz2",
-   "index": 3
-  },
-  "t1-raidz2-0": {
-   "file": "ztest.4a",
-   "guid": "1825323122004289808",
-   "top": 1,
-   "group": 0,
-   "group_kind": "raidz2",
-   "index": 0
-  },
-  "t1-raidz2-1": {
-   "file": "ztest.5a",
-   "guid": "1851323150902476440",
-   "top": 1,
-   "group": 0,
-   "group_kind": "raidz2",
-   "index": 1
-  },
-  "t1-raidz2-2": {
-   "file": "ztest.6a",
-   "guid": "17393269830350553959",
-   "top": 1,
-   "group": 0,
-   "group_kind": "raidz2",
-   "index": 2
-  },
-  "t1-raidz2-3": {
-   "file": "ztest.7a",
-   "guid": "14397440641945032551",
-   "top": 1,
    "group": 0,
    "group_kind": "raidz2",
    "index": 3

@@ -1,0 +1,59 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'ztest'
+    state: 0
+    txg: 503
+    pool_guid: 15396078683390236106
+    errata: 0
+    hostid: 322419188
+    hostname: 'vm'
+    top_guid: 14383838733827186565
+    guid: 17324645364836205134
+    vdev_children: 2
+    vdev_tree:
+        type: 'mirror'
+        id: 0
+        guid: 14383838733827186565
+        metaslab_array: 72
+        metaslab_shift: 25
+        ashift: 12
+        asize: 517996544
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'raidz'
+            id: 0
+            guid: 666177873023023904
+            nparity: 2
+            create_txg: 4
+            children[0]:
+                type: 'file'
+                id: 0
+                guid: 16769149877292416068
+                path: '/tmp/golden/pools/raidz2/ztest.0a'
+                create_txg: 4
+            children[1]:
+                type: 'file'
+                id: 1
+                guid: 17759841339111146702
+                path: '/tmp/golden/pools/raidz2/ztest.1a'
+                create_txg: 4
+            children[2]:
+                type: 'file'
+                id: 2
+                guid: 17324645364836205134
+                path: '/tmp/golden/pools/raidz2/ztest.2a'
+                create_txg: 4
+            children[3]:
+                type: 'file'
+                id: 3
+                guid: 7978933479325016290
+                path: '/tmp/golden/pools/raidz2/ztest.3a'
+                create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

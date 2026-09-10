@@ -11,10 +11,9 @@ member = { leaf = 1 }
 pattern = "missing"
 
 [expect]
-# On a dRAID the parity budget is per redundancy group, and a group is
-# only ndata+nparity columns wide out of all the children: two or three
-# impaired members rarely land in the same group, so most rows keep a
-# rebuildable column and only the few that collide are refused.
-outcome = "refused"
-by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+# Until the zero point could be recovered (SPEC F-61) this was two members
+# lost at once, and a two-way mirror had nothing left. The shifted member's
+# labels are intact — they simply verify at another base — so one uberblock
+# checksum puts it back, and only the absent member is really gone.
+outcome = "recovered"
 volumes = "all"

@@ -1,31 +1,33 @@
-Dataset mos [META], ID 0, cr_txg 4, 2.86M, 168 objects
-Dataset ztest/ds_3@3 [OTHER], ID 14, cr_txg 586, 10.6M, 15 objects
-Dataset ztest/ds_3 [OTHER], ID 107, cr_txg 50, 10.9M, 15 objects
-Dataset ztest/temp_3 [OTHER], ID 225, cr_txg 632, 112K, 1 objects
-Dataset ztest/ds_0@0 [OTHER], ID 330, cr_txg 423, 6.34M, 15 objects
-Dataset ztest/ds_0 [OTHER], ID 5, cr_txg 6, 6.06M, 16 objects
-Dataset ztest/temp_0 [OTHER], ID 234, cr_txg 634, 112K, 1 objects
-Dataset ztest/temp_2 [OTHER], ID 250, cr_txg 643, 352K, 5 objects
-Dataset ztest/ds_2 [OTHER], ID 29, cr_txg 48, 7.06M, 15 objects
-Dataset ztest/temp_1@2 [OTHER], ID 258, cr_txg 648, 575K, 5 objects
-Dataset ztest/temp_1 [OTHER], ID 214, cr_txg 630, 815K, 5 objects
-Dataset ztest/ds_1@1 [OTHER], ID 146, cr_txg 324, 3.04M, 14 objects
-Dataset ztest/ds_1 [OTHER], ID 21, cr_txg 46, 5.88M, 15 objects
+Dataset mos [META], ID 0, cr_txg 4, 3.79M, 159 objects
+Dataset ztest/temp_0 [OTHER], ID 607, cr_txg 1126, 112K, 1 objects
+Dataset ztest/ds_0@0 [OTHER], ID 589, cr_txg 1122, 8.53M, 16 objects
+Dataset ztest/ds_0 [OTHER], ID 5, cr_txg 6, 8.96M, 16 objects
+Dataset ztest/temp_3@0 [OTHER], ID 349, cr_txg 967, 464K, 5 objects
+Dataset ztest/temp_3 [OTHER], ID 343, cr_txg 965, 400K, 5 objects
+Dataset ztest/ds_3@3 [OTHER], ID 158, cr_txg 862, 10.3M, 14 objects
+Dataset ztest/ds_3 [OTHER], ID 102, cr_txg 47, 13.1M, 14 objects
+Dataset ztest/ds_1@1 [OTHER], ID 459, cr_txg 619, 14.9M, 14 objects
+Dataset ztest/ds_1 [OTHER], ID 19, cr_txg 43, 20.5M, 14 objects
+Dataset ztest/temp_1@0 [OTHER], ID 620, cr_txg 1136, 591K, 5 objects
+Dataset ztest/temp_1 [OTHER], ID 596, cr_txg 1123, 184K, 5 objects
+Dataset ztest/ds_2 [OTHER], ID 27, cr_txg 45, 9.93M, 15 objects
+Dataset ztest/temp_2@0 [OTHER], ID 516, cr_txg 1067, 216K, 5 objects
+Dataset ztest/temp_2 [OTHER], ID 509, cr_txg 1064, 216K, 5 objects
 Dataset ztest [ZPL], ID 54, cr_txg 1, 16.0K, 0 objects
 Verified large_blocks feature refcount of 0 is correct
-Verified large_dnode feature refcount of 10 is correct
-Verified sha512 feature refcount of 4 is correct
-Verified skein feature refcount of 5 is correct
-Verified edonr feature refcount of 3 is correct
+Verified large_dnode feature refcount of 13 is correct
+Verified sha512 feature refcount of 6 is correct
+Verified skein feature refcount of 3 is correct
+Verified edonr feature refcount of 5 is correct
 Verified userobj_accounting feature refcount of 0 is correct
-Verified encryption feature refcount of 3 is correct
+Verified encryption feature refcount of 8 is correct
 Verified project_quota feature refcount of 0 is correct
 Verified redaction_bookmarks feature refcount of 0 is correct
 Verified redacted_datasets feature refcount of 0 is correct
 Verified bookmark_written feature refcount of 0 is correct
 Verified livelist feature refcount of 0 is correct
-Verified zstd_compress feature refcount of 9 is correct
-Verified zilsaxattr feature refcount of 8 is correct
-Verified blake3 feature refcount of 3 is correct
+Verified zstd_compress feature refcount of 10 is correct
+Verified zilsaxattr feature refcount of 9 is correct
+Verified blake3 feature refcount of 4 is correct
 Verified device_removal feature refcount of 0 is correct
 Verified indirect_refcount feature refcount of 0 is correct

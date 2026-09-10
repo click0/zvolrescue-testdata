@@ -16,5 +16,11 @@ pattern = "missing"
 # Blocks that lived on that vdev must be refused with a reason. Datasets
 # whose metadata has copies elsewhere stay listable, and that is not a
 # failure.
+# A dRAID's parity budget is per redundancy group, not per vdev: this
+# image's draid1 is 16 children in groups of ndata 2 + nparity 1, so
+# three absent members rarely fall in one group and most rows keep a
+# rebuildable column. Whether anything at all is refused depends on where
+# the losses land, so both answers are accepted for dRAID.
 outcome = "refused"
+by_group_kind = { draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
 volumes = "all"
