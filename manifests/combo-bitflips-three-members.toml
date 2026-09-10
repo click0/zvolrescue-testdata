@@ -1,0 +1,22 @@
+id = "combo-bitflips-three-members"
+description = "Scattered single-bit flips across three members"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "data:0%..100%"
+pattern = "flip-bits:48"
+[[damage]]
+member = { leaf = 1 }
+range = "data:0%..100%"
+pattern = "flip-bits:48"
+[[damage]]
+member = { leaf = 2 }
+range = "data:0%..100%"
+pattern = "flip-bits:48"
+
+[expect]
+# Sparse flips on three members at once: some stripes will be past their
+# parity budget and must be refused, the rest must come back correct.
+outcome = ["recovered", "refused"]
+volumes = "all"

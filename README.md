@@ -29,9 +29,9 @@ The kernel-built golden image does not exist yet. In its place there is
 kernel module, no root, no disks): three pools — mirror, raidz2 inside a
 mirror wrapper, draid1 — with genuine OpenZFS metadata but no zvols. Its
 oracle is in `oracle/`, its description in [IMAGE.md](IMAGE.md), and the
-first run of the damage matrix against it in
-[reports/image-v0-ztest](reports/image-v0-ztest/README.md): 17 applicable
-cases, all passed, no defects.
+the damage matrix against it in
+[reports/image-v0-ztest](reports/image-v0-ztest/README.md): 37 manifests
+over three pools, 99 applicable runs, all passed, no defects.
 
 The member files themselves are not in git; rebuild them with
 `tests/golden/build-ztest-image.sh` in zvolrescue (about three minutes) or

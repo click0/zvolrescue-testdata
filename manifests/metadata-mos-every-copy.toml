@@ -1,0 +1,14 @@
+id = "metadata-mos-every-copy"
+description = "Every copy of the MOS objset block overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "mos:objset", copy = "all" }
+pattern = "random"
+
+[expect]
+# With no copy of the MOS left at the newest TXG the tool must either
+# fall back to an older uberblock whose MOS is intact, or refuse. It must
+# not present anything else as the pool's contents.
+outcome = ["recovered", "refused"]
+volumes = "all"

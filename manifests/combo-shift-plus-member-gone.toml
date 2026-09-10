@@ -1,0 +1,20 @@
+id = "combo-shift-plus-member-gone"
+description = "One member shifted by 2048 sectors, another absent: two members unusable at once"
+classes = ["partition", "member"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "0.."
+pattern = "shift:2048"
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+
+[expect]
+# On a dRAID the parity budget is per redundancy group, and a group is
+# only ndata+nparity columns wide out of all the children: two or three
+# impaired members rarely land in the same group, so most rows keep a
+# rebuildable column and only the few that collide are refused.
+outcome = "refused"
+by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

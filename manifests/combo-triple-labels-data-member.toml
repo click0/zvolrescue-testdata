@@ -1,0 +1,25 @@
+id = "combo-triple-labels-data-member"
+description = "Three at once: one member stripped of its labels, garbage in a second, a third absent"
+classes = ["labels", "data", "member"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:all"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "data:30%..50%"
+pattern = "random"
+[[damage]]
+member = { leaf = 2 }
+pattern = "missing"
+
+[expect]
+# On a dRAID the parity budget is per redundancy group, and a group is
+# only ndata+nparity columns wide out of all the children: two or three
+# impaired members rarely land in the same group, so most rows keep a
+# rebuildable column and only the few that collide are refused.
+# Three members impaired is past every parity level in this image.
+outcome = "refused"
+by_group_kind = { draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

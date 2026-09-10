@@ -1,0 +1,25 @@
+id = "data-two-members-same-range"
+description = "Garbage over the same byte range of two members"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "span:5%..25%"
+pattern = "random"
+[[damage]]
+member = { leaf = 1 }
+range = "span:5%..25%"
+pattern = "random"
+
+[expect]
+# On a dRAID the parity budget is per redundancy group, and a group is
+# only ndata+nparity columns wide out of all the children: two or three
+# impaired members rarely land in the same group, so most rows keep a
+# rebuildable column and only the few that collide are refused.
+# `span:` is measured against the smallest member, so the same span is
+# the same bytes everywhere. Both copies of a mirrored block are gone, and a single-parity dRAID
+# cannot rebuild two bad columns. A raidz2 stripe loses exactly its budget,
+# which is what the combinatorial path is for.
+outcome = "refused"
+by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

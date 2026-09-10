@@ -1,13 +1,14 @@
 id = "partition-tail-truncated"
-description = "Last 8 MiB of a member cut off (rear labels gone, device shorter than asize)"
+description = "Last 8 MiB of one member cut off: the rear labels are gone and the device is shorter than its asize"
 classes = ["partition"]
 
-
 [[damage]]
-member = "draid1-2"
+member = { leaf = 0 }
 range = "-8MiB.."
 pattern = "truncate"
 
 [expect]
+# The front labels remain, and the data ZFS put in the truncated tail (if
+# any) is covered by redundancy.
 outcome = "bit-exact"
 volumes = "all"

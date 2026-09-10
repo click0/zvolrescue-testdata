@@ -1,0 +1,16 @@
+id = "combo-truncate-plus-data"
+description = "Tail of one member cut off, garbage in the written space of another"
+classes = ["partition", "data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "-8MiB.."
+pattern = "truncate"
+[[damage]]
+member = { leaf = 1 }
+range = "data:40%..50%"
+pattern = "random"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

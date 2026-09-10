@@ -1,0 +1,19 @@
+id = "combo-held-labels-plus-two-missing"
+description = "Two members absent and a third stripped of all four labels"
+classes = ["member", "labels"]
+held_out = true
+
+[[damage]]
+member = { leaf = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 2 }
+range = "label:all"
+pattern = "zeros"
+
+[expect]
+outcome = "refused"
+volumes = "all"

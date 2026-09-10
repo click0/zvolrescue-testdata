@@ -1,13 +1,13 @@
 id = "partition-gpt-rewritten"
-description = "First 1 MiB of a member overwritten with a fresh GPT (as a careless installer would)"
+description = "First megabyte of one member overwritten, as a careless installer writing a partition table would"
 classes = ["partition"]
 
-
 [[damage]]
-member = "raidz2-3"
+member = { leaf = 0 }
 range = "0..1MiB"
 pattern = "random"
 
 [expect]
+# L0 and L1 are gone but L2 and L3 are not, so nothing is lost.
 outcome = "bit-exact"
 volumes = "all"

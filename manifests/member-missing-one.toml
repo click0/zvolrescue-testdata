@@ -1,0 +1,11 @@
+id = "member-missing-one"
+description = "One member absent"
+classes = ["member"]
+
+[[damage]]
+member = { leaf = 0 }
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

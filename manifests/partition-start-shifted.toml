@@ -1,15 +1,15 @@
 id = "partition-start-shifted"
-description = "A member image shifted forward by 2048 sectors (the partition was re-created at another offset)"
+description = "One member shifted forward by 2048 sectors, as if its partition had been re-created at another offset"
 classes = ["partition"]
 
-
 [[damage]]
-member = "mirror-0a"
+member = { leaf = 0 }
 range = "0.."
 pattern = "shift:2048"
 
 [expect]
-# Needs the zero-point search (F-60..F-67). Until then the member reads
-# as damaged and the mirror half carries it.
-outcome = "bit-exact"
+# Every label and every block pointer of that member now sits 1 MiB away
+# from where the pool expects it, so the member reads as unusable and
+# redundancy carries the pool. Finding the shift is F-60/F-63.
+outcome = "recovered"
 volumes = "all"

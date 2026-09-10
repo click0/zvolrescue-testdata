@@ -1,30 +1,244 @@
 [
  {
-  "id": "combo-1",
-  "description": "Front labels of a raidz2 member gone AND garbage in another raidz2 member AND one mirror half missing",
-  "expected": "reconstructed",
+  "id": "combo-across-tops-one-past-budget",
+  "description": "One top-level vdev pushed past its parity budget while the other stays whole",
+  "expected": "refused",
   "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 1}"
+   "no member matching {'leaf': 2, 'top': 0}"
   ],
   "actual": "n/a",
   "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-across-tops",
+  "description": "One member absent in each of two top-level vdevs",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "no member matching {'leaf': 0, 'top': 1}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-bitflips-three-members",
+  "description": "Scattered single-bit flips across three members",
+  "expected": "refused | bit-exact | reconstructed",
+  "notes": [
+   "no member matching {'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-data-two-members-disjoint",
+  "description": "Garbage in two members, in ranges that do not overlap",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-data-two-members-same-range",
+  "description": "Garbage over the same byte range of two members",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "refused",
+   "refused_detail": "4096  locate: ERROR every copy failed its checksum; 1  sha256 encrypted: ERROR every copy failed its checksum; 1  sha512: ERROR every copy failed its checksum",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-held-front-labels-everywhere",
+  "description": "Front label pair of the first four members zeroed; the rear pairs are untouched",
+  "expected": "bit-exact",
+  "notes": [
+   "no member matching {'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-held-labels-plus-two-missing",
+  "description": "Two members absent and a third stripped of all four labels",
+  "expected": "refused",
+  "notes": [
+   "no member matching {'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-held-rings-two-members",
+  "description": "Every uberblock ring of two members zeroed; their vdev_phys nvlists survive",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-labels-plus-data",
+  "description": "Front labels gone on one member, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-missing-plus-unidentified",
+  "description": "One member absent, another stripped of all four labels",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-mos-copy-plus-member-gone",
+  "description": "One copy of the MOS objset destroyed while another member is absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "no member matching {'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-partition-plus-member-gone",
+  "description": "First megabyte of one member overwritten, another member absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-rings-plus-data",
+  "description": "Uberblock rings of one member zeroed, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-shift-plus-member-gone",
+  "description": "One member shifted by 2048 sectors, another absent: two members unusable at once",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-triple-labels-data-member",
+  "description": "Three at once: one member stripped of its labels, garbage in a second, a third absent",
+  "expected": "refused",
+  "notes": [
+   "no member matching {'leaf': 2}"
+  ],
+  "actual": "n/a",
+  "verdict": "n/a",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-truncate-plus-data",
+  "description": "Tail of one member cut off, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-two-members-gone",
+  "description": "Two members absent at once",
+  "expected": "refused",
+  "notes": [],
+  "actual": "refused",
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "combo-unidentified-plus-data",
+  "description": "One member stripped of all four labels, garbage in the written space of another",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "refused",
+   "refused_detail": "4096  locate: ERROR every copy failed its checksum",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
   "id": "data-bit-flips",
-  "description": "Single bit flips scattered over a draid1 member",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'draid1', 'leaf': 3}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "data-mirror-both-halves",
-  "description": "Garbage on both mirror halves at different places",
-  "expected": "bit-exact",
+  "description": "Sixty-four single-bit flips scattered over the written space of one member",
+  "expected": "refused | bit-exact | reconstructed",
   "notes": [],
   "outcomes": {
    "datasets": "ok",
@@ -37,52 +251,84 @@
   "image": "mirror"
  },
  {
-  "id": "data-raidz-column",
-  "description": "16 MiB of garbage in the data area of one raidz2 member",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 1}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "id": "data-gang-header",
+  "description": "Garbage over the start of the written space, where gang headers and early metadata live",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "data-one-member",
+  "description": "A tenth of the written space of one member overwritten with garbage",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "data-two-members-disjoint",
+  "description": "Garbage in two members, in parts of the written space that do not overlap",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "data-two-members-same-range",
+  "description": "Garbage over the same byte range of two members",
+  "expected": "refused",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "refused",
+   "refused_detail": "4096  locate: ERROR every copy failed its checksum; 1  sha256 encrypted: ERROR every copy failed its checksum; 1  sha512: ERROR every copy failed its checksum",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
   "id": "labels-all-four",
-  "description": "All four labels of one raidz2 member zeroed: the member has no identity, the pool still has parity",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 2}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "description": "All four labels of one member zeroed: the pool cannot identify it any more",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
   "id": "labels-front-pair",
-  "description": "Both front labels (L0, L1) of one raidz2 member zeroed; rear pair intact",
-  "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 1}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "labels-one-l0",
-  "description": "Label L0 of one raidz2 member zeroed",
-  "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 1}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "labels-rear-pair",
-  "description": "Both rear labels (L2, L3) of one mirror member zeroed",
+  "description": "Both front labels (L0, L1) of one member zeroed",
   "expected": "bit-exact",
   "notes": [],
   "outcomes": {
@@ -96,20 +342,39 @@
   "image": "mirror"
  },
  {
-  "id": "labels-rings-forged-txg",
-  "description": "Uberblock rings of one member replaced by the rings of an older image tag (valid but stale)",
+  "id": "labels-one-l0",
+  "description": "Label L0 of one member zeroed; the other three are untouched",
   "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 0}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "labels-rear-pair",
+  "description": "Both rear labels (L2, L3) of one member zeroed",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
   "id": "labels-rings-only",
-  "description": "Only the four uberblock rings of one mirror member zeroed; vdev_phys intact, the other mirror half is fine",
-  "expected": "bit-exact",
+  "description": "Only the uberblock rings are zeroed in all four labels; the vdev_phys nvlists survive",
+  "expected": "bit-exact | reconstructed",
   "notes": [],
   "outcomes": {
    "datasets": "ok",
@@ -123,85 +388,75 @@
  },
  {
   "id": "labels-vdev-phys-only",
-  "description": "Only the four vdev_phys nvlists of one draid1 member zeroed; every uberblock ring intact",
-  "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'draid1', 'leaf': 0}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "description": "Only the vdev_phys nvlists are zeroed in all four labels; every uberblock ring survives",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
-  "id": "member-missing-beyond-parity",
-  "description": "Three raidz2 members absent: beyond parity, must refuse cleanly",
+  "id": "member-missing-one",
+  "description": "One member absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
+  "id": "member-missing-three",
+  "description": "Three members of the same top-level vdev absent: past every parity level in this image",
   "expected": "refused",
   "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 0}"
+   "no member matching {'leaf': 2}"
   ],
   "actual": "n/a",
   "verdict": "n/a",
   "image": "mirror"
  },
  {
-  "id": "member-missing-raidz2",
-  "description": "One raidz2 member absent",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 0}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "member-missing-two-raidz2",
-  "description": "Two raidz2 members absent (the parity limit)",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 0}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "member-older-self",
-  "description": "One draid1 member replaced by its own copy from an earlier point of the build (everything verifies, nothing is current)",
-  "expected": "reconstructed",
-  "notes": [
-   "no member matching {'kind': 'draid1', 'leaf': 1}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "metadata-crypto-key-object",
-  "description": "Every copy of the DSL crypto key ZAP of secret-raw overwritten",
+  "id": "member-missing-two",
+  "description": "Two members of the same top-level vdev absent",
   "expected": "refused",
-  "notes": [
-   "target secret-raw:crypto-key: only objset/dnode-block are located from zdb"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "notes": [],
+  "actual": "refused",
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "verdict": "pass",
   "image": "mirror"
  },
  {
-  "id": "metadata-dnode-block",
-  "description": "Every copy of the dnode block holding vm/disk-16k object 1 overwritten",
-  "expected": "refused",
-  "notes": [
-   "target vm/disk-16k:dnode-block not found in the zdb capture"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "id": "metadata-mos-every-copy",
+  "description": "Every copy of the MOS objset block overwritten",
+  "expected": "refused | bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "pool": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
   "image": "mirror"
  },
  {
   "id": "metadata-mos-one-copy",
-  "description": "One DVA of the MOS objset block overwritten; the other copies are fine",
-  "expected": "bit-exact",
+  "description": "One copy of the MOS objset block overwritten; the other copies are untouched",
+  "expected": "bit-exact | reconstructed",
   "notes": [],
   "outcomes": {
    "datasets": "ok",
@@ -215,18 +470,7 @@
  },
  {
   "id": "partition-gpt-rewritten",
-  "description": "First 1 MiB of a member overwritten with a fresh GPT (as a careless installer would)",
-  "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'raidz2', 'leaf': 3}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
-  "image": "mirror"
- },
- {
-  "id": "partition-start-shifted",
-  "description": "A member image shifted forward by 2048 sectors (the partition was re-created at another offset)",
+  "description": "First megabyte of one member overwritten, as a careless installer writing a partition table would",
   "expected": "bit-exact",
   "notes": [],
   "outcomes": {
@@ -240,14 +484,33 @@
   "image": "mirror"
  },
  {
+  "id": "partition-start-shifted",
+  "description": "One member shifted forward by 2048 sectors, as if its partition had been re-created at another offset",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "mirror"
+ },
+ {
   "id": "partition-tail-truncated",
-  "description": "Last 8 MiB of a member cut off (rear labels gone, device shorter than asize)",
+  "description": "Last 8 MiB of one member cut off: the rear labels are gone and the device is shorter than its asize",
   "expected": "bit-exact",
-  "notes": [
-   "no member matching {'kind': 'draid1', 'leaf': 2}"
-  ],
-  "actual": "n/a",
-  "verdict": "n/a",
+  "notes": [],
+  "outcomes": {
+   "datasets": "ok",
+   "blocks": "ok",
+   "counts": "13 datasets, 245 objects, 200 blocks"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
   "image": "mirror"
  }
 ]

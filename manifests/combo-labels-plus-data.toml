@@ -1,0 +1,18 @@
+id = "combo-labels-plus-data"
+description = "Front labels gone on one member, garbage in the written space of another"
+classes = ["labels", "data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:L0,L1"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "data:40%..55%"
+pattern = "random"
+
+[expect]
+# The first member is still identified by its rear labels, so only one
+# member holds bad data.
+outcome = "recovered"
+volumes = "all"

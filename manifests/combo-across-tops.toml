@@ -1,0 +1,16 @@
+id = "combo-across-tops"
+description = "One member absent in each of two top-level vdevs"
+classes = ["member"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 0, top = 1 }
+pattern = "missing"
+
+[expect]
+# Each top-level vdev covers its own loss. A pool with a single top does
+# not have this case.
+outcome = "recovered"
+volumes = "all"

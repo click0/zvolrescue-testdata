@@ -1,0 +1,15 @@
+id = "combo-mos-copy-plus-member-gone"
+description = "One copy of the MOS objset destroyed while another member is absent"
+classes = ["metadata", "member"]
+
+[[damage]]
+target = { object = "mos:objset", copy = 0 }
+pattern = "random"
+
+[[damage]]
+member = { leaf = 2 }
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

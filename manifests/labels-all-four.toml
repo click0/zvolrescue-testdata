@@ -1,21 +1,15 @@
 id = "labels-all-four"
-description = "All four labels of one raidz2 member zeroed: the member has no identity, the pool still has parity"
+description = "All four labels of one member zeroed: the pool cannot identify it any more"
 classes = ["labels"]
 
-
 [[damage]]
-member = "raidz2-2"
-range = "0..512KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "raidz2-2"
-range = "-512KiB.."
+member = { leaf = 0 }
+range = "label:all"
 pattern = "zeros"
 
 [expect]
-# Without F-60..F-67 the member is unknown to the pool: raidz2 must still
-# reconstruct from the other three (one column missing).
-outcome = "reconstructed"
+# An unidentified member counts as absent, so this costs one member's
+# worth of redundancy, which every geometry in the image can spare.
+# Recognising such a member by its surviving uberblocks is F-61.
+outcome = "recovered"
 volumes = "all"
-evidence = ["raidz2-2", "MISSING"]

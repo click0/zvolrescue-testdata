@@ -26,10 +26,9 @@ zvolrescue називає золотим образом і матрицею по
 **`image-v0-ztest`**, зібраний лише userland-частиною OpenZFS (`ztest` +
 `zdb`, без модуля ядра, без root, без дисків): три пули — mirror, raidz2 в
 mirror-обгортці, draid1 — зі справжніми метаданими ZFS, але без zvol-ів.
-Його оракул у `oracle/`, опис у [IMAGE.md](IMAGE.md), а перший прогін
-матриці пошкоджень у
-[reports/image-v0-ztest](reports/image-v0-ztest/README.md): 17 застосовних
-випадків, усі пройдено, дефектів нема.
+Його оракул у `oracle/`, опис у [IMAGE.md](IMAGE.md), а прогін матриці пошкоджень у
+[reports/image-v0-ztest](reports/image-v0-ztest/README.md): 37 маніфестів на
+трьох пулах, 99 застосовних прогонів, усі пройдено, дефектів нема.
 
 Самі файли членів у git не зберігаються: їх або перезбирають скриптом
 `tests/golden/build-ztest-image.sh` у zvolrescue (близько трьох хвилин),

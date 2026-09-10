@@ -1,0 +1,27 @@
+id = "combo-held-front-labels-everywhere"
+description = "Front label pair of the first four members zeroed; the rear pairs are untouched"
+classes = ["labels"]
+held_out = true
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:L0,L1"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "label:L0,L1"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 2 }
+range = "label:L0,L1"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 3 }
+range = "label:L0,L1"
+pattern = "zeros"
+
+[expect]
+# ZFS keeps four labels precisely so that losing the front pair costs
+# nothing: every member is still identified by L2 and L3.
+outcome = "bit-exact"
+volumes = "all"

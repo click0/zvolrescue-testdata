@@ -1,33 +1,15 @@
 id = "labels-vdev-phys-only"
-description = "Only the four vdev_phys nvlists of one draid1 member zeroed; every uberblock ring intact"
+description = "Only the vdev_phys nvlists are zeroed in all four labels; every uberblock ring survives"
 classes = ["labels"]
 
-
 [[damage]]
-member = "draid1-0"
-range = "16KiB..128KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "draid1-0"
-range = "272KiB..384KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "draid1-0"
-range = "-496KiB..-384KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "draid1-0"
-range = "-240KiB..-128KiB"
+member = { leaf = 0 }
+range = "label:all/vdev_phys"
 pattern = "zeros"
 
 [expect]
-# With its four vdev_phys nvlists gone the member has no identity, so the
-# pool treats it as absent and redundancy carries the reads. A mirror hands
-# the copy over directly; parity vdevs rebuild the column. Re-identifying
-# such a member from its surviving uberblocks is F-61.
-outcome = "reconstructed"
-by_group_kind = { mirror = "bit-exact" }
+# The member still carries a full uberblock history but no configuration,
+# so the pool cannot place it. This is the case F-61 is meant to solve by
+# confirming the member from an uberblock's own offset verifier.
+outcome = "recovered"
 volumes = "all"

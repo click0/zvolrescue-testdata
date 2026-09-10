@@ -1,13 +1,13 @@
 id = "labels-front-pair"
-description = "Both front labels (L0, L1) of one raidz2 member zeroed; rear pair intact"
+description = "Both front labels (L0, L1) of one member zeroed"
 classes = ["labels"]
 
-
 [[damage]]
-member = "raidz2-1"
-range = "0..512KiB"
+member = { leaf = 0 }
+range = "label:L0,L1"
 pattern = "zeros"
 
 [expect]
+# The rear pair still identifies the member.
 outcome = "bit-exact"
 volumes = "all"

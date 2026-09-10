@@ -1,0 +1,17 @@
+id = "combo-rings-plus-data"
+description = "Uberblock rings of one member zeroed, garbage in the written space of another"
+classes = ["labels", "data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "data:40%..55%"
+pattern = "random"
+
+[expect]
+# The other members' rings still carry the newest TXG.
+outcome = "recovered"
+volumes = "all"

@@ -1,0 +1,23 @@
+id = "combo-unidentified-plus-data"
+description = "One member stripped of all four labels, garbage in the written space of another"
+classes = ["labels", "data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:all"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "data:40%..55%"
+pattern = "random"
+
+[expect]
+# On a dRAID the parity budget is per redundancy group, and a group is
+# only ndata+nparity columns wide out of all the children: two or three
+# impaired members rarely land in the same group, so most rows keep a
+# rebuildable column and only the few that collide are refused.
+# One member is effectively absent and a second one lies: two members
+# impaired at once.
+outcome = "refused"
+by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

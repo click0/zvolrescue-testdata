@@ -1,0 +1,15 @@
+id = "combo-partition-plus-member-gone"
+description = "First megabyte of one member overwritten, another member absent"
+classes = ["partition", "member"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "0..1MiB"
+pattern = "random"
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

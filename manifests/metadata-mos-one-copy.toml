@@ -1,16 +1,13 @@
 id = "metadata-mos-one-copy"
-description = "One DVA of the MOS objset block overwritten; the other copies are fine"
+description = "One copy of the MOS objset block overwritten; the other copies are untouched"
 classes = ["metadata"]
-
 
 [[damage]]
 target = { object = "mos:objset", copy = 0 }
 pattern = "random"
 
 [expect]
-# On a mirror the other copy is read directly; on raidz/dRAID the copy
-# lives in a stripe, so its column is rebuilt from parity.
-outcome = "bit-exact"
-by_group_kind = { raidz1 = "reconstructed", raidz2 = "reconstructed", raidz3 = "reconstructed", draid1 = "reconstructed", draid2 = "reconstructed" }
+# The MOS is written with three copies. On a mirror the next copy is read
+# directly; on a parity vdev the damaged column is rebuilt first.
+outcome = "recovered"
 volumes = "all"
-evidence = ["dva 0", "Mismatch"]

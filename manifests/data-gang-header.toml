@@ -1,0 +1,12 @@
+id = "data-gang-header"
+description = "Garbage over the start of the written space, where gang headers and early metadata live"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "data:0%..8%"
+pattern = "random"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

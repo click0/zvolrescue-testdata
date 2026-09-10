@@ -1,13 +1,15 @@
 id = "labels-rear-pair"
-description = "Both rear labels (L2, L3) of one mirror member zeroed"
+description = "Both rear labels (L2, L3) of one member zeroed"
 classes = ["labels"]
 
-
 [[damage]]
-member = "mirror-0a"
-range = "-512KiB.."
+member = { leaf = 0 }
+range = "label:L2,L3"
 pattern = "zeros"
 
 [expect]
+# The mirror image of the previous case. Note that L2 and L3 sit at
+# offsets measured from the member size rounded down to a whole label, not
+# at the end of the file.
 outcome = "bit-exact"
 volumes = "all"

@@ -1,0 +1,17 @@
+id = "combo-across-tops-one-past-budget"
+description = "One top-level vdev pushed past its parity budget while the other stays whole"
+classes = ["member"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 1, top = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 2, top = 0 }
+pattern = "missing"
+
+[expect]
+outcome = "refused"
+volumes = "all"

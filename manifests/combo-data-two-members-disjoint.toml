@@ -1,0 +1,16 @@
+id = "combo-data-two-members-disjoint"
+description = "Garbage in two members, in ranges that do not overlap"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "data:10%..25%"
+pattern = "random"
+[[damage]]
+member = { leaf = 1 }
+range = "data:60%..75%"
+pattern = "random"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

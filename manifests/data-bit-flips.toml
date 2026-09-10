@@ -1,16 +1,16 @@
 id = "data-bit-flips"
-description = "Single bit flips scattered over a draid1 member"
+description = "Sixty-four single-bit flips scattered over the written space of one member"
 classes = ["data"]
 
-
 [[damage]]
-member = "draid1-3"
-range = "8MiB..400MiB"
+member = { leaf = 0 }
+range = "data:0%..100%"
 pattern = "flip-bits:64"
 
 [expect]
-# Flips land wherever they land: on a lightly filled pool most hit free
-# space and nothing needs rebuilding, on a full one they corrupt live
-# columns. Both are correct; silently wrong data is not.
-outcome = ["bit-exact", "reconstructed"]
+# Silent corruption of the kind a failing drive produces: every flipped
+# block must be caught by its checksum. Whether it can then be rebuilt
+# depends on where the flips landed; handing back a flipped block as good
+# would be the failure.
+outcome = ["recovered", "refused"]
 volumes = "all"

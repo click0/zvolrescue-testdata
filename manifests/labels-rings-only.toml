@@ -1,28 +1,14 @@
 id = "labels-rings-only"
-description = "Only the four uberblock rings of one mirror member zeroed; vdev_phys intact, the other mirror half is fine"
+description = "Only the uberblock rings are zeroed in all four labels; the vdev_phys nvlists survive"
 classes = ["labels"]
 
-
 [[damage]]
-member = "mirror-0b"
-range = "128KiB..256KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "mirror-0b"
-range = "384KiB..512KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "mirror-0b"
-range = "-384KiB..-256KiB"
-pattern = "zeros"
-
-[[damage]]
-member = "mirror-0b"
-range = "-128KiB.."
+member = { leaf = 0 }
+range = "label:all/rings"
 pattern = "zeros"
 
 [expect]
-outcome = "bit-exact"
+# The member is still identified and readable; the newest TXG comes from
+# the other members' rings.
+outcome = "recovered"
 volumes = "all"

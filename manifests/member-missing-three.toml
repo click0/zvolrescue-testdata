@@ -1,0 +1,20 @@
+id = "member-missing-three"
+description = "Three members of the same top-level vdev absent: past every parity level in this image"
+classes = ["member"]
+
+[[damage]]
+member = { leaf = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 2 }
+pattern = "missing"
+
+[expect]
+# Blocks that lived on that vdev must be refused with a reason. Datasets
+# whose metadata has copies elsewhere stay listable, and that is not a
+# failure.
+outcome = "refused"
+volumes = "all"

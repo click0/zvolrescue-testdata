@@ -1,0 +1,21 @@
+id = "combo-held-rings-two-members"
+description = "Every uberblock ring of two members zeroed; their vdev_phys nvlists survive"
+classes = ["labels"]
+held_out = true
+
+[[damage]]
+member = { leaf = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[expect]
+# On a two-way mirror that is every ring in the pool: a configuration
+# with no root to start from, which is what F-61 and F-63 are for. Wider
+# vdevs still have rings on the remaining members.
+outcome = "recovered"
+by_group_kind = { mirror = "refused" }
+volumes = "all"

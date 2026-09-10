@@ -1,0 +1,21 @@
+id = "combo-missing-plus-unidentified"
+description = "One member absent, another stripped of all four labels"
+classes = ["member", "labels"]
+
+[[damage]]
+member = { leaf = 0 }
+pattern = "missing"
+[[damage]]
+member = { leaf = 1 }
+range = "label:all"
+pattern = "zeros"
+
+[expect]
+# On a dRAID the parity budget is per redundancy group, and a group is
+# only ndata+nparity columns wide out of all the children: two or three
+# impaired members rarely land in the same group, so most rows keep a
+# rebuildable column and only the few that collide are refused.
+# An unidentified member counts as absent, so this costs two members.
+outcome = "refused"
+by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

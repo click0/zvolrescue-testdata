@@ -1,0 +1,14 @@
+id = "data-one-member"
+description = "A tenth of the written space of one member overwritten with garbage"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 0 }
+range = "data:30%..40%"
+pattern = "random"
+
+[expect]
+# Ranges are taken over the member's written space, not its nominal
+# size, so the damage lands on blocks ZFS actually allocated.
+outcome = "recovered"
+volumes = "all"
