@@ -64,6 +64,25 @@ ZAP), or `mos:objset`. The harness resolves it to member/offset/size from
 the oracle's `zdb` captures — never from the tool under test — and
 overwrites the chosen DVA copies.
 
+### Telling the tool something
+
+Some damage leaves a member carrying nothing that says whose it is: with
+all four `vdev_phys` areas gone, only its siblings' configuration knows
+that leaf exists. An operator in that position asserts the member belongs
+to the pool, and a manifest says the same:
+
+```toml
+[recovery]
+assume_members = [{ leaf = 0 }]
+```
+
+The harness passes each named member as `--assume-member PATH`. That is
+the whole assertion: which leaf it is, the tool works out by reading
+through it, and every block is still verified by its checksum, so a
+member that does not hold this pool's data is refused. Use it only for
+classes where the member genuinely cannot identify itself — never to
+help the tool past damage it should be answering on its own.
+
 ## Classes
 
 | Class | Variants |
