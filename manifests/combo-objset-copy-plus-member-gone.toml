@@ -1,0 +1,17 @@
+id = "combo-objset-copy-plus-member-gone"
+description = "One copy of a dataset's objset destroyed while another member is absent"
+classes = ["metadata", "member"]
+
+# The MOS version of this is already here. This one asks the same
+# question one level down, where the redundancy that answers it is the
+# dataset's own extra copies rather than the pool's.
+[[damage]]
+target = { object = "any:objset", copy = 0 }
+pattern = "random"
+[[damage]]
+member = { leaf = 1 }
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

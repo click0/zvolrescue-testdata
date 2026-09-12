@@ -1,0 +1,27 @@
+id = "data-zeros-two-members-same-range"
+description = "The same span as `data-two-members-same-range`, zeroed instead of filled with garbage"
+classes = ["data"]
+
+# The controlled half of a pair. `data-two-members-same-range` overwrites
+# this exact span with random bytes; this one writes zeros, so the only
+# thing that differs is what the damage looks like. Random bytes are
+# obviously not a block. Zeros are what an unwritten region looks like,
+# and a reader that takes an all-zero block for a hole would hand them
+# back as data and call the volume whole. Only the checksum tells the two
+# apart, and the two manifests together are what says so.
+[[damage]]
+member = { leaf = 0 }
+range = "span:5%..25%"
+pattern = "zeros"
+[[damage]]
+member = { leaf = 1 }
+range = "span:5%..25%"
+pattern = "zeros"
+
+[expect]
+# The same reasoning as the random version, for the same reason: the
+# geometry decides what redundancy is left, not the byte pattern. If
+# these two manifests ever disagree, the disagreement is the finding.
+outcome = "refused"
+by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+volumes = "all"

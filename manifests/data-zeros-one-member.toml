@@ -1,0 +1,16 @@
+id = "data-zeros-one-member"
+description = "A tenth of the written space of one member zeroed rather than filled with garbage"
+classes = ["data"]
+
+# Not the same test as `data-one-member`. Random bytes are obviously not
+# a block; zeros are what an unwritten region looks like, so a reader
+# that treats an all-zero block as a hole would hand back zeros and call
+# it data. Only the checksum tells the two apart.
+[[damage]]
+member = { leaf = 0 }
+range = "data:20%..30%"
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

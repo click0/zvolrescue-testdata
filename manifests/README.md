@@ -58,11 +58,23 @@ target = { object = "vm/disk-16k:dnode-block", copy = "all" }   # or copy = 0 / 
 pattern = "random"
 ```
 
-`object` is `<dataset>:<what>` with `what` one of `objset`, `dnode-block`
-(the dnode array block holding object 1), `crypto-key` (the DSL crypto key
-ZAP), or `mos:objset`. The harness resolves it to member/offset/size from
-the oracle's `zdb` captures — never from the tool under test — and
-overwrites the chosen DVA copies.
+`object` is `<dataset>:objset`, or `mos:objset`. The harness resolves it
+to member/offset/size from the oracle's `zdb` captures — never from the
+tool under test — and overwrites the chosen DVA copies.
+
+`<dataset>` may be `any`, and usually should be: `ztest` creates and
+destroys datasets as it runs, so which names reach a given capture is a
+property of that build and a manifest naming one skips on every image
+where the run went differently. `any` picks a dataset from the capture —
+most block-pointer copies first, then by name, so the same image always
+yields the same choice.
+
+Two further shapes are described here because the format wants them and
+**the harness refuses them by name until it can locate them honestly**:
+`dnode-block` (the dnode array block holding object 1) and `crypto-key`
+(the DSL crypto key ZAP). The first was resolved to the objset's own
+block pointer, which meant a manifest using it damaged something other
+than what it said.
 
 ### Telling the tool something
 

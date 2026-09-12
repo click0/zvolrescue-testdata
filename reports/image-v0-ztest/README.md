@@ -1,5 +1,14 @@
 # Damage matrix run: image-v0-ztest
 
+> **Superseded by [image-v0-ztest-r2](../image-v0-ztest-r2/README.md),
+> and its draid1 column is void.** The layout generator read a member
+> under replacement as a group of its own, so the draid1 pool was
+> described by its two spare devices instead of its sixteen members:
+> those 35 cases were judged against something that was not the pool.
+> The mirror and raidz2 columns stand. Kept as the record of a run, not
+> as a statement about the tool.
+
+
 The damage matrix against the interim ztest-built image (no kernel, no
 zvols — see [IMAGE.md](../../IMAGE.md)). Judged in *walk* mode: the
 dataset list must match `zdb -d` and the object walker must read and

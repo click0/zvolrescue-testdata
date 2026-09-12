@@ -1,0 +1,15 @@
+id = "metadata-objset-one-copy"
+description = "One copy of a dataset's objset block overwritten; the other copies are untouched"
+classes = ["metadata"]
+
+# The MOS is already covered. This is the level below it: the objset of
+# one dataset, which is what says where that dataset's dnodes are. ZFS
+# keeps several copies of it for the same reason it keeps several of the
+# MOS, and the point of the case is that the reader looks for them.
+[[damage]]
+target = { object = "any:objset", copy = 0 }
+pattern = "random"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

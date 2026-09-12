@@ -1,0 +1,19 @@
+id = "combo-label-flips-plus-data"
+description = "Labels of one member flipped bit by bit, garbage in the written space of another"
+classes = ["labels", "data"]
+
+# Two members damaged in ways that look nothing alike: one cannot say
+# who it is and the other lies about its contents. Neither is absent,
+# which is what makes it different from the missing-member cases.
+[[damage]]
+member = { leaf = 0 }
+range = "label:all"
+pattern = "flip-bits:256"
+[[damage]]
+member = { leaf = 1 }
+range = "data:40%..55%"
+pattern = "random"
+
+[expect]
+outcome = "recovered"
+volumes = "all"

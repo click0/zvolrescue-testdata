@@ -1,0 +1,18 @@
+id = "labels-bit-flips-all-four"
+description = "Single-bit flips through all four labels of one member: present, structured, and wrong"
+classes = ["labels"]
+
+# Every other label case zeroes: the structure is absent and any reader
+# notices. This one leaves the nvlist and the uberblock ring looking
+# entirely plausible and lets the checksums disagree, which is the
+# difference between a reader that verifies and one that parses.
+[[damage]]
+member = { leaf = 0 }
+range = "label:all"
+pattern = "flip-bits:256"
+
+[expect]
+# The member cannot be trusted to identify itself, exactly as if the
+# labels were gone; the pool carries on from its siblings.
+outcome = "recovered"
+volumes = "all"

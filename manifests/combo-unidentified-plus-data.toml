@@ -16,8 +16,13 @@ pattern = "random"
 # only ndata+nparity columns wide out of all the children: two or three
 # impaired members rarely land in the same group, so most rows keep a
 # rebuildable column and only the few that collide are refused.
-# One member is effectively absent and a second one lies: two members
-# impaired at once.
-outcome = "refused"
-by_group_kind = { raidz2 = "recovered", raidz3 = "recovered", draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
+# This said "one member is effectively absent and a second one lies", and
+# the first half of that was wrong. A member with no labels is not
+# absent: every byte of its data is still there, and placing such a
+# member by reading through it is the whole of F-62. So the mirror keeps
+# both copies — one of them found the hard way — and covers the garbage
+# on the other member. Refusing here would mean throwing away data that
+# is sitting on the disk.
+outcome = "recovered"
+by_group_kind = { draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
 volumes = "all"
