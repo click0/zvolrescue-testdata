@@ -101,13 +101,31 @@ help the tool past damage it should be answering on its own.
 |---|---|
 | `labels` | one, front pair, rear pair, all four, `vdev_phys` only, rings only, partial rings with a forged txg |
 | `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size |
-| `metadata` | MOS, dnode blocks, indirect blocks, property ZAPs, the crypto key object |
+| `metadata` | MOS objset, a dataset's own objset (dnode blocks, indirect blocks, property ZAPs and the crypto key object are not locatable yet — see above) |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header, an encrypted block |
 | `member` | whole member missing, member replaced by an older copy of itself |
 
 Combinations are pairs and triples of variants across members and
 top-level vdevs (`combo-<n>.toml`). A manifest with `held_out = true` is
 not run during development, only before a release.
+
+## What the harness cannot place, and what that costs
+
+A manifest that addresses something the harness cannot resolve is
+reported `n/a` and shown as `—` in a run's table. That is the honest
+answer — a skipped case is visible, a wrong one is not — but it is worth
+knowing which cells are empty for a reason other than the pool's shape.
+
+| Limitation | Cost |
+|---|---|
+| A DVA is not mapped through the **dRAID permutation**. Which child holds which column is a table derived from the pool, not arithmetic; reimplementing it inside the thing that is supposed to be the oracle is how a harness comes to be confidently wrong. | Every `target =` manifest skips on a dRAID pool — six cases in the current set. |
+| A DVA is not mapped inside a **top-level vdev with more than one group**. The column arithmetic is one group wide and the member list is the whole top; with two groups they disagree. | No case today; the harness refuses rather than answering wrongly. |
+| **`dnode-block`** and **`crypto-key`** targets are not located. | No manifest uses them. `dnode-block` used to resolve to the objset's own block pointer, so a manifest would have damaged something other than what it said. |
+| **`older-self`** needs a member captured at two points of the same pool's life, which `ztest` cannot produce — it only continues a pool through a cachefile it does not leave behind. | Every `older-self` manifest skips on a ztest-built image. |
+
+None of these is a tool limitation: they are places where the *test* side
+cannot yet state the right answer, and they are listed so that an empty
+cell is never mistaken for a pass.
 
 The first set (22 manifests) covers each class at least once against the
 `image-v1` layout: members `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3`

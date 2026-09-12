@@ -122,7 +122,7 @@
   "description": "One copy of the MOS objset destroyed while another member is absent",
   "expected": "bit-exact | reconstructed",
   "notes": [
-   "target mos:objset: DVA on a vdev this harness cannot map"
+   "top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it"
   ],
   "actual": "n/a",
   "verdict": "n/a",
@@ -133,7 +133,7 @@
   "description": "One copy of a dataset's objset destroyed while another member is absent",
   "expected": "bit-exact | reconstructed",
   "notes": [
-   "target any:objset: DVA on a vdev this harness cannot map"
+   "top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it"
   ],
   "actual": "n/a",
   "verdict": "n/a",
@@ -522,7 +522,7 @@
   "description": "Every copy of the MOS objset block overwritten",
   "expected": "refused | bit-exact | reconstructed",
   "notes": [
-   "target mos:objset: DVA on a vdev this harness cannot map"
+   "top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it"
   ],
   "actual": "n/a",
   "verdict": "n/a",
@@ -533,7 +533,7 @@
   "description": "One copy of the MOS objset block overwritten; the other copies are untouched",
   "expected": "bit-exact | reconstructed",
   "notes": [
-   "target mos:objset: DVA on a vdev this harness cannot map"
+   "top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it"
   ],
   "actual": "n/a",
   "verdict": "n/a",
@@ -544,7 +544,7 @@
   "description": "One copy of a dataset's objset block overwritten; the other copies are untouched",
   "expected": "bit-exact | reconstructed",
   "notes": [
-   "target any:objset: DVA on a vdev this harness cannot map"
+   "top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it"
   ],
   "actual": "n/a",
   "verdict": "n/a",

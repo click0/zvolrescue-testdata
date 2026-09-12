@@ -249,7 +249,7 @@
    "told about t0-mirror-0.img"
   ],
   "outcomes": {
-   "pool": "list exit 1: zvolrescue: --assume-member /tmp/golden-combo-vdev-phys-gone-and-member-missing-pfn13n_f/t0-mirror-0.img: no scanned pool is missing a member"
+   "pool": "list exit 1: zvolrescue: --assume-member /tmp/golden-combo-vdev-phys-gone-and-member-missing-yus49elv/t0-mirror-0.img: no scanned pool is missing a member"
   },
   "inputs_unchanged": true,
   "actual": "defect",

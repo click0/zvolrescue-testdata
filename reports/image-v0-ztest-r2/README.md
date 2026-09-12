@@ -7,13 +7,13 @@ read and verify every block of every object.
 
 *Tied to one particular ztest build, like the first run. This build's
 mirror pool has two data top-level vdevs rather than one and a log, which
-changes what several manifests mean — losing "two members" can now mean
+changes what several manifests mean: losing "two members" can now mean
 losing one whole top-level vdev while the other survives.*
 
 **This run supersedes [image-v0-ztest](../image-v0-ztest/README.md),
-whose draid1 column was void**: the layout generator read a member under
+whose draid1 column was void** — the layout generator read a member under
 replacement as a group of its own and described that pool by its two
-spares instead of its sixteen members.
+spare devices instead of its sixteen members.
 
 | Pool | cases | pass | unexpected | defect | not applicable |
 |---|---|---|---|---|---|
@@ -22,33 +22,46 @@ spares instead of its sixteen members.
 | draid1 | 41 | 35 | 0 | 0 | 6 |
 | **total** | **123** | **111** | **0** | **1** | **11** |
 
+## Why the eleven were not applicable
+
+* **6** — no such member in this geometry.
+* **5** — dRAID permutation.
+
+"No such member in this geometry" is the pool's shape answering: a
+mirror group has two members, so a manifest that needs a third impaired
+one has nothing to address, and a single-top dRAID has no second
+top-level vdev to damage across. The dRAID permutation is a limit of this
+harness and not of the tool — it is where the matrix cannot yet say what
+the right answer is. Both are listed in
+[manifests/README.md](../../manifests/README.md) with what they cost.
+
 ## The one defect
 
 `combo-vdev-phys-gone-and-member-missing` on the mirror pool, and it is a
 finding rather than a flaky run.
 
 The pool has two top-level vdevs. The manifest wipes every `vdev_phys` of
-one member of the first and takes its sibling away, then asserts the
+one member of the first and takes its sibling away, then asserts that the
 stripped member belongs to the pool — which is what an operator in that
 position does, and what F-62 is for. The tool answers
 `--assume-member …: no scanned pool is missing a member`.
 
 That is not so. The surviving members' labels carry `vdev_children: 2`,
-so the tool knows the pool has two top-level vdevs and that it has
+so the tool knows the pool has two top-level vdevs and that it holds
 members for one. It does not claim the pool is readable — `scan` reports
 `readable: false` — but it reports the pool as having a single top
 instead of naming the one that is unaccounted for, and so refuses a
-correct assertion. F-62 cannot place a member into a top-level vdev no
-present member describes.
+correct assertion. F-62 cannot place a member into a top-level vdev that
+no present member describes.
 
-Left red on purpose: the matrix exists to show this, not to be tuned
+Left red on purpose. The matrix exists to show this, not to be tuned
 until it is quiet.
 
 ## Every case
 
-`—` means the manifest does not apply to that pool: it names a member, a
-geometry or a structure the pool or this harness does not have. Bold is
-anything that was not a pass.
+`—` means the manifest does not apply: it names a member, a geometry or a
+structure the pool or this harness does not have. Bold is anything that
+was not a pass.
 
 | Manifest | mirror | raidz2 | draid1 |
 |---|---|---|---|

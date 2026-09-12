@@ -10,8 +10,8 @@
 | `combo-label-flips-plus-data` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `combo-labels-plus-data` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `combo-missing-plus-unidentified` | refused | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
-| `combo-mos-copy-plus-member-gone` | bit-exact | reconstructed | n/a | n/a | — | target mos:objset: DVA on a vdev this harness cannot map |
-| `combo-objset-copy-plus-member-gone` | bit-exact | reconstructed | n/a | n/a | — | target any:objset: DVA on a vdev this harness cannot map |
+| `combo-mos-copy-plus-member-gone` | bit-exact | reconstructed | n/a | n/a | — | top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it |
+| `combo-objset-copy-plus-member-gone` | bit-exact | reconstructed | n/a | n/a | — | top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it |
 | `combo-partition-plus-member-gone` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `combo-rings-plus-data` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `combo-shift-plus-member-gone` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
@@ -37,9 +37,9 @@
 | `member-missing-one` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `member-missing-three` | refused | bit-exact | reconstructed | refused | pass | yes | blocks: refused; refused_detail: 32  dnode: not recoverable: 2 data column(s) missing, only 1 parity column(s) readable; 16  sha256 encrypted: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable; 1  sha256: ERROR not recoverable: 2 data column(s) missing, only 1 parity column(s) readable; counts: 14 datasets, 297 objects, 292 blocks |
 | `member-missing-two` | refused | bit-exact | reconstructed | reconstructed | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
-| `metadata-mos-every-copy` | refused | bit-exact | reconstructed | n/a | n/a | — | target mos:objset: DVA on a vdev this harness cannot map |
-| `metadata-mos-one-copy` | bit-exact | reconstructed | n/a | n/a | — | target mos:objset: DVA on a vdev this harness cannot map |
-| `metadata-objset-one-copy` | bit-exact | reconstructed | n/a | n/a | — | target any:objset: DVA on a vdev this harness cannot map |
+| `metadata-mos-every-copy` | refused | bit-exact | reconstructed | n/a | n/a | — | top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it |
+| `metadata-mos-one-copy` | bit-exact | reconstructed | n/a | n/a | — | top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it |
+| `metadata-objset-one-copy` | bit-exact | reconstructed | n/a | n/a | — | top-level vdev 0 is draid1: this harness does not map a DVA through the dRAID permutation, so structure-targeted damage is not placed on it |
 | `partition-gpt-rewritten` | bit-exact | bit-exact | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `partition-start-shifted` | bit-exact | reconstructed | bit-exact | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
 | `partition-tail-truncated` | bit-exact | bit-exact | pass | yes | counts: 14 datasets, 299 objects, 296 blocks |
