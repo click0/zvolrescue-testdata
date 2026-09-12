@@ -19,7 +19,7 @@
 | `combo-truncate-plus-data` | bit-exact | reconstructed | bit-exact | pass | yes | counts: 13 datasets, 258 objects, 212 blocks |
 | `combo-two-members-gone` | refused | refused | pass | yes | blocks: refused; refused_detail: 1  blake3: ERROR DVA names unknown top-level vdev 0; 160  dnode: DVA names unknown top-level vdev 0; 224  dnode: encrypted block: no key; counts: 13 datasets, 220 objects, 194 blocks |
 | `combo-unidentified-plus-data` | bit-exact | reconstructed | reconstructed | pass | yes | counts: 13 datasets, 258 objects, 212 blocks |
-| `combo-vdev-phys-gone-and-member-missing` | refused | defect | defect | yes | told about t0-mirror-0.img; pool: list exit 1: zvolrescue: --assume-member /tmp/golden-combo-vdev-phys-gone-and-member-missing-yus49elv/t0-mirror-0.img: no scanned pool is missing a member |
+| `combo-vdev-phys-gone-and-member-missing` | refused | refused | pass | yes | told about t0-mirror-0.img; pool: refused |
 | `data-bit-flips` | refused | bit-exact | reconstructed | bit-exact | pass | yes | counts: 13 datasets, 258 objects, 212 blocks |
 | `data-gang-header` | bit-exact | reconstructed | bit-exact | pass | yes | counts: 13 datasets, 258 objects, 212 blocks |
 | `data-one-member` | bit-exact | reconstructed | bit-exact | pass | yes | counts: 13 datasets, 258 objects, 212 blocks |

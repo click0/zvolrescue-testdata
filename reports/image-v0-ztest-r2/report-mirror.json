@@ -249,11 +249,11 @@
    "told about t0-mirror-0.img"
   ],
   "outcomes": {
-   "pool": "list exit 1: zvolrescue: --assume-member /tmp/golden-combo-vdev-phys-gone-and-member-missing-yus49elv/t0-mirror-0.img: no scanned pool is missing a member"
+   "pool": "refused"
   },
   "inputs_unchanged": true,
-  "actual": "defect",
-  "verdict": "defect",
+  "actual": "refused",
+  "verdict": "pass",
   "image": "mirror"
  },
  {

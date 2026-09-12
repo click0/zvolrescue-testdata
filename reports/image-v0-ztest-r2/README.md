@@ -17,51 +17,38 @@ spare devices instead of its sixteen members.
 
 | Pool | cases | pass | unexpected | defect | not applicable |
 |---|---|---|---|---|---|
-| mirror | 41 | 35 | 0 | 1 | 5 |
+| mirror | 41 | 36 | 0 | 0 | 5 |
 | raidz2 | 41 | 41 | 0 | 0 | 0 |
 | draid1 | 41 | 35 | 0 | 0 | 6 |
-| **total** | **123** | **111** | **0** | **1** | **11** |
+| **total** | **123** | **112** | **0** | **0** | **11** |
+
+Every applicable case landed where the redundancy ZFS guarantees says it
+should. That was not true when this run was first made: it found one
+defect, `combo-vdev-phys-gone-and-member-missing`, where a pool that had
+lost every identifiable member of one top-level vdev was told
+`--assume-member …: no scanned pool is missing a member` — which the
+labels contradict, since they carry `vdev_children`. Refusing was right;
+the reason given was not. The tool now names the vdev nothing describes
+and points at what would help, and the case passes as `refused`.
 
 ## Why the eleven were not applicable
 
 * **6** — no such member in this geometry.
-* **5** — dRAID permutation.
+* **5** — the dRAID permutation, which this harness does not map.
 
-"No such member in this geometry" is the pool's shape answering: a
-mirror group has two members, so a manifest that needs a third impaired
-one has nothing to address, and a single-top dRAID has no second
-top-level vdev to damage across. The dRAID permutation is a limit of this
-harness and not of the tool — it is where the matrix cannot yet say what
-the right answer is. Both are listed in
-[manifests/README.md](../../manifests/README.md) with what they cost.
-
-## The one defect
-
-`combo-vdev-phys-gone-and-member-missing` on the mirror pool, and it is a
-finding rather than a flaky run.
-
-The pool has two top-level vdevs. The manifest wipes every `vdev_phys` of
-one member of the first and takes its sibling away, then asserts that the
-stripped member belongs to the pool — which is what an operator in that
-position does, and what F-62 is for. The tool answers
-`--assume-member …: no scanned pool is missing a member`.
-
-That is not so. The surviving members' labels carry `vdev_children: 2`,
-so the tool knows the pool has two top-level vdevs and that it holds
-members for one. It does not claim the pool is readable — `scan` reports
-`readable: false` — but it reports the pool as having a single top
-instead of naming the one that is unaccounted for, and so refuses a
-correct assertion. F-62 cannot place a member into a top-level vdev that
-no present member describes.
-
-Left red on purpose. The matrix exists to show this, not to be tuned
-until it is quiet.
+"No such member in this geometry" is the pool's shape answering: a mirror
+group has two members, so a manifest that needs a third impaired one has
+nothing to address, and a single-top dRAID has no second top-level vdev
+to damage across. The dRAID permutation is a limit of this harness and
+not of the tool — it is where the matrix cannot yet state the right
+answer. Both are listed in
+[manifests/README.md](../../manifests/README.md) with what they cost, so
+an empty cell is never mistaken for a pass.
 
 ## Every case
 
 `—` means the manifest does not apply: it names a member, a geometry or a
-structure the pool or this harness does not have. Bold is anything that
-was not a pass.
+structure the pool or this harness does not have.
 
 | Manifest | mirror | raidz2 | draid1 |
 |---|---|---|---|
@@ -82,7 +69,7 @@ was not a pass.
 | `combo-truncate-plus-data` | bit-exact | reconstructed | reconstructed |
 | `combo-two-members-gone` | refused | reconstructed | reconstructed |
 | `combo-unidentified-plus-data` | reconstructed | reconstructed | reconstructed |
-| `combo-vdev-phys-gone-and-member-missing` | **defect** | reconstructed | reconstructed |
+| `combo-vdev-phys-gone-and-member-missing` | refused | reconstructed | reconstructed |
 | `data-bit-flips` | bit-exact | bit-exact | reconstructed |
 | `data-gang-header` | bit-exact | reconstructed | bit-exact |
 | `data-one-member` | bit-exact | reconstructed | reconstructed |

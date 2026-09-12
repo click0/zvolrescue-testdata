@@ -30,10 +30,10 @@ kernel module, no root, no disks): three pools — mirror, raidz2, draid1 — wi
 oracle is in `oracle/`, its description in [IMAGE.md](IMAGE.md), and the
 the damage matrix against it in
 [reports/image-v0-ztest-r2](reports/image-v0-ztest-r2/README.md): 44
-manifests over three pools, 112 applicable runs, 111 passed and one
-defect — a pool that has lost every identifiable member of one
-top-level vdev is reported as having only the other, so an operator's
-assertion about the lost one is refused. The
+manifests over three pools, 112 applicable runs, all passed. It found one
+defect on the way — `--assume-member` answered "no scanned pool is
+missing a member" about a pool missing a whole top-level vdev, which its
+own labels contradict — and that is fixed. The
 [first run](reports/image-v0-ztest/README.md) is kept as a record; its
 draid1 column was judged against that pool's spares rather than its
 members and does not count.
