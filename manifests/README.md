@@ -140,15 +140,33 @@ shorter run the same slice missed the volume entirely and the extraction
 came back bit-exact, which the run correctly reported as `unexpected`.
 The manifests were wrong, not the tool.
 
-So: an expectation may rest on the **geometry** (how many copies a
-mirror has, how many columns a raidz can lose) and on **what was
-damaged** (labels, a located structure, a whole member, every written
-byte), never on a percentage happening to contain something. `data:
-0%..100%` is every block a member has, on any image; a middle slice is
-whatever that run put there. Nothing in the harness enforces this —
-there is no cheap way to ask "did this damage touch anything the
-extraction reads" — so it is a rule for writing manifests, and the only
-place it is written down is here.
+So: an expectation may rest on **what was damaged** (labels, a located
+structure, a whole member, every written byte), never on a percentage
+happening to contain something. `data:0%..100%` is every block a member
+has, on any image; a middle slice is whatever that run put there.
+
+And it may rest on the **geometry** only where the geometry is known.
+Against the published image it is: the layout is recorded beside it and
+does not change. Against an image built on the spot it is not, and the
+difference is larger than it sounds. `ztest` attaches and detaches
+devices while it runs, so a pool asked for as a two-way mirror comes out
+two, three or four leaves wide; it removes vdevs, leaving an `indirect`
+top behind; and it makes datasets with `checksum=off`, where damaged
+bytes reach the decompressor with nothing to have caught them. Six
+builds from the same command gave `data-zeros-two-members-same-range`
+three different answers — `refused` on a two-way mirror, `bit-exact` on
+a three-way one — and all three were the tool behaving correctly.
+
+A manifest is written against the published image. A run against a
+freshly built pool can say whether the tool broke or wrote to its
+evidence, because neither depends on the shape; it cannot say whether
+the redundancy verdict is right.
+
+Nothing in the harness enforces any of this — there is no cheap way to
+ask "did this damage touch anything the extraction reads", and the
+expectations do not yet carry the redundancy arithmetic that would let
+them be judged against any shape — so these are rules for writing
+manifests, and the only place they are written down is here.
 
 The first set (22 manifests) covers each class at least once against the
 `image-v1` layout: members `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3`
