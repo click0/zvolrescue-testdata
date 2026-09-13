@@ -127,6 +127,29 @@ None of these is a tool limitation: they are places where the *test* side
 cannot yet state the right answer, and they are listed so that an empty
 cell is never mistaken for a pass.
 
+## An expectation must not depend on where the blocks landed
+
+`span:` and `data:` take percentages, and it is tempting to write
+`span:5%..25%` and expect `refused` because "both copies of the block
+are gone". They are gone only if they were in that slice. Where a pool
+puts its blocks is a property of the `ztest` run that built the image —
+how long it ran, how much it wrote, which metaslabs it opened — not a
+property of the pool's redundancy. Three manifests were written this way
+and passed for two months against one image; on an image built with a
+shorter run the same slice missed the volume entirely and the extraction
+came back bit-exact, which the run correctly reported as `unexpected`.
+The manifests were wrong, not the tool.
+
+So: an expectation may rest on the **geometry** (how many copies a
+mirror has, how many columns a raidz can lose) and on **what was
+damaged** (labels, a located structure, a whole member, every written
+byte), never on a percentage happening to contain something. `data:
+0%..100%` is every block a member has, on any image; a middle slice is
+whatever that run put there. Nothing in the harness enforces this —
+there is no cheap way to ask "did this damage touch anything the
+extraction reads" — so it is a rule for writing manifests, and the only
+place it is written down is here.
+
 The first set (22 manifests) covers each class at least once against the
 `image-v1` layout: members `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3`
 (see `oracle/layout.json` once the image is built). Expected outcomes are

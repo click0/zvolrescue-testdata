@@ -1,14 +1,25 @@
 id = "data-two-members-same-range"
-description = "Garbage over the same byte range of two members"
+description = "Garbage over every written byte of two members"
 classes = ["data"]
 
+# Every byte ZFS wrote on both members, not a slice of them. The first
+# version of this manifest damaged `span:5%..25%` — a percentage of the
+# member's data area — and expected `refused` because both copies of a
+# mirrored block were gone. That expectation held on the image it was
+# written against and nowhere else: where a pool's blocks land is a
+# property of the run that made it, not of the pool, so on a smaller
+# image the same span missed the volume entirely and the extraction came
+# back bit-exact. A manifest whose verdict depends on where ztest
+# happened to allocate is a coin flip wearing a test's clothes. `data:`
+# is resolved against the space each member actually has written, so
+# 0%..100% is every block there is on both of them, on any image.
 [[damage]]
 member = { leaf = 0 }
-range = "span:5%..25%"
+range = "data:0%..100%"
 pattern = "random"
 [[damage]]
 member = { leaf = 1 }
-range = "span:5%..25%"
+range = "data:0%..100%"
 pattern = "random"
 
 [expect]
