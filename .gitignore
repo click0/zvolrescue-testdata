@@ -1,4 +1,7 @@
 *.img
 *.zst
+# The keys of an image's encrypted datasets protect nothing and are part
+# of its oracle; any other key stays out.
 *.key
+!oracle/*/keys/raw.key
 /tmp/
