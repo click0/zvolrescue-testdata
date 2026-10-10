@@ -1,0 +1,20 @@
+id = "older-self-mirror-both-halves"
+description = "Both halves of the mirror replaced by their round-6 copies: the mirror is consistent with itself and six rounds behind the rest of the pool"
+classes = ["older-self"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+pattern = "older-self:image-v1-round6"
+[[damage]]
+member = { leaf = 1, top = 0 }
+pattern = "older-self:image-v1-round6"
+
+[expect]
+# The pool's newest TXG is still found on the raidz2 and dRAID members,
+# but every block written to the mirror top after round 6 has no current
+# copy anywhere: both halves verify as what they were. That is a loss
+# beyond the mirror's redundancy, so the honest answer at the newest TXG
+# is a refusal — or the partial image with those blocks counted — not an
+# image that presents round-6 bytes as current.
+outcome = "refused"
+volumes = "all"

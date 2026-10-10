@@ -1,0 +1,17 @@
+id = "combo-older-self-plus-member-gone"
+description = "On the raidz2, one member replaced by its round-6 copy while another is missing altogether"
+classes = ["older-self", "member"]
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+pattern = "older-self:image-v1-round6"
+[[damage]]
+member = { leaf = 3, top = 1 }
+pattern = "missing"
+
+[expect]
+# One column absent and one stale: for blocks written after round 6 that
+# is two columns gone, the whole raidz2 budget and no more; for older
+# blocks the stale column is good and one is missing. Rebuilt either way.
+outcome = "recovered"
+volumes = "all"

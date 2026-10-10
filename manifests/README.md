@@ -103,7 +103,8 @@ help the tool past damage it should be answering on its own.
 | `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size |
 | `metadata` | MOS objset, a dataset's own objset (dnode blocks, indirect blocks, property ZAPs and the crypto key object are not locatable yet — see above) |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header, an encrypted block |
-| `member` | whole member missing, member replaced by an older copy of itself |
+| `member` | whole member missing |
+| `older-self` | a member replaced by a consistent copy of itself from round 6 of the fill (the `round6-*` files of the release): one mirror half, both halves, two raidz2 columns, one dRAID child, and one stale beside one missing (`older-self-*.toml`, `combo-older-self-plus-member-gone.toml`) |
 
 Combinations are pairs and triples of variants across members and
 top-level vdevs (`combo-<n>.toml`). A manifest with `held_out = true` is
@@ -121,7 +122,7 @@ knowing which cells are empty for a reason other than the pool's shape.
 | A DVA is not mapped through the **dRAID permutation**. Which child holds which column is a table derived from the pool, not arithmetic; reimplementing it inside the thing that is supposed to be the oracle is how a harness comes to be confidently wrong. | Every `target =` manifest skips on a dRAID pool — six cases in the current set. |
 | A DVA is not mapped inside a **top-level vdev with more than one group**. The column arithmetic is one group wide and the member list is the whole top; with two groups they disagree. | No case today; the harness refuses rather than answering wrongly. |
 | **`dnode-block`** and **`crypto-key`** targets are not located. | No manifest uses them. `dnode-block` used to resolve to the objset's own block pointer, so a manifest would have damaged something other than what it said. |
-| **`older-self`** needs a member captured at two points of the same pool's life, which `ztest` cannot produce — it only continues a pool through a cachefile it does not leave behind. | Every `older-self` manifest skips on a ztest-built image. |
+| **`older-self`** needs the members captured at an earlier point of the same pool's life: the `round6-*` files of the release, decompressed beside the members as `<image>-round6` (or named with `--older`). `ztest` cannot produce such a capture — it only continues a pool through a cachefile it does not leave behind. | Every `older-self` manifest is n/a on a ztest-built image, and on a kernel-built one whose round-6 copies were not fetched. |
 
 None of these is a tool limitation: they are places where the *test* side
 cannot yet state the right answer, and they are listed so that an empty

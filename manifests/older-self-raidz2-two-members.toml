@@ -1,0 +1,17 @@
+id = "older-self-raidz2-two-members"
+description = "Two of the four raidz2 members replaced by their round-6 copies"
+classes = ["older-self"]
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+pattern = "older-self:image-v1-round6"
+[[damage]]
+member = { leaf = 2, top = 1 }
+pattern = "older-self:image-v1-round6"
+
+[expect]
+# Two stale columns are two columns that fail their checksums for every
+# block written after round 6 — exactly the budget of raidz2, so every
+# such block is rebuilt from the two current columns.
+outcome = "recovered"
+volumes = "all"

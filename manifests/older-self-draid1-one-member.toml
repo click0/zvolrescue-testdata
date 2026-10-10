@@ -1,0 +1,13 @@
+id = "older-self-draid1-one-member"
+description = "One dRAID1 member replaced by its round-6 copy"
+classes = ["older-self"]
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+pattern = "older-self:image-v1-round6"
+
+[expect]
+# One stale child of a draid1 is one bad column in every row it holds,
+# within the single parity of every redundancy group.
+outcome = "recovered"
+volumes = "all"

@@ -1,0 +1,15 @@
+id = "older-self-mirror-one-half"
+description = "One half of the mirror replaced whole by a consistent copy of itself from round 6 of the fill: everything on it verifies, nothing on it is current"
+classes = ["older-self"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+pattern = "older-self:image-v1-round6"
+
+[expect]
+# The stale half's labels carry older uberblocks; the newest TXG comes
+# from the other members. Every block written to this top after round 6
+# fails its checksum on the stale half and is read from the other — a
+# one-member loss on a two-way mirror, which ZFS survives.
+outcome = "recovered"
+volumes = "all"
