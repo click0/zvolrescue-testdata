@@ -24,24 +24,43 @@ more images with different content.
 
 ## What is here now
 
-The kernel-built golden image does not exist yet. In its place there is
-**`image-v0-ztest`**, built with OpenZFS userland only (`ztest` + `zdb`, no
-kernel module, no root, no disks): three pools — mirror, raidz2, draid1 — with genuine OpenZFS metadata but no zvols. Its
-oracle is in `oracle/`, its description in [IMAGE.md](IMAGE.md), and the
-the damage matrix against it in
+**`image-v1`**, the kernel-built golden image: one pool, `golden`, with
+mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, twelve
+volumes over every checksum and compression and three block sizes, a
+clone, raw-key and passphrase encryption, snapshots after each of twelve
+rounds of writes, a rename, a destroy, gang blocks forced, 5015 TXGs —
+built by `tests/golden/build-image.sh` in zvolrescue on the OpenZFS 2.4.1
+of a GitHub `ubuntu-26.04` runner (the `golden` job of
+`realworld.yml`), described in [IMAGE.md](IMAGE.md). Its oracle is in
+`oracle/golden/`; the damage matrix against it, run on the same kernel
+right after the build, is in [reports/image-v1](reports/image-v1/README.md):
+41 manifests, 35 passed, 6 not applicable, none outside its expected
+category. Its first build was refused whole by zvolrescue v0.9.8, which
+did not know `dynamic_gang_header`; v0.9.9 reads it.
+
+The member files are the `image-v1` release here — twenty `zstd` files,
+the ten members and a consistent copy of each taken after round 6 of
+the fill (the manifests' older-self pattern), with `SHA256SUMS`; the
+sums of the uncompressed members are in `oracle/golden/members.sha256`.
+Published by `publish-golden.yml` in zvolrescue from the run that built
+and judged the image, never by hand.
+
+Before it there was **`image-v0-ztest`**, built with OpenZFS userland
+only (`ztest` + `zdb`, no kernel module, no root, no disks): three pools
+— mirror, raidz2, draid1 — with genuine OpenZFS metadata but no zvols. It
+stays: its oracle in `oracle/mirror/`, `oracle/raidz2/` and
+`oracle/draid1/`, its description in
+[reports/image-v0-ztest/IMAGE.md](reports/image-v0-ztest/IMAGE.md), its
+members in the `image-v0-ztest` release (sums in
+`oracle/SHA256SUMS-release.txt`), and the matrix against it in
 [reports/image-v0-ztest-r2](reports/image-v0-ztest-r2/README.md): 44
-manifests over three pools, 112 applicable runs, all passed. It found one
-defect on the way — `--assume-member` answered "no scanned pool is
-missing a member" about a pool missing a whole top-level vdev, which its
-own labels contradict — and that is fixed. The
+manifests over three pools, 112 applicable runs, all passed, one defect
+found and fixed on the way (`--assume-member` answered "no scanned pool
+is missing a member" about a pool missing a whole top-level vdev). The
 [first run](reports/image-v0-ztest/README.md) is kept as a record; its
 draid1 column was judged against that pool's spares rather than its
-members and does not count.
-
-The member files themselves are not in git; rebuild them with
-`tests/golden/build-ztest-image.sh` in zvolrescue (about three minutes) or
-fetch them from the `image-v0-ztest` release. Their SHA-256 sums are in
-`oracle/SHA256SUMS-release.txt`.
+members and does not count. zvolrescue's CI still builds one pool of it
+for the pinned subset of the matrix it runs on every push.
 
 ## Layout
 
@@ -51,7 +70,7 @@ fetch them from the `image-v0-ztest` release. Their SHA-256 sums are in
 | `oracle/<pool>/` | dataset inventory, `zdb` captures, labels, layout, keys — the recorded truth of each pool |
 | `reports/<tag>/` | damage-matrix runs against that image: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
-| `IMAGE.md` | how the image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history |
+| `IMAGE.md` | how the current image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history; an earlier image's copy sits under its `reports/<tag>/` |
 
 ## Versioning
 

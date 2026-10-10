@@ -10,13 +10,13 @@
 
 
 The damage matrix against the interim ztest-built image (no kernel, no
-zvols — see [IMAGE.md](../../IMAGE.md)). Judged in *walk* mode: the
+zvols — see [IMAGE.md](IMAGE.md)). Judged in *walk* mode: the
 dataset list must match `zdb -d` and the object walker must read and
 verify every block of every object, with the extracted content checked
 against the checksums ZFS itself recorded in the block pointers.
 
 *This run is tied to one particular ztest build (see the caveat in
-[IMAGE.md](../../IMAGE.md)); the numbers describe that build, not a
+[IMAGE.md](IMAGE.md)); the numbers describe that build, not a
 fixture anyone else can reproduce byte for byte.* The image was rebuilt
 for this run, so its geometry differs from the first: the mirror pool's
 second top-level vdev is a log this time, and the draid1 is 16 children

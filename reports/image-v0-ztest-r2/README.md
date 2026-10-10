@@ -1,7 +1,7 @@
 # Damage matrix run: image-v0-ztest, second build
 
 The damage matrix against a second `ztest`-built interim image (no
-kernel, no zvols — see [IMAGE.md](../../IMAGE.md)). Judged in *walk*
+kernel, no zvols — see [IMAGE.md](../image-v0-ztest/IMAGE.md)). Judged in *walk*
 mode: the dataset list must match `zdb -d` and the object walker must
 read and verify every block of every object.
 
