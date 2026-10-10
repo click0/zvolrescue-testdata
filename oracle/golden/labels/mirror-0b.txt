@@ -1,0 +1,46 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'golden'
+    state: 1
+    txg: 5015
+    pool_guid: 17525736147274679218
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 8192
+    hostid: 602912690
+    hostname: 'runnervmb40mh'
+    top_guid: 2523154382367211095
+    guid: 17870359532672747630
+    vdev_children: 3
+    vdev_tree:
+        type: 'mirror'
+        id: 0
+        guid: 2523154382367211095
+        metaslab_array: 264
+        metaslab_shift: 25
+        ashift: 12
+        asize: 532152320
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 11292964885902770054
+            path: '/var/tmp/golden/members/mirror-0a.img'
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 17870359532672747630
+            path: '/var/tmp/golden/members/mirror-0b.img'
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        org.openzfs:draid
+        com.klarasystems:vdev_zaps_v2
+        com.klarasystems:dynamic_gang_header
+    labels = 0 1 2 3 

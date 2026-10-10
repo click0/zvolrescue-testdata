@@ -1,142 +1,255 @@
-# The interim golden image (image-v0-ztest)
+# The golden image (image-v1)
 
-Built 2026-09-10T08:16:17Z on Linux 6.18.44-fc-v24 x86_64 with OpenZFS userland
-OpenZFS (version not reported), **no kernel module**: `ztest` created and exercised the
-pools entirely in user space.
+Built 2026-10-10T10:32:14Z on Linux 7.0.0-1012-azure x86_64 with zfs-2.4.1-1ubuntu5.1.
 
-## What this is and is not
+## Layout
 
-A stopgap until the real golden image can be built on a host with a ZFS
-kernel module (`tests/golden/build-image.sh` in zvolrescue). It carries
-genuine OpenZFS metadata — MOS, DSL, dnodes, ZAPs, every checksum and
-compression, encrypted datasets, gang blocks, hundreds of TXGs — but:
+One pool `golden`, ashift 12, three top-level vdevs on 512M file members:
 
-* **no zvols**: ztest creates filesystem-like datasets only, so damage runs
-  are judged by walking every object of every dataset (the dataset list must
-  match `zdb -d`, every block must read and verify) instead of by comparing
-  volume hashes;
-* **three pools, not one**: ztest cannot mix top-level vdev kinds, so the
-  mirror, raidz2 and draid1 geometries live in separate pools; a manifest
-  that spans geometries does not apply to any of them;
-* **no `older-self` material**: ztest cannot be resumed on an existing pool
-  without a cachefile it does not leave behind, so a member cannot be
-  captured at two points of the same pool's life.
-
-ztest also adds top-level vdevs while it runs, and wraps parity vdevs in a
-mirror, so the topology below is what the pools ended up with, not what the
-command line asked for. Roles name each member after its innermost
-redundancy group.
-
-## Pools
-
-| Pool | Top-level vdev | Shape | Members (role → file) |
-|---|---|---|---|
-| mirror | 0 | mirror | `t0-mirror-0` → `ztest.0a`, `t0-mirror-1` → `ztest.1a` |
-| raidz2 | 0 | mirror of raidz2 | `t0-raidz2-0` → `ztest.0a`, `t0-raidz2-1` → `ztest.1a`, `t0-raidz2-2` → `ztest.2a`, `t0-raidz2-3` → `ztest.3a` |
-| draid1 | 0 | draid1 | `t0-draid1-0` → `ztest.0a`, `t0-draid1-1` → `ztest.1a`, `t0-draid1-2` → `ztest.2a`, `t0-draid1-3` → `ztest.3a`, `t0-draid1-4` → `ztest.4a`, `t0-draid1-5` → `ztest.5a`, `t0-draid1-6` → `ztest.6a`, `t0-draid1-7` → `ztest.7a`, `t0-draid1-8` → `ztest.8a`, `t0-draid1-9` → `ztest.9a`, `t0-draid1-10` → `ztest.10a`, `t0-draid1-11` → `ztest.11a`, `t0-draid1-12` → `ztest.12a`, `t0-draid1-13` → `ztest.13a`, `t0-draid1-14` → `ztest.14a`, `t0-draid1-15` → `ztest.15a` |
+| Top-level vdev | Members |
+|---|---|
+| mirror-0 | mirror-0a mirror-0b |
+| raidz2-1 | raidz2-0 raidz2-1 raidz2-2 raidz2-3 |
+| draid1:2d:4c:1s-2 | draid1-0 draid1-1 draid1-2 draid1-3 |
 
 ## Datasets
 
-### mirror
+```
+golden	filesystem	11693893802181011648	Sat Oct 10 10:23 2026	1.07G	156K	-	-	on	lz4	off	none
+golden@s0	snapshot	10615134073207545870	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s1	snapshot	4032581961898910681	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s2	snapshot	5778971488016552042	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s3	snapshot	7836511884007485680	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s4	snapshot	15166254894519184059	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s5	snapshot	633964241629132181	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s6	snapshot	10157732964142873828	Sat Oct 10 10:23 2026	0B	156K	-	-	-	-	off	-
+golden@s7	snapshot	13208375856992744547	Sat Oct 10 10:24 2026	0B	156K	-	-	-	-	off	-
+golden@s8	snapshot	2416890222581622724	Sat Oct 10 10:24 2026	0B	156K	-	-	-	-	off	-
+golden@s9	snapshot	933722260877831972	Sat Oct 10 10:24 2026	0B	156K	-	-	-	-	off	-
+golden@s10	snapshot	15198378229860769929	Sat Oct 10 10:24 2026	0B	156K	-	-	-	-	off	-
+golden@s11	snapshot	1576039812954254212	Sat Oct 10 10:24 2026	0B	156K	-	-	-	-	off	-
+golden/fs-largednode	filesystem	1715306095457967011	Sat Oct 10 10:23 2026	9.89M	9.89M	-	-	on	lz4	off	none
+golden/fs-largednode@s0	snapshot	17626748316730482881	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s1	snapshot	7509957514499345189	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s2	snapshot	8063452925616402986	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s3	snapshot	16561541701782138802	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s4	snapshot	13860768819100276885	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s5	snapshot	14926835576184050722	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s6	snapshot	6406797976887723078	Sat Oct 10 10:23 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s7	snapshot	7146883965105853909	Sat Oct 10 10:24 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s8	snapshot	1665639419957442588	Sat Oct 10 10:24 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s9	snapshot	8176493112163968795	Sat Oct 10 10:24 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s10	snapshot	12061275234315381956	Sat Oct 10 10:24 2026	0B	9.89M	-	-	-	-	off	-
+golden/fs-largednode@s11	snapshot	735084443824851248	Sat Oct 10 10:24 2026	0B	9.89M	-	-	-	-	off	-
+golden/secret-pw	filesystem	11816529902684010781	Sat Oct 10 10:23 2026	146M	256K	-	-	on	lz4	aes-128-ccm	passphrase
+golden/secret-pw@s0	snapshot	3475949611377879266	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s1	snapshot	1367542365492316909	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s2	snapshot	9969243387555413654	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s3	snapshot	9121947504909476911	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s4	snapshot	3949257511750566998	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s5	snapshot	14093987697502627896	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s6	snapshot	2772173497352965533	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s7	snapshot	8030682462580993559	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s8	snapshot	11816994632421440257	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s9	snapshot	16658783597652327166	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s10	snapshot	14593646914510318582	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw@s11	snapshot	2013695132440866033	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk	volume	10262315155020538933	Sat Oct 10 10:23 2026	145M	39.7M	48M	8K	skein	zstd	aes-128-ccm	passphrase
+golden/secret-pw/disk@s0	snapshot	15639313828876907278	Sat Oct 10 10:23 2026	3.05M	39.5M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s1	snapshot	9631440740803963867	Sat Oct 10 10:23 2026	368K	39.3M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s2	snapshot	15142850689635227998	Sat Oct 10 10:23 2026	438K	39.5M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s3	snapshot	3088515239501443341	Sat Oct 10 10:23 2026	372K	39.4M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s4	snapshot	10834495988078822437	Sat Oct 10 10:23 2026	400K	39.6M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s5	snapshot	8145075954661614177	Sat Oct 10 10:23 2026	380K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s6	snapshot	5390551155469902914	Sat Oct 10 10:23 2026	386K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s7	snapshot	9814447174636880606	Sat Oct 10 10:24 2026	354K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s8	snapshot	13657435442902685246	Sat Oct 10 10:24 2026	382K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s9	snapshot	17330215503837672953	Sat Oct 10 10:24 2026	364K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s10	snapshot	12716923359412982394	Sat Oct 10 10:24 2026	394K	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-pw/disk@s11	snapshot	4382803078579387742	Sat Oct 10 10:24 2026	0B	39.7M	48M	-	-	-	aes-128-ccm	-
+golden/secret-raw	filesystem	846459936273412619	Sat Oct 10 10:23 2026	118M	256K	-	-	on	lz4	aes-256-gcm	raw
+golden/secret-raw@s0	snapshot	4481764714034513960	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s1	snapshot	14765375342483024573	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s2	snapshot	16631282160632709057	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s3	snapshot	12394705310616762466	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s4	snapshot	16325864268326315240	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s5	snapshot	18163493590271745578	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s6	snapshot	10774282784089233652	Sat Oct 10 10:23 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s7	snapshot	16002682586042416451	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s8	snapshot	11921984778787336808	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s9	snapshot	10893499912410607134	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s10	snapshot	10075409271882663008	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw@s11	snapshot	12708034453483984618	Sat Oct 10 10:24 2026	0B	256K	-	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk	volume	7636482850281007270	Sat Oct 10 10:23 2026	117M	34.8M	48M	16K	sha256	lz4	aes-256-gcm	raw
+golden/secret-raw/disk@s0	snapshot	13574119916001331910	Sat Oct 10 10:23 2026	2.52M	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s1	snapshot	12330729365408270818	Sat Oct 10 10:23 2026	356K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s2	snapshot	497408608579432305	Sat Oct 10 10:23 2026	372K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s3	snapshot	28434449125318701	Sat Oct 10 10:23 2026	356K	34.8M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s4	snapshot	762729660351773886	Sat Oct 10 10:23 2026	368K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s5	snapshot	4665445705435540184	Sat Oct 10 10:23 2026	352K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s6	snapshot	11794124614690928882	Sat Oct 10 10:23 2026	372K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s7	snapshot	14168057196430649	Sat Oct 10 10:24 2026	352K	34.6M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s8	snapshot	17592110825182448936	Sat Oct 10 10:24 2026	372K	34.6M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s9	snapshot	16110576996764093754	Sat Oct 10 10:24 2026	352K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s10	snapshot	17259570258682991991	Sat Oct 10 10:24 2026	372K	34.7M	48M	-	-	-	aes-256-gcm	-
+golden/secret-raw/disk@s11	snapshot	2045942556778584610	Sat Oct 10 10:24 2026	0B	34.8M	48M	-	-	-	aes-256-gcm	-
+golden/vm	filesystem	14604541094329997862	Sat Oct 10 10:23 2026	810M	144K	-	-	on	lz4	off	none
+golden/vm@s0	snapshot	2032028778819802039	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s1	snapshot	8325910664302113619	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s2	snapshot	15625148650756843551	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s3	snapshot	4573527477719865891	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s4	snapshot	16353271224781868558	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s5	snapshot	13199666867250317065	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s6	snapshot	6695981263162423086	Sat Oct 10 10:23 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s7	snapshot	18337068242015675022	Sat Oct 10 10:24 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s8	snapshot	6625810672156079260	Sat Oct 10 10:24 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s9	snapshot	6142369665169793424	Sat Oct 10 10:24 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s10	snapshot	6416145719100253958	Sat Oct 10 10:24 2026	0B	144K	-	-	-	-	off	-
+golden/vm@s11	snapshot	2753494195131267434	Sat Oct 10 10:24 2026	0B	144K	-	-	-	-	off	-
+golden/vm/clone-of-16k	volume	16913096896412159942	Sat Oct 10 10:23 2026	19.3M	34.5M	48M	16K	on	lz4	off	none
+golden/vm/clone-of-16k@s4	snapshot	1933233657227536208	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s5	snapshot	16542074063725019998	Sat Oct 10 10:23 2026	266K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s6	snapshot	8508733412894927061	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s7	snapshot	7523252777386962237	Sat Oct 10 10:24 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s8	snapshot	17469978268381969052	Sat Oct 10 10:24 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s9	snapshot	9893619289701709195	Sat Oct 10 10:24 2026	267K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s10	snapshot	2657440153903663234	Sat Oct 10 10:24 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/clone-of-16k@s11	snapshot	1756796712305274600	Sat Oct 10 10:24 2026	0B	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k	volume	7726908556211612143	Sat Oct 10 10:23 2026	99.1M	34.3M	48M	16K	sha256	zstd	off	none
+golden/vm/disk-16k@s0	snapshot	8075868208372982152	Sat Oct 10 10:23 2026	2.34M	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k@s1	snapshot	4215146450629005282	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k@s2	snapshot	5804677006288683115	Sat Oct 10 10:23 2026	282K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k@s3	snapshot	14264520773433779036	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k@s4	snapshot	9569925744933430472	Sat Oct 10 10:23 2026	280K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-16k@s5	snapshot	10935338784219887876	Sat Oct 10 10:23 2026	286K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-16k@s6	snapshot	4627993351580705161	Sat Oct 10 10:23 2026	251K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-16k@s7	snapshot	16696617325930780201	Sat Oct 10 10:24 2026	268K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-16k@s8	snapshot	13354239790127335612	Sat Oct 10 10:24 2026	263K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-16k@s9	snapshot	5346751697346491501	Sat Oct 10 10:24 2026	268K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-16k@s10	snapshot	5749702627979057055	Sat Oct 10 10:24 2026	250K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-16k@s11	snapshot	14467633737647737382	Sat Oct 10 10:24 2026	0B	34.3M	48M	-	-	-	off	-
+golden/vm/disk-64k	volume	1512374165156334026	Sat Oct 10 10:23 2026	90.0M	32.2M	48M	64K	sha512	gzip	off	none
+golden/vm/disk-64k@s0	snapshot	14554273970693198665	Sat Oct 10 10:23 2026	2.14M	32.3M	48M	-	-	-	off	-
+golden/vm/disk-64k@s1	snapshot	2471038981106479722	Sat Oct 10 10:23 2026	144K	32.3M	48M	-	-	-	off	-
+golden/vm/disk-64k@s2	snapshot	1302447272134600388	Sat Oct 10 10:23 2026	158K	32.3M	48M	-	-	-	off	-
+golden/vm/disk-64k@s3	snapshot	3062010301746836390	Sat Oct 10 10:23 2026	144K	32.3M	48M	-	-	-	off	-
+golden/vm/disk-64k@s4	snapshot	12004040677552617489	Sat Oct 10 10:23 2026	116K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s5	snapshot	5468273418017983613	Sat Oct 10 10:23 2026	144K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s6	snapshot	16575355691919856612	Sat Oct 10 10:23 2026	116K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s7	snapshot	6678686526265055033	Sat Oct 10 10:24 2026	132K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s8	snapshot	14058986072439980659	Sat Oct 10 10:24 2026	116K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s9	snapshot	11962181815446561177	Sat Oct 10 10:24 2026	132K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s10	snapshot	13722687811449816805	Sat Oct 10 10:24 2026	116K	32.2M	48M	-	-	-	off	-
+golden/vm/disk-64k@s11	snapshot	2156965669840716507	Sat Oct 10 10:24 2026	0B	32.2M	48M	-	-	-	off	-
+golden/vm/disk-8k	volume	7245479648083484966	Sat Oct 10 10:23 2026	144M	39.5M	48M	8K	fletcher4	lz4	off	none
+golden/vm/disk-8k@s0	snapshot	16748223683618455276	Sat Oct 10 10:23 2026	2.80M	39.6M	48M	-	-	-	off	-
+golden/vm/disk-8k@s1	snapshot	1133684306353459151	Sat Oct 10 10:23 2026	295K	39.8M	48M	-	-	-	off	-
+golden/vm/disk-8k@s2	snapshot	14548860158569640084	Sat Oct 10 10:23 2026	295K	39.6M	48M	-	-	-	off	-
+golden/vm/disk-8k@s3	snapshot	14717513965424342997	Sat Oct 10 10:23 2026	295K	39.7M	48M	-	-	-	off	-
+golden/vm/disk-8k@s4	snapshot	16734238886662106513	Sat Oct 10 10:23 2026	296K	39.6M	48M	-	-	-	off	-
+golden/vm/disk-8k@s5	snapshot	14868327796736883528	Sat Oct 10 10:23 2026	313K	39.5M	48M	-	-	-	off	-
+golden/vm/disk-8k@s6	snapshot	17647199758809985245	Sat Oct 10 10:23 2026	265K	39.5M	48M	-	-	-	off	-
+golden/vm/disk-8k@s7	snapshot	8035337032115892737	Sat Oct 10 10:24 2026	282K	39.5M	48M	-	-	-	off	-
+golden/vm/disk-8k@s8	snapshot	3116777534095751794	Sat Oct 10 10:24 2026	265K	39.6M	48M	-	-	-	off	-
+golden/vm/disk-8k@s9	snapshot	797922802767080225	Sat Oct 10 10:24 2026	282K	39.5M	48M	-	-	-	off	-
+golden/vm/disk-8k@s10	snapshot	16255874398986191664	Sat Oct 10 10:24 2026	277K	39.5M	48M	-	-	-	off	-
+golden/vm/disk-8k@s11	snapshot	15282285103809334574	Sat Oct 10 10:24 2026	0B	39.5M	48M	-	-	-	off	-
+golden/vm/disk-blake3	volume	15412643325483933423	Sat Oct 10 10:23 2026	116M	34.5M	48M	16K	blake3	off	off	none
+golden/vm/disk-blake3@s0	snapshot	8776770676450642617	Sat Oct 10 10:23 2026	2.39M	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s1	snapshot	16887529581439490718	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s2	snapshot	18197905128813791652	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s3	snapshot	5473211420421775259	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s4	snapshot	14856128030636832465	Sat Oct 10 10:23 2026	250K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s5	snapshot	6615981369664784521	Sat Oct 10 10:23 2026	283K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s6	snapshot	81164284026153258	Sat Oct 10 10:23 2026	282K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s7	snapshot	4421985647257335863	Sat Oct 10 10:24 2026	266K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s8	snapshot	11531145447169204560	Sat Oct 10 10:24 2026	282K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s9	snapshot	8624241112406527481	Sat Oct 10 10:24 2026	266K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s10	snapshot	408601044243447855	Sat Oct 10 10:24 2026	286K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-blake3@s11	snapshot	16297174586079994079	Sat Oct 10 10:24 2026	0B	34.5M	48M	-	-	-	off	-
+golden/vm/disk-edonr	volume	661645586709056772	Sat Oct 10 10:23 2026	99.1M	34.2M	48M	16K	edonr	zle	off	none
+golden/vm/disk-edonr@s0	snapshot	1533283997194556000	Sat Oct 10 10:23 2026	2.47M	34.5M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s1	snapshot	14588209698829184925	Sat Oct 10 10:23 2026	286K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s2	snapshot	3606282402607372148	Sat Oct 10 10:23 2026	286K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s3	snapshot	1066297307777920874	Sat Oct 10 10:23 2026	286K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s4	snapshot	9403016096431374626	Sat Oct 10 10:23 2026	251K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s5	snapshot	3115722342219340655	Sat Oct 10 10:23 2026	283K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s6	snapshot	13572166783977062495	Sat Oct 10 10:23 2026	278K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s7	snapshot	4512556771454006954	Sat Oct 10 10:24 2026	268K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s8	snapshot	10993071499981761224	Sat Oct 10 10:24 2026	282K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s9	snapshot	3038024709106562908	Sat Oct 10 10:24 2026	268K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s10	snapshot	11038175832244965788	Sat Oct 10 10:24 2026	282K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-edonr@s11	snapshot	11492354325124322553	Sat Oct 10 10:24 2026	0B	34.2M	48M	-	-	-	off	-
+golden/vm/disk-skein	volume	16188246386350737057	Sat Oct 10 10:23 2026	99.4M	34.2M	48M	16K	skein	lzjb	off	none
+golden/vm/disk-skein@s0	snapshot	13297273795782877165	Sat Oct 10 10:23 2026	2.40M	34.4M	48M	-	-	-	off	-
+golden/vm/disk-skein@s1	snapshot	15858160130364455108	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-skein@s2	snapshot	14335242107112196337	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-skein@s3	snapshot	5501304816276914060	Sat Oct 10 10:23 2026	286K	34.5M	48M	-	-	-	off	-
+golden/vm/disk-skein@s4	snapshot	9083174463853857618	Sat Oct 10 10:23 2026	251K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-skein@s5	snapshot	16008905900252062912	Sat Oct 10 10:23 2026	283K	34.4M	48M	-	-	-	off	-
+golden/vm/disk-skein@s6	snapshot	9554907596115550777	Sat Oct 10 10:23 2026	251K	34.3M	48M	-	-	-	off	-
+golden/vm/disk-skein@s7	snapshot	16196249507975048007	Sat Oct 10 10:24 2026	268K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-skein@s8	snapshot	4219871850492660932	Sat Oct 10 10:24 2026	282K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-skein@s9	snapshot	5504998255693512223	Sat Oct 10 10:24 2026	268K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-skein@s10	snapshot	17375666569149477698	Sat Oct 10 10:24 2026	250K	34.2M	48M	-	-	-	off	-
+golden/vm/disk-skein@s11	snapshot	15736657239523881765	Sat Oct 10 10:24 2026	0B	34.2M	48M	-	-	-	off	-
+golden/vm/disk-sparse	volume	11770778996721645372	Sat Oct 10 10:23 2026	44.5M	24.0M	256M	16K	fletcher4	lz4	off	none
+golden/vm/disk-sparse@s0	snapshot	5980616850796998676	Sat Oct 10 10:23 2026	997K	18.9M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s1	snapshot	9817529622511660491	Sat Oct 10 10:23 2026	185K	20.2M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s2	snapshot	3343653833934067551	Sat Oct 10 10:23 2026	191K	21.8M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s3	snapshot	5076904332539065149	Sat Oct 10 10:23 2026	205K	23.9M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s4	snapshot	6371170040973183020	Sat Oct 10 10:23 2026	201K	24.0M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s5	snapshot	5154987693321483137	Sat Oct 10 10:23 2026	184K	24.0M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s6	snapshot	927806239251941197	Sat Oct 10 10:23 2026	201K	23.9M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s7	snapshot	769877037424485962	Sat Oct 10 10:24 2026	181K	23.9M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s8	snapshot	18273155502186887954	Sat Oct 10 10:24 2026	205K	23.9M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s9	snapshot	6235076617483083054	Sat Oct 10 10:24 2026	185K	24.0M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s10	snapshot	8699059871889210909	Sat Oct 10 10:24 2026	205K	24.0M	256M	-	-	-	off	-
+golden/vm/disk-sparse@s11	snapshot	6448740000074246404	Sat Oct 10 10:24 2026	0B	24.0M	256M	-	-	-	off	-
+golden/vm/newname	volume	11044608341685346401	Sat Oct 10 10:23 2026	98.5M	34.7M	32M	16K	fletcher4	lz4	off	none
+golden/vm/newname@s0	snapshot	12463679288752347758	Sat Oct 10 10:23 2026	2.35M	34.6M	32M	-	-	-	off	-
+golden/vm/newname@s1	snapshot	9466849266881062787	Sat Oct 10 10:23 2026	268K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s2	snapshot	6254638593985938568	Sat Oct 10 10:23 2026	270K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s3	snapshot	12265285927085560323	Sat Oct 10 10:23 2026	268K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s4	snapshot	18233078363981188902	Sat Oct 10 10:23 2026	286K	34.8M	32M	-	-	-	off	-
+golden/vm/newname@s5	snapshot	2091673711863547870	Sat Oct 10 10:23 2026	266K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s6	snapshot	10513099138650745795	Sat Oct 10 10:23 2026	286K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s7	snapshot	6722303460712445308	Sat Oct 10 10:24 2026	254K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s8	snapshot	10689844109795824725	Sat Oct 10 10:24 2026	286K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s9	snapshot	17773294530114140704	Sat Oct 10 10:24 2026	254K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s10	snapshot	11174587609195447934	Sat Oct 10 10:24 2026	286K	34.7M	32M	-	-	-	off	-
+golden/vm/newname@s11	snapshot	4699139797003940529	Sat Oct 10 10:24 2026	0B	34.7M	32M	-	-	-	off	-
+```
 
-```
-ztest 1 0
-ztest/ds_0 6 15
-ztest/ds_0@0 782 15
-ztest/ds_1 39 15
-ztest/ds_1@1 1143 15
-ztest/ds_2 40 15
-ztest/ds_2@2 844 15
-ztest/ds_3 41 14
-ztest/ds_3@3 1431 14
-ztest/temp_0 1024 5
-ztest/temp_0@0 1026 5
-ztest/temp_1 1138 1
-ztest/temp_2 1228 5
-ztest/temp_2@0 1255 5
-ztest/temp_3 1755 5
-ztest/temp_3@0 1775 5
-ztest/temp_3@1 1783 5
-ztest/temp_3@2 1796 5
-```
+## History
 
-### raidz2
-
-```
-ztest 1 0
-ztest/ds_0 6 15
-ztest/ds_1 73 15
-ztest/ds_1@1 936 15
-ztest/ds_2 75 14
-ztest/ds_2@2 936 14
-ztest/ds_3 77 14
-ztest/ds_3@3 517 14
-ztest/temp_0 993 5
-ztest/temp_1 1041 5
-ztest/temp_1@2 1052 5
-ztest/temp_1@3 1068 5
-ztest/temp_2 1161 5
-ztest/temp_2@0 1162 5
-ztest/temp_3 1272 5
-```
-
-### draid1
-
-```
-ztest 1 0
-ztest/ds_0 6 16
-ztest/ds_0@0 1122 16
-ztest/ds_1 43 14
-ztest/ds_1@1 619 14
-ztest/ds_2 45 15
-ztest/ds_3 47 14
-ztest/ds_3@3 862 14
-ztest/temp_0 1126 1
-ztest/temp_1 1123 5
-ztest/temp_1@0 1136 5
-ztest/temp_2 1064 5
-ztest/temp_2@0 1067 5
-ztest/temp_3 965 5
-ztest/temp_3@0 967 5
-```
+12 rounds of 8 TXGs with 256 KiB writes to every volume, a recursive snapshot `s<round>` after each round; clone of `vm/disk-16k@s3` at round 3; `vm/oldname` renamed to `vm/newname` at round 6; `vm/doomed@s2` then `vm/doomed` destroyed at round 9. Gang blocks forced (threshold 16 KiB) during the fill. Deterministic content from seed `zvolrescue-golden-2026`. The `round6-*` release files are a consistent copy of every member taken right after round 6 (the `older-self:image-v1-round6` pattern of the damage manifests).
 
 ## Oracle
 
-`oracle/<pool>/`: `inventory.txt` (dataset, creation TXG, object count — from
-`zdb -d`), `datasets.txt`, `zdb-dddd.txt` (every object with its block
-pointers and the checksums ZFS recorded), `zdb-C.txt`, `zdb-u.txt`,
-`labels/<role>.txt` (`zdb -l`), `members.txt`, `layout.json`, `keys/raw.key`
-(ztest's fixed wrapping key). Nothing here was produced by zvolrescue.
+See `oracle/`: `volumes.sha256` (every volume at every snapshot and at export), `datasets*.txt`, `datasets-by-txg/`, `labels/`, `zdb-*.txt`, `zpool-status.txt`, `keys/`, `layout.json`, `members.sha256` (uncompressed members).
 
 ## Release files
 
-`<pool>-<role>.img.zst` are the published members, one file per role.
-There is no `older-self` material in this image: ztest cannot be resumed
-on an existing pool without a cachefile it does not leave behind, so a
-member cannot be captured at two points of the same pool\'s life. Manifests
-using that pattern are skipped until the kernel-built image exists.
-
 ```
-d2840d23316695e8ab2301c79dd6c6e314648911770d97e12b000107ab777e83  draid1-t0-draid1-0.img.zst
-decb10a311db1c6a76fbd75a49d2e29125a8e123e944d38bb64f0d8a8d16b2da  draid1-t0-draid1-1.img.zst
-7d890192bfd505ba49483292a9aaca9b675dd003bc3080f6f755e6d294dde7b6  draid1-t0-draid1-10.img.zst
-0318d907530ac953dffe606d276c36152a215a134e79995b5da1152ed19cc06c  draid1-t0-draid1-11.img.zst
-474f2ad4160f1d38af8f675c3cb2243eb46abb59b51c2449248f3f63cc922731  draid1-t0-draid1-12.img.zst
-b212f36a0cc8494b3df1dd52905053789b741184c1b97ff1d4a610822b255d52  draid1-t0-draid1-13.img.zst
-4026aa6a53e827455ffa3a71e938cb346a35b5540326a41e2b3c7d3856288d72  draid1-t0-draid1-14.img.zst
-1ef1a6c602cc8729413e2c06c230c64c5aeb86d715263ed39234e63847164ee5  draid1-t0-draid1-15.img.zst
-58e56ae7c534c3b775d807baeface01a9e504722cc501951d31a5b7025ecf539  draid1-t0-draid1-2.img.zst
-c69dbd38944c069fefd046be7eeea11a5731b61820cb513f1914d6846c37e9f9  draid1-t0-draid1-3.img.zst
-8b024dda9a602bcedb0abc2e1a6c38402cd56e686f2942a5f8d50fe05d9fa26d  draid1-t0-draid1-4.img.zst
-7c272300727ce0f2e0edb9d1ac754993521ba1b52724e5ad0883dc13cdf9bb2c  draid1-t0-draid1-5.img.zst
-fa7792e521ddfafabff55431527997c7efb6dc7a84a0ae8766e800f431a4aecd  draid1-t0-draid1-6.img.zst
-d2ccdbffa6589ad1c258ca7829abce8e7f463d5980fc58e6dd6b9d57d91cf7cb  draid1-t0-draid1-7.img.zst
-0391f5e15c39548245afcaf825b470dd39c6271fb726a4c0b937722fe501b8ce  draid1-t0-draid1-8.img.zst
-2e6afdb532c65fc38dc47a33575e9fe5a43a0971c2bb5c634c407faabb28050e  draid1-t0-draid1-9.img.zst
-6e35ef05bda5f355a2a25392a4ab828376ed0a189095039681aceb1afa2c073a  mirror-t0-mirror-0.img.zst
-4b2eca9e08a302598f29a8dba6fe80304442639dbf6096cac76e0e23cb870a00  mirror-t0-mirror-1.img.zst
-ec350e9a4102c3909c859dff5ac427778ae8f4518b4359eb7ea346a2211863b1  raidz2-t0-raidz2-0.img.zst
-a148af6f2083d66ea102e2a50f376609519e8ca8df39cf342358031c3dc7e085  raidz2-t0-raidz2-1.img.zst
-5c200c6771b183c342dcac429a1c2a74b6a1b792247cb2a92d17e2e4552387a4  raidz2-t0-raidz2-2.img.zst
-affcf4817912a3a4037d03e5ea79a8c1e6a4602cc58c5a49ca10bc2e91c648e2  raidz2-t0-raidz2-3.img.zst
+c2d072ee9c17e5292e88e1bb4ebd46868456f3fe430478f9fc594c405a4cbb4b  draid1-0.img.zst
+c4e575ebbd50d27f013765c986e801ead31f643b9e007a541208f2de9cbd2a8e  draid1-1.img.zst
+c81abb13311408e565d24551f96bfba5a315ecf04300779ef0a81befc5eb8d06  draid1-2.img.zst
+be29b4f5b2f3ff92c5bde19aa5373249b84c049dc5ae88197067bfd78da60c05  draid1-3.img.zst
+d946d4f8aa831fee01d3f614522d8ca72b6ec2e30bb7d232d9e07e4cbe9a4651  mirror-0a.img.zst
+daa8e7fe473d1f25632837ab9b3889e738ed681ed85447abe1db03ff474f71ab  mirror-0b.img.zst
+35a7226c3541d6dc993cbae0bc87bfa5c89548f353f519fc27e08bb070d650e3  raidz2-0.img.zst
+dcf761c48907805d2a4ef763749fd8fb26af4e1e79ab321fdb33573b0c8926df  raidz2-1.img.zst
+508196908ae7b5036e5b87fdf5ee61da61e57dbfc85ae87c24511f06962a9c45  raidz2-2.img.zst
+1b422fb6b0b1547a4d0b15083ccbcbd54072c5818392fab70f79be9f05062aef  raidz2-3.img.zst
+e4a293c4204a3eb92fe4779754a8248fa06dfe97dd2afcc0add7737bfb340683  round6-draid1-0.img.zst
+2975b9f06f7526c2ac0360139ffaf51e5144f6595a9038671c7daf519693c7c7  round6-draid1-1.img.zst
+3ae4589b5188ad115180e863e6e1d199dfc035dc9a53a159ffc5fe6d8da4b31a  round6-draid1-2.img.zst
+605c9ad1adaab7f1fe1d91dd3bf00eba61d9613572f8eabc8e653eb59f91155e  round6-draid1-3.img.zst
+ec16c736df060ffd0cd3912be0b7f51ff9fcfe157cc587a97a352f45264dc2ce  round6-mirror-0a.img.zst
+9c0faddd0cca71ae6082b87a60d87a30d7ee2472213f3b13c70c787c6a39c03c  round6-mirror-0b.img.zst
+c101b581ca2041c343f6d78c45b83cf2d28af97712f06acdcb334c2915f4cfa2  round6-raidz2-0.img.zst
+24428f903c1c517e155cc21d73c078fe6b9d694c803797ed3cdc955415b570ae  round6-raidz2-1.img.zst
+4178b7855cae9730c007d0e7fac3e48b4f103527310e6f7b828bb80dfbe8db70  round6-raidz2-2.img.zst
+37b160b90112dfc06f2679d3b45f6d0c85690ca840844f943d44a1e1647ee468  round6-raidz2-3.img.zst
 ```

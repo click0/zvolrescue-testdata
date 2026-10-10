@@ -1,0 +1,13 @@
+== members
+== pool
+== datasets
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== history (this takes a while)
+== oracle
+== export
+== release files
+== done: /var/tmp/golden/release, /var/tmp/golden/oracle, /var/tmp/golden/IMAGE.md

@@ -1,0 +1,42 @@
+image-v1 n/a        combo-across-tops-one-past-budget expected refused | partial actual n/a
+image-v1 pass       combo-across-tops                expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-bitflips-three-members     expected refused | bit-exact | reconstructed | partial actual partial
+image-v1 pass       combo-data-two-members-disjoint  expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-data-two-members-same-range expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-label-flips-plus-data      expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-labels-plus-data           expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-missing-plus-unidentified  expected bit-exact | reconstructed actual reconstructed
+image-v1 n/a        combo-mos-copy-plus-member-gone  expected bit-exact | reconstructed actual n/a
+image-v1 n/a        combo-objset-copy-plus-member-gone expected bit-exact | reconstructed actual n/a
+image-v1 pass       combo-partition-plus-member-gone expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-rings-plus-data            expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-shift-plus-member-gone     expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-triple-labels-data-member  expected refused | partial actual partial
+image-v1 pass       combo-truncate-plus-data         expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-two-members-gone           expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-unidentified-plus-data     expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       combo-vdev-phys-gone-and-member-missing expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-bit-flips                   expected refused | bit-exact | reconstructed | partial actual reconstructed
+image-v1 pass       data-gang-header                 expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-one-member                  expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-two-members-disjoint        expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-two-members-same-range      expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-zeros-one-member            expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       data-zeros-two-members-same-range expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       labels-all-four                  expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       labels-bit-flips-all-four        expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       labels-front-pair                expected bit-exact      actual bit-exact
+image-v1 pass       labels-one-l0                    expected bit-exact      actual bit-exact
+image-v1 pass       labels-rear-pair                 expected bit-exact      actual bit-exact
+image-v1 pass       labels-rings-only                expected bit-exact | reconstructed actual bit-exact
+image-v1 pass       labels-vdev-phys-only            expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       member-missing-one               expected bit-exact | reconstructed actual reconstructed
+image-v1 pass       member-missing-three             expected refused | partial actual partial
+image-v1 pass       member-missing-two               expected bit-exact | reconstructed actual reconstructed
+image-v1 n/a        metadata-mos-every-copy          expected refused | bit-exact | reconstructed | partial actual n/a
+image-v1 n/a        metadata-mos-one-copy            expected bit-exact | reconstructed actual n/a
+image-v1 n/a        metadata-objset-one-copy         expected bit-exact | reconstructed actual n/a
+image-v1 pass       partition-gpt-rewritten          expected bit-exact      actual bit-exact
+image-v1 pass       partition-start-shifted          expected bit-exact | reconstructed actual bit-exact
+image-v1 pass       partition-tail-truncated         expected bit-exact      actual bit-exact
+image-v1: 6 n/a, 35 pass

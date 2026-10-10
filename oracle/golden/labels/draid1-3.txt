@@ -1,0 +1,62 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'golden'
+    state: 1
+    txg: 5015
+    pool_guid: 17525736147274679218
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 8192
+    hostid: 602912690
+    hostname: 'runnervmb40mh'
+    top_guid: 9268536159189956014
+    guid: 4036233717251650063
+    vdev_children: 3
+    vdev_tree:
+        type: 'draid'
+        id: 2
+        guid: 9268536159189956014
+        nparity: 1
+        draid_ndata: 2
+        draid_nspares: 1
+        draid_ngroups: 1
+        metaslab_array: 256
+        metaslab_shift: 27
+        ashift: 12
+        asize: 1459617792
+        min_alloc: 8192
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 8836130259346764604
+            path: '/var/tmp/golden/members/draid1-0.img'
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 698817429596788734
+            path: '/var/tmp/golden/members/draid1-1.img'
+            create_txg: 4
+        children[2]:
+            type: 'file'
+            id: 2
+            guid: 13814991319567802037
+            path: '/var/tmp/golden/members/draid1-2.img'
+            create_txg: 4
+        children[3]:
+            type: 'file'
+            id: 3
+            guid: 4036233717251650063
+            path: '/var/tmp/golden/members/draid1-3.img'
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        org.openzfs:draid
+        com.klarasystems:vdev_zaps_v2
+        com.klarasystems:dynamic_gang_header
+    labels = 0 1 2 3 

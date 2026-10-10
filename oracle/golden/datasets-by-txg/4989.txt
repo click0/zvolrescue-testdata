@@ -1,0 +1,210 @@
+Dataset mos [META], ID 0, cr_txg 4, 10.1M, 761 objects
+Dataset golden/fs-largednode@s4 [ZPL], ID 1063, cr_txg 2070, 9.89M, 406 objects
+Dataset golden/fs-largednode@s9 [ZPL], ID 2070, cr_txg 4186, 9.89M, 406 objects
+Dataset golden/fs-largednode@s3 [ZPL], ID 906, cr_txg 1642, 9.89M, 406 objects
+Dataset golden/fs-largednode@s7 [ZPL], ID 1609, cr_txg 3322, 9.89M, 406 objects
+Dataset golden/fs-largednode@s0 [ZPL], ID 183, cr_txg 439, 9.89M, 406 objects
+Dataset golden/fs-largednode@s2 [ZPL], ID 718, cr_txg 1247, 9.89M, 406 objects
+Dataset golden/fs-largednode@s8 [ZPL], ID 1492, cr_txg 3763, 9.89M, 406 objects
+Dataset golden/fs-largednode@s5 [ZPL], ID 887, cr_txg 2497, 9.89M, 406 objects
+Dataset golden/fs-largednode@s10 [ZPL], ID 1714, cr_txg 4594, 9.89M, 406 objects
+Dataset golden/fs-largednode@s1 [ZPL], ID 660, cr_txg 840, 9.89M, 406 objects
+Dataset golden/fs-largednode@s6 [ZPL], ID 1539, cr_txg 2913, 9.89M, 406 objects
+Dataset golden/fs-largednode [ZPL], ID 281, cr_txg 11, 9.89M, 406 objects
+Dataset golden/vm/clone-of-16k@s9 [ZVOL], ID 2074, cr_txg 4186, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s4 [ZVOL], ID 1067, cr_txg 2070, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s10 [ZVOL], ID 1718, cr_txg 4594, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s7 [ZVOL], ID 1613, cr_txg 3322, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s5 [ZVOL], ID 891, cr_txg 2497, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s8 [ZVOL], ID 1496, cr_txg 3763, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k@s6 [ZVOL], ID 1543, cr_txg 2913, 34.5M, 2 objects
+Dataset golden/vm/clone-of-16k [ZVOL], ID 818, cr_txg 1646, 34.5M, 2 objects
+Dataset golden/vm/disk-skein@s4 [ZVOL], ID 1069, cr_txg 2070, 34.4M, 2 objects
+Dataset golden/vm/disk-skein@s3 [ZVOL], ID 910, cr_txg 1642, 34.5M, 2 objects
+Dataset golden/vm/disk-skein@s9 [ZVOL], ID 2076, cr_txg 4186, 34.2M, 2 objects
+Dataset golden/vm/disk-skein@s7 [ZVOL], ID 1615, cr_txg 3322, 34.2M, 2 objects
+Dataset golden/vm/disk-skein@s10 [ZVOL], ID 1720, cr_txg 4594, 34.2M, 2 objects
+Dataset golden/vm/disk-skein@s0 [ZVOL], ID 187, cr_txg 439, 34.4M, 2 objects
+Dataset golden/vm/disk-skein@s8 [ZVOL], ID 1498, cr_txg 3763, 34.2M, 2 objects
+Dataset golden/vm/disk-skein@s2 [ZVOL], ID 722, cr_txg 1247, 34.5M, 2 objects
+Dataset golden/vm/disk-skein@s5 [ZVOL], ID 893, cr_txg 2497, 34.4M, 2 objects
+Dataset golden/vm/disk-skein@s1 [ZVOL], ID 664, cr_txg 840, 34.5M, 2 objects
+Dataset golden/vm/disk-skein@s6 [ZVOL], ID 1545, cr_txg 2913, 34.3M, 2 objects
+Dataset golden/vm/disk-skein [ZVOL], ID 71, cr_txg 23, 34.2M, 2 objects
+Dataset golden/vm/disk-8k@s6 [ZVOL], ID 1549, cr_txg 2913, 39.5M, 2 objects
+Dataset golden/vm/disk-8k@s1 [ZVOL], ID 668, cr_txg 840, 39.8M, 2 objects
+Dataset golden/vm/disk-8k@s5 [ZVOL], ID 1281, cr_txg 2497, 39.5M, 2 objects
+Dataset golden/vm/disk-8k@s8 [ZVOL], ID 1502, cr_txg 3763, 39.6M, 2 objects
+Dataset golden/vm/disk-8k@s2 [ZVOL], ID 726, cr_txg 1247, 39.6M, 2 objects
+Dataset golden/vm/disk-8k@s0 [ZVOL], ID 191, cr_txg 439, 39.6M, 2 objects
+Dataset golden/vm/disk-8k@s10 [ZVOL], ID 1722, cr_txg 4594, 39.5M, 2 objects
+Dataset golden/vm/disk-8k@s7 [ZVOL], ID 1619, cr_txg 3322, 39.5M, 2 objects
+Dataset golden/vm/disk-8k@s3 [ZVOL], ID 914, cr_txg 1642, 39.7M, 2 objects
+Dataset golden/vm/disk-8k@s9 [ZVOL], ID 2080, cr_txg 4186, 39.5M, 2 objects
+Dataset golden/vm/disk-8k@s4 [ZVOL], ID 1073, cr_txg 2070, 39.6M, 2 objects
+Dataset golden/vm/disk-8k [ZVOL], ID 148, cr_txg 13, 39.5M, 2 objects
+Dataset golden/vm/disk-64k@s6 [ZVOL], ID 1551, cr_txg 2913, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s1 [ZVOL], ID 670, cr_txg 840, 32.3M, 2 objects
+Dataset golden/vm/disk-64k@s10 [ZVOL], ID 1724, cr_txg 4594, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s5 [ZVOL], ID 1283, cr_txg 2497, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s8 [ZVOL], ID 1504, cr_txg 3763, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s2 [ZVOL], ID 728, cr_txg 1247, 32.3M, 2 objects
+Dataset golden/vm/disk-64k@s0 [ZVOL], ID 193, cr_txg 439, 32.3M, 2 objects
+Dataset golden/vm/disk-64k@s7 [ZVOL], ID 1621, cr_txg 3322, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s3 [ZVOL], ID 916, cr_txg 1642, 32.3M, 2 objects
+Dataset golden/vm/disk-64k@s9 [ZVOL], ID 2082, cr_txg 4186, 32.2M, 2 objects
+Dataset golden/vm/disk-64k@s4 [ZVOL], ID 1075, cr_txg 2070, 32.2M, 2 objects
+Dataset golden/vm/disk-64k [ZVOL], ID 297, cr_txg 20, 32.2M, 2 objects
+Dataset golden/vm/disk-edonr@s0 [ZVOL], ID 195, cr_txg 439, 34.5M, 2 objects
+Dataset golden/vm/disk-edonr@s7 [ZVOL], ID 1623, cr_txg 3322, 34.2M, 2 objects
+Dataset golden/vm/disk-edonr@s9 [ZVOL], ID 2084, cr_txg 4186, 34.2M, 2 objects
+Dataset golden/vm/disk-edonr@s3 [ZVOL], ID 918, cr_txg 1642, 34.4M, 2 objects
+Dataset golden/vm/disk-edonr@s10 [ZVOL], ID 1726, cr_txg 4594, 34.2M, 2 objects
+Dataset golden/vm/disk-edonr@s4 [ZVOL], ID 1077, cr_txg 2070, 34.3M, 2 objects
+Dataset golden/vm/disk-edonr@s6 [ZVOL], ID 1553, cr_txg 2913, 34.3M, 2 objects
+Dataset golden/vm/disk-edonr@s1 [ZVOL], ID 672, cr_txg 840, 34.4M, 2 objects
+Dataset golden/vm/disk-edonr@s5 [ZVOL], ID 1285, cr_txg 2497, 34.3M, 2 objects
+Dataset golden/vm/disk-edonr@s2 [ZVOL], ID 730, cr_txg 1247, 34.4M, 2 objects
+Dataset golden/vm/disk-edonr@s8 [ZVOL], ID 1506, cr_txg 3763, 34.2M, 2 objects
+Dataset golden/vm/disk-edonr [ZVOL], ID 389, cr_txg 26, 34.2M, 2 objects
+Dataset golden/vm/disk-16k@s9 [ZVOL], ID 2086, cr_txg 4186, 34.3M, 2 objects
+Dataset golden/vm/disk-16k@s3 [ZVOL], ID 922, cr_txg 1642, 34.5M, 2 objects
+Dataset golden/vm/disk-16k@s4 [ZVOL], ID 1081, cr_txg 2070, 34.5M, 2 objects
+Dataset golden/vm/disk-16k@s0 [ZVOL], ID 199, cr_txg 439, 34.5M, 2 objects
+Dataset golden/vm/disk-16k@s7 [ZVOL], ID 1625, cr_txg 3322, 34.3M, 2 objects
+Dataset golden/vm/disk-16k@s5 [ZVOL], ID 1289, cr_txg 2497, 34.4M, 2 objects
+Dataset golden/vm/disk-16k@s10 [ZVOL], ID 1728, cr_txg 4594, 34.3M, 2 objects
+Dataset golden/vm/disk-16k@s2 [ZVOL], ID 734, cr_txg 1247, 34.5M, 2 objects
+Dataset golden/vm/disk-16k@s8 [ZVOL], ID 1508, cr_txg 3763, 34.3M, 2 objects
+Dataset golden/vm/disk-16k@s6 [ZVOL], ID 1557, cr_txg 2913, 34.3M, 2 objects
+Dataset golden/vm/disk-16k@s1 [ZVOL], ID 676, cr_txg 840, 34.5M, 2 objects
+Dataset golden/vm/disk-16k [ZVOL], ID 289, cr_txg 16, 34.3M, 2 objects
+Dataset golden/vm/newname@s0 [ZVOL], ID 197, cr_txg 439, 34.6M, 2 objects
+Dataset golden/vm/newname@s7 [ZVOL], ID 1627, cr_txg 3322, 34.7M, 2 objects
+Dataset golden/vm/newname@s3 [ZVOL], ID 920, cr_txg 1642, 34.7M, 2 objects
+Dataset golden/vm/newname@s9 [ZVOL], ID 2088, cr_txg 4186, 34.7M, 2 objects
+Dataset golden/vm/newname@s4 [ZVOL], ID 1079, cr_txg 2070, 34.8M, 2 objects
+Dataset golden/vm/newname@s6 [ZVOL], ID 1555, cr_txg 2913, 34.7M, 2 objects
+Dataset golden/vm/newname@s10 [ZVOL], ID 1730, cr_txg 4594, 34.7M, 2 objects
+Dataset golden/vm/newname@s1 [ZVOL], ID 674, cr_txg 840, 34.7M, 2 objects
+Dataset golden/vm/newname@s5 [ZVOL], ID 1287, cr_txg 2497, 34.7M, 2 objects
+Dataset golden/vm/newname@s8 [ZVOL], ID 1510, cr_txg 3763, 34.7M, 2 objects
+Dataset golden/vm/newname@s2 [ZVOL], ID 732, cr_txg 1247, 34.7M, 2 objects
+Dataset golden/vm/newname [ZVOL], ID 337, cr_txg 48, 34.7M, 2 objects
+Dataset golden/vm/disk-sparse@s4 [ZVOL], ID 1083, cr_txg 2070, 24.0M, 2 objects
+Dataset golden/vm/disk-sparse@s3 [ZVOL], ID 924, cr_txg 1642, 23.9M, 2 objects
+Dataset golden/vm/disk-sparse@s9 [ZVOL], ID 2090, cr_txg 4186, 24.0M, 2 objects
+Dataset golden/vm/disk-sparse@s7 [ZVOL], ID 1629, cr_txg 3322, 23.9M, 2 objects
+Dataset golden/vm/disk-sparse@s0 [ZVOL], ID 201, cr_txg 439, 18.9M, 2 objects
+Dataset golden/vm/disk-sparse@s8 [ZVOL], ID 1512, cr_txg 3763, 23.9M, 2 objects
+Dataset golden/vm/disk-sparse@s2 [ZVOL], ID 736, cr_txg 1247, 21.8M, 2 objects
+Dataset golden/vm/disk-sparse@s5 [ZVOL], ID 1291, cr_txg 2497, 24.0M, 2 objects
+Dataset golden/vm/disk-sparse@s10 [ZVOL], ID 1732, cr_txg 4594, 24.0M, 2 objects
+Dataset golden/vm/disk-sparse@s1 [ZVOL], ID 678, cr_txg 840, 20.2M, 2 objects
+Dataset golden/vm/disk-sparse@s6 [ZVOL], ID 1559, cr_txg 2913, 23.9M, 2 objects
+Dataset golden/vm/disk-sparse [ZVOL], ID 79, cr_txg 32, 24.0M, 2 objects
+Dataset golden/vm/disk-blake3@s6 [ZVOL], ID 1561, cr_txg 2913, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s1 [ZVOL], ID 680, cr_txg 840, 34.5M, 2 objects
+Dataset golden/vm/disk-blake3@s10 [ZVOL], ID 1734, cr_txg 4594, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s5 [ZVOL], ID 1293, cr_txg 2497, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s8 [ZVOL], ID 1514, cr_txg 3763, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s2 [ZVOL], ID 738, cr_txg 1247, 34.5M, 2 objects
+Dataset golden/vm/disk-blake3@s0 [ZVOL], ID 203, cr_txg 439, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s7 [ZVOL], ID 1631, cr_txg 3322, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s3 [ZVOL], ID 926, cr_txg 1642, 34.5M, 2 objects
+Dataset golden/vm/disk-blake3@s9 [ZVOL], ID 2092, cr_txg 4186, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3@s4 [ZVOL], ID 1085, cr_txg 2070, 34.4M, 2 objects
+Dataset golden/vm/disk-blake3 [ZVOL], ID 304, cr_txg 29, 34.5M, 2 objects
+Dataset golden/vm@s5 [ZPL], ID 889, cr_txg 2497, 144K, 6 objects
+Dataset golden/vm@s2 [ZPL], ID 720, cr_txg 1247, 144K, 6 objects
+Dataset golden/vm@s8 [ZPL], ID 1494, cr_txg 3763, 144K, 6 objects
+Dataset golden/vm@s10 [ZPL], ID 1716, cr_txg 4594, 144K, 6 objects
+Dataset golden/vm@s6 [ZPL], ID 1541, cr_txg 2913, 144K, 6 objects
+Dataset golden/vm@s1 [ZPL], ID 662, cr_txg 840, 144K, 6 objects
+Dataset golden/vm@s9 [ZPL], ID 2072, cr_txg 4186, 144K, 6 objects
+Dataset golden/vm@s3 [ZPL], ID 908, cr_txg 1642, 144K, 6 objects
+Dataset golden/vm@s4 [ZPL], ID 1065, cr_txg 2070, 144K, 6 objects
+Dataset golden/vm@s0 [ZPL], ID 185, cr_txg 439, 144K, 6 objects
+Dataset golden/vm@s7 [ZPL], ID 1611, cr_txg 3322, 144K, 6 objects
+Dataset golden/vm [ZPL], ID 273, cr_txg 10, 144K, 6 objects
+Dataset golden/secret-raw/disk@s6 [ZVOL], ID 1565, cr_txg 2913, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s1 [ZVOL], ID 684, cr_txg 840, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s5 [ZVOL], ID 1297, cr_txg 2497, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s2 [ZVOL], ID 742, cr_txg 1247, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s8 [ZVOL], ID 1518, cr_txg 3763, 34.6M, 2 objects
+Dataset golden/secret-raw/disk@s10 [ZVOL], ID 1738, cr_txg 4594, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s0 [ZVOL], ID 207, cr_txg 439, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s7 [ZVOL], ID 1635, cr_txg 3322, 34.6M, 2 objects
+Dataset golden/secret-raw/disk@s9 [ZVOL], ID 2096, cr_txg 4186, 34.7M, 2 objects
+Dataset golden/secret-raw/disk@s3 [ZVOL], ID 930, cr_txg 1642, 34.8M, 2 objects
+Dataset golden/secret-raw/disk@s4 [ZVOL], ID 1089, cr_txg 2070, 34.7M, 2 objects
+Dataset golden/secret-raw/disk [ZVOL], ID 320, cr_txg 36, 34.8M, 2 objects
+Dataset golden/secret-raw@s10 [ZPL], ID 1736, cr_txg 4594, 256K, 6 objects
+Dataset golden/secret-raw@s8 [ZPL], ID 1516, cr_txg 3763, 256K, 6 objects
+Dataset golden/secret-raw@s2 [ZPL], ID 740, cr_txg 1247, 256K, 6 objects
+Dataset golden/secret-raw@s5 [ZPL], ID 1295, cr_txg 2497, 256K, 6 objects
+Dataset golden/secret-raw@s1 [ZPL], ID 682, cr_txg 840, 256K, 6 objects
+Dataset golden/secret-raw@s6 [ZPL], ID 1563, cr_txg 2913, 256K, 6 objects
+Dataset golden/secret-raw@s4 [ZPL], ID 1087, cr_txg 2070, 256K, 6 objects
+Dataset golden/secret-raw@s3 [ZPL], ID 928, cr_txg 1642, 256K, 6 objects
+Dataset golden/secret-raw@s9 [ZPL], ID 2094, cr_txg 4186, 256K, 6 objects
+Dataset golden/secret-raw@s7 [ZPL], ID 1633, cr_txg 3322, 256K, 6 objects
+Dataset golden/secret-raw@s0 [ZPL], ID 205, cr_txg 439, 256K, 6 objects
+Dataset golden/secret-raw [ZPL], ID 313, cr_txg 34, 256K, 6 objects
+Dataset golden/secret-pw/disk@s0 [ZVOL], ID 211, cr_txg 439, 39.5M, 2 objects
+Dataset golden/secret-pw/disk@s7 [ZVOL], ID 1639, cr_txg 3322, 39.7M, 2 objects
+Dataset golden/secret-pw/disk@s9 [ZVOL], ID 2100, cr_txg 4186, 39.7M, 2 objects
+Dataset golden/secret-pw/disk@s3 [ZVOL], ID 934, cr_txg 1642, 39.4M, 2 objects
+Dataset golden/secret-pw/disk@s4 [ZVOL], ID 1093, cr_txg 2070, 39.6M, 2 objects
+Dataset golden/secret-pw/disk@s6 [ZVOL], ID 1569, cr_txg 2913, 39.7M, 2 objects
+Dataset golden/secret-pw/disk@s1 [ZVOL], ID 688, cr_txg 840, 39.3M, 2 objects
+Dataset golden/secret-pw/disk@s5 [ZVOL], ID 1301, cr_txg 2497, 39.7M, 2 objects
+Dataset golden/secret-pw/disk@s10 [ZVOL], ID 1742, cr_txg 4594, 39.7M, 2 objects
+Dataset golden/secret-pw/disk@s2 [ZVOL], ID 746, cr_txg 1247, 39.5M, 2 objects
+Dataset golden/secret-pw/disk@s8 [ZVOL], ID 1522, cr_txg 3763, 39.7M, 2 objects
+Dataset golden/secret-pw/disk [ZVOL], ID 327, cr_txg 41, 39.7M, 2 objects
+Dataset golden/secret-pw@s9 [ZPL], ID 2098, cr_txg 4186, 256K, 6 objects
+Dataset golden/secret-pw@s3 [ZPL], ID 932, cr_txg 1642, 256K, 6 objects
+Dataset golden/secret-pw@s4 [ZPL], ID 1091, cr_txg 2070, 256K, 6 objects
+Dataset golden/secret-pw@s10 [ZPL], ID 1740, cr_txg 4594, 256K, 6 objects
+Dataset golden/secret-pw@s0 [ZPL], ID 209, cr_txg 439, 256K, 6 objects
+Dataset golden/secret-pw@s7 [ZPL], ID 1637, cr_txg 3322, 256K, 6 objects
+Dataset golden/secret-pw@s5 [ZPL], ID 1299, cr_txg 2497, 256K, 6 objects
+Dataset golden/secret-pw@s2 [ZPL], ID 744, cr_txg 1247, 256K, 6 objects
+Dataset golden/secret-pw@s8 [ZPL], ID 1520, cr_txg 3763, 256K, 6 objects
+Dataset golden/secret-pw@s6 [ZPL], ID 1567, cr_txg 2913, 256K, 6 objects
+Dataset golden/secret-pw@s1 [ZPL], ID 686, cr_txg 840, 256K, 6 objects
+Dataset golden/secret-pw [ZPL], ID 87, cr_txg 39, 256K, 6 objects
+Dataset golden@s10 [ZPL], ID 1712, cr_txg 4594, 156K, 10 objects
+Dataset golden@s1 [ZPL], ID 658, cr_txg 840, 156K, 10 objects
+Dataset golden@s6 [ZPL], ID 1537, cr_txg 2913, 156K, 10 objects
+Dataset golden@s8 [ZPL], ID 1490, cr_txg 3763, 156K, 10 objects
+Dataset golden@s2 [ZPL], ID 716, cr_txg 1247, 156K, 10 objects
+Dataset golden@s5 [ZPL], ID 885, cr_txg 2497, 156K, 10 objects
+Dataset golden@s7 [ZPL], ID 1607, cr_txg 3322, 156K, 10 objects
+Dataset golden@s0 [ZPL], ID 181, cr_txg 439, 156K, 10 objects
+Dataset golden@s4 [ZPL], ID 1061, cr_txg 2070, 156K, 10 objects
+Dataset golden@s3 [ZPL], ID 904, cr_txg 1642, 156K, 10 objects
+Dataset golden@s9 [ZPL], ID 2068, cr_txg 4186, 156K, 10 objects
+Dataset golden [ZPL], ID 54, cr_txg 1, 156K, 10 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 60 is correct
+Verified sha512 feature refcount of 12 is correct
+Verified skein feature refcount of 24 is correct
+Verified edonr feature refcount of 12 is correct
+Verified userobj_accounting feature refcount of 60 is correct
+Verified encryption feature refcount of 48 is correct
+Verified project_quota feature refcount of 60 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 32 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 12 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct
