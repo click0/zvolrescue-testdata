@@ -3,10 +3,11 @@
 The recorded truth for the golden image, captured at build time on the
 kernel that built it, before the pool was exported. Nothing here is ever
 regenerated from the tool under test. One directory per pool:
-`golden/` is the kernel-built image `image-v1` (one pool); `mirror/`,
+`golden/` is the kernel-built image `image-v1` (one pool), with the
+sums of its release files in `golden/SHA256SUMS-release.txt`; `mirror/`,
 `raidz2/` and `draid1/` are the three pools of the interim
-`image-v0-ztest`, and `SHA256SUMS-release.txt` beside them is that
-release's; `golden/SHA256SUMS-release.txt` is `image-v1`'s.
+`image-v0-ztest`, which has no release — its builder makes a different
+pool each time.
 
 | File | Content |
 |---|---|

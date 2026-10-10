@@ -50,8 +50,9 @@ OpenZFS (`ztest` + `zdb`, без модуля ядра, без root, без ди
 zvol-ів. Він лишається: оракул в `oracle/mirror/`, `oracle/raidz2/` і
 `oracle/draid1/`, опис у
 [reports/image-v0-ztest/IMAGE.md](reports/image-v0-ztest/IMAGE.md),
-члени — у релізі `image-v0-ztest` (суми в `oracle/SHA256SUMS-release.txt`),
-а матриця проти нього — у
+члени — у жодному релізі: `tests/golden/build-ztest-image.sh` у zvolrescue
+перезбирає пули такого роду хвилини за три, щоразу інакше, — а матриця
+проти нього — у
 [reports/image-v0-ztest-r2](reports/image-v0-ztest-r2/README.md): 44
 маніфести на трьох пулах, 112 застосовних прогонів, усі пройдено, один
 дефект знайдено й виправлено дорогою (`--assume-member` відповідав «no

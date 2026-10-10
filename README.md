@@ -51,8 +51,9 @@ only (`ztest` + `zdb`, no kernel module, no root, no disks): three pools
 stays: its oracle in `oracle/mirror/`, `oracle/raidz2/` and
 `oracle/draid1/`, its description in
 [reports/image-v0-ztest/IMAGE.md](reports/image-v0-ztest/IMAGE.md), its
-members in the `image-v0-ztest` release (sums in
-`oracle/SHA256SUMS-release.txt`), and the matrix against it in
+members in no release — `tests/golden/build-ztest-image.sh` in zvolrescue
+rebuilds pools of that kind in about three minutes, differently each
+time — and the matrix against it in
 [reports/image-v0-ztest-r2](reports/image-v0-ztest-r2/README.md): 44
 manifests over three pools, 112 applicable runs, all passed, one defect
 found and fixed on the way (`--assume-member` answered "no scanned pool
