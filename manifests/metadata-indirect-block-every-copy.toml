@@ -1,0 +1,14 @@
+id = "metadata-indirect-block-every-copy"
+description = "Every copy of an indirect block of a volume's data object overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "vm/disk-8k:indirect", block = 0, copy = "all" }
+pattern = "random"
+
+[expect]
+# Every data block under that indirect block is unreachable at this
+# TXG: those blocks come out as zeros, counted (exit 4), or the volume
+# is refused — or read whole at an older TXG whose pointer is intact.
+outcome = ["recovered", "refused"]
+volumes = "all"

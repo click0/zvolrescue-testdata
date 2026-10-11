@@ -1,0 +1,13 @@
+id = "metadata-indirect-block-one-copy"
+description = "One copy of an indirect block of a volume's data object overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "vm/disk-8k:indirect", block = 0, copy = 0 }
+pattern = "random"
+
+[expect]
+# An indirect block holds the pointers to a run of data blocks and, as
+# metadata, has two copies; the other one is read.
+outcome = "recovered"
+volumes = "all"

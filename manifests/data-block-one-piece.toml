@@ -1,0 +1,14 @@
+id = "data-block-one-piece"
+description = "One piece of one data block of a volume overwritten: a mirror half's copy, one raidz column, one dRAID column"
+classes = ["data"]
+
+[[damage]]
+target = { object = "vm/disk-16k:data", block = "on:raidz2", pieces = "one" }
+pattern = "random"
+
+[expect]
+# A data block has one copy, striped over the top-level vdev that holds
+# it; one of its pieces gone is the loss every geometry here survives
+# once: the block is rebuilt from parity (or read from the other half).
+outcome = "recovered"
+volumes = "all"

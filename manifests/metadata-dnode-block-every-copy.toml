@@ -1,0 +1,15 @@
+id = "metadata-dnode-block-every-copy"
+description = "Every copy of the first dnode block of a volume's dataset overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "vm/disk-64k:dnode-block", block = 0, copy = "all" }
+pattern = "random"
+
+[expect]
+# With no copy of the dnode block, the dataset's data object cannot be
+# found at this TXG: that volume is refused (or found at an older TXG
+# whose dnode block is intact, since the block is rewritten only when
+# the dnodes change) and the other volumes are untouched.
+outcome = ["recovered", "refused"]
+volumes = "all"

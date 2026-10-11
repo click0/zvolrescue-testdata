@@ -1,0 +1,16 @@
+id = "combo-dnode-block-plus-member-gone"
+description = "One copy of a volume's first dnode block overwritten while a member of another top-level vdev is absent"
+classes = ["metadata", "member"]
+
+[[damage]]
+target = { object = "vm/disk-64k:dnode-block", block = 0, copy = 0 }
+pattern = "random"
+[[damage]]
+member = { leaf = 1, top = 1 }
+pattern = "missing"
+
+[expect]
+# The other copy of the dnode block answers for the first; the missing
+# raidz2 member is one column of four, within its parity.
+outcome = "recovered"
+volumes = "all"

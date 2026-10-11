@@ -1,0 +1,15 @@
+id = "data-encrypted-block"
+description = "Every piece of one data block of an encrypted volume overwritten"
+classes = ["data"]
+
+[[damage]]
+target = { object = "secret-raw/disk:data", block = "on:mirror" }
+pattern = "random"
+
+[expect]
+# The same loss on a volume whose blocks are ciphertext: the MAC fails
+# where a checksum would have, and the block cannot be given back. The
+# tool must count it as lost, with the key in hand, and not decrypt the
+# garbage into the image.
+outcome = "refused"
+volumes = "all"

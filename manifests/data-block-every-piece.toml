@@ -1,0 +1,15 @@
+id = "data-block-every-piece"
+description = "Every piece of one data block of a volume overwritten: the block's only copy is gone"
+classes = ["data"]
+
+[[damage]]
+target = { object = "vm/disk-16k:data", block = "on:mirror" }
+pattern = "random"
+
+[expect]
+# Data is written once. With every piece of that one copy overwritten
+# nothing in the pool can give the block back, so the honest answer is
+# the image with that block written as zeros and counted (exit 4), or a
+# refusal — never the overwritten bytes presented as the volume's.
+outcome = "refused"
+volumes = "all"

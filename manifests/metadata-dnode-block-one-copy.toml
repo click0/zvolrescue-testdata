@@ -1,0 +1,13 @@
+id = "metadata-dnode-block-one-copy"
+description = "One copy of the first dnode block of a volume's dataset overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "vm/disk-64k:dnode-block", block = 0, copy = 0 }
+pattern = "random"
+
+[expect]
+# The dnode block says where the volume's data object is. ZFS writes
+# metadata with an extra copy, so the other copy is read.
+outcome = "recovered"
+volumes = "all"
