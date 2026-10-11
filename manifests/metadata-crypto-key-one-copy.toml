@@ -1,0 +1,14 @@
+id = "metadata-crypto-key-one-copy"
+description = "One copy of every block of an encrypted volume's DSL crypto key object overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "secret-raw/disk:crypto-key", block = "all", copy = 0 }
+pattern = "random"
+
+[expect]
+# The crypto key object is a ZAP in the MOS holding the wrapped keys of
+# the dataset; the MOS is written with three copies, so with one gone
+# the key is read from another and the volume decrypts.
+outcome = "recovered"
+volumes = "all"

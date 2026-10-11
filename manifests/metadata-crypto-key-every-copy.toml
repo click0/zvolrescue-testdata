@@ -1,0 +1,15 @@
+id = "metadata-crypto-key-every-copy"
+description = "Every copy of every block of an encrypted volume's DSL crypto key object overwritten"
+classes = ["metadata"]
+
+[[damage]]
+target = { object = "secret-raw/disk:crypto-key", block = "all", copy = "all" }
+pattern = "random"
+
+[expect]
+# With no copy of the wrapped keys at this TXG the volume cannot be
+# unlocked even with the right key file: it is refused, and the other
+# volumes are untouched — or the keys are found intact at an older TXG,
+# since the object is rewritten only when the keys change.
+outcome = ["recovered", "refused"]
+volumes = "all"

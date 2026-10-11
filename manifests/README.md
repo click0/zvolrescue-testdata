@@ -61,9 +61,11 @@ pattern = "random"
 `object` is `mos:objset`, `<dataset>:objset`, or — from the oracle's
 `zdb -dddddd` capture, where the image has one — `<dataset>:dnode-block`
 (a block of the dataset's dnode array), `<volume>:data` (a data block of
-the volume) or `<volume>:indirect` (an indirect block of its data
-object). `block` picks which: an index in zdb's order (default 0), or
-`on:<kind>` — the first block whose first copy lies on a top-level vdev
+the volume), `<volume>:indirect` (an indirect block of its data object)
+or `<dataset>:crypto-key` (the MOS object its DSL directory names as
+`com.datto:crypto_key_obj`: the ZAP holding its wrapped keys). `block`
+picks which: an index in zdb's order (default 0; `all` for every block
+of the level, which is what a crypto key means), or `on:<kind>` — the first block whose first copy lies on a top-level vdev
 of that kind (`on:mirror`, `on:raidz2`, `on:draid1`), so that a case
 asks for a block the harness can place without naming an index that is
 one image's alone. `copy` is a DVA copy or `all`. `pieces` is `all` (the
@@ -80,12 +82,14 @@ where the run went differently. `any` picks a dataset from the capture —
 most block-pointer copies first, then by name, so the same image always
 yields the same choice.
 
-One further shape is described here because the format wants it and
-**the harness refuses it by name until it can locate it honestly**:
-`crypto-key` (the DSL crypto key ZAP of an encrypted dataset). `dnode-block`
-was in that list until the `zdb -dddddd` capture: before it, the shape
-had been resolved to the objset's own block pointer, which meant a
-manifest using it damaged something other than what it said.
+Every shape the format names is located now. `dnode-block` and
+`crypto-key` were refused by name until the `zdb -dddddd` capture:
+before it, `dnode-block` had been resolved to the objset's own block
+pointer, which meant a manifest using it damaged something other than
+what it said. A volume's **property ZAP** is not a shape of its own on
+`image-v1`: with one entry (`size`) it is embedded in its dnode's block
+pointer, so the dnode block *is* its block, and the `dnode-block` cases
+cover it.
 
 ### Telling the tool something
 
@@ -132,7 +136,6 @@ knowing which cells are empty for a reason other than the pool's shape.
 |---|---|
 | A copy on a **dRAID top** is placed by content, not arithmetic: the block's bytes (read from a copy on a mirror, or put back together from a raidz's data columns, and checked against the pointer's checksum where it is fletcher4 or sha256) are searched for on the dRAID's children. What that places is the data columns, and a parity column only where it equals a data column (one data sector in the row, the rest padding); other parity columns stay. | A "copy destroyed" on dRAID is its data columns destroyed; the copy stays rebuildable from parity where ZFS would rebuild it. A block whose bytes are found at more than one row offset, or all zeros, is not placed, and the case is n/a with the reason. |
 | A DVA is not mapped inside a **top-level vdev with more than one group**. The column arithmetic is one group wide and the member list is the whole top; with two groups they disagree. | No case today; the harness refuses rather than answering wrongly. |
-| The **`crypto-key`** target is not located. | No manifest uses it. |
 | A block **below the object set** (`dnode-block`, `data`, `indirect`) needs the oracle's `zdb -dddddd` capture; `image-v1` got it after publication (`oracle-capture.yml` in zvolrescue, OpenZFS's zdb offline over the released members), the builder keeps it for every image since. A **data block whose one copy lies on the dRAID top** has no second copy to read its bytes from, so content cannot place it; a **gang block** (most lower indirect blocks of a volume filled with ganging forced) is not aimed at, since its pointer names the whole tree's size and not the header's — `indirect` therefore means the topmost level unless `level` says otherwise. | Without the capture every such case is n/a. A data case names `block = "on:mirror"` or `"on:raidz2"` for that reason. |
 | **`older-self`** needs the members captured at an earlier point of the same pool's life: the `round6-*` files of the release, decompressed beside the members as `<image>-round6` (or named with `--older`). `ztest` cannot produce such a capture — it only continues a pool through a cachefile it does not leave behind. | Every `older-self` manifest is n/a on a ztest-built image, and on a kernel-built one whose round-6 copies were not fetched. |
 
