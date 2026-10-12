@@ -25,7 +25,7 @@ more images with different content.
 ## What is here now
 
 **`image-v1`**, the kernel-built golden image: one pool, `golden`, with
-mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, twelve
+mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven
 volumes over every checksum and compression and three block sizes, a
 clone, raw-key and passphrase encryption, snapshots after each of twelve
 rounds of writes, a rename, a destroy, gang blocks forced, 5015 TXGs —
