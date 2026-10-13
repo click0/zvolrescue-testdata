@@ -1,0 +1,63 @@
+id = "labels-forged-txg"
+description = "Every member's rings carry a sealed uberblock three TXGs newer than the pool ever reached, pointing at an object set no block matches; one member has lost its rear rings besides"
+classes = ["labels"]
+
+# What a sync leaves behind when its uberblocks reached every member and
+# its MOS did not: the newest verified TXG on the pool names a root block
+# that fails its checksum. The ring is partial on one member too — its
+# rear pair of rings is gone — so the older, readable TXGs are not on
+# every label either.
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/rings"
+pattern = "forged-txg:3"
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:L2,L3/rings"
+pattern = "zeros"
+
+[expect]
+# The forged TXG verifies and is the newest, so it is the first one tried;
+# nothing reads behind it, and the tool must say so and use the newest
+# TXG that does read — not stop at the one the rings put first. The
+# copy of the forged root on the raidz2 is tried through its parity
+# before it is given up, and the judge counts that as redundancy at
+# work, so either reading of "recovered" is right here.
+outcome = "recovered"
+volumes = "all"

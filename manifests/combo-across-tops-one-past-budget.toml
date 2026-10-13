@@ -1,23 +1,21 @@
 id = "combo-across-tops-one-past-budget"
-description = "One top-level vdev pushed past its parity budget while the other stays whole"
+description = "One top-level vdev pushed one member past its parity budget while the others stay whole"
 classes = ["member"]
 
 [[damage]]
-member = { leaf = 0, top = 0 }
+member = { leaf = 0, top = 2 }
 pattern = "missing"
 [[damage]]
-member = { leaf = 1, top = 0 }
-pattern = "missing"
-[[damage]]
-member = { leaf = 2, top = 0 }
+member = { leaf = 1, top = 2 }
 pattern = "missing"
 
 [expect]
-# A dRAID's parity budget is per redundancy group, not per vdev: this
-# image's draid1 is 16 children in groups of ndata 2 + nparity 1, so
-# three absent members rarely fall in one group and most rows keep a
-# rebuildable column. Whether anything at all is refused depends on where
-# the losses land, so both answers are accepted for dRAID.
+# This image's draid1 is four children in one redundancy group of ndata 2
+# + nparity 1 with one distributed spare: a row uses three of the four,
+# so two absent children is one past the parity of every row they are
+# both in, and the blocks in those rows are gone. Every volume has
+# blocks on this top (ZFS spreads a pool's writes over all of them), so
+# every volume is refused or, with the lost blocks counted and
+# announced, partial. The mirror and the raidz2 are untouched.
 outcome = "refused"
-by_group_kind = { draid1 = ["recovered", "refused"], draid2 = ["recovered", "refused"] }
 volumes = "all"

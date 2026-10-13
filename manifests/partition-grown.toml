@@ -1,0 +1,15 @@
+id = "partition-grown"
+description = "One raidz2 member's partition re-created 48 MiB larger: the same bytes, then zeros, so the rear labels are not where the member's size puts them"
+classes = ["partition"]
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+pattern = "grow:48MiB"
+
+[expect]
+# The front labels are where they were and verify at their offsets; the
+# rear pair is read from the end of the longer member, where there is
+# nothing. The vdev's size is in the configuration, not in the file's
+# length, and every block is where it was.
+outcome = "bit-exact"
+volumes = "all"

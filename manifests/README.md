@@ -19,7 +19,7 @@ classes = ["labels"]          # for combination bookkeeping
 [[damage]]
 member = "raidz2-1"           # member name from IMAGE.md
 range = "0..512KiB"           # byte range in the member; sizes in KiB/MiB/GiB
-pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | missing | older-self:<source>
+pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | grow:<bytes> | missing | older-self:<source> | forged-txg:<bump>
 
 [expect]
 outcome = "bit-exact"         # bit-exact | reconstructed | refused | (never "defect")
@@ -44,11 +44,20 @@ negative start counts from the end of the member (`-512KiB..` is the last
 manifest, so reproducible), `flip-bits:<n>` (n single-bit flips spread over
 the range), `shift:<sectors>` (the member's content moved forward, the
 image grows), `truncate` (the range is cut off, the image shrinks),
-`missing` (the member is not passed to the tool at all; no range), and
-`older-self:<source>` — the range is replaced by the same range of an
-earlier consistent copy of the member (`image-v1-round6` = the `round6-*`
-release files of tag `image-v1`): the "member replaced by an older copy of
-itself" case, where everything verifies but nothing is current.
+`grow:<bytes>` (that much of nothing appended; no range: the partition
+re-created larger, the rear labels no longer where the length puts
+them), `missing` (the member is not passed to the tool at all; no
+range), `older-self:<source>` — the range is replaced by the same range
+of an earlier consistent copy of the member (`image-v1-round6` = the
+`round6-*` release files of tag `image-v1`): the "member replaced by an
+older copy of itself" case, where everything verifies but nothing is
+current — and `forged-txg:<bump>`, on a `label:…/rings` range only: the
+ring's newest verified uberblock copied into the slot ZFS would write
+txg+bump to (txg modulo the ring's 32 slots, so a bump of 32 would land
+on the slot it came from and is refused), with that txg, that birth in
+its root pointer and the pointer's checksum words inverted, sealed for
+its place. Every word of it verifies and no block is behind it: what a
+sync leaves when its uberblocks reached the disks and its MOS did not.
 
 A damage may also name a structure instead of a range:
 
@@ -114,8 +123,8 @@ help the tool past damage it should be answering on its own.
 
 | Class | Variants |
 |---|---|
-| `labels` | one, front pair, rear pair, all four, `vdev_phys` only, rings only, partial rings with a forged txg |
-| `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size |
+| `labels` | one, front pair, rear pair, all four, `vdev_phys` only, rings only, partial rings with a forged txg (`labels-forged-txg`: every ring three TXGs ahead of the pool, one member's rear rings gone) |
+| `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size (`partition-grown`) |
 | `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object — one copy and every copy (property ZAPs and the crypto key object are not locatable yet — see above) |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block |
 | `member` | whole member missing |
