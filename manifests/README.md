@@ -22,7 +22,7 @@ range = "0..512KiB"           # byte range in the member; sizes in KiB/MiB/GiB
 pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | grow:<bytes> | missing | older-self:<source> | forged-txg:<bump>
 
 [expect]
-outcome = "bit-exact"         # bit-exact | reconstructed | refused | (never "defect")
+outcome = "recovered"         # recovered (= bit-exact | reconstructed) | bit-exact | reconstructed | refused (partial accepted too) | a list of these; never "defect"
 volumes = "all"               # which oracle volumes are compared, or a list
 evidence = ["label L0 missing", "label L2 used"]   # substrings the evidence log must contain (optional)
 ```
@@ -32,10 +32,16 @@ damage, not from what the tool does today. `bit-exact` means every judged
 volume hashed equal to the oracle without any use of redundancy;
 `reconstructed` means the hashes are equal but the evidence log shows
 redundancy at work (a member reported missing, a mirror half skipped, a
-parity or combinatorial reconstruction); `refused` means the tool stopped
-with exit 3 for every judged volume and presented no partial output as
-good. A run that lands anywhere else
-is a tool defect. Every run also asserts that the SHA-256 of each damaged
+parity or combinatorial reconstruction); `recovered` means either of
+those two — which one happens depends on member order and on where the
+damage landed, and neither is a property worth pinning, so it is what
+almost every manifest says; `refused` means the tool stopped with exit 3
+for every judged volume and presented no partial output as good, and a
+run that instead wrote an image with the lost blocks as zeros, counted
+and announced (exit 4, `partial`), is accepted under it — it presents
+nothing as good that is not. A list names several acceptable outcomes
+where the damage does not deterministically hit live data. A run that
+lands anywhere else is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
 
 Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
@@ -125,7 +131,7 @@ help the tool past damage it should be answering on its own.
 |---|---|
 | `labels` | one, front pair, rear pair, all four, `vdev_phys` only, rings only, partial rings with a forged txg (`labels-forged-txg`: every ring three TXGs ahead of the pool, one member's rear rings gone) |
 | `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size (`partition-grown`) |
-| `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object — one copy and every copy (property ZAPs and the crypto key object are not locatable yet — see above) |
+| `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object, the crypto key object of an encrypted volume — one copy and every copy (a volume's property ZAP on `image-v1` is embedded in its dnode's block pointer, so the dnode-block cases are its — see above) |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block |
 | `member` | whole member missing |
 | `older-self` | a member replaced by a consistent copy of itself from round 6 of the fill (the `round6-*` files of the release): one mirror half, both halves, two raidz2 columns, one dRAID child, and one stale beside one missing (`older-self-*.toml`, `combo-older-self-plus-member-gone.toml`) |
@@ -193,9 +199,9 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The first set (22 manifests) covers each class at least once against the
-`image-v1` layout: members `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3`
-(see `oracle/layout.json` once the image is built). Expected outcomes are
-stated from ZFS redundancy; where the current tool is known to fall short
-(zero-point search, F-60..F-67), the manifest says so in a comment and the
-run is a known defect until the feature lands.
+The 61 manifests cover every class of SPEC §9.1's catalogue at least
+once against the `image-v1` layout: members `mirror-0a/0b`,
+`raidz2-0..3`, `draid1-0..3` (`oracle/layout.json`). Expected outcomes
+are stated from ZFS redundancy, and against the published image every
+one applies and every one lands in its category (the Results table of
+zvolrescue's REALWORLD-TESTS.md has each run).
