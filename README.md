@@ -72,6 +72,7 @@ for the pinned subset of the matrix it runs on every push.
 | `reports/<tag>/` | damage-matrix runs against that image: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
 | `IMAGE.md` | how the current image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history; an earlier image's copy sits under its `reports/<tag>/` |
+| [`ROADMAP.md`](ROADMAP.md) | what comes next: cases on `image-v1` for what zvolrescue reads now, `golden-v2` and small single-feature pools, one tag per pool so that a CI job fetches only what it tests |
 
 ## Versioning
 
