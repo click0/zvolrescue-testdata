@@ -91,7 +91,7 @@ Release: +0. Git: under 1 MB of text.
      L2 (`range = "slack"`, placed from the `zdb -C` capture: 27.5 MiB
      on each mirror and raidz2 member of `image-v1`, 75.5 MiB on each
      dRAID child) — expected bit-exact.
-5. *Begun: the capture is in.* **The oracle extended from the published
+5. *Done, but for zvolreport.* **The oracle extended from the published
    members** (`oracle-capture.yml` in zvolrescue with `what =
    files-history`: OpenZFS 2.4.1 in the ubuntu-26.04 runner's kernel,
    the members imported read-only and checked unchanged after the
@@ -99,10 +99,13 @@ Release: +0. Git: under 1 MB of text.
    snapshots with its size, owner, mode, inode, mtime and the SHA-256
    of its content and of each extended attribute
    (`oracle/golden/files.json`); `zpool history -il`
-   (`zpool-history-il.txt`); how, in `files-capture.txt`. Next: the
-   harness judges `zvolfiles` and `zvoltimeline` against them, and
-   `zvolreport` by building and verifying a report of the matrix's own
-   evidence logs.
+   (`zpool-history-il.txt`); how, in `files-capture.txt`. The harness
+   judges `zvolfiles` and `zvoltimeline` against them in every case
+   (zvolrescue `7f5ef23`; `expect.files`, `expect.timeline` and the
+   control case in the manifests; `reports/image-v1-r3`, 70 of 70). Left:
+   `zvolreport`, judged by building and verifying a report of the
+   matrix's own evidence logs; and the exit status of `zvolfiles` after
+   a TXG passed over, 4 where `zvolrescue dump` gives 0.
 6. *Done.* **Every matrix run's report kept here**
    (`reports/<tag>-rN/`), not only the first: `tools/add-report.py`
    lays a report out as the next run, with a README written from its
