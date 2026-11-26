@@ -1,0 +1,765 @@
+History for 'golden':
+2026-10-10.10:23:07 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervmb40mh 7.0.0-1012-azure #12-Ubuntu SMP PREEMPT Thu Aug  6 19:23:26 UTC 2026 x86_64 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set ashift=12 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set autotrim=0 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@async_destroy=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@empty_bpobj=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@lz4_compress=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@spacemap_histogram=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@enabled_txg=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@hole_birth=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@extensible_dataset=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@embedded_data=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@bookmarks=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@filesystem_limits=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@large_blocks=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@large_dnode=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@sha512=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@skein=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@edonr=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@userobj_accounting=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@encryption=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@project_quota=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@device_removal=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@obsolete_counts=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@zpool_checkpoint=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@spacemap_v2=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@allocation_classes=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@resilver_defer=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@bookmark_v2=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@redaction_bookmarks=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@redacted_datasets=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@bookmark_written=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@log_spacemap=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@livelist=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@device_rebuild=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@zstd_compress=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@draid=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@zilsaxattr=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@head_errlog=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@blake3=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@block_cloning=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@vdev_zaps_v2=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@redaction_list_spill=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@raidz_expansion=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@fast_dedup=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@longname=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@large_microzap=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@dynamic_gang_header=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@block_cloning_endian=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:4] set feature@physical_rewrite=enabled [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:5] set golden (54) snapdev=1 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:6] set golden (54) compression=15 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:6] set golden (54) dnodesize=1 [on runnervmb40mh]
+2026-10-10.10:23:07 zpool create -f -o ashift=12 -o autotrim=off -O compression=lz4 -O snapdev=visible -O dnodesize=auto golden mirror /var/tmp/golden/members/mirror-0a.img /var/tmp/golden/members/mirror-0b.img raidz2 /var/tmp/golden/members/raidz2-0.img /var/tmp/golden/members/raidz2-1.img /var/tmp/golden/members/raidz2-2.img /var/tmp/golden/members/raidz2-3.img draid1:2d:4c:1s /var/tmp/golden/members/draid1-0.img /var/tmp/golden/members/draid1-1.img /var/tmp/golden/members/draid1-2.img /var/tmp/golden/members/draid1-3.img [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:10] create golden/vm (273)   [on runnervmb40mh]
+2026-10-10.10:23:07 (6ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create golden/vm [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:11] create golden/fs-largednode (281)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:12] set golden/fs-largednode (281) dnodesize=1 [on runnervmb40mh]
+2026-10-10.10:23:07 (49ms) ioctl create
+    input:
+        type: 2
+        props:
+            dnodesize: 1
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -o dnodesize=auto golden/fs-largednode [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:13] create golden/vm/disk-8k (148)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:14] set golden/vm/disk-8k (148) refreservation=76879616 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:15] set golden/vm/disk-8k (148) checksum=7 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:15] set golden/vm/disk-8k (148) compression=15 [on runnervmb40mh]
+2026-10-10.10:23:07 (17ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+            refreservation: 76879616
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 8K -o checksum=fletcher4 -o compression=lz4 golden/vm/disk-8k [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:16] create golden/vm/disk-16k (289)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:18] set golden/vm/disk-16k (289) refreservation=57790720 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:19] set golden/vm/disk-16k (289) checksum=8 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:19] set golden/vm/disk-16k (289) compression=16 [on runnervmb40mh]
+2026-10-10.10:23:07 (19ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            volblocksize: 16384
+            checksum: 8
+            compression: 16
+            refreservation: 57790720
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 16K -o checksum=sha256 -o compression=zstd golden/vm/disk-16k [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:20] create golden/vm/disk-64k (297)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:21] set golden/vm/disk-64k (297) refreservation=52428800 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:22] set golden/vm/disk-64k (297) checksum=11 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:22] set golden/vm/disk-64k (297) compression=10 [on runnervmb40mh]
+2026-10-10.10:23:07 (18ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            checksum: 11
+            compression: 10
+            volblocksize: 65536
+            refreservation: 52428800
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 64K -o checksum=sha512 -o compression=gzip-6 golden/vm/disk-64k [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:23] create golden/vm/disk-skein (71)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:24] set golden/vm/disk-skein (71) refreservation=57790720 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:25] set golden/vm/disk-skein (71) checksum=12 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:25] set golden/vm/disk-skein (71) compression=3 [on runnervmb40mh]
+2026-10-10.10:23:07 (16ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            volblocksize: 16384
+            checksum: 12
+            compression: 3
+            refreservation: 57790720
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 16K -o checksum=skein -o compression=lzjb golden/vm/disk-skein [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:26] create golden/vm/disk-edonr (389)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:27] set golden/vm/disk-edonr (389) refreservation=57790720 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:28] set golden/vm/disk-edonr (389) checksum=13 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:28] set golden/vm/disk-edonr (389) compression=14 [on runnervmb40mh]
+2026-10-10.10:23:07 (16ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            volblocksize: 16384
+            checksum: 13
+            compression: 14
+            refreservation: 57790720
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 16K -o checksum=edonr -o compression=zle golden/vm/disk-edonr [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:29] create golden/vm/disk-blake3 (304)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:30] set golden/vm/disk-blake3 (304) refreservation=57790720 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:31] set golden/vm/disk-blake3 (304) checksum=14 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:31] set golden/vm/disk-blake3 (304) compression=2 [on runnervmb40mh]
+2026-10-10.10:23:07 (17ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            volblocksize: 16384
+            checksum: 14
+            compression: 2
+            refreservation: 57790720
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 16K -o checksum=blake3 -o compression=off golden/vm/disk-blake3 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:32] create golden/vm/disk-sparse (79)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:33] set golden/vm/disk-sparse (79) checksum=7 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:33] set golden/vm/disk-sparse (79) compression=15 [on runnervmb40mh]
+2026-10-10.10:23:07 (14ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 268435456
+            volblocksize: 16384
+            checksum: 7
+            compression: 15
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -s -V 256M -b 16K -o checksum=fletcher4 -o compression=lz4 golden/vm/disk-sparse [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:34] create golden/secret-raw (313)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:35] set golden/secret-raw (313) keylocation=file:///var/tmp/golden/oracle/keys/raw.key [on runnervmb40mh]
+2026-10-10.10:23:07 (11ms) ioctl create
+    input:
+        type: 2
+        props:
+            encryption: 8
+            keyformat: 1
+            keylocation: 'file:///var/tmp/golden/oracle/keys/raw.key'
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -o encryption=aes-256-gcm -o keyformat=raw -o keylocation=file:///var/tmp/golden/oracle/keys/raw.key golden/secret-raw [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:36] create golden/secret-raw/disk (320)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:37] set golden/secret-raw/disk (320) refreservation=57790720 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:38] set golden/secret-raw/disk (320) checksum=8 [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:38] set golden/secret-raw/disk (320) compression=15 [on runnervmb40mh]
+2026-10-10.10:23:07 (30ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            volblocksize: 16384
+            checksum: 8
+            compression: 15
+            refreservation: 57790720
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -V 48M -b 16K -o checksum=sha256 -o compression=lz4 golden/secret-raw/disk [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 [txg:39] create golden/secret-pw (87)   [on runnervmb40mh]
+2026-10-10.10:23:07 [txg:40] set golden/secret-pw (87) keylocation=file:///var/tmp/golden/oracle/keys/passphrase.txt [on runnervmb40mh]
+2026-10-10.10:23:07 (11ms) ioctl create
+    input:
+        type: 2
+        props:
+            encryption: 3
+            keyformat: 3
+            keylocation: 'file:///var/tmp/golden/oracle/keys/passphrase.txt'
+            pbkdf2salt: 8312352846437839906
+            pbkdf2iters: 350000
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:07 zfs create -o encryption=aes-128-ccm -o keyformat=passphrase -o keylocation=file:///var/tmp/golden/oracle/keys/passphrase.txt golden/secret-pw [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 [txg:41] create golden/secret-pw/disk (327)   [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:43] set golden/secret-pw/disk (327) refreservation=76879616 [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:44] set golden/secret-pw/disk (327) checksum=12 [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:44] set golden/secret-pw/disk (327) compression=16 [on runnervmb40mh]
+2026-10-10.10:23:08 (322ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 50331648
+            checksum: 12
+            compression: 16
+            volblocksize: 8192
+            refreservation: 76879616
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 zfs create -V 48M -b 8K -o checksum=skein -o compression=zstd golden/secret-pw/disk [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 [txg:45] create golden/vm/doomed (405)   [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:46] set golden/vm/doomed (405) refreservation=39226112 [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:47] set golden/vm/doomed (405) checksum=8 [on runnervmb40mh]
+2026-10-10.10:23:08 (84ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 33554432
+            volblocksize: 16384
+            checksum: 8
+            refreservation: 39226112
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 zfs create -V 32M -b 16K -o checksum=sha256 golden/vm/doomed [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 [txg:48] create golden/vm/oldname (337)   [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:49] set golden/vm/oldname (337) refreservation=39226112 [on runnervmb40mh]
+2026-10-10.10:23:08 [txg:50] set golden/vm/oldname (337) checksum=7 [on runnervmb40mh]
+2026-10-10.10:23:08 (40ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 33554432
+            volblocksize: 16384
+            checksum: 7
+            refreservation: 39226112
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:08 zfs create -V 32M -b 16K -o checksum=fletcher4 golden/vm/oldname [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:22 [txg:439] snapshot golden@s0 (181)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/fs-largednode@s0 (183)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm@s0 (185)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-skein@s0 (187)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/doomed@s0 (189)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-8k@s0 (191)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-64k@s0 (193)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-edonr@s0 (195)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/oldname@s0 (197)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-16k@s0 (199)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-sparse@s0 (201)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/vm/disk-blake3@s0 (203)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/secret-raw@s0 (205)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/secret-raw/disk@s0 (207)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/secret-pw@s0 (209)   [on runnervmb40mh]
+2026-10-10.10:23:22 [txg:439] snapshot golden/secret-pw/disk@s0 (211)   [on runnervmb40mh]
+2026-10-10.10:23:22 (70ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s0
+            golden/fs-largednode@s0
+            golden/vm@s0
+            golden/vm/disk-skein@s0
+            golden/vm/doomed@s0
+            golden/vm/disk-8k@s0
+            golden/vm/disk-64k@s0
+            golden/vm/disk-edonr@s0
+            golden/vm/oldname@s0
+            golden/vm/disk-16k@s0
+            golden/vm/disk-sparse@s0
+            golden/vm/disk-blake3@s0
+            golden/secret-raw@s0
+            golden/secret-raw/disk@s0
+            golden/secret-pw@s0
+            golden/secret-pw/disk@s0
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:22 zfs snapshot -r golden@s0 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:27 [txg:840] snapshot golden@s1 (658)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/fs-largednode@s1 (660)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm@s1 (662)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-skein@s1 (664)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/doomed@s1 (666)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-8k@s1 (668)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-64k@s1 (670)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-edonr@s1 (672)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/oldname@s1 (674)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-16k@s1 (676)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-sparse@s1 (678)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/vm/disk-blake3@s1 (680)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/secret-raw@s1 (682)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/secret-raw/disk@s1 (684)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/secret-pw@s1 (686)   [on runnervmb40mh]
+2026-10-10.10:23:27 [txg:840] snapshot golden/secret-pw/disk@s1 (688)   [on runnervmb40mh]
+2026-10-10.10:23:27 (84ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s1
+            golden/fs-largednode@s1
+            golden/vm@s1
+            golden/vm/disk-skein@s1
+            golden/vm/doomed@s1
+            golden/vm/disk-8k@s1
+            golden/vm/disk-64k@s1
+            golden/vm/disk-edonr@s1
+            golden/vm/oldname@s1
+            golden/vm/disk-16k@s1
+            golden/vm/disk-sparse@s1
+            golden/vm/disk-blake3@s1
+            golden/secret-raw@s1
+            golden/secret-raw/disk@s1
+            golden/secret-pw@s1
+            golden/secret-pw/disk@s1
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:27 zfs snapshot -r golden@s1 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:31 [txg:1247] snapshot golden@s2 (716)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/fs-largednode@s2 (718)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm@s2 (720)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-skein@s2 (722)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/doomed@s2 (724)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-8k@s2 (726)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-64k@s2 (728)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-edonr@s2 (730)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/oldname@s2 (732)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-16k@s2 (734)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-sparse@s2 (736)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/vm/disk-blake3@s2 (738)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/secret-raw@s2 (740)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/secret-raw/disk@s2 (742)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/secret-pw@s2 (744)   [on runnervmb40mh]
+2026-10-10.10:23:31 [txg:1247] snapshot golden/secret-pw/disk@s2 (746)   [on runnervmb40mh]
+2026-10-10.10:23:31 (99ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s2
+            golden/fs-largednode@s2
+            golden/vm@s2
+            golden/vm/disk-skein@s2
+            golden/vm/doomed@s2
+            golden/vm/disk-8k@s2
+            golden/vm/disk-64k@s2
+            golden/vm/disk-edonr@s2
+            golden/vm/oldname@s2
+            golden/vm/disk-16k@s2
+            golden/vm/disk-sparse@s2
+            golden/vm/disk-blake3@s2
+            golden/secret-raw@s2
+            golden/secret-raw/disk@s2
+            golden/secret-pw@s2
+            golden/secret-pw/disk@s2
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:31 zfs snapshot -r golden@s2 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:36 [txg:1642] snapshot golden@s3 (904)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/fs-largednode@s3 (906)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm@s3 (908)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-skein@s3 (910)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/doomed@s3 (912)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-8k@s3 (914)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-64k@s3 (916)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-edonr@s3 (918)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/oldname@s3 (920)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-16k@s3 (922)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-sparse@s3 (924)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/vm/disk-blake3@s3 (926)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/secret-raw@s3 (928)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/secret-raw/disk@s3 (930)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/secret-pw@s3 (932)   [on runnervmb40mh]
+2026-10-10.10:23:36 [txg:1642] snapshot golden/secret-pw/disk@s3 (934)   [on runnervmb40mh]
+2026-10-10.10:23:36 (80ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s3
+            golden/fs-largednode@s3
+            golden/vm@s3
+            golden/vm/disk-skein@s3
+            golden/vm/doomed@s3
+            golden/vm/disk-8k@s3
+            golden/vm/disk-64k@s3
+            golden/vm/disk-edonr@s3
+            golden/vm/oldname@s3
+            golden/vm/disk-16k@s3
+            golden/vm/disk-sparse@s3
+            golden/vm/disk-blake3@s3
+            golden/secret-raw@s3
+            golden/secret-raw/disk@s3
+            golden/secret-pw@s3
+            golden/secret-pw/disk@s3
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:36 zfs snapshot -r golden@s3 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:37 [txg:1646] clone golden/vm/clone-of-16k (818) origin=golden/vm/disk-16k@s3 (922) [on runnervmb40mh]
+2026-10-10.10:23:37 (42ms) ioctl clone
+    input:
+        origin: 'golden/vm/disk-16k@s3'
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:37 zfs clone golden/vm/disk-16k@s3 golden/vm/clone-of-16k [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:41 [txg:2070] snapshot golden@s4 (1061)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/fs-largednode@s4 (1063)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm@s4 (1065)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/clone-of-16k@s4 (1067)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-skein@s4 (1069)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/doomed@s4 (1071)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-8k@s4 (1073)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-64k@s4 (1075)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-edonr@s4 (1077)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/oldname@s4 (1079)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-16k@s4 (1081)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-sparse@s4 (1083)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/vm/disk-blake3@s4 (1085)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/secret-raw@s4 (1087)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/secret-raw/disk@s4 (1089)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/secret-pw@s4 (1091)   [on runnervmb40mh]
+2026-10-10.10:23:41 [txg:2070] snapshot golden/secret-pw/disk@s4 (1093)   [on runnervmb40mh]
+2026-10-10.10:23:42 (96ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s4
+            golden/fs-largednode@s4
+            golden/vm@s4
+            golden/vm/clone-of-16k@s4
+            golden/vm/disk-skein@s4
+            golden/vm/doomed@s4
+            golden/vm/disk-8k@s4
+            golden/vm/disk-64k@s4
+            golden/vm/disk-edonr@s4
+            golden/vm/oldname@s4
+            golden/vm/disk-16k@s4
+            golden/vm/disk-sparse@s4
+            golden/vm/disk-blake3@s4
+            golden/secret-raw@s4
+            golden/secret-raw/disk@s4
+            golden/secret-pw@s4
+            golden/secret-pw/disk@s4
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:42 zfs snapshot -r golden@s4 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:46 [txg:2497] snapshot golden@s5 (885)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/fs-largednode@s5 (887)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm@s5 (889)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/clone-of-16k@s5 (891)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-skein@s5 (893)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/doomed@s5 (895)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-8k@s5 (1281)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-64k@s5 (1283)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-edonr@s5 (1285)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/oldname@s5 (1287)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-16k@s5 (1289)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-sparse@s5 (1291)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/vm/disk-blake3@s5 (1293)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/secret-raw@s5 (1295)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/secret-raw/disk@s5 (1297)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/secret-pw@s5 (1299)   [on runnervmb40mh]
+2026-10-10.10:23:46 [txg:2497] snapshot golden/secret-pw/disk@s5 (1301)   [on runnervmb40mh]
+2026-10-10.10:23:46 (167ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s5
+            golden/fs-largednode@s5
+            golden/vm@s5
+            golden/vm/clone-of-16k@s5
+            golden/vm/disk-skein@s5
+            golden/vm/doomed@s5
+            golden/vm/disk-8k@s5
+            golden/vm/disk-64k@s5
+            golden/vm/disk-edonr@s5
+            golden/vm/oldname@s5
+            golden/vm/disk-16k@s5
+            golden/vm/disk-sparse@s5
+            golden/vm/disk-blake3@s5
+            golden/secret-raw@s5
+            golden/secret-raw/disk@s5
+            golden/secret-pw@s5
+            golden/secret-pw/disk@s5
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:46 zfs snapshot -r golden@s5 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:52 [txg:2913] snapshot golden@s6 (1537)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/fs-largednode@s6 (1539)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm@s6 (1541)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/clone-of-16k@s6 (1543)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-skein@s6 (1545)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/doomed@s6 (1547)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-8k@s6 (1549)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-64k@s6 (1551)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-edonr@s6 (1553)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/oldname@s6 (1555)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-16k@s6 (1557)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-sparse@s6 (1559)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/vm/disk-blake3@s6 (1561)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/secret-raw@s6 (1563)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/secret-raw/disk@s6 (1565)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/secret-pw@s6 (1567)   [on runnervmb40mh]
+2026-10-10.10:23:52 [txg:2913] snapshot golden/secret-pw/disk@s6 (1569)   [on runnervmb40mh]
+2026-10-10.10:23:53 (177ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s6
+            golden/fs-largednode@s6
+            golden/vm@s6
+            golden/vm/clone-of-16k@s6
+            golden/vm/disk-skein@s6
+            golden/vm/doomed@s6
+            golden/vm/disk-8k@s6
+            golden/vm/disk-64k@s6
+            golden/vm/disk-edonr@s6
+            golden/vm/oldname@s6
+            golden/vm/disk-16k@s6
+            golden/vm/disk-sparse@s6
+            golden/vm/disk-blake3@s6
+            golden/secret-raw@s6
+            golden/secret-raw/disk@s6
+            golden/secret-pw@s6
+            golden/secret-pw/disk@s6
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:53 zfs snapshot -r golden@s6 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:23:54 [txg:2917] rename golden/vm/oldname (337) -> golden/vm/newname [on runnervmb40mh]
+2026-10-10.10:23:54 zfs rename golden/vm/oldname golden/vm/newname [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:01 [txg:3322] snapshot golden@s7 (1607)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/fs-largednode@s7 (1609)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm@s7 (1611)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/clone-of-16k@s7 (1613)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-skein@s7 (1615)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/doomed@s7 (1617)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-8k@s7 (1619)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-64k@s7 (1621)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-edonr@s7 (1623)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-16k@s7 (1625)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/newname@s7 (1627)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-sparse@s7 (1629)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/vm/disk-blake3@s7 (1631)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/secret-raw@s7 (1633)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/secret-raw/disk@s7 (1635)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/secret-pw@s7 (1637)   [on runnervmb40mh]
+2026-10-10.10:24:01 [txg:3322] snapshot golden/secret-pw/disk@s7 (1639)   [on runnervmb40mh]
+2026-10-10.10:24:01 (85ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s7
+            golden/fs-largednode@s7
+            golden/vm@s7
+            golden/vm/clone-of-16k@s7
+            golden/vm/disk-skein@s7
+            golden/vm/doomed@s7
+            golden/vm/disk-8k@s7
+            golden/vm/disk-64k@s7
+            golden/vm/disk-edonr@s7
+            golden/vm/disk-16k@s7
+            golden/vm/newname@s7
+            golden/vm/disk-sparse@s7
+            golden/vm/disk-blake3@s7
+            golden/secret-raw@s7
+            golden/secret-raw/disk@s7
+            golden/secret-pw@s7
+            golden/secret-pw/disk@s7
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:01 zfs snapshot -r golden@s7 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:07 [txg:3763] snapshot golden@s8 (1490)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/fs-largednode@s8 (1492)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm@s8 (1494)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/clone-of-16k@s8 (1496)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-skein@s8 (1498)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/doomed@s8 (1500)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-8k@s8 (1502)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-64k@s8 (1504)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-edonr@s8 (1506)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-16k@s8 (1508)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/newname@s8 (1510)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-sparse@s8 (1512)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/vm/disk-blake3@s8 (1514)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/secret-raw@s8 (1516)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/secret-raw/disk@s8 (1518)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/secret-pw@s8 (1520)   [on runnervmb40mh]
+2026-10-10.10:24:07 [txg:3763] snapshot golden/secret-pw/disk@s8 (1522)   [on runnervmb40mh]
+2026-10-10.10:24:08 (190ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s8
+            golden/fs-largednode@s8
+            golden/vm@s8
+            golden/vm/clone-of-16k@s8
+            golden/vm/disk-skein@s8
+            golden/vm/doomed@s8
+            golden/vm/disk-8k@s8
+            golden/vm/disk-64k@s8
+            golden/vm/disk-edonr@s8
+            golden/vm/disk-16k@s8
+            golden/vm/newname@s8
+            golden/vm/disk-sparse@s8
+            golden/vm/disk-blake3@s8
+            golden/secret-raw@s8
+            golden/secret-raw/disk@s8
+            golden/secret-pw@s8
+            golden/secret-pw/disk@s8
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:08 zfs snapshot -r golden@s8 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:13 [txg:4186] snapshot golden@s9 (2068)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/fs-largednode@s9 (2070)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm@s9 (2072)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/clone-of-16k@s9 (2074)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-skein@s9 (2076)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/doomed@s9 (2078)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-8k@s9 (2080)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-64k@s9 (2082)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-edonr@s9 (2084)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-16k@s9 (2086)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/newname@s9 (2088)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-sparse@s9 (2090)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/vm/disk-blake3@s9 (2092)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/secret-raw@s9 (2094)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/secret-raw/disk@s9 (2096)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/secret-pw@s9 (2098)   [on runnervmb40mh]
+2026-10-10.10:24:13 [txg:4186] snapshot golden/secret-pw/disk@s9 (2100)   [on runnervmb40mh]
+2026-10-10.10:24:13 (82ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s9
+            golden/fs-largednode@s9
+            golden/vm@s9
+            golden/vm/clone-of-16k@s9
+            golden/vm/disk-skein@s9
+            golden/vm/doomed@s9
+            golden/vm/disk-8k@s9
+            golden/vm/disk-64k@s9
+            golden/vm/disk-edonr@s9
+            golden/vm/disk-16k@s9
+            golden/vm/newname@s9
+            golden/vm/disk-sparse@s9
+            golden/vm/disk-blake3@s9
+            golden/secret-raw@s9
+            golden/secret-raw/disk@s9
+            golden/secret-pw@s9
+            golden/secret-pw/disk@s9
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:13 zfs snapshot -r golden@s9 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:13 [txg:4190] destroy golden/vm/doomed@s2 (724)   [on runnervmb40mh]
+2026-10-10.10:24:13 (6ms) ioctl destroy_snaps
+    input:
+        snaps:
+            golden/vm/doomed@s2
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:13 zfs destroy golden/vm/doomed@s2 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s9 (2078)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s3 (912)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s4 (1071)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s8 (1500)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s7 (1617)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s1 (666)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s0 (189)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s5 (895)   [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4191] destroy golden/vm/doomed@s6 (1547)   [on runnervmb40mh]
+2026-10-10.10:24:14 (17ms) ioctl destroy_snaps
+    input:
+        snaps:
+            golden/vm/doomed@s0
+            golden/vm/doomed@s1
+            golden/vm/doomed@s3
+            golden/vm/doomed@s4
+            golden/vm/doomed@s5
+            golden/vm/doomed@s6
+            golden/vm/doomed@s7
+            golden/vm/doomed@s8
+            golden/vm/doomed@s9
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:14 [txg:4192] set golden/vm/doomed (405) refreservation=0 [on runnervmb40mh]
+2026-10-10.10:24:14 [txg:4192] destroy golden/vm/doomed (405) (bptree, mintxg=1) [on runnervmb40mh]
+2026-10-10.10:24:14 zfs destroy -r golden/vm/doomed [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:19 [txg:4594] snapshot golden@s10 (1712)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/fs-largednode@s10 (1714)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm@s10 (1716)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/clone-of-16k@s10 (1718)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-skein@s10 (1720)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-8k@s10 (1722)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-64k@s10 (1724)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-edonr@s10 (1726)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-16k@s10 (1728)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/newname@s10 (1730)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-sparse@s10 (1732)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/vm/disk-blake3@s10 (1734)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/secret-raw@s10 (1736)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/secret-raw/disk@s10 (1738)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/secret-pw@s10 (1740)   [on runnervmb40mh]
+2026-10-10.10:24:19 [txg:4594] snapshot golden/secret-pw/disk@s10 (1742)   [on runnervmb40mh]
+2026-10-10.10:24:19 (75ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s10
+            golden/fs-largednode@s10
+            golden/vm@s10
+            golden/vm/clone-of-16k@s10
+            golden/vm/disk-skein@s10
+            golden/vm/disk-8k@s10
+            golden/vm/disk-64k@s10
+            golden/vm/disk-edonr@s10
+            golden/vm/disk-16k@s10
+            golden/vm/newname@s10
+            golden/vm/disk-sparse@s10
+            golden/vm/disk-blake3@s10
+            golden/secret-raw@s10
+            golden/secret-raw/disk@s10
+            golden/secret-pw@s10
+            golden/secret-pw/disk@s10
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:19 zfs snapshot -r golden@s10 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:23 [txg:4993] snapshot golden@s11 (2002)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/fs-largednode@s11 (2004)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm@s11 (2006)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/clone-of-16k@s11 (2008)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-skein@s11 (2010)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-8k@s11 (2012)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-64k@s11 (2014)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-edonr@s11 (2016)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-16k@s11 (2018)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/newname@s11 (2020)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-sparse@s11 (2022)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/vm/disk-blake3@s11 (2024)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/secret-raw@s11 (2026)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/secret-raw/disk@s11 (2028)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/secret-pw@s11 (2030)   [on runnervmb40mh]
+2026-10-10.10:24:23 [txg:4993] snapshot golden/secret-pw/disk@s11 (2032)   [on runnervmb40mh]
+2026-10-10.10:24:23 (72ms) ioctl snapshot
+    input:
+        snaps:
+            golden@s11
+            golden/fs-largednode@s11
+            golden/vm@s11
+            golden/vm/clone-of-16k@s11
+            golden/vm/disk-skein@s11
+            golden/vm/disk-8k@s11
+            golden/vm/disk-64k@s11
+            golden/vm/disk-edonr@s11
+            golden/vm/disk-16k@s11
+            golden/vm/newname@s11
+            golden/vm/disk-sparse@s11
+            golden/vm/disk-blake3@s11
+            golden/secret-raw@s11
+            golden/secret-raw/disk@s11
+            golden/secret-pw@s11
+            golden/secret-pw/disk@s11
+        props:
+ [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:23 zfs snapshot -r golden@s11 [user 0 (root) on runnervmb40mh:linux]
+2026-10-10.10:24:31 zpool export golden [user 0 (root) on runnervmb40mh:linux]
+

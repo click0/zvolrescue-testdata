@@ -1,0 +1,242 @@
+# How files.json and zpool-history-il.txt were captured
+
+run:     https://github.com/click0/zvolrescue/actions/runs/45850728952
+commit:  37c9aff10161f3354f3c13ddc9561e9e07ccc67f (tests/golden/capture-files.py)
+runner:  Ubuntu 26.04.1 LTS, kernel 7.0.0-1020-azure
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+members: the release files of image-v1, checked against tests/golden/image-v1.SHA256SUMS,
+         decompressed and checked against oracle/golden/members.sha256
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N golden
+keys:    zfs load-key -L file://oracle/golden/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: golden
+ state: ONLINE
+config:
+
+	NAME                                      STATE     READ WRITE CKSUM
+	golden                                    ONLINE       0     0     0
+	  mirror-0                                ONLINE       0     0     0
+	    /var/tmp/image/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/image/members/mirror-0b.img  ONLINE       0     0     0
+	  raidz2-1                                ONLINE       0     0     0
+	    /var/tmp/image/members/raidz2-0.img   ONLINE       0     0     0
+	    /var/tmp/image/members/raidz2-1.img   ONLINE       0     0     0
+	    /var/tmp/image/members/raidz2-2.img   ONLINE       0     0     0
+	    /var/tmp/image/members/raidz2-3.img   ONLINE       0     0     0
+	  draid1:2d:4c:1s-2                       ONLINE       0     0     0
+	    /var/tmp/image/members/draid1-0.img   ONLINE       0     0     0
+	    /var/tmp/image/members/draid1-1.img   ONLINE       0     0     0
+	    /var/tmp/image/members/draid1-2.img   ONLINE       0     0     0
+	    /var/tmp/image/members/draid1-3.img   ONLINE       0     0     0
+	spares
+	  draid1-2-0                              AVAIL   
+
+errors: No known data errors
+
+NAME                        MOUNTED  MOUNTPOINT                              USED  REFER
+golden                      no       /var/tmp/altroot/golden                1.07G   156K
+golden@s0                   -        -                                         0B   156K
+golden@s1                   -        -                                         0B   156K
+golden@s2                   -        -                                         0B   156K
+golden@s3                   -        -                                         0B   156K
+golden@s4                   -        -                                         0B   156K
+golden@s5                   -        -                                         0B   156K
+golden@s6                   -        -                                         0B   156K
+golden@s7                   -        -                                         0B   156K
+golden@s8                   -        -                                         0B   156K
+golden@s9                   -        -                                         0B   156K
+golden@s10                  -        -                                         0B   156K
+golden@s11                  -        -                                         0B   156K
+golden/fs-largednode        no       /var/tmp/altroot/golden/fs-largednode  9.89M  9.89M
+golden/fs-largednode@s0     -        -                                         0B  9.89M
+golden/fs-largednode@s1     -        -                                         0B  9.89M
+golden/fs-largednode@s2     -        -                                         0B  9.89M
+golden/fs-largednode@s3     -        -                                         0B  9.89M
+golden/fs-largednode@s4     -        -                                         0B  9.89M
+golden/fs-largednode@s5     -        -                                         0B  9.89M
+golden/fs-largednode@s6     -        -                                         0B  9.89M
+golden/fs-largednode@s7     -        -                                         0B  9.89M
+golden/fs-largednode@s8     -        -                                         0B  9.89M
+golden/fs-largednode@s9     -        -                                         0B  9.89M
+golden/fs-largednode@s10    -        -                                         0B  9.89M
+golden/fs-largednode@s11    -        -                                         0B  9.89M
+golden/secret-pw            no       /var/tmp/altroot/golden/secret-pw       146M   256K
+golden/secret-pw@s0         -        -                                         0B   256K
+golden/secret-pw@s1         -        -                                         0B   256K
+golden/secret-pw@s2         -        -                                         0B   256K
+golden/secret-pw@s3         -        -                                         0B   256K
+golden/secret-pw@s4         -        -                                         0B   256K
+golden/secret-pw@s5         -        -                                         0B   256K
+golden/secret-pw@s6         -        -                                         0B   256K
+golden/secret-pw@s7         -        -                                         0B   256K
+golden/secret-pw@s8         -        -                                         0B   256K
+golden/secret-pw@s9         -        -                                         0B   256K
+golden/secret-pw@s10        -        -                                         0B   256K
+golden/secret-pw@s11        -        -                                         0B   256K
+golden/secret-pw/disk       -        -                                       145M  39.7M
+golden/secret-pw/disk@s0    -        -                                      3.05M  39.5M
+golden/secret-pw/disk@s1    -        -                                       368K  39.3M
+golden/secret-pw/disk@s2    -        -                                       438K  39.5M
+golden/secret-pw/disk@s3    -        -                                       372K  39.4M
+golden/secret-pw/disk@s4    -        -                                       400K  39.6M
+golden/secret-pw/disk@s5    -        -                                       380K  39.7M
+golden/secret-pw/disk@s6    -        -                                       386K  39.7M
+golden/secret-pw/disk@s7    -        -                                       354K  39.7M
+golden/secret-pw/disk@s8    -        -                                       382K  39.7M
+golden/secret-pw/disk@s9    -        -                                       364K  39.7M
+golden/secret-pw/disk@s10   -        -                                       394K  39.7M
+golden/secret-pw/disk@s11   -        -                                         0B  39.7M
+golden/secret-raw           no       /var/tmp/altroot/golden/secret-raw      118M   256K
+golden/secret-raw@s0        -        -                                         0B   256K
+golden/secret-raw@s1        -        -                                         0B   256K
+golden/secret-raw@s2        -        -                                         0B   256K
+golden/secret-raw@s3        -        -                                         0B   256K
+golden/secret-raw@s4        -        -                                         0B   256K
+golden/secret-raw@s5        -        -                                         0B   256K
+golden/secret-raw@s6        -        -                                         0B   256K
+golden/secret-raw@s7        -        -                                         0B   256K
+golden/secret-raw@s8        -        -                                         0B   256K
+golden/secret-raw@s9        -        -                                         0B   256K
+golden/secret-raw@s10       -        -                                         0B   256K
+golden/secret-raw@s11       -        -                                         0B   256K
+golden/secret-raw/disk      -        -                                       117M  34.8M
+golden/secret-raw/disk@s0   -        -                                      2.52M  34.7M
+golden/secret-raw/disk@s1   -        -                                       356K  34.7M
+golden/secret-raw/disk@s2   -        -                                       372K  34.7M
+golden/secret-raw/disk@s3   -        -                                       356K  34.8M
+golden/secret-raw/disk@s4   -        -                                       368K  34.7M
+golden/secret-raw/disk@s5   -        -                                       352K  34.7M
+golden/secret-raw/disk@s6   -        -                                       372K  34.7M
+golden/secret-raw/disk@s7   -        -                                       352K  34.6M
+golden/secret-raw/disk@s8   -        -                                       372K  34.6M
+golden/secret-raw/disk@s9   -        -                                       352K  34.7M
+golden/secret-raw/disk@s10  -        -                                       372K  34.7M
+golden/secret-raw/disk@s11  -        -                                         0B  34.8M
+golden/vm                   no       /var/tmp/altroot/golden/vm              810M   144K
+golden/vm@s0                -        -                                         0B   144K
+golden/vm@s1                -        -                                         0B   144K
+golden/vm@s2                -        -                                         0B   144K
+golden/vm@s3                -        -                                         0B   144K
+golden/vm@s4                -        -                                         0B   144K
+golden/vm@s5                -        -                                         0B   144K
+golden/vm@s6                -        -                                         0B   144K
+golden/vm@s7                -        -                                         0B   144K
+golden/vm@s8                -        -                                         0B   144K
+golden/vm@s9                -        -                                         0B   144K
+golden/vm@s10               -        -                                         0B   144K
+golden/vm@s11               -        -                                         0B   144K
+golden/vm/clone-of-16k      -        -                                      19.3M  34.5M
+golden/vm/clone-of-16k@s4   -        -                                       286K  34.5M
+golden/vm/clone-of-16k@s5   -        -                                       266K  34.5M
+golden/vm/clone-of-16k@s6   -        -                                       286K  34.5M
+golden/vm/clone-of-16k@s7   -        -                                       286K  34.5M
+golden/vm/clone-of-16k@s8   -        -                                       286K  34.5M
+golden/vm/clone-of-16k@s9   -        -                                       267K  34.5M
+golden/vm/clone-of-16k@s10  -        -                                       286K  34.5M
+golden/vm/clone-of-16k@s11  -        -                                         0B  34.5M
+golden/vm/disk-16k          -        -                                      99.1M  34.3M
+golden/vm/disk-16k@s0       -        -                                      2.34M  34.5M
+golden/vm/disk-16k@s1       -        -                                       286K  34.5M
+golden/vm/disk-16k@s2       -        -                                       282K  34.5M
+golden/vm/disk-16k@s3       -        -                                       286K  34.5M
+golden/vm/disk-16k@s4       -        -                                       280K  34.5M
+golden/vm/disk-16k@s5       -        -                                       286K  34.4M
+golden/vm/disk-16k@s6       -        -                                       251K  34.3M
+golden/vm/disk-16k@s7       -        -                                       268K  34.3M
+golden/vm/disk-16k@s8       -        -                                       263K  34.3M
+golden/vm/disk-16k@s9       -        -                                       268K  34.3M
+golden/vm/disk-16k@s10      -        -                                       250K  34.3M
+golden/vm/disk-16k@s11      -        -                                         0B  34.3M
+golden/vm/disk-64k          -        -                                      90.0M  32.2M
+golden/vm/disk-64k@s0       -        -                                      2.14M  32.3M
+golden/vm/disk-64k@s1       -        -                                       144K  32.3M
+golden/vm/disk-64k@s2       -        -                                       158K  32.3M
+golden/vm/disk-64k@s3       -        -                                       144K  32.3M
+golden/vm/disk-64k@s4       -        -                                       116K  32.2M
+golden/vm/disk-64k@s5       -        -                                       144K  32.2M
+golden/vm/disk-64k@s6       -        -                                       116K  32.2M
+golden/vm/disk-64k@s7       -        -                                       132K  32.2M
+golden/vm/disk-64k@s8       -        -                                       116K  32.2M
+golden/vm/disk-64k@s9       -        -                                       132K  32.2M
+golden/vm/disk-64k@s10      -        -                                       116K  32.2M
+golden/vm/disk-64k@s11      -        -                                         0B  32.2M
+golden/vm/disk-8k           -        -                                       144M  39.5M
+golden/vm/disk-8k@s0        -        -                                      2.80M  39.6M
+golden/vm/disk-8k@s1        -        -                                       295K  39.8M
+golden/vm/disk-8k@s2        -        -                                       295K  39.6M
+golden/vm/disk-8k@s3        -        -                                       295K  39.7M
+golden/vm/disk-8k@s4        -        -                                       296K  39.6M
+golden/vm/disk-8k@s5        -        -                                       313K  39.5M
+golden/vm/disk-8k@s6        -        -                                       265K  39.5M
+golden/vm/disk-8k@s7        -        -                                       282K  39.5M
+golden/vm/disk-8k@s8        -        -                                       265K  39.6M
+golden/vm/disk-8k@s9        -        -                                       282K  39.5M
+golden/vm/disk-8k@s10       -        -                                       277K  39.5M
+golden/vm/disk-8k@s11       -        -                                         0B  39.5M
+golden/vm/disk-blake3       -        -                                       116M  34.5M
+golden/vm/disk-blake3@s0    -        -                                      2.39M  34.4M
+golden/vm/disk-blake3@s1    -        -                                       286K  34.5M
+golden/vm/disk-blake3@s2    -        -                                       286K  34.5M
+golden/vm/disk-blake3@s3    -        -                                       286K  34.5M
+golden/vm/disk-blake3@s4    -        -                                       250K  34.4M
+golden/vm/disk-blake3@s5    -        -                                       283K  34.4M
+golden/vm/disk-blake3@s6    -        -                                       282K  34.4M
+golden/vm/disk-blake3@s7    -        -                                       266K  34.4M
+golden/vm/disk-blake3@s8    -        -                                       282K  34.4M
+golden/vm/disk-blake3@s9    -        -                                       266K  34.4M
+golden/vm/disk-blake3@s10   -        -                                       286K  34.4M
+golden/vm/disk-blake3@s11   -        -                                         0B  34.5M
+golden/vm/disk-edonr        -        -                                      99.1M  34.2M
+golden/vm/disk-edonr@s0     -        -                                      2.47M  34.5M
+golden/vm/disk-edonr@s1     -        -                                       286K  34.4M
+golden/vm/disk-edonr@s2     -        -                                       286K  34.4M
+golden/vm/disk-edonr@s3     -        -                                       286K  34.4M
+golden/vm/disk-edonr@s4     -        -                                       251K  34.3M
+golden/vm/disk-edonr@s5     -        -                                       283K  34.3M
+golden/vm/disk-edonr@s6     -        -                                       278K  34.3M
+golden/vm/disk-edonr@s7     -        -                                       268K  34.2M
+golden/vm/disk-edonr@s8     -        -                                       282K  34.2M
+golden/vm/disk-edonr@s9     -        -                                       268K  34.2M
+golden/vm/disk-edonr@s10    -        -                                       282K  34.2M
+golden/vm/disk-edonr@s11    -        -                                         0B  34.2M
+golden/vm/disk-skein        -        -                                      99.4M  34.2M
+golden/vm/disk-skein@s0     -        -                                      2.40M  34.4M
+golden/vm/disk-skein@s1     -        -                                       286K  34.5M
+golden/vm/disk-skein@s2     -        -                                       286K  34.5M
+golden/vm/disk-skein@s3     -        -                                       286K  34.5M
+golden/vm/disk-skein@s4     -        -                                       251K  34.4M
+golden/vm/disk-skein@s5     -        -                                       283K  34.4M
+golden/vm/disk-skein@s6     -        -                                       251K  34.3M
+golden/vm/disk-skein@s7     -        -                                       268K  34.2M
+golden/vm/disk-skein@s8     -        -                                       282K  34.2M
+golden/vm/disk-skein@s9     -        -                                       268K  34.2M
+golden/vm/disk-skein@s10    -        -                                       250K  34.2M
+golden/vm/disk-skein@s11    -        -                                         0B  34.2M
+golden/vm/disk-sparse       -        -                                      44.5M  24.0M
+golden/vm/disk-sparse@s0    -        -                                       997K  18.9M
+golden/vm/disk-sparse@s1    -        -                                       185K  20.2M
+golden/vm/disk-sparse@s2    -        -                                       191K  21.8M
+golden/vm/disk-sparse@s3    -        -                                       205K  23.9M
+golden/vm/disk-sparse@s4    -        -                                       201K  24.0M
+golden/vm/disk-sparse@s5    -        -                                       184K  24.0M
+golden/vm/disk-sparse@s6    -        -                                       201K  23.9M
+golden/vm/disk-sparse@s7    -        -                                       181K  23.9M
+golden/vm/disk-sparse@s8    -        -                                       205K  23.9M
+golden/vm/disk-sparse@s9    -        -                                       185K  24.0M
+golden/vm/disk-sparse@s10   -        -                                       205K  24.0M
+golden/vm/disk-sparse@s11   -        -                                         0B  24.0M
+golden/vm/newname           -        -                                      98.5M  34.7M
+golden/vm/newname@s0        -        -                                      2.35M  34.6M
+golden/vm/newname@s1        -        -                                       268K  34.7M
+golden/vm/newname@s2        -        -                                       270K  34.7M
+golden/vm/newname@s3        -        -                                       268K  34.7M
+golden/vm/newname@s4        -        -                                       286K  34.8M
+golden/vm/newname@s5        -        -                                       266K  34.7M
+golden/vm/newname@s6        -        -                                       286K  34.7M
+golden/vm/newname@s7        -        -                                       254K  34.7M
+golden/vm/newname@s8        -        -                                       286K  34.7M
+golden/vm/newname@s9        -        -                                       254K  34.7M
+golden/vm/newname@s10       -        -                                       286K  34.7M
+golden/vm/newname@s11       -        -                                         0B  34.7M
+members: unchanged after the export (sha256sum -c against members.sha256)

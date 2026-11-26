@@ -75,7 +75,7 @@ for the pinned subset of the matrix it runs on every push.
 | Path | What |
 |---|---|
 | GitHub Releases | image members, `zstd`-compressed, one file each, plus `SHA256SUMS` — never in git (see below) |
-| `oracle/<pool>/` | dataset inventory, `zdb` captures, labels, layout, keys — the recorded truth of each pool |
+| `oracle/<pool>/` | dataset inventory, `zdb` captures, labels, layout, keys, and for `golden` the files of every filesystem and snapshot as the kernel reads them (`files.json`) and the pool's history (`zpool-history-il.txt`) — the recorded truth of each pool |
 | `reports/<tag>/`, `reports/<tag>-rN/` | damage-matrix runs against that image, the first and every one since: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
 | `tools/` | `lint-manifests.py`, which checks every manifest against the format and the oracle on every push; `add-report.py`, which keeps a run's report as the next `reports/<tag>-rN/` |

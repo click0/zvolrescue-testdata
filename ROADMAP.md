@@ -91,13 +91,18 @@ Release: +0. Git: under 1 MB of text.
      L2 (`range = "slack"`, placed from the `zdb -C` capture: 27.5 MiB
      on each mirror and raidz2 member of `image-v1`, 75.5 MiB on each
      dRAID child) — expected bit-exact.
-5. **The oracle extended from the published members**
-   (`oracle-capture.yml` in zvolrescue, OpenZFS on a kernel, members
-   imported read-only): every file of `fs-largednode` with its size and
-   the SHA-256 of its content and of its extended attributes; `zpool
-   history -il`. The harness then judges `zvolfiles` and
-   `zvoltimeline`, and `zvolreport` by building and verifying a report
-   of the matrix's own evidence logs.
+5. *Begun: the capture is in.* **The oracle extended from the published
+   members** (`oracle-capture.yml` in zvolrescue with `what =
+   files-history`: OpenZFS 2.4.1 in the ubuntu-26.04 runner's kernel,
+   the members imported read-only and checked unchanged after the
+   export): every entry of every filesystem and of each of its
+   snapshots with its size, owner, mode, inode, mtime and the SHA-256
+   of its content and of each extended attribute
+   (`oracle/golden/files.json`); `zpool history -il`
+   (`zpool-history-il.txt`); how, in `files-capture.txt`. Next: the
+   harness judges `zvolfiles` and `zvoltimeline` against them, and
+   `zvolreport` by building and verifying a report of the matrix's own
+   evidence logs.
 6. *Done.* **Every matrix run's report kept here**
    (`reports/<tag>-rN/`), not only the first: `tools/add-report.py`
    lays a report out as the next run, with a README written from its
