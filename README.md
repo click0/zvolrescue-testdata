@@ -36,7 +36,12 @@ of a GitHub `ubuntu-26.04` runner (the `golden` job of
 right after the build, is in [reports/image-v1](reports/image-v1/README.md):
 41 manifests, 35 passed, 6 not applicable, none outside its expected
 category. Its first build was refused whole by zvolrescue v0.9.8, which
-did not know `dynamic_gang_header`; v0.9.9 reads it.
+did not know `dynamic_gang_header`; v0.9.9 reads it. The latest run is
+[reports/image-v1-r2](reports/image-v1-r2/README.md): 68 manifests, all
+passed, none `n/a` — among them ten for a pool no uberblock or no label
+is left of, read at the headers `zvolcarve roots` finds and through the
+layout given by hand, one of which found a defect on its way to
+passing.
 
 The member files are the `image-v1` release here — twenty `zstd` files,
 the ten members and a consistent copy of each taken after round 6 of

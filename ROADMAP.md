@@ -72,8 +72,11 @@ Release: +0. Git: under 1 MB of text.
 3. *Done.* **The harness fetches what the selected manifests need**: the
    `image` key, `run-matrix.py --print-needs`, `fetch-image.sh` taking
    that list.
-4. **Cases for what zvolrescue reads now**, with `[recovery]` keys the
-   harness passes on:
+4. *Done, but for the metaslab slack.* **Cases for what zvolrescue
+   reads now**, with `[recovery]` keys the harness passes on (ten
+   manifests, all passing against `image-v1`; the hints case found that
+   a pool read through `--hints` took no feature from its labels and
+   read 2.4's gang headers at 512 bytes, fixed in zvolrescue `9a04283`):
    * the uberblock rings of every member zeroed: refused without
      headers, recovered with `zvolcarve roots` and `--roots`;
    * the `vdev_phys` of every member zeroed: recovered through the
@@ -81,9 +84,8 @@ Release: +0. Git: under 1 MB of text.
    * the same with a raidz's members out of order and `--search-order`;
    * both at once: hints, roots and the order searched;
    * a range a ddrescue map marks unreadable rather than overwritten
-     (`mapfile-bad:<range>`);
-   * a wrong and a missing key for the encrypted volumes: those refused,
-     the rest bit-exact;
+     (the pattern `unreadable`);
+   * a wrong and a missing key for the encrypted volumes: refused;
    * negative controls, damage where ZFS reads nothing — the reserved
      boot area after L1, and the slack between the last metaslab and
      L2 where the capture shows there is any — expected bit-exact.
@@ -94,8 +96,10 @@ Release: +0. Git: under 1 MB of text.
    history -il`. The harness then judges `zvolfiles` and
    `zvoltimeline`, and `zvolreport` by building and verifying a report
    of the matrix's own evidence logs.
-6. **Every matrix run's report kept here** (`reports/<tag>-rN/`), not
-   only the first.
+6. *Begun.* **Every matrix run's report kept here**
+   (`reports/<tag>-rN/`), not only the first: `reports/image-v1-r2` is
+   the second. A run of `realworld.yml` still leaves its report as an
+   artifact of that run only.
 
 ## Stage 2 — `golden-v2` and the satellites
 
