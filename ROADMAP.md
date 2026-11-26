@@ -98,10 +98,13 @@ Release: +0. Git: under 1 MB of text.
    history -il`. The harness then judges `zvolfiles` and
    `zvoltimeline`, and `zvolreport` by building and verifying a report
    of the matrix's own evidence logs.
-6. *Begun.* **Every matrix run's report kept here**
-   (`reports/<tag>-rN/`), not only the first: `reports/image-v1-r2` is
-   the second. A run of `realworld.yml` still leaves its report as an
-   artifact of that run only.
+6. *Done.* **Every matrix run's report kept here**
+   (`reports/<tag>-rN/`), not only the first: `tools/add-report.py`
+   lays a report out as the next run, with a README written from its
+   JSON, and the published image's job of `realworld.yml` in zvolrescue
+   calls it after every run on `main` and pushes the result with the
+   token `publish-golden.yml` uses. `reports/image-v1-r2` was the
+   second, kept by hand.
 
 ## Stage 2 — `golden-v2` and the satellites
 

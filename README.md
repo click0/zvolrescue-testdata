@@ -41,7 +41,9 @@ did not know `dynamic_gang_header`; v0.9.9 reads it. The latest run is
 passed, none `n/a` — among them ten for a pool no uberblock or no label
 is left of, read at the headers `zvolcarve roots` finds and through the
 layout given by hand, one of which found a defect on its way to
-passing.
+passing. Every run after it — the weekly one of `realworld.yml` in
+zvolrescue and any by hand — goes into the next `reports/image-v1-rN`,
+written by `tools/add-report.py`.
 
 The member files are the `image-v1` release here — twenty `zstd` files,
 the ten members and a consistent copy of each taken after round 6 of
@@ -74,9 +76,9 @@ for the pinned subset of the matrix it runs on every push.
 |---|---|
 | GitHub Releases | image members, `zstd`-compressed, one file each, plus `SHA256SUMS` — never in git (see below) |
 | `oracle/<pool>/` | dataset inventory, `zdb` captures, labels, layout, keys — the recorded truth of each pool |
-| `reports/<tag>/` | damage-matrix runs against that image: what passed, what did not, what was not applicable |
+| `reports/<tag>/`, `reports/<tag>-rN/` | damage-matrix runs against that image, the first and every one since: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
-| `tools/` | `lint-manifests.py`, which checks every manifest against the format and the oracle on every push |
+| `tools/` | `lint-manifests.py`, which checks every manifest against the format and the oracle on every push; `add-report.py`, which keeps a run's report as the next `reports/<tag>-rN/` |
 | `IMAGE.md` | how the current image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history; an earlier image's copy sits under its `reports/<tag>/` |
 | [`ROADMAP.md`](ROADMAP.md) | what comes next: cases on `image-v1` for what zvolrescue reads now, `golden-v2` and small single-feature pools, one tag per pool so that a CI job fetches only what it tests |
 
