@@ -60,4 +60,8 @@ pattern = "zeros"
 # before it is given up, and the judge counts that as redundancy at
 # work, so either reading of "recovered" is right here.
 outcome = "recovered"
+# No expect.files: zvolfiles, passing a TXG over because its MOS does
+# not read, ends 4 - what it read may be older than the pool's newest
+# state - where zvolrescue dump ends 0 (SPEC F-10, F-20). Which of the
+# two is the contract is open; the files are held to the rule alone.
 volumes = "all"

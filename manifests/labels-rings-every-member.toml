@@ -58,4 +58,6 @@ pattern = "zeros"
 # configuration in the labels says what the pool is, but not where its
 # MOS is. OpenZFS would not import it; the tool refuses it, whole.
 outcome = "refused"
+files = "refused"
+timeline = "refused"
 volumes = "all"

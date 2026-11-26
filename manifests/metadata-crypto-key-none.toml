@@ -9,4 +9,6 @@ key = "none"
 [expect]
 # Without the key the data stays ciphertext: refused, not written out.
 outcome = "refused"
+files = "refused"
+timeline = "recovered"
 volumes = ["golden/secret-raw/disk", "golden/secret-pw/disk"]

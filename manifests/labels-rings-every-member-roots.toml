@@ -64,4 +64,6 @@ roots = true
 # under it is verified by its pointer. Read at its header the pool is
 # what it was at export.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

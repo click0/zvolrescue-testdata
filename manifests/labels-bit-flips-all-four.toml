@@ -15,4 +15,6 @@ pattern = "flip-bits:256"
 # The member cannot be trusted to identify itself, exactly as if the
 # labels were gone; the pool carries on from its siblings.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

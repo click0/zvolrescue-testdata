@@ -10,4 +10,6 @@ pattern = "zeros"
 [expect]
 # The rear pair still identifies the member.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

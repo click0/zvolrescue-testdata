@@ -12,4 +12,6 @@ pattern = "missing"
 
 [expect]
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

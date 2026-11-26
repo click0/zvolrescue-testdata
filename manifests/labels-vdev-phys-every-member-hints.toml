@@ -61,4 +61,6 @@ hints = "layout"
 # The uberblocks are all there, and so is every block: what was lost
 # is what the labels said of the layout, and the hints say it again.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

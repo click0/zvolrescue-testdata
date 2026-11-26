@@ -12,4 +12,6 @@ pattern = "grow:48MiB"
 # nothing. The vdev's size is in the configuration, not in the file's
 # length, and every block is where it was.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

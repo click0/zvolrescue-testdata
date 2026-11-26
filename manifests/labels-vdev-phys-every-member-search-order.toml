@@ -64,4 +64,6 @@ search_order = true
 # The order written is among those tried, and through it nothing has to
 # be repaired: the pool reads as it was.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

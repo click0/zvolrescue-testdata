@@ -11,4 +11,6 @@ key = "wrong"
 # image of what the ciphertext decrypts to under the wrong key would be
 # noise presented as a volume. Refused.
 outcome = "refused"
+files = "refused"
+timeline = "recovered"
 volumes = ["golden/secret-raw/disk", "golden/secret-pw/disk"]

@@ -16,4 +16,6 @@ pattern = "missing"
 # labels are intact — they simply verify at another base — so one uberblock
 # checksum puts it back, and only the absent member is really gone.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

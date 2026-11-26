@@ -16,7 +16,11 @@ on every push here:
     where it names none;
   * an older copy is named only for a member the image's release holds
     one of;
-  * expected outcomes are the format's, and never `defect`, for kinds of
+  * expected outcomes, of the volumes, of the files (`expect.files`,
+    only where the oracle has a files.json) and of the history
+    (`expect.timeline`, only where it has zpool-history-il.txt), are the
+    format's, and never
+    `defect`, for kinds of
     group ZFS has (a manifest may expect for a kind the published image
     lacks: it is also run on pools `ztest` builds);
   * the count `manifests/README.md` gives is the number of manifests.
@@ -31,12 +35,12 @@ import re
 import sys
 import tomllib
 
-CLASSES = {"labels", "partition", "metadata", "data", "member", "older-self"}
+CLASSES = {"labels", "partition", "metadata", "data", "member", "older-self", "control"}
 OUTCOMES = {"recovered", "bit-exact", "reconstructed", "refused"}
 TOP_KEYS = {"id", "description", "classes", "damage", "expect", "held_out", "recovery", "image"}
 DAMAGE_KEYS = {"member", "target", "pattern", "range"}
 TARGET_KEYS = {"object", "block", "copy", "pieces", "level"}
-EXPECT_KEYS = {"outcome", "volumes", "by_group_kind", "evidence"}
+EXPECT_KEYS = {"outcome", "volumes", "by_group_kind", "evidence", "files", "timeline"}
 RECOVERY_KEYS = {"assume_members", "hints", "order", "search_order", "roots", "key"}
 MEMBER_KEYS = {"leaf", "top", "kind"}
 SHAPES = {"objset", "dnode-block", "data", "indirect", "crypto-key"}
@@ -75,6 +79,11 @@ class Image:
             for line in open(hashed):
                 name = line.split()[1].split("@")[0]
                 self.volumes |= {name, name[len(pool) + 1:]}
+        # `expect.files` is judged against what the kernel read out of the
+        # pool's filesystems.
+        self.files = os.path.exists(os.path.join(oracle, "files.json"))
+        # `expect.timeline`, against the pool's own record of its history.
+        self.history = os.path.exists(os.path.join(oracle, "zpool-history-il.txt"))
         # `range = "slack"` is placed from the metaslabs this capture gives.
         self.zdb_c = os.path.exists(os.path.join(oracle, "zdb-C.txt"))
         self.older = set()
@@ -265,8 +274,9 @@ def lint(path, images):
     if not isinstance(damage, list):
         out.append("[[damage]] is a list of tables")
         damage = []
-    elif not damage and not m.get("recovery"):
-        out.append("no [[damage]], and no [recovery]: a case damages something or tells the tool something")
+    elif not damage and not m.get("recovery") and m.get("classes") != ["control"]:
+        out.append("no [[damage]], and no [recovery]: a case damages something or tells the tool "
+                   "something, or is the control (classes = [\"control\"])")
     for i, d in enumerate(damage, 1):
         at = f"damage {i}"
         out += [f"{at}: key {k!r} is not in the format" for k in d if k not in DAMAGE_KEYS]
@@ -306,6 +316,14 @@ def lint(path, images):
             out.append("expect: no outcome")
         else:
             out += check_outcome(expect["outcome"], "expect.outcome")
+        if "files" in expect:
+            out += check_outcome(expect["files"], "expect.files")
+            if not image.files:
+                out.append(f"expect.files: {image.pool}'s oracle has no files.json to judge them by")
+        if "timeline" in expect:
+            out += check_outcome(expect["timeline"], "expect.timeline")
+            if not image.history:
+                out.append(f"expect.timeline: {image.pool}'s oracle has no zpool-history-il.txt to judge it by")
         for kind, alt in expect.get("by_group_kind", {}).items():
             if kind not in GROUP_KINDS:
                 out.append(f"expect.by_group_kind: {kind!r} is no kind of group ({sorted(GROUP_KINDS)})")

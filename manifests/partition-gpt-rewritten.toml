@@ -10,4 +10,6 @@ pattern = "random"
 [expect]
 # L0 and L1 are gone but L2 and L3 are not, so nothing is lost.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

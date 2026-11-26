@@ -62,4 +62,6 @@ pattern = "random"
 # dRAID's). Damage there that changes what a run reads is the tool
 # reading what it has no business reading.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

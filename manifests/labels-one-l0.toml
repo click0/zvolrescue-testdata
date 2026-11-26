@@ -11,4 +11,6 @@ pattern = "zeros"
 # ZFS keeps four labels so that losing one costs nothing at all: the
 # member stays identified and no redundancy is needed.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

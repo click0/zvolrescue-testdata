@@ -1,0 +1,12 @@
+id = "control-undamaged"
+image = "golden"
+description = "Nothing damaged and nothing told: every volume, and every file of every filesystem and of each of its snapshots, as the oracle records them"
+classes = ["control"]
+
+[expect]
+# The image as published. Anything but bit-exact here is a pool nothing
+# is wrong with misread - by the tool, or by the harness.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

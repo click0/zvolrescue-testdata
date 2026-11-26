@@ -12,4 +12,6 @@ pattern = "zeros"
 # so the pool cannot place it. This is the case F-61 is meant to solve by
 # confirming the member from an uberblock's own offset verifier.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

@@ -25,6 +25,8 @@ pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors>
 outcome = "recovered"         # recovered (= bit-exact | reconstructed) | bit-exact | reconstructed | refused (partial accepted too) | a list of these; never "defect"
 volumes = "all"               # which oracle volumes are compared, or a list
 evidence = ["label L0 missing", "label L2 used"]   # substrings the evidence log must contain (optional)
+files = "recovered"           # what the files of every filesystem come to (optional; see "The files")
+timeline = "recovered"        # what the pool's history comes to (optional; see "The history")
 ```
 
 `expect.outcome` is derived from the redundancy ZFS guarantees for the
@@ -125,6 +127,46 @@ what it said. A volume's **property ZAP** is not a shape of its own on
 pointer, so the dnode block *is* its block, and the `dnode-block` cases
 cover it.
 
+### The files
+
+Where the oracle has a `files.json` — the kernel's reading of every
+filesystem and snapshot of the pool, captured by `oracle-capture.yml`
+in zvolrescue with `what = files-history`, the pool imported read-only
+— every run also extracts every filesystem of the pool with `zvolfiles`
+and holds the tree against it: each entry's type, mode, owner, object
+number and mtime, a file's size and SHA-256, a link's target, each
+extended attribute's size and SHA-256. An entry `zvolfiles` presents
+as whole that is not, one missing that nothing it said accounts for,
+or one the pool does not hold, makes the run a `defect` whatever the
+manifest expects; an entry it says did not read whole (blocks written
+as zeros, an attribute or a directory's contents unread, an entry that
+failed — exit 4) is not compared, and the filesystem is `partial`.
+
+`expect.files` says more where the redundancy does, in the vocabulary
+of `outcome`. It is set where the damage is the pool's — labels, a
+partition, a whole member, a key — rather than any block's, so that the
+filesystems come to what the volumes come to; damage aimed at a range
+or a block may or may not touch the files, and there only the rule
+above holds. The control, `control-undamaged`, damages nothing and
+tells the tool nothing: on it every snapshot of every filesystem is
+judged as well, and everything must be bit-exact.
+
+### The history
+
+Where the oracle has `zpool-history-il.txt` — `zpool history -il`, taken
+by the same capture — every run also asks `zvoltimeline` for the pool's
+history and holds it against that record and the GUIDs in
+`zfs-list.txt`: every dataset and snapshot it says came into being must
+have, by that name, the TXG the record gives and the manner (created,
+clone, snapshot) and the GUID; every one the pool holds must be there;
+every rename, promotion and destroy the record has after the oldest TXG
+it read must be there, at the first TXG it read from then on. What came
+before that TXG — a destroy, a rename — is not asked for: nothing left
+on the disks shows it. An event presented that the record contradicts
+is a `defect`, whatever the manifest expects; one missing with exit 4,
+the history said not to be whole, is `partial`. `expect.timeline` says
+more, as `expect.files` does.
+
 ### Telling the tool something
 
 Some damage leaves a member carrying nothing that says whose it is: with
@@ -174,6 +216,7 @@ there such a case is `n/a`.
 | `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object, the crypto key object of an encrypted volume — one copy and every copy (a volume's property ZAP on `image-v1` is embedded in its dnode's block pointer, so the dnode-block cases are its — see above) |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block |
 | `member` | whole member missing |
+| `control` | nothing at all: the image as published, every volume and every file of every filesystem and snapshot (`control-undamaged`) |
 | `older-self` | a member replaced by a consistent copy of itself from round 6 of the fill (the `round6-*` files of the release): one mirror half, both halves, two raidz2 columns, one dRAID child, and one stale beside one missing (`older-self-*.toml`, `combo-older-self-plus-member-gone.toml`) |
 
 Combinations are pairs and triples of variants across members and
@@ -239,7 +282,7 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 72 manifests cover every class of SPEC §9.1's catalogue at least
+The 73 manifests cover every class of SPEC §9.1's catalogue at least
 once against the `image-v1` layout: members `mirror-0a/0b`,
 `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`). Expected
 outcomes are stated from ZFS redundancy, and against the published

@@ -11,4 +11,6 @@ pattern = "zeros"
 # The member is still identified and readable; the newest TXG comes from
 # the other members' rings.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"

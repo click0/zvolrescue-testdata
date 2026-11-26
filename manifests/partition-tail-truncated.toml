@@ -11,4 +11,6 @@ pattern = "truncate"
 # The front labels remain, and the data ZFS put in the truncated tail (if
 # any) is covered by redundancy.
 outcome = "bit-exact"
+files = "bit-exact"
+timeline = "bit-exact"
 volumes = "all"

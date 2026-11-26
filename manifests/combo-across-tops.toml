@@ -13,4 +13,6 @@ pattern = "missing"
 # Each top-level vdev covers its own loss. A pool with a single top does
 # not have this case.
 outcome = "recovered"
+files = "recovered"
+timeline = "recovered"
 volumes = "all"
