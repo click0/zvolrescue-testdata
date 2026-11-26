@@ -1,0 +1,20 @@
+# The damage manifests, checked against their format and the oracle on
+# every push (tools/lint-manifests.py): a manifest the harness cannot
+# place is reported n/a by a run, and one with a key misspelt is run
+# with a default in its place. Neither should wait for a run to show.
+name: Manifests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Every manifest in the format, naming what the oracle has
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 --version && python3 tools/lint-manifests.py

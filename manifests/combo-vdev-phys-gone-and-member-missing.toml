@@ -1,6 +1,6 @@
 id = "combo-vdev-phys-gone-and-member-missing"
 description = "One member's four vdev_phys nvlists zeroed while another member is absent: redundancy alone no longer covers it"
-classes = ["labels", "missing"]
+classes = ["labels", "member"]
 
 [[damage]]
 member = { leaf = 0 }

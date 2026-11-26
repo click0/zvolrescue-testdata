@@ -205,3 +205,17 @@ once against the `image-v1` layout: members `mirror-0a/0b`,
 are stated from ZFS redundancy, and against the published image every
 one applies and every one lands in its category (the Results table of
 zvolrescue's REALWORLD-TESTS.md has each run).
+
+## Checked on every push
+
+`tools/lint-manifests.py` reads every manifest the way the harness will
+and says what it would not place, on every push here (the `Manifests`
+workflow): a key the format does not have, at any level; a pattern, a
+range or a structure target outside the grammar above; a member, a
+top-level vdev, a dataset or a volume the oracle of `image-v1` does not
+have; an older copy of a member its release holds none of; an outcome
+that is not one of the four, or `defect`; an `id` that is not the
+file's name; and a count in this file that is not the number of
+manifests. Run it before a push: `python3 tools/lint-manifests.py`.
+It knows the format and the oracle, not ZFS: whether an expectation
+follows from the redundancy is still the writer's to get right.

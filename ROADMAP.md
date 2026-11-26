@@ -61,9 +61,11 @@ fetching its pool from the release.
 
 Release: +0. Git: under 1 MB of text.
 
-1. **The push-time checkout narrowed to `manifests/`** in zvolrescue's
-   CI (`sparse-checkout`): 0.3 MB instead of 18 MB packed.
-2. **A linter for the manifests**, run here on every push: TOML that
+1. *Done.* **The push-time checkout narrowed to `manifests/`** in
+   zvolrescue's CI (`sparse-checkout`): 0.3 MB instead of 18 MB packed.
+2. *Done.* **A linter for the manifests**, run here on every push
+   (`tools/lint-manifests.py`; its first run found a class the format
+   does not have, now `member`): TOML that
    parses, `id` equal to the file name, members and top-level vdevs
    present in `oracle/<pool>/layout.json`, outcomes and patterns from
    the format, older copies only for members a release holds.
