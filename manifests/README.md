@@ -44,6 +44,15 @@ where the damage does not deterministically hit live data. A run that
 lands anywhere else is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
 
+A manifest written for one pool alone names it: `image = "<pool>"`, by
+the name that pool's `oracle/<pool>/layout.json` gives (`golden`, and a
+satellite's when there are satellites). It is then run against that
+pool and no other, and the harness fetches nothing of another pool for
+it. One that names none, as every manifest here does today, is run
+against any pool the harness is given — the published image and the
+pools it builds with `ztest` on the spot — and is checked here against
+`golden`'s oracle.
+
 Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
 negative start counts from the end of the member (`-512KiB..` is the last
 512 KiB), `0..` is the whole member. Patterns: `zeros`, `random` (seeded per
@@ -212,8 +221,9 @@ zvolrescue's REALWORLD-TESTS.md has each run).
 and says what it would not place, on every push here (the `Manifests`
 workflow): a key the format does not have, at any level; a pattern, a
 range or a structure target outside the grammar above; a member, a
-top-level vdev, a dataset or a volume the oracle of `image-v1` does not
-have; an older copy of a member its release holds none of; an outcome
+top-level vdev, a dataset or a volume the oracle of its pool does not
+have (`golden`'s, where it names none); an `image` no oracle here
+describes; an older copy of a member its release holds none of; an outcome
 that is not one of the four, or `defect`; an `id` that is not the
 file's name; and a count in this file that is not the number of
 manifests. Run it before a push: `python3 tools/lint-manifests.py`.

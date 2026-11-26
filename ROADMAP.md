@@ -69,7 +69,7 @@ Release: +0. Git: under 1 MB of text.
    parses, `id` equal to the file name, members and top-level vdevs
    present in `oracle/<pool>/layout.json`, outcomes and patterns from
    the format, older copies only for members a release holds.
-3. **The harness fetches what the selected manifests need**: the
+3. *Done.* **The harness fetches what the selected manifests need**: the
    `image` key, `run-matrix.py --print-needs`, `fetch-image.sh` taking
    that list.
 4. **Cases for what zvolrescue reads now**, with `[recovery]` keys the

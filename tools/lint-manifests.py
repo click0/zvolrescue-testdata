@@ -11,7 +11,9 @@ on every push here:
   * every key is one the format has, at every level;
   * patterns, ranges and structure targets are in the format's grammar;
   * every member, top-level vdev, dataset and volume a manifest names is
-    in the oracle of the image it is written against (`oracle/golden/`);
+    in the oracle of the pool it is written against: the one its `image`
+    names, by the name that pool's `layout.json` gives, and `golden`
+    where it names none;
   * an older copy is named only for a member the image's release holds
     one of;
   * expected outcomes are the format's, and never `defect`, for kinds of
@@ -31,7 +33,7 @@ import tomllib
 
 CLASSES = {"labels", "partition", "metadata", "data", "member", "older-self"}
 OUTCOMES = {"recovered", "bit-exact", "reconstructed", "refused"}
-TOP_KEYS = {"id", "description", "classes", "damage", "expect", "held_out", "recovery"}
+TOP_KEYS = {"id", "description", "classes", "damage", "expect", "held_out", "recovery", "image"}
 DAMAGE_KEYS = {"member", "target", "pattern", "range"}
 TARGET_KEYS = {"object", "block", "copy", "pieces", "level"}
 EXPECT_KEYS = {"outcome", "volumes", "by_group_kind", "evidence"}
@@ -53,18 +55,26 @@ class Image:
     """What the oracle of one image says a manifest may name."""
 
     def __init__(self, oracle):
+        self.dir = oracle
         layout = json.load(open(os.path.join(oracle, "layout.json")))
         self.tag = layout.get("image_tag", "")
         self.members = layout["members"]
         self.kinds = {m["group_kind"] for m in self.members.values()}
         self.tops = {m["top"] for m in self.members.values()}
-        pool = layout["pool"]
-        names = [line.split("\t")[0] for line in open(os.path.join(oracle, "zfs-list.txt"))]
-        self.datasets = {n[len(pool) + 1:] for n in names if "@" not in n and n != pool}
+        self.pool = pool = layout["pool"]
+        # Without a `zfs list` capture (a pool `ztest` built) the names
+        # of its datasets are not known here, and are not checked.
+        self.datasets = None
+        listed = os.path.join(oracle, "zfs-list.txt")
+        if os.path.exists(listed):
+            names = [line.split("\t")[0] for line in open(listed)]
+            self.datasets = {n[len(pool) + 1:] for n in names if "@" not in n and n != pool}
         self.volumes = set()
-        for line in open(os.path.join(oracle, "volumes.sha256")):
-            name = line.split()[1].split("@")[0]
-            self.volumes |= {name, name[len(pool) + 1:]}
+        hashed = os.path.join(oracle, "volumes.sha256")
+        if os.path.exists(hashed):
+            for line in open(hashed):
+                name = line.split()[1].split("@")[0]
+                self.volumes |= {name, name[len(pool) + 1:]}
         self.older = set()
         release = os.path.join(oracle, "SHA256SUMS-release.txt")
         if os.path.exists(release):
@@ -171,9 +181,10 @@ def check_target(target, image):
     if dataset == "mos":
         if shape != "objset":
             out.append("of the MOS only `mos:objset` is a target")
-    elif dataset != "any" and dataset not in image.datasets:
+    elif dataset != "any" and image.datasets is not None and dataset not in image.datasets:
         out.append(f"no dataset {dataset!r} in the oracle")
-    elif shape in ("data", "indirect") and dataset != "any" and dataset not in image.volumes:
+    elif (shape in ("data", "indirect") and dataset != "any" and image.datasets is not None
+          and dataset not in image.volumes):
         out.append(f"{dataset!r} is not a volume: `{shape}` is a volume's")
     block = target.get("block")
     if block is not None and not (
@@ -220,7 +231,7 @@ def check_outcome(value, where):
     return out
 
 
-def lint(path, image):
+def lint(path, images):
     """Every finding about one manifest file."""
     stem = os.path.basename(path)[: -len(".toml")]
     try:
@@ -228,6 +239,10 @@ def lint(path, image):
     except tomllib.TOMLDecodeError as e:
         return [f"does not parse: {e}"]
     out = [f"key {k!r} is not in the format" for k in m if k not in TOP_KEYS]
+    pool = m.get("image", "golden")
+    if not isinstance(pool, str) or pool not in images:
+        return out + [f"image {pool!r} names no pool an oracle here describes ({sorted(images)})"]
+    image = images[pool]
     if m.get("id") != stem:
         out.append(f"id {m.get('id')!r} is not the file's name {stem!r}")
     if not stem.startswith(tuple(f"{c}-" for c in CLASSES | {"combo"})):
@@ -306,12 +321,22 @@ def lint(path, image):
 
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else "."
-    image = Image(os.path.join(root, "oracle", "golden"))
+    # Every pool an oracle here describes, by the name its layout gives;
+    # of several oracles of one pool, the one whose directory is named
+    # after it.
+    images = {}
+    for d in sorted(os.listdir(os.path.join(root, "oracle"))):
+        path = os.path.join(root, "oracle", d)
+        if not os.path.exists(os.path.join(path, "layout.json")):
+            continue
+        image = Image(path)
+        if image.pool not in images or d == image.pool:
+            images[image.pool] = image
     folder = os.path.join(root, "manifests")
     files = sorted(f for f in os.listdir(folder) if f.endswith(".toml"))
     failed = 0
     for f in files:
-        findings = lint(os.path.join(folder, f), image)
+        findings = lint(os.path.join(folder, f), images)
         for e in findings:
             print(f"manifests/{f}: {e}")
         failed += bool(findings)
