@@ -47,10 +47,13 @@ v0.9.9 її читає. Останній прогін —
 [reports/image-v1-r3](reports/image-v1-r3/README.md), 70 маніфестів, усі
 пройдено, — перший, що судить також `zvolfiles` і `zvoltimeline`, за
 файлами та історією, які прочитало ядро (`oracle/golden/files.json`,
-`zpool-history-il.txt`); останній,
+`zpool-history-il.txt`);
 [reports/image-v1-r4](reports/image-v1-r4/README.md), 70 з 70, —
 перший, де кожен інструмент після пропущеної TXG завершується кодом 4,
-а прогін судять за байтами.
+а прогін судять за байтами; останній,
+[reports/image-v1-r5](reports/image-v1-r5/README.md), 70 з 70, —
+перший, що судить також `list` і `scan` за записами zdb
+(`datasets-by-txg/`, `labels/`, `zdb-u.txt`, `zpool-status.txt`).
 
 Файли членів — це реліз `image-v1` тут: двадцять файлів `zstd`, десять
 членів і узгоджена копія кожного після 6-го раунду заповнення (патерн

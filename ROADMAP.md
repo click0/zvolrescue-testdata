@@ -9,19 +9,17 @@ image never rebuilt in place, expectations derived from ZFS redundancy.
 
 ## Where things stand
 
-`image-v1` tests one program of five. The harness (`run-matrix.py` in
-zvolrescue) judges `zvolrescue` only — the volumes `dump` writes and the
-datasets a walk finds. Nothing here tells `zvolfiles` what the files of
-`fs-largednode` hold, `zvoltimeline` what happened when, or `zvolcarve`
-what the destroyed `vm/doomed` held last (`volumes.sha256` has it at
-`s0`–`s2` only). And what zvolrescue has learned since the image was
-built — reading a pool no uberblock is left of at the headers
-`zvolcarve roots` finds, a pool no label is left of through `--hints`,
-the member order of a raidz searched from either, a transaction group
-from before a device removal, the pool checkpoint, a spare at work, an
-intent log not applied — has no case here at all: it is tested on
-synthetic fixtures and `libzpool` pools in zvolrescue's CI, not against
-a pool whose answer is known.
+`image-v1` now tests three programs of five against what OpenZFS
+itself read of it, in every case of the matrix (`run-matrix.py` in
+zvolrescue): `zvolrescue` — the volumes `dump` writes, the datasets
+`list` names against `zdb -t T -d`, what `scan` reads of the labels,
+the uberblock and the vdevs against `zdb -l`, `zdb -u` and `zpool
+status` — `zvolfiles` against the kernel's reading of every filesystem,
+and `zvoltimeline` against `zpool history -il`. Not yet: `zvolcarve`,
+since nothing here says what the destroyed `vm/doomed` held last
+(`volumes.sha256` has it at `s0`–`s2` only), and `zvolreport`. The
+features zvolrescue has learned since the image was built have their
+cases (stage 1, item 4).
 
 ## Publishing: one tag per pool, one download per need
 
@@ -113,8 +111,16 @@ Release: +0. Git: under 1 MB of text.
    lays a report out as the next run, with a README written from its
    JSON, and the published image's job of `realworld.yml` in zvolrescue
    calls it after every run on `main` and pushes the result with the
-   token `publish-golden.yml` uses. `reports/image-v1-r2` was the
-   second, kept by hand.
+   token `publish-golden.yml` uses. That token (`TESTDATA_TOKEN`) is not
+   set yet, by choice: until it is, the weekly run leaves its report as
+   an artifact and runs are kept here by hand (`image-v1-r2` to `-r5`).
+7. *Done.* **`list` and `scan` judged against zdb's own records**,
+   which the oracle had from the build and nothing read: every case
+   holds the datasets `list -r` names against `datasets-by-txg/` at the
+   TXG it listed at, and what `scan -vv` read against `labels/`,
+   `zdb-u.txt` and `zpool-status.txt`; the control lists at every TXG
+   of the ring zdb recorded. What each oracle file judges is in
+   [oracle/README.md](oracle/README.md).
 
 ## Stage 2 — `golden-v2` and the satellites
 
