@@ -102,10 +102,12 @@ Release: +0. Git: under 1 MB of text.
    (`zpool-history-il.txt`); how, in `files-capture.txt`. The harness
    judges `zvolfiles` and `zvoltimeline` against them in every case
    (zvolrescue `7f5ef23`; `expect.files`, `expect.timeline` and the
-   control case in the manifests; `reports/image-v1-r3`, 70 of 70). Left:
-   `zvolreport`, judged by building and verifying a report of the
-   matrix's own evidence logs; and the exit status of `zvolfiles` after
-   a TXG passed over, 4 where `zvolrescue dump` gives 0.
+   control case in the manifests; `reports/image-v1-r3`, 70 of 70). The
+   exit status after a TXG passed over, 4 from `zvolfiles` where
+   `zvolrescue dump` gave 0, is settled: 4 from every tool, the bytes
+   judged (zvolrescue `4a95364`, `reports/image-v1-r4`, 70 of 70).
+   Left: `zvolreport`, judged by building and verifying a report of the
+   matrix's own evidence logs.
 6. *Done.* **Every matrix run's report kept here**
    (`reports/<tag>-rN/`), not only the first: `tools/add-report.py`
    lays a report out as the next run, with a README written from its

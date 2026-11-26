@@ -43,11 +43,14 @@ is left of, read at the headers `zvolcarve roots` finds and through the
 layout given by hand, one of which found a defect on its way to
 passing. Every run after it — the weekly one of `realworld.yml` in
 zvolrescue and any by hand — goes into the next `reports/image-v1-rN`,
-written by `tools/add-report.py`; the latest,
+written by `tools/add-report.py`.
 [reports/image-v1-r3](reports/image-v1-r3/README.md), 70 manifests, all
 passed, is the first to judge `zvolfiles` and `zvoltimeline` as well,
 against the files and the history the kernel read
-(`oracle/golden/files.json`, `zpool-history-il.txt`).
+(`oracle/golden/files.json`, `zpool-history-il.txt`); the latest,
+[reports/image-v1-r4](reports/image-v1-r4/README.md), 70 of 70, the
+first with every tool ending 4 after a TXG passed over and judged by
+its bytes.
 
 The member files are the `image-v1` release here — twenty `zstd` files,
 the ten members and a consistent copy of each taken after round 6 of
