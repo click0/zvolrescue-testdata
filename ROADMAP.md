@@ -72,11 +72,11 @@ Release: +0. Git: under 1 MB of text.
 3. *Done.* **The harness fetches what the selected manifests need**: the
    `image` key, `run-matrix.py --print-needs`, `fetch-image.sh` taking
    that list.
-4. *Done, but for the metaslab slack.* **Cases for what zvolrescue
-   reads now**, with `[recovery]` keys the harness passes on (ten
-   manifests, all passing against `image-v1`; the hints case found that
-   a pool read through `--hints` took no feature from its labels and
-   read 2.4's gang headers at 512 bytes, fixed in zvolrescue `9a04283`):
+4. *Done.* **Cases for what zvolrescue reads now**, with `[recovery]`
+   keys the harness passes on (eleven manifests, all passing against
+   `image-v1`; the hints case found that a pool read through `--hints`
+   took no feature from its labels and read 2.4's gang headers at 512
+   bytes, fixed in zvolrescue `9a04283`):
    * the uberblock rings of every member zeroed: refused without
      headers, recovered with `zvolcarve roots` and `--roots`;
    * the `vdev_phys` of every member zeroed: recovered through the
@@ -88,7 +88,9 @@ Release: +0. Git: under 1 MB of text.
    * a wrong and a missing key for the encrypted volumes: refused;
    * negative controls, damage where ZFS reads nothing — the reserved
      boot area after L1, and the slack between the last metaslab and
-     L2 where the capture shows there is any — expected bit-exact.
+     L2 (`range = "slack"`, placed from the `zdb -C` capture: 27.5 MiB
+     on each mirror and raidz2 member of `image-v1`, 75.5 MiB on each
+     dRAID child) — expected bit-exact.
 5. **The oracle extended from the published members**
    (`oracle-capture.yml` in zvolrescue, OpenZFS on a kernel, members
    imported read-only): every file of `fs-largednode` with its size and

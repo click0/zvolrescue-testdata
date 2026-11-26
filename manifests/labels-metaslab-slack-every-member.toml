@@ -1,0 +1,65 @@
+id = "labels-metaslab-slack-every-member"
+image = "golden"
+description = "The slack of every member (past the last metaslab of its top-level vdev, up to L2) overwritten with noise: a negative control, where ZFS allocates nothing"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "slack"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "slack"
+pattern = "random"
+
+[expect]
+# A top-level vdev allocates in whole metaslabs, asize >> metaslab_shift
+# of them; what is left of its asize is never allocated, and a dRAID
+# addresses none of its children past its asize at all. The harness
+# places the slack from the oracle's zdb -C capture (on image-v1:
+# 484 MiB to L2 on the mirror and raidz2 members, 436 MiB to L2 on the
+# dRAID's). Damage there that changes what a run reads is the tool
+# reading what it has no business reading.
+outcome = "bit-exact"
+volumes = "all"

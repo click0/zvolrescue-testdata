@@ -55,7 +55,14 @@ pools it builds with `ztest` on the spot — and is checked here against
 
 Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
 negative start counts from the end of the member (`-512KiB..` is the last
-512 KiB), `0..` is the whole member. Patterns: `zeros`, `random` (seeded per
+512 KiB), `0..` is the whole member. `slack` is the member's bytes past
+the last metaslab of its top-level vdev, up to L2: a vdev allocates in
+whole metaslabs, `asize >> metaslab_shift` of them, and what is left of
+its `asize` — and of a dRAID child, everything past what the dRAID
+addresses — is never written. The harness places it from the oracle's
+`zdb -C` capture (`metaslab_shift`, `asize`, the geometry), mapped onto
+the member the way the vdev maps any offset; a member whose metaslabs
+reach L2 has none, and the case is n/a. Patterns: `zeros`, `random` (seeded per
 manifest, so reproducible), `flip-bits:<n>` (n single-bit flips spread over
 the range), `shift:<sectors>` (the member's content moved forward, the
 image grows), `truncate` (the range is cut off, the image shrinks),
@@ -232,14 +239,13 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 71 manifests cover every class of SPEC §9.1's catalogue at least
-once against the `image-v1` layout (ten of them, those for a pool no
-label or uberblock is left of, the boot area, an imager's map and a
-key, newer than the last run of the matrix): members `mirror-0a/0b`,
-`raidz2-0..3`, `draid1-0..3` (`oracle/layout.json`). Expected outcomes
-are stated from ZFS redundancy, and against the published image every
-one applies and every one lands in its category (the Results table of
-zvolrescue's REALWORLD-TESTS.md has each run).
+The 72 manifests cover every class of SPEC §9.1's catalogue at least
+once against the `image-v1` layout: members `mirror-0a/0b`,
+`raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`). Expected
+outcomes are stated from ZFS redundancy, and against the published
+image every one applies and every one lands in its category: the
+reports of the runs are in [`reports/`](../reports/), and the Results
+table of zvolrescue's REALWORLD-TESTS.md has each run.
 
 ## Checked on every push
 

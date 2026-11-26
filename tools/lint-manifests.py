@@ -75,6 +75,8 @@ class Image:
             for line in open(hashed):
                 name = line.split()[1].split("@")[0]
                 self.volumes |= {name, name[len(pool) + 1:]}
+        # `range = "slack"` is placed from the metaslabs this capture gives.
+        self.zdb_c = os.path.exists(os.path.join(oracle, "zdb-C.txt"))
         self.older = set()
         release = os.path.join(oracle, "SHA256SUMS-release.txt")
         if os.path.exists(release):
@@ -116,6 +118,8 @@ def check_range(spec):
     """None, or what is wrong with a `range`."""
     if not isinstance(spec, str):
         return "a range is a string"
+    if spec == "slack":
+        return None
     if spec.startswith("label:"):
         which, _, part = spec[len("label:"):].partition("/")
         if which not in ("all", ""):
@@ -289,6 +293,8 @@ def lint(path, images):
                 problem = check_range(d["range"])
                 if problem:
                     out.append(f"{at}: {problem}")
+                elif d["range"] == "slack" and not image.zdb_c:
+                    out.append(f"{at}: `slack` is placed from the oracle's zdb -C capture, which {image.pool}'s oracle lacks")
         out += [f"{at}: {e}" for e in check_pattern(pattern, image, role, d.get("range"))]
 
     expect = m.get("expect")
