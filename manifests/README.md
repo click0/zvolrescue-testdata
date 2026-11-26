@@ -175,6 +175,26 @@ is a `defect`, whatever the manifest expects; one missing with exit 4,
 the history said not to be whole, is `partial`. `expect.timeline` says
 more, as `expect.files` does.
 
+### The datasets and the labels
+
+Where the oracle has `datasets-by-txg/` — what `zdb -t T -d` named at
+each of the newest TXGs — every run also holds `zvolrescue list -r`,
+told what `dump` is told, against zdb at the TXG it listed at: every
+dataset with its kind, object number, creation TXG and referenced size
+as zdb prints it, and nothing zdb does not name. On the control it
+lists at every TXG of the ring zdb recorded, and each TXG at which
+zdb's listing changes must be one it names. Where the oracle has
+`labels/`, `zdb-u.txt` and `zpool-status.txt`, `scan -vv` is held
+against them: the nvlist of the label it read of each member — every
+key but the state and the TXG it was written at, which an older copy of
+a member says otherwise of — every copy that verifies of the uberblock
+`zdb -u` printed, and each top-level vdev it assembled. Either way a
+wrong answer is a `defect`, whatever the manifest expects; a list that
+ends 4 naming the parts of the tree it could not read is `partial`, and
+a member none of whose labels read is `refused`. Neither has an
+expectation key: what is held is the rule alone, that nothing read is
+presented otherwise than zdb read it.
+
 ### Telling the tool something
 
 Some damage leaves a member carrying nothing that says whose it is: with

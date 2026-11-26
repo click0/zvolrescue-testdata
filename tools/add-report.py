@@ -135,9 +135,11 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
         out.append(wrap("Outcomes: " + ", ".join(f"{n} {k}" for k, n in sorted(
             actual.items(), key=lambda kv: (-kv[1], kv[0]))) + "."))
         out.append("")
-    # The files (zvolfiles) and the history (zvoltimeline), where the
-    # oracle had them to judge by.
-    for side, what in (("files", "Files"), ("timeline", "History")):
+    # The files (zvolfiles), the history (zvoltimeline), the datasets
+    # listed (list against zdb -d) and what scan read (against zdb -l,
+    # zdb -u, zpool status), where the oracle had them to judge by.
+    for side, what in (("files", "Files"), ("timeline", "History"), ("datasets", "Datasets"),
+                       ("scan", "Scan")):
         got = collections.Counter(r[side]["actual"] for r in records if side in r)
         if got:
             out.append(wrap(f"{what}: " + ", ".join(f"{n} {k}" for k, n in sorted(
@@ -158,7 +160,7 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
                 for k, v in (r.get("outcomes") or {}).items():
                     if k != "refused_detail" and v != "ok":
                         out.append(f"  * {k}: {v}")
-                for side in ("files", "timeline"):
+                for side in ("files", "timeline", "datasets", "scan"):
                     if r.get(side, {}).get("verdict", "pass") != "pass":
                         out.append(f"  * {side}: expected {r[side]['expected']}, got {r[side]['actual']}")
         out.append("")
