@@ -41,7 +41,12 @@ almost every manifest says; `refused` means the tool stopped with exit 3
 for every judged volume and presented no partial output as good, and a
 run that instead wrote an image with the lost blocks as zeros, counted
 and announced (exit 4, `partial`), is accepted under it — it presents
-nothing as good that is not. A list names several acceptable outcomes
+nothing as good that is not. A run that ends 4 for one reason alone —
+the newest TXG that names a volume, or the pool or the tree it is
+under, did not read, and an older one read whole was used
+(`unreadable_at`, SPEC F-10, F-20) — is judged by its bytes, as an exit
+0 is, and the TXGs it passed over are recorded (`passed_over`); one that
+passes a TXG over and ends 0 is a `defect`. A list names several acceptable outcomes
 where the damage does not deterministically hit live data. A run that
 lands anywhere else is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
@@ -140,7 +145,10 @@ as whole that is not, one missing that nothing it said accounts for,
 or one the pool does not hold, makes the run a `defect` whatever the
 manifest expects; an entry it says did not read whole (blocks written
 as zeros, an attribute or a directory's contents unread, an entry that
-failed — exit 4) is not compared, and the filesystem is `partial`.
+failed — exit 4) is not compared, and the filesystem is `partial`. A
+run that ends 4 for a newer TXG passed over alone (`passed_over`, one
+that did not read) and says no entry is not whole is judged entry by
+entry as an exit 0 is.
 
 `expect.files` says more where the redundancy does, in the vocabulary
 of `outcome`. It is set where the damage is the pool's — labels, a
