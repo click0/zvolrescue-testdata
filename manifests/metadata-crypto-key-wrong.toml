@@ -1,0 +1,14 @@
+id = "metadata-crypto-key-wrong"
+image = "golden"
+description = "Nothing damaged, and the encrypted volumes asked for with a key that is not theirs: the raw key with every bit turned over, a passphrase that is not the one"
+classes = ["metadata"]
+
+[recovery]
+key = "wrong"
+
+[expect]
+# A wrong key unwraps nothing: there is no plaintext to give, and an
+# image of what the ciphertext decrypts to under the wrong key would be
+# noise presented as a volume. Refused.
+outcome = "refused"
+volumes = ["golden/secret-raw/disk", "golden/secret-pw/disk"]

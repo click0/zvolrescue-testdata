@@ -1,0 +1,69 @@
+id = "labels-all-every-member-roots-search-order"
+image = "golden"
+description = "All four labels of every member zeroed whole — configuration and uberblocks — and the pool read at the headers zvolcarve roots finds, through a layout given out of order and searched"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all"
+pattern = "zeros"
+
+[recovery]
+# Nothing in the labels survives: the layout from the operator, every
+# raidz and dRAID group in the wrong order, the order searched from the
+# object-set headers found in raw space (SPEC F-64, F-65, F-66).
+hints = "layout"
+order = "reversed"
+search_order = true
+roots = true
+
+[expect]
+# Only the labels were touched; the MOS of the last transaction group
+# and every block under it are where they were.
+outcome = "recovered"
+volumes = "all"

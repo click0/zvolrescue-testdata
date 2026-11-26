@@ -1,0 +1,67 @@
+id = "labels-vdev-phys-every-member-search-order"
+image = "golden"
+description = "The configuration of every label of every member zeroed, the layout given with every raidz and dRAID group's members the other way round, and the order searched"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[recovery]
+hints = "layout"
+order = "reversed"
+# Every order of each raidz and dRAID group tried, and the one the
+# checksums accept kept (SPEC F-66).
+search_order = true
+
+[expect]
+# The order written is among those tried, and through it nothing has to
+# be repaired: the pool reads as it was.
+outcome = "recovered"
+volumes = "all"

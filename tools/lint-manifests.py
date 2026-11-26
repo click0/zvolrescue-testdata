@@ -37,7 +37,7 @@ TOP_KEYS = {"id", "description", "classes", "damage", "expect", "held_out", "rec
 DAMAGE_KEYS = {"member", "target", "pattern", "range"}
 TARGET_KEYS = {"object", "block", "copy", "pieces", "level"}
 EXPECT_KEYS = {"outcome", "volumes", "by_group_kind", "evidence"}
-RECOVERY_KEYS = {"assume_members"}
+RECOVERY_KEYS = {"assume_members", "hints", "order", "search_order", "roots", "key"}
 MEMBER_KEYS = {"leaf", "top", "kind"}
 SHAPES = {"objset", "dnode-block", "data", "indirect", "crypto-key"}
 LABEL_PARTS = {"", "whole", "vdev_phys", "rings", "uberblocks"}
@@ -144,7 +144,7 @@ def check_pattern(pattern, image, role, rng):
     """Findings about one damage's pattern."""
     out = []
     name, _, arg = pattern.partition(":")
-    if name in ("zeros", "random", "truncate", "missing") and not arg:
+    if name in ("zeros", "random", "truncate", "missing", "unreadable") and not arg:
         if name == "missing" and rng is not None:
             out.append("`missing` takes no range: the member is not given at all")
     elif name in ("flip-bits", "shift") and arg.isdigit() and int(arg) > 0:
@@ -257,10 +257,12 @@ def lint(path, images):
     if "held_out" in m and not isinstance(m["held_out"], bool):
         out.append("held_out is true or false")
 
-    damage = m.get("damage")
-    if not isinstance(damage, list) or not damage:
-        out.append("no [[damage]]")
+    damage = m.get("damage", [])
+    if not isinstance(damage, list):
+        out.append("[[damage]] is a list of tables")
         damage = []
+    elif not damage and not m.get("recovery"):
+        out.append("no [[damage]], and no [recovery]: a case damages something or tells the tool something")
     for i, d in enumerate(damage, 1):
         at = f"damage {i}"
         out += [f"{at}: key {k!r} is not in the format" for k in d if k not in DAMAGE_KEYS]
@@ -277,6 +279,8 @@ def lint(path, images):
                 out.append(f"{at}: a target is placed by the oracle, not by a range")
             out += [f"{at}: {e}" for e in check_target(d["target"], image)]
             if pattern not in ("zeros", "random") and not pattern.startswith("flip-bits:"):
+                # `unreadable` too is a range on a member: the map it is
+                # written into is a member's.
                 out.append(f"{at}: a target is overwritten (zeros, random, flip-bits), not {pattern!r}")
         else:
             found, role = check_member_spec(d["member"], image)
@@ -313,6 +317,18 @@ def lint(path, images):
 
     recovery = m.get("recovery", {})
     out += [f"recovery: key {k!r} is not in the format" for k in recovery if k not in RECOVERY_KEYS]
+    if "hints" in recovery and recovery["hints"] != "layout":
+        out.append("recovery.hints is `layout`: the pool's layout as its oracle records it")
+    if recovery.get("order", "as-is") not in ("as-is", "reversed"):
+        out.append("recovery.order is `as-is` or `reversed`")
+    for flag in ("search_order", "roots"):
+        if flag in recovery and not isinstance(recovery[flag], bool):
+            out.append(f"recovery.{flag} is true or false")
+    for needs_hints in ("order", "search_order"):
+        if needs_hints in recovery and "hints" not in recovery:
+            out.append(f"recovery.{needs_hints} needs hints: an order is the layout's")
+    if "key" in recovery and recovery["key"] not in ("wrong", "none"):
+        out.append("recovery.key is `wrong` or `none`")
     for spec in recovery.get("assume_members", []):
         found, _ = check_member_spec(spec, image)
         out += [f"recovery.assume_members: {e}" for e in found]

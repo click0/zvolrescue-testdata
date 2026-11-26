@@ -1,0 +1,12 @@
+id = "metadata-crypto-key-none"
+image = "golden"
+description = "Nothing damaged, and the encrypted volumes asked for with no key at all"
+classes = ["metadata"]
+
+[recovery]
+key = "none"
+
+[expect]
+# Without the key the data stays ciphertext: refused, not written out.
+outcome = "refused"
+volumes = ["golden/secret-raw/disk", "golden/secret-pw/disk"]

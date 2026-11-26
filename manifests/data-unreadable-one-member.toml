@@ -1,0 +1,16 @@
+id = "data-unreadable-one-member"
+image = "golden"
+description = "Every written sector of one raidz2 member unreadable, as an imager reports it: zeros in the image, and the ranges marked bad in its ddrescue map"
+classes = ["data"]
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "data:0%..100%"
+pattern = "unreadable"
+
+[expect]
+# One column of a raidz2 known to be unread is one column missing:
+# within its parity, and the map says which bytes not to trust before
+# any checksum has to.
+outcome = "recovered"
+volumes = "all"

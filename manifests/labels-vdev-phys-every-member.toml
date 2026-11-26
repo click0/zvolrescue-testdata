@@ -1,0 +1,60 @@
+id = "labels-vdev-phys-every-member"
+image = "golden"
+description = "The configuration of all four labels of every member zeroed, the uberblock rings left: no member says what pool it is of, and nothing is told the tool"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[expect]
+# No member names a pool, a vdev or a sibling: there is no pool to
+# assemble, and the tool says it found none.
+outcome = "refused"
+volumes = "all"

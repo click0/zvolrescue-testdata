@@ -1,0 +1,61 @@
+id = "labels-boot-area-every-member"
+image = "golden"
+description = "The reserved boot area of every member (after the front labels, before the first metaslab) overwritten with noise: a negative control, where ZFS reads nothing"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "512KiB..4MiB"
+pattern = "random"
+
+[expect]
+# ZFS keeps the 3.5 MiB after L1 for a boot loader and puts nothing of
+# the pool there. Damage there that changes what a run reads is the
+# tool reading what it has no business reading.
+outcome = "bit-exact"
+volumes = "all"

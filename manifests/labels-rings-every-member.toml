@@ -1,0 +1,61 @@
+id = "labels-rings-every-member"
+image = "golden"
+description = "The uberblock rings of all four labels of every member zeroed: no uberblock is left anywhere, and nothing is told the tool"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[expect]
+# Every way into a pool starts at an uberblock, and none is left: the
+# configuration in the labels says what the pool is, but not where its
+# MOS is. OpenZFS would not import it; the tool refuses it, whole.
+outcome = "refused"
+volumes = "all"

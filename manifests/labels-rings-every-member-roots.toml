@@ -1,0 +1,67 @@
+id = "labels-rings-every-member-roots"
+image = "golden"
+description = "The uberblock rings of every member zeroed, and the pool read at the object-set headers zvolcarve roots finds in raw space"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/rings"
+pattern = "zeros"
+
+[recovery]
+# What an operator does once the rings are gone (SPEC F-64): find the
+# MOS's own header with `zvolcarve roots`, and read at it.
+roots = true
+
+[expect]
+# Nothing but the rings was touched: the MOS of the last transaction
+# group is still on the disks, three copies of it, and every block
+# under it is verified by its pointer. Read at its header the pool is
+# what it was at export.
+outcome = "recovered"
+volumes = "all"

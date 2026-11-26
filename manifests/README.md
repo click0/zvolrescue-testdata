@@ -19,7 +19,7 @@ classes = ["labels"]          # for combination bookkeeping
 [[damage]]
 member = "raidz2-1"           # member name from IMAGE.md
 range = "0..512KiB"           # byte range in the member; sizes in KiB/MiB/GiB
-pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | grow:<bytes> | missing | older-self:<source> | forged-txg:<bump>
+pattern = "zeros"             # zeros | random | flip-bits:<n> | shift:<sectors> | truncate | grow:<bytes> | missing | older-self:<source> | forged-txg:<bump> | unreadable
 
 [expect]
 outcome = "recovered"         # recovered (= bit-exact | reconstructed) | bit-exact | reconstructed | refused (partial accepted too) | a list of these; never "defect"
@@ -59,6 +59,9 @@ negative start counts from the end of the member (`-512KiB..` is the last
 manifest, so reproducible), `flip-bits:<n>` (n single-bit flips spread over
 the range), `shift:<sectors>` (the member's content moved forward, the
 image grows), `truncate` (the range is cut off, the image shrinks),
+`unreadable` (the range zeroed, as an imager leaves what it could not
+read, and marked bad, `-`, in a ddrescue map of the member that the tool
+is given with `--map`: the range is known unread, not merely wrong),
 `grow:<bytes>` (that much of nothing appended; no range: the partition
 re-created larger, the rear labels no longer where the length puts
 them), `missing` (the member is not passed to the tool at all; no
@@ -134,6 +137,27 @@ member that does not hold this pool's data is refused. Use it only for
 classes where the member genuinely cannot identify itself — never to
 help the tool past damage it should be answering on its own.
 
+The rest of what an operator tells the tool, the harness passes on the
+same way, to every run of the case:
+
+```toml
+[recovery]
+hints = "layout"        # the pool's layout as the oracle records it, in --hints (SPEC F-65)
+order = "reversed"      # every raidz and dRAID group of those hints the other way round
+search_order = true     # --search-order: every order tried, the one the checksums accept kept (F-66)
+roots = true            # zvolcarve roots on the damaged members, its headers in --roots (F-64)
+key = "wrong"           # the encrypted volumes asked for with a key not theirs; "none": with none
+```
+
+`order` and `search_order` need `hints`. With `roots` the harness runs
+`zvolcarve roots` over the members of the case first — with the hints
+and maps, where the case has them — and passes its workspace on; a run
+of it that finds nothing is noted, and the case goes on without. A case
+that damages nothing and only tells the tool something (`key`) has no
+`[[damage]]`. All of these but `assume_members` are the extraction's: a
+pool with no volumes is judged by a walker that takes none of them, and
+there such a case is `n/a`.
+
 ## Classes
 
 | Class | Variants |
@@ -208,8 +232,10 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 61 manifests cover every class of SPEC §9.1's catalogue at least
-once against the `image-v1` layout: members `mirror-0a/0b`,
+The 71 manifests cover every class of SPEC §9.1's catalogue at least
+once against the `image-v1` layout (ten of them, those for a pool no
+label or uberblock is left of, the boot area, an imager's map and a
+key, newer than the last run of the matrix): members `mirror-0a/0b`,
 `raidz2-0..3`, `draid1-0..3` (`oracle/layout.json`). Expected outcomes
 are stated from ZFS redundancy, and against the published image every
 one applies and every one lands in its category (the Results table of

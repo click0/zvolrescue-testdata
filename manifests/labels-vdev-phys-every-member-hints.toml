@@ -1,0 +1,64 @@
+id = "labels-vdev-phys-every-member-hints"
+image = "golden"
+description = "The configuration of every label of every member zeroed, and the layout given by hand as an operator who knew the pool would give it"
+classes = ["labels"]
+
+[[damage]]
+member = { leaf = 0, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 0 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 1 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 0, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 1, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 2, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[[damage]]
+member = { leaf = 3, top = 2 }
+range = "label:all/vdev_phys"
+pattern = "zeros"
+
+[recovery]
+# The layout as the oracle records it (SPEC F-65).
+hints = "layout"
+
+[expect]
+# The uberblocks are all there, and so is every block: what was lost
+# is what the labels said of the layout, and the hints say it again.
+outcome = "recovered"
+volumes = "all"
