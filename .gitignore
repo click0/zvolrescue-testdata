@@ -5,3 +5,6 @@
 *.key
 !oracle/*/keys/raw.key
 /tmp/
+# What Python leaves beside a script it imported: compiled, and no
+# part of this repository.
+__pycache__/
