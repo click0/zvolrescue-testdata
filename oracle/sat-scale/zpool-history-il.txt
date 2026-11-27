@@ -1,0 +1,2801 @@
+History for 'sat-scale':
+2026-11-27.17:42:50 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm3lb7s 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set ashift=12 [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set autotrim=0 [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@async_destroy=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@empty_bpobj=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@lz4_compress=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@spacemap_histogram=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@enabled_txg=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@hole_birth=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@extensible_dataset=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@embedded_data=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@filesystem_limits=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@large_blocks=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@large_dnode=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@sha512=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@skein=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@edonr=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@userobj_accounting=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@encryption=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@project_quota=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@device_removal=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@obsolete_counts=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@zpool_checkpoint=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@spacemap_v2=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@allocation_classes=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@resilver_defer=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@bookmark_v2=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@redaction_bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@redacted_datasets=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@bookmark_written=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@log_spacemap=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@livelist=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@device_rebuild=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@zstd_compress=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@draid=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@zilsaxattr=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@head_errlog=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@blake3=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@block_cloning=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@vdev_zaps_v2=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@redaction_list_spill=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@raidz_expansion=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@fast_dedup=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@longname=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@large_microzap=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@dynamic_gang_header=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@block_cloning_endian=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:4] set feature@physical_rewrite=enabled [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:5] set sat-scale (54) snapdev=1 [on runnervm3lb7s]
+2026-11-27.17:42:50 [txg:6] set sat-scale (54) compression=15 [on runnervm3lb7s]
+2026-11-27.17:42:50 zpool create -f -o ashift=12 -o autotrim=off -O compression=lz4 -O snapdev=visible sat-scale mirror /var/tmp/sat/members/mirror-0a.img /var/tmp/sat/members/mirror-0b.img [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c099@s3 (3438)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c000@s3 (3440)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c194@s3 (3442)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c077@s3 (3444)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c170@s3 (3446)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c093@s3 (3448)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c107@s3 (3450)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c148@s3 (3452)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c045@s3 (3454)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c032@s3 (3456)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c135@s3 (3458)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c142@s3 (3460)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c038@s3 (3462)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c035@s3 (3464)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c042@s3 (3466)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c138@s3 (3468)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c048@s3 (3470)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c145@s3 (3472)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c132@s3 (3474)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c070@s3 (3476)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c193@s3 (3478)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c007@s3 (3480)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c199@s3 (3482)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c100@s3 (3484)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c094@s3 (3486)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c177@s3 (3488)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c156@s3 (3490)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c121@s3 (3492)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c026@s3 (3494)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c051@s3 (3496)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c113@s3 (3498)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c087@s3 (3500)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c164@s3 (3502)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c069@s3 (3504)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c119@s3 (3506)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c063@s3 (3508)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c180@s3 (3510)   [on runnervm3lb7s]
+2026-11-27.17:42:56 [txg:426] snapshot sat-scale/fs/c014@s3 (3512)   [on runnervm3lb7s]
+2026-11-27.17:42:56 (142ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s3
+            sat-scale/vm@s3
+            sat-scale/vm/disk-16k@s3
+            sat-scale/vm/disk-8k@s3
+            sat-scale/fs@s3
+            sat-scale/fs/c154@s3
+            sat-scale/fs/c123@s3
+            sat-scale/fs/c059@s3
+            sat-scale/fs/c129@s3
+            sat-scale/fs/c024@s3
+            sat-scale/fs/c053@s3
+            sat-scale/fs/c111@s3
+            sat-scale/fs/c085@s3
+            sat-scale/fs/c166@s3
+            sat-scale/fs/c188@s3
+            sat-scale/fs/c061@s3
+            sat-scale/fs/c182@s3
+            sat-scale/fs/c016@s3
+            sat-scale/fs/c037@s3
+            sat-scale/fs/c040@s3
+            sat-scale/fs/c147@s3
+            sat-scale/fs/c130@s3
+            sat-scale/fs/c072@s3
+            sat-scale/fs/c191@s3
+            sat-scale/fs/c005@s3
+            sat-scale/fs/c108@s3
+            sat-scale/fs/c078@s3
+            sat-scale/fs/c102@s3
+            sat-scale/fs/c096@s3
+            sat-scale/fs/c175@s3
+            sat-scale/fs/c178@s3
+            sat-scale/fs/c002@s3
+            sat-scale/fs/c196@s3
+            sat-scale/fs/c075@s3
+            sat-scale/fs/c172@s3
+            sat-scale/fs/c091@s3
+            sat-scale/fs/c105@s3
+            sat-scale/fs/c008@s3
+            sat-scale/fs/c047@s3
+            sat-scale/fs/c030@s3
+            sat-scale/fs/c137@s3
+            sat-scale/fs/c140@s3
+            sat-scale/fs/c161@s3
+            sat-scale/fs/c082@s3
+            sat-scale/fs/c116@s3
+            sat-scale/fs/c011@s3
+            sat-scale/fs/c185@s3
+            sat-scale/fs/c066@s3
+            sat-scale/fs/c088@s3
+            sat-scale/fs/c029@s3
+            sat-scale/fs/c124@s3
+            sat-scale/fs/c153@s3
+            sat-scale/fs/c054@s3
+            sat-scale/fs/c023@s3
+            sat-scale/fs/c159@s3
+            sat-scale/fs/c050@s3
+            sat-scale/fs/c027@s3
+            sat-scale/fs/c120@s3
+            sat-scale/fs/c157@s3
+            sat-scale/fs/c118@s3
+            sat-scale/fs/c181@s3
+            sat-scale/fs/c015@s3
+            sat-scale/fs/c062@s3
+            sat-scale/fs/c165@s3
+            sat-scale/fs/c112@s3
+            sat-scale/fs/c086@s3
+            sat-scale/fs/c068@s3
+            sat-scale/fs/c049@s3
+            sat-scale/fs/c133@s3
+            sat-scale/fs/c144@s3
+            sat-scale/fs/c043@s3
+            sat-scale/fs/c034@s3
+            sat-scale/fs/c139@s3
+            sat-scale/fs/c198@s3
+            sat-scale/fs/c176@s3
+            sat-scale/fs/c101@s3
+            sat-scale/fs/c095@s3
+            sat-scale/fs/c192@s3
+            sat-scale/fs/c006@s3
+            sat-scale/fs/c071@s3
+            sat-scale/fs/c092@s3
+            sat-scale/fs/c106@s3
+            sat-scale/fs/c171@s3
+            sat-scale/fs/c098@s3
+            sat-scale/fs/c076@s3
+            sat-scale/fs/c001@s3
+            sat-scale/fs/c195@s3
+            sat-scale/fs/c143@s3
+            sat-scale/fs/c134@s3
+            sat-scale/fs/c039@s3
+            sat-scale/fs/c149@s3
+            sat-scale/fs/c033@s3
+            sat-scale/fs/c044@s3
+            sat-scale/fs/c065@s3
+            sat-scale/fs/c012@s3
+            sat-scale/fs/c186@s3
+            sat-scale/fs/c168@s3
+            sat-scale/fs/c018@s3
+            sat-scale/fs/c081@s3
+            sat-scale/fs/c115@s3
+            sat-scale/fs/c162@s3
+            sat-scale/fs/c020@s3
+            sat-scale/fs/c057@s3
+            sat-scale/fs/c150@s3
+            sat-scale/fs/c127@s3
+            sat-scale/fs/c067@s3
+            sat-scale/fs/c010@s3
+            sat-scale/fs/c184@s3
+            sat-scale/fs/c089@s3
+            sat-scale/fs/c083@s3
+            sat-scale/fs/c117@s3
+            sat-scale/fs/c160@s3
+            sat-scale/fs/c022@s3
+            sat-scale/fs/c055@s3
+            sat-scale/fs/c158@s3
+            sat-scale/fs/c028@s3
+            sat-scale/fs/c152@s3
+            sat-scale/fs/c125@s3
+            sat-scale/fs/c090@s3
+            sat-scale/fs/c104@s3
+            sat-scale/fs/c173@s3
+            sat-scale/fs/c009@s3
+            sat-scale/fs/c179@s3
+            sat-scale/fs/c074@s3
+            sat-scale/fs/c003@s3
+            sat-scale/fs/c197@s3
+            sat-scale/fs/c141@s3
+            sat-scale/fs/c136@s3
+            sat-scale/fs/c031@s3
+            sat-scale/fs/c046@s3
+            sat-scale/fs/c131@s3
+            sat-scale/fs/c146@s3
+            sat-scale/fs/c041@s3
+            sat-scale/fs/c036@s3
+            sat-scale/fs/c079@s3
+            sat-scale/fs/c174@s3
+            sat-scale/fs/c103@s3
+            sat-scale/fs/c097@s3
+            sat-scale/fs/c190@s3
+            sat-scale/fs/c004@s3
+            sat-scale/fs/c073@s3
+            sat-scale/fs/c109@s3
+            sat-scale/fs/c128@s3
+            sat-scale/fs/c052@s3
+            sat-scale/fs/c025@s3
+            sat-scale/fs/c122@s3
+            sat-scale/fs/c155@s3
+            sat-scale/fs/c058@s3
+            sat-scale/fs/c183@s3
+            sat-scale/fs/c017@s3
+            sat-scale/fs/c060@s3
+            sat-scale/fs/c167@s3
+            sat-scale/fs/c110@s3
+            sat-scale/fs/c084@s3
+            sat-scale/fs/c189@s3
+            sat-scale/fs/c019@s3
+            sat-scale/fs/c163@s3
+            sat-scale/fs/c080@s3
+            sat-scale/fs/c114@s3
+            sat-scale/fs/c013@s3
+            sat-scale/fs/c187@s3
+            sat-scale/fs/c064@s3
+            sat-scale/fs/c169@s3
+            sat-scale/fs/c126@s3
+            sat-scale/fs/c151@s3
+            sat-scale/fs/c056@s3
+            sat-scale/fs/c021@s3
+            sat-scale/fs/c099@s3
+            sat-scale/fs/c000@s3
+            sat-scale/fs/c194@s3
+            sat-scale/fs/c077@s3
+            sat-scale/fs/c170@s3
+            sat-scale/fs/c093@s3
+            sat-scale/fs/c107@s3
+            sat-scale/fs/c148@s3
+            sat-scale/fs/c045@s3
+            sat-scale/fs/c032@s3
+            sat-scale/fs/c135@s3
+            sat-scale/fs/c142@s3
+            sat-scale/fs/c038@s3
+            sat-scale/fs/c035@s3
+            sat-scale/fs/c042@s3
+            sat-scale/fs/c138@s3
+            sat-scale/fs/c048@s3
+            sat-scale/fs/c145@s3
+            sat-scale/fs/c132@s3
+            sat-scale/fs/c070@s3
+            sat-scale/fs/c193@s3
+            sat-scale/fs/c007@s3
+            sat-scale/fs/c199@s3
+            sat-scale/fs/c100@s3
+            sat-scale/fs/c094@s3
+            sat-scale/fs/c177@s3
+            sat-scale/fs/c156@s3
+            sat-scale/fs/c121@s3
+            sat-scale/fs/c026@s3
+            sat-scale/fs/c051@s3
+            sat-scale/fs/c113@s3
+            sat-scale/fs/c087@s3
+            sat-scale/fs/c164@s3
+            sat-scale/fs/c069@s3
+            sat-scale/fs/c119@s3
+            sat-scale/fs/c063@s3
+            sat-scale/fs/c180@s3
+            sat-scale/fs/c014@s3
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:56 zfs snapshot -r sat-scale@s3 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale@s4 (3110)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/vm@s4 (3112)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/vm/disk-16k@s4 (3114)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/vm/disk-8k@s4 (3116)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs@s4 (3118)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c154@s4 (3120)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c123@s4 (3122)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c059@s4 (3124)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c129@s4 (3126)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c024@s4 (3128)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c053@s4 (3130)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c111@s4 (3132)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c085@s4 (3134)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c166@s4 (3136)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c188@s4 (3138)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c061@s4 (3140)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c182@s4 (3142)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c016@s4 (3144)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c037@s4 (3146)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c040@s4 (3148)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c147@s4 (3150)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c130@s4 (3152)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c072@s4 (3154)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c191@s4 (3156)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c005@s4 (3158)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c108@s4 (3160)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c078@s4 (3162)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c102@s4 (3164)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c096@s4 (3166)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c175@s4 (3168)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c178@s4 (3170)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c002@s4 (3172)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c196@s4 (3174)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c075@s4 (3176)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c172@s4 (3178)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c091@s4 (3180)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c105@s4 (3182)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c008@s4 (3184)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c047@s4 (3186)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c030@s4 (3188)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c137@s4 (3190)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c140@s4 (3192)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c161@s4 (3194)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c082@s4 (3196)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c116@s4 (3198)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c011@s4 (3584)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c185@s4 (3586)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c066@s4 (3588)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c088@s4 (3590)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c029@s4 (3592)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c124@s4 (3594)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c153@s4 (3596)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c054@s4 (3598)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c023@s4 (3600)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c159@s4 (3602)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c050@s4 (3604)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c027@s4 (3606)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c120@s4 (3608)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c157@s4 (3610)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c118@s4 (3612)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c181@s4 (3614)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c015@s4 (3616)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c062@s4 (3618)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c165@s4 (3620)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c112@s4 (3622)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c086@s4 (3624)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c068@s4 (3626)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c049@s4 (3628)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c133@s4 (3630)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c144@s4 (3632)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c043@s4 (3634)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c034@s4 (3636)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c139@s4 (3638)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c198@s4 (3640)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c176@s4 (3642)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c101@s4 (3644)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c095@s4 (3646)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c192@s4 (3648)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c006@s4 (3650)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c071@s4 (3652)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c092@s4 (3654)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c106@s4 (3656)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c171@s4 (3658)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c098@s4 (3660)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c076@s4 (3662)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c001@s4 (3664)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c195@s4 (3666)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c143@s4 (3668)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c134@s4 (3670)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c039@s4 (3672)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c149@s4 (3674)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c033@s4 (3676)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c044@s4 (3678)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c065@s4 (3680)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c012@s4 (3682)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c186@s4 (3684)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c168@s4 (3686)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c018@s4 (3688)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c081@s4 (3690)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c115@s4 (3692)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c162@s4 (3694)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c020@s4 (3696)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c057@s4 (3698)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c150@s4 (3700)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c127@s4 (3702)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c067@s4 (3704)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c010@s4 (3706)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c184@s4 (3708)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c089@s4 (3710)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c083@s4 (3712)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c117@s4 (3714)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c160@s4 (3716)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c022@s4 (3718)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c055@s4 (3720)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c158@s4 (3722)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c028@s4 (3724)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c152@s4 (3726)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c125@s4 (3728)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c090@s4 (3730)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c104@s4 (3732)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c173@s4 (3734)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c009@s4 (3736)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c179@s4 (3738)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c074@s4 (3740)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c003@s4 (2508)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c197@s4 (2510)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c141@s4 (2512)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c136@s4 (2514)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c031@s4 (2516)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c046@s4 (2518)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c131@s4 (2520)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c146@s4 (2522)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c041@s4 (2524)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c036@s4 (2526)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c079@s4 (2528)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c174@s4 (2530)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c103@s4 (2532)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c097@s4 (2534)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c190@s4 (2536)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c004@s4 (2538)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c073@s4 (2540)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c109@s4 (2542)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c128@s4 (2544)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c052@s4 (2546)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c025@s4 (2548)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c122@s4 (2550)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c155@s4 (2552)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c058@s4 (2554)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c183@s4 (2556)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c017@s4 (2558)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c060@s4 (3840)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c167@s4 (3842)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c110@s4 (3844)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c084@s4 (3846)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c189@s4 (3848)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c019@s4 (3850)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c163@s4 (3852)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c080@s4 (3854)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c114@s4 (3856)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c013@s4 (3858)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c187@s4 (3860)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c064@s4 (3862)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c169@s4 (3864)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c126@s4 (3866)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c151@s4 (3868)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c056@s4 (3870)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c021@s4 (3872)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c099@s4 (3874)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c000@s4 (3876)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c194@s4 (3878)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c077@s4 (3880)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c170@s4 (3882)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c093@s4 (3884)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c107@s4 (3886)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c148@s4 (3888)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c045@s4 (3890)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c032@s4 (3892)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c135@s4 (3894)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c142@s4 (3896)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c038@s4 (3898)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c035@s4 (3900)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c042@s4 (3902)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c138@s4 (3904)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c048@s4 (3906)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c145@s4 (3908)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c132@s4 (3910)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c070@s4 (3912)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c193@s4 (3914)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c007@s4 (3916)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c199@s4 (3918)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c100@s4 (3920)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c094@s4 (3922)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c177@s4 (3924)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c156@s4 (3926)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c121@s4 (3928)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c026@s4 (3930)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c051@s4 (3932)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c113@s4 (3934)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c087@s4 (3936)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c164@s4 (3938)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c069@s4 (3940)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c119@s4 (3942)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c063@s4 (3944)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c180@s4 (3946)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:478] snapshot sat-scale/fs/c014@s4 (3948)   [on runnervm3lb7s]
+2026-11-27.17:42:57 (148ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s4
+            sat-scale/vm@s4
+            sat-scale/vm/disk-16k@s4
+            sat-scale/vm/disk-8k@s4
+            sat-scale/fs@s4
+            sat-scale/fs/c154@s4
+            sat-scale/fs/c123@s4
+            sat-scale/fs/c059@s4
+            sat-scale/fs/c129@s4
+            sat-scale/fs/c024@s4
+            sat-scale/fs/c053@s4
+            sat-scale/fs/c111@s4
+            sat-scale/fs/c085@s4
+            sat-scale/fs/c166@s4
+            sat-scale/fs/c188@s4
+            sat-scale/fs/c061@s4
+            sat-scale/fs/c182@s4
+            sat-scale/fs/c016@s4
+            sat-scale/fs/c037@s4
+            sat-scale/fs/c040@s4
+            sat-scale/fs/c147@s4
+            sat-scale/fs/c130@s4
+            sat-scale/fs/c072@s4
+            sat-scale/fs/c191@s4
+            sat-scale/fs/c005@s4
+            sat-scale/fs/c108@s4
+            sat-scale/fs/c078@s4
+            sat-scale/fs/c102@s4
+            sat-scale/fs/c096@s4
+            sat-scale/fs/c175@s4
+            sat-scale/fs/c178@s4
+            sat-scale/fs/c002@s4
+            sat-scale/fs/c196@s4
+            sat-scale/fs/c075@s4
+            sat-scale/fs/c172@s4
+            sat-scale/fs/c091@s4
+            sat-scale/fs/c105@s4
+            sat-scale/fs/c008@s4
+            sat-scale/fs/c047@s4
+            sat-scale/fs/c030@s4
+            sat-scale/fs/c137@s4
+            sat-scale/fs/c140@s4
+            sat-scale/fs/c161@s4
+            sat-scale/fs/c082@s4
+            sat-scale/fs/c116@s4
+            sat-scale/fs/c011@s4
+            sat-scale/fs/c185@s4
+            sat-scale/fs/c066@s4
+            sat-scale/fs/c088@s4
+            sat-scale/fs/c029@s4
+            sat-scale/fs/c124@s4
+            sat-scale/fs/c153@s4
+            sat-scale/fs/c054@s4
+            sat-scale/fs/c023@s4
+            sat-scale/fs/c159@s4
+            sat-scale/fs/c050@s4
+            sat-scale/fs/c027@s4
+            sat-scale/fs/c120@s4
+            sat-scale/fs/c157@s4
+            sat-scale/fs/c118@s4
+            sat-scale/fs/c181@s4
+            sat-scale/fs/c015@s4
+            sat-scale/fs/c062@s4
+            sat-scale/fs/c165@s4
+            sat-scale/fs/c112@s4
+            sat-scale/fs/c086@s4
+            sat-scale/fs/c068@s4
+            sat-scale/fs/c049@s4
+            sat-scale/fs/c133@s4
+            sat-scale/fs/c144@s4
+            sat-scale/fs/c043@s4
+            sat-scale/fs/c034@s4
+            sat-scale/fs/c139@s4
+            sat-scale/fs/c198@s4
+            sat-scale/fs/c176@s4
+            sat-scale/fs/c101@s4
+            sat-scale/fs/c095@s4
+            sat-scale/fs/c192@s4
+            sat-scale/fs/c006@s4
+            sat-scale/fs/c071@s4
+            sat-scale/fs/c092@s4
+            sat-scale/fs/c106@s4
+            sat-scale/fs/c171@s4
+            sat-scale/fs/c098@s4
+            sat-scale/fs/c076@s4
+            sat-scale/fs/c001@s4
+            sat-scale/fs/c195@s4
+            sat-scale/fs/c143@s4
+            sat-scale/fs/c134@s4
+            sat-scale/fs/c039@s4
+            sat-scale/fs/c149@s4
+            sat-scale/fs/c033@s4
+            sat-scale/fs/c044@s4
+            sat-scale/fs/c065@s4
+            sat-scale/fs/c012@s4
+            sat-scale/fs/c186@s4
+            sat-scale/fs/c168@s4
+            sat-scale/fs/c018@s4
+            sat-scale/fs/c081@s4
+            sat-scale/fs/c115@s4
+            sat-scale/fs/c162@s4
+            sat-scale/fs/c020@s4
+            sat-scale/fs/c057@s4
+            sat-scale/fs/c150@s4
+            sat-scale/fs/c127@s4
+            sat-scale/fs/c067@s4
+            sat-scale/fs/c010@s4
+            sat-scale/fs/c184@s4
+            sat-scale/fs/c089@s4
+            sat-scale/fs/c083@s4
+            sat-scale/fs/c117@s4
+            sat-scale/fs/c160@s4
+            sat-scale/fs/c022@s4
+            sat-scale/fs/c055@s4
+            sat-scale/fs/c158@s4
+            sat-scale/fs/c028@s4
+            sat-scale/fs/c152@s4
+            sat-scale/fs/c125@s4
+            sat-scale/fs/c090@s4
+            sat-scale/fs/c104@s4
+            sat-scale/fs/c173@s4
+            sat-scale/fs/c009@s4
+            sat-scale/fs/c179@s4
+            sat-scale/fs/c074@s4
+            sat-scale/fs/c003@s4
+            sat-scale/fs/c197@s4
+            sat-scale/fs/c141@s4
+            sat-scale/fs/c136@s4
+            sat-scale/fs/c031@s4
+            sat-scale/fs/c046@s4
+            sat-scale/fs/c131@s4
+            sat-scale/fs/c146@s4
+            sat-scale/fs/c041@s4
+            sat-scale/fs/c036@s4
+            sat-scale/fs/c079@s4
+            sat-scale/fs/c174@s4
+            sat-scale/fs/c103@s4
+            sat-scale/fs/c097@s4
+            sat-scale/fs/c190@s4
+            sat-scale/fs/c004@s4
+            sat-scale/fs/c073@s4
+            sat-scale/fs/c109@s4
+            sat-scale/fs/c128@s4
+            sat-scale/fs/c052@s4
+            sat-scale/fs/c025@s4
+            sat-scale/fs/c122@s4
+            sat-scale/fs/c155@s4
+            sat-scale/fs/c058@s4
+            sat-scale/fs/c183@s4
+            sat-scale/fs/c017@s4
+            sat-scale/fs/c060@s4
+            sat-scale/fs/c167@s4
+            sat-scale/fs/c110@s4
+            sat-scale/fs/c084@s4
+            sat-scale/fs/c189@s4
+            sat-scale/fs/c019@s4
+            sat-scale/fs/c163@s4
+            sat-scale/fs/c080@s4
+            sat-scale/fs/c114@s4
+            sat-scale/fs/c013@s4
+            sat-scale/fs/c187@s4
+            sat-scale/fs/c064@s4
+            sat-scale/fs/c169@s4
+            sat-scale/fs/c126@s4
+            sat-scale/fs/c151@s4
+            sat-scale/fs/c056@s4
+            sat-scale/fs/c021@s4
+            sat-scale/fs/c099@s4
+            sat-scale/fs/c000@s4
+            sat-scale/fs/c194@s4
+            sat-scale/fs/c077@s4
+            sat-scale/fs/c170@s4
+            sat-scale/fs/c093@s4
+            sat-scale/fs/c107@s4
+            sat-scale/fs/c148@s4
+            sat-scale/fs/c045@s4
+            sat-scale/fs/c032@s4
+            sat-scale/fs/c135@s4
+            sat-scale/fs/c142@s4
+            sat-scale/fs/c038@s4
+            sat-scale/fs/c035@s4
+            sat-scale/fs/c042@s4
+            sat-scale/fs/c138@s4
+            sat-scale/fs/c048@s4
+            sat-scale/fs/c145@s4
+            sat-scale/fs/c132@s4
+            sat-scale/fs/c070@s4
+            sat-scale/fs/c193@s4
+            sat-scale/fs/c007@s4
+            sat-scale/fs/c199@s4
+            sat-scale/fs/c100@s4
+            sat-scale/fs/c094@s4
+            sat-scale/fs/c177@s4
+            sat-scale/fs/c156@s4
+            sat-scale/fs/c121@s4
+            sat-scale/fs/c026@s4
+            sat-scale/fs/c051@s4
+            sat-scale/fs/c113@s4
+            sat-scale/fs/c087@s4
+            sat-scale/fs/c164@s4
+            sat-scale/fs/c069@s4
+            sat-scale/fs/c119@s4
+            sat-scale/fs/c063@s4
+            sat-scale/fs/c180@s4
+            sat-scale/fs/c014@s4
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:57 zfs snapshot -r sat-scale@s4 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale@s5 (3746)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/vm@s5 (3748)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/vm/disk-16k@s5 (3750)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/vm/disk-8k@s5 (3752)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs@s5 (3754)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c154@s5 (3756)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c123@s5 (3758)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c059@s5 (3760)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c129@s5 (3762)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c024@s5 (3764)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c053@s5 (3766)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c111@s5 (3768)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c085@s5 (3770)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c166@s5 (3772)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c188@s5 (3774)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c061@s5 (3776)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c182@s5 (3778)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c016@s5 (3780)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c037@s5 (3782)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c040@s5 (3784)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c147@s5 (3786)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c130@s5 (3788)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c072@s5 (3790)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c191@s5 (3792)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c005@s5 (3794)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c108@s5 (3796)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c078@s5 (3798)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c102@s5 (3800)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c096@s5 (3802)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c175@s5 (3804)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c178@s5 (3806)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c002@s5 (3808)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c196@s5 (3810)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c075@s5 (3812)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c172@s5 (3814)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c091@s5 (3816)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c105@s5 (3818)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c008@s5 (3820)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c047@s5 (3822)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c030@s5 (3824)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c137@s5 (3826)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c140@s5 (3828)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c161@s5 (3830)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c082@s5 (3832)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c116@s5 (3834)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c011@s5 (3836)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c185@s5 (3838)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c066@s5 (3968)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c088@s5 (3970)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c029@s5 (3972)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c124@s5 (3974)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c153@s5 (3976)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c054@s5 (3978)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c023@s5 (3980)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c159@s5 (3982)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c050@s5 (3984)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c027@s5 (3986)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c120@s5 (3988)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c157@s5 (3990)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c118@s5 (3992)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c181@s5 (3994)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c015@s5 (3996)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c062@s5 (3998)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c165@s5 (4000)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c112@s5 (4002)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c086@s5 (4004)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c068@s5 (4006)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c049@s5 (4008)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c133@s5 (4010)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c144@s5 (4012)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c043@s5 (4014)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c034@s5 (4016)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c139@s5 (4018)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c198@s5 (4020)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c176@s5 (4022)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c101@s5 (4024)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c095@s5 (4026)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c192@s5 (4028)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c006@s5 (4030)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c071@s5 (4032)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c092@s5 (4034)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c106@s5 (4036)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c171@s5 (4038)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c098@s5 (4040)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c076@s5 (4042)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c001@s5 (4044)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c195@s5 (4046)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c143@s5 (4048)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c134@s5 (4050)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c039@s5 (4052)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c149@s5 (4054)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c033@s5 (4056)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c044@s5 (4058)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c065@s5 (4060)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c012@s5 (4062)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c186@s5 (4064)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c168@s5 (4066)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c018@s5 (4068)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c081@s5 (4070)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c115@s5 (4072)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c162@s5 (4074)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c020@s5 (4076)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c057@s5 (4078)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c150@s5 (4080)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c127@s5 (4082)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c067@s5 (4084)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c010@s5 (4086)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c184@s5 (4088)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c089@s5 (4090)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c083@s5 (4092)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c117@s5 (4094)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c160@s5 (4096)   [on runnervm3lb7s]
+2026-11-27.17:42:57 [txg:530] snapshot sat-scale/fs/c022@s5 (4098)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c055@s5 (4100)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c158@s5 (4102)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c028@s5 (4104)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c152@s5 (4106)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c125@s5 (4108)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c090@s5 (4110)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c104@s5 (4112)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c173@s5 (4114)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c009@s5 (4116)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c179@s5 (4118)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c074@s5 (4120)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c003@s5 (4122)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c197@s5 (4124)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c141@s5 (4126)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c136@s5 (4128)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c031@s5 (4130)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c046@s5 (4132)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c131@s5 (4134)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c146@s5 (4136)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c041@s5 (4138)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c036@s5 (4140)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c079@s5 (4142)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c174@s5 (4144)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c103@s5 (4146)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c097@s5 (4148)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c190@s5 (4150)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c004@s5 (4152)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c073@s5 (4154)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c109@s5 (4156)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c128@s5 (4158)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c052@s5 (4160)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c025@s5 (4162)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c122@s5 (4164)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c155@s5 (4166)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c058@s5 (4168)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c183@s5 (4170)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c017@s5 (4172)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c060@s5 (4174)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c167@s5 (4176)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c110@s5 (4178)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c084@s5 (4180)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c189@s5 (4182)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c019@s5 (4184)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c163@s5 (4186)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c080@s5 (4188)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c114@s5 (4190)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c013@s5 (4192)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c187@s5 (4194)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c064@s5 (4196)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c169@s5 (4198)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c126@s5 (4200)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c151@s5 (4202)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c056@s5 (4204)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c021@s5 (4206)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c099@s5 (4208)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c000@s5 (4210)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c194@s5 (4212)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c077@s5 (4214)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c170@s5 (4216)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c093@s5 (4218)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c107@s5 (4220)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c148@s5 (4222)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c045@s5 (4224)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c032@s5 (4226)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c135@s5 (4228)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c142@s5 (4230)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c038@s5 (4232)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c035@s5 (4234)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c042@s5 (4236)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c138@s5 (4238)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c048@s5 (4240)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c145@s5 (4242)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c132@s5 (4244)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c070@s5 (4246)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c193@s5 (4248)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c007@s5 (4250)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c199@s5 (4252)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c100@s5 (4254)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c094@s5 (4256)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c177@s5 (4258)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c156@s5 (4260)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c121@s5 (4262)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c026@s5 (4264)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c051@s5 (4266)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c113@s5 (4268)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c087@s5 (4270)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c164@s5 (4272)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c069@s5 (4274)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c119@s5 (4276)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c063@s5 (4278)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c180@s5 (4280)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:530] snapshot sat-scale/fs/c014@s5 (4282)   [on runnervm3lb7s]
+2026-11-27.17:42:58 (168ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s5
+            sat-scale/vm@s5
+            sat-scale/vm/disk-16k@s5
+            sat-scale/vm/disk-8k@s5
+            sat-scale/fs@s5
+            sat-scale/fs/c154@s5
+            sat-scale/fs/c123@s5
+            sat-scale/fs/c059@s5
+            sat-scale/fs/c129@s5
+            sat-scale/fs/c024@s5
+            sat-scale/fs/c053@s5
+            sat-scale/fs/c111@s5
+            sat-scale/fs/c085@s5
+            sat-scale/fs/c166@s5
+            sat-scale/fs/c188@s5
+            sat-scale/fs/c061@s5
+            sat-scale/fs/c182@s5
+            sat-scale/fs/c016@s5
+            sat-scale/fs/c037@s5
+            sat-scale/fs/c040@s5
+            sat-scale/fs/c147@s5
+            sat-scale/fs/c130@s5
+            sat-scale/fs/c072@s5
+            sat-scale/fs/c191@s5
+            sat-scale/fs/c005@s5
+            sat-scale/fs/c108@s5
+            sat-scale/fs/c078@s5
+            sat-scale/fs/c102@s5
+            sat-scale/fs/c096@s5
+            sat-scale/fs/c175@s5
+            sat-scale/fs/c178@s5
+            sat-scale/fs/c002@s5
+            sat-scale/fs/c196@s5
+            sat-scale/fs/c075@s5
+            sat-scale/fs/c172@s5
+            sat-scale/fs/c091@s5
+            sat-scale/fs/c105@s5
+            sat-scale/fs/c008@s5
+            sat-scale/fs/c047@s5
+            sat-scale/fs/c030@s5
+            sat-scale/fs/c137@s5
+            sat-scale/fs/c140@s5
+            sat-scale/fs/c161@s5
+            sat-scale/fs/c082@s5
+            sat-scale/fs/c116@s5
+            sat-scale/fs/c011@s5
+            sat-scale/fs/c185@s5
+            sat-scale/fs/c066@s5
+            sat-scale/fs/c088@s5
+            sat-scale/fs/c029@s5
+            sat-scale/fs/c124@s5
+            sat-scale/fs/c153@s5
+            sat-scale/fs/c054@s5
+            sat-scale/fs/c023@s5
+            sat-scale/fs/c159@s5
+            sat-scale/fs/c050@s5
+            sat-scale/fs/c027@s5
+            sat-scale/fs/c120@s5
+            sat-scale/fs/c157@s5
+            sat-scale/fs/c118@s5
+            sat-scale/fs/c181@s5
+            sat-scale/fs/c015@s5
+            sat-scale/fs/c062@s5
+            sat-scale/fs/c165@s5
+            sat-scale/fs/c112@s5
+            sat-scale/fs/c086@s5
+            sat-scale/fs/c068@s5
+            sat-scale/fs/c049@s5
+            sat-scale/fs/c133@s5
+            sat-scale/fs/c144@s5
+            sat-scale/fs/c043@s5
+            sat-scale/fs/c034@s5
+            sat-scale/fs/c139@s5
+            sat-scale/fs/c198@s5
+            sat-scale/fs/c176@s5
+            sat-scale/fs/c101@s5
+            sat-scale/fs/c095@s5
+            sat-scale/fs/c192@s5
+            sat-scale/fs/c006@s5
+            sat-scale/fs/c071@s5
+            sat-scale/fs/c092@s5
+            sat-scale/fs/c106@s5
+            sat-scale/fs/c171@s5
+            sat-scale/fs/c098@s5
+            sat-scale/fs/c076@s5
+            sat-scale/fs/c001@s5
+            sat-scale/fs/c195@s5
+            sat-scale/fs/c143@s5
+            sat-scale/fs/c134@s5
+            sat-scale/fs/c039@s5
+            sat-scale/fs/c149@s5
+            sat-scale/fs/c033@s5
+            sat-scale/fs/c044@s5
+            sat-scale/fs/c065@s5
+            sat-scale/fs/c012@s5
+            sat-scale/fs/c186@s5
+            sat-scale/fs/c168@s5
+            sat-scale/fs/c018@s5
+            sat-scale/fs/c081@s5
+            sat-scale/fs/c115@s5
+            sat-scale/fs/c162@s5
+            sat-scale/fs/c020@s5
+            sat-scale/fs/c057@s5
+            sat-scale/fs/c150@s5
+            sat-scale/fs/c127@s5
+            sat-scale/fs/c067@s5
+            sat-scale/fs/c010@s5
+            sat-scale/fs/c184@s5
+            sat-scale/fs/c089@s5
+            sat-scale/fs/c083@s5
+            sat-scale/fs/c117@s5
+            sat-scale/fs/c160@s5
+            sat-scale/fs/c022@s5
+            sat-scale/fs/c055@s5
+            sat-scale/fs/c158@s5
+            sat-scale/fs/c028@s5
+            sat-scale/fs/c152@s5
+            sat-scale/fs/c125@s5
+            sat-scale/fs/c090@s5
+            sat-scale/fs/c104@s5
+            sat-scale/fs/c173@s5
+            sat-scale/fs/c009@s5
+            sat-scale/fs/c179@s5
+            sat-scale/fs/c074@s5
+            sat-scale/fs/c003@s5
+            sat-scale/fs/c197@s5
+            sat-scale/fs/c141@s5
+            sat-scale/fs/c136@s5
+            sat-scale/fs/c031@s5
+            sat-scale/fs/c046@s5
+            sat-scale/fs/c131@s5
+            sat-scale/fs/c146@s5
+            sat-scale/fs/c041@s5
+            sat-scale/fs/c036@s5
+            sat-scale/fs/c079@s5
+            sat-scale/fs/c174@s5
+            sat-scale/fs/c103@s5
+            sat-scale/fs/c097@s5
+            sat-scale/fs/c190@s5
+            sat-scale/fs/c004@s5
+            sat-scale/fs/c073@s5
+            sat-scale/fs/c109@s5
+            sat-scale/fs/c128@s5
+            sat-scale/fs/c052@s5
+            sat-scale/fs/c025@s5
+            sat-scale/fs/c122@s5
+            sat-scale/fs/c155@s5
+            sat-scale/fs/c058@s5
+            sat-scale/fs/c183@s5
+            sat-scale/fs/c017@s5
+            sat-scale/fs/c060@s5
+            sat-scale/fs/c167@s5
+            sat-scale/fs/c110@s5
+            sat-scale/fs/c084@s5
+            sat-scale/fs/c189@s5
+            sat-scale/fs/c019@s5
+            sat-scale/fs/c163@s5
+            sat-scale/fs/c080@s5
+            sat-scale/fs/c114@s5
+            sat-scale/fs/c013@s5
+            sat-scale/fs/c187@s5
+            sat-scale/fs/c064@s5
+            sat-scale/fs/c169@s5
+            sat-scale/fs/c126@s5
+            sat-scale/fs/c151@s5
+            sat-scale/fs/c056@s5
+            sat-scale/fs/c021@s5
+            sat-scale/fs/c099@s5
+            sat-scale/fs/c000@s5
+            sat-scale/fs/c194@s5
+            sat-scale/fs/c077@s5
+            sat-scale/fs/c170@s5
+            sat-scale/fs/c093@s5
+            sat-scale/fs/c107@s5
+            sat-scale/fs/c148@s5
+            sat-scale/fs/c045@s5
+            sat-scale/fs/c032@s5
+            sat-scale/fs/c135@s5
+            sat-scale/fs/c142@s5
+            sat-scale/fs/c038@s5
+            sat-scale/fs/c035@s5
+            sat-scale/fs/c042@s5
+            sat-scale/fs/c138@s5
+            sat-scale/fs/c048@s5
+            sat-scale/fs/c145@s5
+            sat-scale/fs/c132@s5
+            sat-scale/fs/c070@s5
+            sat-scale/fs/c193@s5
+            sat-scale/fs/c007@s5
+            sat-scale/fs/c199@s5
+            sat-scale/fs/c100@s5
+            sat-scale/fs/c094@s5
+            sat-scale/fs/c177@s5
+            sat-scale/fs/c156@s5
+            sat-scale/fs/c121@s5
+            sat-scale/fs/c026@s5
+            sat-scale/fs/c051@s5
+            sat-scale/fs/c113@s5
+            sat-scale/fs/c087@s5
+            sat-scale/fs/c164@s5
+            sat-scale/fs/c069@s5
+            sat-scale/fs/c119@s5
+            sat-scale/fs/c063@s5
+            sat-scale/fs/c180@s5
+            sat-scale/fs/c014@s5
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:58 zfs snapshot -r sat-scale@s5 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale@s6 (3531)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/vm@s6 (3533)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/vm/disk-16k@s6 (3535)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/vm/disk-8k@s6 (3537)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs@s6 (3539)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c154@s6 (3541)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c123@s6 (3543)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c059@s6 (3545)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c129@s6 (3547)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c024@s6 (3549)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c053@s6 (3551)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c111@s6 (3553)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c085@s6 (3555)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c166@s6 (3557)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c188@s6 (3559)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c061@s6 (3561)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c182@s6 (3563)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c016@s6 (3565)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c037@s6 (3567)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c040@s6 (3569)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c147@s6 (3571)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c130@s6 (3573)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c072@s6 (3575)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c191@s6 (3577)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c005@s6 (3579)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c108@s6 (3581)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c078@s6 (3583)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c102@s6 (4481)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c096@s6 (4483)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c175@s6 (4485)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c178@s6 (4487)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c002@s6 (4489)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c196@s6 (4491)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c075@s6 (4493)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c172@s6 (4495)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c091@s6 (4497)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c105@s6 (4499)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c008@s6 (4501)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c047@s6 (4503)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c030@s6 (4505)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c137@s6 (4507)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c140@s6 (4509)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c161@s6 (4511)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c082@s6 (4513)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c116@s6 (4515)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c011@s6 (4517)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c185@s6 (4519)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c066@s6 (4521)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c088@s6 (4523)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c029@s6 (4525)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c124@s6 (4527)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c153@s6 (4529)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c054@s6 (4531)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c023@s6 (4533)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c159@s6 (4535)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c050@s6 (4537)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c027@s6 (4539)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c120@s6 (4541)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c157@s6 (4543)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c118@s6 (4545)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c181@s6 (4547)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c015@s6 (4549)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c062@s6 (4551)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c165@s6 (4553)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c112@s6 (4555)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c086@s6 (4557)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c068@s6 (4559)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c049@s6 (4561)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c133@s6 (4563)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c144@s6 (4565)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c043@s6 (4567)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c034@s6 (4569)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c139@s6 (4571)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c198@s6 (4573)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c176@s6 (4575)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c101@s6 (4577)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c095@s6 (4579)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c192@s6 (4581)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c006@s6 (4583)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c071@s6 (4585)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c092@s6 (4587)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c106@s6 (4589)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c171@s6 (4591)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c098@s6 (4593)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c076@s6 (4595)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c001@s6 (4597)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c195@s6 (4599)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c143@s6 (4601)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c134@s6 (4603)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c039@s6 (4605)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c149@s6 (4607)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c033@s6 (4609)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c044@s6 (4611)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c065@s6 (4613)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c012@s6 (4615)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c186@s6 (4617)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c168@s6 (4619)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c018@s6 (4621)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c081@s6 (4623)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c115@s6 (4625)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c162@s6 (4627)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c020@s6 (4629)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c057@s6 (4631)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c150@s6 (4633)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c127@s6 (4635)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c067@s6 (4637)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c010@s6 (4639)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c184@s6 (4641)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c089@s6 (4643)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c083@s6 (4645)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c117@s6 (4647)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c160@s6 (4649)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c022@s6 (4651)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c055@s6 (4653)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c158@s6 (4655)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c028@s6 (4657)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c152@s6 (4659)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c125@s6 (4661)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c090@s6 (4663)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c104@s6 (4665)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c173@s6 (4667)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c009@s6 (4669)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c179@s6 (4671)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c074@s6 (4673)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c003@s6 (4675)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c197@s6 (4677)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c141@s6 (4679)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c136@s6 (4681)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c031@s6 (4683)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c046@s6 (4685)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c131@s6 (4687)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c146@s6 (4689)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c041@s6 (4691)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c036@s6 (4693)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c079@s6 (4695)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c174@s6 (4697)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c103@s6 (4699)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c097@s6 (4701)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c190@s6 (4703)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c004@s6 (4705)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c073@s6 (4707)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c109@s6 (4709)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c128@s6 (4711)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c052@s6 (4713)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c025@s6 (4715)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c122@s6 (4717)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c155@s6 (4719)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c058@s6 (4721)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c183@s6 (4723)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c017@s6 (4725)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c060@s6 (4727)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c167@s6 (4729)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c110@s6 (4731)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c084@s6 (4733)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c189@s6 (4735)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c019@s6 (4737)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c163@s6 (4739)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c080@s6 (4741)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c114@s6 (4743)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c013@s6 (4745)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c187@s6 (4747)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c064@s6 (4749)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c169@s6 (4751)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c126@s6 (4753)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c151@s6 (4755)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c056@s6 (4757)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c021@s6 (4759)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c099@s6 (4761)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c000@s6 (4763)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c194@s6 (4765)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c077@s6 (4767)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c170@s6 (4769)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c093@s6 (4771)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c107@s6 (4773)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c148@s6 (4775)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c045@s6 (4777)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c032@s6 (4779)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c135@s6 (4781)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c142@s6 (4783)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c038@s6 (4785)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c035@s6 (4787)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c042@s6 (4789)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c138@s6 (4791)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c048@s6 (4793)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c145@s6 (4795)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c132@s6 (4797)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c070@s6 (4799)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c193@s6 (4801)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c007@s6 (4803)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c199@s6 (4805)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c100@s6 (4807)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c094@s6 (4809)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c177@s6 (4811)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c156@s6 (4813)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c121@s6 (4815)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c026@s6 (4817)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c051@s6 (4819)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c113@s6 (4821)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c087@s6 (4823)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c164@s6 (4825)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c069@s6 (4827)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c119@s6 (4829)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c063@s6 (4831)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c180@s6 (4833)   [on runnervm3lb7s]
+2026-11-27.17:42:58 [txg:580] snapshot sat-scale/fs/c014@s6 (4835)   [on runnervm3lb7s]
+2026-11-27.17:42:58 (192ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s6
+            sat-scale/vm@s6
+            sat-scale/vm/disk-16k@s6
+            sat-scale/vm/disk-8k@s6
+            sat-scale/fs@s6
+            sat-scale/fs/c154@s6
+            sat-scale/fs/c123@s6
+            sat-scale/fs/c059@s6
+            sat-scale/fs/c129@s6
+            sat-scale/fs/c024@s6
+            sat-scale/fs/c053@s6
+            sat-scale/fs/c111@s6
+            sat-scale/fs/c085@s6
+            sat-scale/fs/c166@s6
+            sat-scale/fs/c188@s6
+            sat-scale/fs/c061@s6
+            sat-scale/fs/c182@s6
+            sat-scale/fs/c016@s6
+            sat-scale/fs/c037@s6
+            sat-scale/fs/c040@s6
+            sat-scale/fs/c147@s6
+            sat-scale/fs/c130@s6
+            sat-scale/fs/c072@s6
+            sat-scale/fs/c191@s6
+            sat-scale/fs/c005@s6
+            sat-scale/fs/c108@s6
+            sat-scale/fs/c078@s6
+            sat-scale/fs/c102@s6
+            sat-scale/fs/c096@s6
+            sat-scale/fs/c175@s6
+            sat-scale/fs/c178@s6
+            sat-scale/fs/c002@s6
+            sat-scale/fs/c196@s6
+            sat-scale/fs/c075@s6
+            sat-scale/fs/c172@s6
+            sat-scale/fs/c091@s6
+            sat-scale/fs/c105@s6
+            sat-scale/fs/c008@s6
+            sat-scale/fs/c047@s6
+            sat-scale/fs/c030@s6
+            sat-scale/fs/c137@s6
+            sat-scale/fs/c140@s6
+            sat-scale/fs/c161@s6
+            sat-scale/fs/c082@s6
+            sat-scale/fs/c116@s6
+            sat-scale/fs/c011@s6
+            sat-scale/fs/c185@s6
+            sat-scale/fs/c066@s6
+            sat-scale/fs/c088@s6
+            sat-scale/fs/c029@s6
+            sat-scale/fs/c124@s6
+            sat-scale/fs/c153@s6
+            sat-scale/fs/c054@s6
+            sat-scale/fs/c023@s6
+            sat-scale/fs/c159@s6
+            sat-scale/fs/c050@s6
+            sat-scale/fs/c027@s6
+            sat-scale/fs/c120@s6
+            sat-scale/fs/c157@s6
+            sat-scale/fs/c118@s6
+            sat-scale/fs/c181@s6
+            sat-scale/fs/c015@s6
+            sat-scale/fs/c062@s6
+            sat-scale/fs/c165@s6
+            sat-scale/fs/c112@s6
+            sat-scale/fs/c086@s6
+            sat-scale/fs/c068@s6
+            sat-scale/fs/c049@s6
+            sat-scale/fs/c133@s6
+            sat-scale/fs/c144@s6
+            sat-scale/fs/c043@s6
+            sat-scale/fs/c034@s6
+            sat-scale/fs/c139@s6
+            sat-scale/fs/c198@s6
+            sat-scale/fs/c176@s6
+            sat-scale/fs/c101@s6
+            sat-scale/fs/c095@s6
+            sat-scale/fs/c192@s6
+            sat-scale/fs/c006@s6
+            sat-scale/fs/c071@s6
+            sat-scale/fs/c092@s6
+            sat-scale/fs/c106@s6
+            sat-scale/fs/c171@s6
+            sat-scale/fs/c098@s6
+            sat-scale/fs/c076@s6
+            sat-scale/fs/c001@s6
+            sat-scale/fs/c195@s6
+            sat-scale/fs/c143@s6
+            sat-scale/fs/c134@s6
+            sat-scale/fs/c039@s6
+            sat-scale/fs/c149@s6
+            sat-scale/fs/c033@s6
+            sat-scale/fs/c044@s6
+            sat-scale/fs/c065@s6
+            sat-scale/fs/c012@s6
+            sat-scale/fs/c186@s6
+            sat-scale/fs/c168@s6
+            sat-scale/fs/c018@s6
+            sat-scale/fs/c081@s6
+            sat-scale/fs/c115@s6
+            sat-scale/fs/c162@s6
+            sat-scale/fs/c020@s6
+            sat-scale/fs/c057@s6
+            sat-scale/fs/c150@s6
+            sat-scale/fs/c127@s6
+            sat-scale/fs/c067@s6
+            sat-scale/fs/c010@s6
+            sat-scale/fs/c184@s6
+            sat-scale/fs/c089@s6
+            sat-scale/fs/c083@s6
+            sat-scale/fs/c117@s6
+            sat-scale/fs/c160@s6
+            sat-scale/fs/c022@s6
+            sat-scale/fs/c055@s6
+            sat-scale/fs/c158@s6
+            sat-scale/fs/c028@s6
+            sat-scale/fs/c152@s6
+            sat-scale/fs/c125@s6
+            sat-scale/fs/c090@s6
+            sat-scale/fs/c104@s6
+            sat-scale/fs/c173@s6
+            sat-scale/fs/c009@s6
+            sat-scale/fs/c179@s6
+            sat-scale/fs/c074@s6
+            sat-scale/fs/c003@s6
+            sat-scale/fs/c197@s6
+            sat-scale/fs/c141@s6
+            sat-scale/fs/c136@s6
+            sat-scale/fs/c031@s6
+            sat-scale/fs/c046@s6
+            sat-scale/fs/c131@s6
+            sat-scale/fs/c146@s6
+            sat-scale/fs/c041@s6
+            sat-scale/fs/c036@s6
+            sat-scale/fs/c079@s6
+            sat-scale/fs/c174@s6
+            sat-scale/fs/c103@s6
+            sat-scale/fs/c097@s6
+            sat-scale/fs/c190@s6
+            sat-scale/fs/c004@s6
+            sat-scale/fs/c073@s6
+            sat-scale/fs/c109@s6
+            sat-scale/fs/c128@s6
+            sat-scale/fs/c052@s6
+            sat-scale/fs/c025@s6
+            sat-scale/fs/c122@s6
+            sat-scale/fs/c155@s6
+            sat-scale/fs/c058@s6
+            sat-scale/fs/c183@s6
+            sat-scale/fs/c017@s6
+            sat-scale/fs/c060@s6
+            sat-scale/fs/c167@s6
+            sat-scale/fs/c110@s6
+            sat-scale/fs/c084@s6
+            sat-scale/fs/c189@s6
+            sat-scale/fs/c019@s6
+            sat-scale/fs/c163@s6
+            sat-scale/fs/c080@s6
+            sat-scale/fs/c114@s6
+            sat-scale/fs/c013@s6
+            sat-scale/fs/c187@s6
+            sat-scale/fs/c064@s6
+            sat-scale/fs/c169@s6
+            sat-scale/fs/c126@s6
+            sat-scale/fs/c151@s6
+            sat-scale/fs/c056@s6
+            sat-scale/fs/c021@s6
+            sat-scale/fs/c099@s6
+            sat-scale/fs/c000@s6
+            sat-scale/fs/c194@s6
+            sat-scale/fs/c077@s6
+            sat-scale/fs/c170@s6
+            sat-scale/fs/c093@s6
+            sat-scale/fs/c107@s6
+            sat-scale/fs/c148@s6
+            sat-scale/fs/c045@s6
+            sat-scale/fs/c032@s6
+            sat-scale/fs/c135@s6
+            sat-scale/fs/c142@s6
+            sat-scale/fs/c038@s6
+            sat-scale/fs/c035@s6
+            sat-scale/fs/c042@s6
+            sat-scale/fs/c138@s6
+            sat-scale/fs/c048@s6
+            sat-scale/fs/c145@s6
+            sat-scale/fs/c132@s6
+            sat-scale/fs/c070@s6
+            sat-scale/fs/c193@s6
+            sat-scale/fs/c007@s6
+            sat-scale/fs/c199@s6
+            sat-scale/fs/c100@s6
+            sat-scale/fs/c094@s6
+            sat-scale/fs/c177@s6
+            sat-scale/fs/c156@s6
+            sat-scale/fs/c121@s6
+            sat-scale/fs/c026@s6
+            sat-scale/fs/c051@s6
+            sat-scale/fs/c113@s6
+            sat-scale/fs/c087@s6
+            sat-scale/fs/c164@s6
+            sat-scale/fs/c069@s6
+            sat-scale/fs/c119@s6
+            sat-scale/fs/c063@s6
+            sat-scale/fs/c180@s6
+            sat-scale/fs/c014@s6
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:58 zfs snapshot -r sat-scale@s6 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale@s7 (4294)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/vm@s7 (4296)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/vm/disk-16k@s7 (4881)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/vm/disk-8k@s7 (4883)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs@s7 (4885)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c154@s7 (4887)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c123@s7 (4889)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c059@s7 (4891)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c129@s7 (4893)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c024@s7 (4895)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c053@s7 (4897)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c111@s7 (4899)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c085@s7 (4901)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c166@s7 (4903)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c188@s7 (4905)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c061@s7 (4907)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c182@s7 (4909)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c016@s7 (4911)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c037@s7 (4913)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c040@s7 (4915)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c147@s7 (4917)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c130@s7 (4919)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c072@s7 (4921)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c191@s7 (4923)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c005@s7 (4925)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c108@s7 (4927)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c078@s7 (4929)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c102@s7 (4931)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c096@s7 (4933)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c175@s7 (4935)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c178@s7 (4937)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c002@s7 (4939)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c196@s7 (4941)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c075@s7 (4943)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c172@s7 (4945)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c091@s7 (4947)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c105@s7 (4949)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c008@s7 (4951)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c047@s7 (4953)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c030@s7 (4955)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c137@s7 (4957)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c140@s7 (4959)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c161@s7 (4961)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c082@s7 (4963)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c116@s7 (4965)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c011@s7 (4967)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c185@s7 (4969)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c066@s7 (4971)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c088@s7 (4973)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c029@s7 (4975)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c124@s7 (4977)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c153@s7 (4979)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c054@s7 (4981)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c023@s7 (4983)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c159@s7 (4985)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c050@s7 (4987)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c027@s7 (4989)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c120@s7 (4991)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c157@s7 (4993)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c118@s7 (4995)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c181@s7 (4997)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c015@s7 (4999)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c062@s7 (5001)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c165@s7 (5003)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c112@s7 (5005)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c086@s7 (5007)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c068@s7 (5009)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c049@s7 (5011)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c133@s7 (5013)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c144@s7 (5015)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c043@s7 (5017)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c034@s7 (5019)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c139@s7 (5021)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c198@s7 (5023)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c176@s7 (5025)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c101@s7 (5027)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c095@s7 (5029)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c192@s7 (5031)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c006@s7 (5033)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c071@s7 (5035)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c092@s7 (5037)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c106@s7 (5039)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c171@s7 (5041)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c098@s7 (5043)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c076@s7 (5045)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c001@s7 (5047)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c195@s7 (5049)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c143@s7 (5051)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c134@s7 (5053)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c039@s7 (5055)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c149@s7 (5057)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c033@s7 (5059)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c044@s7 (5061)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c065@s7 (5063)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c012@s7 (5065)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c186@s7 (5067)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c168@s7 (5069)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c018@s7 (5071)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c081@s7 (5073)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c115@s7 (5075)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c162@s7 (5077)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c020@s7 (5079)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c057@s7 (5081)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c150@s7 (5083)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c127@s7 (5085)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c067@s7 (5087)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c010@s7 (5089)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c184@s7 (5091)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c089@s7 (5093)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c083@s7 (5095)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c117@s7 (5097)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c160@s7 (5099)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c022@s7 (5101)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c055@s7 (5103)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c158@s7 (5105)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c028@s7 (5107)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c152@s7 (5109)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c125@s7 (5111)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c090@s7 (5113)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c104@s7 (5115)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c173@s7 (5117)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c009@s7 (5119)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c179@s7 (5121)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c074@s7 (5123)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c003@s7 (5125)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c197@s7 (5127)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c141@s7 (5129)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c136@s7 (5131)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c031@s7 (5133)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c046@s7 (5135)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c131@s7 (5137)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c146@s7 (5139)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c041@s7 (5141)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c036@s7 (5143)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c079@s7 (5145)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c174@s7 (5147)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c103@s7 (5149)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c097@s7 (5151)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c190@s7 (5153)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c004@s7 (5155)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c073@s7 (5157)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c109@s7 (5159)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c128@s7 (5161)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c052@s7 (5163)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c025@s7 (5165)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c122@s7 (5167)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c155@s7 (5169)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c058@s7 (5171)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c183@s7 (5173)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c017@s7 (5175)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c060@s7 (5177)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c167@s7 (5179)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c110@s7 (5181)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c084@s7 (5183)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c189@s7 (5185)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c019@s7 (5187)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c163@s7 (5189)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c080@s7 (5191)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c114@s7 (5193)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c013@s7 (5195)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c187@s7 (5197)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c064@s7 (5199)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c169@s7 (5201)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c126@s7 (5203)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c151@s7 (5205)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c056@s7 (5207)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c021@s7 (5209)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c099@s7 (5211)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c000@s7 (5213)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c194@s7 (5215)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c077@s7 (5217)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c170@s7 (5219)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c093@s7 (5221)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c107@s7 (5223)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c148@s7 (5225)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c045@s7 (5227)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c032@s7 (5229)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c135@s7 (5231)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c142@s7 (5233)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c038@s7 (5235)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c035@s7 (5237)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c042@s7 (5239)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c138@s7 (5241)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c048@s7 (5243)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c145@s7 (5245)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c132@s7 (5247)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c070@s7 (5249)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c193@s7 (5251)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c007@s7 (5253)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c199@s7 (5255)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c100@s7 (5257)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c094@s7 (5259)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c177@s7 (5261)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c156@s7 (5263)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c121@s7 (5265)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c026@s7 (5267)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c051@s7 (5269)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c113@s7 (5271)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c087@s7 (5273)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c164@s7 (5275)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c069@s7 (5277)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c119@s7 (5279)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c063@s7 (5281)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c180@s7 (5283)   [on runnervm3lb7s]
+2026-11-27.17:42:59 [txg:632] snapshot sat-scale/fs/c014@s7 (5285)   [on runnervm3lb7s]
+2026-11-27.17:42:59 (192ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s7
+            sat-scale/vm@s7
+            sat-scale/vm/disk-16k@s7
+            sat-scale/vm/disk-8k@s7
+            sat-scale/fs@s7
+            sat-scale/fs/c154@s7
+            sat-scale/fs/c123@s7
+            sat-scale/fs/c059@s7
+            sat-scale/fs/c129@s7
+            sat-scale/fs/c024@s7
+            sat-scale/fs/c053@s7
+            sat-scale/fs/c111@s7
+            sat-scale/fs/c085@s7
+            sat-scale/fs/c166@s7
+            sat-scale/fs/c188@s7
+            sat-scale/fs/c061@s7
+            sat-scale/fs/c182@s7
+            sat-scale/fs/c016@s7
+            sat-scale/fs/c037@s7
+            sat-scale/fs/c040@s7
+            sat-scale/fs/c147@s7
+            sat-scale/fs/c130@s7
+            sat-scale/fs/c072@s7
+            sat-scale/fs/c191@s7
+            sat-scale/fs/c005@s7
+            sat-scale/fs/c108@s7
+            sat-scale/fs/c078@s7
+            sat-scale/fs/c102@s7
+            sat-scale/fs/c096@s7
+            sat-scale/fs/c175@s7
+            sat-scale/fs/c178@s7
+            sat-scale/fs/c002@s7
+            sat-scale/fs/c196@s7
+            sat-scale/fs/c075@s7
+            sat-scale/fs/c172@s7
+            sat-scale/fs/c091@s7
+            sat-scale/fs/c105@s7
+            sat-scale/fs/c008@s7
+            sat-scale/fs/c047@s7
+            sat-scale/fs/c030@s7
+            sat-scale/fs/c137@s7
+            sat-scale/fs/c140@s7
+            sat-scale/fs/c161@s7
+            sat-scale/fs/c082@s7
+            sat-scale/fs/c116@s7
+            sat-scale/fs/c011@s7
+            sat-scale/fs/c185@s7
+            sat-scale/fs/c066@s7
+            sat-scale/fs/c088@s7
+            sat-scale/fs/c029@s7
+            sat-scale/fs/c124@s7
+            sat-scale/fs/c153@s7
+            sat-scale/fs/c054@s7
+            sat-scale/fs/c023@s7
+            sat-scale/fs/c159@s7
+            sat-scale/fs/c050@s7
+            sat-scale/fs/c027@s7
+            sat-scale/fs/c120@s7
+            sat-scale/fs/c157@s7
+            sat-scale/fs/c118@s7
+            sat-scale/fs/c181@s7
+            sat-scale/fs/c015@s7
+            sat-scale/fs/c062@s7
+            sat-scale/fs/c165@s7
+            sat-scale/fs/c112@s7
+            sat-scale/fs/c086@s7
+            sat-scale/fs/c068@s7
+            sat-scale/fs/c049@s7
+            sat-scale/fs/c133@s7
+            sat-scale/fs/c144@s7
+            sat-scale/fs/c043@s7
+            sat-scale/fs/c034@s7
+            sat-scale/fs/c139@s7
+            sat-scale/fs/c198@s7
+            sat-scale/fs/c176@s7
+            sat-scale/fs/c101@s7
+            sat-scale/fs/c095@s7
+            sat-scale/fs/c192@s7
+            sat-scale/fs/c006@s7
+            sat-scale/fs/c071@s7
+            sat-scale/fs/c092@s7
+            sat-scale/fs/c106@s7
+            sat-scale/fs/c171@s7
+            sat-scale/fs/c098@s7
+            sat-scale/fs/c076@s7
+            sat-scale/fs/c001@s7
+            sat-scale/fs/c195@s7
+            sat-scale/fs/c143@s7
+            sat-scale/fs/c134@s7
+            sat-scale/fs/c039@s7
+            sat-scale/fs/c149@s7
+            sat-scale/fs/c033@s7
+            sat-scale/fs/c044@s7
+            sat-scale/fs/c065@s7
+            sat-scale/fs/c012@s7
+            sat-scale/fs/c186@s7
+            sat-scale/fs/c168@s7
+            sat-scale/fs/c018@s7
+            sat-scale/fs/c081@s7
+            sat-scale/fs/c115@s7
+            sat-scale/fs/c162@s7
+            sat-scale/fs/c020@s7
+            sat-scale/fs/c057@s7
+            sat-scale/fs/c150@s7
+            sat-scale/fs/c127@s7
+            sat-scale/fs/c067@s7
+            sat-scale/fs/c010@s7
+            sat-scale/fs/c184@s7
+            sat-scale/fs/c089@s7
+            sat-scale/fs/c083@s7
+            sat-scale/fs/c117@s7
+            sat-scale/fs/c160@s7
+            sat-scale/fs/c022@s7
+            sat-scale/fs/c055@s7
+            sat-scale/fs/c158@s7
+            sat-scale/fs/c028@s7
+            sat-scale/fs/c152@s7
+            sat-scale/fs/c125@s7
+            sat-scale/fs/c090@s7
+            sat-scale/fs/c104@s7
+            sat-scale/fs/c173@s7
+            sat-scale/fs/c009@s7
+            sat-scale/fs/c179@s7
+            sat-scale/fs/c074@s7
+            sat-scale/fs/c003@s7
+            sat-scale/fs/c197@s7
+            sat-scale/fs/c141@s7
+            sat-scale/fs/c136@s7
+            sat-scale/fs/c031@s7
+            sat-scale/fs/c046@s7
+            sat-scale/fs/c131@s7
+            sat-scale/fs/c146@s7
+            sat-scale/fs/c041@s7
+            sat-scale/fs/c036@s7
+            sat-scale/fs/c079@s7
+            sat-scale/fs/c174@s7
+            sat-scale/fs/c103@s7
+            sat-scale/fs/c097@s7
+            sat-scale/fs/c190@s7
+            sat-scale/fs/c004@s7
+            sat-scale/fs/c073@s7
+            sat-scale/fs/c109@s7
+            sat-scale/fs/c128@s7
+            sat-scale/fs/c052@s7
+            sat-scale/fs/c025@s7
+            sat-scale/fs/c122@s7
+            sat-scale/fs/c155@s7
+            sat-scale/fs/c058@s7
+            sat-scale/fs/c183@s7
+            sat-scale/fs/c017@s7
+            sat-scale/fs/c060@s7
+            sat-scale/fs/c167@s7
+            sat-scale/fs/c110@s7
+            sat-scale/fs/c084@s7
+            sat-scale/fs/c189@s7
+            sat-scale/fs/c019@s7
+            sat-scale/fs/c163@s7
+            sat-scale/fs/c080@s7
+            sat-scale/fs/c114@s7
+            sat-scale/fs/c013@s7
+            sat-scale/fs/c187@s7
+            sat-scale/fs/c064@s7
+            sat-scale/fs/c169@s7
+            sat-scale/fs/c126@s7
+            sat-scale/fs/c151@s7
+            sat-scale/fs/c056@s7
+            sat-scale/fs/c021@s7
+            sat-scale/fs/c099@s7
+            sat-scale/fs/c000@s7
+            sat-scale/fs/c194@s7
+            sat-scale/fs/c077@s7
+            sat-scale/fs/c170@s7
+            sat-scale/fs/c093@s7
+            sat-scale/fs/c107@s7
+            sat-scale/fs/c148@s7
+            sat-scale/fs/c045@s7
+            sat-scale/fs/c032@s7
+            sat-scale/fs/c135@s7
+            sat-scale/fs/c142@s7
+            sat-scale/fs/c038@s7
+            sat-scale/fs/c035@s7
+            sat-scale/fs/c042@s7
+            sat-scale/fs/c138@s7
+            sat-scale/fs/c048@s7
+            sat-scale/fs/c145@s7
+            sat-scale/fs/c132@s7
+            sat-scale/fs/c070@s7
+            sat-scale/fs/c193@s7
+            sat-scale/fs/c007@s7
+            sat-scale/fs/c199@s7
+            sat-scale/fs/c100@s7
+            sat-scale/fs/c094@s7
+            sat-scale/fs/c177@s7
+            sat-scale/fs/c156@s7
+            sat-scale/fs/c121@s7
+            sat-scale/fs/c026@s7
+            sat-scale/fs/c051@s7
+            sat-scale/fs/c113@s7
+            sat-scale/fs/c087@s7
+            sat-scale/fs/c164@s7
+            sat-scale/fs/c069@s7
+            sat-scale/fs/c119@s7
+            sat-scale/fs/c063@s7
+            sat-scale/fs/c180@s7
+            sat-scale/fs/c014@s7
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:42:59 zfs snapshot -r sat-scale@s7 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale@s8 (4385)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/vm@s8 (4387)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/vm/disk-16k@s8 (4389)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/vm/disk-8k@s8 (4391)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs@s8 (4393)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c154@s8 (4395)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c123@s8 (4397)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c059@s8 (4399)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c129@s8 (4401)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c024@s8 (4403)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c053@s8 (4405)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c111@s8 (4407)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c085@s8 (4409)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c166@s8 (4411)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c188@s8 (4413)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c061@s8 (4415)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c182@s8 (4417)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c016@s8 (4419)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c037@s8 (4421)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c040@s8 (4423)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c147@s8 (4425)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c130@s8 (4427)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c072@s8 (4429)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c191@s8 (4431)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c005@s8 (4433)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c108@s8 (4435)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c078@s8 (4437)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c102@s8 (4439)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c096@s8 (4441)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c175@s8 (4443)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c178@s8 (4445)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c002@s8 (4447)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c196@s8 (4449)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c075@s8 (4451)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c172@s8 (4453)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c091@s8 (4455)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c105@s8 (4457)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c008@s8 (4459)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c047@s8 (4461)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c030@s8 (4463)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c137@s8 (4465)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c140@s8 (4467)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c161@s8 (4469)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c082@s8 (4471)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c116@s8 (4473)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c011@s8 (4475)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c185@s8 (4477)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c066@s8 (4479)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c088@s8 (5505)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c029@s8 (5507)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c124@s8 (5509)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c153@s8 (5511)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c054@s8 (5513)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c023@s8 (5515)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c159@s8 (5517)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c050@s8 (5519)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c027@s8 (5521)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c120@s8 (5523)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c157@s8 (5525)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c118@s8 (5527)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c181@s8 (5529)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c015@s8 (5531)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c062@s8 (5533)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c165@s8 (5535)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c112@s8 (5537)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c086@s8 (5539)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c068@s8 (5541)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c049@s8 (5543)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c133@s8 (5545)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c144@s8 (5547)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c043@s8 (5549)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c034@s8 (5551)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c139@s8 (5553)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c198@s8 (5555)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c176@s8 (5557)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c101@s8 (5559)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c095@s8 (5561)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c192@s8 (5563)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c006@s8 (5565)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c071@s8 (5567)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c092@s8 (5569)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c106@s8 (5571)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c171@s8 (5573)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c098@s8 (5575)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c076@s8 (5577)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c001@s8 (5579)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c195@s8 (5581)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c143@s8 (5583)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c134@s8 (5585)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c039@s8 (5587)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c149@s8 (5589)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c033@s8 (5591)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c044@s8 (5593)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c065@s8 (5595)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c012@s8 (5597)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c186@s8 (5599)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c168@s8 (5601)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c018@s8 (5603)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c081@s8 (5605)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c115@s8 (5607)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c162@s8 (5609)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c020@s8 (5611)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c057@s8 (5613)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c150@s8 (5615)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c127@s8 (5617)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c067@s8 (5619)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c010@s8 (5621)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c184@s8 (5623)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c089@s8 (5625)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c083@s8 (5627)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c117@s8 (5629)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c160@s8 (5631)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c022@s8 (5633)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c055@s8 (5635)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c158@s8 (5637)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c028@s8 (5639)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c152@s8 (5641)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c125@s8 (5643)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c090@s8 (5645)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c104@s8 (5647)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c173@s8 (5649)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c009@s8 (5651)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c179@s8 (5653)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c074@s8 (5655)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c003@s8 (5657)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c197@s8 (5659)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c141@s8 (5661)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c136@s8 (5663)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c031@s8 (5665)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c046@s8 (5667)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c131@s8 (5669)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c146@s8 (5671)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c041@s8 (5673)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c036@s8 (5675)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c079@s8 (5677)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c174@s8 (5679)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c103@s8 (5681)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c097@s8 (5683)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c190@s8 (5685)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c004@s8 (5687)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c073@s8 (5689)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c109@s8 (5691)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c128@s8 (5693)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c052@s8 (5695)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c025@s8 (5697)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c122@s8 (5699)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c155@s8 (5701)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c058@s8 (5703)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c183@s8 (5705)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c017@s8 (5707)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c060@s8 (5709)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c167@s8 (5711)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c110@s8 (5713)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c084@s8 (5715)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c189@s8 (5717)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c019@s8 (5719)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c163@s8 (5721)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c080@s8 (5723)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c114@s8 (5725)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c013@s8 (5727)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c187@s8 (5729)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c064@s8 (5731)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c169@s8 (5733)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c126@s8 (5735)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c151@s8 (5737)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c056@s8 (5739)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c021@s8 (5741)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c099@s8 (5743)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c000@s8 (5745)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c194@s8 (5747)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c077@s8 (5749)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c170@s8 (5751)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c093@s8 (5753)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c107@s8 (5755)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c148@s8 (5757)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c045@s8 (5759)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c032@s8 (5761)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c135@s8 (5763)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c142@s8 (5765)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c038@s8 (5767)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c035@s8 (5769)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c042@s8 (5771)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c138@s8 (5773)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c048@s8 (5775)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c145@s8 (5777)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c132@s8 (5779)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c070@s8 (5781)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c193@s8 (5783)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c007@s8 (5785)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c199@s8 (5787)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c100@s8 (5789)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c094@s8 (5791)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c177@s8 (5793)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c156@s8 (5795)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c121@s8 (5797)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c026@s8 (5799)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c051@s8 (5801)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c113@s8 (5803)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c087@s8 (5805)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c164@s8 (5807)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c069@s8 (5809)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c119@s8 (5811)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c063@s8 (5813)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c180@s8 (5815)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:684] snapshot sat-scale/fs/c014@s8 (5817)   [on runnervm3lb7s]
+2026-11-27.17:43:00 (200ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s8
+            sat-scale/vm@s8
+            sat-scale/vm/disk-16k@s8
+            sat-scale/vm/disk-8k@s8
+            sat-scale/fs@s8
+            sat-scale/fs/c154@s8
+            sat-scale/fs/c123@s8
+            sat-scale/fs/c059@s8
+            sat-scale/fs/c129@s8
+            sat-scale/fs/c024@s8
+            sat-scale/fs/c053@s8
+            sat-scale/fs/c111@s8
+            sat-scale/fs/c085@s8
+            sat-scale/fs/c166@s8
+            sat-scale/fs/c188@s8
+            sat-scale/fs/c061@s8
+            sat-scale/fs/c182@s8
+            sat-scale/fs/c016@s8
+            sat-scale/fs/c037@s8
+            sat-scale/fs/c040@s8
+            sat-scale/fs/c147@s8
+            sat-scale/fs/c130@s8
+            sat-scale/fs/c072@s8
+            sat-scale/fs/c191@s8
+            sat-scale/fs/c005@s8
+            sat-scale/fs/c108@s8
+            sat-scale/fs/c078@s8
+            sat-scale/fs/c102@s8
+            sat-scale/fs/c096@s8
+            sat-scale/fs/c175@s8
+            sat-scale/fs/c178@s8
+            sat-scale/fs/c002@s8
+            sat-scale/fs/c196@s8
+            sat-scale/fs/c075@s8
+            sat-scale/fs/c172@s8
+            sat-scale/fs/c091@s8
+            sat-scale/fs/c105@s8
+            sat-scale/fs/c008@s8
+            sat-scale/fs/c047@s8
+            sat-scale/fs/c030@s8
+            sat-scale/fs/c137@s8
+            sat-scale/fs/c140@s8
+            sat-scale/fs/c161@s8
+            sat-scale/fs/c082@s8
+            sat-scale/fs/c116@s8
+            sat-scale/fs/c011@s8
+            sat-scale/fs/c185@s8
+            sat-scale/fs/c066@s8
+            sat-scale/fs/c088@s8
+            sat-scale/fs/c029@s8
+            sat-scale/fs/c124@s8
+            sat-scale/fs/c153@s8
+            sat-scale/fs/c054@s8
+            sat-scale/fs/c023@s8
+            sat-scale/fs/c159@s8
+            sat-scale/fs/c050@s8
+            sat-scale/fs/c027@s8
+            sat-scale/fs/c120@s8
+            sat-scale/fs/c157@s8
+            sat-scale/fs/c118@s8
+            sat-scale/fs/c181@s8
+            sat-scale/fs/c015@s8
+            sat-scale/fs/c062@s8
+            sat-scale/fs/c165@s8
+            sat-scale/fs/c112@s8
+            sat-scale/fs/c086@s8
+            sat-scale/fs/c068@s8
+            sat-scale/fs/c049@s8
+            sat-scale/fs/c133@s8
+            sat-scale/fs/c144@s8
+            sat-scale/fs/c043@s8
+            sat-scale/fs/c034@s8
+            sat-scale/fs/c139@s8
+            sat-scale/fs/c198@s8
+            sat-scale/fs/c176@s8
+            sat-scale/fs/c101@s8
+            sat-scale/fs/c095@s8
+            sat-scale/fs/c192@s8
+            sat-scale/fs/c006@s8
+            sat-scale/fs/c071@s8
+            sat-scale/fs/c092@s8
+            sat-scale/fs/c106@s8
+            sat-scale/fs/c171@s8
+            sat-scale/fs/c098@s8
+            sat-scale/fs/c076@s8
+            sat-scale/fs/c001@s8
+            sat-scale/fs/c195@s8
+            sat-scale/fs/c143@s8
+            sat-scale/fs/c134@s8
+            sat-scale/fs/c039@s8
+            sat-scale/fs/c149@s8
+            sat-scale/fs/c033@s8
+            sat-scale/fs/c044@s8
+            sat-scale/fs/c065@s8
+            sat-scale/fs/c012@s8
+            sat-scale/fs/c186@s8
+            sat-scale/fs/c168@s8
+            sat-scale/fs/c018@s8
+            sat-scale/fs/c081@s8
+            sat-scale/fs/c115@s8
+            sat-scale/fs/c162@s8
+            sat-scale/fs/c020@s8
+            sat-scale/fs/c057@s8
+            sat-scale/fs/c150@s8
+            sat-scale/fs/c127@s8
+            sat-scale/fs/c067@s8
+            sat-scale/fs/c010@s8
+            sat-scale/fs/c184@s8
+            sat-scale/fs/c089@s8
+            sat-scale/fs/c083@s8
+            sat-scale/fs/c117@s8
+            sat-scale/fs/c160@s8
+            sat-scale/fs/c022@s8
+            sat-scale/fs/c055@s8
+            sat-scale/fs/c158@s8
+            sat-scale/fs/c028@s8
+            sat-scale/fs/c152@s8
+            sat-scale/fs/c125@s8
+            sat-scale/fs/c090@s8
+            sat-scale/fs/c104@s8
+            sat-scale/fs/c173@s8
+            sat-scale/fs/c009@s8
+            sat-scale/fs/c179@s8
+            sat-scale/fs/c074@s8
+            sat-scale/fs/c003@s8
+            sat-scale/fs/c197@s8
+            sat-scale/fs/c141@s8
+            sat-scale/fs/c136@s8
+            sat-scale/fs/c031@s8
+            sat-scale/fs/c046@s8
+            sat-scale/fs/c131@s8
+            sat-scale/fs/c146@s8
+            sat-scale/fs/c041@s8
+            sat-scale/fs/c036@s8
+            sat-scale/fs/c079@s8
+            sat-scale/fs/c174@s8
+            sat-scale/fs/c103@s8
+            sat-scale/fs/c097@s8
+            sat-scale/fs/c190@s8
+            sat-scale/fs/c004@s8
+            sat-scale/fs/c073@s8
+            sat-scale/fs/c109@s8
+            sat-scale/fs/c128@s8
+            sat-scale/fs/c052@s8
+            sat-scale/fs/c025@s8
+            sat-scale/fs/c122@s8
+            sat-scale/fs/c155@s8
+            sat-scale/fs/c058@s8
+            sat-scale/fs/c183@s8
+            sat-scale/fs/c017@s8
+            sat-scale/fs/c060@s8
+            sat-scale/fs/c167@s8
+            sat-scale/fs/c110@s8
+            sat-scale/fs/c084@s8
+            sat-scale/fs/c189@s8
+            sat-scale/fs/c019@s8
+            sat-scale/fs/c163@s8
+            sat-scale/fs/c080@s8
+            sat-scale/fs/c114@s8
+            sat-scale/fs/c013@s8
+            sat-scale/fs/c187@s8
+            sat-scale/fs/c064@s8
+            sat-scale/fs/c169@s8
+            sat-scale/fs/c126@s8
+            sat-scale/fs/c151@s8
+            sat-scale/fs/c056@s8
+            sat-scale/fs/c021@s8
+            sat-scale/fs/c099@s8
+            sat-scale/fs/c000@s8
+            sat-scale/fs/c194@s8
+            sat-scale/fs/c077@s8
+            sat-scale/fs/c170@s8
+            sat-scale/fs/c093@s8
+            sat-scale/fs/c107@s8
+            sat-scale/fs/c148@s8
+            sat-scale/fs/c045@s8
+            sat-scale/fs/c032@s8
+            sat-scale/fs/c135@s8
+            sat-scale/fs/c142@s8
+            sat-scale/fs/c038@s8
+            sat-scale/fs/c035@s8
+            sat-scale/fs/c042@s8
+            sat-scale/fs/c138@s8
+            sat-scale/fs/c048@s8
+            sat-scale/fs/c145@s8
+            sat-scale/fs/c132@s8
+            sat-scale/fs/c070@s8
+            sat-scale/fs/c193@s8
+            sat-scale/fs/c007@s8
+            sat-scale/fs/c199@s8
+            sat-scale/fs/c100@s8
+            sat-scale/fs/c094@s8
+            sat-scale/fs/c177@s8
+            sat-scale/fs/c156@s8
+            sat-scale/fs/c121@s8
+            sat-scale/fs/c026@s8
+            sat-scale/fs/c051@s8
+            sat-scale/fs/c113@s8
+            sat-scale/fs/c087@s8
+            sat-scale/fs/c164@s8
+            sat-scale/fs/c069@s8
+            sat-scale/fs/c119@s8
+            sat-scale/fs/c063@s8
+            sat-scale/fs/c180@s8
+            sat-scale/fs/c014@s8
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:43:00 zfs snapshot -r sat-scale@s8 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale@s9 (4326)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/vm@s9 (4328)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/vm/disk-16k@s9 (4330)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/vm/disk-8k@s9 (4332)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs@s9 (4334)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c154@s9 (4336)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c123@s9 (4338)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c059@s9 (4340)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c129@s9 (4342)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c024@s9 (4344)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c053@s9 (4346)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c111@s9 (4348)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c085@s9 (4350)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c166@s9 (5888)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c188@s9 (5890)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c061@s9 (5892)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c182@s9 (5894)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c016@s9 (5896)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c037@s9 (5898)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c040@s9 (5900)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c147@s9 (5902)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c130@s9 (5904)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c072@s9 (5906)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c191@s9 (5908)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c005@s9 (5910)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c108@s9 (5912)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c078@s9 (5914)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c102@s9 (5916)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c096@s9 (5918)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c175@s9 (5920)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c178@s9 (5922)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c002@s9 (5924)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c196@s9 (5926)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c075@s9 (5928)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c172@s9 (5930)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c091@s9 (5932)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c105@s9 (5934)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c008@s9 (5936)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c047@s9 (5938)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c030@s9 (5940)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c137@s9 (5942)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c140@s9 (5944)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c161@s9 (5946)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c082@s9 (5948)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c116@s9 (5950)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c011@s9 (5952)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c185@s9 (5954)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c066@s9 (5956)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c088@s9 (5958)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c029@s9 (5960)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c124@s9 (5962)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c153@s9 (5964)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c054@s9 (5966)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c023@s9 (5968)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c159@s9 (5970)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c050@s9 (5972)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c027@s9 (5974)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c120@s9 (5976)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c157@s9 (5978)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c118@s9 (5980)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c181@s9 (5982)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c015@s9 (5984)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c062@s9 (5986)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c165@s9 (5988)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c112@s9 (5990)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c086@s9 (5992)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c068@s9 (5994)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c049@s9 (5996)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c133@s9 (5998)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c144@s9 (6000)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c043@s9 (6002)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c034@s9 (6004)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c139@s9 (6006)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c198@s9 (6008)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c176@s9 (6010)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c101@s9 (6012)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c095@s9 (6014)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c192@s9 (6016)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c006@s9 (6018)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c071@s9 (6020)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c092@s9 (6022)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c106@s9 (6024)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c171@s9 (6026)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c098@s9 (6028)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c076@s9 (6030)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c001@s9 (6032)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c195@s9 (6034)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c143@s9 (6036)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c134@s9 (6038)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c039@s9 (6040)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c149@s9 (6042)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c033@s9 (6044)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c044@s9 (6046)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c065@s9 (6048)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c012@s9 (6050)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c186@s9 (6052)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c168@s9 (6054)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c018@s9 (6056)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c081@s9 (6058)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c115@s9 (6060)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c162@s9 (6062)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c020@s9 (6064)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c057@s9 (6066)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c150@s9 (6068)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c127@s9 (6070)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c067@s9 (6072)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c010@s9 (6074)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c184@s9 (6076)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c089@s9 (6078)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c083@s9 (6080)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c117@s9 (6082)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c160@s9 (6084)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c022@s9 (6086)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c055@s9 (6088)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c158@s9 (6090)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c028@s9 (6092)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c152@s9 (6094)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c125@s9 (6096)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c090@s9 (6098)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c104@s9 (6100)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c173@s9 (6102)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c009@s9 (6104)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c179@s9 (6106)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c074@s9 (6108)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c003@s9 (6110)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c197@s9 (6112)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c141@s9 (6114)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c136@s9 (6116)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c031@s9 (6118)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c046@s9 (6120)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c131@s9 (6122)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c146@s9 (6124)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c041@s9 (6126)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c036@s9 (6128)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c079@s9 (6130)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c174@s9 (6132)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c103@s9 (6134)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c097@s9 (6136)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c190@s9 (6138)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c004@s9 (6140)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c073@s9 (6142)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c109@s9 (6144)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c128@s9 (6146)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c052@s9 (6148)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c025@s9 (6150)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c122@s9 (6152)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c155@s9 (6154)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c058@s9 (6156)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c183@s9 (6158)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c017@s9 (6160)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c060@s9 (6162)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c167@s9 (6164)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c110@s9 (6166)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c084@s9 (6168)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c189@s9 (6170)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c019@s9 (6172)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c163@s9 (6174)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c080@s9 (6176)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c114@s9 (6178)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c013@s9 (6180)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c187@s9 (6182)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c064@s9 (6184)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c169@s9 (6186)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c126@s9 (6188)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c151@s9 (6190)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c056@s9 (6192)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c021@s9 (6194)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c099@s9 (6196)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c000@s9 (6198)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c194@s9 (6200)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c077@s9 (6202)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c170@s9 (6204)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c093@s9 (6206)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c107@s9 (6208)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c148@s9 (6210)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c045@s9 (6212)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c032@s9 (6214)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c135@s9 (6216)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c142@s9 (6218)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c038@s9 (6220)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c035@s9 (6222)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c042@s9 (6224)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c138@s9 (6226)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c048@s9 (6228)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c145@s9 (6230)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c132@s9 (6232)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c070@s9 (6234)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c193@s9 (6236)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c007@s9 (6238)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c199@s9 (6240)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c100@s9 (6242)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c094@s9 (6244)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c177@s9 (6246)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c156@s9 (6248)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c121@s9 (6250)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c026@s9 (6252)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c051@s9 (6254)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c113@s9 (6256)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c087@s9 (6258)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c164@s9 (6260)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c069@s9 (6262)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c119@s9 (6264)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c063@s9 (6266)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c180@s9 (6268)   [on runnervm3lb7s]
+2026-11-27.17:43:00 [txg:736] snapshot sat-scale/fs/c014@s9 (6270)   [on runnervm3lb7s]
+2026-11-27.17:43:01 (204ms) ioctl snapshot
+    input:
+        snaps:
+            sat-scale@s9
+            sat-scale/vm@s9
+            sat-scale/vm/disk-16k@s9
+            sat-scale/vm/disk-8k@s9
+            sat-scale/fs@s9
+            sat-scale/fs/c154@s9
+            sat-scale/fs/c123@s9
+            sat-scale/fs/c059@s9
+            sat-scale/fs/c129@s9
+            sat-scale/fs/c024@s9
+            sat-scale/fs/c053@s9
+            sat-scale/fs/c111@s9
+            sat-scale/fs/c085@s9
+            sat-scale/fs/c166@s9
+            sat-scale/fs/c188@s9
+            sat-scale/fs/c061@s9
+            sat-scale/fs/c182@s9
+            sat-scale/fs/c016@s9
+            sat-scale/fs/c037@s9
+            sat-scale/fs/c040@s9
+            sat-scale/fs/c147@s9
+            sat-scale/fs/c130@s9
+            sat-scale/fs/c072@s9
+            sat-scale/fs/c191@s9
+            sat-scale/fs/c005@s9
+            sat-scale/fs/c108@s9
+            sat-scale/fs/c078@s9
+            sat-scale/fs/c102@s9
+            sat-scale/fs/c096@s9
+            sat-scale/fs/c175@s9
+            sat-scale/fs/c178@s9
+            sat-scale/fs/c002@s9
+            sat-scale/fs/c196@s9
+            sat-scale/fs/c075@s9
+            sat-scale/fs/c172@s9
+            sat-scale/fs/c091@s9
+            sat-scale/fs/c105@s9
+            sat-scale/fs/c008@s9
+            sat-scale/fs/c047@s9
+            sat-scale/fs/c030@s9
+            sat-scale/fs/c137@s9
+            sat-scale/fs/c140@s9
+            sat-scale/fs/c161@s9
+            sat-scale/fs/c082@s9
+            sat-scale/fs/c116@s9
+            sat-scale/fs/c011@s9
+            sat-scale/fs/c185@s9
+            sat-scale/fs/c066@s9
+            sat-scale/fs/c088@s9
+            sat-scale/fs/c029@s9
+            sat-scale/fs/c124@s9
+            sat-scale/fs/c153@s9
+            sat-scale/fs/c054@s9
+            sat-scale/fs/c023@s9
+            sat-scale/fs/c159@s9
+            sat-scale/fs/c050@s9
+            sat-scale/fs/c027@s9
+            sat-scale/fs/c120@s9
+            sat-scale/fs/c157@s9
+            sat-scale/fs/c118@s9
+            sat-scale/fs/c181@s9
+            sat-scale/fs/c015@s9
+            sat-scale/fs/c062@s9
+            sat-scale/fs/c165@s9
+            sat-scale/fs/c112@s9
+            sat-scale/fs/c086@s9
+            sat-scale/fs/c068@s9
+            sat-scale/fs/c049@s9
+            sat-scale/fs/c133@s9
+            sat-scale/fs/c144@s9
+            sat-scale/fs/c043@s9
+            sat-scale/fs/c034@s9
+            sat-scale/fs/c139@s9
+            sat-scale/fs/c198@s9
+            sat-scale/fs/c176@s9
+            sat-scale/fs/c101@s9
+            sat-scale/fs/c095@s9
+            sat-scale/fs/c192@s9
+            sat-scale/fs/c006@s9
+            sat-scale/fs/c071@s9
+            sat-scale/fs/c092@s9
+            sat-scale/fs/c106@s9
+            sat-scale/fs/c171@s9
+            sat-scale/fs/c098@s9
+            sat-scale/fs/c076@s9
+            sat-scale/fs/c001@s9
+            sat-scale/fs/c195@s9
+            sat-scale/fs/c143@s9
+            sat-scale/fs/c134@s9
+            sat-scale/fs/c039@s9
+            sat-scale/fs/c149@s9
+            sat-scale/fs/c033@s9
+            sat-scale/fs/c044@s9
+            sat-scale/fs/c065@s9
+            sat-scale/fs/c012@s9
+            sat-scale/fs/c186@s9
+            sat-scale/fs/c168@s9
+            sat-scale/fs/c018@s9
+            sat-scale/fs/c081@s9
+            sat-scale/fs/c115@s9
+            sat-scale/fs/c162@s9
+            sat-scale/fs/c020@s9
+            sat-scale/fs/c057@s9
+            sat-scale/fs/c150@s9
+            sat-scale/fs/c127@s9
+            sat-scale/fs/c067@s9
+            sat-scale/fs/c010@s9
+            sat-scale/fs/c184@s9
+            sat-scale/fs/c089@s9
+            sat-scale/fs/c083@s9
+            sat-scale/fs/c117@s9
+            sat-scale/fs/c160@s9
+            sat-scale/fs/c022@s9
+            sat-scale/fs/c055@s9
+            sat-scale/fs/c158@s9
+            sat-scale/fs/c028@s9
+            sat-scale/fs/c152@s9
+            sat-scale/fs/c125@s9
+            sat-scale/fs/c090@s9
+            sat-scale/fs/c104@s9
+            sat-scale/fs/c173@s9
+            sat-scale/fs/c009@s9
+            sat-scale/fs/c179@s9
+            sat-scale/fs/c074@s9
+            sat-scale/fs/c003@s9
+            sat-scale/fs/c197@s9
+            sat-scale/fs/c141@s9
+            sat-scale/fs/c136@s9
+            sat-scale/fs/c031@s9
+            sat-scale/fs/c046@s9
+            sat-scale/fs/c131@s9
+            sat-scale/fs/c146@s9
+            sat-scale/fs/c041@s9
+            sat-scale/fs/c036@s9
+            sat-scale/fs/c079@s9
+            sat-scale/fs/c174@s9
+            sat-scale/fs/c103@s9
+            sat-scale/fs/c097@s9
+            sat-scale/fs/c190@s9
+            sat-scale/fs/c004@s9
+            sat-scale/fs/c073@s9
+            sat-scale/fs/c109@s9
+            sat-scale/fs/c128@s9
+            sat-scale/fs/c052@s9
+            sat-scale/fs/c025@s9
+            sat-scale/fs/c122@s9
+            sat-scale/fs/c155@s9
+            sat-scale/fs/c058@s9
+            sat-scale/fs/c183@s9
+            sat-scale/fs/c017@s9
+            sat-scale/fs/c060@s9
+            sat-scale/fs/c167@s9
+            sat-scale/fs/c110@s9
+            sat-scale/fs/c084@s9
+            sat-scale/fs/c189@s9
+            sat-scale/fs/c019@s9
+            sat-scale/fs/c163@s9
+            sat-scale/fs/c080@s9
+            sat-scale/fs/c114@s9
+            sat-scale/fs/c013@s9
+            sat-scale/fs/c187@s9
+            sat-scale/fs/c064@s9
+            sat-scale/fs/c169@s9
+            sat-scale/fs/c126@s9
+            sat-scale/fs/c151@s9
+            sat-scale/fs/c056@s9
+            sat-scale/fs/c021@s9
+            sat-scale/fs/c099@s9
+            sat-scale/fs/c000@s9
+            sat-scale/fs/c194@s9
+            sat-scale/fs/c077@s9
+            sat-scale/fs/c170@s9
+            sat-scale/fs/c093@s9
+            sat-scale/fs/c107@s9
+            sat-scale/fs/c148@s9
+            sat-scale/fs/c045@s9
+            sat-scale/fs/c032@s9
+            sat-scale/fs/c135@s9
+            sat-scale/fs/c142@s9
+            sat-scale/fs/c038@s9
+            sat-scale/fs/c035@s9
+            sat-scale/fs/c042@s9
+            sat-scale/fs/c138@s9
+            sat-scale/fs/c048@s9
+            sat-scale/fs/c145@s9
+            sat-scale/fs/c132@s9
+            sat-scale/fs/c070@s9
+            sat-scale/fs/c193@s9
+            sat-scale/fs/c007@s9
+            sat-scale/fs/c199@s9
+            sat-scale/fs/c100@s9
+            sat-scale/fs/c094@s9
+            sat-scale/fs/c177@s9
+            sat-scale/fs/c156@s9
+            sat-scale/fs/c121@s9
+            sat-scale/fs/c026@s9
+            sat-scale/fs/c051@s9
+            sat-scale/fs/c113@s9
+            sat-scale/fs/c087@s9
+            sat-scale/fs/c164@s9
+            sat-scale/fs/c069@s9
+            sat-scale/fs/c119@s9
+            sat-scale/fs/c063@s9
+            sat-scale/fs/c180@s9
+            sat-scale/fs/c014@s9
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:43:01 zfs snapshot -r sat-scale@s9 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.17:43:17 zpool export sat-scale [user 0 (root) on runnervm3lb7s:linux]
+

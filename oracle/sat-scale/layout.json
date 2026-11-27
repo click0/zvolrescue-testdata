@@ -1,0 +1,43 @@
+{
+ "pool": "sat-scale",
+ "image_tag": "sat-scale-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "mirror",
+   "members": [
+    "t0-mirror-0",
+    "t0-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-mirror-0": {
+   "file": "mirror-0a.img",
+   "guid": "4295991633419982528",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t0-mirror-1": {
+   "file": "mirror-0b.img",
+   "guid": "3875343587450559834",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  }
+ }
+}
