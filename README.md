@@ -41,6 +41,20 @@ build, [reports/golden-v2](reports/golden-v2/README.md): 70 manifests,
 the manifests name, 2.2 GB. Five manifests name it (`image =
 "golden-v2"`) for what only it holds.
 
+**The satellites**, eight small pools built on the same runner's kernel
+(2026-11-27) by `build-satellite.sh` in zvolrescue, one pool-level
+feature the golden pool does not have each: `sat-removal` (three
+mirrors, the middle one removed: the indirect vdev), `sat-checkpoint` (a
+pool checkpoint, a volume destroyed after it), `sat-spare` (a hot spare
+standing in for a stale disk, a replacing left unfinished), `sat-expand`
+(a raidz1 expanded from three disks to four, which zvolrescue refuses),
+`sat-special` (special and dedup vdevs), `sat-ashift` (raidz1 at ashift 9
+beside raidz1 at 13), `sat-slog` (an intent log the pool never applied)
+and `sat-mmp` (`multihost=on`). Each is the release `sat-<name>-v1`, 54
+to 97 MB, 0.59 GB in all; its oracle in `oracle/sat-<name>/`, its
+`IMAGE.md` and the matrix at its build in `reports/sat-<name>-v1/` — 26
+manifests name them (`image = "sat-<name>"`), 26 passed.
+
 **`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven
 volumes over every checksum and compression and three block sizes, a
@@ -110,12 +124,12 @@ for the pinned subset of the matrix it runs on every push.
 | `reports/<tag>/`, `reports/<tag>-rN/` | damage-matrix runs against that image, the first and every one since: what passed, what did not, what was not applicable |
 | `manifests/` | damage manifests, one file per class and per combination set; format in [manifests/README.md](manifests/README.md) |
 | `tools/` | `lint-manifests.py`, which checks every manifest against the format and the oracle on every push; `add-report.py`, which keeps a run's report as the next `reports/<tag>-rN/` |
-| `IMAGE.md` | how the current image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history; an earlier image's copy sits under its `reports/<tag>/` |
+| `IMAGE.md` | how the current image was built (the script lives in zvolrescue), tool versions, pool layout, TXG history; an earlier image's copy sits under its `reports/<tag>/`, and a satellite's under its own |
 | [`ROADMAP.md`](ROADMAP.md) | what comes next: cases on `image-v1` for what zvolrescue reads now, `golden-v2` and small single-feature pools, one tag per pool so that a CI job fetches only what it tests |
 
 ## Versioning
 
-Each image version is a release tag here (`image-v1`, `golden-v2`, …);
+Each image version is a release tag here (`image-v1`, `golden-v2`, the satellites' `sat-<name>-v1`, …);
 zvolrescue pins the tag and the `SHA256SUMS` it expects. Images are never
 edited by hand: a change means a new build and a new tag. Manifests and the
 oracle are versioned in git alongside.

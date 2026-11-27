@@ -9,7 +9,7 @@ image never rebuilt in place, expectations derived from ZFS redundancy.
 
 ## Where things stand
 
-`image-v1`, and `golden-v2` with it, now test all five programs against
+`image-v1`, `golden-v2` with it, and the eight satellites now test all five programs against
 what OpenZFS itself read of them (`run-matrix.py` in zvolrescue): in every case `zvolrescue`
 — the volumes `dump` writes, the datasets and the features `list`
 reports against `zdb -t T -d` and `zpool get`, what `scan` reads of the
@@ -159,7 +159,31 @@ older copies `older-self:round6`, which is either image's, and five name
 `realworld.yml` in zvolrescue judges both published images every week,
 a job each. On the control, the carve did not find `vm/doomed` among
 the newest candidates of its block size: its blocks were freed nine
-rounds before the export. The satellites follow.
+rounds before the export.
+
+*Done: the satellites* (2026-11-27; the releases `sat-<name>-v1`, the
+oracles in `oracle/sat-<name>/`, pinned in zvolrescue as
+`tests/golden/sat-<name>-v1.SHA256SUMS`). Built by `build-satellite.sh`
+in zvolrescue on the same runner, with the oracle code `build-image.sh`
+uses, now shared (`lib-build.sh`): eight pools of the table below, the
+two ashifts in one (`sat-ashift`, a raidz1 at each, which is also two
+ashifts in one pool) and the intent log and multihost apart (`sat-slog`,
+`sat-mmp`). Each holds the same two volumes and a filesystem written
+over four rounds of snapshots, with its feature put in between, and is
+judged at its build by the manifests that name it: 26, a control each,
+26 passed (`reports/sat-<name>-v1`); the manifests that name no pool are
+not run against a satellite. Their first builds showed the tool reading
+right every case that ran, and the harness misjudging what it had never
+met — slots under replacement, the special, dedup and log classes,
+a heartbeat's slot in a multihost ring, a checkpoint's uberblock and its
+TXG, the blocks of a frozen pool's TXGs that never committed — and
+members of 128 MiB running out of space to OpenZFS's slop: they are
+256 MiB, their volumes sparse. The expanded raidz is refused by every
+program, as it should be until zvolrescue reads a reflowed raidz. What
+it came to against the estimates: 0.59 GB of release in all (54 to
+97 MB each; 0.8 GB estimated), 43 MB of oracle text. `realworld.yml` in
+zvolrescue judges the eight every week beside the two golden images, a
+job each.
 
 Release: about 3.6 GB in all — `golden-v2` 2.8 GB with the older copies
 the manifests name, the satellites 0.8 GB — beside `image-v1`'s 2.51 GB,
@@ -185,8 +209,11 @@ copies:
 | `sat-spare-v1` | raidz2 with a hot spare at work, and a replacing that did not finish | 0.18 GB |
 | `sat-expand-v1` | raidz1 expanded from three disks to four (OpenZFS 2.3 and later) | 0.12 GB |
 | `sat-special-v1` | special and dedup vdevs | 0.08 GB |
-| `sat-ashift9-v1`, `sat-ashift13-v1` | raidz1 at the two ashifts `image-v1` does not have | 0.08 GB |
+| `sat-ashift-v1` (planned as two tags) | raidz1 at the two ashifts `image-v1` does not have, one beside the other | 0.08 GB |
 | `sat-slog-v1`, `sat-mmp-v1` | an intent log not applied; `multihost=on` | 0.06 GB |
+
+The sizes in this table are the estimates; each satellite's release is
+54 to 97 MB as built, a member's free space compressing to nothing.
 
 A dRAID of more than one group waits until the harness maps a DVA
 inside a top-level vdev of several groups; until then it refuses such a
