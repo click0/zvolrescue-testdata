@@ -1,0 +1,50 @@
+
+MOS Configuration:
+        version: 5000
+        name: 'sat-large'
+        state: 0
+        txg: 4
+        pool_guid: 15257559254202194838
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 4096
+        hostid: 1951094691
+        hostname: 'runnervm3lb7s'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 1
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 15257559254202194838
+            create_txg: 4
+            com.klarasystems:vdev_zap_root: 129
+            children[0]:
+                type: 'mirror'
+                id: 0
+                guid: 15209951623929363783
+                metaslab_array: 133
+                metaslab_shift: 29
+                ashift: 12
+                asize: 12880183296
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 130
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 10506292247085062537
+                    path: '/var/tmp/sat/members/mirror-0a.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 221925882901142603
+                    path: '/var/tmp/sat/members/mirror-0b.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 132
+        features_for_read:
+            com.delphix:hole_birth
+            com.delphix:embedded_data
+            com.klarasystems:vdev_zaps_v2

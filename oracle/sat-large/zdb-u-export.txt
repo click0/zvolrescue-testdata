@@ -1,0 +1,14 @@
+
+Uberblock:
+	magic = 0000000000bab10c
+	version = 5000
+	txg = 245
+	guid_sum = 4302240860698660529
+	timestamp = 1795819435 UTC = Fri Nov 27 22:43:55 2026
+	bp = DVA[0]=<0:e8aaf000:1000> DVA[1]=<0:22ed3000:1000> DVA[2]=<0:120255000:1000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique triple size=1000L/1000P birth=245L/245P fill=119 cksum=00000002b3a96a44:00000a615c61d2c7:0013f63666d274cd:199e650f7f1f6a8c
+	mmp_magic = 00000000a11cea11
+	mmp_delay = 0
+	mmp_valid = 0
+	checkpoint_txg = 0
+	raidz_reflow state=0 off=0
+

@@ -1,0 +1,11 @@
+  pool: sat-large
+ state: ONLINE
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-large                               ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+
+errors: No known data errors

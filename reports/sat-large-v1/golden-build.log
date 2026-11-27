@@ -1,0 +1,23 @@
+== sat-large (sat-large-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== ballast
+== vm/big
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== oracle
+== export
+== files and history, the pool imported read-only
+sat-large: 3 entries
+sat-large@s0: 3 entries
+sat-large@s1: 3 entries, the same as sat-large@s0
+sat-large/fs: 53 entries
+sat-large/fs@s0: 49 entries
+sat-large/fs@s1: 53 entries, the same as sat-large/fs
+sat-large/vm: 1 entries
+sat-large/vm@s0: 1 entries, the same as sat-large/vm
+sat-large/vm@s1: 1 entries, the same as sat-large/vm
+9 filesystems and snapshots, 94 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

@@ -15,7 +15,7 @@ is counted by its case alone, and a class that damages no member
 (the control; metadata, every case of which aims at a block) has no
 rows here. An empty cell (—) is a combination no manifest tests.
 
-121 manifests; not counted, their pool having no oracle here: control-sat-large, data-sat-large-past-4gib, member-sat-large-mirror-half.
+124 manifests.
 
 ## Top-level vdevs, by class and position
 
@@ -33,12 +33,12 @@ rows here. An empty cell (—) is a combination no manifest tests.
 | partition | ? | — | — | — | — | — | — | 3 |
 | data | none | — | — | — | — | — | — | — |
 | data | within | — | — | — | — | — | — | 7 |
-| data | at | 1 | — | 1 | — | — | 2 | 2 |
+| data | at | 1 | — | 2 | — | — | 2 | 2 |
 | data | past | 1 | — | 1 | — | — | 1 | — |
 | data | ? | — | — | — | — | — | — | — |
 | member | none | — | — | — | — | — | — | — |
 | member | within | — | — | — | — | — | — | 1 |
-| member | at | — | — | 6 | — | 1 | 5 | 3 |
+| member | at | — | — | 7 | — | 1 | 5 | 3 |
 | member | past | — | 2 | 1 | 1 | 1 | — | 1 |
 | member | ? | — | — | — | — | — | — | 2 |
 | older-self | none | — | — | — | — | — | — | — |
@@ -68,8 +68,8 @@ the pool at all).
 | labels | 17 | — | — | — | — | 2 |
 | partition | 2 | — | — | — | 3 | 2 |
 | metadata | 2 | — | — | — | 10 | 0 |
-| data | — | 7 | 6 | 3 | 7 | 16 |
-| member | 3 | 1 | 13 | 3 | 2 | 20 |
+| data | — | 7 | 7 | 3 | 7 | 17 |
+| member | 3 | 1 | 14 | 3 | 2 | 21 |
 | older-self | — | — | — | — | 4 | 0 |
 | combo | 2 | 8 | 5 | 1 | 8 | 6 |
-| control | 14 | — | — | — | — | 0 |
+| control | 15 | — | — | — | — | 0 |

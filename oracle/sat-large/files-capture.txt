@@ -1,0 +1,39 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d members -o readonly=on -o cachefile=none -R ALTROOT -N sat-large
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-large
+ state: ONLINE
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-large                               ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                      MOUNTED  MOUNTPOINT                          USED  REFER
+sat-large                 no       /var/tmp/sat/altroot/sat-large      454M   104K
+sat-large@s0              -        -                                     0B   104K
+sat-large@s1              -        -                                     0B   104K
+sat-large/fs              no       /var/tmp/sat/altroot/sat-large/fs  1.14M  1.05M
+sat-large/fs@s0           -        -                                    88K  1.03M
+sat-large/fs@s1           -        -                                     0B  1.05M
+sat-large/vm              no       /var/tmp/sat/altroot/sat-large/vm   452M    96K
+sat-large/vm@s0           -        -                                     0B    96K
+sat-large/vm@s1           -        -                                     0B    96K
+sat-large/vm/big          -        -                                   426M   426M
+sat-large/vm/disk-16k     -        -                                  17.3M  16.1M
+sat-large/vm/disk-16k@s0  -        -                                  1.14M  16.1M
+sat-large/vm/disk-16k@s1  -        -                                     0B  16.1M
+sat-large/vm/disk-8k      -        -                                  8.94M  8.22M
+sat-large/vm/disk-8k@s0   -        -                                   736K  8.22M
+sat-large/vm/disk-8k@s1   -        -                                     0B  8.22M
+members: unchanged after the export (their sums against members.sha256)

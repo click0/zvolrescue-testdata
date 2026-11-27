@@ -1,0 +1,16 @@
+sat-large	filesystem	8574774686069230570	Fri Nov 27 22:41 2026	454M	104K	-	-	on	lz4	off	none
+sat-large@s0	snapshot	7144800689452893962	Fri Nov 27 22:41 2026	0B	104K	-	-	-	-	off	-
+sat-large@s1	snapshot	7191691045150286982	Fri Nov 27 22:41 2026	0B	104K	-	-	-	-	off	-
+sat-large/fs	filesystem	5185417007138123686	Fri Nov 27 22:41 2026	1.14M	1.05M	-	-	on	lz4	off	none
+sat-large/fs@s0	snapshot	18103425312461277651	Fri Nov 27 22:41 2026	88K	1.03M	-	-	-	-	off	-
+sat-large/fs@s1	snapshot	14048273740854170543	Fri Nov 27 22:41 2026	0B	1.05M	-	-	-	-	off	-
+sat-large/vm	filesystem	11472824990869217729	Fri Nov 27 22:41 2026	452M	96K	-	-	on	lz4	off	none
+sat-large/vm@s0	snapshot	17253125705746290564	Fri Nov 27 22:41 2026	0B	96K	-	-	-	-	off	-
+sat-large/vm@s1	snapshot	6880533119499186641	Fri Nov 27 22:41 2026	0B	96K	-	-	-	-	off	-
+sat-large/vm/big	volume	6954111752289748636	Fri Nov 27 22:42 2026	426M	426M	10G	8K	on	zstd	off	none
+sat-large/vm/disk-16k	volume	3342896285307605548	Fri Nov 27 22:41 2026	17.3M	16.1M	24M	16K	sha256	off	off	none
+sat-large/vm/disk-16k@s0	snapshot	5415901333220681922	Fri Nov 27 22:41 2026	1.14M	16.1M	24M	-	-	-	off	-
+sat-large/vm/disk-16k@s1	snapshot	15172227037045078265	Fri Nov 27 22:41 2026	0B	16.1M	24M	-	-	-	off	-
+sat-large/vm/disk-8k	volume	8457070217050274266	Fri Nov 27 22:41 2026	8.94M	8.22M	24M	8K	fletcher4	lz4	off	none
+sat-large/vm/disk-8k@s0	snapshot	2332986671204527350	Fri Nov 27 22:41 2026	736K	8.22M	24M	-	-	-	off	-
+sat-large/vm/disk-8k@s1	snapshot	16341086951399664244	Fri Nov 27 22:41 2026	0B	8.22M	24M	-	-	-	off	-

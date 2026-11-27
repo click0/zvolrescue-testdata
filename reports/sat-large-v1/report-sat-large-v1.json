@@ -1,0 +1,319 @@
+[
+ {
+  "id": "control-sat-large",
+  "description": "Nothing damaged and nothing told, on a pool with a volume of 10 GiB: over 1.3 million blocks of 8K under four levels of indirect blocks, most of them kept in their block pointers, offsets past 4 GiB in the volume and in its members",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-large/vm/disk-8k": "ok",
+   "sat-large/vm/disk-16k": "ok",
+   "sat-large/vm/big": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-large": "ok",
+    "sat-large/fs": "ok",
+    "sat-large/fs@s0": "ok",
+    "sat-large/fs@s1": "ok",
+    "sat-large/vm": "ok",
+    "sat-large/vm@s0": "ok",
+    "sat-large/vm@s1": "ok",
+    "sat-large@s0": "ok",
+    "sat-large@s1": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 236": "ok",
+    "txg 236 features": "ok",
+    "txg 226": "ok",
+    "txg 226 features": "ok",
+    "txg 225": "ok",
+    "txg 225 features": "ok",
+    "txg 218": "ok",
+    "txg 218 features": "ok",
+    "txg 211": "ok",
+    "txg 211 features": "ok",
+    "txg 206": "ok",
+    "txg 206 features": "ok",
+    "txg 205": "ok",
+    "txg 205 features": "ok",
+    "txg 202": "ok",
+    "txg 202 features": "ok",
+    "txg 201": "ok",
+    "txg 201 features": "ok",
+    "txg 200": "ok",
+    "txg 200 features": "ok",
+    "txg 199": "ok",
+    "txg 199 features": "ok",
+    "txg 198": "ok",
+    "txg 198 features": "ok",
+    "txg 197": "ok",
+    "txg 197 features": "ok",
+    "txg 196": "ok",
+    "txg 196 features": "ok",
+    "txg 195": "ok",
+    "txg 195 features": "ok",
+    "txg 192": "ok",
+    "txg 192 features": "ok",
+    "txg 191": "ok",
+    "txg 191 features": "ok",
+    "txg 190": "ok",
+    "txg 190 features": "ok",
+    "txg 189": "ok",
+    "txg 189 features": "ok",
+    "txg 188": "ok",
+    "txg 188 features": "ok",
+    "txg 187": "ok",
+    "txg 187 features": "ok",
+    "txg 185": "ok",
+    "txg 185 features": "ok",
+    "txg 184": "ok",
+    "txg 184 features": "ok",
+    "txg 183": "ok",
+    "txg 183 features": "ok",
+    "txg 182": "ok",
+    "txg 182 features": "ok",
+    "txg 180": "ok",
+    "txg 180 features": "ok",
+    "txg 178": "ok",
+    "txg 178 features": "ok",
+    "txg 177": "ok",
+    "txg 177 features": "ok",
+    "txg 176": "ok",
+    "txg 176 features": "ok",
+    "txg 175": "ok",
+    "txg 175 features": "ok",
+    "txg 171": "ok",
+    "txg 171 features": "ok"
+   },
+   "txgs": [
+    171,
+    175,
+    176,
+    177,
+    178,
+    180,
+    182,
+    183,
+    184,
+    185,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    205,
+    206,
+    211,
+    218,
+    225,
+    226,
+    236,
+    245
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-large/vm/big": "ok",
+    "sat-large/vm/disk-16k": "ok",
+    "sat-large/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-large/vm/big": [
+     "c0040, born at txg 218"
+    ],
+    "sat-large/vm/disk-16k": [
+     "c0004, born at txg 115"
+    ],
+    "sat-large/vm/disk-8k": [
+     "c0003, born at txg 111"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 245": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-large-v1"
+ },
+ {
+  "id": "data-sat-large-past-4gib",
+  "description": "Everything of one mirror half past its first 4 GiB zeroed, its rear labels with it: every block there read from the other half, at offsets no 32-bit number holds",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-large/vm/disk-8k": "ok",
+   "sat-large/vm/disk-16k": "ok",
+   "sat-large/vm/big": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-large": "ok",
+    "sat-large/fs": "ok",
+    "sat-large/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    245
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 245": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-large-v1"
+ },
+ {
+  "id": "member-sat-large-mirror-half",
+  "description": "One half of the mirror absent, on a pool with a volume of 10 GiB",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-large/vm/disk-8k": "ok",
+   "sat-large/vm/disk-16k": "ok",
+   "sat-large/vm/big": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-large": "ok",
+    "sat-large/fs": "ok",
+    "sat-large/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    245
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-1": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 245": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-large-v1"
+ }
+]
