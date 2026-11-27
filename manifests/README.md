@@ -51,14 +51,27 @@ where the damage does not deterministically hit live data. A run that
 lands anywhere else is a tool defect. Every run also asserts that the SHA-256 of each damaged
 copy is unchanged after the tool ran (read-only invariant).
 
+A volume of `checksum=off` (`golden-v2`'s `vm/disk-nocsum`) has
+nothing its blocks can be verified against: damage that writes other
+bytes over its data without a word — zeros, random bytes, flipped bits,
+an older copy, a shift — is invisible to ZFS and to any reader. Where a
+case does that and the tool says the volume's blocks were checked by
+nothing, bytes that differ from the oracle's are `unverified`, which
+counts as the volume read: ZFS would have handed over the same. On the
+control it is bit-exact or a defect, like any volume.
+
 A manifest written for one pool alone names it: `image = "<pool>"`, by
-the name that pool's `oracle/<pool>/layout.json` gives (`golden`, and a
-satellite's when there are satellites). It is then run against that
-pool and no other, and the harness fetches nothing of another pool for
-it. One that names none, as every manifest here does today, is run
-against any pool the harness is given — the published image and the
-pools it builds with `ztest` on the spot — and is checked here against
-`golden`'s oracle.
+the name that pool's `layout.json` gives (`golden`, and a satellite's
+when there are satellites). It is then run against that pool and no
+other — every image of it: `image-v1` and `golden-v2` are both of
+`golden` — and the harness fetches nothing of another pool for it. One
+aimed at what a single image holds (a volume `image-v1` does not have)
+names that image by its tag instead: `image = "golden-v2"`. One that
+names none, as most manifests here do, is run against any pool the
+harness is given — the published images and the pools it builds with
+`ztest` on the spot — and is checked here against `golden`'s oracles,
+passing when one of them has everything it names (on the other it is
+n/a).
 
 Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
 negative start counts from the end of the member (`-512KiB..` is the last
@@ -80,10 +93,12 @@ is given with `--map`: the range is known unread, not merely wrong),
 re-created larger, the rear labels no longer where the length puts
 them), `missing` (the member is not passed to the tool at all; no
 range), `older-self:<source>` — the range is replaced by the same range
-of an earlier consistent copy of the member (`image-v1-round6` = the
-`round6-*` release files of tag `image-v1`): the "member replaced by an
-older copy of itself" case, where everything verifies but nothing is
-current — and `forged-txg:<bump>`, on a `label:…/rings` range only: the
+of an earlier consistent copy of the member (`round6` = the `round6-*`
+files of the image's own release, a copy the builder takes of every
+member right after round 6 of the fill; `image-v1-round6`, the form the
+first manifests were written in, names `image-v1`'s alone): the
+"member replaced by an older copy of itself" case, where everything
+verifies but nothing is current — and `forged-txg:<bump>`, on a `label:…/rings` range only: the
 ring's newest verified uberblock copied into the slot ZFS would write
 txg+bump to (txg modulo the ring's 32 slots, so a bump of 32 would land
 on the slot it came from and is refused), with that txg, that birth in

@@ -4,10 +4,10 @@ classes = ["older-self"]
 
 [[damage]]
 member = { leaf = 0, top = 1 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 [[damage]]
 member = { leaf = 2, top = 1 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 
 [expect]
 # Two stale columns are two columns that fail their checksums for every

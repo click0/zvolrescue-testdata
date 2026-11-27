@@ -137,6 +137,19 @@ Release: +0. Git: under 1 MB of text.
 
 ## Stage 2 — `golden-v2` and the satellites
 
+*Under way: `golden-v2`.* Its builder is written (`build-image.sh` in
+zvolrescue `e4414d5`): everything below, the hash of `vm/doomed` just before it is
+destroyed, volumes written with content their compression shrinks
+(`image-v1`'s keystream was stored uncompressed, so no codec ever read
+one of its data blocks), and the whole oracle captured by the build —
+the labels' rings, the files, the history, `zdb -dddddd` one file a
+dataset. The manifests name their older copies `older-self:round6`,
+which is either image's, and a manifest may name an image by its tag
+(`image = "golden-v2"`) for what that image alone holds; the oracle
+goes into `oracle/golden-v2/`, `oracle/golden/` staying `image-v1`'s.
+The `golden` job of `realworld.yml` builds it and runs the matrix;
+`publish-golden.yml` publishes what passed. The satellites follow.
+
 Release: about 3.6 GB in all — `golden-v2` 2.8 GB with the older copies
 the manifests name, the satellites 0.8 GB — beside `image-v1`'s 2.51 GB,
 which stays. Git: 20–40 MB of oracle text.

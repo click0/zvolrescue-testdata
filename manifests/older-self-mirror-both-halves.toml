@@ -4,10 +4,10 @@ classes = ["older-self"]
 
 [[damage]]
 member = { leaf = 0, top = 0 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 [[damage]]
 member = { leaf = 1, top = 0 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 
 [expect]
 # The pool's newest TXG is still found on the raidz2 and dRAID members,

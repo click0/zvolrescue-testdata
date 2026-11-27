@@ -4,7 +4,7 @@ classes = ["older-self"]
 
 [[damage]]
 member = { leaf = 0, top = 0 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 
 [expect]
 # The stale half's labels carry older uberblocks; the newest TXG comes

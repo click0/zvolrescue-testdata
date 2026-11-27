@@ -4,7 +4,7 @@ classes = ["older-self", "member"]
 
 [[damage]]
 member = { leaf = 1, top = 1 }
-pattern = "older-self:image-v1-round6"
+pattern = "older-self:round6"
 [[damage]]
 member = { leaf = 3, top = 1 }
 pattern = "missing"

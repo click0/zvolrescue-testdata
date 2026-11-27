@@ -11,11 +11,12 @@ on every push here:
   * every key is one the format has, at every level;
   * patterns, ranges and structure targets are in the format's grammar;
   * every member, top-level vdev, dataset and volume a manifest names is
-    in the oracle of the pool it is written against: the one its `image`
-    names, by the name that pool's `layout.json` gives, and `golden`
-    where it names none;
-  * an older copy is named only for a member the image's release holds
-    one of;
+    in an oracle of what it is written against: its `image` names a pool,
+    by the name that pool's `layout.json` gives (`golden` where it names
+    none), and then any image of that pool will do — on the others the
+    case is n/a — or one image by its tag (`golden-v2`);
+  * an older copy is `round6` (the copies the image's release holds) and
+    named only for a member the release holds one of;
   * expected outcomes, of the volumes, of the files (`expect.files`,
     only where the oracle has a files.json) and of the history
     (`expect.timeline`, only where it has zpool-history-il.txt), are the
@@ -165,8 +166,8 @@ def check_pattern(pattern, image, role, rng):
     elif name == "grow" and arg and SIZE.fullmatch(arg):
         pass
     elif name == "older-self" and arg:
-        if image.tag and arg != f"{image.tag}-round6":
-            out.append(f"older-self source {arg!r} is not this image's ({image.tag}-round6)")
+        if arg != "round6" and not (image.tag and arg == f"{image.tag}-round6"):
+            out.append(f"older-self source {arg!r} is not `round6`, the copies this image's release holds")
         if role and image.members[role]["file"] not in image.older:
             out.append(f"no older copy of {image.members[role]['file']} in the release")
     elif name == "forged-txg" and arg.isdigit() and int(arg) > 0:
@@ -245,17 +246,30 @@ def check_outcome(value, where):
 
 
 def lint(path, images):
-    """Every finding about one manifest file."""
+    """Every finding about one manifest file. A manifest is held to every
+    oracle of the pool or the image its `image` names, and passes when
+    one of them has all it names: on the others it is n/a when it runs,
+    as a case aimed at what only one image of a pool holds is."""
     stem = os.path.basename(path)[: -len(".toml")]
     try:
         m = tomllib.load(open(path, "rb"))
     except tomllib.TOMLDecodeError as e:
         return [f"does not parse: {e}"]
+    name = m.get("image", "golden")
+    if not isinstance(name, str) or name not in images:
+        return [f"key {k!r} is not in the format" for k in m if k not in TOP_KEYS] + \
+            [f"image {name!r} names no pool or image an oracle here describes ({sorted(images)})"]
+    found = [(lint_against(m, stem, image), image) for image in images[name]]
+    if any(not f for f, _ in found):
+        return []
+    best, image = min(found, key=lambda x: len(x[0]))
+    where = f" (against {os.path.basename(image.dir)})" if len(found) > 1 else ""
+    return [e + where for e in best]
+
+
+def lint_against(m, stem, image):
+    """Every finding about one manifest, held to one image's oracle."""
     out = [f"key {k!r} is not in the format" for k in m if k not in TOP_KEYS]
-    pool = m.get("image", "golden")
-    if not isinstance(pool, str) or pool not in images:
-        return out + [f"image {pool!r} names no pool an oracle here describes ({sorted(images)})"]
-    image = images[pool]
     if m.get("id") != stem:
         out.append(f"id {m.get('id')!r} is not the file's name {stem!r}")
     if not stem.startswith(tuple(f"{c}-" for c in CLASSES | {"combo"})):
@@ -361,17 +375,18 @@ def lint(path, images):
 
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else "."
-    # Every pool an oracle here describes, by the name its layout gives;
-    # of several oracles of one pool, the one whose directory is named
-    # after it.
+    # Every oracle here, under the name of its pool (all the images of
+    # it: `golden` is image-v1's oracle/golden and golden-v2's
+    # oracle/golden-v2) and under its image's tag (that one alone).
     images = {}
     for d in sorted(os.listdir(os.path.join(root, "oracle"))):
         path = os.path.join(root, "oracle", d)
         if not os.path.exists(os.path.join(path, "layout.json")):
             continue
         image = Image(path)
-        if image.pool not in images or d == image.pool:
-            images[image.pool] = image
+        images.setdefault(image.pool, []).append(image)
+        if image.tag and image.tag != image.pool:
+            images.setdefault(image.tag, []).append(image)
     folder = os.path.join(root, "manifests")
     files = sorted(f for f in os.listdir(folder) if f.endswith(".toml"))
     failed = 0
