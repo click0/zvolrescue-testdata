@@ -1,0 +1,142 @@
+{
+ "pool": "golden",
+ "image_tag": "golden-v2",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "mirror",
+   "members": [
+    "t0-mirror-0",
+    "t0-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "kind": "raidz2",
+   "members": [
+    "t1-raidz2-0",
+    "t1-raidz2-1",
+    "t1-raidz2-2",
+    "t1-raidz2-3"
+   ],
+   "groups": [
+    {
+     "kind": "raidz2",
+     "nparity": 2,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "kind": "draid1",
+   "members": [
+    "t2-draid1-0",
+    "t2-draid1-1",
+    "t2-draid1-2",
+    "t2-draid1-3"
+   ],
+   "groups": [
+    {
+     "kind": "draid1",
+     "nparity": 1,
+     "ndata": 2,
+     "nspares": 1,
+     "count": 4
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-mirror-0": {
+   "file": "mirror-0a.img",
+   "guid": "10574820031880098636",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t0-mirror-1": {
+   "file": "mirror-0b.img",
+   "guid": "17946945963126355553",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  },
+  "t1-raidz2-0": {
+   "file": "raidz2-0.img",
+   "guid": "11049278440071226445",
+   "top": 1,
+   "group": 0,
+   "group_kind": "raidz2",
+   "index": 0
+  },
+  "t1-raidz2-1": {
+   "file": "raidz2-1.img",
+   "guid": "17236841941944899550",
+   "top": 1,
+   "group": 0,
+   "group_kind": "raidz2",
+   "index": 1
+  },
+  "t1-raidz2-2": {
+   "file": "raidz2-2.img",
+   "guid": "11268661620936752335",
+   "top": 1,
+   "group": 0,
+   "group_kind": "raidz2",
+   "index": 2
+  },
+  "t1-raidz2-3": {
+   "file": "raidz2-3.img",
+   "guid": "5809276986342510915",
+   "top": 1,
+   "group": 0,
+   "group_kind": "raidz2",
+   "index": 3
+  },
+  "t2-draid1-0": {
+   "file": "draid1-0.img",
+   "guid": "16803391775793064086",
+   "top": 2,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 0
+  },
+  "t2-draid1-1": {
+   "file": "draid1-1.img",
+   "guid": "17622119590788079888",
+   "top": 2,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 1
+  },
+  "t2-draid1-2": {
+   "file": "draid1-2.img",
+   "guid": "13069146765915571588",
+   "top": 2,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 2
+  },
+  "t2-draid1-3": {
+   "file": "draid1-3.img",
+   "guid": "14549770458427078230",
+   "top": 2,
+   "group": 0,
+   "group_kind": "draid1",
+   "index": 3
+  }
+ }
+}

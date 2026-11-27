@@ -1,0 +1,137 @@
+
+MOS Configuration:
+        version: 5000
+        name: 'golden'
+        state: 0
+        txg: 449
+        pool_guid: 2764335513963786047
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 8192
+        hostid: 717217264
+        hostname: 'runnervm3lb7s'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 3
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 2764335513963786047
+            create_txg: 4
+            com.klarasystems:vdev_zap_root: 129
+            children[0]:
+                type: 'mirror'
+                id: 0
+                guid: 10301637131995793177
+                metaslab_array: 73
+                metaslab_shift: 25
+                ashift: 12
+                asize: 532152320
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 130
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 10574820031880098636
+                    path: '/var/tmp/golden/members/mirror-0a.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 17946945963126355553
+                    path: '/var/tmp/golden/members/mirror-0b.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 132
+            children[1]:
+                type: 'raidz'
+                id: 1
+                guid: 16296315948973136225
+                nparity: 2
+                metaslab_array: 70
+                metaslab_shift: 27
+                ashift: 12
+                asize: 2128609280
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 133
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 11049278440071226445
+                    path: '/var/tmp/golden/members/raidz2-0.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 134
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 17236841941944899550
+                    path: '/var/tmp/golden/members/raidz2-1.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 135
+                children[2]:
+                    type: 'file'
+                    id: 2
+                    guid: 11268661620936752335
+                    path: '/var/tmp/golden/members/raidz2-2.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 136
+                children[3]:
+                    type: 'file'
+                    id: 3
+                    guid: 5809276986342510915
+                    path: '/var/tmp/golden/members/raidz2-3.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 137
+            children[2]:
+                type: 'draid'
+                id: 2
+                guid: 1990251808048811978
+                nparity: 1
+                draid_ndata: 2
+                draid_nspares: 1
+                draid_ngroups: 1
+                metaslab_array: 65
+                metaslab_shift: 27
+                ashift: 12
+                asize: 1459617792
+                min_alloc: 8192
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 138
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 16803391775793064086
+                    path: '/var/tmp/golden/members/draid1-0.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 139
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 17622119590788079888
+                    path: '/var/tmp/golden/members/draid1-1.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 140
+                children[2]:
+                    type: 'file'
+                    id: 2
+                    guid: 13069146765915571588
+                    path: '/var/tmp/golden/members/draid1-2.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 141
+                children[3]:
+                    type: 'file'
+                    id: 3
+                    guid: 14549770458427078230
+                    path: '/var/tmp/golden/members/draid1-3.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 142
+        features_for_read:
+            com.delphix:hole_birth
+            com.delphix:embedded_data
+            org.openzfs:draid
+            com.klarasystems:vdev_zaps_v2
+            com.klarasystems:dynamic_gang_header

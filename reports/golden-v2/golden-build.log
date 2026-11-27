@@ -1,0 +1,119 @@
+== members
+== pool
+== datasets
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== the tree
+== initial fill
+== history (this takes a while)
+== oracle
+== export
+split-capture: 81 MiB in 294 files, the largest mos (3 MiB)
+== files and history, the pool imported read-only
+golden: 8 entries
+golden@s0: 8 entries
+golden@s1: 8 entries, the same as golden@s0
+golden@s2: 9 entries
+golden@s3: 9 entries, the same as golden@s2
+golden@s4: 9 entries, the same as golden@s2
+golden@s5: 9 entries, the same as golden@s2
+golden@s6: 9 entries, the same as golden@s2
+golden@s7: 9 entries, the same as golden@s2
+golden@s8: 9 entries, the same as golden@s2
+golden@s9: 9 entries, the same as golden@s2
+golden@s10: 9 entries, the same as golden@s2
+golden@s11: 8 entries, the same as golden
+golden/fs-base: 32 entries
+golden/fs-base@s2: 32 entries, the same as golden/fs-base
+golden/fs-base@s3: 32 entries, the same as golden/fs-base
+golden/fs-base@s4: 32 entries, the same as golden/fs-base
+golden/fs-base@s5: 32 entries, the same as golden/fs-base
+golden/fs-base@s6: 32 entries, the same as golden/fs-base
+golden/fs-base@s7: 32 entries, the same as golden/fs-base
+golden/fs-base@s8: 32 entries, the same as golden/fs-base
+golden/fs-base@s9: 32 entries, the same as golden/fs-base
+golden/fs-base@s10: 32 entries, the same as golden/fs-base
+golden/fs-base@s11: 32 entries, the same as golden/fs-base
+golden/fs-largednode: 401 entries
+golden/fs-largednode@s0: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s1: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s2: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s3: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s4: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s5: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s6: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s7: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s8: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s9: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s10: 401 entries, the same as golden/fs-largednode
+golden/fs-largednode@s11: 401 entries, the same as golden/fs-largednode
+golden/fs-promoted: 42 entries
+golden/fs-promoted@s0: 32 entries
+golden/fs-promoted@s1: 32 entries, the same as golden/fs-promoted@s0
+golden/fs-promoted@s2: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s3: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s4: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s5: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s6: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s7: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s8: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s9: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s10: 42 entries, the same as golden/fs-promoted
+golden/fs-promoted@s11: 42 entries, the same as golden/fs-promoted
+golden/fs-tree: 434 entries
+golden/fs-tree@s0: 440 entries
+golden/fs-tree@s1: 440 entries, the same as golden/fs-tree@s0
+golden/fs-tree@s2: 440 entries, the same as golden/fs-tree@s0
+golden/fs-tree@s3: 441 entries
+golden/fs-tree@s4: 441 entries, the same as golden/fs-tree@s3
+golden/fs-tree@s5: 441 entries, the same as golden/fs-tree@s3
+golden/fs-tree@s6: 434 entries
+golden/fs-tree@s7: 434 entries, the same as golden/fs-tree@s6
+golden/fs-tree@s8: 434 entries, the same as golden/fs-tree@s6
+golden/fs-tree@s9: 434 entries, the same as golden/fs-tree@s6
+golden/fs-tree@s10: 434 entries, the same as golden/fs-tree@s6
+golden/fs-tree@s11: 434 entries, the same as golden/fs-tree
+golden/secret-pw: 1 entries
+golden/secret-pw@s0: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s1: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s2: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s3: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s4: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s5: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s6: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s7: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s8: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s9: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s10: 1 entries, the same as golden/secret-pw
+golden/secret-pw@s11: 1 entries, the same as golden/secret-pw
+golden/secret-raw: 1 entries
+golden/secret-raw@s0: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s1: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s2: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s3: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s4: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s5: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s6: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s7: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s8: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s9: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s10: 1 entries, the same as golden/secret-raw
+golden/secret-raw@s11: 1 entries, the same as golden/secret-raw
+golden/vm: 1 entries
+golden/vm@s0: 1 entries, the same as golden/vm
+golden/vm@s1: 1 entries, the same as golden/vm
+golden/vm@s2: 1 entries, the same as golden/vm
+golden/vm@s3: 1 entries, the same as golden/vm
+golden/vm@s4: 1 entries, the same as golden/vm
+golden/vm@s5: 1 entries, the same as golden/vm
+golden/vm@s6: 1 entries, the same as golden/vm
+golden/vm@s7: 1 entries, the same as golden/vm
+golden/vm@s8: 1 entries, the same as golden/vm
+golden/vm@s9: 1 entries, the same as golden/vm
+golden/vm@s10: 1 entries, the same as golden/vm
+golden/vm@s11: 1 entries, the same as golden/vm
+102 filesystems and snapshots, 2146 files
+== release files
+== done: /var/tmp/golden/release, /var/tmp/golden/oracle, /var/tmp/golden/IMAGE.md
