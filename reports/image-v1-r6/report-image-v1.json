@@ -1,0 +1,6819 @@
+[
+ {
+  "id": "combo-across-tops-one-past-budget",
+  "description": "One top-level vdev pushed one member past its parity budget while the others stay whole",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-skein": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-edonr": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-blake3": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-sparse": "incomplete (blocks written as zeros)",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "incomplete (blocks written as zeros)",
+   "golden/vm/newname": "incomplete (blocks written as zeros)",
+   "golden/vm/clone-of-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "incomplete (entries said not whole)",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-across-tops",
+  "description": "One member absent in each of two top-level vdevs",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-bitflips-three-members",
+  "description": "Scattered single-bit flips across three members",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-skein": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-edonr": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-blake3": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-sparse": "incomplete (blocks written as zeros)",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "incomplete (blocks written as zeros)",
+   "golden/vm/newname": "incomplete (blocks written as zeros)",
+   "golden/vm/clone-of-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "incomplete (entries said not whole)",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-data-two-members-disjoint",
+  "description": "Garbage in two members, in ranges that do not overlap",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-data-two-members-same-range",
+  "description": "Garbage over every written byte of two members, read at an older transaction group",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-dnode-block-plus-member-gone",
+  "description": "One copy of a volume's first dnode block overwritten while a member of another top-level vdev is absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-label-flips-plus-data",
+  "description": "Labels of one member flipped bit by bit, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-labels-plus-data",
+  "description": "Front labels gone on one member, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-missing-plus-unidentified",
+  "description": "One member absent, another stripped of all four labels",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-1": "refused",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-1": "refused",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-mos-copy-plus-member-gone",
+  "description": "One copy of the MOS objset destroyed while another member is absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "mos:objset copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 256528384, t2-draid1-3 @ 256528384 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-objset-copy-plus-member-gone",
+  "description": "One copy of a dataset's objset destroyed while another member is absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "any:objset copy 0 on draid: 2 column(s) found by content on t2-draid1-1 @ 79073280, t2-draid1-3 @ 79073280 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-older-self-plus-member-gone",
+  "description": "On the raidz2, one member replaced by its round-6 copy while another is missing altogether",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "refused",
+    "rings t1-raidz2-2": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-partition-plus-member-gone",
+  "description": "First megabyte of one member overwritten, another member absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-rings-plus-data",
+  "description": "Uberblock rings of one member zeroed, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-shift-plus-member-gone",
+  "description": "One member shifted by 2048 sectors, another absent: two members unusable at once",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-triple-labels-data-member",
+  "description": "Three at once: one member stripped of its labels, garbage in a second, a third absent",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-skein": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-edonr": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "incomplete (blocks written as zeros)",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "incomplete (entries said not whole)",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-truncate-plus-data",
+  "description": "Tail of one member cut off, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-two-members-gone",
+  "description": "Two members absent at once",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-unidentified-plus-data",
+  "description": "One member stripped of all four labels, garbage in the written space of another",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "combo-vdev-phys-gone-and-member-missing",
+  "description": "One member's four vdev_phys nvlists zeroed while another member is absent: redundancy alone no longer covers it",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "told about t1-raidz2-0.img"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "control-undamaged",
+  "description": "Nothing damaged and nothing told: every volume, and every file of every filesystem and of each of its snapshots, as the oracle records them",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/fs-largednode@s0": "ok",
+    "golden/fs-largednode@s1": "ok",
+    "golden/fs-largednode@s10": "ok",
+    "golden/fs-largednode@s11": "ok",
+    "golden/fs-largednode@s2": "ok",
+    "golden/fs-largednode@s3": "ok",
+    "golden/fs-largednode@s4": "ok",
+    "golden/fs-largednode@s5": "ok",
+    "golden/fs-largednode@s6": "ok",
+    "golden/fs-largednode@s7": "ok",
+    "golden/fs-largednode@s8": "ok",
+    "golden/fs-largednode@s9": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-pw@s0": "ok",
+    "golden/secret-pw@s1": "ok",
+    "golden/secret-pw@s10": "ok",
+    "golden/secret-pw@s11": "ok",
+    "golden/secret-pw@s2": "ok",
+    "golden/secret-pw@s3": "ok",
+    "golden/secret-pw@s4": "ok",
+    "golden/secret-pw@s5": "ok",
+    "golden/secret-pw@s6": "ok",
+    "golden/secret-pw@s7": "ok",
+    "golden/secret-pw@s8": "ok",
+    "golden/secret-pw@s9": "ok",
+    "golden/secret-raw": "ok",
+    "golden/secret-raw@s0": "ok",
+    "golden/secret-raw@s1": "ok",
+    "golden/secret-raw@s10": "ok",
+    "golden/secret-raw@s11": "ok",
+    "golden/secret-raw@s2": "ok",
+    "golden/secret-raw@s3": "ok",
+    "golden/secret-raw@s4": "ok",
+    "golden/secret-raw@s5": "ok",
+    "golden/secret-raw@s6": "ok",
+    "golden/secret-raw@s7": "ok",
+    "golden/secret-raw@s8": "ok",
+    "golden/secret-raw@s9": "ok",
+    "golden/vm": "ok",
+    "golden/vm@s0": "ok",
+    "golden/vm@s1": "ok",
+    "golden/vm@s10": "ok",
+    "golden/vm@s11": "ok",
+    "golden/vm@s2": "ok",
+    "golden/vm@s3": "ok",
+    "golden/vm@s4": "ok",
+    "golden/vm@s5": "ok",
+    "golden/vm@s6": "ok",
+    "golden/vm@s7": "ok",
+    "golden/vm@s8": "ok",
+    "golden/vm@s9": "ok",
+    "golden@s0": "ok",
+    "golden@s1": "ok",
+    "golden@s10": "ok",
+    "golden@s11": "ok",
+    "golden@s2": "ok",
+    "golden@s3": "ok",
+    "golden@s4": "ok",
+    "golden@s5": "ok",
+    "golden@s6": "ok",
+    "golden@s7": "ok",
+    "golden@s8": "ok",
+    "golden@s9": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 5006": "ok",
+    "txg 5006 features": "ok",
+    "txg 4994": "ok",
+    "txg 4994 features": "ok",
+    "txg 4993": "ok",
+    "txg 4993 features": "ok",
+    "txg 4986": "ok",
+    "txg 4986 features": "ok",
+    "txg 4982": "ok",
+    "txg 4982 features": "ok",
+    "txg 4978": "ok",
+    "txg 4978 features": "ok",
+    "txg 4970": "ok",
+    "txg 4970 features": "ok",
+    "txg 4966": "ok",
+    "txg 4966 features": "ok",
+    "txg 4958": "ok",
+    "txg 4958 features": "ok",
+    "txg 4949": "ok",
+    "txg 4949 features": "ok",
+    "txg 4945": "ok",
+    "txg 4945 features": "ok",
+    "txg 4905": "ok",
+    "txg 4905 features": "ok"
+   },
+   "txgs": [
+    4905,
+    4945,
+    4949,
+    4958,
+    4966,
+    4970,
+    4978,
+    4982,
+    4986,
+    4993,
+    4994,
+    5006,
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden/vm/clone-of-16k": "ok",
+    "golden/vm/disk-16k": "ok",
+    "golden/vm/disk-64k": "ok",
+    "golden/vm/disk-8k": "ok",
+    "golden/vm/disk-blake3": "ok",
+    "golden/vm/disk-edonr": "ok",
+    "golden/vm/disk-skein": "ok",
+    "golden/vm/disk-sparse": "ok",
+    "golden/vm/newname": "ok"
+   },
+   "detail": {
+    "golden/vm/clone-of-16k": [
+     "c0372, born at txg 4986"
+    ],
+    "golden/vm/disk-16k": [
+     "c0615, born at txg 4949"
+    ],
+    "golden/vm/disk-64k": [
+     "c0708, born at txg 4954"
+    ],
+    "golden/vm/disk-8k": [
+     "c0707, born at txg 4945"
+    ],
+    "golden/vm/disk-blake3": [
+     "c0710, born at txg 4966"
+    ],
+    "golden/vm/disk-edonr": [
+     "c0616, born at txg 4962"
+    ],
+    "golden/vm/disk-skein": [
+     "c0709, born at txg 4958"
+    ],
+    "golden/vm/disk-sparse": [
+     "c0617, born at txg 4970"
+    ],
+    "golden/vm/newname": [
+     "c0618, born at txg 4982"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-bit-flips",
+  "description": "Sixty-four single-bit flips scattered over the written space of one member",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-block-every-piece",
+  "description": "Every piece of one data block of a volume overwritten: the block's only copy is gone",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-block-one-piece",
+  "description": "One piece of one data block of a volume overwritten: a mirror half's copy, one raidz column, one dRAID column",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-encrypted-block",
+  "description": "Every piece of one data block of an encrypted volume overwritten",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-gang-header",
+  "description": "Garbage over the start of the written space, where gang headers and early metadata live",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-one-member",
+  "description": "A tenth of the written space of one member overwritten with garbage",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-two-members-disjoint",
+  "description": "Garbage in two members, in parts of the written space that do not overlap",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-two-members-same-range",
+  "description": "Garbage over every written byte of two members",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-unreadable-one-member",
+  "description": "Every written sector of one raidz2 member unreadable, as an imager reports it: zeros in the image, and the ranges marked bad in its ddrescue map",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-zeros-one-member",
+  "description": "A tenth of the written space of one member zeroed rather than filled with garbage",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "data-zeros-two-members-same-range",
+  "description": "The same bytes as `data-two-members-same-range`, zeroed instead of filled with garbage",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-all-every-member-roots-search-order",
+  "description": "All four labels of every member zeroed whole \u2014 configuration and uberblocks \u2014 and the pool read at the headers zvolcarve roots finds, through a layout given out of order and searched",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "hints from the oracle's layout, every raidz and dRAID group reversed",
+   "object-set headers from zvolcarve roots"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "refused",
+    "label t0-mirror-1": "refused",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "refused",
+    "label t1-raidz2-2": "refused",
+    "label t1-raidz2-3": "refused",
+    "label t2-draid1-0": "refused",
+    "label t2-draid1-1": "refused",
+    "label t2-draid1-2": "refused",
+    "label t2-draid1-3": "refused",
+    "uberblock txg 4994": "refused",
+    "uberblock txg 5015": "refused",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "refused",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "refused",
+    "rings t1-raidz2-2": "refused",
+    "rings t1-raidz2-3": "refused",
+    "rings t2-draid1-0": "refused",
+    "rings t2-draid1-1": "refused",
+    "rings t2-draid1-2": "refused",
+    "rings t2-draid1-3": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-all-four",
+  "description": "All four labels of one member zeroed: the pool cannot identify it any more",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-bit-flips-all-four",
+  "description": "Single-bit flips through all four labels of one member: present, structured, and wrong",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-boot-area-every-member",
+  "description": "The reserved boot area of every member (after the front labels, before the first metaslab) overwritten with noise: a negative control, where ZFS reads nothing",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-forged-txg",
+  "description": "Every member's rings carry a sealed uberblock three TXGs newer than the pool ever reached, pointing at an object set no block matches; one member has lost its rear rings besides",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "t0-mirror-0: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t0-mirror-1: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t1-raidz2-0: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t1-raidz2-1: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t1-raidz2-2: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t1-raidz2-3: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t2-draid1-0: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t2-draid1-1: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t2-draid1-2: txg 5018 forged from 5015 into slot 26 of 4 ring(s)",
+   "t2-draid1-3: txg 5018 forged from 5015 into slot 26 of 4 ring(s)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "passed_over": {
+    "golden/vm/disk-8k": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-16k": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-64k": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-skein": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-edonr": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-blake3": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/disk-sparse": "txg 5018 (pool): every copy failed its checksum",
+    "golden/secret-raw/disk": "txg 5018 (pool): every copy failed its checksum",
+    "golden/secret-pw/disk": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/newname": "txg 5018 (pool): every copy failed its checksum",
+    "golden/vm/clone-of-16k": "txg 5018 (pool): every copy failed its checksum"
+   },
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-front-pair",
+  "description": "Both front labels (L0, L1) of one member zeroed",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-metaslab-slack-every-member",
+  "description": "The slack of every member (past the last metaslab of its top-level vdev, up to L2) overwritten with noise: a negative control, where ZFS allocates nothing",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-one-l0",
+  "description": "Label L0 of one member zeroed; the other three are untouched",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-rear-pair",
+  "description": "Both rear labels (L2, L3) of one member zeroed",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-rings-every-member-roots",
+  "description": "The uberblock rings of every member zeroed, and the pool read at the object-set headers zvolcarve roots finds in raw space",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "object-set headers from zvolcarve roots"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "refused",
+    "uberblock txg 5015": "refused",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "refused",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "refused",
+    "rings t1-raidz2-2": "refused",
+    "rings t1-raidz2-3": "refused",
+    "rings t2-draid1-0": "refused",
+    "rings t2-draid1-1": "refused",
+    "rings t2-draid1-2": "refused",
+    "rings t2-draid1-3": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-rings-every-member",
+  "description": "The uberblock rings of all four labels of every member zeroed: no uberblock is left anywhere, and nothing is told the tool",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "refused",
+   "refused_detail": {
+    "golden/vm/disk-8k": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-16k": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-64k": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-skein": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-edonr": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-blake3": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/disk-sparse": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/secret-raw/disk": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/secret-pw/disk": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/newname": "exit 3: zvolrescue: no verified uberblocks on the scanned members",
+    "golden/vm/clone-of-16k": "exit 3: zvolrescue: no verified uberblocks on the scanned members"
+   },
+   "golden/vm/disk-16k": "refused",
+   "golden/vm/disk-64k": "refused",
+   "golden/vm/disk-skein": "refused",
+   "golden/vm/disk-edonr": "refused",
+   "golden/vm/disk-blake3": "refused",
+   "golden/vm/disk-sparse": "refused",
+   "golden/secret-raw/disk": "refused",
+   "golden/secret-pw/disk": "refused",
+   "golden/vm/newname": "refused",
+   "golden/vm/clone-of-16k": "refused"
+  },
+  "files": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "refused",
+    "golden/fs-largednode": "refused",
+    "golden/secret-pw": "refused",
+    "golden/secret-raw": "refused",
+    "golden/vm": "refused"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "refused"
+   },
+   "txgs": []
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "golden/vm/clone-of-16k": "ok",
+    "golden/vm/disk-16k": "ok",
+    "golden/vm/disk-64k": "ok",
+    "golden/vm/disk-8k": "ok",
+    "golden/vm/disk-blake3": "refused",
+    "golden/vm/disk-edonr": "refused",
+    "golden/vm/disk-skein": "refused",
+    "golden/vm/disk-sparse": "ok",
+    "golden/vm/newname": "ok"
+   },
+   "detail": {
+    "golden/vm/clone-of-16k": [
+     "c0260, born at txg 4986"
+    ],
+    "golden/vm/disk-16k": [
+     "c0420, born at txg 4949"
+    ],
+    "golden/vm/disk-64k": [
+     "c0483, born at txg 4954"
+    ],
+    "golden/vm/disk-8k": [
+     "c0482, born at txg 4945"
+    ],
+    "golden/vm/disk-blake3": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "12 whole",
+     "3 blocks zeroed: encrypted block: no key",
+     "3 blocks zeroed: blake3 checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)",
+     "3 blocks zeroed: edonr checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)"
+    ],
+    "golden/vm/disk-edonr": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "12 whole",
+     "3 blocks zeroed: encrypted block: no key",
+     "3 blocks zeroed: blake3 checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)",
+     "3 blocks zeroed: edonr checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)"
+    ],
+    "golden/vm/disk-skein": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "12 whole",
+     "3 blocks zeroed: encrypted block: no key",
+     "3 blocks zeroed: blake3 checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)",
+     "3 blocks zeroed: edonr checksum: keyed with the pool's salt, which is in its MOS, and no MOS was read (--roots gives one a carve found)"
+    ],
+    "golden/vm/disk-sparse": [
+     "c0421, born at txg 4970"
+    ],
+    "golden/vm/newname": [
+     "c0422, born at txg 4982"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "refused",
+    "uberblock txg 5015": "refused",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "refused",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "refused",
+    "rings t1-raidz2-2": "refused",
+    "rings t1-raidz2-3": "refused",
+    "rings t2-draid1-0": "refused",
+    "rings t2-draid1-1": "refused",
+    "rings t2-draid1-2": "refused",
+    "rings t2-draid1-3": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcome": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-rings-only",
+  "description": "Only the uberblock rings are zeroed in all four labels; the vdev_phys nvlists survive",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-vdev-phys-every-member-hints",
+  "description": "The configuration of every label of every member zeroed, and the layout given by hand as an operator who knew the pool would give it",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "hints from the oracle's layout"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "refused",
+    "label t0-mirror-1": "refused",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "refused",
+    "label t1-raidz2-2": "refused",
+    "label t1-raidz2-3": "refused",
+    "label t2-draid1-0": "refused",
+    "label t2-draid1-1": "refused",
+    "label t2-draid1-2": "refused",
+    "label t2-draid1-3": "refused",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-vdev-phys-every-member-search-order",
+  "description": "The configuration of every label of every member zeroed, the layout given with every raidz and dRAID group's members the other way round, and the order searched",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "hints from the oracle's layout, every raidz and dRAID group reversed"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "refused",
+    "label t0-mirror-1": "refused",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "refused",
+    "label t1-raidz2-2": "refused",
+    "label t1-raidz2-3": "refused",
+    "label t2-draid1-0": "refused",
+    "label t2-draid1-1": "refused",
+    "label t2-draid1-2": "refused",
+    "label t2-draid1-3": "refused",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-vdev-phys-every-member",
+  "description": "The configuration of all four labels of every member zeroed, the uberblock rings left: no member says what pool it is of, and nothing is told the tool",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "refused",
+   "refused_detail": {
+    "golden/vm/disk-8k": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-16k": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-64k": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-skein": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-edonr": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-blake3": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/disk-sparse": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/secret-raw/disk": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/secret-pw/disk": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/newname": "exit 2: zvolrescue: no ZFS pool found on the given members",
+    "golden/vm/clone-of-16k": "exit 2: zvolrescue: no ZFS pool found on the given members"
+   },
+   "golden/vm/disk-16k": "refused",
+   "golden/vm/disk-64k": "refused",
+   "golden/vm/disk-skein": "refused",
+   "golden/vm/disk-edonr": "refused",
+   "golden/vm/disk-blake3": "refused",
+   "golden/vm/disk-sparse": "refused",
+   "golden/secret-raw/disk": "refused",
+   "golden/secret-pw/disk": "refused",
+   "golden/vm/newname": "refused",
+   "golden/vm/clone-of-16k": "refused"
+  },
+  "files": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "refused",
+    "golden/fs-largednode": "refused",
+    "golden/secret-pw": "refused",
+    "golden/secret-raw": "refused",
+    "golden/vm": "refused"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "refused"
+   },
+   "txgs": []
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "golden/vm/clone-of-16k": "refused",
+    "golden/vm/disk-16k": "refused",
+    "golden/vm/disk-64k": "refused",
+    "golden/vm/disk-8k": "refused",
+    "golden/vm/disk-blake3": "refused",
+    "golden/vm/disk-edonr": "refused",
+    "golden/vm/disk-skein": "refused",
+    "golden/vm/disk-sparse": "refused",
+    "golden/vm/newname": "refused"
+   },
+   "detail": {
+    "golden/vm/clone-of-16k": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/disk-16k": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/disk-64k": [
+     "3 candidate(s) of 65536 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "3 dump exit 2"
+    ],
+    "golden/vm/disk-8k": [
+     "6 candidate(s) of 8192 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "6 dump exit 2"
+    ],
+    "golden/vm/disk-blake3": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/disk-edonr": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/disk-skein": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/disk-sparse": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ],
+    "golden/vm/newname": [
+     "24 candidate(s) of 16384 bytes carved at the newest births, none the volume as the oracle has it at the export",
+     "24 dump exit 2"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "refused",
+    "label t0-mirror-1": "refused",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "refused",
+    "label t1-raidz2-2": "refused",
+    "label t1-raidz2-3": "refused",
+    "label t2-draid1-0": "refused",
+    "label t2-draid1-1": "refused",
+    "label t2-draid1-2": "refused",
+    "label t2-draid1-3": "refused",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "refused"
+   },
+   "detail": {
+    "pool": [
+     "no pool 'golden' assembled; pools: "
+    ]
+   }
+  },
+  "timeline": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcome": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "labels-vdev-phys-only",
+  "description": "Only the vdev_phys nvlists are zeroed in all four labels; every uberblock ring survives",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "refused",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "member-missing-one",
+  "description": "One member absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "member-missing-three",
+  "description": "Three members of the same top-level vdev absent: past every parity level in this image",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-skein": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-edonr": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-blake3": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-sparse": "incomplete (blocks written as zeros)",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "incomplete (blocks written as zeros)",
+   "golden/vm/newname": "incomplete (blocks written as zeros)",
+   "golden/vm/clone-of-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "incomplete (entries said not whole)",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "member-missing-two",
+  "description": "Two members of the same top-level vdev absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-crypto-key-every-copy",
+  "description": "Every copy of every block of an encrypted volume's DSL crypto key object overwritten",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [
+   "secret-raw/disk:crypto-key copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 6316032, t2-draid1-1 @ 6316032 (parity columns are placed only where they equal a data column)",
+   "secret-raw/disk:crypto-key copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 6324224, t2-draid1-1 @ 6324224 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "refused",
+   "refused_detail": {
+    "golden/secret-raw/disk": "exit 3: zvolrescue: dataset \"golden/secret-raw/disk\" is named at txg 5015 but does not read there (I/O error: volume size unknown (encryption metadata: every copy failed its checksum; zvol data object: encryp"
+   },
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-crypto-key-none",
+  "description": "Nothing damaged, and the encrypted volumes asked for with no key at all",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/secret-raw/disk": "refused",
+   "refused_detail": {
+    "golden/secret-raw/disk": "exit 1: zvolrescue: golden/secret-raw/disk is encrypted (aes-256-gcm, keyformat raw, keylocation file:///var/tmp/golden/oracle/keys/raw.key); supply --key raw:FILE | hex:HEX | passphrase:FILE | prompt",
+    "golden/secret-pw/disk": "exit 1: zvolrescue: golden/secret-pw/disk is encrypted (aes-128-ccm, keyformat passphrase, keylocation file:///var/tmp/golden/oracle/keys/passphrase.txt); supply --key raw:FILE | hex:HEX | passphrase:FILE | p"
+   },
+   "golden/secret-pw/disk": "refused"
+  },
+  "files": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "refused",
+    "golden/secret-raw": "refused",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden/vm/clone-of-16k": "ok",
+    "golden/vm/disk-16k": "ok",
+    "golden/vm/disk-64k": "ok",
+    "golden/vm/disk-8k": "ok",
+    "golden/vm/disk-blake3": "ok",
+    "golden/vm/disk-edonr": "ok",
+    "golden/vm/disk-skein": "ok",
+    "golden/vm/disk-sparse": "ok",
+    "golden/vm/newname": "ok"
+   },
+   "detail": {
+    "golden/vm/clone-of-16k": [
+     "c0372, born at txg 4986"
+    ],
+    "golden/vm/disk-16k": [
+     "c0615, born at txg 4949"
+    ],
+    "golden/vm/disk-64k": [
+     "c0708, born at txg 4954"
+    ],
+    "golden/vm/disk-8k": [
+     "c0707, born at txg 4945"
+    ],
+    "golden/vm/disk-blake3": [
+     "c0710, born at txg 4966"
+    ],
+    "golden/vm/disk-edonr": [
+     "c0616, born at txg 4962"
+    ],
+    "golden/vm/disk-skein": [
+     "c0709, born at txg 4958"
+    ],
+    "golden/vm/disk-sparse": [
+     "c0617, born at txg 4970"
+    ],
+    "golden/vm/newname": [
+     "c0618, born at txg 4982"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-crypto-key-one-copy",
+  "description": "One copy of every block of an encrypted volume's DSL crypto key object overwritten",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "secret-raw/disk:crypto-key copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 6316032, t2-draid1-1 @ 6316032 (parity columns are placed only where they equal a data column)",
+   "secret-raw/disk:crypto-key copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 6324224, t2-draid1-1 @ 6324224 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-crypto-key-wrong",
+  "description": "Nothing damaged, and the encrypted volumes asked for with a key that is not theirs: the raw key with every bit turned over, a passphrase that is not the one",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/secret-raw/disk": "refused",
+   "refused_detail": {
+    "golden/secret-raw/disk": "exit 1: zvolrescue: golden/secret-raw/disk: MAC does not verify: wrong key or damaged data",
+    "golden/secret-pw/disk": "exit 1: zvolrescue: golden/secret-pw/disk: MAC does not verify: wrong key or damaged data"
+   },
+   "golden/secret-pw/disk": "refused"
+  },
+  "files": {
+   "expected": "refused | partial",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "refused",
+    "golden/secret-raw": "refused",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden/vm/clone-of-16k": "ok",
+    "golden/vm/disk-16k": "ok",
+    "golden/vm/disk-64k": "ok",
+    "golden/vm/disk-8k": "ok",
+    "golden/vm/disk-blake3": "ok",
+    "golden/vm/disk-edonr": "ok",
+    "golden/vm/disk-skein": "ok",
+    "golden/vm/disk-sparse": "ok",
+    "golden/vm/newname": "ok"
+   },
+   "detail": {
+    "golden/vm/clone-of-16k": [
+     "c0372, born at txg 4986"
+    ],
+    "golden/vm/disk-16k": [
+     "c0615, born at txg 4949"
+    ],
+    "golden/vm/disk-64k": [
+     "c0708, born at txg 4954"
+    ],
+    "golden/vm/disk-8k": [
+     "c0707, born at txg 4945"
+    ],
+    "golden/vm/disk-blake3": [
+     "c0710, born at txg 4966"
+    ],
+    "golden/vm/disk-edonr": [
+     "c0616, born at txg 4962"
+    ],
+    "golden/vm/disk-skein": [
+     "c0709, born at txg 4958"
+    ],
+    "golden/vm/disk-sparse": [
+     "c0617, born at txg 4970"
+    ],
+    "golden/vm/newname": [
+     "c0618, born at txg 4982"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-dnode-block-every-copy",
+  "description": "Every copy of the first dnode block of a volume's dataset overwritten",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [
+   "vm/disk-64k:dnode-block copy 1 on draid: 2 column(s) found by content on t2-draid1-2 @ 255320064, t2-draid1-3 @ 255320064 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "passed_over": {
+    "golden/vm/disk-64k": "txg 5015 (dataset): every copy failed its checksum; txg 5006 (dataset): every copy failed its checksum; txg 4994 (dataset): every copy failed its checksum; txg 4993 (dataset): every copy failed its checksum; txg 4986 (dataset): every copy failed its checksum; txg 4982 (dataset): every copy failed its checksum; txg 4978 (dataset): every copy failed its checksum; txg 4970 (dataset): every copy failed its checksum; txg 4966 (dataset): every copy failed its checksum; txg 4958 (dataset): every copy failed its checksum"
+   },
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-dnode-block-one-copy",
+  "description": "One copy of the first dnode block of a volume's dataset overwritten",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-indirect-block-every-copy",
+  "description": "Every copy of an indirect block of a volume's data object overwritten",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [
+   "vm/disk-8k:indirect copy 1 on draid: 2 column(s) found by content on t2-draid1-2 @ 255070208, t2-draid1-3 @ 255070208 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-indirect-block-one-copy",
+  "description": "One copy of an indirect block of a volume's data object overwritten",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-mos-every-copy",
+  "description": "Every copy of the MOS objset block overwritten",
+  "expected": "refused | bit-exact | reconstructed | partial",
+  "notes": [
+   "mos:objset copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 256528384, t2-draid1-3 @ 256528384 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-mos-one-copy",
+  "description": "One copy of the MOS objset block overwritten; the other copies are untouched",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "mos:objset copy 0 on draid: 2 column(s) found by content on t2-draid1-0 @ 256528384, t2-draid1-3 @ 256528384 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "metadata-objset-one-copy",
+  "description": "One copy of a dataset's objset block overwritten; the other copies are untouched",
+  "expected": "bit-exact | reconstructed",
+  "notes": [
+   "any:objset copy 0 on draid: 2 column(s) found by content on t2-draid1-1 @ 79073280, t2-draid1-3 @ 79073280 (parity columns are placed only where they equal a data column)"
+  ],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "older-self-draid1-one-member",
+  "description": "One dRAID1 member replaced by its round-6 copy",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "older-self-mirror-both-halves",
+  "description": "Both halves of the mirror replaced by their round-6 copies: the mirror is consistent with itself and six rounds behind the rest of the pool",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-16k": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "incomplete (blocks written as zeros)",
+   "golden/vm/disk-sparse": "incomplete (blocks written as zeros)",
+   "golden/secret-raw/disk": "incomplete (blocks written as zeros)",
+   "golden/secret-pw/disk": "incomplete (blocks written as zeros)",
+   "golden/vm/newname": "incomplete (blocks written as zeros)",
+   "golden/vm/clone-of-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "refused",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "older-self-mirror-one-half",
+  "description": "One half of the mirror replaced whole by a consistent copy of itself from round 6 of the fill: everything on it verifies, nothing on it is current",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "older-self-raidz2-two-members",
+  "description": "Two of the four raidz2 members replaced by their round-6 copies",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "refused",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "refused",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "partition-gpt-rewritten",
+  "description": "First megabyte of one member overwritten, as a careless installer writing a partition table would",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "partition-grown",
+  "description": "One raidz2 member's partition re-created 48 MiB larger: the same bytes, then zeros, so the rear labels are not where the member's size puts them",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "partition-start-shifted",
+  "description": "One member shifted forward by 2048 sectors, as if its partition had been re-created at another offset",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ },
+ {
+  "id": "partition-tail-truncated",
+  "description": "Last 8 MiB of one member cut off: the rear labels are gone and the device is shorter than its asize",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "golden/vm/disk-8k": "ok",
+   "golden/vm/disk-16k": "ok",
+   "golden/vm/disk-64k": "ok",
+   "golden/vm/disk-skein": "ok",
+   "golden/vm/disk-edonr": "ok",
+   "golden/vm/disk-blake3": "ok",
+   "golden/vm/disk-sparse": "ok",
+   "golden/secret-raw/disk": "ok",
+   "golden/secret-pw/disk": "ok",
+   "golden/vm/newname": "ok",
+   "golden/vm/clone-of-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "golden": "ok",
+    "golden/fs-largednode": "ok",
+    "golden/secret-pw": "ok",
+    "golden/secret-raw": "ok",
+    "golden/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    5015
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-raidz2-0": "ok",
+    "label t1-raidz2-1": "ok",
+    "label t1-raidz2-2": "ok",
+    "label t1-raidz2-3": "ok",
+    "label t2-draid1-0": "ok",
+    "label t2-draid1-1": "ok",
+    "label t2-draid1-2": "ok",
+    "label t2-draid1-3": "ok",
+    "uberblock txg 4994": "ok",
+    "uberblock txg 5015": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-raidz2-0": "ok",
+    "rings t1-raidz2-1": "ok",
+    "rings t1-raidz2-2": "ok",
+    "rings t1-raidz2-3": "ok",
+    "rings t2-draid1-0": "ok",
+    "rings t2-draid1-1": "ok",
+    "rings t2-draid1-2": "ok",
+    "rings t2-draid1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "image-v1"
+ }
+]

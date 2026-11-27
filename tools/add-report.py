@@ -136,10 +136,11 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
             actual.items(), key=lambda kv: (-kv[1], kv[0]))) + "."))
         out.append("")
     # The files (zvolfiles), the history (zvoltimeline), the datasets
-    # listed (list against zdb -d) and what scan read (against zdb -l,
-    # zdb -u, zpool status), where the oracle had them to judge by.
-    for side, what in (("files", "Files"), ("timeline", "History"), ("datasets", "Datasets"),
-                       ("scan", "Scan")):
+    # listed (list against zdb -d), what scan read (against zdb -l,
+    # zdb -u, zpool status), the report (zvolreport build and verify)
+    # and the carve (zvolcarve against the volumes' sums), where the
+    # oracle had them to judge by.
+    for side, what in SIDES:
         got = collections.Counter(r[side]["actual"] for r in records if side in r)
         if got:
             out.append(wrap(f"{what}: " + ", ".join(f"{n} {k}" for k, n in sorted(
@@ -160,7 +161,7 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
                 for k, v in (r.get("outcomes") or {}).items():
                     if k != "refused_detail" and v != "ok":
                         out.append(f"  * {k}: {v}")
-                for side in ("files", "timeline", "datasets", "scan"):
+                for side, _ in SIDES:
                     if r.get(side, {}).get("verdict", "pass") != "pass":
                         out.append(f"  * {side}: expected {r[side]['expected']}, got {r[side]['actual']}")
         out.append("")
@@ -169,6 +170,10 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
             f"| `report-{tag}.md`, `report-{tag}.json` | the verdict of every manifest, "
             "with the outcome per volume |"]
     return "\n".join(out) + "\n"
+
+
+SIDES = (("files", "Files"), ("timeline", "History"), ("datasets", "Datasets"),
+         ("scan", "Scan"), ("report", "Report"), ("carve", "Carve"))
 
 
 def wrap(text, width=72):

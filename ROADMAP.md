@@ -116,7 +116,7 @@ Release: +0. Git: under 1 MB of text.
    calls it after every run on `main` and pushes the result with the
    token `publish-golden.yml` uses. That token (`TESTDATA_TOKEN`) is not
    set yet, by choice: until it is, the weekly run leaves its report as
-   an artifact and runs are kept here by hand (`image-v1-r2` to `-r5`).
+   an artifact and runs are kept here by hand (`image-v1-r2` to `-r6`).
 7. *Done.* **`list` and `scan` judged against zdb's own records**,
    which the oracle had from the build and nothing read: every case
    holds the datasets `list -r` names against `datasets-by-txg/` at the
