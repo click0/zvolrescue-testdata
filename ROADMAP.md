@@ -223,10 +223,15 @@ case rather than answering wrongly.
 
 * **A pool made on FreeBSD** (its base OpenZFS, GPT and `gptid` as
   FreeBSD writes them), on a slimmed recipe: 0.3–0.5 GB.
-* **The feature sets of older pools** without older kernels:
+* *Done* (2026-11-27). **The feature sets of older pools** without older kernels:
   `zpool create -o compatibility=openzfs-2.0-linux`, `-d` and
   `-o version=28` on the current OpenZFS — three small pools, about
-  0.15 GB.
+  0.15 GB. Built by `build-satellite.sh` as `sat-compat20` (a raidz1),
+  `sat-nofeatures` (a mirror) and `sat-v28` (a raidz2), lzjb where lz4
+  is a feature the pool lacks; 7 manifests, 7 passed at the first
+  build, the version-28 pool read whole by every program at every TXG
+  of its rings. Published as `sat-compat20-v1`, `sat-nofeatures-v1` and
+  `sat-v28-v1`, 0.19 GB, and judged every week with the others.
 * **A pool at scale**, `held_out` and in a tag of its own that a
   regular run never fetches: thousands of snapshots and datasets
   (0.2–0.4 GB), or a large volume of content ZFS compresses

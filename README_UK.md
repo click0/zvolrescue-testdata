@@ -52,7 +52,10 @@ dedup), `sat-ashift` (raidz1 з ashift 9 поруч із raidz1 з ashift 13),
 (`multihost=on`). Кожен — реліз `sat-<ім'я>-v1`, 54–97 МБ, 0,59 ГБ
 разом; його оракул — в `oracle/sat-<ім'я>/`, його `IMAGE.md` і матриця
 при збірці — в `reports/sat-<ім'я>-v1/`: 26 маніфестів називають їх
-(`image = "sat-<ім'я>"`), 26 пройдено.
+(`image = "sat-<ім'я>"`), 26 пройдено. Ще три, етапу 3, несуть набори
+можливостей старших пулів, зроблені поточним OpenZFS: `sat-compat20`
+(`compatibility=openzfs-2.0-linux`), `sat-nofeatures` (`zpool create -d`)
+і `sat-v28` (версія пулу 28) — 0,19 ГБ, 7 маніфестів, 7 пройдено.
 
 **`image-v1`**, перший золотий образ, зібраний ядром: один пул `golden` із
 top-level vdev-ами mirror-2, raidz2-4 і draid1 з `ashift` 12, одинадцять

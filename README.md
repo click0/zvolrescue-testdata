@@ -53,7 +53,11 @@ beside raidz1 at 13), `sat-slog` (an intent log the pool never applied)
 and `sat-mmp` (`multihost=on`). Each is the release `sat-<name>-v1`, 54
 to 97 MB, 0.59 GB in all; its oracle in `oracle/sat-<name>/`, its
 `IMAGE.md` and the matrix at its build in `reports/sat-<name>-v1/` — 26
-manifests name them (`image = "sat-<name>"`), 26 passed.
+manifests name them (`image = "sat-<name>"`), 26 passed. Three more of
+stage 3 carry the feature sets of older pools, made by the current
+OpenZFS: `sat-compat20` (`compatibility=openzfs-2.0-linux`),
+`sat-nofeatures` (`zpool create -d`) and `sat-v28` (pool version 28) —
+0.19 GB, 7 manifests, 7 passed.
 
 **`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven
