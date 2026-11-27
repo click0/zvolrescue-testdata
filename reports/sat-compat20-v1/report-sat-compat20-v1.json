@@ -1,0 +1,236 @@
+[
+ {
+  "id": "control-sat-compat20",
+  "description": "Nothing damaged and nothing told, on a pool of OpenZFS 2.0's feature set (compatibility=openzfs-2.0-linux): every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-compat20/vm/disk-8k": "ok",
+   "sat-compat20/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-compat20": "ok",
+    "sat-compat20/fs": "ok",
+    "sat-compat20/fs@s0": "ok",
+    "sat-compat20/fs@s1": "ok",
+    "sat-compat20/fs@s2": "ok",
+    "sat-compat20/fs@s3": "ok",
+    "sat-compat20/vm": "ok",
+    "sat-compat20/vm@s0": "ok",
+    "sat-compat20/vm@s1": "ok",
+    "sat-compat20/vm@s2": "ok",
+    "sat-compat20/vm@s3": "ok",
+    "sat-compat20@s0": "ok",
+    "sat-compat20@s1": "ok",
+    "sat-compat20@s2": "ok",
+    "sat-compat20@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 236": "ok",
+    "txg 236 features": "ok",
+    "txg 227": "ok",
+    "txg 227 features": "ok",
+    "txg 226": "ok",
+    "txg 226 features": "ok",
+    "txg 223": "ok",
+    "txg 223 features": "ok",
+    "txg 219": "ok",
+    "txg 219 features": "ok",
+    "txg 215": "ok",
+    "txg 215 features": "ok",
+    "txg 212": "ok",
+    "txg 212 features": "ok",
+    "txg 208": "ok",
+    "txg 208 features": "ok",
+    "txg 201": "ok",
+    "txg 201 features": "ok",
+    "txg 197": "ok",
+    "txg 197 features": "ok",
+    "txg 193": "ok",
+    "txg 193 features": "ok",
+    "txg 190": "ok",
+    "txg 190 features": "ok",
+    "txg 186": "ok",
+    "txg 186 features": "ok",
+    "txg 182": "ok",
+    "txg 182 features": "ok",
+    "txg 175": "ok",
+    "txg 175 features": "ok",
+    "txg 168": "ok",
+    "txg 168 features": "ok",
+    "txg 164": "ok",
+    "txg 164 features": "ok",
+    "txg 157": "ok",
+    "txg 157 features": "ok",
+    "txg 153": "ok",
+    "txg 153 features": "ok",
+    "txg 146": "ok",
+    "txg 146 features": "ok",
+    "txg 142": "ok",
+    "txg 142 features": "ok",
+    "txg 139": "ok",
+    "txg 139 features": "ok",
+    "txg 135": "ok",
+    "txg 135 features": "ok",
+    "txg 124": "ok",
+    "txg 124 features": "ok"
+   },
+   "txgs": [
+    124,
+    135,
+    139,
+    142,
+    146,
+    153,
+    157,
+    164,
+    168,
+    175,
+    182,
+    186,
+    190,
+    193,
+    197,
+    201,
+    208,
+    212,
+    215,
+    219,
+    223,
+    226,
+    227,
+    236,
+    245
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-compat20/vm/disk-16k": "ok",
+    "sat-compat20/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-compat20/vm/disk-16k": [
+     "c0026, born at txg 219"
+    ],
+    "sat-compat20/vm/disk-8k": [
+     "c0025, born at txg 215"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 227": "ok",
+    "uberblock txg 245": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-compat20-v1"
+ },
+ {
+  "id": "member-sat-compat20-missing-one",
+  "description": "One member of the raidz1 absent, on a pool of OpenZFS 2.0's feature set",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-compat20/vm/disk-8k": "ok",
+   "sat-compat20/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-compat20": "ok",
+    "sat-compat20/fs": "ok",
+    "sat-compat20/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    245
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 227": "ok",
+    "uberblock txg 245": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-compat20-v1"
+ }
+]

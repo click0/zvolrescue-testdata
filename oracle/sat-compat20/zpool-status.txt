@@ -1,0 +1,12 @@
+  pool: sat-compat20
+ state: ONLINE
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-compat20                           ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+
+errors: No known data errors

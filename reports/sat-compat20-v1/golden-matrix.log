@@ -1,0 +1,4 @@
+sat-compat20-v1 pass       control-sat-compat20             expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-compat20-v1 pass       member-sat-compat20-missing-one  expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-compat20-v1: 109 manifest(s) written for another pool, not run here
+sat-compat20-v1: 2 pass

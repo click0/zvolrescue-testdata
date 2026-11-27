@@ -1,0 +1,147 @@
+History for 'sat-compat20':
+2026-11-27.16:33:25 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm3lb7s 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set ashift=12 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set autotrim=0 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set compatibility=openzfs-2.0-linux [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@async_destroy=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@empty_bpobj=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@lz4_compress=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@spacemap_histogram=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@enabled_txg=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@hole_birth=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@extensible_dataset=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@embedded_data=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@filesystem_limits=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@large_blocks=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@large_dnode=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@sha512=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@skein=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@edonr=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@userobj_accounting=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@encryption=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@project_quota=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@device_removal=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@obsolete_counts=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@zpool_checkpoint=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@spacemap_v2=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@allocation_classes=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@resilver_defer=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@bookmark_v2=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@redaction_bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@redacted_datasets=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@bookmark_written=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@log_spacemap=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@livelist=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@device_rebuild=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:4] set feature@zstd_compress=enabled [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:5] set sat-compat20 (54) snapdev=1 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:6] set sat-compat20 (54) compression=15 [on runnervm3lb7s]
+2026-11-27.16:33:25 zpool create -f -o ashift=12 -o autotrim=off -o compatibility=openzfs-2.0-linux -O compression=lz4 -O snapdev=visible sat-compat20 raidz1 /var/tmp/sat/members/raidz1-0.img /var/tmp/sat/members/raidz1-1.img /var/tmp/sat/members/raidz1-2.img [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 [txg:10] create sat-compat20/vm (387)   [on runnervm3lb7s]
+2026-11-27.16:33:25 (6ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 zfs create sat-compat20/vm [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 [txg:11] create sat-compat20/vm/disk-8k (137)   [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:12] set sat-compat20/vm/disk-8k (137) checksum=7 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:12] set sat-compat20/vm/disk-8k (137) compression=15 [on runnervm3lb7s]
+2026-11-27.16:33:25 (14ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 sat-compat20/vm/disk-8k [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 [txg:13] create sat-compat20/vm/disk-16k (395)   [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:14] set sat-compat20/vm/disk-16k (395) checksum=8 [on runnervm3lb7s]
+2026-11-27.16:33:25 [txg:14] set sat-compat20/vm/disk-16k (395) compression=2 [on runnervm3lb7s]
+2026-11-27.16:33:25 (14ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-compat20/vm/disk-16k [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 [txg:15] create sat-compat20/fs (70)   [on runnervm3lb7s]
+2026-11-27.16:33:25 (7ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:25 zfs create sat-compat20/fs [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:26 [txg:73] snapshot sat-compat20@s0 (266)   [on runnervm3lb7s]
+2026-11-27.16:33:26 [txg:73] snapshot sat-compat20/vm@s0 (268)   [on runnervm3lb7s]
+2026-11-27.16:33:26 [txg:73] snapshot sat-compat20/vm/disk-8k@s0 (270)   [on runnervm3lb7s]
+2026-11-27.16:33:26 [txg:73] snapshot sat-compat20/vm/disk-16k@s0 (272)   [on runnervm3lb7s]
+2026-11-27.16:33:26 [txg:73] snapshot sat-compat20/fs@s0 (274)   [on runnervm3lb7s]
+2026-11-27.16:33:26 (11ms) ioctl snapshot
+    input:
+        snaps:
+            sat-compat20@s0
+            sat-compat20/vm@s0
+            sat-compat20/vm/disk-8k@s0
+            sat-compat20/vm/disk-16k@s0
+            sat-compat20/fs@s0
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:26 zfs snapshot -r sat-compat20@s0 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:27 [txg:124] snapshot sat-compat20@s1 (156)   [on runnervm3lb7s]
+2026-11-27.16:33:27 [txg:124] snapshot sat-compat20/vm@s1 (158)   [on runnervm3lb7s]
+2026-11-27.16:33:27 [txg:124] snapshot sat-compat20/vm/disk-8k@s1 (160)   [on runnervm3lb7s]
+2026-11-27.16:33:27 [txg:124] snapshot sat-compat20/vm/disk-16k@s1 (162)   [on runnervm3lb7s]
+2026-11-27.16:33:27 [txg:124] snapshot sat-compat20/fs@s1 (164)   [on runnervm3lb7s]
+2026-11-27.16:33:27 (10ms) ioctl snapshot
+    input:
+        snaps:
+            sat-compat20@s1
+            sat-compat20/vm@s1
+            sat-compat20/vm/disk-8k@s1
+            sat-compat20/vm/disk-16k@s1
+            sat-compat20/fs@s1
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:27 zfs snapshot -r sat-compat20@s1 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:28 [txg:175] snapshot sat-compat20@s2 (281)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:175] snapshot sat-compat20/vm@s2 (283)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:175] snapshot sat-compat20/vm/disk-8k@s2 (285)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:175] snapshot sat-compat20/vm/disk-16k@s2 (287)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:175] snapshot sat-compat20/fs@s2 (289)   [on runnervm3lb7s]
+2026-11-27.16:33:28 (11ms) ioctl snapshot
+    input:
+        snaps:
+            sat-compat20@s2
+            sat-compat20/vm@s2
+            sat-compat20/vm/disk-8k@s2
+            sat-compat20/vm/disk-16k@s2
+            sat-compat20/fs@s2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:28 zfs snapshot -r sat-compat20@s2 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:28 [txg:226] snapshot sat-compat20@s3 (422)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:226] snapshot sat-compat20/vm@s3 (424)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:226] snapshot sat-compat20/vm/disk-8k@s3 (426)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:226] snapshot sat-compat20/vm/disk-16k@s3 (428)   [on runnervm3lb7s]
+2026-11-27.16:33:28 [txg:226] snapshot sat-compat20/fs@s3 (430)   [on runnervm3lb7s]
+2026-11-27.16:33:28 (11ms) ioctl snapshot
+    input:
+        snaps:
+            sat-compat20@s3
+            sat-compat20/vm@s3
+            sat-compat20/vm/disk-8k@s3
+            sat-compat20/vm/disk-16k@s3
+            sat-compat20/fs@s3
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:28 zfs snapshot -r sat-compat20@s3 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.16:33:32 zpool export sat-compat20 [user 0 (root) on runnervm3lb7s:linux]
+

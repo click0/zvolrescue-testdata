@@ -1,0 +1,36 @@
+Dataset mos [META], ID 0, cr_txg 4, 879K, 114 objects
+Dataset sat-compat20/vm/disk-8k@s0 [ZVOL], ID 270, cr_txg 73, 10.9M, 2 objects
+Dataset sat-compat20/vm/disk-8k@s1 [ZVOL], ID 160, cr_txg 124, 10.9M, 2 objects
+Dataset sat-compat20/vm/disk-8k@s2 [ZVOL], ID 285, cr_txg 175, 10.9M, 2 objects
+Dataset sat-compat20/vm/disk-8k [ZVOL], ID 137, cr_txg 11, 10.9M, 2 objects
+Dataset sat-compat20/vm/disk-16k@s0 [ZVOL], ID 272, cr_txg 73, 16.2M, 2 objects
+Dataset sat-compat20/vm/disk-16k@s2 [ZVOL], ID 287, cr_txg 175, 16.2M, 2 objects
+Dataset sat-compat20/vm/disk-16k@s1 [ZVOL], ID 162, cr_txg 124, 16.2M, 2 objects
+Dataset sat-compat20/vm/disk-16k [ZVOL], ID 395, cr_txg 13, 16.2M, 2 objects
+Dataset sat-compat20/vm@s1 [ZPL], ID 158, cr_txg 124, 128K, 6 objects
+Dataset sat-compat20/vm@s2 [ZPL], ID 283, cr_txg 175, 128K, 6 objects
+Dataset sat-compat20/vm@s0 [ZPL], ID 268, cr_txg 73, 128K, 6 objects
+Dataset sat-compat20/vm [ZPL], ID 387, cr_txg 10, 128K, 6 objects
+Dataset sat-compat20/fs@s0 [ZPL], ID 274, cr_txg 73, 1.16M, 53 objects
+Dataset sat-compat20/fs@s2 [ZPL], ID 289, cr_txg 175, 1.21M, 61 objects
+Dataset sat-compat20/fs@s1 [ZPL], ID 164, cr_txg 124, 1.19M, 57 objects
+Dataset sat-compat20/fs [ZPL], ID 70, cr_txg 15, 1.21M, 61 objects
+Dataset sat-compat20@s1 [ZPL], ID 156, cr_txg 124, 139K, 8 objects
+Dataset sat-compat20@s2 [ZPL], ID 281, cr_txg 175, 139K, 8 objects
+Dataset sat-compat20@s0 [ZPL], ID 266, cr_txg 73, 139K, 8 objects
+Dataset sat-compat20 [ZPL], ID 54, cr_txg 1, 139K, 8 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 12 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 12 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct

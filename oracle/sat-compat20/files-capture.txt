@@ -1,0 +1,49 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-compat20
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-compat20
+ state: ONLINE
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-compat20                           ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                         MOUNTED  MOUNTPOINT                             USED  REFER
+sat-compat20                 no       /var/tmp/sat/altroot/sat-compat20     36.1M   139K
+sat-compat20@s0              -        -                                        0B   139K
+sat-compat20@s1              -        -                                        0B   139K
+sat-compat20@s2              -        -                                        0B   139K
+sat-compat20@s3              -        -                                        0B   139K
+sat-compat20/fs              no       /var/tmp/sat/altroot/sat-compat20/fs  1.58M  1.24M
+sat-compat20/fs@s0           -        -                                      117K  1.16M
+sat-compat20/fs@s1           -        -                                      107K  1.19M
+sat-compat20/fs@s2           -        -                                      117K  1.21M
+sat-compat20/fs@s3           -        -                                        0B  1.24M
+sat-compat20/vm              no       /var/tmp/sat/altroot/sat-compat20/vm  33.5M   128K
+sat-compat20/vm@s0           -        -                                        0B   128K
+sat-compat20/vm@s1           -        -                                        0B   128K
+sat-compat20/vm@s2           -        -                                        0B   128K
+sat-compat20/vm@s3           -        -                                        0B   128K
+sat-compat20/vm/disk-16k     -        -                                     19.6M  16.2M
+sat-compat20/vm/disk-16k@s0  -        -                                     1.17M  16.2M
+sat-compat20/vm/disk-16k@s1  -        -                                      170K  16.2M
+sat-compat20/vm/disk-16k@s2  -        -                                      170K  16.2M
+sat-compat20/vm/disk-16k@s3  -        -                                        0B  16.2M
+sat-compat20/vm/disk-8k      -        -                                     13.7M  10.9M
+sat-compat20/vm/disk-8k@s0   -        -                                      948K  10.9M
+sat-compat20/vm/disk-8k@s1   -        -                                      266K  10.9M
+sat-compat20/vm/disk-8k@s2   -        -                                      266K  10.9M
+sat-compat20/vm/disk-8k@s3   -        -                                        0B  10.9M
+members: unchanged after the export (their sums against members.sha256)
