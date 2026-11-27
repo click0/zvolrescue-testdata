@@ -1,0 +1,14 @@
+id = "control-sat-large"
+image = "sat-large"
+description = "Nothing damaged and nothing told, on a pool with a volume of 10 GiB: over 1.3 million blocks of 8K under four levels of indirect blocks, most of them kept in their block pointers, offsets past 4 GiB in the volume and in its members"
+classes = ["control"]
+held_out = true
+
+[expect]
+# What reading a large volume takes: every block of it found, decoded
+# (zstd, and the embedded blocks' payloads) and hashed, the carve of it
+# at its size.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

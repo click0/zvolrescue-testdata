@@ -1,0 +1,18 @@
+id = "data-sat-large-past-4gib"
+image = "sat-large"
+description = "Everything of one mirror half past its first 4 GiB zeroed, its rear labels with it: every block there read from the other half, at offsets no 32-bit number holds"
+classes = ["data"]
+held_out = true
+
+[[damage]]
+member = "t0-mirror-0"
+range = "4GiB.."
+pattern = "zeros"
+
+[expect]
+# At the mirror's redundancy: every block past 4 GiB has its other half,
+# and the front labels name the pool.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

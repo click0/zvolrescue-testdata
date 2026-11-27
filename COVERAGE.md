@@ -15,7 +15,7 @@ is counted by its case alone, and a class that damages no member
 (the control; metadata, every case of which aims at a block) has no
 rows here. An empty cell (—) is a combination no manifest tests.
 
-121 manifests.
+121 manifests; not counted, their pool having no oracle here: control-sat-large, data-sat-large-past-4gib, member-sat-large-mirror-half.
 
 ## Top-level vdevs, by class and position
 

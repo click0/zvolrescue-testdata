@@ -1,0 +1,15 @@
+id = "member-sat-large-mirror-half"
+image = "sat-large"
+description = "One half of the mirror absent, on a pool with a volume of 10 GiB"
+classes = ["member"]
+held_out = true
+
+[[damage]]
+member = "t0-mirror-0"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"
