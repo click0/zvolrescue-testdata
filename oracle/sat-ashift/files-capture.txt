@@ -1,0 +1,53 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-ashift
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-ashift
+ state: ONLINE
+config:
+
+	NAME                                      STATE     READ WRITE CKSUM
+	sat-ashift                                ONLINE       0     0     0
+	  raidz1-0                                ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a9-0.img   ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a9-1.img   ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a9-2.img   ONLINE       0     0     0
+	  raidz1-1                                ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a13-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a13-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1a13-2.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                       MOUNTED  MOUNTPOINT                           USED  REFER
+sat-ashift                 no       /var/tmp/sat/altroot/sat-ashift     50.1M   123K
+sat-ashift@s0              -        -                                      0B   123K
+sat-ashift@s1              -        -                                      0B   123K
+sat-ashift@s2              -        -                                      0B   123K
+sat-ashift@s3              -        -                                      0B   123K
+sat-ashift/fs              no       /var/tmp/sat/altroot/sat-ashift/fs  1.47M  1.10M
+sat-ashift/fs@s0           -        -                                    120K  1.02M
+sat-ashift/fs@s1           -        -                                    107K  1.05M
+sat-ashift/fs@s2           -        -                                    120K  1.07M
+sat-ashift/fs@s3           -        -                                      0B  1.10M
+sat-ashift/vm              no       /var/tmp/sat/altroot/sat-ashift/vm  47.6M   143K
+sat-ashift/vm@s0           -        -                                      0B   143K
+sat-ashift/vm@s1           -        -                                      0B   143K
+sat-ashift/vm@s2           -        -                                      0B   143K
+sat-ashift/vm@s3           -        -                                      0B   143K
+sat-ashift/vm/disk-16k     -        -                                   22.8M  18.7M
+sat-ashift/vm/disk-16k@s0  -        -                                   1.41M  18.7M
+sat-ashift/vm/disk-16k@s1  -        -                                    178K  18.7M
+sat-ashift/vm/disk-16k@s2  -        -                                    178K  18.7M
+sat-ashift/vm/disk-16k@s3  -        -                                      0B  18.7M
+sat-ashift/vm/disk-8k      -        -                                   24.7M  19.9M
+sat-ashift/vm/disk-8k@s0   -        -                                   1.60M  21.0M
+sat-ashift/vm/disk-8k@s1   -        -                                    271K  20.7M
+sat-ashift/vm/disk-8k@s2   -        -                                    271K  20.1M
+sat-ashift/vm/disk-8k@s3   -        -                                      0B  19.9M
+members: unchanged after the export (their sums against members.sha256)

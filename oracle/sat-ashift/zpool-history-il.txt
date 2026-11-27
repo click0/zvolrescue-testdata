@@ -1,0 +1,161 @@
+History for 'sat-ashift':
+2026-11-27.14:55:22 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set ashift=9 [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set autotrim=0 [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@async_destroy=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@empty_bpobj=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@lz4_compress=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@spacemap_histogram=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@enabled_txg=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@hole_birth=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@extensible_dataset=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@embedded_data=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@bookmarks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@filesystem_limits=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@large_blocks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@large_dnode=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@sha512=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@skein=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@edonr=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@userobj_accounting=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@encryption=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@project_quota=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@device_removal=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@obsolete_counts=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@zpool_checkpoint=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@spacemap_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@allocation_classes=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@resilver_defer=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@bookmark_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@redaction_bookmarks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@redacted_datasets=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@bookmark_written=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@log_spacemap=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@livelist=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@device_rebuild=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@zstd_compress=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@draid=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@zilsaxattr=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@head_errlog=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@blake3=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@block_cloning=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@vdev_zaps_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@redaction_list_spill=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@raidz_expansion=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@fast_dedup=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@longname=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@large_microzap=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@dynamic_gang_header=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@block_cloning_endian=enabled [on runnervm0hi8g]
+2026-11-27.14:55:22 [txg:4] set feature@physical_rewrite=enabled [on runnervm0hi8g]
+2026-11-27.14:55:23 [txg:5] set sat-ashift (54) snapdev=1 [on runnervm0hi8g]
+2026-11-27.14:55:23 [txg:6] set sat-ashift (54) compression=15 [on runnervm0hi8g]
+2026-11-27.14:55:23 zpool create -f -o ashift=9 -o autotrim=off -O compression=lz4 -O snapdev=visible sat-ashift raidz1 /var/tmp/sat/members/raidz1a9-0.img /var/tmp/sat/members/raidz1a9-1.img /var/tmp/sat/members/raidz1a9-2.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:23 zpool add -f -o ashift=13 sat-ashift raidz1 /var/tmp/sat/members/raidz1a13-0.img /var/tmp/sat/members/raidz1a13-1.img /var/tmp/sat/members/raidz1a13-2.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 [txg:13] create sat-ashift/vm (137)   [on runnervm0hi8g]
+2026-11-27.14:55:24 (13ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 zfs create sat-ashift/vm [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 [txg:14] create sat-ashift/vm/disk-8k (71)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:15] set sat-ashift/vm/disk-8k (71) checksum=7 [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:15] set sat-ashift/vm/disk-8k (71) compression=15 [on runnervm0hi8g]
+2026-11-27.14:55:24 (19ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 sat-ashift/vm/disk-8k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 [txg:16] create sat-ashift/vm/disk-16k (145)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:17] set sat-ashift/vm/disk-16k (145) checksum=8 [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:17] set sat-ashift/vm/disk-16k (145) compression=2 [on runnervm0hi8g]
+2026-11-27.14:55:24 (15ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-ashift/vm/disk-16k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 [txg:18] create sat-ashift/fs (79)   [on runnervm0hi8g]
+2026-11-27.14:55:24 (7ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 zfs create sat-ashift/fs [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:25 [txg:74] snapshot sat-ashift@s0 (95)   [on runnervm0hi8g]
+2026-11-27.14:55:25 [txg:74] snapshot sat-ashift/vm@s0 (97)   [on runnervm0hi8g]
+2026-11-27.14:55:25 [txg:74] snapshot sat-ashift/vm/disk-16k@s0 (99)   [on runnervm0hi8g]
+2026-11-27.14:55:25 [txg:74] snapshot sat-ashift/vm/disk-8k@s0 (101)   [on runnervm0hi8g]
+2026-11-27.14:55:25 [txg:74] snapshot sat-ashift/fs@s0 (103)   [on runnervm0hi8g]
+2026-11-27.14:55:25 (14ms) ioctl snapshot
+    input:
+        snaps:
+            sat-ashift@s0
+            sat-ashift/vm@s0
+            sat-ashift/vm/disk-16k@s0
+            sat-ashift/vm/disk-8k@s0
+            sat-ashift/fs@s0
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:25 zfs snapshot -r sat-ashift@s0 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:26 [txg:125] snapshot sat-ashift@s1 (399)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:125] snapshot sat-ashift/vm@s1 (401)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:125] snapshot sat-ashift/vm/disk-16k@s1 (403)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:125] snapshot sat-ashift/vm/disk-8k@s1 (405)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:125] snapshot sat-ashift/fs@s1 (407)   [on runnervm0hi8g]
+2026-11-27.14:55:26 (10ms) ioctl snapshot
+    input:
+        snaps:
+            sat-ashift@s1
+            sat-ashift/vm@s1
+            sat-ashift/vm/disk-16k@s1
+            sat-ashift/vm/disk-8k@s1
+            sat-ashift/fs@s1
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:26 zfs snapshot -r sat-ashift@s1 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:26 [txg:176] snapshot sat-ashift@s2 (166)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:176] snapshot sat-ashift/vm@s2 (168)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:176] snapshot sat-ashift/vm/disk-16k@s2 (170)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:176] snapshot sat-ashift/vm/disk-8k@s2 (172)   [on runnervm0hi8g]
+2026-11-27.14:55:26 [txg:176] snapshot sat-ashift/fs@s2 (174)   [on runnervm0hi8g]
+2026-11-27.14:55:26 (12ms) ioctl snapshot
+    input:
+        snaps:
+            sat-ashift@s2
+            sat-ashift/vm@s2
+            sat-ashift/vm/disk-16k@s2
+            sat-ashift/vm/disk-8k@s2
+            sat-ashift/fs@s2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:26 zfs snapshot -r sat-ashift@s2 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:27 [txg:225] snapshot sat-ashift@s3 (280)   [on runnervm0hi8g]
+2026-11-27.14:55:27 [txg:225] snapshot sat-ashift/vm@s3 (282)   [on runnervm0hi8g]
+2026-11-27.14:55:27 [txg:225] snapshot sat-ashift/vm/disk-16k@s3 (284)   [on runnervm0hi8g]
+2026-11-27.14:55:27 [txg:225] snapshot sat-ashift/vm/disk-8k@s3 (286)   [on runnervm0hi8g]
+2026-11-27.14:55:27 [txg:225] snapshot sat-ashift/fs@s3 (288)   [on runnervm0hi8g]
+2026-11-27.14:55:27 (12ms) ioctl snapshot
+    input:
+        snaps:
+            sat-ashift@s3
+            sat-ashift/vm@s3
+            sat-ashift/vm/disk-16k@s3
+            sat-ashift/vm/disk-8k@s3
+            sat-ashift/fs@s3
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:27 zfs snapshot -r sat-ashift@s3 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:31 zpool export sat-ashift [user 0 (root) on runnervm0hi8g:linux]
+

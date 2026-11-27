@@ -1,0 +1,5 @@
+        version: 5000
+        txg: 12
+        pool_guid: 13357472494533065488
+                ashift: 9
+                ashift: 13

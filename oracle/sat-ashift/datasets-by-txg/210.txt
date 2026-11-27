@@ -1,0 +1,42 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.13M, 128 objects
+Dataset sat-ashift/vm/disk-16k@s1 [ZVOL], ID 403, cr_txg 125, 18.7M, 2 objects
+Dataset sat-ashift/vm/disk-16k@s2 [ZVOL], ID 170, cr_txg 176, 18.7M, 2 objects
+Dataset sat-ashift/vm/disk-16k@s0 [ZVOL], ID 99, cr_txg 74, 18.7M, 2 objects
+Dataset sat-ashift/vm/disk-16k [ZVOL], ID 145, cr_txg 16, 18.8M, 2 objects
+Dataset sat-ashift/vm/disk-8k@s0 [ZVOL], ID 101, cr_txg 74, 21.0M, 2 objects
+Dataset sat-ashift/vm/disk-8k@s2 [ZVOL], ID 172, cr_txg 176, 20.1M, 2 objects
+Dataset sat-ashift/vm/disk-8k@s1 [ZVOL], ID 405, cr_txg 125, 20.7M, 2 objects
+Dataset sat-ashift/vm/disk-8k [ZVOL], ID 71, cr_txg 14, 20.1M, 2 objects
+Dataset sat-ashift/vm@s1 [ZPL], ID 401, cr_txg 125, 143K, 6 objects
+Dataset sat-ashift/vm@s2 [ZPL], ID 168, cr_txg 176, 143K, 6 objects
+Dataset sat-ashift/vm@s0 [ZPL], ID 97, cr_txg 74, 143K, 6 objects
+Dataset sat-ashift/vm [ZPL], ID 137, cr_txg 13, 143K, 6 objects
+Dataset sat-ashift/fs@s0 [ZPL], ID 103, cr_txg 74, 1.02M, 53 objects
+Dataset sat-ashift/fs@s2 [ZPL], ID 174, cr_txg 176, 1.07M, 61 objects
+Dataset sat-ashift/fs@s1 [ZPL], ID 407, cr_txg 125, 1.05M, 57 objects
+Dataset sat-ashift/fs [ZPL], ID 79, cr_txg 18, 1.09M, 63 objects
+Dataset sat-ashift@s2 [ZPL], ID 166, cr_txg 176, 123K, 8 objects
+Dataset sat-ashift@s1 [ZPL], ID 399, cr_txg 125, 123K, 8 objects
+Dataset sat-ashift@s0 [ZPL], ID 95, cr_txg 74, 123K, 8 objects
+Dataset sat-ashift [ZPL], ID 54, cr_txg 1, 123K, 8 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 12 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 12 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 0 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct

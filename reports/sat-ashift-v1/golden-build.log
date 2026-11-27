@@ -1,0 +1,26 @@
+== sat-ashift (sat-ashift-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== oracle
+== export
+split-capture: 2 MiB in 27 files, the largest mos (0 MiB)
+== files and history, the pool imported read-only
+sat-ashift: 3 entries
+sat-ashift@s0: 3 entries, the same as sat-ashift
+sat-ashift@s1: 3 entries, the same as sat-ashift
+sat-ashift@s2: 3 entries, the same as sat-ashift
+sat-ashift@s3: 3 entries, the same as sat-ashift
+sat-ashift/fs: 61 entries
+sat-ashift/fs@s0: 49 entries
+sat-ashift/fs@s1: 53 entries
+sat-ashift/fs@s2: 57 entries
+sat-ashift/fs@s3: 61 entries, the same as sat-ashift/fs
+sat-ashift/vm: 1 entries
+sat-ashift/vm@s0: 1 entries, the same as sat-ashift/vm
+sat-ashift/vm@s1: 1 entries, the same as sat-ashift/vm
+sat-ashift/vm@s2: 1 entries, the same as sat-ashift/vm
+sat-ashift/vm@s3: 1 entries, the same as sat-ashift/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

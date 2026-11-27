@@ -1,0 +1,5 @@
+sat-ashift-v1 pass       control-sat-ashift               expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-ashift-v1 pass       data-sat-ashift-two-of-ashift13  expected refused | partial actual partial  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-ashift-v1 pass       member-sat-ashift-one-of-each    expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan refused  report bit-exact
+sat-ashift-v1: 101 manifest(s) written for another pool, not run here
+sat-ashift-v1: 3 pass

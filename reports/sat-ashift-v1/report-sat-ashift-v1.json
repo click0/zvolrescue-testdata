@@ -1,0 +1,348 @@
+[
+ {
+  "id": "control-sat-ashift",
+  "description": "Nothing damaged and nothing told, on the satellite of a raidz1 at ashift 9 beside a raidz1 at ashift 13: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-ashift/vm/disk-8k": "ok",
+   "sat-ashift/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-ashift": "ok",
+    "sat-ashift/fs": "ok",
+    "sat-ashift/fs@s0": "ok",
+    "sat-ashift/fs@s1": "ok",
+    "sat-ashift/fs@s2": "ok",
+    "sat-ashift/fs@s3": "ok",
+    "sat-ashift/vm": "ok",
+    "sat-ashift/vm@s0": "ok",
+    "sat-ashift/vm@s1": "ok",
+    "sat-ashift/vm@s2": "ok",
+    "sat-ashift/vm@s3": "ok",
+    "sat-ashift@s0": "ok",
+    "sat-ashift@s1": "ok",
+    "sat-ashift@s2": "ok",
+    "sat-ashift@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 235": "ok",
+    "txg 235 features": "ok",
+    "txg 226": "ok",
+    "txg 226 features": "ok",
+    "txg 225": "ok",
+    "txg 225 features": "ok",
+    "txg 222": "ok",
+    "txg 222 features": "ok",
+    "txg 218": "ok",
+    "txg 218 features": "ok",
+    "txg 214": "ok",
+    "txg 214 features": "ok",
+    "txg 211": "ok",
+    "txg 211 features": "ok",
+    "txg 207": "ok",
+    "txg 207 features": "ok",
+    "txg 203": "ok",
+    "txg 203 features": "ok",
+    "txg 200": "ok",
+    "txg 200 features": "ok",
+    "txg 195": "ok",
+    "txg 195 features": "ok",
+    "txg 194": "ok",
+    "txg 194 features": "ok",
+    "txg 191": "ok",
+    "txg 191 features": "ok",
+    "txg 187": "ok",
+    "txg 187 features": "ok",
+    "txg 183": "ok",
+    "txg 183 features": "ok",
+    "txg 177": "ok",
+    "txg 177 features": "ok",
+    "txg 176": "ok",
+    "txg 176 features": "ok",
+    "txg 173": "ok",
+    "txg 173 features": "ok",
+    "txg 169": "ok",
+    "txg 169 features": "ok",
+    "txg 165": "ok",
+    "txg 165 features": "ok",
+    "txg 162": "ok",
+    "txg 162 features": "ok",
+    "txg 158": "ok",
+    "txg 158 features": "ok",
+    "txg 154": "ok",
+    "txg 154 features": "ok",
+    "txg 151": "ok",
+    "txg 151 features": "ok",
+    "txg 147": "ok",
+    "txg 147 features": "ok",
+    "txg 143": "ok",
+    "txg 143 features": "ok",
+    "txg 140": "ok",
+    "txg 140 features": "ok",
+    "txg 136": "ok",
+    "txg 136 features": "ok",
+    "txg 132": "ok",
+    "txg 132 features": "ok",
+    "txg 126": "ok",
+    "txg 126 features": "ok",
+    "txg 125": "ok",
+    "txg 125 features": "ok",
+    "txg 122": "ok",
+    "txg 122 features": "ok",
+    "txg 118": "ok",
+    "txg 118 features": "ok"
+   },
+   "txgs": [
+    118,
+    122,
+    125,
+    126,
+    132,
+    136,
+    140,
+    143,
+    147,
+    151,
+    154,
+    158,
+    162,
+    165,
+    169,
+    173,
+    176,
+    177,
+    183,
+    187,
+    191,
+    194,
+    195,
+    200,
+    203,
+    207,
+    211,
+    214,
+    218,
+    222,
+    225,
+    226,
+    235,
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-ashift/vm/disk-16k": "ok",
+    "sat-ashift/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-ashift/vm/disk-16k": [
+     "c0014, born at txg 218"
+    ],
+    "sat-ashift/vm/disk-8k": [
+     "c0021, born at txg 214"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-raidz1-0": "ok",
+    "label t1-raidz1-1": "ok",
+    "label t1-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-raidz1-0": "ok",
+    "rings t1-raidz1-1": "ok",
+    "rings t1-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-ashift-v1"
+ },
+ {
+  "id": "data-sat-ashift-two-of-ashift13",
+  "description": "Half the written space of two members of the ashift-13 raidz1 zeroed, at the same offsets",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "sat-ashift/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "sat-ashift/vm/disk-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-ashift": "ok",
+    "sat-ashift/fs": "ok",
+    "sat-ashift/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-raidz1-0": "ok",
+    "label t1-raidz1-1": "ok",
+    "label t1-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-raidz1-0": "ok",
+    "rings t1-raidz1-1": "ok",
+    "rings t1-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "sat-ashift-v1"
+ },
+ {
+  "id": "member-sat-ashift-one-of-each",
+  "description": "One member of each raidz1 gone: absent at ashift 9, zeroed at ashift 13",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-ashift/vm/disk-8k": "ok",
+   "sat-ashift/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-ashift": "ok",
+    "sat-ashift/fs": "ok",
+    "sat-ashift/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-raidz1-0": "ok",
+    "label t1-raidz1-1": "ok",
+    "label t1-raidz1-2": "refused",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-raidz1-0": "ok",
+    "rings t1-raidz1-1": "ok",
+    "rings t1-raidz1-2": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-ashift-v1"
+ }
+]

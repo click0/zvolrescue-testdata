@@ -1,0 +1,51 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-ashift'
+    state: 1
+    txg: 244
+    pool_guid: 13357472494533065488
+    errata: 0
+    min_alloc: 512
+    max_alloc: 8192
+    hostid: 942042096
+    hostname: 'runnervm0hi8g'
+    top_guid: 16094901822101881616
+    guid: 18013131273634631805
+    vdev_children: 2
+    vdev_tree:
+        type: 'raidz'
+        id: 1
+        guid: 16094901822101881616
+        nparity: 1
+        metaslab_array: 267
+        metaslab_shift: 26
+        ashift: 13
+        asize: 589824000
+        min_alloc: 8192
+        is_log: 0
+        create_txg: 10
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 8209273765513015126
+            path: '/var/tmp/sat/members/raidz1a13-0.img'
+            create_txg: 10
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 18013131273634631805
+            path: '/var/tmp/sat/members/raidz1a13-1.img'
+            create_txg: 10
+        children[2]:
+            type: 'file'
+            id: 2
+            guid: 10356853799103779409
+            path: '/var/tmp/sat/members/raidz1a13-2.img'
+            create_txg: 10
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 
