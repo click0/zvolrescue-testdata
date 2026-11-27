@@ -1,0 +1,62 @@
+{
+ "pool": "sat-expand",
+ "image_tag": "sat-expand-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "raidz1",
+   "members": [
+    "t0-raidz1-0",
+    "t0-raidz1-1",
+    "t0-raidz1-2",
+    "t0-raidz1-3"
+   ],
+   "groups": [
+    {
+     "kind": "raidz1",
+     "nparity": 1,
+     "count": 4
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-raidz1-0": {
+   "file": "raidz1-0.img",
+   "guid": "12221475561418628491",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 0
+  },
+  "t0-raidz1-1": {
+   "file": "raidz1-1.img",
+   "guid": "4694771585974995579",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 1
+  },
+  "t0-raidz1-2": {
+   "file": "raidz1-2.img",
+   "guid": "12857793029695301599",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 2
+  },
+  "t0-raidz1-3": {
+   "file": "raidz1-3.img",
+   "guid": "8826216648553043022",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 3
+  }
+ }
+}

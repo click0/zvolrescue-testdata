@@ -1,0 +1,64 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-expand'
+    state: 1
+    txg: 279
+    pool_guid: 6016247156732870282
+    errata: 0
+    min_alloc: 512
+    max_alloc: 4096
+    hostid: 453221572
+    hostname: 'runnervm0hi8g'
+    top_guid: 10039922394254029469
+    guid: 12857793029695301599
+    vdev_children: 1
+    vdev_tree:
+        type: 'raidz'
+        id: 0
+        guid: 10039922394254029469
+        nparity: 1
+        raidz_expand_txgs[0]: 162
+        metaslab_array: 134
+        metaslab_shift: 26
+        ashift: 12
+        asize: 1054867456
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        expansion_time: 1795791314
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 12221475561418628491
+            path: '/var/tmp/sat/members/raidz1-0.img'
+            DTL: 171
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 4694771585974995579
+            path: '/var/tmp/sat/members/raidz1-1.img'
+            DTL: 170
+            create_txg: 4
+        children[2]:
+            type: 'file'
+            id: 2
+            guid: 12857793029695301599
+            path: '/var/tmp/sat/members/raidz1-2.img'
+            DTL: 169
+            create_txg: 4
+        children[3]:
+            type: 'file'
+            id: 3
+            guid: 8826216648553043022
+            path: '/var/tmp/sat/members/raidz1-3.img'
+            DTL: 168
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+        org.openzfs:raidz_expansion
+    labels = 0 1 2 3 

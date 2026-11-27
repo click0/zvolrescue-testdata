@@ -1,0 +1,15 @@
+  pool: sat-expand
+ state: ONLINE
+  scan: scrub repaired 0B in 00:00:00 with 0 errors on Fri Nov 27 14:55:14 2026
+expand: expanded raidz1-0 copied 36.2M in 00:00:00, on Fri Nov 27 14:55:14 2026
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-expand                             ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-3.img  ONLINE       0     0     0
+
+errors: No known data errors

@@ -1,0 +1,93 @@
+[
+ {
+  "id": "control-sat-expand",
+  "description": "Nothing damaged and nothing told, on the satellite of an expanded raidz, which zvolrescue does not read: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "sat-expand/vm/disk-8k": "refused",
+   "refused_detail": {
+    "sat-expand/vm/disk-8k": "exit 3: zvolrescue:   --ignore-unknown-features reads anyway.",
+    "sat-expand/vm/disk-16k": "exit 3: zvolrescue:   --ignore-unknown-features reads anyway."
+   },
+   "sat-expand/vm/disk-16k": "refused"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-expand": "refused",
+    "sat-expand/fs": "refused",
+    "sat-expand/fs@s0": "refused",
+    "sat-expand/fs@s1": "refused",
+    "sat-expand/fs@s2": "refused",
+    "sat-expand/fs@s3": "refused",
+    "sat-expand/vm": "refused",
+    "sat-expand/vm@s0": "refused",
+    "sat-expand/vm@s1": "refused",
+    "sat-expand/vm@s2": "refused",
+    "sat-expand/vm@s3": "refused",
+    "sat-expand@s0": "refused",
+    "sat-expand@s1": "refused",
+    "sat-expand@s2": "refused",
+    "sat-expand@s3": "refused"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "refused"
+   },
+   "txgs": []
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-expand/vm/disk-8k": "scan exit 3: zvolcarve:   --ignore-unknown-features reads anyway.",
+    "sat-expand/vm/disk-16k": "scan exit 3: zvolcarve:   --ignore-unknown-features reads anyway."
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t0-raidz1-3": "ok",
+    "uberblock txg 261": "ok",
+    "uberblock txg 279": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t0-raidz1-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcome": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "sat-expand-v1"
+ }
+]

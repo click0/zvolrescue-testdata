@@ -1,0 +1,52 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-expand
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-expand
+ state: ONLINE
+  scan: scrub repaired 0B in 00:00:00 with 0 errors on Fri Nov 27 14:55:14 2026
+expand: expanded raidz1-0 copied 36.2M in 00:00:00, on Fri Nov 27 14:55:14 2026
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-expand                             ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-3.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                       MOUNTED  MOUNTPOINT                           USED  REFER
+sat-expand                 no       /var/tmp/sat/altroot/sat-expand     36.1M   139K
+sat-expand@s0              -        -                                      0B   139K
+sat-expand@s1              -        -                                      0B   139K
+sat-expand@s2              -        -                                      0B   139K
+sat-expand@s3              -        -                                      0B   139K
+sat-expand/fs              no       /var/tmp/sat/altroot/sat-expand/fs  1.55M  1.23M
+sat-expand/fs@s0           -        -                                    107K  1.16M
+sat-expand/fs@s1           -        -                                    107K  1.19M
+sat-expand/fs@s2           -        -                                    107K  1.21M
+sat-expand/fs@s3           -        -                                      0B  1.23M
+sat-expand/vm              no       /var/tmp/sat/altroot/sat-expand/vm  33.4M   128K
+sat-expand/vm@s0           -        -                                      0B   128K
+sat-expand/vm@s1           -        -                                      0B   128K
+sat-expand/vm@s2           -        -                                      0B   128K
+sat-expand/vm@s3           -        -                                      0B   128K
+sat-expand/vm/disk-16k     -        -                                   19.6M  16.1M
+sat-expand/vm/disk-16k@s0  -        -                                   1.17M  16.2M
+sat-expand/vm/disk-16k@s1  -        -                                    170K  16.2M
+sat-expand/vm/disk-16k@s2  -        -                                    160K  16.1M
+sat-expand/vm/disk-16k@s3  -        -                                      0B  16.1M
+sat-expand/vm/disk-8k      -        -                                   13.7M  10.9M
+sat-expand/vm/disk-8k@s0   -        -                                    948K  10.9M
+sat-expand/vm/disk-8k@s1   -        -                                    266K  10.9M
+sat-expand/vm/disk-8k@s2   -        -                                    245K  10.9M
+sat-expand/vm/disk-8k@s3   -        -                                      0B  10.9M
+members: unchanged after the export (their sums against members.sha256)

@@ -1,0 +1,27 @@
+== sat-expand (sat-expand-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== raidz1-0 expanded
+== oracle
+== export
+split-capture: 2 MiB in 27 files, the largest sat-expand_vm_disk-8k@s3 (0 MiB)
+== files and history, the pool imported read-only
+sat-expand: 3 entries
+sat-expand@s0: 3 entries, the same as sat-expand
+sat-expand@s1: 3 entries, the same as sat-expand
+sat-expand@s2: 3 entries, the same as sat-expand
+sat-expand@s3: 3 entries, the same as sat-expand
+sat-expand/fs: 61 entries
+sat-expand/fs@s0: 49 entries
+sat-expand/fs@s1: 53 entries
+sat-expand/fs@s2: 57 entries
+sat-expand/fs@s3: 61 entries, the same as sat-expand/fs
+sat-expand/vm: 1 entries
+sat-expand/vm@s0: 1 entries, the same as sat-expand/vm
+sat-expand/vm@s1: 1 entries, the same as sat-expand/vm
+sat-expand/vm@s2: 1 entries, the same as sat-expand/vm
+sat-expand/vm@s3: 1 entries, the same as sat-expand/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

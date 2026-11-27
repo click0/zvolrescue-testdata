@@ -1,0 +1,47 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.11M, 142 objects
+Dataset sat-expand/vm/disk-8k@s3 [ZVOL], ID 447, cr_txg 260, 10.9M, 2 objects
+Dataset sat-expand/vm/disk-8k@s0 [ZVOL], ID 265, cr_txg 74, 10.9M, 2 objects
+Dataset sat-expand/vm/disk-8k@s2 [ZVOL], ID 428, cr_txg 209, 10.9M, 2 objects
+Dataset sat-expand/vm/disk-8k@s1 [ZVOL], ID 280, cr_txg 125, 10.9M, 2 objects
+Dataset sat-expand/vm/disk-8k [ZVOL], ID 145, cr_txg 10, 10.9M, 2 objects
+Dataset sat-expand/vm/disk-16k@s3 [ZVOL], ID 449, cr_txg 260, 16.1M, 2 objects
+Dataset sat-expand/vm/disk-16k@s0 [ZVOL], ID 267, cr_txg 74, 16.2M, 2 objects
+Dataset sat-expand/vm/disk-16k@s2 [ZVOL], ID 430, cr_txg 209, 16.1M, 2 objects
+Dataset sat-expand/vm/disk-16k@s1 [ZVOL], ID 282, cr_txg 125, 16.2M, 2 objects
+Dataset sat-expand/vm/disk-16k [ZVOL], ID 152, cr_txg 12, 16.1M, 2 objects
+Dataset sat-expand/vm@s1 [ZPL], ID 278, cr_txg 125, 128K, 6 objects
+Dataset sat-expand/vm@s2 [ZPL], ID 426, cr_txg 209, 128K, 6 objects
+Dataset sat-expand/vm@s0 [ZPL], ID 263, cr_txg 74, 128K, 6 objects
+Dataset sat-expand/vm@s3 [ZPL], ID 445, cr_txg 260, 128K, 6 objects
+Dataset sat-expand/vm [ZPL], ID 387, cr_txg 9, 128K, 6 objects
+Dataset sat-expand/fs@s1 [ZPL], ID 284, cr_txg 125, 1.19M, 57 objects
+Dataset sat-expand/fs@s2 [ZPL], ID 432, cr_txg 209, 1.21M, 61 objects
+Dataset sat-expand/fs@s0 [ZPL], ID 269, cr_txg 74, 1.16M, 53 objects
+Dataset sat-expand/fs@s3 [ZPL], ID 451, cr_txg 260, 1.23M, 65 objects
+Dataset sat-expand/fs [ZPL], ID 396, cr_txg 14, 1.23M, 65 objects
+Dataset sat-expand@s3 [ZPL], ID 443, cr_txg 260, 139K, 8 objects
+Dataset sat-expand@s0 [ZPL], ID 261, cr_txg 74, 139K, 8 objects
+Dataset sat-expand@s2 [ZPL], ID 424, cr_txg 209, 139K, 8 objects
+Dataset sat-expand@s1 [ZPL], ID 276, cr_txg 125, 139K, 8 objects
+Dataset sat-expand [ZPL], ID 54, cr_txg 1, 139K, 8 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 15 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 15 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 0 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct
