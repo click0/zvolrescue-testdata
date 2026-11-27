@@ -15,7 +15,7 @@ is counted by its case alone, and a class that damages no member
 (the control; metadata, every case of which aims at a block) has no
 rows here. An empty cell (—) is a combination no manifest tests.
 
-111 manifests.
+115 manifests.
 
 ## Top-level vdevs, by class and position
 
@@ -33,8 +33,8 @@ rows here. An empty cell (—) is a combination no manifest tests.
 | partition | ? | — | — | — | — | — | — | 3 |
 | data | none | — | — | — | — | — | — | — |
 | data | within | — | — | — | — | — | — | 7 |
-| data | at | — | — | — | — | — | 1 | 2 |
-| data | past | — | — | — | — | — | 1 | — |
+| data | at | 1 | — | 1 | — | — | 1 | 2 |
+| data | past | 1 | — | 1 | — | — | 1 | — |
 | data | ? | — | — | — | — | — | — | — |
 | member | none | — | — | — | — | — | — | — |
 | member | within | — | — | — | — | — | — | 1 |
@@ -68,7 +68,7 @@ the pool at all).
 | labels | 17 | — | — | — | — | 2 |
 | partition | 1 | — | — | — | 3 | 1 |
 | metadata | 2 | — | — | — | 10 | 0 |
-| data | — | 7 | 3 | 1 | 7 | 11 |
+| data | — | 7 | 5 | 3 | 7 | 15 |
 | member | 3 | 1 | 11 | 3 | 2 | 18 |
 | older-self | — | — | — | — | 4 | 0 |
 | combo | 2 | 8 | 5 | 1 | 8 | 6 |

@@ -1,0 +1,16 @@
+id = "data-draid1-one-child-range"
+image = "golden"
+description = "Two fifths of the written space of one dRAID child zeroed"
+classes = ["data"]
+
+[[damage]]
+member = { top = 2, leaf = 0 }
+range = "data:20%..60%"
+pattern = "zeros"
+
+[expect]
+# At the dRAID's parity of one: every row there has one column lost.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

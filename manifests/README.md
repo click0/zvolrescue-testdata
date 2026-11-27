@@ -355,11 +355,13 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 111 manifests: 78 cover every class of SPEC §9.1's catalogue at least
+The 115 manifests: 82 cover every class of SPEC §9.1's catalogue at least
 once against the layout `image-v1` and `golden-v2` share: members
 `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`,
 `oracle/golden-v2/layout.json`); five of them name `golden-v2`, for what only it
-holds, and are n/a on `image-v1`. 26 are the satellites': a
+holds, and are n/a on `image-v1`, and four name the pool `golden` for the
+data cases [`COVERAGE.md`](../COVERAGE.md) showed none of on the mirror
+and the dRAID — at their redundancy and past it. 26 are the satellites': a
 control each, and for each the members and the data its feature puts
 where a reader must find them — the half of a mirror that took a
 removed vdev's blocks, the hot spare and the stale disk it stands in

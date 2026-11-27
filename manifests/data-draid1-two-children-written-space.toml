@@ -1,0 +1,19 @@
+id = "data-draid1-two-children-written-space"
+image = "golden"
+description = "The whole written space of two dRAID children zeroed, their labels kept"
+classes = ["data"]
+
+[[damage]]
+member = { top = 2, leaf = 0 }
+range = "data:0%..100%"
+pattern = "zeros"
+
+[[damage]]
+member = { top = 2, leaf = 1 }
+range = "data:0%..100%"
+pattern = "zeros"
+
+[expect]
+# Past the dRAID's parity of one: two columns of every row lost.
+outcome = "refused"
+volumes = "all"

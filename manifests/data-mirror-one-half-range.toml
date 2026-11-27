@@ -1,0 +1,16 @@
+id = "data-mirror-one-half-range"
+image = "golden"
+description = "Two fifths of the written space of one mirror half zeroed"
+classes = ["data"]
+
+[[damage]]
+member = { top = 0, leaf = 0 }
+range = "data:20%..60%"
+pattern = "zeros"
+
+[expect]
+# At the mirror's redundancy: every block there has its other half.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

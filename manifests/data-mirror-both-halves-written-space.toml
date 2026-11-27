@@ -1,0 +1,20 @@
+id = "data-mirror-both-halves-written-space"
+image = "golden"
+description = "The whole written space of both mirror halves zeroed, their labels kept"
+classes = ["data"]
+
+[[damage]]
+member = { top = 0, leaf = 0 }
+range = "data:0%..100%"
+pattern = "zeros"
+
+[[damage]]
+member = { top = 0, leaf = 1 }
+range = "data:0%..100%"
+pattern = "zeros"
+
+[expect]
+# Past the mirror's redundancy: every volume has blocks there, and they are
+# gone with both halves; a partial image, counted and said, is the most.
+outcome = "refused"
+volumes = "all"
