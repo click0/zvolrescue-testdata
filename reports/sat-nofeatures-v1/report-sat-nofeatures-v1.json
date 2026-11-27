@@ -1,0 +1,206 @@
+[
+ {
+  "id": "control-sat-nofeatures",
+  "description": "Nothing damaged and nothing told, on a pool of version 5000 with every feature disabled: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-nofeatures/vm/disk-8k": "ok",
+   "sat-nofeatures/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-nofeatures": "ok",
+    "sat-nofeatures/fs": "ok",
+    "sat-nofeatures/fs@s0": "ok",
+    "sat-nofeatures/fs@s1": "ok",
+    "sat-nofeatures/fs@s2": "ok",
+    "sat-nofeatures/fs@s3": "ok",
+    "sat-nofeatures/vm": "ok",
+    "sat-nofeatures/vm@s0": "ok",
+    "sat-nofeatures/vm@s1": "ok",
+    "sat-nofeatures/vm@s2": "ok",
+    "sat-nofeatures/vm@s3": "ok",
+    "sat-nofeatures@s0": "ok",
+    "sat-nofeatures@s1": "ok",
+    "sat-nofeatures@s2": "ok",
+    "sat-nofeatures@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "txg 241": "ok",
+    "txg 232": "ok",
+    "txg 231": "ok",
+    "txg 228": "ok",
+    "txg 224": "ok",
+    "txg 220": "ok",
+    "txg 217": "ok",
+    "txg 213": "ok",
+    "txg 206": "ok",
+    "txg 202": "ok",
+    "txg 198": "ok",
+    "txg 195": "ok",
+    "txg 191": "ok",
+    "txg 187": "ok",
+    "txg 180": "ok",
+    "txg 173": "ok",
+    "txg 169": "ok",
+    "txg 162": "ok",
+    "txg 158": "ok",
+    "txg 151": "ok",
+    "txg 147": "ok",
+    "txg 144": "ok",
+    "txg 140": "ok",
+    "txg 129": "ok"
+   },
+   "txgs": [
+    129,
+    140,
+    144,
+    147,
+    151,
+    158,
+    162,
+    169,
+    173,
+    180,
+    187,
+    191,
+    195,
+    198,
+    202,
+    206,
+    213,
+    217,
+    220,
+    224,
+    228,
+    231,
+    232,
+    241,
+    250
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-nofeatures/vm/disk-16k": "ok",
+    "sat-nofeatures/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-nofeatures/vm/disk-16k": [
+     "c0032, born at txg 224"
+    ],
+    "sat-nofeatures/vm/disk-8k": [
+     "c0031, born at txg 220"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 232": "ok",
+    "uberblock txg 250": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-nofeatures-v1"
+ },
+ {
+  "id": "member-sat-nofeatures-mirror-half",
+  "description": "One half of the mirror absent, on a pool with every feature disabled",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-nofeatures/vm/disk-8k": "ok",
+   "sat-nofeatures/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-nofeatures": "ok",
+    "sat-nofeatures/fs": "ok",
+    "sat-nofeatures/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok"
+   },
+   "txgs": [
+    250
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-1": "ok",
+    "uberblock txg 232": "ok",
+    "uberblock txg 250": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-nofeatures-v1"
+ }
+]

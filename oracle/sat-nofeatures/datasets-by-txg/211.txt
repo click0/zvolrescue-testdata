@@ -1,0 +1,23 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.29M, 148 objects
+Dataset sat-nofeatures/fs@s2 [ZPL], ID 74, cr_txg 180, 1.20M, 61 objects
+Dataset sat-nofeatures/fs@s1 [ZPL], ID 268, cr_txg 129, 1.18M, 57 objects
+Dataset sat-nofeatures/fs@s0 [ZPL], ID 159, cr_txg 78, 1.16M, 53 objects
+Dataset sat-nofeatures/fs [ZPL], ID 259, cr_txg 12, 1.21M, 63 objects
+Dataset sat-nofeatures/vm/disk-8k@s0 [ZVOL], ID 167, cr_txg 78, 8.29M, 2 objects
+Dataset sat-nofeatures/vm/disk-8k@s1 [ZVOL], ID 278, cr_txg 129, 8.29M, 2 objects
+Dataset sat-nofeatures/vm/disk-8k@s2 [ZVOL], ID 86, cr_txg 180, 8.29M, 2 objects
+Dataset sat-nofeatures/vm/disk-8k [ZVOL], ID 142, cr_txg 8, 8.29M, 2 objects
+Dataset sat-nofeatures/vm/disk-16k@s1 [ZVOL], ID 283, cr_txg 129, 16.2M, 2 objects
+Dataset sat-nofeatures/vm/disk-16k@s2 [ZVOL], ID 92, cr_txg 180, 16.2M, 2 objects
+Dataset sat-nofeatures/vm/disk-16k@s0 [ZVOL], ID 171, cr_txg 78, 16.2M, 2 objects
+Dataset sat-nofeatures/vm/disk-16k [ZVOL], ID 149, cr_txg 10, 16.2M, 2 objects
+Dataset sat-nofeatures/vm@s0 [ZPL], ID 163, cr_txg 78, 176K, 6 objects
+Dataset sat-nofeatures/vm@s2 [ZPL], ID 80, cr_txg 180, 176K, 6 objects
+Dataset sat-nofeatures/vm@s1 [ZPL], ID 273, cr_txg 129, 176K, 6 objects
+Dataset sat-nofeatures/vm [ZPL], ID 135, cr_txg 7, 176K, 6 objects
+Dataset sat-nofeatures@s0 [ZPL], ID 155, cr_txg 78, 200K, 8 objects
+Dataset sat-nofeatures@s1 [ZPL], ID 263, cr_txg 129, 200K, 8 objects
+Dataset sat-nofeatures@s2 [ZPL], ID 68, cr_txg 180, 200K, 8 objects
+Dataset sat-nofeatures [ZPL], ID 54, cr_txg 1, 200K, 8 objects
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct

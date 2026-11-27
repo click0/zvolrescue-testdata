@@ -1,0 +1,16 @@
+  pool: sat-nofeatures
+ state: ONLINE
+status: Some supported and requested features are not enabled on the pool.
+	The pool can still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+	the pool may no longer be accessible by software that does not support
+	the features. See zpool-features(7) for details.
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-nofeatures                          ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+
+errors: No known data errors

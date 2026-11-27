@@ -1,0 +1,26 @@
+== sat-nofeatures (sat-nofeatures-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== oracle
+== export
+split-capture: 2 MiB in 27 files, the largest sat-nofeatures_vm_disk-8k@s3 (0 MiB)
+== files and history, the pool imported read-only
+sat-nofeatures: 3 entries
+sat-nofeatures@s0: 3 entries, the same as sat-nofeatures
+sat-nofeatures@s1: 3 entries, the same as sat-nofeatures
+sat-nofeatures@s2: 3 entries, the same as sat-nofeatures
+sat-nofeatures@s3: 3 entries, the same as sat-nofeatures
+sat-nofeatures/fs: 61 entries
+sat-nofeatures/fs@s0: 49 entries
+sat-nofeatures/fs@s1: 53 entries
+sat-nofeatures/fs@s2: 57 entries
+sat-nofeatures/fs@s3: 61 entries, the same as sat-nofeatures/fs
+sat-nofeatures/vm: 1 entries
+sat-nofeatures/vm@s0: 1 entries, the same as sat-nofeatures/vm
+sat-nofeatures/vm@s1: 1 entries, the same as sat-nofeatures/vm
+sat-nofeatures/vm@s2: 1 entries, the same as sat-nofeatures/vm
+sat-nofeatures/vm@s3: 1 entries, the same as sat-nofeatures/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

@@ -1,0 +1,113 @@
+History for 'sat-nofeatures':
+2026-11-27.16:33:28 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm0hi8g]
+2026-11-27.16:33:28 [txg:4] set ashift=12 [on runnervm0hi8g]
+2026-11-27.16:33:28 [txg:4] set autotrim=0 [on runnervm0hi8g]
+2026-11-27.16:33:28 [txg:5] set sat-nofeatures (54) snapdev=1 [on runnervm0hi8g]
+2026-11-27.16:33:28 [txg:6] set sat-nofeatures (54) compression=3 [on runnervm0hi8g]
+2026-11-27.16:33:28 zpool create -f -o ashift=12 -o autotrim=off -d -O compression=lzjb -O snapdev=visible sat-nofeatures mirror /var/tmp/sat/members/mirror-0a.img /var/tmp/sat/members/mirror-0b.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:28 [txg:7] create sat-nofeatures/vm (135)   [on runnervm0hi8g]
+2026-11-27.16:33:28 (4ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:28 zfs create sat-nofeatures/vm [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 [txg:8] create sat-nofeatures/vm/disk-8k (142)   [on runnervm0hi8g]
+2026-11-27.16:33:29 [txg:9] set sat-nofeatures/vm/disk-8k (142) checksum=7 [on runnervm0hi8g]
+2026-11-27.16:33:29 [txg:9] set sat-nofeatures/vm/disk-8k (142) compression=3 [on runnervm0hi8g]
+2026-11-27.16:33:29 (12ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 3
+            volblocksize: 8192
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lzjb sat-nofeatures/vm/disk-8k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 [txg:10] create sat-nofeatures/vm/disk-16k (149)   [on runnervm0hi8g]
+2026-11-27.16:33:29 [txg:11] set sat-nofeatures/vm/disk-16k (149) checksum=8 [on runnervm0hi8g]
+2026-11-27.16:33:29 [txg:11] set sat-nofeatures/vm/disk-16k (149) compression=2 [on runnervm0hi8g]
+2026-11-27.16:33:29 (34ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-nofeatures/vm/disk-16k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 [txg:12] create sat-nofeatures/fs (259)   [on runnervm0hi8g]
+2026-11-27.16:33:29 (29ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:29 zfs create sat-nofeatures/fs [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:30 [txg:78] snapshot sat-nofeatures@s0 (155)   [on runnervm0hi8g]
+2026-11-27.16:33:30 [txg:78] snapshot sat-nofeatures/fs@s0 (159)   [on runnervm0hi8g]
+2026-11-27.16:33:30 [txg:78] snapshot sat-nofeatures/vm@s0 (163)   [on runnervm0hi8g]
+2026-11-27.16:33:30 [txg:78] snapshot sat-nofeatures/vm/disk-8k@s0 (167)   [on runnervm0hi8g]
+2026-11-27.16:33:30 [txg:78] snapshot sat-nofeatures/vm/disk-16k@s0 (171)   [on runnervm0hi8g]
+2026-11-27.16:33:30 (10ms) ioctl snapshot
+    input:
+        snaps:
+            sat-nofeatures@s0
+            sat-nofeatures/fs@s0
+            sat-nofeatures/vm@s0
+            sat-nofeatures/vm/disk-8k@s0
+            sat-nofeatures/vm/disk-16k@s0
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:30 zfs snapshot -r sat-nofeatures@s0 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:31 [txg:129] snapshot sat-nofeatures@s1 (263)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:129] snapshot sat-nofeatures/fs@s1 (268)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:129] snapshot sat-nofeatures/vm@s1 (273)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:129] snapshot sat-nofeatures/vm/disk-8k@s1 (278)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:129] snapshot sat-nofeatures/vm/disk-16k@s1 (283)   [on runnervm0hi8g]
+2026-11-27.16:33:31 (10ms) ioctl snapshot
+    input:
+        snaps:
+            sat-nofeatures@s1
+            sat-nofeatures/fs@s1
+            sat-nofeatures/vm@s1
+            sat-nofeatures/vm/disk-8k@s1
+            sat-nofeatures/vm/disk-16k@s1
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:31 zfs snapshot -r sat-nofeatures@s1 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:31 [txg:180] snapshot sat-nofeatures@s2 (68)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:180] snapshot sat-nofeatures/fs@s2 (74)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:180] snapshot sat-nofeatures/vm@s2 (80)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:180] snapshot sat-nofeatures/vm/disk-8k@s2 (86)   [on runnervm0hi8g]
+2026-11-27.16:33:31 [txg:180] snapshot sat-nofeatures/vm/disk-16k@s2 (92)   [on runnervm0hi8g]
+2026-11-27.16:33:31 (10ms) ioctl snapshot
+    input:
+        snaps:
+            sat-nofeatures@s2
+            sat-nofeatures/fs@s2
+            sat-nofeatures/vm@s2
+            sat-nofeatures/vm/disk-8k@s2
+            sat-nofeatures/vm/disk-16k@s2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:31 zfs snapshot -r sat-nofeatures@s2 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 [txg:231] snapshot sat-nofeatures@s3 (98)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:231] snapshot sat-nofeatures/fs@s3 (105)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:231] snapshot sat-nofeatures/vm@s3 (112)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:231] snapshot sat-nofeatures/vm/disk-8k@s3 (119)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:231] snapshot sat-nofeatures/vm/disk-16k@s3 (126)   [on runnervm0hi8g]
+2026-11-27.16:33:33 (11ms) ioctl snapshot
+    input:
+        snaps:
+            sat-nofeatures@s3
+            sat-nofeatures/fs@s3
+            sat-nofeatures/vm@s3
+            sat-nofeatures/vm/disk-8k@s3
+            sat-nofeatures/vm/disk-16k@s3
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 zfs snapshot -r sat-nofeatures@s3 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:37 zpool export sat-nofeatures [user 0 (root) on runnervm0hi8g:linux]
+

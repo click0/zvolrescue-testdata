@@ -1,0 +1,53 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-nofeatures
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-nofeatures
+ state: ONLINE
+status: Some supported and requested features are not enabled on the pool.
+	The pool can still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+	the pool may no longer be accessible by software that does not support
+	the features. See zpool-features(7) for details.
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-nofeatures                          ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                           MOUNTED  MOUNTPOINT                               USED  REFER
+sat-nofeatures                 no       /var/tmp/sat/altroot/sat-nofeatures     33.7M   200K
+sat-nofeatures@s0              -        -                                          0B   200K
+sat-nofeatures@s1              -        -                                          0B   200K
+sat-nofeatures@s2              -        -                                          0B   200K
+sat-nofeatures@s3              -        -                                          0B   200K
+sat-nofeatures/fs              no       /var/tmp/sat/altroot/sat-nofeatures/fs  1.62M  1.22M
+sat-nofeatures/fs@s0           -        -                                        136K  1.16M
+sat-nofeatures/fs@s1           -        -                                        136K  1.18M
+sat-nofeatures/fs@s2           -        -                                        136K  1.20M
+sat-nofeatures/fs@s3           -        -                                          0B  1.22M
+sat-nofeatures/vm              no       /var/tmp/sat/altroot/sat-nofeatures/vm  30.6M   176K
+sat-nofeatures/vm@s0           -        -                                          0B   176K
+sat-nofeatures/vm@s1           -        -                                          0B   176K
+sat-nofeatures/vm@s2           -        -                                          0B   176K
+sat-nofeatures/vm@s3           -        -                                          0B   176K
+sat-nofeatures/vm/disk-16k     -        -                                       19.8M  16.2M
+sat-nofeatures/vm/disk-16k@s0  -        -                                       1.19M  16.2M
+sat-nofeatures/vm/disk-16k@s1  -        -                                        192K  16.2M
+sat-nofeatures/vm/disk-16k@s2  -        -                                        192K  16.2M
+sat-nofeatures/vm/disk-16k@s3  -        -                                          0B  16.2M
+sat-nofeatures/vm/disk-8k      -        -                                       10.6M  8.29M
+sat-nofeatures/vm/disk-8k@s0   -        -                                        800K  8.29M
+sat-nofeatures/vm/disk-8k@s1   -        -                                        288K  8.29M
+sat-nofeatures/vm/disk-8k@s2   -        -                                        288K  8.29M
+sat-nofeatures/vm/disk-8k@s3   -        -                                          0B  8.29M
+members: unchanged after the export (their sums against members.sha256)

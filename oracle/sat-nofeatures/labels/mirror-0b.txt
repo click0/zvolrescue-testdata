@@ -1,0 +1,41 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-nofeatures'
+    state: 1
+    txg: 250
+    pool_guid: 854064918663004572
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 4096
+    hostid: 840935896
+    hostname: 'runnervm0hi8g'
+    top_guid: 12705462542406331462
+    guid: 15515705810001407175
+    vdev_children: 1
+    vdev_tree:
+        type: 'mirror'
+        id: 0
+        guid: 12705462542406331462
+        metaslab_array: 64
+        metaslab_shift: 24
+        ashift: 12
+        asize: 263716864
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 9321850488126011418
+            path: '/var/tmp/sat/members/mirror-0a.img'
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 15515705810001407175
+            path: '/var/tmp/sat/members/mirror-0b.img'
+            create_txg: 4
+    features_for_read:
+    labels = 0 1 2 3 

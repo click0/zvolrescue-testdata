@@ -1,0 +1,46 @@
+
+MOS Configuration:
+        version: 5000
+        name: 'sat-nofeatures'
+        state: 0
+        txg: 4
+        pool_guid: 854064918663004572
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 4096
+        hostid: 840935896
+        hostname: 'runnervm0hi8g'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 1
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 854064918663004572
+            create_txg: 4
+            children[0]:
+                type: 'mirror'
+                id: 0
+                guid: 12705462542406331462
+                metaslab_array: 64
+                metaslab_shift: 24
+                ashift: 12
+                asize: 263716864
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 129
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 9321850488126011418
+                    path: '/var/tmp/sat/members/mirror-0a.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 130
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 15515705810001407175
+                    path: '/var/tmp/sat/members/mirror-0b.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+        features_for_read:
