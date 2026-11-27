@@ -1,0 +1,51 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-special'
+    state: 1
+    txg: 389
+    pool_guid: 9414671517126311199
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 4096
+    hostid: 1569057743
+    hostname: 'runnervm0hi8g'
+    top_guid: 12302903124948364728
+    guid: 10846268693802286680
+    vdev_children: 3
+    vdev_tree:
+        type: 'raidz'
+        id: 0
+        guid: 12302903124948364728
+        nparity: 1
+        metaslab_array: 149
+        metaslab_shift: 26
+        ashift: 12
+        asize: 791150592
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 16175433776582774484
+            path: '/var/tmp/sat/members/raidz1-0.img'
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 8845965173468497766
+            path: '/var/tmp/sat/members/raidz1-1.img'
+            create_txg: 4
+        children[2]:
+            type: 'file'
+            id: 2
+            guid: 10846268693802286680
+            path: '/var/tmp/sat/members/raidz1-2.img'
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

@@ -1,0 +1,412 @@
+[
+ {
+  "id": "control-sat-special",
+  "description": "Nothing damaged and nothing told, on the satellite with special and dedup vdevs: metadata and small blocks on the special mirror, the dedup table on its own: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-special/vm/disk-8k": "ok",
+   "sat-special/vm/disk-16k": "ok",
+   "sat-special/vm/disk-small": "ok",
+   "sat-special/vm/disk-dedup": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special": "ok",
+    "sat-special/fs": "ok",
+    "sat-special/fs@s0": "ok",
+    "sat-special/fs@s1": "ok",
+    "sat-special/fs@s2": "ok",
+    "sat-special/fs@s3": "ok",
+    "sat-special/vm": "ok",
+    "sat-special/vm@s0": "ok",
+    "sat-special/vm@s1": "ok",
+    "sat-special/vm@s2": "ok",
+    "sat-special/vm@s3": "ok",
+    "sat-special@s0": "ok",
+    "sat-special@s1": "ok",
+    "sat-special@s2": "ok",
+    "sat-special@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 380": "ok",
+    "txg 380 features": "ok",
+    "txg 371": "ok",
+    "txg 371 features": "ok",
+    "txg 370": "ok",
+    "txg 370 features": "ok",
+    "txg 367": "ok",
+    "txg 367 features": "ok",
+    "txg 364": "ok",
+    "txg 364 features": "ok",
+    "txg 363": "ok",
+    "txg 363 features": "ok",
+    "txg 359": "ok",
+    "txg 359 features": "ok",
+    "txg 355": "ok",
+    "txg 355 features": "ok",
+    "txg 351": "ok",
+    "txg 351 features": "ok",
+    "txg 345": "ok",
+    "txg 345 features": "ok",
+    "txg 340": "ok",
+    "txg 340 features": "ok",
+    "txg 336": "ok",
+    "txg 336 features": "ok",
+    "txg 329": "ok",
+    "txg 329 features": "ok",
+    "txg 326": "ok",
+    "txg 326 features": "ok",
+    "txg 321": "ok",
+    "txg 321 features": "ok",
+    "txg 317": "ok",
+    "txg 317 features": "ok",
+    "txg 310": "ok",
+    "txg 310 features": "ok",
+    "txg 302": "ok",
+    "txg 302 features": "ok",
+    "txg 298": "ok",
+    "txg 298 features": "ok",
+    "txg 288": "ok",
+    "txg 288 features": "ok"
+   },
+   "txgs": [
+    288,
+    298,
+    302,
+    310,
+    317,
+    321,
+    326,
+    329,
+    336,
+    340,
+    345,
+    351,
+    355,
+    359,
+    363,
+    364,
+    367,
+    370,
+    371,
+    380,
+    389
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special/vm/disk-16k": "ok",
+    "sat-special/vm/disk-8k": "ok",
+    "sat-special/vm/disk-dedup": "ok",
+    "sat-special/vm/disk-small": "ok"
+   },
+   "detail": {
+    "sat-special/vm/disk-16k": [
+     "c0070, born at txg 355"
+    ],
+    "sat-special/vm/disk-8k": [
+     "c0069, born at txg 351"
+    ],
+    "sat-special/vm/disk-dedup": [
+     "c0072, born at txg 363"
+    ],
+    "sat-special/vm/disk-small": [
+     "c0071, born at txg 359"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-mirror-0": "ok",
+    "label t1-mirror-1": "ok",
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "ok",
+    "uberblock txg 371": "ok",
+    "uberblock txg 389": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-mirror-0": "ok",
+    "rings t1-mirror-1": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-special-v1"
+ },
+ {
+  "id": "member-sat-special-dedup-vdev-gone",
+  "description": "Both halves of the dedup mirror absent: the dedup table lost, and nothing a reader needs with it",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-special/vm/disk-8k": "ok",
+   "sat-special/vm/disk-16k": "ok",
+   "sat-special/vm/disk-small": "ok",
+   "sat-special/vm/disk-dedup": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special": "ok",
+    "sat-special/fs": "ok",
+    "sat-special/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    389
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-mirror-0": "ok",
+    "label t1-mirror-1": "ok",
+    "uberblock txg 371": "ok",
+    "uberblock txg 389": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-mirror-0": "ok",
+    "rings t1-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-special-v1"
+ },
+ {
+  "id": "member-sat-special-one-special-half",
+  "description": "One half of the special mirror absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-special/vm/disk-8k": "ok",
+   "sat-special/vm/disk-16k": "ok",
+   "sat-special/vm/disk-small": "ok",
+   "sat-special/vm/disk-dedup": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special": "ok",
+    "sat-special/fs": "ok",
+    "sat-special/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    389
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t1-mirror-1": "ok",
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "ok",
+    "uberblock txg 371": "ok",
+    "uberblock txg 389": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t1-mirror-1": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-special-v1"
+ },
+ {
+  "id": "member-sat-special-special-vdev-gone",
+  "description": "Both halves of the special mirror absent: every copy of the pool's metadata with them",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "sat-special/vm/disk-8k": "refused",
+   "refused_detail": {
+    "sat-special/vm/disk-8k": "exit 3: zvolrescue: cannot read the pool at any of 31 verified TXG(s) (newest: txg 389: DVA names unknown top-level vdev 1)",
+    "sat-special/vm/disk-16k": "exit 3: zvolrescue: cannot read the pool at any of 31 verified TXG(s) (newest: txg 389: DVA names unknown top-level vdev 1)",
+    "sat-special/vm/disk-small": "exit 3: zvolrescue: cannot read the pool at any of 31 verified TXG(s) (newest: txg 389: DVA names unknown top-level vdev 1)",
+    "sat-special/vm/disk-dedup": "exit 3: zvolrescue: cannot read the pool at any of 31 verified TXG(s) (newest: txg 389: DVA names unknown top-level vdev 1)"
+   },
+   "sat-special/vm/disk-16k": "refused",
+   "sat-special/vm/disk-small": "refused",
+   "sat-special/vm/disk-dedup": "refused"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special": "refused",
+    "sat-special/fs": "refused",
+    "sat-special/vm": "refused"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "refused"
+   },
+   "txgs": []
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "carve": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-special/vm/disk-8k": "refused",
+    "sat-special/vm/disk-16k": "refused",
+    "sat-special/vm/disk-small": "refused",
+    "sat-special/vm/disk-dedup": "refused"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "ok",
+    "uberblock txg 371": "ok",
+    "uberblock txg 389": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcome": "refused"
+  },
+  "inputs_unchanged": true,
+  "actual": "refused",
+  "verdict": "pass",
+  "image": "sat-special-v1"
+ }
+]

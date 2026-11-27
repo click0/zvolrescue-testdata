@@ -1,0 +1,20 @@
+  pool: sat-special
+ state: ONLINE
+config:
+
+	NAME                                     STATE     READ WRITE CKSUM
+	sat-special                              ONLINE       0     0     0
+	  raidz1-0                               ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img    ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img    ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img    ONLINE       0     0     0
+	dedup	
+	  mirror-2                               ONLINE       0     0     0
+	    /var/tmp/sat/members/dedup-0a.img    ONLINE       0     0     0
+	    /var/tmp/sat/members/dedup-0b.img    ONLINE       0     0     0
+	special	
+	  mirror-1                               ONLINE       0     0     0
+	    /var/tmp/sat/members/special-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/special-0b.img  ONLINE       0     0     0
+
+errors: No known data errors

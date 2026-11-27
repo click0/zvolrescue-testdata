@@ -1,0 +1,50 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.65M, 181 objects
+Dataset sat-special/vm/disk-small@s1 [ZVOL], ID 189, cr_txg 204, 8.23M, 2 objects
+Dataset sat-special/vm/disk-small@s2 [ZVOL], ID 302, cr_txg 287, 8.23M, 2 objects
+Dataset sat-special/vm/disk-small@s0 [ZVOL], ID 96, cr_txg 123, 8.23M, 2 objects
+Dataset sat-special/vm/disk-small [ZVOL], ID 160, cr_txg 16, 8.23M, 2 objects
+Dataset sat-special/vm/disk-dedup@s2 [ZVOL], ID 304, cr_txg 287, 16.1M, 2 objects
+Dataset sat-special/vm/disk-dedup@s1 [ZVOL], ID 191, cr_txg 204, 16.1M, 2 objects
+Dataset sat-special/vm/disk-dedup@s0 [ZVOL], ID 98, cr_txg 123, 16.1M, 2 objects
+Dataset sat-special/vm/disk-dedup [ZVOL], ID 260, cr_txg 18, 16.1M, 2 objects
+Dataset sat-special/vm/disk-16k@s0 [ZVOL], ID 100, cr_txg 123, 16.1M, 2 objects
+Dataset sat-special/vm/disk-16k@s1 [ZVOL], ID 193, cr_txg 204, 16.1M, 2 objects
+Dataset sat-special/vm/disk-16k@s2 [ZVOL], ID 306, cr_txg 287, 16.1M, 2 objects
+Dataset sat-special/vm/disk-16k [ZVOL], ID 70, cr_txg 12, 16.1M, 2 objects
+Dataset sat-special/vm/disk-8k@s0 [ZVOL], ID 102, cr_txg 123, 10.9M, 2 objects
+Dataset sat-special/vm/disk-8k@s2 [ZVOL], ID 308, cr_txg 287, 10.9M, 2 objects
+Dataset sat-special/vm/disk-8k@s1 [ZVOL], ID 195, cr_txg 204, 10.9M, 2 objects
+Dataset sat-special/vm/disk-8k [ZVOL], ID 153, cr_txg 10, 10.9M, 2 objects
+Dataset sat-special/vm@s1 [ZPL], ID 187, cr_txg 204, 96K, 6 objects
+Dataset sat-special/vm@s2 [ZPL], ID 300, cr_txg 287, 96K, 6 objects
+Dataset sat-special/vm@s0 [ZPL], ID 94, cr_txg 123, 96K, 6 objects
+Dataset sat-special/vm [ZPL], ID 387, cr_txg 8, 96K, 6 objects
+Dataset sat-special/fs@s1 [ZPL], ID 197, cr_txg 204, 1.09M, 57 objects
+Dataset sat-special/fs@s2 [ZPL], ID 310, cr_txg 287, 1.11M, 61 objects
+Dataset sat-special/fs@s0 [ZPL], ID 104, cr_txg 123, 1.07M, 53 objects
+Dataset sat-special/fs [ZPL], ID 396, cr_txg 14, 1.13M, 64 objects
+Dataset sat-special@s1 [ZPL], ID 185, cr_txg 204, 104K, 8 objects
+Dataset sat-special@s2 [ZPL], ID 298, cr_txg 287, 104K, 8 objects
+Dataset sat-special@s0 [ZPL], ID 92, cr_txg 123, 104K, 8 objects
+Dataset sat-special [ZPL], ID 54, cr_txg 1, 104K, 8 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 12 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 12 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 0 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct

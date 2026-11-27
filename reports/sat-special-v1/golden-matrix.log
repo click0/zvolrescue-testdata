@@ -1,0 +1,6 @@
+sat-special-v1 pass       control-sat-special              expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-special-v1 pass       member-sat-special-dedup-vdev-gone expected bit-exact | reconstructed actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-special-v1 pass       member-sat-special-one-special-half expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-special-v1 pass       member-sat-special-special-vdev-gone expected refused | partial actual refused  files refused  timeline refused  datasets refused  scan bit-exact  report bit-exact  carve refused
+sat-special-v1: 100 manifest(s) written for another pool, not run here
+sat-special-v1: 4 pass

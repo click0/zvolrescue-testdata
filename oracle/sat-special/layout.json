@@ -1,0 +1,113 @@
+{
+ "pool": "sat-special",
+ "image_tag": "sat-special-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "raidz1",
+   "members": [
+    "t0-raidz1-0",
+    "t0-raidz1-1",
+    "t0-raidz1-2"
+   ],
+   "groups": [
+    {
+     "kind": "raidz1",
+     "nparity": 1,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "kind": "mirror",
+   "members": [
+    "t1-mirror-0",
+    "t1-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "kind": "mirror",
+   "members": [
+    "t2-mirror-0",
+    "t2-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-raidz1-0": {
+   "file": "raidz1-0.img",
+   "guid": "16175433776582774484",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 0
+  },
+  "t0-raidz1-1": {
+   "file": "raidz1-1.img",
+   "guid": "8845965173468497766",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 1
+  },
+  "t0-raidz1-2": {
+   "file": "raidz1-2.img",
+   "guid": "10846268693802286680",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 2
+  },
+  "t1-mirror-0": {
+   "file": "special-0a.img",
+   "guid": "2178891722736529323",
+   "top": 1,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t1-mirror-1": {
+   "file": "special-0b.img",
+   "guid": "8729299697496139349",
+   "top": 1,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  },
+  "t2-mirror-0": {
+   "file": "dedup-0a.img",
+   "guid": "278090007625759883",
+   "top": 2,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t2-mirror-1": {
+   "file": "dedup-0b.img",
+   "guid": "18251457555845895129",
+   "top": 2,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  }
+ }
+}
