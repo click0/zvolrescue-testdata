@@ -1,0 +1,7 @@
+sat-spare-v1 pass       combo-sat-spare-three-columns    expected refused | partial actual partial  files partial  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-spare-v1 pass       control-sat-spare                expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-spare-v1 pass       member-sat-spare-replacing-old-side-gone expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-spare-v1 pass       member-sat-spare-the-spare-gone  expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-spare-v1 pass       member-sat-spare-two-gone        expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-spare-v1: 99 manifest(s) written for another pool, not run here
+sat-spare-v1: 5 pass

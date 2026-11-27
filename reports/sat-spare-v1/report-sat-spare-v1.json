@@ -1,0 +1,484 @@
+[
+ {
+  "id": "combo-sat-spare-three-columns",
+  "description": "Two disks absent and the disk being replaced too: three columns of every block older than the replacing",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "sat-spare/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "sat-spare/vm/disk-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare": "ok",
+    "sat-spare/fs": "incomplete (entries said not whole)",
+    "sat-spare/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-2.1": "ok",
+    "label t0-raidz2-3": "ok",
+    "label t0-raidz2-4.1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-2.1": "ok",
+    "rings t0-raidz2-3": "ok",
+    "rings t0-raidz2-4.1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "sat-spare-v1"
+ },
+ {
+  "id": "control-sat-spare",
+  "description": "Nothing damaged and nothing told, on the satellite with a hot spare at work and a replacing unfinished: each slot read from the device that holds the block: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-spare/vm/disk-8k": "ok",
+   "sat-spare/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare": "ok",
+    "sat-spare/fs": "ok",
+    "sat-spare/fs@s0": "ok",
+    "sat-spare/fs@s1": "ok",
+    "sat-spare/fs@s2": "ok",
+    "sat-spare/fs@s3": "ok",
+    "sat-spare/vm": "ok",
+    "sat-spare/vm@s0": "ok",
+    "sat-spare/vm@s1": "ok",
+    "sat-spare/vm@s2": "ok",
+    "sat-spare/vm@s3": "ok",
+    "sat-spare@s0": "ok",
+    "sat-spare@s1": "ok",
+    "sat-spare@s2": "ok",
+    "sat-spare@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 271": "ok",
+    "txg 271 features": "ok",
+    "txg 270": "ok",
+    "txg 270 features": "ok",
+    "txg 269": "ok",
+    "txg 269 features": "ok",
+    "txg 268": "ok",
+    "txg 268 features": "ok",
+    "txg 267": "ok",
+    "txg 267 features": "ok",
+    "txg 266": "ok",
+    "txg 266 features": "ok",
+    "txg 265": "ok",
+    "txg 265 features": "ok",
+    "txg 264": "ok",
+    "txg 264 features": "ok",
+    "txg 263": "ok",
+    "txg 263 features": "ok",
+    "txg 262": "ok",
+    "txg 262 features": "ok",
+    "txg 261": "ok",
+    "txg 261 features": "ok",
+    "txg 260": "ok",
+    "txg 260 features": "ok",
+    "txg 259": "ok",
+    "txg 259 features": "ok",
+    "txg 258": "ok",
+    "txg 258 features": "ok",
+    "txg 257": "ok",
+    "txg 257 features": "ok",
+    "txg 256": "ok",
+    "txg 256 features": "ok",
+    "txg 255": "ok",
+    "txg 255 features": "ok",
+    "txg 254": "ok",
+    "txg 254 features": "ok",
+    "txg 253": "ok",
+    "txg 253 features": "ok",
+    "txg 252": "ok",
+    "txg 252 features": "ok",
+    "txg 251": "ok",
+    "txg 251 features": "ok",
+    "txg 250": "ok",
+    "txg 250 features": "ok",
+    "txg 249": "ok",
+    "txg 249 features": "ok",
+    "txg 247": "ok",
+    "txg 247 features": "ok",
+    "txg 246": "ok",
+    "txg 246 features": "ok",
+    "txg 245": "ok",
+    "txg 245 features": "ok",
+    "txg 244": "ok",
+    "txg 244 features": "ok",
+    "txg 243": "ok",
+    "txg 243 features": "ok",
+    "txg 242": "ok",
+    "txg 242 features": "ok",
+    "txg 241": "ok",
+    "txg 241 features": "ok",
+    "txg 240": "ok",
+    "txg 240 features": "ok"
+   },
+   "txgs": [
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare/vm/disk-16k": "ok",
+    "sat-spare/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-spare/vm/disk-16k": [
+     "c0031, born at txg 244"
+    ],
+    "sat-spare/vm/disk-8k": [
+     "c0022, born at txg 238"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-0": "ok",
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-2.1": "ok",
+    "label t0-raidz2-3": "ok",
+    "label t0-raidz2-4": "ok",
+    "label t0-raidz2-4.1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-raidz2-0": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-2.1": "ok",
+    "rings t0-raidz2-3": "ok",
+    "rings t0-raidz2-4": "ok",
+    "rings t0-raidz2-4.1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-spare-v1"
+ },
+ {
+  "id": "member-sat-spare-replacing-old-side-gone",
+  "description": "The disk being replaced absent: slot 4 has only the new disk, which holds what the last round wrote and nothing older",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-spare/vm/disk-8k": "ok",
+   "sat-spare/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare": "ok",
+    "sat-spare/fs": "ok",
+    "sat-spare/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-0": "ok",
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-2.1": "ok",
+    "label t0-raidz2-3": "ok",
+    "label t0-raidz2-4.1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-raidz2-0": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-2.1": "ok",
+    "rings t0-raidz2-3": "ok",
+    "rings t0-raidz2-4.1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-spare-v1"
+ },
+ {
+  "id": "member-sat-spare-the-spare-gone",
+  "description": "The hot spare absent and one more disk: slot 2 has only the disk taken offline, stale for every block written since",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-spare/vm/disk-8k": "ok",
+   "sat-spare/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare": "ok",
+    "sat-spare/fs": "ok",
+    "sat-spare/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-3": "ok",
+    "label t0-raidz2-4": "ok",
+    "label t0-raidz2-4.1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-3": "ok",
+    "rings t0-raidz2-4": "ok",
+    "rings t0-raidz2-4.1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-spare-v1"
+ },
+ {
+  "id": "member-sat-spare-two-gone",
+  "description": "The first two disks of the raidz2 absent, both slots under replacement whole",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-spare/vm/disk-8k": "ok",
+   "sat-spare/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-spare": "ok",
+    "sat-spare/fs": "ok",
+    "sat-spare/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-2.1": "ok",
+    "label t0-raidz2-3": "ok",
+    "label t0-raidz2-4": "ok",
+    "label t0-raidz2-4.1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-2.1": "ok",
+    "rings t0-raidz2-3": "ok",
+    "rings t0-raidz2-4": "ok",
+    "rings t0-raidz2-4.1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-spare-v1"
+ }
+]

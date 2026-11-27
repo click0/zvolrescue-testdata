@@ -1,0 +1,168 @@
+History for 'sat-spare':
+2026-11-27.14:55:05 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set ashift=12 [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set autotrim=0 [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@async_destroy=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@empty_bpobj=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@lz4_compress=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@spacemap_histogram=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@enabled_txg=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@hole_birth=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@extensible_dataset=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@embedded_data=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@bookmarks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@filesystem_limits=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@large_blocks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@large_dnode=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@sha512=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@skein=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@edonr=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@userobj_accounting=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@encryption=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@project_quota=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@device_removal=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@obsolete_counts=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@zpool_checkpoint=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@spacemap_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@allocation_classes=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@resilver_defer=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@bookmark_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@redaction_bookmarks=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@redacted_datasets=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@bookmark_written=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@log_spacemap=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@livelist=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@device_rebuild=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@zstd_compress=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@draid=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@zilsaxattr=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@head_errlog=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@blake3=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@block_cloning=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@vdev_zaps_v2=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@redaction_list_spill=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@raidz_expansion=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@fast_dedup=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@longname=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@large_microzap=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@dynamic_gang_header=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@block_cloning_endian=enabled [on runnervm0hi8g]
+2026-11-27.14:55:05 [txg:4] set feature@physical_rewrite=enabled [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:5] set sat-spare (54) snapdev=1 [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:6] set sat-spare (54) compression=15 [on runnervm0hi8g]
+2026-11-27.14:55:06 zpool create -f -o ashift=12 -o autotrim=off -O compression=lz4 -O snapdev=visible sat-spare raidz2 /var/tmp/sat/members/raidz2-0.img /var/tmp/sat/members/raidz2-1.img /var/tmp/sat/members/raidz2-2.img /var/tmp/sat/members/raidz2-3.img /var/tmp/sat/members/raidz2-4.img spare /var/tmp/sat/members/spare-0.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 [txg:9] create sat-spare/vm (68)   [on runnervm0hi8g]
+2026-11-27.14:55:06 (31ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 zfs create sat-spare/vm [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 [txg:10] create sat-spare/vm/disk-8k (387)   [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:11] set sat-spare/vm/disk-8k (387) checksum=7 [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:11] set sat-spare/vm/disk-8k (387) compression=15 [on runnervm0hi8g]
+2026-11-27.14:55:06 (18ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 sat-spare/vm/disk-8k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 [txg:12] create sat-spare/vm/disk-16k (262)   [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:13] set sat-spare/vm/disk-16k (262) checksum=8 [on runnervm0hi8g]
+2026-11-27.14:55:06 [txg:13] set sat-spare/vm/disk-16k (262) compression=2 [on runnervm0hi8g]
+2026-11-27.14:55:06 (17ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-spare/vm/disk-16k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 [txg:14] create sat-spare/fs (149)   [on runnervm0hi8g]
+2026-11-27.14:55:06 (9ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:06 zfs create sat-spare/fs [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:07 [txg:70] snapshot sat-spare@s0 (160)   [on runnervm0hi8g]
+2026-11-27.14:55:07 [txg:70] snapshot sat-spare/vm@s0 (162)   [on runnervm0hi8g]
+2026-11-27.14:55:07 [txg:70] snapshot sat-spare/vm/disk-8k@s0 (164)   [on runnervm0hi8g]
+2026-11-27.14:55:07 [txg:70] snapshot sat-spare/vm/disk-16k@s0 (166)   [on runnervm0hi8g]
+2026-11-27.14:55:07 [txg:70] snapshot sat-spare/fs@s0 (168)   [on runnervm0hi8g]
+2026-11-27.14:55:07 (15ms) ioctl snapshot
+    input:
+        snaps:
+            sat-spare@s0
+            sat-spare/vm@s0
+            sat-spare/vm/disk-8k@s0
+            sat-spare/vm/disk-16k@s0
+            sat-spare/fs@s0
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:07 zfs snapshot -r sat-spare@s0 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:07 zpool offline sat-spare /var/tmp/sat/members/raidz2-2.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 [txg:122] snapshot sat-spare@s1 (276)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:122] snapshot sat-spare/vm@s1 (278)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:122] snapshot sat-spare/vm/disk-8k@s1 (280)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:122] snapshot sat-spare/vm/disk-16k@s1 (282)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:122] snapshot sat-spare/fs@s1 (284)   [on runnervm0hi8g]
+2026-11-27.14:55:08 (14ms) ioctl snapshot
+    input:
+        snaps:
+            sat-spare@s1
+            sat-spare/vm@s1
+            sat-spare/vm/disk-8k@s1
+            sat-spare/vm/disk-16k@s1
+            sat-spare/fs@s1
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 zfs snapshot -r sat-spare@s1 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 [txg:129] scan setup func=2 mintxg=3 maxtxg=129 [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:131] vdev attach spare in vdev=/var/tmp/sat/members/spare-0.img for vdev=/var/tmp/sat/members/raidz2-2.img [on runnervm0hi8g]
+2026-11-27.14:55:08 zpool replace sat-spare /var/tmp/sat/members/raidz2-2.img /var/tmp/sat/members/spare-0.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 [txg:131] scan done errors=0 [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:179] snapshot sat-spare@s2 (180)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:179] snapshot sat-spare/vm@s2 (182)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:179] snapshot sat-spare/vm/disk-8k@s2 (184)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:179] snapshot sat-spare/vm/disk-16k@s2 (186)   [on runnervm0hi8g]
+2026-11-27.14:55:08 [txg:179] snapshot sat-spare/fs@s2 (188)   [on runnervm0hi8g]
+2026-11-27.14:55:08 (16ms) ioctl snapshot
+    input:
+        snaps:
+            sat-spare@s2
+            sat-spare/vm@s2
+            sat-spare/vm/disk-8k@s2
+            sat-spare/vm/disk-16k@s2
+            sat-spare/fs@s2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 zfs snapshot -r sat-spare@s2 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:08 [txg:186] scan setup func=2 mintxg=3 maxtxg=186 [on runnervm0hi8g]
+2026-11-27.14:55:09 [txg:188] vdev attach replace vdev=/var/tmp/sat/members/new-0.img for vdev=/var/tmp/sat/members/raidz2-4.img [on runnervm0hi8g]
+2026-11-27.14:55:09 zpool replace sat-spare /var/tmp/sat/members/raidz2-4.img /var/tmp/sat/members/new-0.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 [txg:253] snapshot sat-spare@s3 (113)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:253] snapshot sat-spare/vm@s3 (116)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:253] snapshot sat-spare/vm/disk-8k@s3 (119)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:253] snapshot sat-spare/vm/disk-16k@s3 (122)   [on runnervm0hi8g]
+2026-11-27.14:55:24 [txg:253] snapshot sat-spare/fs@s3 (125)   [on runnervm0hi8g]
+2026-11-27.14:55:24 (1151ms) ioctl snapshot
+    input:
+        snaps:
+            sat-spare@s3
+            sat-spare/vm@s3
+            sat-spare/vm/disk-8k@s3
+            sat-spare/vm/disk-16k@s3
+            sat-spare/fs@s3
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:24 zfs snapshot -r sat-spare@s3 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.14:55:34 zpool export sat-spare [user 0 (root) on runnervm0hi8g:linux]
+

@@ -1,0 +1,97 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-spare'
+    state: 1
+    txg: 280
+    pool_guid: 6824525068973534850
+    errata: 0
+    min_alloc: 512
+    max_alloc: 4096
+    hostid: 517824836
+    hostname: 'runnervm0hi8g'
+    top_guid: 6209734247198240390
+    guid: 14230479274088202849
+    vdev_children: 1
+    vdev_tree:
+        type: 'raidz'
+        id: 0
+        guid: 6209734247198240390
+        nparity: 2
+        metaslab_array: 137
+        metaslab_shift: 27
+        ashift: 12
+        asize: 1318584320
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 4339216307507070356
+            path: '/var/tmp/sat/members/raidz2-0.img'
+            DTL: 294
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 6795296137260138420
+            path: '/var/tmp/sat/members/raidz2-1.img'
+            DTL: 293
+            create_txg: 4
+        children[2]:
+            type: 'spare'
+            id: 2
+            guid: 5678084673417810356
+            whole_disk: 0
+            create_txg: 4
+            children[0]:
+                type: 'file'
+                id: 0
+                guid: 2756036889185687890
+                path: '/var/tmp/sat/members/raidz2-2.img'
+                DTL: 271
+                create_txg: 4
+                offline: 1
+            children[1]:
+                type: 'file'
+                id: 1
+                guid: 15145293469748846110
+                path: '/var/tmp/sat/members/spare-0.img'
+                is_spare: 1
+                DTL: 401
+                create_txg: 4
+        children[3]:
+            type: 'file'
+            id: 3
+            guid: 14383965579788607577
+            path: '/var/tmp/sat/members/raidz2-3.img'
+            DTL: 292
+            create_txg: 4
+        children[4]:
+            type: 'replacing'
+            id: 4
+            guid: 17376529619539060842
+            whole_disk: 0
+            create_txg: 4
+            children[0]:
+                type: 'file'
+                id: 0
+                guid: 15071673158818352460
+                path: '/var/tmp/sat/members/raidz2-4.img'
+                DTL: 291
+                create_txg: 4
+            children[1]:
+                type: 'file'
+                id: 1
+                guid: 14230479274088202849
+                path: '/var/tmp/sat/members/new-0.img'
+                DTL: 96
+                create_txg: 4
+                resilver_txg: 183
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 
