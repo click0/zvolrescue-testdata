@@ -1,0 +1,13 @@
+  pool: sat-checkpoint
+ state: ONLINE
+checkpoint: created Fri Nov 27 14:54:58 2026, consumes 27.3M
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-checkpoint                         ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+
+errors: No known data errors

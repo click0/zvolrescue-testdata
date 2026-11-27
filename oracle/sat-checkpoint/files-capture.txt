@@ -1,0 +1,50 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-checkpoint
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-checkpoint
+ state: ONLINE
+checkpoint: created Fri Nov 27 14:54:58 2026, consumes 27.3M
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-checkpoint                         ONLINE       0     0     0
+	  raidz1-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz1-2.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                           MOUNTED  MOUNTPOINT                               USED  REFER
+sat-checkpoint                 no       /var/tmp/sat/altroot/sat-checkpoint     36.2M   139K
+sat-checkpoint@s0              -        -                                          0B   139K
+sat-checkpoint@s1              -        -                                          0B   139K
+sat-checkpoint@s2              -        -                                          0B   139K
+sat-checkpoint@s3              -        -                                          0B   139K
+sat-checkpoint/fs              no       /var/tmp/sat/altroot/sat-checkpoint/fs  1.57M  1.22M
+sat-checkpoint/fs@s0           -        -                                       95.9K  1.16M
+sat-checkpoint/fs@s1           -        -                                       95.9K  1.19M
+sat-checkpoint/fs@s2           -        -                                        107K  1.19M
+sat-checkpoint/fs@s3           -        -                                          0B  1.22M
+sat-checkpoint/vm              no       /var/tmp/sat/altroot/sat-checkpoint/vm  33.5M   128K
+sat-checkpoint/vm@s0           -        -                                          0B   128K
+sat-checkpoint/vm@s1           -        -                                          0B   128K
+sat-checkpoint/vm@s2           -        -                                          0B   128K
+sat-checkpoint/vm@s3           -        -                                          0B   128K
+sat-checkpoint/vm/disk-16k     -        -                                       19.6M  16.2M
+sat-checkpoint/vm/disk-16k@s0  -        -                                       1.17M  16.2M
+sat-checkpoint/vm/disk-16k@s1  -        -                                        170K  16.2M
+sat-checkpoint/vm/disk-16k@s2  -        -                                        170K  16.2M
+sat-checkpoint/vm/disk-16k@s3  -        -                                          0B  16.2M
+sat-checkpoint/vm/disk-8k      -        -                                       13.7M  10.9M
+sat-checkpoint/vm/disk-8k@s0   -        -                                        948K  10.9M
+sat-checkpoint/vm/disk-8k@s1   -        -                                        266K  10.9M
+sat-checkpoint/vm/disk-8k@s2   -        -                                        266K  10.9M
+sat-checkpoint/vm/disk-8k@s3   -        -                                          0B  10.9M
+members: unchanged after the export (their sums against members.sha256)

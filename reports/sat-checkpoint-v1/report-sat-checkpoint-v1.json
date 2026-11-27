@@ -1,0 +1,318 @@
+[
+ {
+  "id": "control-sat-checkpoint",
+  "description": "Nothing damaged and nothing told, on the satellite with a pool checkpoint: the volumes as they are, and every volume at the checkpoint, the destroyed one among them: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-checkpoint/vm/disk-8k": "ok",
+   "sat-checkpoint/vm/disk-16k": "ok",
+   "sat-checkpoint/vm/disk-16k@checkpoint": "ok",
+   "sat-checkpoint/vm/disk-8k@checkpoint": "ok",
+   "sat-checkpoint/vm/precious@checkpoint": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-checkpoint": "ok",
+    "sat-checkpoint/fs": "ok",
+    "sat-checkpoint/fs@s0": "ok",
+    "sat-checkpoint/fs@s1": "ok",
+    "sat-checkpoint/fs@s2": "ok",
+    "sat-checkpoint/fs@s3": "ok",
+    "sat-checkpoint/vm": "ok",
+    "sat-checkpoint/vm@s0": "ok",
+    "sat-checkpoint/vm@s1": "ok",
+    "sat-checkpoint/vm@s2": "ok",
+    "sat-checkpoint/vm@s3": "ok",
+    "sat-checkpoint@s0": "ok",
+    "sat-checkpoint@s1": "ok",
+    "sat-checkpoint@s2": "ok",
+    "sat-checkpoint@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 283": "ok",
+    "txg 283 features": "ok",
+    "txg 274": "ok",
+    "txg 274 features": "ok",
+    "txg 273": "ok",
+    "txg 273 features": "ok",
+    "txg 270": "ok",
+    "txg 270 features": "ok",
+    "txg 266": "ok",
+    "txg 266 features": "ok",
+    "txg 262": "ok",
+    "txg 262 features": "ok",
+    "txg 259": "ok",
+    "txg 259 features": "ok",
+    "txg 255": "ok",
+    "txg 255 features": "ok",
+    "txg 248": "ok",
+    "txg 248 features": "ok",
+    "txg 244": "ok",
+    "txg 244 features": "ok",
+    "txg 240": "ok",
+    "txg 240 features": "ok",
+    "txg 237": "ok",
+    "txg 237 features": "ok",
+    "txg 233": "ok",
+    "txg 233 features": "ok",
+    "txg 229": "ok",
+    "txg 229 features": "ok",
+    "txg 222": "ok",
+    "txg 222 features": "ok",
+    "txg 215": "ok",
+    "txg 215 features": "ok",
+    "txg 211": "ok",
+    "txg 211 features": "ok",
+    "txg 204": "ok",
+    "txg 204 features": "ok",
+    "txg 200": "ok",
+    "txg 200 features": "ok",
+    "txg 193": "ok",
+    "txg 193 features": "ok",
+    "txg 189": "ok",
+    "txg 189 features": "ok",
+    "txg 186": "ok",
+    "txg 186 features": "ok",
+    "txg 182": "ok",
+    "txg 182 features": "ok",
+    "txg 175": "ok",
+    "txg 175 features": "ok",
+    "txg 171": "ok",
+    "txg 171 features": "ok"
+   },
+   "txgs": [
+    171,
+    175,
+    182,
+    186,
+    189,
+    193,
+    200,
+    204,
+    211,
+    215,
+    222,
+    229,
+    233,
+    237,
+    240,
+    244,
+    248,
+    255,
+    259,
+    262,
+    266,
+    270,
+    273,
+    274,
+    283,
+    292
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-checkpoint/vm/disk-16k": "ok",
+    "sat-checkpoint/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-checkpoint/vm/disk-16k": [
+     "c0037, born at txg 266"
+    ],
+    "sat-checkpoint/vm/disk-8k": [
+     "c0036, born at txg 262"
+    ]
+   },
+   "destroyed": {
+    "sat-checkpoint/vm/precious": "as it was just before it was destroyed (c0044, born at txg 158)"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 274": "ok",
+    "uberblock txg 292": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-checkpoint-v1"
+ },
+ {
+  "id": "data-sat-checkpoint-one-member",
+  "description": "The written space of one raidz1 member zeroed: the volumes now and at the checkpoint through parity",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-checkpoint/vm/disk-8k": "ok",
+   "sat-checkpoint/vm/disk-16k": "ok",
+   "sat-checkpoint/vm/disk-16k@checkpoint": "ok",
+   "sat-checkpoint/vm/disk-8k@checkpoint": "ok",
+   "sat-checkpoint/vm/precious@checkpoint": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-checkpoint": "ok",
+    "sat-checkpoint/fs": "ok",
+    "sat-checkpoint/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    292
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 274": "ok",
+    "uberblock txg 292": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-checkpoint-v1"
+ },
+ {
+  "id": "member-sat-checkpoint-missing-one",
+  "description": "One raidz1 member absent, with a checkpoint in the pool",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-checkpoint/vm/disk-8k": "ok",
+   "sat-checkpoint/vm/disk-16k": "ok",
+   "sat-checkpoint/vm/disk-16k@checkpoint": "ok",
+   "sat-checkpoint/vm/disk-8k@checkpoint": "ok",
+   "sat-checkpoint/vm/precious@checkpoint": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-checkpoint": "ok",
+    "sat-checkpoint/fs": "ok",
+    "sat-checkpoint/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    292
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "uberblock txg 274": "ok",
+    "uberblock txg 292": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-checkpoint-v1"
+ }
+]

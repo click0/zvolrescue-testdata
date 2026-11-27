@@ -1,0 +1,5 @@
+sat-checkpoint-v1 pass       control-sat-checkpoint           expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-checkpoint-v1 pass       data-sat-checkpoint-one-member   expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-checkpoint-v1 pass       member-sat-checkpoint-missing-one expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-checkpoint-v1: 101 manifest(s) written for another pool, not run here
+sat-checkpoint-v1: 3 pass
