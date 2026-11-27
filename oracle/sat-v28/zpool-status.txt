@@ -1,0 +1,18 @@
+  pool: sat-v28
+ state: ONLINE
+status: The pool is formatted using a legacy on-disk format.  The pool can
+	still be used, but some features are unavailable.
+action: Upgrade the pool using 'zpool upgrade'.  Once this is done, the
+	pool will no longer be accessible on software that does not support
+	feature flags.
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-v28                                ONLINE       0     0     0
+	  raidz2-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-2.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-3.img  ONLINE       0     0     0
+
+errors: No known data errors

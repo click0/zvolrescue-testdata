@@ -1,0 +1,113 @@
+History for 'sat-v28':
+2026-11-27.16:33:32 [txg:4] create pool version 28; software version 1c702dd-dist; uts runnervm0hi8g 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm0hi8g]
+2026-11-27.16:33:32 [txg:4] set ashift=12 [on runnervm0hi8g]
+2026-11-27.16:33:32 [txg:4] set autotrim=0 [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:5] set sat-v28 (51) snapdev=1 [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:6] set sat-v28 (51) compression=3 [on runnervm0hi8g]
+2026-11-27.16:33:33 zpool create -f -o ashift=12 -o autotrim=off -o version=28 -O compression=lzjb -O snapdev=visible sat-v28 raidz2 /var/tmp/sat/members/raidz2-0.img /var/tmp/sat/members/raidz2-1.img /var/tmp/sat/members/raidz2-2.img /var/tmp/sat/members/raidz2-3.img [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 [txg:7] create sat-v28/vm (137)   [on runnervm0hi8g]
+2026-11-27.16:33:33 (10ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 zfs create sat-v28/vm [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 [txg:8] create sat-v28/vm/disk-8k (64)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:9] set sat-v28/vm/disk-8k (64) checksum=7 [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:9] set sat-v28/vm/disk-8k (64) compression=3 [on runnervm0hi8g]
+2026-11-27.16:33:33 (38ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 3
+            volblocksize: 8192
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lzjb sat-v28/vm/disk-8k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 [txg:10] create sat-v28/vm/disk-16k (263)   [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:11] set sat-v28/vm/disk-16k (263) checksum=8 [on runnervm0hi8g]
+2026-11-27.16:33:33 [txg:11] set sat-v28/vm/disk-16k (263) compression=2 [on runnervm0hi8g]
+2026-11-27.16:33:33 (25ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-v28/vm/disk-16k [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 [txg:12] create sat-v28/fs (71)   [on runnervm0hi8g]
+2026-11-27.16:33:33 (12ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:33 zfs create sat-v28/fs [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:35 [txg:72] snapshot sat-v28@s0 (267)   [on runnervm0hi8g]
+2026-11-27.16:33:35 [txg:72] snapshot sat-v28/fs@s0 (271)   [on runnervm0hi8g]
+2026-11-27.16:33:35 [txg:72] snapshot sat-v28/vm@s0 (275)   [on runnervm0hi8g]
+2026-11-27.16:33:35 [txg:72] snapshot sat-v28/vm/disk-16k@s0 (279)   [on runnervm0hi8g]
+2026-11-27.16:33:35 [txg:72] snapshot sat-v28/vm/disk-8k@s0 (283)   [on runnervm0hi8g]
+2026-11-27.16:33:35 (13ms) ioctl snapshot
+    input:
+        snaps:
+            sat-v28@s0
+            sat-v28/fs@s0
+            sat-v28/vm@s0
+            sat-v28/vm/disk-16k@s0
+            sat-v28/vm/disk-8k@s0
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:35 zfs snapshot -r sat-v28@s0 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:36 [txg:123] snapshot sat-v28@s1 (287)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:123] snapshot sat-v28/fs@s1 (292)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:123] snapshot sat-v28/vm@s1 (297)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:123] snapshot sat-v28/vm/disk-16k@s1 (302)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:123] snapshot sat-v28/vm/disk-8k@s1 (307)   [on runnervm0hi8g]
+2026-11-27.16:33:36 (13ms) ioctl snapshot
+    input:
+        snaps:
+            sat-v28@s1
+            sat-v28/fs@s1
+            sat-v28/vm@s1
+            sat-v28/vm/disk-16k@s1
+            sat-v28/vm/disk-8k@s1
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:36 zfs snapshot -r sat-v28@s1 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:36 [txg:174] snapshot sat-v28@s2 (75)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:174] snapshot sat-v28/fs@s2 (81)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:174] snapshot sat-v28/vm@s2 (87)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:174] snapshot sat-v28/vm/disk-16k@s2 (93)   [on runnervm0hi8g]
+2026-11-27.16:33:36 [txg:174] snapshot sat-v28/vm/disk-8k@s2 (99)   [on runnervm0hi8g]
+2026-11-27.16:33:36 (34ms) ioctl snapshot
+    input:
+        snaps:
+            sat-v28@s2
+            sat-v28/fs@s2
+            sat-v28/vm@s2
+            sat-v28/vm/disk-16k@s2
+            sat-v28/vm/disk-8k@s2
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:36 zfs snapshot -r sat-v28@s2 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:37 [txg:225] snapshot sat-v28@s3 (105)   [on runnervm0hi8g]
+2026-11-27.16:33:37 [txg:225] snapshot sat-v28/fs@s3 (112)   [on runnervm0hi8g]
+2026-11-27.16:33:37 [txg:225] snapshot sat-v28/vm@s3 (119)   [on runnervm0hi8g]
+2026-11-27.16:33:37 [txg:225] snapshot sat-v28/vm/disk-16k@s3 (126)   [on runnervm0hi8g]
+2026-11-27.16:33:37 [txg:225] snapshot sat-v28/vm/disk-8k@s3 (517)   [on runnervm0hi8g]
+2026-11-27.16:33:37 (15ms) ioctl snapshot
+    input:
+        snaps:
+            sat-v28@s3
+            sat-v28/fs@s3
+            sat-v28/vm@s3
+            sat-v28/vm/disk-16k@s3
+            sat-v28/vm/disk-8k@s3
+        props:
+ [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:37 zfs snapshot -r sat-v28@s3 [user 0 (root) on runnervm0hi8g:linux]
+2026-11-27.16:33:42 zpool export sat-v28 [user 0 (root) on runnervm0hi8g:linux]
+

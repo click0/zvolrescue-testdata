@@ -1,0 +1,61 @@
+
+MOS Configuration:
+        version: 28
+        name: 'sat-v28'
+        state: 0
+        txg: 4
+        pool_guid: 11817819552776634725
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 4096
+        hostid: 840935896
+        hostname: 'runnervm0hi8g'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 1
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 11817819552776634725
+            create_txg: 4
+            children[0]:
+                type: 'raidz'
+                id: 0
+                guid: 13697796724255703959
+                nparity: 2
+                metaslab_array: 256
+                metaslab_shift: 26
+                ashift: 12
+                asize: 1054867456
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 129
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 1501358048245508970
+                    path: '/var/tmp/sat/members/raidz2-0.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 130
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 13244440390506306041
+                    path: '/var/tmp/sat/members/raidz2-1.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+                children[2]:
+                    type: 'file'
+                    id: 2
+                    guid: 3118032841897607281
+                    path: '/var/tmp/sat/members/raidz2-2.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 132
+                children[3]:
+                    type: 'file'
+                    id: 3
+                    guid: 9297201506918483333
+                    path: '/var/tmp/sat/members/raidz2-3.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 133
+        features_for_read:

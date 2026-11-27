@@ -1,0 +1,280 @@
+[
+ {
+  "id": "control-sat-v28",
+  "description": "Nothing damaged and nothing told, on a pool of version 28, before feature flags: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-v28/vm/disk-8k": "ok",
+   "sat-v28/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-v28": "ok",
+    "sat-v28/fs": "ok",
+    "sat-v28/fs@s0": "ok",
+    "sat-v28/fs@s1": "ok",
+    "sat-v28/fs@s2": "ok",
+    "sat-v28/fs@s3": "ok",
+    "sat-v28/vm": "ok",
+    "sat-v28/vm@s0": "ok",
+    "sat-v28/vm@s1": "ok",
+    "sat-v28/vm@s2": "ok",
+    "sat-v28/vm@s3": "ok",
+    "sat-v28@s0": "ok",
+    "sat-v28@s1": "ok",
+    "sat-v28@s2": "ok",
+    "sat-v28@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "txg 235": "ok",
+    "txg 226": "ok",
+    "txg 225": "ok",
+    "txg 222": "ok",
+    "txg 218": "ok",
+    "txg 214": "ok",
+    "txg 211": "ok",
+    "txg 207": "ok",
+    "txg 200": "ok",
+    "txg 196": "ok",
+    "txg 192": "ok",
+    "txg 189": "ok",
+    "txg 185": "ok",
+    "txg 181": "ok",
+    "txg 174": "ok",
+    "txg 167": "ok",
+    "txg 163": "ok",
+    "txg 156": "ok",
+    "txg 152": "ok",
+    "txg 145": "ok",
+    "txg 141": "ok",
+    "txg 138": "ok",
+    "txg 134": "ok",
+    "txg 123": "ok"
+   },
+   "txgs": [
+    123,
+    134,
+    138,
+    141,
+    145,
+    152,
+    156,
+    163,
+    167,
+    174,
+    181,
+    185,
+    189,
+    192,
+    196,
+    200,
+    207,
+    211,
+    214,
+    218,
+    222,
+    225,
+    226,
+    235,
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-v28/vm/disk-16k": "ok",
+    "sat-v28/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-v28/vm/disk-16k": [
+     "c0026, born at txg 218"
+    ],
+    "sat-v28/vm/disk-8k": [
+     "c0029, born at txg 214"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-0": "ok",
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-3": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz2-0": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-v28-v1"
+ },
+ {
+  "id": "data-sat-v28-one-member",
+  "description": "The written space of one raidz2 member zeroed, on a pool of version 28",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-v28/vm/disk-8k": "ok",
+   "sat-v28/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-v28": "ok",
+    "sat-v28/fs": "ok",
+    "sat-v28/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-0": "ok",
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "label t0-raidz2-3": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz2-0": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "rings t0-raidz2-3": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-v28-v1"
+ },
+ {
+  "id": "member-sat-v28-two-missing",
+  "description": "Two members of the raidz2 absent, on a pool of version 28",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-v28/vm/disk-8k": "ok",
+   "sat-v28/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-v28": "ok",
+    "sat-v28/fs": "ok",
+    "sat-v28/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz2-1": "ok",
+    "label t0-raidz2-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz2-1": "ok",
+    "rings t0-raidz2-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-v28-v1"
+ }
+]

@@ -1,0 +1,5 @@
+sat-v28-v1 pass       control-sat-v28                  expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-v28-v1 pass       data-sat-v28-one-member          expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-v28-v1 pass       member-sat-v28-two-missing       expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-v28-v1: 108 manifest(s) written for another pool, not run here
+sat-v28-v1: 3 pass

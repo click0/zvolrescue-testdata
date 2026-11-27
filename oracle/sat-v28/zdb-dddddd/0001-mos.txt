@@ -1,0 +1,3905 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.96M, 180 objects, rootbp DVA[0]=<0:e97f000:3000> DVA[1]=<0:58ba000:3000> DVA[2]=<0:10abf000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique triple size=1000L/1000P birth=244L/244P fill=180 cksum=00000002c3af26a5:00000a9caa761d87:001463f765414d79:1a25cbab00766171
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         0    2   128K    16K   192K     512   272K   33.09  DMU dnode (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 16
+Indirect blocks:
+               0 L1  0:e979000:6000 0:58b4000:6000 0:10ab9000:6000 20000L/2000P F=180 B=244/244 cksum=000002cf9a44b017:000fb59227bfc485:2e30efde01ab48eb:a3428cb9a94bb241
+               0  L0 0:e976000:3000 0:58b1000:3000 0:10ab6000:3000 4000L/1000P F=1 B=244/244 cksum=0000005d4b2caba3:0001523e61ce424a:02672cf0bc04c788:ec55804252f67e4c
+            4000  L0 0:e973000:3000 0:58ae000:3000 0:10ab3000:3000 4000L/1000P F=32 B=244/244 cksum=000000c3866807d6:000211c1ff0afe3f:0305554d85f6f0a3:1f3d7ec0ab0d8226
+            8000  L0 0:e8dd000:3000 0:5818000:3000 0:10a1d000:3000 4000L/1000P F=32 B=225/225 cksum=000000b750ce9c1d:0001f71d239476b7:02de1837a52d3716:f064e2bc449b05a8
+            c000  L0 0:e8da000:3000 0:5815000:3000 0:10a1a000:3000 4000L/1000P F=32 B=225/225 cksum=000000a816b2c748:0001e9757e91894b:02e8500ef1c7b6e5:105e6ed32959572c
+           10000  L0 0:e8e9000:3000 0:5824000:3000 0:10a29000:3000 4000L/1000P F=13 B=225/225 cksum=00000081595e351c:0001a3dfe5d469ab:02b3d20d33eb33e0:03652932f1b5934e
+           20000  L0 0:e99a000:3000 0:58d5000:3000 0:10ada000:3000 4000L/1000P F=32 B=244/244 cksum=000000d1f2db00b9:0002109b693330f8:02e6686bccf0e675:f05d27b06655f6c6
+           24000  L0 0:dff5000:3000 0:536e000:3000 0:1075f000:3000 4000L/1000P F=24 B=174/174 cksum=000000aa75dd969b:0001e8b4516f898f:02e2c835e8ab2f2e:0bf12596b55a5558
+           30000  L0 0:e997000:3000 0:58d2000:3000 0:10ad7000:3000 4000L/1000P F=2 B=244/244 cksum=0000005d8da6bffa:00015088aa956202:025f5a4e4a46ed97:dd37a284d399fc72
+           40000  L0 0:e8ef000:3000 0:582a000:3000 0:10a2f000:3000 4000L/1000P F=12 B=225/225 cksum=0000006293b20dbb:00015ed462a65b97:0273717632a0f2db:efe964c723303102
+
+		segment [0000000000000200, 0000000000000400) size   512
+		segment [0000000000004000, 0000000000011a00) size 54.5K
+		segment [0000000000020000, 0000000000027000) size   28K
+		segment [0000000000030000, 0000000000030400) size    1K
+		segment [0000000000040000, 0000000000041800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         1    1   128K    16K    35K     512    32K  100.00  object directory (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 1
+	Fat ZAP stats:
+		Pointer table:
+			1024 elements
+			zt_blk: 0
+			zt_numblks: 0
+			zt_shift: 10
+			zt_blks_copied: 0
+			zt_nextblk: 0
+		ZAP entries: 13
+		Leaf blocks: 1
+		Total blocks: 2
+		zap_block_type: 0x8000000000000001
+		zap_magic: 0x2f52ab2ab
+		zap_salt: 0xda035303
+		Leafs with 2^n pointers:
+			  9:      1 *
+		Blocks with n*5 entries:
+			  2:      1 *
+		Blocks n/10 full:
+			  9:      1 *
+		Entries with n chunks:
+			  3:      8 ********
+			  4:      1 *
+			  5:      1 *
+			  6:      0 
+			  7:      0 
+			  8:      0 
+			  9:      3 ***
+		Buckets with n entries:
+			  0:    499 ****************************************
+			  1:     13 **
+
+		com.klarasystems:txg_log_time:days = 0 1 1 1795797222 244 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		free_bpobj = 41 
+		root_dataset = 32 
+		com.delphix:vdev_zap_map = 128 
+		com.klarasystems:txg_log_time:months = 0 1 1 1795797212 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		history = 57 
+		sync_bplist = 59 
+		deflate = 1 
+		creation_version = 28 
+		org.illumos:checksum_salt = 98df34d041276da498f60b4961d867fd845d0e3c4e1ab1783273c3b872085236
+		config = 58 
+		pool_props = 60 
+		com.klarasystems:txg_log_time:minutes = 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Indirect blocks:
+               0 L0 0:5a000:3000 0:405a000:3000 0:8015000:3000 4000L/1000P F=1 B=4/4 cksum=0000005e1415a7b4:00015979aa26e5c5:027ca93595c8988c:1106c1ebb65147f8
+            4000 L0 0:e970000:3000 0:58ab000:3000 0:10ab0000:3000 4000L/1000P F=1 B=244/244 cksum=000000e13273d12d:000256faac929349:036450c1e8efc56b:810dd697ee5dec51
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        32    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		head_dataset_obj = 51
+		parent_dir_obj = 0
+		origin_obj = 48
+		child_dir_zapobj = 34
+		used_bytes = 41.3M
+		compressed_bytes = 31.0M
+		uncompressed_bytes = 41.1M
+		quota = 0
+		reserved = 0
+		props_zapobj = 33
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 279K
+		used_breakdown[SNAP] = 0
+		used_breakdown[CHILD] = 41.0M
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        33    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		compression = 3 
+		snapdev = 1 
+Indirect blocks:
+               0 L0 0:db000:3000 0:40db000:3000 0:8096000:3000 200L/200P F=1 B=6/6 cksum=000000037219ae7f:0000017921902be1:000052de5d230c23:000c75556d728996
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        34    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		$ORIGIN = 42 
+		$MOS = 35 
+		$FREE = 38 
+		fs = 68 
+		vm = 134 
+Indirect blocks:
+               0 L0 0:30f000:3000 0:430f000:3000 0:81c2000:3000 200L/200P F=1 B=12/12 cksum=0000000366d82506:00000141271483e4:0000421f63b405c3:0009c77a49fb8d78
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        35    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		head_dataset_obj = 0
+		parent_dir_obj = 32
+		origin_obj = 0
+		child_dir_zapobj = 37
+		used_bytes = 1.96M
+		compressed_bytes = 254K
+		uncompressed_bytes = 254K
+		quota = 0
+		reserved = 0
+		props_zapobj = 36
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 1.96M
+		used_breakdown[SNAP] = 0
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        36    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:6f000:3000 0:406f000:3000 0:802a000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c62ac:000000ac6b9890ae:00002ae47057e4a9:00072b5d63fbb200
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        37    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:6c000:3000 0:406c000:3000 0:8027000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c67ce:000000ac6b9b176a:00002ae470f8504b:00072b5d7eb84d00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        38    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		head_dataset_obj = 0
+		parent_dir_obj = 32
+		origin_obj = 0
+		child_dir_zapobj = 40
+		used_bytes = 0
+		compressed_bytes = 0
+		uncompressed_bytes = 0
+		quota = 0
+		reserved = 0
+		props_zapobj = 39
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 0
+		used_breakdown[SNAP] = 0
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        39    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:7e000:3000 0:407e000:3000 0:8039000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c6de2:000000ac6b9e1542:00002ae471b6475f:00072b5d9e617b00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        40    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:69000:3000 0:4069000:3000 0:8024000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c7a64:000000ac6ba43d3e:00002ae4733d3261:00072b5ddf88a600
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        41    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        42    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		head_dataset_obj = 45
+		parent_dir_obj = 32
+		origin_obj = 0
+		child_dir_zapobj = 44
+		used_bytes = 0
+		compressed_bytes = 0
+		uncompressed_bytes = 0
+		quota = 0
+		reserved = 0
+		props_zapobj = 43
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 0
+		used_breakdown[SNAP] = 0
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 56
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        43    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:57000:3000 0:4057000:3000 0:8012000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c7c8a:000000ac6ba54bf2:00002ae473805807:00072b5deab99700
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        44    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:54000:3000 0:4054000:3000 0:800f000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c71ac:000000ac6b9ff2ae:00002ae4722cb3a9:00072b5db21e3200
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        45    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 42
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 0
+		snapnames_zapobj = 46
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		creation_txg = 1
+		deadlist_obj = 49
+		used_bytes = 0
+		compressed_bytes = 0
+		uncompressed_bytes = 0
+		unique = 0
+		fsid_guid = 52776656735021097
+		guid = 14295674467569946410
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = HOLE [L0 unallocated] size=200L birth=0L
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        46    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		$ORIGIN = 48 
+Indirect blocks:
+               0 L0 0:8d000:3000 0:408d000:3000 0:8048000:3000 200L/200P F=1 B=4/4 cksum=00000001f5b7c6f2:000000ed080cbaf0:000038b698b23301:0009288baeff5014
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        47    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:8a000:3000 0:408a000:3000 0:8045000:3000 200L/200P F=1 B=4/4 cksum=000000015d4c7902:000000ac6ba38f02:00002ae47311fa7f:00072b5dd854ab00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        48    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 42
+		prev_snap_obj = 0
+		prev_snap_txg = 0
+		next_snap_obj = 45
+		snapnames_zapobj = 0
+		num_children = 6
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		creation_txg = 1
+		deadlist_obj = 47
+		used_bytes = 0
+		compressed_bytes = 0
+		uncompressed_bytes = 0
+		unique = 0
+		fsid_guid = 66873761614976138
+		guid = 3968927137785535784
+		flags = 4
+		next_clones_obj = 55
+		props_obj = 0
+		bp = HOLE [L0 unallocated] size=200L birth=0L
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        49    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 50 
+Indirect blocks:
+               0 L0 0:7b000:3000 0:407b000:3000 0:8036000:3000 200L/200P F=1 B=4/4 cksum=000000015d7c6f78:000000ac800eda5a:00002ae8d5f691b3:00072c001ca756a0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        50    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        51    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 32
+		prev_snap_obj = 105
+		prev_snap_txg = 225
+		next_snap_obj = 0
+		snapnames_zapobj = 52
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:32 2026
+		creation_txg = 1
+		deadlist_obj = 106
+		used_bytes = 279K
+		compressed_bytes = 66K
+		uncompressed_bytes = 66K
+		unique = 0
+		fsid_guid = 51985550200346867
+		guid = 11019915337993082754
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        52    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		s2 = 75 
+		s1 = 287 
+		s3 = 105 
+		s0 = 267 
+Indirect blocks:
+               0 L0 0:e8c2000:3000 0:57fa000:3000 0:109ff000:3000 200L/200P F=1 B=225/225 cksum=0000000225187c5c:000000ee7260de26:0000366b2c6a5215:000893d68cba8158
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        53    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 54 
+Indirect blocks:
+               0 L0 0:4e000:3000 0:404e000:3000 0:8009000:3000 200L/200P F=1 B=4/4 cksum=000000015d7c61e4:000000ac80082b4a:00002ae8d44e18fb:00072bffd5e6bfe0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        54    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        55    1   128K    512  17.5K     512    512  100.00  DSL dataset next clones (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		113 = 275 
+		117 = 279 
+		11b = 283 
+		10f = 271 
+		10b = 267 
+Indirect blocks:
+               0 L0 0:cdd4000:3000 0:4aad000:3000 0:10276000:3000 200L/200P F=1 B=72/72 cksum=0000000251417165:000000e9f00f25b2:000035505e2e3297:000878c05d102010
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        56    1   128K    512  17.5K     512    512  100.00  DSL dir clones (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		89 = 137 
+		107 = 263 
+		33 = 51 
+		47 = 71 
+		40 = 64 
+Indirect blocks:
+               0 L0 0:303000:3000 0:4303000:3000 0:81b6000:3000 200L/200P F=1 B=12/12 cksum=00000001a21db6d5:0000009c962b7b02:000020854f1df2db:0004d29496947aa4
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        57    1   128K   128K  52.5K     512   128K  100.00  SPA history (K=inherit) (Z=inherit=on)
+                                                40   bonus  SPA history offsets
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		pool_create_len = 2024
+		phys_max_off = 487587
+		bof = 2024
+		eof = 18136
+		records_lost = 0
+Indirect blocks:
+               0 L0 0:e940000:9000 0:587b000:9000 0:10a80000:9000 20000L/3000P F=1 B=235/235 cksum=000003a7c8beef7c:00189a04c1850456:5d6f2c899b459291:62c1f028fe4c3509
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        58    1   128K    16K  17.5K     512    16K  100.00  packed nvlist (K=inherit) (Z=inherit=on)
+                                                 8   bonus  packed nvlist size
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+        version: 28
+        name: 'sat-v28'
+        state: 1
+        txg: 244
+        pool_guid: 11817819552776634725
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 4096
+        hostid: 840935896
+        hostname: 'runnervm0hi8g'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 1
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 11817819552776634725
+            create_txg: 4
+            children[0]:
+                type: 'raidz'
+                id: 0
+                guid: 13697796724255703959
+                nparity: 2
+                metaslab_array: 256
+                metaslab_shift: 26
+                ashift: 12
+                asize: 1054867456
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 129
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 1501358048245508970
+                    path: '/var/tmp/sat/members/raidz2-0.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 130
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 13244440390506306041
+                    path: '/var/tmp/sat/members/raidz2-1.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+                children[2]:
+                    type: 'file'
+                    id: 2
+                    guid: 3118032841897607281
+                    path: '/var/tmp/sat/members/raidz2-2.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 132
+                children[3]:
+                    type: 'file'
+                    id: 3
+                    guid: 9297201506918483333
+                    path: '/var/tmp/sat/members/raidz2-3.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 133
+        features_for_read:
+Indirect blocks:
+               0 L0 0:e96d000:3000 0:58a8000:3000 0:10aad000:3000 4000L/1000P F=1 B=244/244 cksum=000000830fa561b6:0001a50aab672b6a:02adad6cdacb6e99:f2dcc585063a0163
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        59    1   128K    16K  17.5K     512    16K  100.00  bpobj (K=inherit) (Z=uncompressed)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 8
+		bytes = 174K
+		comp = 40K
+		uncomp = 40K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:e955000:3000 0:5890000:3000 0:10a95000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ce28000:3000 0:4b01000:3000 0:102ca000:3000 4000L/1000P F=0 B=73/73 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e964000:3000 0:589f000:3000 0:10aa4000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e95e000:6000 0:5899000:6000 0:10a9e000:6000 4000L/2000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e958000:6000 0:5893000:6000 0:10a98000:6000 4000L/2000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ce25000:3000 0:4afe000:3000 0:102c7000:3000 4000L/1000P F=0 B=73/73 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e967000:3000 0:58a2000:3000 0:10aa7000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e96a000:3000 0:58a5000:3000 0:10aaa000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e99d000:3000 0:58d8000:3000 0:10add000:3000 4000L/1000P F=1 B=244/244 cksum=0000005f5753d32e:00015b663398dbd4:027afdeee3a7b5a3:084d691df3fb1839
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        60    1   128K    512  17.5K     512    512  100.00  Pool properties (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		ashift = 12 
+		autotrim = 0 
+Indirect blocks:
+               0 L0 0:48000:3000 0:4048000:3000 0:8003000:3000 200L/200P F=1 B=4/4 cksum=0000000329a08edd:00000160cf5b2411:00004ecccfc493bb:000c0219e1282fa6
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        61    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		head_dataset_obj = 64
+		parent_dir_obj = 134
+		origin_obj = 48
+		child_dir_zapobj = 63
+		used_bytes = 15.1M
+		compressed_bytes = 10.1M
+		uncompressed_bytes = 19.6M
+		quota = 0
+		reserved = 0
+		props_zapobj = 62
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 12.0M
+		used_breakdown[SNAP] = 3.13M
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        62    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		checksum = 7 
+		compression = 3 
+Indirect blocks:
+               0 L0 0:213000:3000 0:4213000:3000 0:812f000:3000 200L/200P F=1 B=9/9 cksum=00000002a1ff6942:000001121f2cea52:00003931f258b913:000829837968be98
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        63    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:1ef000:3000 0:41ef000:3000 0:810b000:3000 200L/200P F=1 B=8/8 cksum=0000000081f1ad12:0000004074f32ee2:0000101cc252228f:0002b4c063060300
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        64    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 61
+		prev_snap_obj = 517
+		prev_snap_txg = 225
+		next_snap_obj = 0
+		snapnames_zapobj = 65
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		creation_txg = 8
+		deadlist_obj = 518
+		used_bytes = 12.0M
+		compressed_bytes = 8.14M
+		uncompressed_bytes = 16.1M
+		unique = 0
+		fsid_guid = 42975763185946439
+		guid = 4874848789514195950
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e73c000:3000> DVA[1]=<0:570a000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=214L/214P fill=2 cksum=0000000575640e91:000013da34913383:0024466bd9b56ae5:2c65e57a846a51e1
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        65    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		s0 = 283 
+		s3 = 517 
+		s1 = 307 
+		s2 = 99 
+Indirect blocks:
+               0 L0 0:e8c5000:3000 0:5800000:3000 0:10a05000:3000 200L/200P F=1 B=225/225 cksum=000000020db75d5e:000000e2f09331d2:0000339079d84c3f:00081a0e1dd90358
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        66    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 67 
+Indirect blocks:
+               0 L0 0:1fb000:3000 0:41fb000:3000 0:8117000:3000 200L/200P F=1 B=8/8 cksum=0000000144c5491b:000000a055e9f7a6:000027e461d021fd:0006ab421637b9f0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        67    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        68    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		head_dataset_obj = 71
+		parent_dir_obj = 32
+		origin_obj = 48
+		child_dir_zapobj = 70
+		used_bytes = 2.08M
+		compressed_bytes = 1.19M
+		uncompressed_bytes = 1.80M
+		quota = 0
+		reserved = 0
+		props_zapobj = 69
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 1.46M
+		used_breakdown[SNAP] = 639K
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        69    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:30c000:3000 0:430c000:3000 0:81bf000:3000 200L/200P F=1 B=12/12 cksum=000000009dc9556e:0000004e29180c2a:00001382f17705eb:000345c83e813d00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        70    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:306000:3000 0:4306000:3000 0:81b9000:3000 200L/200P F=1 B=12/12 cksum=000000009dc94950:0000004e29121566:00001382effc504d:000345c7ff62f800
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        71    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 68
+		prev_snap_obj = 112
+		prev_snap_txg = 225
+		next_snap_obj = 0
+		snapnames_zapobj = 72
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		creation_txg = 12
+		deadlist_obj = 113
+		used_bytes = 1.46M
+		compressed_bytes = 1.00M
+		uncompressed_bytes = 1.61M
+		unique = 0
+		fsid_guid = 69871198233790901
+		guid = 7023919989530861169
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e88c000:3000> DVA[1]=<0:57c7000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=222L/222P fill=65 cksum=000000085d5b5d9b:00001abffb6533ae:002c763a081316f5:32f68c31c2d42bc6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        72    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		s0 = 271 
+		s3 = 112 
+		s1 = 292 
+		s2 = 81 
+Indirect blocks:
+               0 L0 0:e8d7000:3000 0:5812000:3000 0:10a17000:3000 200L/200P F=1 B=225/225 cksum=000000016595463a:000000902fcc35d6:00001f09a88a087d:0004ae4091f51418
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        73    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 74 
+Indirect blocks:
+               0 L0 0:300000:3000 0:4300000:3000 0:81b3000:3000 200L/200P F=1 B=12/12 cksum=000000009df95be0:0000004e3d8b343a:00001387564e9343:0003466ad5f21e20
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        74    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        75    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 32
+		prev_snap_obj = 287
+		prev_snap_txg = 123
+		next_snap_obj = 105
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 174
+		deadlist_obj = 288
+		used_bytes = 279K
+		compressed_bytes = 66K
+		uncompressed_bytes = 66K
+		unique = 0
+		fsid_guid = 20839504559788166
+		guid = 10205982219547918636
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        76    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		48 = 79 
+		1 = 78 
+		0 = 77 
+		7b = 80 
+Indirect blocks:
+               0 L0 0:dfe3000:3000 0:535c000:3000 0:1074d000:3000 200L/200P F=1 B=174/174 cksum=00000002137c8f46:000000e25be2558e:000033acf50ef3d9:00083a6a1ac26be0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        77    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        78    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        79    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        80    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        81    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 68
+		prev_snap_obj = 292
+		prev_snap_txg = 123
+		next_snap_obj = 112
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 174
+		deadlist_obj = 293
+		used_bytes = 1.43M
+		compressed_bytes = 1012K
+		uncompressed_bytes = 1.59M
+		unique = 209K
+		fsid_guid = 49722966563325302
+		guid = 5208067825168554993
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:dfa4000:3000> DVA[1]=<0:531d000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=171L/171P fill=61 cksum=000000077a80111f:000016eeb8e43e0b:00249de5f4b34129:287cb762cc9226e9
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        82    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		7b = 86 
+		1 = 84 
+		0 = 83 
+		48 = 85 
+Indirect blocks:
+               0 L0 0:dfdd000:3000 0:5356000:3000 0:10747000:3000 200L/200P F=1 B=174/174 cksum=0000000213fe96ba:000000e29be1fd16:000033bcd4f87455:00083d0f6c4862a0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        83    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        84    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        85    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 1
+		bytes = 11.6K
+		comp = 4K
+		uncomp = 4K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:d57b000:3000 0:4e85000:3000 4000L/1000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e21a000:6000 0:54a0000:6000 0:10816000:6000 20000L/2000P F=1 B=189/189 cksum=000002a946e06987:000fbcc66c5a0ce0:307254ad5cebe9dd:0d7a1b3063490e0d
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        86    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 13
+		bytes = 209K
+		comp = 63.5K
+		uncomp = 63.5K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:df71000:3000 0:52ed000:3000 a00L/a00P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df7a000:3000 0:52f3000:3000 4000L/1000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df7d000:6000 0:52f6000:6000 20000L/2000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df83000:6000 0:52fc000:6000 20000L/2000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df89000:6000 0:5302000:6000 20000L/2000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df8f000:6000 0:5308000:6000 20000L/2000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df95000:6000 0:530e000:6000 20000L/2000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dfa4000:3000 0:531d000:3000 1000L/1000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dfa1000:3000 0:531a000:3000 200L/200P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df9e000:3000 0:5317000:3000 200L/200P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df77000:3000 0:52f0000:3000 4000L/1000P F=0 B=171/171 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d8c0000:3000 0:4ff6000:3000 4000L/1000P F=0 B=138/138 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dab2000:3000 0:50f2000:3000 4000L/1000P F=0 B=149/149 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e892000:6000 0:57cd000:6000 0:109d2000:6000 20000L/2000P F=1 B=222/222 cksum=000002b55d2a3a63:000fa9f9cbd969c1:2f51d9e3d619156c:0aa5e69c27a425df
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        87    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 134
+		prev_snap_obj = 297
+		prev_snap_txg = 123
+		next_snap_obj = 119
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 174
+		deadlist_obj = 298
+		used_bytes = 256K
+		compressed_bytes = 65K
+		uncompressed_bytes = 65K
+		unique = 0
+		fsid_guid = 660989966471189
+		guid = 16326120896960469889
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:138000:3000> DVA[1]=<0:4138000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=7L/7P fill=6 cksum=000000082826d438:0000196696f3da88:002948def90884dc:2e7ddcc77ed0832d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        88    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		1 = 90 
+		48 = 91 
+		0 = 89 
+		7b = 92 
+Indirect blocks:
+               0 L0 0:dfda000:3000 0:5353000:3000 0:10744000:3000 200L/200P F=1 B=174/174 cksum=00000001a41865a1:000000ab8895cf35:000026138b92848a:0005f62ddb3b841d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        89    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        90    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        91    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        92    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        93    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 260
+		prev_snap_obj = 302
+		prev_snap_txg = 123
+		next_snap_obj = 126
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 174
+		deadlist_obj = 303
+		used_bytes = 17.7M
+		compressed_bytes = 16.1M
+		uncompressed_bytes = 16.1M
+		unique = 232K
+		fsid_guid = 48165924572432142
+		guid = 17626013894133135394
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:df44000:3000> DVA[1]=<0:52c0000:3000> [L0 DMU objset] sha256 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=167L/167P fill=2 cksum=9f5a355d59fd8794:0b91e0227e0caeab:c21266f54346948e:a9a5f54e5ea71785
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        94    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		48 = 97 
+		1 = 96 
+		0 = 95 
+		7b = 98 
+Indirect blocks:
+               0 L0 0:dfce000:3000 0:5347000:3000 0:10738000:3000 200L/200P F=1 B=174/174 cksum=00000001f0456382:000000d106bac066:00002f6055bbcb2d:000782fa3762a020
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        95    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        96    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 64
+		bytes = 1.09M
+		comp = 1M
+		uncomp = 1M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:260a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:253b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25ef000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2571000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2595000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25a7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:254d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25cb000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25d4000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25dd000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25c2000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25b0000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:26be000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:259e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25b9000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:25f8000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dd8000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c5e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c79000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c70000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c31000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c67000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c3a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e32000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dcf000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2db4000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dea000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dab000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dfc000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e05000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2dc6000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2c55000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3315000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3303000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:32f1000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3330000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:335d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3381000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:33db000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3354000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3327000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:334b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:33a5000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3339000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3366000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3393000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:331e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:32df000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a80000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:159000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:39f0000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:39b1000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a92000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:16b000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3aad000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3aa4000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a6e000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a9b000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:28b000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:150000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:162000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a77000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3a89000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ad1000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e829000:6000 0:5767000:6000 0:1099f000:6000 20000L/2000P F=1 B=218/218 cksum=000002c44add328e:0010009b7ecc2747:3071903b58452ccb:c4e3bc684127e613
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        97    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        98    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 8
+		bytes = 232K
+		comp = 96K
+		uncomp = 96K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:d281000:18000 0:4492000:18000 20000L/c000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df23000:3000 0:529f000:3000 4000L/1000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df26000:6000 0:52a2000:6000 20000L/2000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df2c000:6000 0:52a8000:6000 20000L/2000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df32000:6000 0:52ae000:6000 20000L/2000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df38000:6000 0:52b4000:6000 20000L/2000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df3e000:6000 0:52ba000:6000 20000L/2000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df44000:3000 0:52c0000:3000 1000L/1000P F=0 B=167/167 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e1b1000:6000 0:543a000:6000 0:107e3000:6000 20000L/2000P F=1 B=185/185 cksum=000002ae637c2bec:000f9e8047caaba5:2f743b3f109d494a:c4a8b6ca0e0e0f7c
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        99    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 61
+		prev_snap_obj = 307
+		prev_snap_txg = 123
+		next_snap_obj = 517
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 174
+		deadlist_obj = 308
+		used_bytes = 12.0M
+		compressed_bytes = 8.14M
+		uncompressed_bytes = 16.1M
+		unique = 326K
+		fsid_guid = 27300419668092713
+		guid = 12106707361139328562
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:de5d000:3000> DVA[1]=<0:5269000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=163L/163P fill=2 cksum=00000004dd5fc42b:0000119442b1f19b:001feb6097547ad5:26d41762d0c6163a
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       100    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		1 = 102 
+		7b = 104 
+		48 = 103 
+		0 = 101 
+Indirect blocks:
+               0 L0 0:dfc8000:3000 0:5341000:3000 0:10732000:3000 200L/200P F=1 B=174/174 cksum=00000001f5dfdf46:000000d3c8c3a74e:0000300f76f083f9:0007a02a6ac74ee0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       101    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       102    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 128
+		bytes = 744K
+		comp = 512K
+		uncomp = 1M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:936000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:954000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:942000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:963000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:951000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:95a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:957000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:95d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:960000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:945000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:972000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:94e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:96f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:96c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:969000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:966000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:978000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:975000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:94b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:993000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:987000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:97e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:97b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:948000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:990000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:98d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:98a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:984000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:939000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:981000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:93f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:93c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dd1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:db9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:db6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ddd000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dbc000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dd4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dd7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dda000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dcb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dbf000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dec000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:df8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:def000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dfb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e01000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e0d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e07000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dfe000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e04000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dc2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e13000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dce000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dc8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:dc5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e10000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e0a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:120f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1212000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1200000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1206000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1251000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:125d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1245000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1236000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1230000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1227000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:121b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:125a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1257000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1254000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:124e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:124b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1242000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1248000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:123f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:123c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1233000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1239000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:120c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:122d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:122a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1209000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1224000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1221000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:121e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1218000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1215000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1203000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1731000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1734000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1749000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:175e000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1761000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1764000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1767000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:176a000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:176d000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1776000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1770000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:174c000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1773000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:178b000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:174f000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1782000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:175b000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:177f000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:177c000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1788000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1785000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1755000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:173d000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1737000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1758000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:178e000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1752000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:173a000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1746000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1779000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1740000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1743000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e745000:6000 0:5713000:6000 0:1096f000:6000 20000L/2000P F=1 B=214/214 cksum=000002c16b07eccf:000f84bd34179533:2debf61ad0e78e6b:9fd6328c662af52c
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       103    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       104    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 9
+		bytes = 326K
+		comp = 144K
+		uncomp = 144K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:d269000:18000 0:447a000:18000 20000L/c000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de3c000:3000 0:5248000:3000 4000L/1000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de3f000:6000 0:524b000:6000 20000L/2000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de45000:6000 0:5251000:6000 20000L/2000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de4b000:6000 0:5257000:6000 20000L/2000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de51000:6000 0:525d000:6000 20000L/2000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de57000:6000 0:5263000:6000 20000L/2000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:de5d000:3000 0:5269000:3000 1000L/1000P F=0 B=163/163 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d1d0000:18000 0:444a000:18000 20000L/c000P F=0 B=152/152 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:e53b000:6000 0:55fc000:6000 0:108d3000:6000 20000L/2000P F=1 B=203/203 cksum=000002b115b213fb:000fa24f187b6d87:2f6319c2e76f9190:70acba43ae1af42d
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       105    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 32
+		prev_snap_obj = 75
+		prev_snap_txg = 174
+		next_snap_obj = 51
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:37 2026
+		creation_txg = 225
+		deadlist_obj = 76
+		used_bytes = 279K
+		compressed_bytes = 66K
+		uncompressed_bytes = 66K
+		unique = 0
+		fsid_guid = 61333700450500314
+		guid = 10493978807973620072
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       106    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		48 = 109 
+		ae = 111 
+		1 = 108 
+		7b = 110 
+		0 = 107 
+Indirect blocks:
+               0 L0 0:e8d4000:3000 0:580f000:3000 0:10a14000:3000 200L/200P F=1 B=225/225 cksum=0000000258c85659:000000e4637d1d46:0000315c1cdf0d8d:0007ac60de120010
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       107    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       108    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       109    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       110    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       111    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       112    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 68
+		prev_snap_obj = 81
+		prev_snap_txg = 174
+		next_snap_obj = 71
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:37 2026
+		creation_txg = 225
+		deadlist_obj = 82
+		used_bytes = 1.46M
+		compressed_bytes = 1.00M
+		uncompressed_bytes = 1.61M
+		unique = 0
+		fsid_guid = 3576980792372378
+		guid = 16191092701313404728
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e88c000:3000> DVA[1]=<0:57c7000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=222L/222P fill=65 cksum=000000085d5b5d9b:00001abffb6533ae:002c763a081316f5:32f68c31c2d42bc6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       113    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		0 = 114 
+		7b = 117 
+		1 = 115 
+		ae = 118 
+		48 = 116 
+Indirect blocks:
+               0 L0 0:e8d1000:3000 0:580c000:3000 0:10a11000:3000 200L/200P F=1 B=225/225 cksum=00000001d6b8ab1d:000000a45fc6cf71:0000217b3125e5ec:000506e43f20a69d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       114    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       115    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       116    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       117    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       118    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       119    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 134
+		prev_snap_obj = 87
+		prev_snap_txg = 174
+		next_snap_obj = 137
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:37 2026
+		creation_txg = 225
+		deadlist_obj = 88
+		used_bytes = 256K
+		compressed_bytes = 65K
+		uncompressed_bytes = 65K
+		unique = 0
+		fsid_guid = 6478419783192362
+		guid = 7789540511788503403
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:138000:3000> DVA[1]=<0:4138000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=7L/7P fill=6 cksum=000000082826d438:0000196696f3da88:002948def90884dc:2e7ddcc77ed0832d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       120    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		7b = 124 
+		0 = 121 
+		ae = 125 
+		48 = 123 
+		1 = 122 
+Indirect blocks:
+               0 L0 0:e8ce000:3000 0:5809000:3000 0:10a0e000:3000 200L/200P F=1 B=225/225 cksum=00000001d6b686ae:000000a45eb8da85:0000217aee2eccd2:000506d915dc826d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       121    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       122    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       123    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       124    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       125    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       126    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 260
+		prev_snap_obj = 93
+		prev_snap_txg = 174
+		next_snap_obj = 263
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:37 2026
+		creation_txg = 225
+		deadlist_obj = 94
+		used_bytes = 17.7M
+		compressed_bytes = 16.1M
+		uncompressed_bytes = 16.1M
+		unique = 0
+		fsid_guid = 68539868218755087
+		guid = 9080208625389576666
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e823000:3000> DVA[1]=<0:5761000:3000> [L0 DMU objset] sha256 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=218L/218P fill=2 cksum=9e2d72a6525a498e:ab8bbe8036cb16e7:8fa50699062baa2c:6e298bd50506900e
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       127    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		7b = 515 
+		0 = 512 
+		48 = 514 
+		ae = 516 
+		1 = 513 
+Indirect blocks:
+               0 L0 0:e8bc000:3000 0:57f7000:3000 0:109fc000:3000 200L/200P F=1 B=225/225 cksum=00000001d6b81cbf:000000a45f7f5799:0000217b1f3b92b8:000506e13e02e63d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       128    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		84 = 132 
+		83 = 131 
+		82 = 130 
+		85 = 133 
+		81 = 129 
+Indirect blocks:
+               0 L0 0:75000:3000 0:4075000:3000 0:8030000:3000 200L/200P F=1 B=4/4 cksum=000000019bff4453:00000099a30b2a8e:00001fd3d8593049:0004b73c96f73530
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       129    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:66000:3000 0:4066000:3000 0:8021000:3000 200L/200P F=1 B=4/4 cksum=000000009be74426:0000004d3bd38aba:0000134816f8eaa3:00033bf9297cb100
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       130    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:45000:3000 0:4045000:3000 0:8000000:3000 200L/200P F=1 B=4/4 cksum=000000009be74b38:0000004d3bd70596:0000134817d5e435:00033bf94e50f400
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       131    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:63000:3000 0:4063000:3000 0:801e000:3000 200L/200P F=1 B=4/4 cksum=000000009be7523a:0000004d3bda7892:0000134818b0e9b7:00033bf972d1df00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       132    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:5d000:3000 0:405d000:3000 0:8018000:3000 200L/200P F=1 B=4/4 cksum=000000009be753ac:0000004d3bdb2eae:0000134818de15a9:00033bf97a593200
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       133    1   128K    512  17.5K     512    512  100.00  zap (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:87000:3000 0:4087000:3000 0:8042000:3000 200L/200P F=1 B=4/4 cksum=000000009be74f8e:0000004d3bd927ea:00001348185d680b:00033bf964e6ed00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       134    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		head_dataset_obj = 137
+		parent_dir_obj = 32
+		origin_obj = 48
+		child_dir_zapobj = 136
+		used_bytes = 37.0M
+		compressed_bytes = 29.5M
+		uncompressed_bytes = 39.0M
+		quota = 0
+		reserved = 0
+		props_zapobj = 135
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 256K
+		used_breakdown[SNAP] = 0
+		used_breakdown[CHILD] = 36.7M
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       135    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:14d000:3000 0:414d000:3000 0:80c6000:3000 200L/200P F=1 B=7/7 cksum=0000000084b972c2:00000041d3467b82:00001073a7fba43f:0002c33bff464b00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       136    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		disk-16k = 260 
+		disk-8k = 61 
+Indirect blocks:
+               0 L0 0:264000:3000 0:4264000:3000 0:8159000:3000 200L/200P F=1 B=10/10 cksum=00000001c0dcc34c:000000be5bd779f1:00002960a10b4df7:0006241f50940666
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       137    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 134
+		prev_snap_obj = 119
+		prev_snap_txg = 225
+		next_snap_obj = 0
+		snapnames_zapobj = 138
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		creation_txg = 7
+		deadlist_obj = 120
+		used_bytes = 256K
+		compressed_bytes = 65K
+		uncompressed_bytes = 65K
+		unique = 0
+		fsid_guid = 7295161361789609
+		guid = 15448665293044380853
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:138000:3000> DVA[1]=<0:4138000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=7L/7P fill=6 cksum=000000082826d438:0000196696f3da88:002948def90884dc:2e7ddcc77ed0832d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       138    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		s0 = 275 
+		s3 = 119 
+		s1 = 297 
+		s2 = 87 
+Indirect blocks:
+               0 L0 0:e8cb000:3000 0:5806000:3000 0:10a0b000:3000 200L/200P F=1 B=225/225 cksum=000000014c8574d4:00000083da03220e:00001bfa612916a1:00042bb4ac68f0d8
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       139    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 140 
+Indirect blocks:
+               0 L0 0:144000:3000 0:4144000:3000 0:80bd000:3000 200L/200P F=1 B=7/7 cksum=0000000084e97c86:00000041e7bb4252:000010780d394817:0002c3dea79d2ec0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       140    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       256    1   128K    512  17.5K     512    512  100.00  object array (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		[103, 102, 101, 181,
+		180, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0,
+		0, 0, 0, 0]
+Indirect blocks:
+               0 L0 0:c015000:3000 0:456d000:3000 0:10015000:3000 200L/200P F=1 B=21/21 cksum=0000000000000607:000000000002e872:0000000000b52257:000000001da20868
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       257    1    16K    16K  17.5K     512    16K  100.00  SPA space map (K=inherit) (Z=inherit=on)
+                                                24   bonus  SPA space map header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+Indirect blocks:
+               0 L0 0:e985000:3000 0:58c0000:3000 0:10ac5000:3000 4000L/1000P F=1 B=244/244 cksum=0000006e0a024ac2:0001680ef92b00c4:025292b46457d05a:94e45a2c7fea40f6
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       258    1    16K    16K    35K     512    16K  100.00  SPA space map (K=inherit) (Z=inherit=on)
+                                                24   bonus  SPA space map header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+Indirect blocks:
+               0 L0 0:e98e000:6000 0:58c9000:6000 0:10ace000:6000 4000L/2000P F=1 B=244/244 cksum=00000135efcb97de:000697faeecff610:13302df394403226:5df17c97ef85e89c
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       259    1    16K    16K  17.5K     512    16K  100.00  SPA space map (K=inherit) (Z=inherit=on)
+                                                24   bonus  SPA space map header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+Indirect blocks:
+               0 L0 0:e982000:3000 0:58bd000:3000 0:10ac2000:3000 4000L/1000P F=1 B=244/244 cksum=0000008ed9070a5b:0001a2d4a1f03820:02796db3999cd862:92ec63c395aa8ea1
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       260    1   128K    512      0     512    512    0.00  DSL directory (K=inherit) (Z=inherit=on)
+                                               256   bonus  DSL directory
+	dnode flags: 
+	dnode maxblkid: 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		head_dataset_obj = 263
+		parent_dir_obj = 134
+		origin_obj = 48
+		child_dir_zapobj = 262
+		used_bytes = 21.6M
+		compressed_bytes = 19.4M
+		uncompressed_bytes = 19.4M
+		quota = 0
+		reserved = 0
+		props_zapobj = 261
+		deleg_zapobj = 0
+		flags = 1
+		used_breakdown[HEAD] = 17.7M
+		used_breakdown[SNAP] = 3.95M
+		used_breakdown[CHILD] = 0
+		used_breakdown[CHILD_RSRV] = 0
+		used_breakdown[REFRSRV] = 0
+		clones = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       261    1   128K    512  17.5K     512    512  100.00  DSL props (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		compression = 2 
+		checksum = 8 
+Indirect blocks:
+               0 L0 0:297000:3000 0:4297000:3000 0:818c000:3000 200L/200P F=1 B=11/11 cksum=00000002a205be60:00000112224acf26:00003932b842fe39:000829a475c9dcc8
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       262    1   128K    512  17.5K     512    512  100.00  DSL directory child map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:26d000:3000 0:426d000:3000 0:8162000:3000 200L/200P F=1 B=10/10 cksum=0000000081f80640:0000004078131386:0000101d88bb593d:0002b4e1748f2000
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       263    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 260
+		prev_snap_obj = 126
+		prev_snap_txg = 225
+		next_snap_obj = 0
+		snapnames_zapobj = 264
+		num_children = 0
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:33 2026
+		creation_txg = 10
+		deadlist_obj = 127
+		used_bytes = 17.7M
+		compressed_bytes = 16.1M
+		uncompressed_bytes = 16.1M
+		unique = 0
+		fsid_guid = 18807326591816303
+		guid = 17434055734247719961
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e823000:3000> DVA[1]=<0:5761000:3000> [L0 DMU objset] sha256 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=218L/218P fill=2 cksum=9e2d72a6525a498e:ab8bbe8036cb16e7:8fa50699062baa2c:6e298bd50506900e
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       264    1   128K    512  17.5K     512    512  100.00  DSL dataset snap map (K=inherit) (Z=inherit=on)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 4 entries
+
+		s3 = 126 
+		s0 = 279 
+		s2 = 93 
+		s1 = 302 
+Indirect blocks:
+               0 L0 0:e8bf000:3000 0:57fd000:3000 0:10a02000:3000 200L/200P F=1 B=225/225 cksum=0000000149c421d6:000000827edc4576:00001ba44504d52d:00041d5aa64f8998
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       265    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 266 
+Indirect blocks:
+               0 L0 0:26a000:3000 0:426a000:3000 0:815f000:3000 200L/200P F=1 B=10/10 cksum=00000000822803a0:000000408c81ba3a:00001021ec728443:0002b583db991a20
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       266    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       267    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 32
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 287
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:35 2026
+		creation_txg = 72
+		deadlist_obj = 53
+		used_bytes = 279K
+		compressed_bytes = 66K
+		uncompressed_bytes = 66K
+		unique = 0
+		fsid_guid = 11182158136627114
+		guid = 17662276737782598001
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       268    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		1 = 270 
+		0 = 269 
+Indirect blocks:
+               0 L0 0:cdd1000:3000 0:4aaa000:3000 0:10273000:3000 200L/200P F=1 B=72/72 cksum=000000014144a517:0000009e964812fe:00002774336910f1:0006986bbb990ad0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       269    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       270    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       271    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 68
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 292
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:35 2026
+		creation_txg = 72
+		deadlist_obj = 73
+		used_bytes = 1.37M
+		compressed_bytes = 981K
+		uncompressed_bytes = 1.55M
+		unique = 209K
+		fsid_guid = 19563757320539742
+		guid = 16104562609600736373
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:cda1000:3000> DVA[1]=<0:4a7a000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=69L/69P fill=53 cksum=000000076193bb6c:000016b0654e5b3d:002474a6592d8e91:28a8fffff9e1a1bb
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       272    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		0 = 273 
+		1 = 274 
+Indirect blocks:
+               0 L0 0:cddd000:3000 0:4ab6000:3000 0:1027f000:3000 200L/200P F=1 B=72/72 cksum=000000008078a107:0000003fb1de126e:00000fea8b1dca79:0002ac25045dfc90
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       273    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       274    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 13
+		bytes = 209K
+		comp = 63K
+		uncomp = 63K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:cd6e000:3000 0:4a4a000:3000 800L/800P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd74000:3000 0:4a4d000:3000 4000L/1000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:caa1000:3000 0:4966000:3000 4000L/1000P F=0 B=58/58 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd7a000:6000 0:4a53000:6000 20000L/2000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd80000:6000 0:4a59000:6000 20000L/2000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd86000:6000 0:4a5f000:6000 20000L/2000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd8c000:6000 0:4a65000:6000 20000L/2000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd92000:6000 0:4a6b000:6000 20000L/2000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cda1000:3000 0:4a7a000:3000 1000L/1000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd9e000:3000 0:4a77000:3000 200L/200P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd9b000:3000 0:4a74000:3000 200L/200P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:c630000:3000 0:4798000:3000 4000L/1000P F=0 B=36/36 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd77000:3000 0:4a50000:3000 4000L/1000P F=0 B=69/69 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:d5ae000:6000 0:4eb8000:6000 0:10495000:6000 20000L/2000P F=1 B=120/120 cksum=000002b10907f85d:000f864d91826881:2ec2fabdaed713f1:91de8579077884cd
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       275    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 134
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 297
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:35 2026
+		creation_txg = 72
+		deadlist_obj = 139
+		used_bytes = 256K
+		compressed_bytes = 65K
+		uncompressed_bytes = 65K
+		unique = 0
+		fsid_guid = 63076254047335999
+		guid = 11787903824565531259
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:138000:3000> DVA[1]=<0:4138000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=7L/7P fill=6 cksum=000000082826d438:0000196696f3da88:002948def90884dc:2e7ddcc77ed0832d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       276    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		0 = 277 
+		1 = 278 
+Indirect blocks:
+               0 L0 0:cdcb000:3000 0:4aa4000:3000 0:1026d000:3000 200L/200P F=1 B=72/72 cksum=000000017ed97d57:000000bce58a811e:00002ef8dc631c61:0007d9328fe6fe50
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       277    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       278    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       279    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 260
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 302
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:35 2026
+		creation_txg = 72
+		deadlist_obj = 265
+		used_bytes = 17.7M
+		compressed_bytes = 16.1M
+		uncompressed_bytes = 16.1M
+		unique = 1.32M
+		fsid_guid = 38652945816196096
+		guid = 15639370952296544036
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:cd47000:3000> DVA[1]=<0:4a23000:3000> [L0 DMU objset] sha256 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=65L/65P fill=2 cksum=2fe6b9dfa623129d:343d2f66b5f1f9b3:d943ed2c000f85d6:3ad0a6987b314953
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       280    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		0 = 281 
+		1 = 282 
+Indirect blocks:
+               0 L0 0:cde0000:3000 0:4ab9000:3000 0:10282000:3000 200L/200P F=1 B=72/72 cksum=0000000080612737:0000003fa6501cae:00000fe7ad670fd9:0002abaabb359810
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       281    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       282    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 72
+		bytes = 1.32M
+		comp = 1.09M
+		uncomp = 1.09M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:3744000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:38c7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:38a3000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:38ac000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:389a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3768000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:392a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3921000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:379e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3783000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3771000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:377a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:37b9000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:37b0000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:37a7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3795000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd0e000:18000 0:423a000:18000 20000L/c000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd26000:3000 0:4a02000:3000 4000L/1000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd29000:6000 0:4a05000:6000 20000L/2000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd2f000:6000 0:4a0b000:6000 20000L/2000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd35000:6000 0:4a11000:6000 20000L/2000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd3b000:6000 0:4a17000:6000 20000L/2000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd41000:6000 0:4a1d000:6000 20000L/2000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cd47000:3000 0:4a23000:3000 1000L/1000P F=0 B=65/65 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ed3000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3eca000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3eb8000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3edc000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ec1000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f36000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f24000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f2d000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f1b000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f12000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f09000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3f00000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ef7000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3eee000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ee5000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3eaf000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2181000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2103000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:211e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2166000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2142000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2154000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2664000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:20df000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2139000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2115000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:215d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2178000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:214b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2130000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:210c000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:218a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:277b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2784000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:279f000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2796000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27b1000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27e7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27de000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27d5000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27cc000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27c3000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27ba000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27a8000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2802000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27f9000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:27f0000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:278d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:d54e000:6000 0:4e5b000:6000 0:1046b000:6000 20000L/2000P F=1 B=116/116 cksum=000002c7ab3be2dd:000fb905db857cff:2eae41eca9d8e9fd:681f563482d519be
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       283    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 61
+		prev_snap_obj = 48
+		prev_snap_txg = 1
+		next_snap_obj = 307
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:35 2026
+		creation_txg = 72
+		deadlist_obj = 66
+		used_bytes = 12.0M
+		compressed_bytes = 8.14M
+		uncompressed_bytes = 16.1M
+		unique = 1.04M
+		fsid_guid = 6397278672744919
+		guid = 11283296496931767612
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:cbfa000:3000> DVA[1]=<0:49d8000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=61L/61P fill=2 cksum=000000055e91a75c:00001381f6fc02b4:00239baa1347b663:2b8963f6bb1d214d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       284    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		0 = 285 
+		1 = 286 
+Indirect blocks:
+               0 L0 0:cdc5000:3000 0:4a9e000:3000 0:10267000:3000 200L/200P F=1 B=72/72 cksum=0000000086811a07:00000042aa099e5e:000010a719ea9841:0002cb92267259d0
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       285    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       286    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 137
+		bytes = 1.04M
+		comp = 656K
+		uncomp = 1.14M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:15c0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1527000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15e4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15bd000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1533000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:153c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1536000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15e7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:153f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1602000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15d5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15b1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15ea000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15f3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15ba000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15cc000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15ae000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1539000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15d8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15c3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1521000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:155d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1551000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1605000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15db000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:15b7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1530000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1557000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:155a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1554000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:154e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:152d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbc1000:18000 0:4216000:18000 20000L/c000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbd9000:3000 0:49b7000:3000 4000L/1000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbdc000:6000 0:49ba000:6000 20000L/2000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbe2000:6000 0:49c0000:6000 20000L/2000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbe8000:6000 0:49c6000:6000 20000L/2000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbee000:6000 0:49cc000:6000 20000L/2000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbf4000:6000 0:49d2000:6000 20000L/2000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cbfa000:3000 0:49d8000:3000 1000L/1000P F=0 B=61/61 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a46000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a49000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a3a000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a2b000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a9a000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1b4e000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a3d000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a37000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a85000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1b45000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1b3f000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a40000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a6a000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1b4b000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1b48000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a70000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a61000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a97000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a6d000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a34000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a55000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a67000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a31000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a64000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a43000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a5e000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a5b000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a2e000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a58000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a52000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a4f000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1a4c000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:639000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:657000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:64b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:645000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:68a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:651000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:675000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:66c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:663000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:648000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:64e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:690000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:65a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:693000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:63c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:68d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:687000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:684000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:67e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:681000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:67b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:678000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:672000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:66f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:654000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:642000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:669000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:660000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:666000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:65d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:63f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:636000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:c948000:18000 0:4195000:18000 20000L/c000P F=0 B=50/50 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ace000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ab6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ada000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:add000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ad1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ad7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ad4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:aef000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:af2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ae9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ae3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ae0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:aec000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:acb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ae6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:afb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:af5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b16000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:af8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b0a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:afe000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b10000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b0d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ab9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b07000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b04000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:b01000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:abf000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ac2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ac8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:abc000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ac5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:d476000:6000 0:4e13000:6000 0:10447000:6000 20000L/2000P F=1 B=112/112 cksum=000002d0fe76451c:000f42f290c904ad:2bcf22dcee6a1146:270f0cbace1f5b07
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       287    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 32
+		prev_snap_obj = 267
+		prev_snap_txg = 72
+		next_snap_obj = 75
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 123
+		deadlist_obj = 268
+		used_bytes = 279K
+		compressed_bytes = 66K
+		uncompressed_bytes = 66K
+		unique = 0
+		fsid_guid = 62659814606307600
+		guid = 18441568694637993192
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       288    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 3 entries
+
+		48 = 291 
+		0 = 289 
+		1 = 290 
+Indirect blocks:
+               0 L0 0:d5ea000:3000 0:4ef4000:3000 0:104d1000:3000 200L/200P F=1 B=123/123 cksum=0000000141d2c21d:000000941a462435:0000233c45b37c0a:0005ba5e63f84a1d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       289    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       290    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       291    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       292    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 68
+		prev_snap_obj = 271
+		prev_snap_txg = 72
+		next_snap_obj = 81
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 123
+		deadlist_obj = 272
+		used_bytes = 1.40M
+		compressed_bytes = 996K
+		uncompressed_bytes = 1.57M
+		unique = 198K
+		fsid_guid = 45536525117371814
+		guid = 5025669193279183296
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:d5a5000:3000> DVA[1]=<0:4eaf000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=120L/120P fill=57 cksum=0000000782ec8d66:000017a26a1e1895:0026d6dafef37c74:2c34b1872ff05ff5
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       293    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 3 entries
+
+		48 = 296 
+		0 = 294 
+		1 = 295 
+Indirect blocks:
+               0 L0 0:d5e4000:3000 0:4eee000:3000 0:104cb000:3000 200L/200P F=1 B=123/123 cksum=00000001424777c6:0000009453b78ba1:0000234a855453f4:0005bcbe5412adfd
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       294    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       295    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 1
+		bytes = 11.6K
+		comp = 4K
+		uncomp = 4K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:c354000:3000 0:46a2000:3000 4000L/1000P F=0 B=25/25 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:dae5000:6000 0:5125000:6000 0:1060c000:6000 20000L/2000P F=1 B=149/149 cksum=000002a9460fba87:000fbcbfe83384e0:30723a9ec5283ddd:0d349b9bb4f4ee0d
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       296    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 12
+		bytes = 198K
+		comp = 59K
+		uncomp = 59K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:d572000:3000 0:4e7f000:3000 800L/800P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d578000:3000 0:4e82000:3000 4000L/1000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d398000:3000 0:4d95000:3000 4000L/1000P F=0 B=109/109 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d57e000:6000 0:4e88000:6000 20000L/2000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d584000:6000 0:4e8e000:6000 20000L/2000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d58a000:6000 0:4e94000:6000 20000L/2000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d590000:6000 0:4e9a000:6000 20000L/2000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d596000:6000 0:4ea0000:6000 20000L/2000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d5a5000:3000 0:4eaf000:3000 1000L/1000P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d59f000:3000 0:4ea9000:3000 200L/200P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d5a2000:3000 0:4eac000:3000 200L/200P F=0 B=120/120 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d1b5000:3000 0:4ca5000:3000 4000L/1000P F=0 B=98/98 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:ddb8000:6000 0:5224000:6000 0:10690000:6000 20000L/2000P F=1 B=160/160 cksum=000002b0ff32817e:000f846702a97d94:2eb87c836d78a33d:726cb75ad770b6de
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       297    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 134
+		prev_snap_obj = 275
+		prev_snap_txg = 72
+		next_snap_obj = 87
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 123
+		deadlist_obj = 276
+		used_bytes = 256K
+		compressed_bytes = 65K
+		uncompressed_bytes = 65K
+		unique = 0
+		fsid_guid = 1310381756863854
+		guid = 6065874476853439978
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:138000:3000> DVA[1]=<0:4138000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=7L/7P fill=6 cksum=000000082826d438:0000196696f3da88:002948def90884dc:2e7ddcc77ed0832d
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       298    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 3 entries
+
+		1 = 300 
+		0 = 299 
+		48 = 301 
+Indirect blocks:
+               0 L0 0:d5d5000:3000 0:4edf000:3000 0:104bc000:3000 200L/200P F=1 B=123/123 cksum=0000000141d249bf:000000941a0ae26d:0000233c37000c2e:0005ba5bf0a7c9dd
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       299    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       300    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       301    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       302    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 260
+		prev_snap_obj = 279
+		prev_snap_txg = 72
+		next_snap_obj = 93
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 123
+		deadlist_obj = 280
+		used_bytes = 17.7M
+		compressed_bytes = 16.1M
+		uncompressed_bytes = 16.1M
+		unique = 232K
+		fsid_guid = 18928001672244709
+		guid = 17416853077386038921
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:d548000:3000> DVA[1]=<0:4e55000:3000> [L0 DMU objset] sha256 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=116L/116P fill=2 cksum=5a039255cc057918:2324081b96615e16:eaa7f321963e60db:98e36a3e0f300123
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       303    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 3 entries
+
+		48 = 306 
+		1 = 305 
+		0 = 304 
+Indirect blocks:
+               0 L0 0:d5e1000:3000 0:4eeb000:3000 0:104c8000:3000 200L/200P F=1 B=123/123 cksum=0000000141d3a828:000000941ab75859:0000233c61c6fcd8:0005ba6311c64dbd
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       304    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       305    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 64
+		bytes = 1.09M
+		comp = 1M
+		uncomp = 1M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:2e71000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2ee6000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2edd000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2f01000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2f49000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2f37000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2ec2000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2ecb000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2ed4000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2ea7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e9e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e7a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2eb9000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e83000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2eef000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:2e8c000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:355e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:351f000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3543000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:35a6000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:35ca000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:359d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3600000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3531000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3594000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:35f7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3528000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:358b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3579000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:353a000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:35d3000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3570000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c8a000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c81000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cb7000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cae000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ca5000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c78000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c9c000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c93000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3c6f000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cf6000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cd2000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cc9000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cc0000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ce4000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3cdb000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:3ced000:9000 4000L/4000P F=0 B=20/20 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ede000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ee7000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ea8000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ef0000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f0b000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ef9000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f02000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f1d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1e8d000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f38000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f26000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f6e000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1e96000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f2f000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f14000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1f80000:9000 4000L/4000P F=0 B=19/19 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:df4d000:6000 0:52c9000:6000 0:106ed000:6000 20000L/2000P F=1 B=167/167 cksum=000002c0ea2fb96b:000fdbac6ee3deaa:2fd012a618d6b775:103883d7c8d8bc61
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       306    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 8
+		bytes = 232K
+		comp = 96K
+		uncomp = 96K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:d080000:18000 0:43d2000:18000 20000L/c000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d527000:3000 0:4e34000:3000 4000L/1000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d52a000:6000 0:4e37000:6000 20000L/2000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d530000:6000 0:4e3d000:6000 20000L/2000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d536000:6000 0:4e43000:6000 20000L/2000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d53c000:6000 0:4e49000:6000 20000L/2000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d542000:6000 0:4e4f000:6000 20000L/2000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d548000:3000 0:4e55000:3000 1000L/1000P F=0 B=116/116 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:d893000:6000 0:4fcc000:6000 0:10561000:6000 20000L/2000P F=1 B=134/134 cksum=000002b04ee1bda2:000fae80e5f6d18d:2fb5d4803068472c:7695022ab964b95a
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       307    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 61
+		prev_snap_obj = 283
+		prev_snap_txg = 72
+		next_snap_obj = 99
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:36 2026
+		creation_txg = 123
+		deadlist_obj = 284
+		used_bytes = 12.0M
+		compressed_bytes = 8.14M
+		uncompressed_bytes = 16.1M
+		unique = 326K
+		fsid_guid = 22873561171510098
+		guid = 8344605921775399559
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:d46a000:3000> DVA[1]=<0:4e07000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=112L/112P fill=2 cksum=0000000541704732:00001317ea1df1bc:0022daed559d057f:2aa04dca4e0380f4
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       308    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 3 entries
+
+		0 = 309 
+		48 = 311 
+		1 = 310 
+Indirect blocks:
+               0 L0 0:d5db000:3000 0:4ee5000:3000 0:104c2000:3000 200L/200P F=1 B=123/123 cksum=0000000142474581:00000094539ec865:0000234a7f2ef872:0005bcbd4dbbf99d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       309    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       310    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 128
+		bytes = 744K
+		comp = 512K
+		uncomp = 1M
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:f57000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f39000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f5a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f51000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f5d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f54000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f84000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f7e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f69000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f60000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f4e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f66000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f7b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f63000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f48000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f6f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f6c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f78000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f75000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f81000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f96000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f72000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f87000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f8d000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f93000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f99000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f36000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f42000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f3f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f45000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f4b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:f3c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1386000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1383000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13ce000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13d4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:139e000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13cb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13bf000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:139b000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13c8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1392000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13c5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13c2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13d7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13bc000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13b0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:138c000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13b9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13b6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13a1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13b3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:138f000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13ad000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1389000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13aa000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13a7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13a4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13da000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13d1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13dd000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1398000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1395000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:13e0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18ae000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18b1000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18cc000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18b4000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18c6000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18c9000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18de000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18cf000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18d8000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18b7000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18c3000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18db000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18d5000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18e1000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18ba000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18e7000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18e4000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18f0000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18d2000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18ea000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1ab8000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18f3000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18ed000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18c0000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18f9000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18f6000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1905000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1908000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:1902000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18fc000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18ff000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:18bd000:3000 2000L/1000P F=0 B=14/14 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4b3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4b6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:50a000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:507000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4fe000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:501000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4c8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4ec000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4e3000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4d4000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4ce000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4d7000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4cb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:504000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4fb000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4f8000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4da000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4f5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4ef000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4f2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4e9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4e6000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4bc000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4e0000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4c5000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4dd000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4d1000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4b9000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:510000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4bf000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4c2000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:513000:3000 2000L/1000P F=0 B=13/13 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:de69000:6000 0:5275000:6000 0:106bd000:6000 20000L/2000P F=1 B=163/163 cksum=000002c769bd2edc:000fa94026ece93b:2e698f527fab9a52:d58440d13e1534fd
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       311    1   128K   128K    35K     512   128K  100.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+		num_blkptrs = 9
+		bytes = 326K
+		comp = 144K
+		uncomp = 144K
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+	0:ceca000:18000 0:42d3000:18000 20000L/c000P F=0 B=90/90 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d449000:3000 0:4de6000:3000 4000L/1000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d44c000:6000 0:4de9000:6000 20000L/2000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d452000:6000 0:4def000:6000 20000L/2000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d458000:6000 0:4df5000:6000 20000L/2000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d45e000:6000 0:4dfb000:6000 20000L/2000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d464000:6000 0:4e01000:6000 20000L/2000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:d46a000:3000 0:4e07000:3000 1000L/1000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:cffc000:18000 0:43ba000:18000 20000L/c000P F=0 B=112/112 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+Indirect blocks:
+               0 L0 0:de63000:6000 0:526f000:6000 0:106b7000:6000 20000L/2000P F=1 B=163/163 cksum=000002b09dfffb99:000f9e9315360ede:2f542e5abb55e231:48ebdb7ed500b2c3
+
+		segment [0000000000000000, 0000000000020000) size  128K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       384    1    16K    16K  17.5K     512    16K  100.00  SPA space map (K=inherit) (Z=inherit=on)
+                                                24   bonus  SPA space map header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+Indirect blocks:
+               0 L0 0:e994000:3000 0:58cf000:3000 0:10ad4000:3000 4000L/1000P F=1 B=244/244 cksum=000000e815b48e12:0001f33a5e02f145:0282bd7a5c549939:6d213ed657852676
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       385    1    16K    16K    35K     512    16K  100.00  SPA space map (K=inherit) (Z=inherit=on)
+                                                24   bonus  SPA space map header
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+Indirect blocks:
+               0 L0 0:e988000:6000 0:58c3000:6000 0:10ac8000:6000 4000L/2000P F=1 B=244/244 cksum=0000014d0308601f:00072b57699499d5:14ffbe1a1e0892b7:2f3186d9a469ce3d
+
+		segment [0000000000000000, 0000000000004000) size   16K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       512    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       513    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       514    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       515    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       516    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       517    1   128K    512      0     512    512    0.00  DSL dataset (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL dataset
+	dnode flags: 
+	dnode maxblkid: 0
+		dir_obj = 61
+		prev_snap_obj = 99
+		prev_snap_txg = 174
+		next_snap_obj = 64
+		snapnames_zapobj = 0
+		num_children = 1
+		userrefs_obj = 0
+		creation_time = Fri Nov 27 16:33:37 2026
+		creation_txg = 225
+		deadlist_obj = 100
+		used_bytes = 12.0M
+		compressed_bytes = 8.14M
+		uncompressed_bytes = 16.1M
+		unique = 0
+		fsid_guid = 61748073216889358
+		guid = 1871117671248808343
+		flags = 4
+		next_clones_obj = 0
+		props_obj = 0
+		bp = DVA[0]=<0:e73c000:3000> DVA[1]=<0:570a000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=214L/214P fill=2 cksum=0000000575640e91:000013da34913383:0024466bd9b56ae5:2c65e57a846a51e1
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       518    1   128K    512  17.5K     512    512  100.00  DSL deadlist map (K=inherit) (Z=inherit=on)
+                                               320   bonus  DSL deadlist map hdr
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 5 entries
+
+		7b = 522 
+		1 = 520 
+		48 = 521 
+		ae = 523 
+		0 = 519 
+Indirect blocks:
+               0 L0 0:e8c8000:3000 0:5803000:3000 0:10a08000:3000 200L/200P F=1 B=225/225 cksum=00000001d6e1ad80:000000a473f4904d:00002180324e4ace:000507b9c10c4a0d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       519    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       520    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       521    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       522    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       523    1   128K   128K      0     512   128K    0.00  bpobj (K=inherit) (Z=inherit=on)
+                                                48   bonus  bpobj header
+	dnode flags: 
+	dnode maxblkid: 0
+		num_blkptrs = 0
+		bytes = 0
+		comp = 0
+		uncomp = 0
+		subobjs = 0
+		num_subobjs = 0
+		num_freed = 0
+Indirect blocks:
+
+
+    Dnode slots:
+	Total used:           180
+	Max used:             523
+	Percent empty:  65.583174
+
+    Deferred frees: object 59, 8 blkptrs, 174K
+	0:e96a000:3000 0:58a5000:3000 0:10aaa000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e967000:3000 0:58a2000:3000 0:10aa7000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ce25000:3000 0:4afe000:3000 0:102c7000:3000 4000L/1000P F=0 B=73/73 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e958000:6000 0:5893000:6000 0:10a98000:6000 4000L/2000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e95e000:6000 0:5899000:6000 0:10a9e000:6000 4000L/2000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e964000:3000 0:589f000:3000 0:10aa4000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:ce28000:3000 0:4b01000:3000 0:102ca000:3000 4000L/1000P F=0 B=73/73 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:e955000:3000 0:5890000:3000 0:10a95000:3000 4000L/1000P F=0 B=235/235 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+
+    Pool snapshot frees: object 41, 0 blkptrs, 0
+
+
+Dirty time logs:
+
+	sat-v28 [DTL-required]
+	    raidz [DTL-required]
+	        /var/tmp/sat/members/raidz2-0.img [DTL-expendable]
+	        /var/tmp/sat/members/raidz2-1.img [DTL-expendable]
+	        /var/tmp/sat/members/raidz2-2.img [DTL-expendable]
+	        /var/tmp/sat/members/raidz2-3.img [DTL-expendable]

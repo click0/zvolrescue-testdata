@@ -1,0 +1,251 @@
+Dataset sat-v28@s2 [ZPL], ID 75, cr_txg 174, 279K, 8 objects, rootbp DVA[0]=<0:16cb000:3000> DVA[1]=<0:439f000:3000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=13L/13P fill=8 cksum=000000086e35a05f:00001a67b7bdb89f:002b12a9fa973d93:3097875c057572a6
+
+    Deadlist: 0 (0/0 comp), 3 entries
+
+    mintxg 0 -> obj 289: object 289, 0 blkptrs, 0
+
+    mintxg 1 -> obj 290: object 290, 0 blkptrs, 0
+
+    mintxg 72 -> obj 291: object 291, 0 blkptrs, 0
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         0    6   128K    16K   140K     512    32K   12.50  DMU dnode (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 1
+Indirect blocks:
+               0 L5      0:16a7000:6000 0:437b000:6000 20000L/2000P F=8 B=13/13 cksum=000002afdc3756d9:000fd45546cefe4d:30990a5da16a520d:2e4b62f1db5a3f35
+               0  L4     0:169b000:6000 0:436f000:6000 20000L/2000P F=8 B=13/13 cksum=000002aea742a01e:000fcaba5632c086:3072cc4b3fb34f26:c8bcd76cc2d29bfc
+               0   L3    0:168f000:6000 0:4363000:6000 20000L/2000P F=8 B=13/13 cksum=000002abe158252f:000fba36a984dcae:303b7f6e0eebfbd7:42cae775286f08d6
+               0    L2   0:1686000:6000 0:435a000:6000 20000L/2000P F=8 B=13/13 cksum=000002af608dadbc:000fd07fb64ff292:3089d0ccb0951736:05f87d336e1380b6
+               0     L1  0:166e000:6000 0:4342000:6000 20000L/2000P F=8 B=13/13 cksum=000002b38619feaa:000fd6d3c4943e85:3070acbcaebce424:841c969a9249dfe0
+               0      L0 0:166b000:3000 0:433f000:3000 4000L/1000P F=3 B=13/13 cksum=00000061a5b4ed74:0001579f95b7ba25:025f71bebec63599:cf44dcb1157d71d7
+            4000      L0 0:1668000:3000 0:433c000:3000 4000L/1000P F=5 B=13/13 cksum=0000006d664050f6:000173e6361215c1:027c5d0a5da01d76:dae012c34e76efd5
+
+		segment [0000000000000200, 0000000000000800) size 1.50K
+		segment [0000000000004000, 0000000000004a00) size 2.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -1    1   128K    512  11.5K     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 37248 
+Indirect blocks:
+               0 L0 0:16c5000:3000 0:4399000:3000 200L/200P F=1 B=13/13 cksum=00000001be533071:000000db29b9e2a5:0000363d6a2621ac:0009052ce31b34c1
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -2    1   128K    512  11.5K     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 1 entries
+
+		0 = 37248 
+Indirect blocks:
+               0 L0 0:16c8000:3000 0:439c000:3000 200L/200P F=1 B=13/13 cksum=00000001be53160f:000000db29ace669:0000363d66ed90ca:0009052c59adb9c1
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         1    1   128K     1K  11.5K     512     1K  100.00  ZFS master node (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1024 bytes, 13 entries
+
+		VERSION = 5 
+		SA_ATTRS = 32 
+		defaultgroupobjquota = 0 
+		defaultuserobjquota = 0 
+		defaultprojectobjquota = 0 
+		defaultuserquota = 0 
+		defaultgroupquota = 0 
+		defaultprojectquota = 0 
+		casesensitivity = 0 
+		DELETE_QUEUE = 33 
+		normalization = 0 
+		utf8only = 0 
+		ROOT = 34 
+Indirect blocks:
+               0 L0 0:f000:3000 0:400f000:3000 400L/400P F=1 B=4/4 cksum=0000001304ac052e:00000b690eb15ccd:0003d43d8b456f3f:00ee595e29871277
+
+		segment [0000000000000000, 0000000000000400) size    1K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         2    1   128K    512  11.5K     512    512  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               168   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/vm
+	uid     0
+	gid     0
+	atime	Fri Nov 27 16:33:33 2026
+	mtime	Fri Nov 27 16:33:33 2026
+	ctime	Fri Nov 27 16:33:33 2026
+	crtime	Fri Nov 27 16:33:33 2026
+	gen	8
+	mode	40755
+	size	2
+	parent	34
+	links	2
+	pflags	40800000144
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:17a000:3000 0:417a000:3000 200L/200P F=1 B=8/8 cksum=0000000083bec608:0000004157e577f6:000010550d6b4305:0002be223c8b6c00
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         3    1   128K    512  11.5K     512    512  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               168   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/fs
+	uid     0
+	gid     0
+	atime	Fri Nov 27 16:33:33 2026
+	mtime	Fri Nov 27 16:33:33 2026
+	ctime	Fri Nov 27 16:33:33 2026
+	crtime	Fri Nov 27 16:33:33 2026
+	gen	13
+	mode	40755
+	size	2
+	parent	34
+	links	2
+	pflags	40800000144
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:1665000:3000 0:4339000:3000 200L/200P F=1 B=13/13 cksum=000000009cddd7ea:0000004db5304532:0000136631792b67:000340fd94322700
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        32    1   128K    512  11.5K     512    512  100.00  SA master node (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		LAYOUTS = 36 
+		REGISTRY = 35 
+Indirect blocks:
+               0 L0 0:6000:3000 0:4006000:3000 200L/200P F=1 B=4/4 cksum=00000001cd60aa80:000000c56f1f87a5:00002b53222e4583:00067e248aab830e
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        33    1   128K    512  11.5K     512    512  100.00  ZFS delete queue (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 0:c000:3000 0:400c000:3000 200L/200P F=1 B=4/4 cksum=000000009e19aef6:0000004e50a41d1a:0000138cc0b53973:0003476ac8df2900
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        34    1   128K    512  11.5K     512    512  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               168   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/
+	uid     0
+	gid     0
+	atime	Fri Nov 27 16:33:32 2026
+	mtime	Fri Nov 27 16:33:33 2026
+	ctime	Fri Nov 27 16:33:33 2026
+	crtime	Fri Nov 27 16:33:32 2026
+	gen	4
+	mode	40755
+	size	4
+	parent	34
+	links	4
+	pflags	40800000144
+	microzap: 512 bytes, 2 entries
+
+		vm = 2 (type: Directory)
+		fs = 3 (type: Directory)
+Indirect blocks:
+               0 L0 0:1662000:3000 0:4336000:3000 200L/200P F=1 B=13/13 cksum=00000002badf4a4d:00000136d4ea9176:000046b971b8ff45:000af5183c111900
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        35    1   128K  1.50K  11.5K     512  1.50K  100.00  SA attr registration (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1536 bytes, 22 entries
+
+		ZPL_SIZE =  8000006 : [8:0:6]
+		ZPL_ATIME =  10000000 : [16:0:0]
+		ZPL_DACL_ACES =  40013 : [0:4:19]
+		ZPL_LINKS =  8000008 : [8:0:8]
+		ZPL_MODE =  8000005 : [8:0:5]
+		ZPL_UID =  800000c : [8:0:12]
+		ZPL_GEN =  8000004 : [8:0:4]
+		ZPL_SYMLINK =  30011 : [0:3:17]
+		ZPL_RDEV =  800000a : [8:0:10]
+		ZPL_FLAGS =  800000b : [8:0:11]
+		ZPL_DXATTR =  30014 : [0:3:20]
+		ZPL_GID =  800000d : [8:0:13]
+		ZPL_CTIME =  10000002 : [16:0:2]
+		ZPL_SCANSTAMP =  20030012 : [32:3:18]
+		ZPL_CRTIME =  10000003 : [16:0:3]
+		ZPL_MTIME =  10000001 : [16:0:1]
+		ZPL_ZNODE_ACL =  5803000f : [88:3:15]
+		ZPL_XATTR =  8000009 : [8:0:9]
+		ZPL_PAD =  2000000e : [32:0:14]
+		ZPL_DACL_COUNT =  8000010 : [8:0:16]
+		ZPL_PARENT =  8000007 : [8:0:7]
+		ZPL_PROJID =  8000015 : [8:0:21]
+Indirect blocks:
+               0 L0 0:12000:3000 0:4012000:3000 600L/600P F=1 B=4/4 cksum=00000012fd47f4cc:00000eac1b16dcf4:000785ddcec91ab0:02f137ab2c7ee49c
+
+		segment [0000000000000000, 0000000000000600) size 1.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        36    1   128K    16K  23.5K     512    32K  100.00  SA attr layouts (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED 
+	dnode maxblkid: 1
+	Fat ZAP stats:
+		Pointer table:
+			1024 elements
+			zt_blk: 0
+			zt_numblks: 0
+			zt_shift: 10
+			zt_blks_copied: 0
+			zt_nextblk: 0
+		ZAP entries: 1
+		Leaf blocks: 1
+		Total blocks: 2
+		zap_block_type: 0x8000000000000001
+		zap_magic: 0x2f52ab2ab
+		zap_salt: 0xda0347c9
+		Leafs with 2^n pointers:
+			  9:      1 *
+		Blocks with n*5 entries:
+			  0:      1 *
+		Blocks n/10 full:
+			  1:      1 *
+		Entries with n chunks:
+			  4:      1 *
+		Buckets with n entries:
+			  0:    511 ****************************************
+			  1:      1 *
+
+		2 = [ 5  6  4  12  13  7  11  0  1  2  3  8  16  19 ]
+Indirect blocks:
+               0 L0 0:0:3000 0:4000000:3000 4000L/1000P F=1 B=4/4 cksum=0000005f21e222e7:00015b9e6595f7f9:027db9f6adc7505d:0f20b0648844828c
+            4000 L0 0:3000:3000 0:4003000:3000 4000L/1000P F=1 B=4/4 cksum=000000a7cb857889:0001eaac8c6d41cc:02ec93fc9b98e986:166fd0ed39a5d192
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Dnode slots:
+	Total used:             8
+	Max used:              36
+	Percent empty:  77.777778
+

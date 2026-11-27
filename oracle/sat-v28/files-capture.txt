@@ -1,0 +1,55 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-v28
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-v28
+ state: ONLINE
+status: The pool is formatted using a legacy on-disk format.  The pool can
+	still be used, but some features are unavailable.
+action: Upgrade the pool using 'zpool upgrade'.  Once this is done, the
+	pool will no longer be accessible on software that does not support
+	feature flags.
+config:
+
+	NAME                                   STATE     READ WRITE CKSUM
+	sat-v28                                ONLINE       0     0     0
+	  raidz2-0                             ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-0.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-1.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-2.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/raidz2-3.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                    MOUNTED  MOUNTPOINT                        USED  REFER
+sat-v28                 no       /var/tmp/sat/altroot/sat-v28     41.3M   279K
+sat-v28@s0              -        -                                   0B   279K
+sat-v28@s1              -        -                                   0B   279K
+sat-v28@s2              -        -                                   0B   279K
+sat-v28@s3              -        -                                   0B   279K
+sat-v28/fs              no       /var/tmp/sat/altroot/sat-v28/fs  2.08M  1.46M
+sat-v28/fs@s0           -        -                                 209K  1.37M
+sat-v28/fs@s1           -        -                                 198K  1.40M
+sat-v28/fs@s2           -        -                                 209K  1.43M
+sat-v28/fs@s3           -        -                                   0B  1.46M
+sat-v28/vm              no       /var/tmp/sat/altroot/sat-v28/vm  37.0M   256K
+sat-v28/vm@s0           -        -                                   0B   256K
+sat-v28/vm@s1           -        -                                   0B   256K
+sat-v28/vm@s2           -        -                                   0B   256K
+sat-v28/vm@s3           -        -                                   0B   256K
+sat-v28/vm/disk-16k     -        -                                21.6M  17.7M
+sat-v28/vm/disk-16k@s0  -        -                                1.32M  17.7M
+sat-v28/vm/disk-16k@s1  -        -                                 232K  17.7M
+sat-v28/vm/disk-16k@s2  -        -                                 232K  17.7M
+sat-v28/vm/disk-16k@s3  -        -                                   0B  17.7M
+sat-v28/vm/disk-8k      -        -                                15.1M  12.0M
+sat-v28/vm/disk-8k@s0   -        -                                1.04M  12.0M
+sat-v28/vm/disk-8k@s1   -        -                                 326K  12.0M
+sat-v28/vm/disk-8k@s2   -        -                                 326K  12.0M
+sat-v28/vm/disk-8k@s3   -        -                                   0B  12.0M
+members: unchanged after the export (their sums against members.sha256)

@@ -1,0 +1,18 @@
+Dataset mos [META], ID 0, cr_txg 4, 1.50M, 115 objects
+Dataset sat-v28/fs@s0 [ZPL], ID 271, cr_txg 72, 1.37M, 53 objects
+Dataset sat-v28/fs@s1 [ZPL], ID 292, cr_txg 123, 1.40M, 57 objects
+Dataset sat-v28/fs [ZPL], ID 71, cr_txg 12, 1.42M, 60 objects
+Dataset sat-v28/vm/disk-16k@s0 [ZVOL], ID 279, cr_txg 72, 17.7M, 2 objects
+Dataset sat-v28/vm/disk-16k@s1 [ZVOL], ID 302, cr_txg 123, 17.7M, 2 objects
+Dataset sat-v28/vm/disk-16k [ZVOL], ID 263, cr_txg 10, 17.7M, 2 objects
+Dataset sat-v28/vm/disk-8k@s0 [ZVOL], ID 283, cr_txg 72, 12.0M, 2 objects
+Dataset sat-v28/vm/disk-8k@s1 [ZVOL], ID 307, cr_txg 123, 12.0M, 2 objects
+Dataset sat-v28/vm/disk-8k [ZVOL], ID 64, cr_txg 8, 12.0M, 2 objects
+Dataset sat-v28/vm@s0 [ZPL], ID 275, cr_txg 72, 256K, 6 objects
+Dataset sat-v28/vm@s1 [ZPL], ID 297, cr_txg 123, 256K, 6 objects
+Dataset sat-v28/vm [ZPL], ID 137, cr_txg 7, 256K, 6 objects
+Dataset sat-v28@s1 [ZPL], ID 287, cr_txg 123, 279K, 8 objects
+Dataset sat-v28@s0 [ZPL], ID 267, cr_txg 72, 279K, 8 objects
+Dataset sat-v28 [ZPL], ID 51, cr_txg 1, 279K, 8 objects
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct
