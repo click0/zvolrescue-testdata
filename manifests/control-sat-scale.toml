@@ -1,0 +1,13 @@
+id = "control-sat-scale"
+image = "sat-scale"
+description = "Nothing damaged and nothing told, on a pool of over 2,000 datasets: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+held_out = true
+
+[expect]
+# What reading thousands of datasets takes: list at the TXGs the oracle
+# has, every filesystem and snapshot's files, the history of them all.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"
