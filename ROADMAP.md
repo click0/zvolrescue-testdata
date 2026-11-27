@@ -9,8 +9,8 @@ image never rebuilt in place, expectations derived from ZFS redundancy.
 
 ## Where things stand
 
-`image-v1` now tests all five programs against what OpenZFS itself
-read of it (`run-matrix.py` in zvolrescue): in every case `zvolrescue`
+`image-v1`, and `golden-v2` with it, now test all five programs against
+what OpenZFS itself read of them (`run-matrix.py` in zvolrescue): in every case `zvolrescue`
 — the volumes `dump` writes, the datasets and the features `list`
 reports against `zdb -t T -d` and `zpool get`, what `scan` reads of the
 labels, every slot of their uberblock rings and the vdevs against `zdb
@@ -19,10 +19,11 @@ kernel's reading of every filesystem, `zvoltimeline` against `zpool
 history -il`, and `zvolreport`, a report built of the case's evidence
 log and verified; where carving is what is left, `zvolcarve`, each live
 volume found by its bytes. What it cannot be told is what the destroyed
-`vm/doomed` held last (`volumes.sha256` has it at `s0`–`s2` only): that
-waits for an image whose builder hashes a volume before destroying it
-(stage 2). The features zvolrescue has learned since the image was
-built have their cases (stage 1, item 4).
+`vm/doomed` held last (`image-v1`'s `volumes.sha256` has it at `s0`–`s2`
+only); `golden-v2`'s builder hashes it just before destroying it
+(`vm/doomed@destroyed`), and its control records what the carve gets
+back of it (stage 2). The features zvolrescue has learned since
+`image-v1` was built have their cases (stage 1, item 4).
 
 ## Publishing: one tag per pool, one download per need
 
@@ -137,18 +138,28 @@ Release: +0. Git: under 1 MB of text.
 
 ## Stage 2 — `golden-v2` and the satellites
 
-*Under way: `golden-v2`.* Its builder is written (`build-image.sh` in
-zvolrescue `e4414d5`): everything below, the hash of `vm/doomed` just before it is
-destroyed, volumes written with content their compression shrinks
-(`image-v1`'s keystream was stored uncompressed, so no codec ever read
-one of its data blocks), and the whole oracle captured by the build —
-the labels' rings, the files, the history, `zdb -dddddd` one file a
-dataset. The manifests name their older copies `older-self:round6`,
-which is either image's, and a manifest may name an image by its tag
-(`image = "golden-v2"`) for what that image alone holds; the oracle
-goes into `oracle/golden-v2/`, `oracle/golden/` staying `image-v1`'s.
-The `golden` job of `realworld.yml` builds it and runs the matrix;
-`publish-golden.yml` publishes what passed. The satellites follow.
+*Done: `golden-v2`* (2026-11-27; the release `golden-v2`, the oracle in
+`oracle/golden-v2/`, pinned in zvolrescue as
+`tests/golden/golden-v2.SHA256SUMS`). Built by `build-image.sh` in
+zvolrescue on the `ubuntu-26.04` runner's OpenZFS 2.4.1, judged at its
+build by the whole matrix, 70 of 70 (`reports/golden-v2`), and published
+by `publish-golden.yml`. Everything below is in it, and besides: the
+hash of `vm/doomed` just before it is destroyed, volumes written with
+content their compression shrinks (`image-v1`'s keystream was stored
+uncompressed, so no codec had ever read one of its data blocks), and the
+whole oracle captured by the build — the labels' rings, the files, the
+history, `zdb -dddddd` one file a dataset. What it came to against the
+estimates: 1.19 GB allocated, 33% (not 48%: compressed volumes take less
+than the keystream did); a release of 2.2 GB with the six older copies
+the manifests name; 100 MB of oracle text checked out, 82 MB of it
+`zdb -dddddd` in 294 files, the largest 3 MiB. The manifests name their
+older copies `older-self:round6`, which is either image's, and five name
+`golden-v2` by its tag for what it alone holds (`copies=2`,
+`checksum=off`, 128K blocks); `oracle/golden/` stays `image-v1`'s, and
+`realworld.yml` in zvolrescue judges both published images every week,
+a job each. On the control, the carve did not find `vm/doomed` among
+the newest candidates of its block size: its blocks were freed nine
+rounds before the export. The satellites follow.
 
 Release: about 3.6 GB in all — `golden-v2` 2.8 GB with the older copies
 the manifests name, the satellites 0.8 GB — beside `image-v1`'s 2.51 GB,

@@ -1,0 +1,14 @@
+id = "data-copies2-one-copy-gone"
+description = "Every piece of the first copy of one data block of a copies=2 volume overwritten: its second copy is whole"
+classes = ["data"]
+image = "golden-v2"
+
+[[damage]]
+target = { object = "vm/disk-copies2:data", block = "on:mirror", copy = 0 }
+pattern = "random"
+
+[expect]
+# copies=2 writes every data block twice, each copy at a DVA of its own;
+# with the first overwritten whole the second is read, as ZFS reads it.
+outcome = "recovered"
+volumes = "all"

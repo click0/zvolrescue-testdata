@@ -273,8 +273,8 @@ there such a case is `n/a`.
 |---|---|
 | `labels` | one, front pair, rear pair, all four, `vdev_phys` only, rings only, partial rings with a forged txg (`labels-forged-txg`: every ring three TXGs ahead of the pool, one member's rear rings gone) |
 | `partition` | GPT rewritten, start shifted, tail truncated, re-created with another size (`partition-grown`) |
-| `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object, the crypto key object of an encrypted volume — one copy and every copy (a volume's property ZAP on `image-v1` is embedded in its dnode's block pointer, so the dnode-block cases are its — see above) |
-| `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block |
+| `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object, the crypto key object of an encrypted volume — one copy and every copy (a volume's property ZAP on `image-v1` is embedded in its dnode's block pointer, so the dnode-block cases are its — see above); on `golden-v2`, two of the three copies of an indirect block of the `copies=2` volume |
+| `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block; on `golden-v2` (`image = "golden-v2"`), one piece of a 128K block, one and both copies of a block of the `copies=2` volume, and a block of the `checksum=off` volume |
 | `member` | whole member missing |
 | `control` | nothing at all: the image as published, every volume and every file of every filesystem and snapshot (`control-undamaged`) |
 | `older-self` | a member replaced by a consistent copy of itself from round 6 of the fill (the `round6-*` files of the release): one mirror half, both halves, two raidz2 columns, one dRAID child, and one stale beside one missing (`older-self-*.toml`, `combo-older-self-plus-member-gone.toml`) |
@@ -342,9 +342,11 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 73 manifests cover every class of SPEC §9.1's catalogue at least
-once against the `image-v1` layout: members `mirror-0a/0b`,
-`raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`). Expected
+The 78 manifests cover every class of SPEC §9.1's catalogue at least
+once against the layout `image-v1` and `golden-v2` share: members
+`mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`,
+`oracle/golden-v2/layout.json`); five name `golden-v2`, for what only it
+holds, and are n/a on `image-v1`. Expected
 outcomes are stated from ZFS redundancy, and against the published
 image every one applies and every one lands in its category: the
 reports of the runs are in [`reports/`](../reports/), and the Results

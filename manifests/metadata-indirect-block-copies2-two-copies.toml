@@ -1,0 +1,18 @@
+id = "metadata-indirect-block-copies2-two-copies"
+description = "Two of the three copies of an indirect block of a copies=2 volume overwritten"
+classes = ["metadata"]
+image = "golden-v2"
+
+[[damage]]
+target = { object = "vm/disk-copies2:indirect", block = 0, copy = 0 }
+pattern = "random"
+
+[[damage]]
+target = { object = "vm/disk-copies2:indirect", block = 0, copy = 1 }
+pattern = "random"
+
+[expect]
+# Metadata is written one copy more than the data, up to three: an
+# indirect block of a copies=2 volume has three, and the third is read.
+outcome = "recovered"
+volumes = "all"

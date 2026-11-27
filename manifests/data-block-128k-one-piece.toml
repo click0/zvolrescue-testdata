@@ -1,0 +1,14 @@
+id = "data-block-128k-one-piece"
+description = "One piece of one 128K data block of a volume overwritten"
+classes = ["data"]
+image = "golden-v2"
+
+[[damage]]
+target = { object = "vm/disk-128k:data", block = "on:raidz2", pieces = "one" }
+pattern = "random"
+
+[expect]
+# A 128K block on a raidz2 spans every column; one column gone is
+# rebuilt from parity.
+outcome = "recovered"
+volumes = "all"

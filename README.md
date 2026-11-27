@@ -24,14 +24,31 @@ more images with different content.
 
 ## What is here now
 
-**`image-v1`**, the kernel-built golden image: one pool, `golden`, with
+**`golden-v2`**, the current golden image, built by the same script on
+the same runner's kernel (2026-11-27): `image-v1`'s pool and layout with,
+besides, a filesystem of every kind of entry (`fs-tree`: a fat-ZAP
+directory, names apart in case alone, one written composed and
+decomposed under formD, hard and long symbolic links, a sparse file of
+1100 MiB, 4K records two indirect levels deep, spill blocks, a FIFO and
+device nodes), cloned blocks, a clone promoted, rollbacks, a snapshot
+and a filesystem destroyed, volumes of 128K, `copies=2`, `checksum=off`
+and `zstd-fast`, volumes written with content their compression shrinks,
+and the hash of `vm/doomed` just before it was destroyed — described in
+[IMAGE.md](IMAGE.md). Its oracle, all of it captured by the build, is in
+`oracle/golden-v2/` (`zdb -dddddd` one file a dataset); the matrix at its
+build, [reports/golden-v2](reports/golden-v2/README.md): 70 manifests,
+70 passed. Its release holds the ten members and the six older copies
+the manifests name, 2.2 GB. Five manifests name it (`image =
+"golden-v2"`) for what only it holds.
+
+**`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven
 volumes over every checksum and compression and three block sizes, a
 clone, raw-key and passphrase encryption, snapshots after each of twelve
 rounds of writes, a rename, a destroy, gang blocks forced, 5015 TXGs —
 built by `tests/golden/build-image.sh` in zvolrescue on the OpenZFS 2.4.1
 of a GitHub `ubuntu-26.04` runner (the `golden` job of
-`realworld.yml`), described in [IMAGE.md](IMAGE.md). Its oracle is in
+`realworld.yml`), described in [reports/image-v1/IMAGE.md](reports/image-v1/IMAGE.md). Its oracle is in
 `oracle/golden/`; the damage matrix against it, run on the same kernel
 right after the build, is in [reports/image-v1](reports/image-v1/README.md):
 41 manifests, 35 passed, 6 not applicable, none outside its expected
@@ -98,7 +115,7 @@ for the pinned subset of the matrix it runs on every push.
 
 ## Versioning
 
-Each image version is a release tag here (`image-v1`, `image-v2`, …);
+Each image version is a release tag here (`image-v1`, `golden-v2`, …);
 zvolrescue pins the tag and the `SHA256SUMS` it expects. Images are never
 edited by hand: a change means a new build and a new tag. Manifests and the
 oracle are versioned in git alongside.

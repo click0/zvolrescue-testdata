@@ -1,0 +1,15 @@
+id = "data-copies2-both-copies-gone"
+description = "Every piece of both copies of one data block of a copies=2 volume overwritten"
+classes = ["data"]
+image = "golden-v2"
+
+[[damage]]
+target = { object = "vm/disk-copies2:data", block = "on:mirror", copy = "all" }
+pattern = "random"
+
+[expect]
+# Both copies gone: nothing in the pool gives the block back, so the
+# block written as zeros and counted (exit 4), or a refusal — never the
+# overwritten bytes presented as the volume's.
+outcome = "refused"
+volumes = "all"

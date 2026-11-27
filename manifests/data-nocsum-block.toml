@@ -1,0 +1,16 @@
+id = "data-nocsum-block"
+description = "Every piece of one data block of a checksum=off volume overwritten"
+classes = ["data"]
+image = "golden-v2"
+
+[[damage]]
+target = { object = "vm/disk-nocsum:data", block = "on:mirror" }
+pattern = "random"
+
+[expect]
+# Nothing verifies a block of a checksum=off volume: ZFS hands the
+# overwritten bytes over, and so can any reader. The volume is judged
+# `unverified` when the tool says its blocks were checked by nothing;
+# every other volume is untouched.
+outcome = "recovered"
+volumes = "all"
