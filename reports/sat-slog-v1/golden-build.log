@@ -1,0 +1,27 @@
+== sat-slog (sat-slog-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== frozen, and written to
+== oracle
+== export
+split-capture: 11 MiB in 26 files, the largest sat-slog_vm_disk-sync (8 MiB)
+== files and history, the pool imported read-only
+sat-slog: 3 entries
+sat-slog@s0: 3 entries, the same as sat-slog
+sat-slog@s1: 3 entries, the same as sat-slog
+sat-slog@s2: 3 entries, the same as sat-slog
+sat-slog/fs: 57 entries
+sat-slog/fs@s0: 49 entries
+sat-slog/fs@s1: 53 entries
+sat-slog/fs@s2: 57 entries, the same as sat-slog/fs
+sat-slog/vm: 1 entries
+sat-slog/vm@s0: 1 entries, the same as sat-slog/vm
+sat-slog/vm@s1: 1 entries, the same as sat-slog/vm
+sat-slog/vm@s2: 1 entries, the same as sat-slog/vm
+12 filesystems and snapshots, 147 files
+== the intent log replayed, on a copy of the members
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

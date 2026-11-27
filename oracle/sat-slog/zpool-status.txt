@@ -1,0 +1,13 @@
+  pool: sat-slog
+ state: ONLINE
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-slog                                ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+	logs	
+	  /var/tmp/sat/members/log-0.img        ONLINE       0     0     0
+
+errors: No known data errors

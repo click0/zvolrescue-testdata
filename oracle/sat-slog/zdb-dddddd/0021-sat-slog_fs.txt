@@ -1,0 +1,1706 @@
+Dataset sat-slog/fs [ZPL], ID 84, cr_txg 15, 1.07M, 61 objects, rootbp DVA[0]=<0:9489000:1000> DVA[1]=<0:b012000:1000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=237L/237P fill=61 cksum=0000001237bf1140:000032ba59982bad:004ab7f4fb6157df:4d21e5678ee7fc6c
+
+    ZIL header: claim_txg 0, claim_blk_seq 0, claim_lr_seq 0 replay_seq 0, flags 0x0
+
+	Block seqno 350, won't claim, DVA[0]=<1:119000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=237L/237P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000015e
+		TX_CREATE           len    128, txg 325, seq 336
+			after-freeze-0.txt
+			Fri Nov 27 14:54:40 2026
+			doid 34, foid 270, slots 1, mode 100644
+			uid 0, gid 0, gen 325, rdev 0x0
+	Block seqno 351, will claim, DVA[0]=<1:51b000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=325L/325P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000015f
+		TX_WRITE            len   4288, txg 325, seq 337
+			foid 270, offset 0, length 1000
+			  9 a   9 2   e 4   3 0   b a   7 7   8 8   8 a   d 3   1 e   3 e   2 d   a 3   f 5   5 8   3 d  A  9 a   9 2   e 4   3 0   b a   7 7   8 8   8 a   d 3   1 e   3 e   2 d   a 3   f 5   5 8   3 d  A  3 9   a 0   4 2   f 1   0 1   9 e   f 4   d 5   d 9   0 d   4 e   9 1   6 6   0 b   6 a   d 5  A  3 9   a 0   4 2   f 1   0 1   9 e   f 4   d 5   d 9   0 d   4 e   9 1   6 6   0 b   6 a   d 5  A  7 a   a d   7 6   a 2   4 b   f a   f 4   b 7   6 6   3 2   b e   0 b   6 7   1 5   3 f   e 9  A  7 a   a d   7 6   a 2   4 b   f a   f 4   b 7   6 6   3 2   b e   0 b   6 7   1 5   3 f   e 9  A  8 1   c 3   a a   f e   d 9   c f   a 7   1 6   3 a   b 7   5 9   4 0   8 9   d a   5 1   8 7  A  8 1   c 3   a a   f e   d 9   c f   a 7   1 6   3 a   b 7   5 9   4 0   8 9   d a   5 1   8 7  A  5 d   e 0   3 f   c d   1 d   a 2   3 d   6 0   f 2   9 0   5 5   a e   c 4   8 3   9 0   d 1  A  5 d   e 0   3 f   c d   1 d   a 2   3 d   6 0   f 2   9 0   5 5   a e   c 4   8 3   9 0   d 1  A  7 b   2 1   1 e   a b   5 9   4 9   3 c   5 0   9 d   1 1   a 8   8 f   1 b   3 a   6 b   f d  A  7 b   2 1   1 e   a b   5 9   4 9   3 c   5 0   9 d   1 1   a 8   8 f   1 b   3 a   6 b   f d  A  4 3   4 2   0 6   7 3   8 6   0 3   a 3   6 d   d 6   7 d   8 6   0 8   0 5   d b   f 0   9 3  A  4 3   4 2   0 6   7 3   8 6   0 3   a 3   6 d   d 6   7 d   8 6   0 8   0 5   d b   f 0   9 3  A  6 9   c 0   a 3   f f   4 6   9 8   d b   d e   d d   0 4   f 3   e 0   b 6   c d   4 0   b 3  A  6 9   c 0   a 3   f f   4 6   9 8   d b   d e   d d   0 4   f 3   e 0   b 6   c d   4 0   b 3  A  6 f   7 a   f 6   3 2   4 a   a 2   d d   1 8   1 5   2 3   4 c   6 a   f 2   4 f   6 f   d 8  A  6 f   7 a   f 6   3 2   4 a   a 2   d d   1 8   1 5   2 3   4 c   6 a   f 2   4 f   6 f   d 8  A  6 1   d c   6 e   4 9   d 4   5 2   6 5   3 2   7 4   0 6   1 7   c 4   1 e   d e   9 1   2 c  A  6 1   d c   6 e   4 9   d 4   5 2   6 5   3 2   7 4   0 6   1 7   c 4   1 e   d e   9 1   2 c  A  a 7   e 7   a 1   f 2   b 3   a 8   d 1   4 7   4 f   8 a   d 4   9 7   8 a   8 9   7 f   0 8  A  a 7   e 7   a 1   f 2   b 3   a 8   d 1   4 7   4 f   8 a   d 4   9 7   8 a   8 9   7 f   0 8  A  f a   7 4   4 d   b c   7 b   5 7   c 2   e a   7 7   3 3   4 b   f b   e 2   6 2   f 4   b 1  A  f a   7 4   4 d   b c   7 b   5 7   c 2   e a   7 7   3 3   4 b   f b   e 2   6 2   f 4   b 1  A  7 5   8 1   3 0   a 2   9 3   0 a   3 3   c e   2 e   0 7   f 4   6 c   1 5   5 1   f 6   a 7  A  7 5   8 1   3 0   a 2   9 3   0 a   3 3   c e   2 e   0 7   f 4   6 c   1 5   5 1   f 6   a 7  A  e a   7 7   b 4   7 a   f 0   1 f   3 d   5 4   1 5   b b   6 b   e 9   1 6   8 d   b 9   8 b  A  e a   7 7   b 4   7 a   f 0   1 f   3 d   5 4   1 5   b b   6 b   e 9   1 6   8 d   b 9   8 b  A  f 6   c 2   2 c   f e   2 8   7 8   6 6   6 e   8 0   3 f   4 2   1 9   4 f   f 9   5 d   c c  A  f 6   c 2   2 c   f e   2 8   7 8   6 6   6 e   8 0   3 f   4 2   1 9   4 f   f 9   5 d   c c  A  d b   7 e   5 c   8 9   4 b   4 4   e 3   5 3   3 e   9 c   c 7   7 1   a 1   d 1   0 a   0 6  A  d b   7 e   5 c   8 9   4 b   4 4   e 3   5 3   3 e   9 c   c 7   7 1   a 1   d 1   0 a   0 6  A  a c   4 0   7 9   f 8   8 4   7 5   3 e   0 9   a d   e 6   6 c   d 0   3 6   d a   d e   0 8  A  a c   4 0   7 9   f 8   8 4   7 5   3 e   0 9   a d   e 6   6 c   d 0   3 6   d a   d e   0 8  A  e 0   a 3   3 f   3 6   c 0   f a   e b   6 a   f 3   f 8   8 b   5 1   7 1   f 3   7 9   a f  A  e 0   a 3   3 f   3 6   c 0   f a   e b   6 a   f 3   f 8   8 b   5 1   7 1   f 3   7 9   a f  A  b 2   2 c   4 0   e a   2 0   a 5   9 8   4 4   5 c   b e   9 f   a 1   a 5   5 5   5 f   2 9  A  b 2   2 c   4 0   e a   2 0   a 5   9 8   4 4   5 c   b e   9 f   a 1   a 5   5 5   5 f   2 9  A  4 7   a 9   a b   f f   d d   3 9   c 7   d 7   6 e   8 9   4 0   6 9   0 7   6 5   e 4   7 9  A  4 7   a 9   a b   f f   d d   3 9   c 7   d 7   6 e   8 9   4 0   6 9   0 7   6 5   e 4   7 9  A  8 9   0 0   c 7   7 9   8 2   5 7   5 1   e 9   f f   f 4   0 c   9 5   3 5   b a   8 b   7 b  A  8 9   0 0   c 7   7 9   8 2   5 7   5 1   e 9   f f   f 4   0 c   9 5   3 5   b a   8 b   7 b  A  1 f   9 7   3 e   5 b   3 8   b 5   5 e   9 9   3 4   5 d   0 5   1 f   6 a   6 d   2 4   d b  A  1 f   9 7   3 e   5 b   3 8   b 5   5 e   9 9   3 4   5 d   0 5   1 f   6 a   6 d   2 4   d b  A  3 0   a 8   5 9   3 c   a 5   1 1   d 8   7 1   c f   6 3   f 9   9 3   1 7   e 3   3 7   1 1  A  3 0   a 8   5 9   3 c   a 5   1 1   d 8   7 1   c f   6 3   f 9   9 3   1 7   e 3   3 7   1 1  A  1 c   1 e   2 2   9 7   b 3   6 e   7 0   f 8   4 b   0 8   1 8   e 5   9 c   b a   4 7   0 7  A  1 c   1 e   2 2   9 7   b 3   6 e   7 0   f 8   4 b   0 8   1 8   e 5   9 c   b a   4 7   0 7  A  6 6   e 5   1 b   1 0   a d   b e   2 9   9 0   b 9   2 3   4 1   1 6   e a   6 7   1 e   2 8  A  6 6   e 5   1 b   1 0   a d   b e   2 9   9 0   b 9   2 3   4 1   1 6   e a   6 7   1 e   2 8  A  a f   e 0   0 5   f 0   0 5   d 8   a b   1 a   e 4   3 9   f a   a e   6 4   4 1   4 5   e 8  A  a f   e 0   0 5   f 0   0 5   d 8   a b   1 a   e 4   3 9   f a   a e   6 4   4 1   4 5   e 8  A  2 c   b d   5 e   d 0   9 a   2 c   c b   1 8   a b   0 d   8 9   d d   1 f   6 4   2 d   b 1  A  2 c   b d   5 e   d 0   9 a   2 c   c b   1 8   a b   0 d   8 9   d d   1 f   6 4   2 d   b 1  A  2 0   7 5   5 5   2 f   8 3   5 3   4 7   0 4   6 7   d 8   a a   f 8   4 b   d 4   1 2   8 0  A  2 0   7 5   5 5   2 f   8 3   5 3   4 7   0 4   6 7   d 8   a a   f 8   4 b   d 4   1 2   8 0  A  f 6   a 8   5 4   a 9   5 e   0 0   8 7   7 5   1 4   e 9   d 0   b 3   d d   4 4   4 5   0 9  A  f 6   a 8   5 4   a 9   5 e   0 0   8 7   7 5   1 4   e 9   d 0   b 3   d d   4 4   4 5   0 9  A  8 5   c f   d a   1 8   3 f   3 8   0 a   5 8   7 7   1 b   1 7   9 e   5 3   5 5   e 6   f d  A  8 5   c f   d a   1 8   3 f   3 8   0 a   5 8   7 7   1 b   1 7   9 e   5 3   5 5   e 6   f d  A  7 b   b b   7 8   8 8   6 3   e 9   e e   6 8   9 0   7 3   b 5   5 d   c 9   e b   e c   9 9  A  7 b   b b   7 8   8 8   6 3   e 9   e e   6 8   9 0   7 3   b 5   5 d   c 9   e b   e c   9 9  A  e f   8 c   b 6   b 6   5 9   f 0   b 3   f a   4 b   2 f   7 2   b 7   8 1   6 7   7 9   3 b  A  e f   8 c   b 6   b 6   5 9   f 0   b 3   f a   4 b   2 f   7 2   b 7   8 1   6 7   7 9   3 b  A  b c   d a   7 a   9 2   b 6   1 5   8 b   9 6   b 9   e a   3 7   5 1   e 2   0 3   7 7   b 9  A  b c   d a   7 a   9 2   b 6   1 5   8 b   9 6   b 9   e a   3 7   5 1   e 2   0 3   7 7   b 9  A  2 6   9 8   0 0   c 2   9 8   b f   2 7   8 c   d 2   9 6   6 8   2 1   4 0   9 6   e d   2 a  A  2 6   9 8   0 0   c 2   9 8   b f   2 7   8 c   d 2   9 6   6 8   2 1   4 0   9 6   e d   2 a  A  1 6   2 1   7 a   4 4   a b   5 a   3 7   f 0   d f   a 0   d d   d 5   f 3   2 b   8 a   c 2  A  1 6   2 1   7 a   4 4   a b   5 a   3 7   f 0   d f   a 0   d d   d 5   f 3   2 b   8 a   c 2  A  3 8   4 7   8 f   8 2   9 d   8 a   d c   7 f   f 2   6 a   0 4   1 b   e 3   1 1   4 4   4 a  A  3 8   4 7   8 f   8 2   9 d   8 a   d c   7 f   f 2   6 a   0 4   1 b   e 3   1 1   4 4   4 a  A  6 c   5 d   0 6   9 6   9 6   e 2   2 4   6 0   2 5   5 8   b b   4 5   7 7   9 f   9 8   b a  A  6 c   5 d   0 6   9 6   9 6   e 2   2 4   6 0   2 5   5 8   b b   4 5   7 7   9 f   9 8   b a  A  0 8   c 1   f c   7 c   2 7   6 f   7 4   2 3   f 5   1 1   e 9   c 2   5 4   4 d   a 8   2 d  A  0 8   c 1   f c   7 c   2 7   6 f   7 4   2 3   f 5   1 1   e 9   c 2   5 4   4 d   a 8   2 d  A  c a   c 8   2 e   e 0   d 4   0 e   4 8   a e   2 3   4 8   9 9   1 5   8 d   1 7   a f   d 0  A  c a   c 8   2 e   e 0   d 4   0 e   4 8   a e   2 3   4 8   9 9   1 5   8 d   1 7   a f   d 0  A  f f   2 2   2 e   7 9   d e   4 c   8 c   1 f   e d   a 7   b 1   2 a   7 a   d 2   d 3   c 8  A  f f   2 2   2 e   7 9   d e   4 c   8 c   1 f   e d   a 7   b 1   2 a   7 a   d 2   d 3   c 8  A  d 1   b 0   7 6   b 5   9 d   d 5   c f   7 3   f 3   5 9   a 3   4 3   7 d   c 2   1 b   8 1  A  d 1   b 0   7 6   b 5   9 d   d 5   c f   7 3   f 3   5 9   a 3   4 3   7 d   c 2   1 b   8 1  A  d d   0 2   4 0   d 1   1 6   7 9   6 5   3 9   b 4   8 b   d 8   1 f   9 6   3 2   8 1   b c  A  d d   0 2   4 0   d 1   1 6   7 9   6 5   3 9   b 4   8 
+	Block seqno 352, will claim, DVA[0]=<1:51d000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=326L/326P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000160
+		TX_WRITE            len   1096, txg 326, seq 338
+			foid 270, offset 1000, length 388
+			b   d 8   1 f   9 6   3 2   8 1   b c  A  1 0   9 f   d 7   2 f   2 1   4 f   a d   8 c   6 a   7 a   7 d   2 6   6 f   0 4   7 6   0 8  A  1 0   9 f   d 7   2 f   2 1   4 f   a d   8 c   6 a   7 a   7 d   2 6   6 f   0 4   7 6   0 8  A  4 7   6 b   2 7   3 b   e 5   5 9   2 4   3 a   8 f   6 2   8 3   5 0   d 6   1 c   1 9   6 7  A  4 7   6 b   2 7   3 b   e 5   5 9   2 4   3 a   8 f   6 2   8 3   5 0   d 6   1 c   1 9   6 7  A  3 f   5 0   d 9   6 2   3 2   5 8   b 0   4 5   c 5   2 c   e 0   f d   1 b   5 2   9 c   2 0  A  3 f   5 0   d 9   6 2   3 2   5 8   b 0   4 5   c 5   2 c   e 0   f d   1 b   5 2   9 c   2 0  A  1 6   e 7   e b   a a   5 d   f 8   6 9   5 7   7 0   7 6   b 0   c d   5 3   9 0   5 1   4 8  A  1 6   e 7   e b   a a   5 d   f 8   6 9   5 7   7 0   7 6   b 0   c d   5 3   9 0   5 1   4 8  A  4 2   2 1   4 8   f b   1 a   6 1   9 5   2 0   5 b   8 7   f c   5 3   9 d   d d   4 6   c f  A  4 2   2 1   4 8   f b   1 a   6 1   9 5   2 0   5 b   8 7   f c   5 3   9 d   d d   4 6   c f  A  b d   7 2   7 0   b c   8 c   d f   2 4   1 2   9 a   2 7   0 c   a 8   a f   6 0   c e   0 7  A  b d   7 2   7 0   b c   8 c   d f   2 4   1 2   9 a   2 7   0 c   a 8   a f   6 0   c e   0 7  A  9 8   5 e   f 2   7 6   b 3   7 3   9 1   3 9   7 f   5 7   2 a   b 2   7 d   9 8   5 2   6 1  A  9 8   5 e   f 2   7 6   b 3   7 3   9 1   3 9   7 f   5 7   2 a   b 2   7 d   9 8   5 2   6 1  A  7 4   e 9   f 7   1 2   6 7   6 1   5 d   b 1   a f   f 4   c 5   e 2   2 2   d 0   b 6   c 9  A  7 4   e 9   f 7   1 2   6 7   6 1   5 d   b 1   a f   f 4   c 5   e 2   2 2   d 0   b 6   c 9  A  4 5   c 2   9 a   b c   e b   b f   1 5   f 8   e c   3 e   4 8   b d   6 b   7 6   1 9   a 1  A  4 5   c 2   9 a   b c   e b   b f   1 5   f 8   e c   3 e   4 8   b d   6 b   7 6   1 9   a 1  A  a 
+	Block seqno 353, will claim, DVA[0]=<1:51f000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=327L/327P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000161
+		TX_CREATE           len    128, txg 327, seq 339
+			after-freeze-1.txt
+			Fri Nov 27 14:54:40 2026
+			doid 34, foid 398, slots 1, mode 100644
+			uid 0, gid 0, gen 327, rdev 0x0
+	Block seqno 354, will claim, DVA[0]=<1:521000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=327L/327P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000162
+		TX_WRITE            len   4288, txg 327, seq 340
+			foid 398, offset 0, length 1000
+			  0 e   c 9   8 9   a a   f f   e d   a 5   0 b   0 8   8 4   6 3   a 5   8 9   4 9   e 7   2 8  A  0 e   c 9   8 9   a a   f f   e d   a 5   0 b   0 8   8 4   6 3   a 5   8 9   4 9   e 7   2 8  A  7 b   d 3   9 f   b c   3 3   7 3   e a   5 c   4 9   b 0   b d   7 0   1 e   9 a   8 d   9 0  A  7 b   d 3   9 f   b c   3 3   7 3   e a   5 c   4 9   b 0   b d   7 0   1 e   9 a   8 d   9 0  A  f 4   3 3   3 f   2 9   f c   b e   b 7   f 6   b 8   6 1   4 6   9 1   a 6   d f   a 8   2 a  A  f 4   3 3   3 f   2 9   f c   b e   b 7   f 6   b 8   6 1   4 6   9 1   a 6   d f   a 8   2 a  A  a 9   c a   9 8   9 8   7 b   8 a   1 d   e f   3 5   a e   7 f   7 7   5 9   3 3   8 1   8 3  A  a 9   c a   9 8   9 8   7 b   8 a   1 d   e f   3 5   a e   7 f   7 7   5 9   3 3   8 1   8 3  A  a e   a e   e c   7 b   3 5   1 7   a d   d 4   b f   c 5   e 8   2 1   4 b   8 4   1 9   f 9  A  a e   a e   e c   7 b   3 5   1 7   a d   d 4   b f   c 5   e 8   2 1   4 b   8 4   1 9   f 9  A  f 8   9 4   5 3   b 1   2 f   e 8   9 8   0 6   9 2   0 c   9 9   5 b   e 5   0 1   e 9   7 a  A  f 8   9 4   5 3   b 1   2 f   e 8   9 8   0 6   9 2   0 c   9 9   5 b   e 5   0 1   e 9   7 a  A  a 7   e c   7 f   d d   0 5   f 2   6 5   7 b   6 0   7 a   b 5   d 5   1 4   5 8   9 4   2 d  A  a 7   e c   7 f   d d   0 5   f 2   6 5   7 b   6 0   7 a   b 5   d 5   1 4   5 8   9 4   2 d  A  a 2   b 0   9 a   2 a   1 d   4 7   e c   3 2   3 7   6 e   8 b   4 c   6 8   1 2   f 7   9 5  A  a 2   b 0   9 a   2 a   1 d   4 7   e c   3 2   3 7   6 e   8 b   4 c   6 8   1 2   f 7   9 5  A  d 1   2 0   1 4   3 d   7 5   5 2   7 8   8 9   1 3   f c   a 2   e 3   1 2   c 2   3 f   5 c  A  d 1   2 0   1 4   3 d   7 5   5 2   7 8   8 9   1 3   f c   a 2   e 3   1 2   c 2   3 f   5 c  A  b 1   5 8   4 e   9 0   8 b   1 9   e 3   f b   c 3   e 3   a b   7 3   a 1   7 e   3 2   9 e  A  b 1   5 8   4 e   9 0   8 b   1 9   e 3   f b   c 3   e 3   a b   7 3   a 1   7 e   3 2   9 e  A  1 3   0 5   a b   d c   8 4   d 2   4 2   a a   8 3   a e   e b   e b   6 2   3 e   4 0   c c  A  1 3   0 5   a b   d c   8 4   d 2   4 2   a a   8 3   a e   e b   e b   6 2   3 e   4 0   c c  A  b 7   2 3   0 4   a 8   3 a   8 4   8 5   c 0   3 3   e b   b 7   8 2   7 6   e 7   0 1   4 1  A  b 7   2 3   0 4   a 8   3 a   8 4   8 5   c 0   3 3   e b   b 7   8 2   7 6   e 7   0 1   4 1  A  a 8   5 c   0 0   7 0   2 a   3 c   5 7   9 5   d 2   6 d   7 b   4 8   c 1   0 1   b 5   0 1  A  a 8   5 c   0 0   7 0   2 a   3 c   5 7   9 5   d 2   6 d   7 b   4 8   c 1   0 1   b 5   0 1  A  c c   8 b   e 6   5 2   6 6   6 2   e c   c e   d 1   e a   3 9   6 1   7 9   c 7   d e   6 e  A  c c   8 b   e 6   5 2   6 6   6 2   e c   c e   d 1   e a   3 9   6 1   7 9   c 7   d e   6 e  A  1 0   d b   d 1   b a   0 3   5 f   0 a   b 7   d 3   4 6   0 0   8 8   3 c   9 2   5 a   1 1  A  1 0   d b   d 1   b a   0 3   5 f   0 a   b 7   d 3   4 6   0 0   8 8   3 c   9 2   5 a   1 1  A  f d   1 c   7 f   f 5   1 0   6 3   a 8   8 7   5 d   5 a   f 6   8 1   2 9   f 5   c d   3 8  A  f d   1 c   7 f   f 5   1 0   6 3   a 8   8 7   5 d   5 a   f 6   8 1   2 9   f 5   c d   3 8  A  4 b   6 0   1 b   1 d   7 b   3 d   2 3   b 1   8 5   1 4   8 d   8 b   7 b   3 1   8 2   c 7  A  4 b   6 0   1 b   1 d   7 b   3 d   2 3   b 1   8 5   1 4   8 d   8 b   7 b   3 1   8 2   c 7  A  6 0   8 7   9 7   4 5   0 6   9 b   4 d   8 e   8 0   f c   2 f   d 6   2 5   d d   0 0   a 8  A  6 0   8 7   9 7   4 5   0 6   9 b   4 d   8 e   8 0   f c   2 f   d 6   2 5   d d   0 0   a 8  A  e 1   d 4   f 6   2 1   5 d   f 8   8 5   6 6   1 d   6 b   3 e   1 7   9 1   2 c   9 9   d 8  A  e 1   d 4   f 6   2 1   5 d   f 8   8 5   6 6   1 d   6 b   3 e   1 7   9 1   2 c   9 9   d 8  A  b 5   9 a   7 a   e 9   8 7   a f   5 8   a 6   f 2   d b   d c   1 d   7 d   8 1   5 8   f 3  A  b 5   9 a   7 a   e 9   8 7   a f   5 8   a 6   f 2   d b   d c   1 d   7 d   8 1   5 8   f 3  A  d 0   7 c   9 4   6 2   1 7   4 3   2 f   a 0   e 5   d 4   a a   e 1   8 7   1 a   3 5   9 c  A  d 0   7 c   9 4   6 2   1 7   4 3   2 f   a 0   e 5   d 4   a a   e 1   8 7   1 a   3 5   9 c  A  b 3   2 0   6 c   3 f   9 c   a 2   3 e   3 6   7 4   e c   6 8   7 6   5 6   b 0   b 2   0 5  A  b 3   2 0   6 c   3 f   9 c   a 2   3 e   3 6   7 4   e c   6 8   7 6   5 6   b 0   b 2   0 5  A  3 f   6 9   f 4   b 2   9 4   5 c   f 3   1 f   2 4   e 5   2 a   a 3   6 3   9 f   6 a   7 3  A  3 f   6 9   f 4   b 2   9 4   5 c   f 3   1 f   2 4   e 5   2 a   a 3   6 3   9 f   6 a   7 3  A  7 4   b f   5 6   8 7   f c   f 3   a 3   e 0   a c   c b   0 c   5 0   9 f   b 4   3 c   a 4  A  7 4   b f   5 6   8 7   f c   f 3   a 3   e 0   a c   c b   0 c   5 0   9 f   b 4   3 c   a 4  A  a 9   9 d   f 5   1 1   b d   c c   5 e   a e   e 7   9 5   f a   f 7   7 c   f 5   9 a   8 4  A  a 9   9 d   f 5   1 1   b d   c c   5 e   a e   e 7   9 5   f a   f 7   7 c   f 5   9 a   8 4  A  9 1   3 f   6 0   2 6   8 6   5 0   3 d   4 3   9 e   9 f   b a   2 9   b e   c e   0 2   3 8  A  9 1   3 f   6 0   2 6   8 6   5 0   3 d   4 3   9 e   9 f   b a   2 9   b e   c e   0 2   3 8  A  5 e   2 9   b 4   d 3   3 7   7 8   e 7   3 9   c 3   d c   1 2   3 3   9 c   c 8   f 7   9 2  A  5 e   2 9   b 4   d 3   3 7   7 8   e 7   3 9   c 3   d c   1 2   3 3   9 c   c 8   f 7   9 2  A  f f   1 5   0 1   9 1   1 1   f 6   c 4   0 7   f 7   3 0   a 9   b c   c 3   7 9   5 d   e 2  A  f f   1 5   0 1   9 1   1 1   f 6   c 4   0 7   f 7   3 0   a 9   b c   c 3   7 9   5 d   e 2  A  8 7   f 4   6 1   0 3   7 a   2 b   8 0   b 7   9 2   b e   8 c   e 5   1 8   a 5   a 7   3 9  A  8 7   f 4   6 1   0 3   7 a   2 b   8 0   b 7   9 2   b e   8 c   e 5   1 8   a 5   a 7   3 9  A  9 8   e c   7 8   4 e   6 0   8 7   c 4   0 c   5 5   5 2   8 4   8 9   5 a   3 7   1 3   a 0  A  9 8   e c   7 8   4 e   6 0   8 7   c 4   0 c   5 5   5 2   8 4   8 9   5 a   3 7   1 3   a 0  A  b d   2 5   9 3   c b   e f   6 4   5 d   5 e   a 8   d 5   5 c   4 8   a e   0 2   4 2   5 1  A  b d   2 5   9 3   c b   e f   6 4   5 d   5 e   a 8   d 5   5 c   4 8   a e   0 2   4 2   5 1  A  e d   4 d   c f   0 1   7 9   f 3   b a   f 4   4 5   e d   9 a   d f   d e   e f   1 5   8 d  A  e d   4 d   c f   0 1   7 9   f 3   b a   f 4   4 5   e d   9 a   d f   d e   e f   1 5   8 d  A  1 c   1 5   8 3   6 f   f d   c a   4 1   1 9   0 3   d 8   1 f   1 f   d f   0 c   a 7   d b  A  1 c   1 5   8 3   6 f   f d   c a   4 1   1 9   0 3   d 8   1 f   1 f   d f   0 c   a 7   d b  A  5 9   c d   8 6   e 7   1 2   5 e   c 2   1 a   2 5   9 c   6 4   d d   d 4   e 0   5 d   0 c  A  5 9   c d   8 6   e 7   1 2   5 e   c 2   1 a   2 5   9 c   6 4   d d   d 4   e 0   5 d   0 c  A  a c   1 e   c 4   a a   d 5   b 1   7 8   4 e   3 4   6 c   4 4   a 3   b 5   1 7   1 d   a b  A  a c   1 e   c 4   a a   d 5   b 1   7 8   4 e   3 4   6 c   4 4   a 3   b 5   1 7   1 d   a b  A  8 c   1 c   2 7   2 2   9 1   3 3   7 2   d e   0 3   7 7   f 7   d c   c 5   7 9   4 3   f a  A  8 c   1 c   2 7   2 2   9 1   3 3   7 2   d e   0 3   7 7   f 7   d c   c 5   7 9   4 3   f a  A  d 1   2 3   7 0   c f   0 4   0 5   6 4   b 2   9 1   5 d   2 4   9 7   9 9   f 0   a 3   a 5  A  d 1   2 3   7 0   c f   0 4   0 5   6 4   b 2   9 1   5 d   2 4   9 7   9 9   f 0   a 3   a 5  A  b a   7 e   2 1   a 5   c 5   c f   f 3   c 5   2 9   a d   4 e   7 2   b 0   1 5   5 9   0 2  A  b a   7 e   2 1   a 5   c 5   c f   f 3   c 5   2 9   a d   4 e   7 2   b 0   1 5   5 9   0 2  A  c c   f 0   c 9   4 a   5 a   a c   2 6   8 4   b d   7 9   4 7   d f   4 4   c e   8 f   9 7  A  c c   f 0   c 9   4 a   5 a   a c   2 6   8 4   b d   7 9   4 7   d f   4 4   c e   8 f   9 7  A  e 7   f b   5 d   a 8   f d   f d   6 2   7 f   d 7   0 8   1 9   b 2   9 9   a 3   9 9   1 0  A  e 7   f b   5 d   a 8   f d   f d   6 2   7 f   d 7   0 8   1 9   b 2   9 9   a 3   9 9   1 0  A  a 5   f 8   3 b   8 5   4 2   3 d   4 7   8 d   7 0   a c   e c   0 1   3 9   5 b   7 3   5 2  A  a 5   f 8   3 b   8 5   4 2   3 d   4 7   8 d   7 0   a c   e c   0 1   3 9   5 b   7 3   5 2  A  b 9   4 3   e d   5 e   0 1   e 9   8 5   2 d   8 b   9 3   8 d   7 9   e 1   3 c   b f   6 2  A  b 9   4 3   e d   5 e   0 1   e 9   8 5   2 d   8 b   9 
+	Block seqno 355, will claim, DVA[0]=<1:523000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=328L/328P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000163
+		TX_WRITE            len   1096, txg 328, seq 341
+			foid 398, offset 1000, length 388
+			3   8 d   7 9   e 1   3 c   b f   6 2  A  4 5   e b   e c   d 3   3 3   0 d   f a   3 8   7 5   c e   d e   2 8   7 b   9 0   e 0   6 1  A  4 5   e b   e c   d 3   3 3   0 d   f a   3 8   7 5   c e   d e   2 8   7 b   9 0   e 0   6 1  A  8 6   4 d   8 2   e c   a 0   1 4   3 9   1 1   9 7   c f   b b   a 0   0 4   1 7   c b   e 2  A  8 6   4 d   8 2   e c   a 0   1 4   3 9   1 1   9 7   c f   b b   a 0   0 4   1 7   c b   e 2  A  1 3   3 a   b 1   8 e   3 c   b 2   b 4   2 6   a 4   f f   0 1   7 a   e 6   c 0   2 a   6 c  A  1 3   3 a   b 1   8 e   3 c   b 2   b 4   2 6   a 4   f f   0 1   7 a   e 6   c 0   2 a   6 c  A  f 1   c d   1 9   b 4   7 b   9 0   e 7   f 9   3 6   d a   8 a   b 3   f 5   7 0   c b   4 f  A  f 1   c d   1 9   b 4   7 b   9 0   e 7   f 9   3 6   d a   8 a   b 3   f 5   7 0   c b   4 f  A  4 9   9 6   9 1   2 d   1 8   b c   9 e   3 e   8 0   c 3   4 2   c 1   e 8   c 9   1 9   8 3  A  4 9   9 6   9 1   2 d   1 8   b c   9 e   3 e   8 0   c 3   4 2   c 1   e 8   c 9   1 9   8 3  A  5 9   2 2   d 6   a 2   7 d   7 0   f 2   f 4   7 d   e e   5 e   8 9   f 5   4 9   2 7   7 7  A  5 9   2 2   d 6   a 2   7 d   7 0   f 2   f 4   7 d   e e   5 e   8 9   f 5   4 9   2 7   7 7  A  a e   f f   5 3   c 7   f 7   5 0   0 9   3 9   8 f   7 c   1 9   7 b   5 b   5 0   e 5   6 0  A  a e   f f   5 3   c 7   f 7   5 0   0 9   3 9   8 f   7 c   1 9   7 b   5 b   5 0   e 5   6 0  A  e e   7 e   a 6   8 8   b 1   8 9   d e   8 7   1 0   5 b   c 4   5 4   a 6   b e   c 9   7 4  A  e e   7 e   a 6   8 8   b 1   8 9   d e   8 7   1 0   5 b   c 4   5 4   a 6   b e   c 9   7 4  A  b 7   5 3   d 0   5 c   2 a   2 1   5 2   3 b   4 8   0 f   3 1   3 b   b e   4 4   4 2   4 c  A  b 7   5 3   d 0   5 c   2 a   2 1   5 2   3 b   4 8   0 f   3 1   3 b   b e   4 4   4 2   4 c  A  f 
+	Block seqno 356, will claim, DVA[0]=<1:525000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=329L/329P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000164
+		TX_CREATE           len    128, txg 329, seq 342
+			after-freeze-2.txt
+			Fri Nov 27 14:54:40 2026
+			doid 34, foid 138, slots 1, mode 100644
+			uid 0, gid 0, gen 329, rdev 0x0
+	Block seqno 357, will claim, DVA[0]=<1:527000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=329L/329P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000165
+		TX_WRITE            len   4288, txg 329, seq 343
+			foid 138, offset 0, length 1000
+			  0 c   7 e   1 8   6 7   6 b   1 e   d 6   d 9   7 d   d 6   0 c   5 e   9 7   0 7   3 e   b 0  A  0 c   7 e   1 8   6 7   6 b   1 e   d 6   d 9   7 d   d 6   0 c   5 e   9 7   0 7   3 e   b 0  A  6 d   b e   f 9   a 8   4 1   b 5   5 7   e 1   0 4   4 4   8 a   4 4   9 d   8 3   1 b   2 1  A  6 d   b e   f 9   a 8   4 1   b 5   5 7   e 1   0 4   4 4   8 a   4 4   9 d   8 3   1 b   2 1  A  a 2   6 7   8 7   0 8   0 8   6 2   0 b   0 d   0 f   5 3   e 5   1 2   6 9   4 a   8 c   3 3  A  a 2   6 7   8 7   0 8   0 8   6 2   0 b   0 d   0 f   5 3   e 5   1 2   6 9   4 a   8 c   3 3  A  c b   0 9   d 3   c 3   2 c   a 6   d c   e 6   6 8   2 1   d 9   5 a   6 7   5 8   7 1   6 0  A  c b   0 9   d 3   c 3   2 c   a 6   d c   e 6   6 8   2 1   d 9   5 a   6 7   5 8   7 1   6 0  A  a 6   8 2   3 6   e 4   d e   9 1   f c   a 9   5 7   0 a   a 3   c b   b 0   4 f   8 4   c 9  A  a 6   8 2   3 6   e 4   d e   9 1   f c   a 9   5 7   0 a   a 3   c b   b 0   4 f   8 4   c 9  A  3 7   6 d   4 6   3 8   5 7   b 2   d 9   0 5   a 4   5 9   a 4   6 b   0 6   c b   3 0   d e  A  3 7   6 d   4 6   3 8   5 7   b 2   d 9   0 5   a 4   5 9   a 4   6 b   0 6   c b   3 0   d e  A  0 3   e d   8 2   3 4   0 8   9 d   d a   7 f   6 a   a e   8 f   0 e   a 4   0 d   2 8   b f  A  0 3   e d   8 2   3 4   0 8   9 d   d a   7 f   6 a   a e   8 f   0 e   a 4   0 d   2 8   b f  A  a 0   6 6   6 9   0 6   3 c   f 7   e 2   5 c   4 8   b a   0 a   e 0   9 4   d 2   f 0   6 3  A  a 0   6 6   6 9   0 6   3 c   f 7   e 2   5 c   4 8   b a   0 a   e 0   9 4   d 2   f 0   6 3  A  0 7   b 2   6 e   c 5   3 e   6 2   a 6   8 e   e 4   8 c   5 7   1 f   1 7   9 e   b 3   7 6  A  0 7   b 2   6 e   c 5   3 e   6 2   a 6   8 e   e 4   8 c   5 7   1 f   1 7   9 e   b 3   7 6  A  4 2   9 2   9 1   a 2   b f   8 c   4 a   f 6   7 5   e b   7 f   b a   8 9   e 9   3 b   a b  A  4 2   9 2   9 1   a 2   b f   8 c   4 a   f 6   7 5   e b   7 f   b a   8 9   e 9   3 b   a b  A  a e   e a   2 5   0 4   1 0   d 3   9 b   e c   1 e   c f   9 2   5 8   b e   b a   3 f   0 6  A  a e   e a   2 5   0 4   1 0   d 3   9 b   e c   1 e   c f   9 2   5 8   b e   b a   3 f   0 6  A  c c   0 e   4 b   c 8   9 9   f e   0 b   e 5   e f   3 a   7 5   0 d   c 8   4 5   8 e   0 1  A  c c   0 e   4 b   c 8   9 9   f e   0 b   e 5   e f   3 a   7 5   0 d   c 8   4 5   8 e   0 1  A  3 d   7 c   1 b   a 0   a 6   8 5   3 d   d c   d b   6 5   a 3   1 e   6 f   d f   5 2   b d  A  3 d   7 c   1 b   a 0   a 6   8 5   3 d   d c   d b   6 5   a 3   1 e   6 f   d f   5 2   b d  A  a b   0 d   f a   f d   3 0   b 0   8 0   4 1   2 5   d 5   5 a   9 5   e 1   3 2   b a   a d  A  a b   0 d   f a   f d   3 0   b 0   8 0   4 1   2 5   d 5   5 a   9 5   e 1   3 2   b a   a d  A  e 9   3 0   8 4   3 9   2 a   f 5   c e   5 c   8 d   7 f   1 f   0 b   0 f   6 1   e 9   9 d  A  e 9   3 0   8 4   3 9   2 a   f 5   c e   5 c   8 d   7 f   1 f   0 b   0 f   6 1   e 9   9 d  A  7 b   b 0   e c   6 b   5 d   4 5   f 1   8 0   2 d   4 2   7 e   b 8   8 1   2 a   4 5   2 a  A  7 b   b 0   e c   6 b   5 d   4 5   f 1   8 0   2 d   4 2   7 e   b 8   8 1   2 a   4 5   2 a  A  1 2   f c   2 8   7 2   9 5   1 0   7 e   2 7   d 1   c b   7 7   d a   b 8   a 7   f a   4 5  A  1 2   f c   2 8   7 2   9 5   1 0   7 e   2 7   d 1   c b   7 7   d a   b 8   a 7   f a   4 5  A  6 2   f f   8 6   5 8   b 6   f 0   e 0   a 8   1 9   5 6   9 e   f 0   4 4   8 7   a 8   1 d  A  6 2   f f   8 6   5 8   b 6   f 0   e 0   a 8   1 9   5 6   9 e   f 0   4 4   8 7   a 8   1 d  A  8 6   9 2   9 0   d 8   7 b   9 5   2 e   7 f   e 8   5 e   2 e   b 7   4 e   d d   5 5   1 4  A  8 6   9 2   9 0   d 8   7 b   9 5   2 e   7 f   e 8   5 e   2 e   b 7   4 e   d d   5 5   1 4  A  b 3   7 9   5 b   9 d   6 1   e 9   5 f   e 6   3 b   7 7   0 f   0 e   8 b   2 d   a 6   1 4  A  b 3   7 9   5 b   9 d   6 1   e 9   5 f   e 6   3 b   7 7   0 f   0 e   8 b   2 d   a 6   1 4  A  2 f   6 1   7 6   d e   3 5   a d   4 0   0 6   c 0   a b   8 d   4 2   0 a   e 6   7 c   2 b  A  2 f   6 1   7 6   d e   3 5   a d   4 0   0 6   c 0   a b   8 d   4 2   0 a   e 6   7 c   2 b  A  e 7   2 0   4 5   5 e   d b   4 7   c 3   8 1   1 7   6 e   9 6   4 5   f 2   f a   5 d   1 9  A  e 7   2 0   4 5   5 e   d b   4 7   c 3   8 1   1 7   6 e   9 6   4 5   f 2   f a   5 d   1 9  A  6 a   5 e   6 3   c f   9 b   1 6   f 2   a b   5 1   b 8   e 3   9 5   9 4   4 b   d f   1 5  A  6 a   5 e   6 3   c f   9 b   1 6   f 2   a b   5 1   b 8   e 3   9 5   9 4   4 b   d f   1 5  A  1 0   b 1   e f   1 3   5 b   1 e   d 3   1 a   a 9   6 0   e 2   1 a   4 2   4 e   9 3   8 c  A  1 0   b 1   e f   1 3   5 b   1 e   d 3   1 a   a 9   6 0   e 2   1 a   4 2   4 e   9 3   8 c  A  2 2   8 6   6 5   7 d   5 f   1 8   3 1   9 c   6 a   f 2   1 8   6 b   3 2   5 1   e a   9 5  A  2 2   8 6   6 5   7 d   5 f   1 8   3 1   9 c   6 a   f 2   1 8   6 b   3 2   5 1   e a   9 5  A  3 7   f 4   0 e   4 3   7 8   f 2   e 4   2 7   8 4   6 b   f 8   7 3   8 4   3 b   6 2   4 e  A  3 7   f 4   0 e   4 3   7 8   f 2   e 4   2 7   8 4   6 b   f 8   7 3   8 4   3 b   6 2   4 e  A  a b   b a   9 0   b a   3 5   d 9   4 e   2 0   6 a   4 8   f 9   a 6   7 6   0 b   1 d   6 1  A  a b   b a   9 0   b a   3 5   d 9   4 e   2 0   6 a   4 8   f 9   a 6   7 6   0 b   1 d   6 1  A  7 6   5 c   2 8   5 5   d 6   c 6   8 8   e 3   7 7   d 0   a c   1 a   d e   a 3   3 2   1 f  A  7 6   5 c   2 8   5 5   d 6   c 6   8 8   e 3   7 7   d 0   a c   1 a   d e   a 3   3 2   1 f  A  3 1   0 f   a 4   8 4   8 b   8 c   9 a   7 b   d f   6 5   f 3   3 6   2 8   0 6   1 f   b a  A  3 1   0 f   a 4   8 4   8 b   8 c   9 a   7 b   d f   6 5   f 3   3 6   2 8   0 6   1 f   b a  A  d 3   6 7   9 2   7 d   c 4   9 d   1 3   b 3   1 9   f c   7 c   3 b   3 8   c e   0 e   5 1  A  d 3   6 7   9 2   7 d   c 4   9 d   1 3   b 3   1 9   f c   7 c   3 b   3 8   c e   0 e   5 1  A  c 4   a 3   8 7   f 9   e 4   7 1   a 0   9 8   f 4   5 e   9 a   2 c   0 4   1 2   3 3   b 8  A  c 4   a 3   8 7   f 9   e 4   7 1   a 0   9 8   f 4   5 e   9 a   2 c   0 4   1 2   3 3   b 8  A  6 3   9 0   6 4   9 9   b 1   b c   e a   f 9   c 3   8 5   b 6   0 9   c e   9 e   e 9   b b  A  6 3   9 0   6 4   9 9   b 1   b c   e a   f 9   c 3   8 5   b 6   0 9   c e   9 e   e 9   b b  A  d 1   f d   6 a   e 0   8 0   e 3   b c   c 1   b 3   3 7   f 4   b 6   3 9   5 4   4 f   0 a  A  d 1   f d   6 a   e 0   8 0   e 3   b c   c 1   b 3   3 7   f 4   b 6   3 9   5 4   4 f   0 a  A  4 d   9 4   1 5   5 3   f f   e 4   8 3   7 e   5 e   4 0   e d   1 a   d a   5 c   b 3   e 9  A  4 d   9 4   1 5   5 3   f f   e 4   8 3   7 e   5 e   4 0   e d   1 a   d a   5 c   b 3   e 9  A  f a   3 e   b 7   c d   4 9   8 4   d c   b e   0 4   8 c   2 c   8 e   c 6   e 5   2 7   4 2  A  f a   3 e   b 7   c d   4 9   8 4   d c   b e   0 4   8 c   2 c   8 e   c 6   e 5   2 7   4 2  A  e 3   a c   0 1   c 2   b 0   0 1   e 7   b 1   e 5   4 a   5 0   5 7   3 0   2 9   4 a   d 4  A  e 3   a c   0 1   c 2   b 0   0 1   e 7   b 1   e 5   4 a   5 0   5 7   3 0   2 9   4 a   d 4  A  4 2   9 e   4 9   e d   5 b   5 8   3 6   a 1   1 b   9 b   3 a   d 9   c 5   e 9   6 e   a e  A  4 2   9 e   4 9   e d   5 b   5 8   3 6   a 1   1 b   9 b   3 a   d 9   c 5   e 9   6 e   a e  A  9 0   b f   d 6   b 3   c a   3 c   f a   4 0   5 b   7 5   3 d   9 b   9 8   b f   a e   5 7  A  9 0   b f   d 6   b 3   c a   3 c   f a   4 0   5 b   7 5   3 d   9 b   9 8   b f   a e   5 7  A  6 f   1 c   6 5   e e   f d   9 b   3 4   d b   4 1   a 7   2 d   3 7   c 5   8 4   b c   e d  A  6 f   1 c   6 5   e e   f d   9 b   3 4   d b   4 1   a 7   2 d   3 7   c 5   8 4   b c   e d  A  e 6   5 2   1 f   0 5   1 d   7 2   b 0   2 3   c 3   e 2   9 0   7 0   6 0   e 4   7 e   9 5  A  e 6   5 2   1 f   0 5   1 d   7 2   b 0   2 3   c 3   e 2   9 0   7 0   6 0   e 4   7 e   9 5  A  3 5   5 5   2 c   4 0   8 8   4 8   c f   9 b   e 8   3 2   b 2   e 9   1 7   4 f   6 8   4 a  A  3 5   5 5   2 c   4 0   8 8   4 8   c f   9 b   e 8   3 2   b 2   e 9   1 7   4 f   6 8   4 a  A  5 c   0 f   4 3   8 b   d 4   d 5   3 5   5 7   1 c   1 5   f 7   9 c   0 a   b d   d 6   9 0  A  5 c   0 f   4 3   8 b   d 4   d 5   3 5   5 7   1 c   1 
+	Block seqno 358, will claim, DVA[0]=<1:529000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=330L/330P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000166
+		TX_WRITE            len   1096, txg 330, seq 344
+			foid 138, offset 1000, length 388
+			5   f 7   9 c   0 a   b d   d 6   9 0  A  1 5   a 3   2 4   5 b   5 b   7 8   c f   3 9   2 0   b a   e 9   e a   2 7   8 8   2 4   b c  A  1 5   a 3   2 4   5 b   5 b   7 8   c f   3 9   2 0   b a   e 9   e a   2 7   8 8   2 4   b c  A  f d   4 d   a 2   a a   8 3   2 2   b 0   6 b   5 f   8 c   b 1   0 1   3 a   0 8   9 1   8 1  A  f d   4 d   a 2   a a   8 3   2 2   b 0   6 b   5 f   8 c   b 1   0 1   3 a   0 8   9 1   8 1  A  4 2   6 d   f f   2 0   6 f   a c   e b   2 8   f e   9 1   a 9   0 e   b b   1 f   f 0   d 1  A  4 2   6 d   f f   2 0   6 f   a c   e b   2 8   f e   9 1   a 9   0 e   b b   1 f   f 0   d 1  A  7 3   3 e   3 e   3 3   c b   6 0   a 7   b 6   7 9   2 a   a 3   c c   7 b   5 d   6 f   c 5  A  7 3   3 e   3 e   3 3   c b   6 0   a 7   b 6   7 9   2 a   a 3   c c   7 b   5 d   6 f   c 5  A  f 6   9 e   8 5   9 7   b 1   c 2   d 7   4 d   2 1   9 5   b 6   f 6   5 0   e 1   c 8   5 1  A  f 6   9 e   8 5   9 7   b 1   c 2   d 7   4 d   2 1   9 5   b 6   f 6   5 0   e 1   c 8   5 1  A  c 5   c b   e e   1 c   4 4   4 5   6 6   6 8   e 1   8 e   0 0   6 8   b 4   3 7   a b   a 3  A  c 5   c b   e e   1 c   4 4   4 5   6 6   6 8   e 1   8 e   0 0   6 8   b 4   3 7   a b   a 3  A  b 5   2 b   5 6   7 5   e f   1 e   0 6   e a   5 f   7 0   7 1   8 e   2 d   1 6   c 7   4 c  A  b 5   2 b   5 6   7 5   e f   1 e   0 6   e a   5 f   7 0   7 1   8 e   2 d   1 6   c 7   4 c  A  4 c   0 e   a 4   b b   f 9   9 1   e 5   6 5   c e   1 c   f b   d 0   7 9   4 1   3 5   0 5  A  4 c   0 e   a 4   b b   f 9   9 1   e 5   6 5   c e   1 c   f b   d 0   7 9   4 1   3 5   0 5  A  4 4   2 6   0 8   b e   c d   b 1   b d   b e   6 8   a 9   f 4   7 4   0 b   3 c   4 0   1 b  A  4 4   2 6   0 8   b e   c d   b 1   b d   b e   6 8   a 9   f 4   7 4   0 b   3 c   4 0   1 b  A  c 
+	Block seqno 359, will claim, DVA[0]=<1:52b000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=331L/331P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000167
+		TX_CREATE           len    128, txg 331, seq 345
+			after-freeze-3.txt
+			Fri Nov 27 14:54:40 2026
+			doid 34, foid 399, slots 1, mode 100644
+			uid 0, gid 0, gen 331, rdev 0x0
+	Block seqno 360, will claim, DVA[0]=<1:52d000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=331L/331P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000168
+		TX_WRITE            len   4288, txg 331, seq 346
+			foid 399, offset 0, length 1000
+			  a e   9 3   0 8   d e   e 5   2 7   2 0   3 b   c 6   1 9   2 3   3 4   f 0   1 b   5 a   a 1  A  a e   9 3   0 8   d e   e 5   2 7   2 0   3 b   c 6   1 9   2 3   3 4   f 0   1 b   5 a   a 1  A  2 7   6 f   d d   5 2   0 b   3 6   c 3   b b   3 0   b 0   d e   2 e   a 0   d 0   f a   5 f  A  2 7   6 f   d d   5 2   0 b   3 6   c 3   b b   3 0   b 0   d e   2 e   a 0   d 0   f a   5 f  A  e b   d 3   2 c   0 b   4 3   f c   9 3   5 b   d a   6 0   0 b   d 2   8 8   3 e   6 2   e 9  A  e b   d 3   2 c   0 b   4 3   f c   9 3   5 b   d a   6 0   0 b   d 2   8 8   3 e   6 2   e 9  A  7 7   7 4   1 7   b 5   7 1   e 9   5 c   0 a   f 1   e 4   b 8   e d   c e   0 1   9 b   1 3  A  7 7   7 4   1 7   b 5   7 1   e 9   5 c   0 a   f 1   e 4   b 8   e d   c e   0 1   9 b   1 3  A  6 0   b c   7 3   2 1   8 d   d a   8 8   3 2   2 b   0 7   f 9   0 0   7 7   6 b   e 5   4 0  A  6 0   b c   7 3   2 1   8 d   d a   8 8   3 2   2 b   0 7   f 9   0 0   7 7   6 b   e 5   4 0  A  7 0   f c   b c   2 5   3 5   1 e   6 f   d 2   b 2   c b   3 7   e f   e 0   4 e   2 6   4 9  A  7 0   f c   b c   2 5   3 5   1 e   6 f   d 2   b 2   c b   3 7   e f   e 0   4 e   2 6   4 9  A  c d   c 8   e 4   8 2   3 3   9 3   3 d   9 6   6 5   d 3   6 4   c 1   a a   1 1   2 c   3 7  A  c d   c 8   e 4   8 2   3 3   9 3   3 d   9 6   6 5   d 3   6 4   c 1   a a   1 1   2 c   3 7  A  9 8   9 e   4 a   1 b   6 1   0 d   8 4   a 6   4 3   0 0   c c   2 8   f f   1 c   2 6   0 9  A  9 8   9 e   4 a   1 b   6 1   0 d   8 4   a 6   4 3   0 0   c c   2 8   f f   1 c   2 6   0 9  A  f e   b 9   4 e   6 8   a a   1 e   8 4   c 8   3 3   2 c   f d   b 5   3 6   a 9   e 3   6 1  A  f e   b 9   4 e   6 8   a a   1 e   8 4   c 8   3 3   2 c   f d   b 5   3 6   a 9   e 3   6 1  A  1 8   5 e   d 3   0 b   a d   0 2   a b   7 b   2 5   6 4   7 7   f 0   a d   6 9   2 c   4 d  A  1 8   5 e   d 3   0 b   a d   0 2   a b   7 b   2 5   6 4   7 7   f 0   a d   6 9   2 c   4 d  A  2 5   1 2   0 7   e 5   7 6   a 6   1 a   c d   3 5   5 c   b 9   b b   d a   5 4   7 4   b 8  A  2 5   1 2   0 7   e 5   7 6   a 6   1 a   c d   3 5   5 c   b 9   b b   d a   5 4   7 4   b 8  A  5 0   2 5   f b   8 9   6 4   a 3   b 9   e a   0 e   a 5   e 2   4 d   9 8   e f   2 d   6 4  A  5 0   2 5   f b   8 9   6 4   a 3   b 9   e a   0 e   a 5   e 2   4 d   9 8   e f   2 d   6 4  A  f a   c e   6 8   e d   6 3   e c   6 2   3 1   7 c   e 5   6 e   f 3   9 d   f 7   6 e   b 2  A  f a   c e   6 8   e d   6 3   e c   6 2   3 1   7 c   e 5   6 e   f 3   9 d   f 7   6 e   b 2  A  c c   9 e   a b   b a   a 6   a 2   2 5   4 9   a 9   e f   c a   d c   0 1   f 1   e b   8 e  A  c c   9 e   a b   b a   a 6   a 2   2 5   4 9   a 9   e f   c a   d c   0 1   f 1   e b   8 e  A  c 8   5 2   7 4   d f   1 3   1 e   7 2   0 f   4 e   6 b   7 9   c a   9 9   7 3   f 6   3 a  A  c 8   5 2   7 4   d f   1 3   1 e   7 2   0 f   4 e   6 b   7 9   c a   9 9   7 3   f 6   3 a  A  1 5   9 e   d f   d 9   9 8   2 9   4 8   e 4   c 6   4 0   7 e   0 f   5 6   f 5   e 7   c b  A  1 5   9 e   d f   d 9   9 8   2 9   4 8   e 4   c 6   4 0   7 e   0 f   5 6   f 5   e 7   c b  A  8 d   3 3   6 2   c d   d f   9 9   5 5   4 b   f 3   b 1   f 7   0 c   b 8   e 7   b 4   8 0  A  8 d   3 3   6 2   c d   d f   9 9   5 5   4 b   f 3   b 1   f 7   0 c   b 8   e 7   b 4   8 0  A  0 8   a 0   8 9   3 5   b 7   e c   4 9   f 5   8 0   e 8   e 0   b 4   d 1   3 4   3 9   8 6  A  0 8   a 0   8 9   3 5   b 7   e c   4 9   f 5   8 0   e 8   e 0   b 4   d 1   3 4   3 9   8 6  A  3 7   2 4   f 3   e 7   9 b   6 8   7 c   5 6   e d   b 2   1 9   5 6   4 c   b f   7 b   e b  A  3 7   2 4   f 3   e 7   9 b   6 8   7 c   5 6   e d   b 2   1 9   5 6   4 c   b f   7 b   e b  A  6 8   f a   5 1   8 c   1 1   9 2   f 0   f 8   f 3   6 2   2 f   9 b   6 e   7 d   a 4   c c  A  6 8   f a   5 1   8 c   1 1   9 2   f 0   f 8   f 3   6 2   2 f   9 b   6 e   7 d   a 4   c c  A  c f   8 3   1 2   f d   6 3   5 c   a 7   4 d   b 4   3 4   6 d   f a   6 6   1 3   c c   7 a  A  c f   8 3   1 2   f d   6 3   5 c   a 7   4 d   b 4   3 4   6 d   f a   6 6   1 3   c c   7 a  A  e 4   6 8   f c   9 1   2 4   b a   8 f   1 9   8 5   a 0   2 e   d e   8 c   0 c   0 0   3 f  A  e 4   6 8   f c   9 1   2 4   b a   8 f   1 9   8 5   a 0   2 e   d e   8 c   0 c   0 0   3 f  A  1 5   e a   2 0   2 4   c 5   5 e   9 d   f f   a a   e d   d 0   9 7   2 4   d 6   c 9   d 2  A  1 5   e a   2 0   2 4   c 5   5 e   9 d   f f   a a   e d   d 0   9 7   2 4   d 6   c 9   d 2  A  f f   9 a   3 c   3 4   f e   2 b   2 2   e 8   b 4   9 c   5 5   1 8   8 9   f 2   d 6   1 c  A  f f   9 a   3 c   3 4   f e   2 b   2 2   e 8   b 4   9 c   5 5   1 8   8 9   f 2   d 6   1 c  A  f 4   0 0   5 7   5 0   4 6   6 6   2 f   d 6   6 8   a 5   f b   5 d   4 1   e 1   5 8   5 d  A  f 4   0 0   5 7   5 0   4 6   6 6   2 f   d 6   6 8   a 5   f b   5 d   4 1   e 1   5 8   5 d  A  e 5   3 0   0 9   8 e   6 2   3 4   6 d   0 4   4 1   6 1   1 4   7 9   3 6   5 8   0 e   f f  A  e 5   3 0   0 9   8 e   6 2   3 4   6 d   0 4   4 1   6 1   1 4   7 9   3 6   5 8   0 e   f f  A  6 6   a 3   d 0   a 8   6 f   a 7   b e   0 7   0 0   e 8   9 f   b d   9 2   b 4   1 d   0 3  A  6 6   a 3   d 0   a 8   6 f   a 7   b e   0 7   0 0   e 8   9 f   b d   9 2   b 4   1 d   0 3  A  a 9   0 4   c c   f 8   3 d   d d   0 b   c 1   3 e   f 9   3 9   7 e   1 1   3 b   6 c   c 7  A  a 9   0 4   c c   f 8   3 d   d d   0 b   c 1   3 e   f 9   3 9   7 e   1 1   3 b   6 c   c 7  A  0 f   2 8   5 5   6 2   8 e   2 5   e 5   b 1   1 8   7 f   e c   8 5   8 d   b 0   e e   a 2  A  0 f   2 8   5 5   6 2   8 e   2 5   e 5   b 1   1 8   7 f   e c   8 5   8 d   b 0   e e   a 2  A  6 4   d 3   f 7   e d   f 2   8 4   9 9   0 f   5 7   7 e   2 2   2 b   d 8   8 8   2 7   9 2  A  6 4   d 3   f 7   e d   f 2   8 4   9 9   0 f   5 7   7 e   2 2   2 b   d 8   8 8   2 7   9 2  A  d 8   3 d   a 6   1 0   5 5   7 7   1 a   3 5   4 9   c 7   0 2   6 9   5 5   a 2   b a   d b  A  d 8   3 d   a 6   1 0   5 5   7 7   1 a   3 5   4 9   c 7   0 2   6 9   5 5   a 2   b a   d b  A  f 8   c 3   a a   f c   4 8   6 0   6 d   7 6   3 2   9 2   e 8   b 4   c 4   a 3   0 5   2 0  A  f 8   c 3   a a   f c   4 8   6 0   6 d   7 6   3 2   9 2   e 8   b 4   c 4   a 3   0 5   2 0  A  e 3   7 f   b 3   4 9   f 2   3 0   a f   6 1   1 b   3 f   9 0   4 3   c 3   9 1   7 0   5 4  A  e 3   7 f   b 3   4 9   f 2   3 0   a f   6 1   1 b   3 f   9 0   4 3   c 3   9 1   7 0   5 4  A  3 f   a c   b a   a 7   b d   7 8   e 8   1 b   b 0   a d   a e   7 6   4 c   d c   d 8   d c  A  3 f   a c   b a   a 7   b d   7 8   e 8   1 b   b 0   a d   a e   7 6   4 c   d c   d 8   d c  A  9 9   f 3   f 8   f 6   0 6   0 3   7 1   8 8   b c   1 2   1 2   c d   7 5   6 c   b b   6 8  A  9 9   f 3   f 8   f 6   0 6   0 3   7 1   8 8   b c   1 2   1 2   c d   7 5   6 c   b b   6 8  A  d 3   7 f   f 5   b 0   e 8   9 1   5 6   1 3   f a   0 b   b 4   9 d   3 c   d 0   6 f   9 5  A  d 3   7 f   f 5   b 0   e 8   9 1   5 6   1 3   f a   0 b   b 4   9 d   3 c   d 0   6 f   9 5  A  a 1   1 7   5 e   d 1   d 5   f 6   d f   1 2   0 b   c 8   8 6   1 1   b 3   a 2   7 7   a d  A  a 1   1 7   5 e   d 1   d 5   f 6   d f   1 2   0 b   c 8   8 6   1 1   b 3   a 2   7 7   a d  A  3 6   8 b   0 c   d 6   9 6   2 5   a 9   b 2   3 b   8 9   1 1   7 a   a c   c 8   f 0   e 8  A  3 6   8 b   0 c   d 6   9 6   2 5   a 9   b 2   3 b   8 9   1 1   7 a   a c   c 8   f 0   e 8  A  5 c   9 b   6 9   d a   5 3   4 f   a b   9 c   3 9   3 8   1 d   5 4   6 e   0 5   a c   3 2  A  5 c   9 b   6 9   d a   5 3   4 f   a b   9 c   3 9   3 8   1 d   5 4   6 e   0 5   a c   3 2  A  a 4   7 c   4 b   e 2   1 9   c 9   c a   5 4   3 c   0 f   a 3   f 9   a b   8 1   b 4   b 4  A  a 4   7 c   4 b   e 2   1 9   c 9   c a   5 4   3 c   0 f   a 3   f 9   a b   8 1   b 4   b 4  A  b 2   8 b   1 8   a e   e 3   9 1   f d   f 2   9 c   4 b   2 d   f 5   5 9   c 4   9 9   6 f  A  b 2   8 b   1 8   a e   e 3   9 1   f d   f 2   9 c   4 b   2 d   f 5   5 9   c 4   9 9   6 f  A  b f   f 7   0 4   3 4   4 1   5 8   a 1   2 c   9 7   b 3   1 7   0 8   6 f   5 f   1 1   7 3  A  b f   f 7   0 4   3 4   4 1   5 8   a 1   2 c   9 7   b 
+	Block seqno 361, will claim, DVA[0]=<1:52f000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=332L/332P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:0000000000000169
+		TX_WRITE            len   1096, txg 332, seq 347
+			foid 399, offset 1000, length 388
+			3   1 7   0 8   6 f   5 f   1 1   7 3  A  4 3   1 0   2 1   7 a   f 8   8 7   3 9   b a   2 0   3 e   a f   e 0   d c   d 9   6 4   6 9  A  4 3   1 0   2 1   7 a   f 8   8 7   3 9   b a   2 0   3 e   a f   e 0   d c   d 9   6 4   6 9  A  2 b   9 7   0 c   0 4   e 9   5 f   9 7   f c   9 a   d 7   2 f   7 d   9 f   5 2   c 1   3 e  A  2 b   9 7   0 c   0 4   e 9   5 f   9 7   f c   9 a   d 7   2 f   7 d   9 f   5 2   c 1   3 e  A  d d   0 7   3 f   1 8   4 3   6 e   c 5   3 3   4 6   d 4   e 2   e f   f e   e 5   0 c   7 a  A  d d   0 7   3 f   1 8   4 3   6 e   c 5   3 3   4 6   d 4   e 2   e f   f e   e 5   0 c   7 a  A  b 3   6 3   5 0   8 5   2 9   8 8   7 4   b d   5 a   3 6   7 3   c e   f a   8 2   b a   a 6  A  b 3   6 3   5 0   8 5   2 9   8 8   7 4   b d   5 a   3 6   7 3   c e   f a   8 2   b a   a 6  A  5 5   7 b   6 f   5 8   1 f   3 1   b e   4 a   1 c   7 5   3 2   e d   4 2   c e   e 6   c 2  A  5 5   7 b   6 f   5 8   1 f   3 1   b e   4 a   1 c   7 5   3 2   e d   4 2   c e   e 6   c 2  A  7 e   f c   6 3   d 1   c 6   c d   c 3   b 5   a 9   d 2   9 0   0 2   e 5   b 7   1 5   8 2  A  7 e   f c   6 3   d 1   c 6   c d   c 3   b 5   a 9   d 2   9 0   0 2   e 5   b 7   1 5   8 2  A  f 1   0 a   7 7   e c   3 9   b 0   6 8   5 8   f f   c 5   2 9   e a   3 c   f a   0 8   7 2  A  f 1   0 a   7 7   e c   3 9   b 0   6 8   5 8   f f   c 5   2 9   e a   3 c   f a   0 8   7 2  A  0 4   c c   e 0   0 7   2 a   2 6   b d   1 b   f 5   c d   3 f   a 7   9 7   a d   8 9   e 4  A  0 4   c c   e 0   0 7   2 a   2 6   b d   1 b   f 5   c d   3 f   a 7   9 7   a d   8 9   e 4  A  a 2   9 6   d 3   d d   c 5   9 4   1 6   a 6   3 7   1 2   a e   1 2   d 9   1 b   3 c   a b  A  a 2   9 6   d 3   d d   c 5   9 4   1 6   a 6   3 7   1 2   a e   1 2   d 9   1 b   3 c   a b  A  3 
+	Block seqno 362, will claim, DVA[0]=<1:531000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=333L/333P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000016a
+		TX_CREATE           len    128, txg 333, seq 348
+			after-freeze-4.txt
+			Fri Nov 27 14:54:40 2026
+			doid 34, foid 400, slots 1, mode 100644
+			uid 0, gid 0, gen 333, rdev 0x0
+	Block seqno 363, will claim, DVA[0]=<1:533000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=333L/333P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000016b
+		TX_WRITE            len   4288, txg 333, seq 349
+			foid 400, offset 0, length 1000
+			  e 3   e f   8 8   d 4   7 e   7 4   d 8   c a   5 b   9 d   c 2   7 7   d 4   1 e   b c   2 6  A  e 3   e f   8 8   d 4   7 e   7 4   d 8   c a   5 b   9 d   c 2   7 7   d 4   1 e   b c   2 6  A  1 1   f a   4 f   1 1   5 a   6 7   1 0   6 6   8 1   b 6   e 4   7 8   3 2   2 4   3 a   3 d  A  1 1   f a   4 f   1 1   5 a   6 7   1 0   6 6   8 1   b 6   e 4   7 8   3 2   2 4   3 a   3 d  A  1 5   3 1   7 5   9 a   0 8   a 8   4 8   1 e   e 3   c 0   f f   a 9   a 4   d 6   4 9   d 4  A  1 5   3 1   7 5   9 a   0 8   a 8   4 8   1 e   e 3   c 0   f f   a 9   a 4   d 6   4 9   d 4  A  c a   6 4   1 3   8 9   f c   9 b   1 5   1 5   3 8   9 3   9 1   b 0   b 5   0 e   7 2   5 7  A  c a   6 4   1 3   8 9   f c   9 b   1 5   1 5   3 8   9 3   9 1   b 0   b 5   0 e   7 2   5 7  A  7 9   f 1   5 7   1 f   b 1   0 3   e b   3 8   b 5   e b   b 0   9 a   0 0   2 4   2 0   c f  A  7 9   f 1   5 7   1 f   b 1   0 3   e b   3 8   b 5   e b   b 0   9 a   0 0   2 4   2 0   c f  A  1 6   5 b   4 e   5 c   3 5   8 0   b f   0 d   d 6   4 e   4 d   8 2   3 6   3 9   1 7   a 4  A  1 6   5 b   4 e   5 c   3 5   8 0   b f   0 d   d 6   4 e   4 d   8 2   3 6   3 9   1 7   a 4  A  f 7   f 6   1 1   a e   2 0   3 a   5 f   e b   5 4   6 e   a e   f c   7 6   7 d   2 8   5 3  A  f 7   f 6   1 1   a e   2 0   3 a   5 f   e b   5 4   6 e   a e   f c   7 6   7 d   2 8   5 3  A  a b   3 6   d 2   8 9   7 7   a f   6 3   4 3   2 c   6 5   9 3   b 8   e 5   2 e   f 9   4 c  A  a b   3 6   d 2   8 9   7 7   a f   6 3   4 3   2 c   6 5   9 3   b 8   e 5   2 e   f 9   4 c  A  7 e   e 5   d 7   f 6   5 8   9 7   a 4   8 7   5 5   2 d   b a   7 b   f a   8 7   f 8   c 5  A  7 e   e 5   d 7   f 6   5 8   9 7   a 4   8 7   5 5   2 d   b a   7 b   f a   8 7   f 8   c 5  A  a 2   f 2   4 0   2 f   0 4   3 e   2 4   d d   7 6   2 6   5 2   0 6   0 c   d 3   d 9   3 a  A  a 2   f 2   4 0   2 f   0 4   3 e   2 4   d d   7 6   2 6   5 2   0 6   0 c   d 3   d 9   3 a  A  d d   a f   3 0   6 5   0 7   a 5   e 5   2 e   e f   1 e   c 6   f a   9 1   e 8   9 b   f 6  A  d d   a f   3 0   6 5   0 7   a 5   e 5   2 e   e f   1 e   c 6   f a   9 1   e 8   9 b   f 6  A  b 8   e 8   7 0   6 d   4 5   a 4   1 1   f 3   1 4   7 1   a 2   9 c   3 e   1 f   f e   c e  A  b 8   e 8   7 0   6 d   4 5   a 4   1 1   f 3   1 4   7 1   a 2   9 c   3 e   1 f   f e   c e  A  6 3   0 2   7 8   a 6   5 a   b a   4 2   8 f   b 8   6 5   7 9   9 a   2 7   a 2   9 0   3 b  A  6 3   0 2   7 8   a 6   5 a   b a   4 2   8 f   b 8   6 5   7 9   9 a   2 7   a 2   9 0   3 b  A  a 0   3 1   3 c   3 7   f f   d 1   6 6   e 3   f 5   5 6   7 c   9 b   d 9   7 1   7 7   8 b  A  a 0   3 1   3 c   3 7   f f   d 1   6 6   e 3   f 5   5 6   7 c   9 b   d 9   7 1   7 7   8 b  A  f b   f 9   9 9   5 d   0 6   4 7   5 6   2 5   3 5   2 b   d 4   6 b   a e   1 e   0 1   1 c  A  f b   f 9   9 9   5 d   0 6   4 7   5 6   2 5   3 5   2 b   d 4   6 b   a e   1 e   0 1   1 c  A  5 c   9 5   f 9   2 8   5 5   b 3   b a   7 f   0 c   c 2   d a   d 6   4 f   3 8   b 4   6 3  A  5 c   9 5   f 9   2 8   5 5   b 3   b a   7 f   0 c   c 2   d a   d 6   4 f   3 8   b 4   6 3  A  a 9   e d   a a   8 e   f 9   d 4   d e   e 5   c d   f 8   d 2   b 1   3 c   e a   b a   4 3  A  a 9   e d   a a   8 e   f 9   d 4   d e   e 5   c d   f 8   d 2   b 1   3 c   e a   b a   4 3  A  1 f   e 4   e d   9 7   0 5   f a   a 7   8 e   7 0   1 0   0 a   c 5   9 f   a a   9 a   e 7  A  1 f   e 4   e d   9 7   0 5   f a   a 7   8 e   7 0   1 0   0 a   c 5   9 f   a a   9 a   e 7  A  6 8   e 8   3 d   0 9   7 8   9 4   6 c   7 2   6 7   6 6   5 5   5 a   9 d   e e   3 6   c 5  A  6 8   e 8   3 d   0 9   7 8   9 4   6 c   7 2   6 7   6 6   5 5   5 a   9 d   e e   3 6   c 5  A  8 f   6 b   4 4   7 9   a 0   a a   f f   c 3   5 1   2 3   2 5   d 5   d 6   2 a   4 a   7 8  A  8 f   6 b   4 4   7 9   a 0   a a   f f   c 3   5 1   2 3   2 5   d 5   d 6   2 a   4 a   7 8  A  1 3   4 9   c c   4 3   a d   9 0   0 4   e d   4 d   e 5   f 0   8 8   7 8   6 e   1 d   e c  A  1 3   4 9   c c   4 3   a d   9 0   0 4   e d   4 d   e 5   f 0   8 8   7 8   6 e   1 d   e c  A  7 e   8 7   5 c   7 9   7 b   5 7   6 d   9 d   5 d   0 1   b 5   6 c   b 5   0 6   7 d   3 0  A  7 e   8 7   5 c   7 9   7 b   5 7   6 d   9 d   5 d   0 1   b 5   6 c   b 5   0 6   7 d   3 0  A  e e   6 b   8 b   0 b   f 5   a 2   7 7   8 e   e 7   d 5   0 6   c 0   0 4   2 2   2 c   8 7  A  e e   6 b   8 b   0 b   f 5   a 2   7 7   8 e   e 7   d 5   0 6   c 0   0 4   2 2   2 c   8 7  A  b d   3 e   d 8   7 9   6 8   4 e   4 c   b b   e b   0 7   d 2   5 3   0 7   6 0   5 1   7 a  A  b d   3 e   d 8   7 9   6 8   4 e   4 c   b b   e b   0 7   d 2   5 3   0 7   6 0   5 1   7 a  A  6 0   0 0   1 f   c d   b 9   e 3   7 5   f 3   b b   9 4   d 3   0 f   d d   a 0   5 0   b e  A  6 0   0 0   1 f   c d   b 9   e 3   7 5   f 3   b b   9 4   d 3   0 f   d d   a 0   5 0   b e  A  2 e   0 2   8 b   0 d   f e   2 7   4 b   4 4   f 1   3 6   7 8   0 f   1 8   3 2   4 b   f e  A  2 e   0 2   8 b   0 d   f e   2 7   4 b   4 4   f 1   3 6   7 8   0 f   1 8   3 2   4 b   f e  A  0 e   a 8   c 8   3 9   2 0   5 1   6 9   7 1   5 b   6 c   d 9   1 3   2 1   c b   b c   3 a  A  0 e   a 8   c 8   3 9   2 0   5 1   6 9   7 1   5 b   6 c   d 9   1 3   2 1   c b   b c   3 a  A  b c   9 3   7 7   a 4   2 3   8 6   b 9   3 5   b 4   2 2   6 7   a 8   c 0   b 1   a 1   2 7  A  b c   9 3   7 7   a 4   2 3   8 6   b 9   3 5   b 4   2 2   6 7   a 8   c 0   b 1   a 1   2 7  A  f b   2 1   6 f   6 8   7 a   4 f   2 6   2 1   7 e   7 f   d e   0 4   a a   5 2   8 4   a f  A  f b   2 1   6 f   6 8   7 a   4 f   2 6   2 1   7 e   7 f   d e   0 4   a a   5 2   8 4   a f  A  8 7   d 0   3 7   c e   6 d   b a   0 5   e a   b e   0 c   5 d   9 1   7 0   f 4   e 9   4 1  A  8 7   d 0   3 7   c e   6 d   b a   0 5   e a   b e   0 c   5 d   9 1   7 0   f 4   e 9   4 1  A  2 6   3 5   a a   6 a   1 2   1 5   a 4   9 1   5 6   c 2   b b   8 b   9 0   4 8   8 1   3 3  A  2 6   3 5   a a   6 a   1 2   1 5   a 4   9 1   5 6   c 2   b b   8 b   9 0   4 8   8 1   3 3  A  f a   c 2   e 8   d d   c 6   5 c   3 a   0 e   8 a   3 d   7 0   3 2   5 d   c 3   6 0   b 2  A  f a   c 2   e 8   d d   c 6   5 c   3 a   0 e   8 a   3 d   7 0   3 2   5 d   c 3   6 0   b 2  A  a 8   2 c   b d   0 8   c f   6 7   5 6   e 6   a 0   9 0   c 3   7 3   9 8   5 0   0 a   a 7  A  a 8   2 c   b d   0 8   c f   6 7   5 6   e 6   a 0   9 0   c 3   7 3   9 8   5 0   0 a   a 7  A  8 a   c 5   6 a   9 9   7 7   9 9   8 e   4 a   7 2   2 7   6 e   7 f   9 4   0 b   4 5   e 4  A  8 a   c 5   6 a   9 9   7 7   9 9   8 e   4 a   7 2   2 7   6 e   7 f   9 4   0 b   4 5   e 4  A  5 8   3 d   9 8   6 b   7 6   6 e   a c   8 b   e 3   9 7   e 0   0 4   d 0   8 1   b d   8 9  A  5 8   3 d   9 8   6 b   7 6   6 e   a c   8 b   e 3   9 7   e 0   0 4   d 0   8 1   b d   8 9  A  d d   b f   6 b   1 7   4 8   5 8   d b   9 6   f 4   8 d   b e   7 b   e d   d b   d 6   e 0  A  d d   b f   6 b   1 7   4 8   5 8   d b   9 6   f 4   8 d   b e   7 b   e d   d b   d 6   e 0  A  9 8   c f   3 e   8 5   e 9   5 a   9 0   0 9   5 d   e 5   b b   0 5   7 d   e d   5 c   c 3  A  9 8   c f   3 e   8 5   e 9   5 a   9 0   0 9   5 d   e 5   b b   0 5   7 d   e d   5 c   c 3  A  1 f   0 8   f c   f 5   8 b   6 5   c e   f 4   7 9   4 8   e 2   2 9   0 5   0 5   a e   a 7  A  1 f   0 8   f c   f 5   8 b   6 5   c e   f 4   7 9   4 8   e 2   2 9   0 5   0 5   a e   a 7  A  d d   3 9   4 2   d 3   2 e   4 1   b 6   3 e   3 d   c 4   a 3   b d   b 0   0 7   7 3   1 b  A  d d   3 9   4 2   d 3   2 e   4 1   b 6   3 e   3 d   c 4   a 3   b d   b 0   0 7   7 3   1 b  A  b 7   1 8   7 4   2 a   e a   3 9   e f   e d   d 1   4 b   8 f   5 d   d 6   4 7   c 9   5 6  A  b 7   1 8   7 4   2 a   e a   3 9   e f   e d   d 1   4 b   8 f   5 d   d 6   4 7   c 9   5 6  A  4 4   0 6   3 c   9 2   7 b   b 0   2 1   9 0   5 9   c b   5 f   e e   2 8   d 7   e 7   4 a  A  4 4   0 6   3 c   9 2   7 b   b 0   2 1   9 0   5 9   c b   5 f   e e   2 8   d 7   e 7   4 a  A  d 1   b 0   9 7   5 a   3 f   3 8   d 7   b e   8 2   b 0   f 0   4 f   9 9   f 8   c 6   3 f  A  d 1   b 0   9 7   5 a   3 f   3 8   d 7   b e   8 2   b 
+	Block seqno 364, will claim, DVA[0]=<1:535000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=334L/334P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000016c
+		TX_WRITE            len   1096, txg 334, seq 350
+			foid 400, offset 1000, length 388
+			0   f 0   4 f   9 9   f 8   c 6   3 f  A  5 7   0 e   a 3   f 0   0 c   e d   f 1   a 0   9 b   e 1   0 9   7 6   8 9   b 3   7 a   c 2  A  5 7   0 e   a 3   f 0   0 c   e d   f 1   a 0   9 b   e 1   0 9   7 6   8 9   b 3   7 a   c 2  A  1 b   2 5   4 d   4 c   6 a   0 7   6 4   f 4   8 5   d a   4 0   9 c   8 e   7 c   2 5   d 3  A  1 b   2 5   4 d   4 c   6 a   0 7   6 4   f 4   8 5   d a   4 0   9 c   8 e   7 c   2 5   d 3  A  3 9   4 c   1 8   8 2   6 4   7 8   4 6   0 0   c 5   e e   1 e   4 6   f a   b 5   8 d   d 8  A  3 9   4 c   1 8   8 2   6 4   7 8   4 6   0 0   c 5   e e   1 e   4 6   f a   b 5   8 d   d 8  A  d 7   a 5   b c   a 3   8 f   c 3   f 7   6 0   2 a   2 2   1 5   e b   d 1   a 5   b 1   9 0  A  d 7   a 5   b c   a 3   8 f   c 3   f 7   6 0   2 a   2 2   1 5   e b   d 1   a 5   b 1   9 0  A  5 f   7 4   c a   7 5   d 8   6 f   1 2   e 6   6 1   7 c   a 1   7 f   0 4   9 d   c a   3 3  A  5 f   7 4   c a   7 5   d 8   6 f   1 2   e 6   6 1   7 c   a 1   7 f   0 4   9 d   c a   3 3  A  b 6   7 a   3 e   f 8   2 b   b 7   1 d   8 0   3 4   e b   d c   4 4   9 f   d 2   9 7   c 0  A  b 6   7 a   3 e   f 8   2 b   b 7   1 d   8 0   3 4   e b   d c   4 4   9 f   d 2   9 7   c 0  A  0 8   5 2   9 9   e f   6 4   f 1   e 9   9 0   5 e   d 0   4 1   9 9   f 7   5 2   5 7   c 6  A  0 8   5 2   9 9   e f   6 4   f 1   e 9   9 0   5 e   d 0   4 1   9 9   f 7   5 2   5 7   c 6  A  d 7   2 2   5 4   5 f   9 5   2 f   2 7   1 8   5 f   2 4   8 4   c f   2 9   2 c   e b   5 3  A  d 7   2 2   5 4   5 f   9 5   2 f   2 7   1 8   5 f   2 4   8 4   c f   2 9   2 c   e b   5 3  A  4 e   5 3   5 b   2 0   f 9   0 3   c a   e a   3 7   a 2   d c   0 5   6 4   d 3   3 4   6 a  A  4 e   5 3   5 b   2 0   f 9   0 3   c a   e a   3 7   a 2   d c   0 5   6 4   d 3   3 4   6 a  A  b 
+	Block seqno 365, will claim, DVA[0]=<1:537000:2000> [L0 ZIL intent log] zilog2 uncompressed unencrypted LE contiguous unique single size=2000L/2000P birth=335L/335P fill=0 cksum=b91b3284e4c89001:372e8496a3eaa1ad:0000000000000054:000000000000016d
+
+		Total               15
+		TX_CREATE            5
+		TX_MKDIR             0
+		TX_MKXATTR           0
+		TX_SYMLINK           0
+		TX_REMOVE            0
+		TX_RMDIR             0
+		TX_LINK              0
+		TX_RENAME            0
+		TX_WRITE            10
+		TX_TRUNCATE          0
+		TX_SETATTR           0
+		TX_ACL_V0            0
+		TX_ACL_ACL           0
+		TX_CREATE_ACL        0
+		TX_CREATE_ATTR       0
+		TX_CREATE_ACL_ATTR   0
+		TX_MKDIR_ACL         0
+		TX_MKDIR_ATTR        0
+		TX_MKDIR_ACL_ATTR    0
+		TX_WRITE2            0
+		TX_SETSAXATTR        0
+		TX_RENAME_EXCHANGE   0
+		TX_RENAME_WHITEOUT   0
+		TX_CLONE_RANGE       0
+
+
+    Deadlist: 0 (0/0 comp), 4 entries
+
+    mintxg 0 -> obj 391: object 391, 0 blkptrs, 0
+
+    mintxg 1 -> obj 391: object 391, 0 blkptrs, 0
+
+    mintxg 108 -> obj 391: object 391, 0 blkptrs, 0
+
+    mintxg 173 -> obj 391: object 391, 0 blkptrs, 0
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         0    6   128K    16K    80K     512   208K   14.66  DMU dnode (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 12
+Indirect blocks:
+               0 L5      0:9487000:1000 0:b010000:1000 20000L/1000P F=61 B=237/237 cksum=00000086cfd08982:0001f0306895f1d3:0393b671791318ab:69ca06f418305106
+               0  L4     0:9486000:1000 0:b00f000:1000 20000L/1000P F=61 B=237/237 cksum=000000871bc25a58:0001f160bff5678c:039618a709d7c94a:6cfa38f5638b5054
+               0   L3    0:9485000:1000 0:b00e000:1000 20000L/1000P F=61 B=237/237 cksum=00000087fae13ee4:0001f4c81bb2967d:039cbfb384a2c2d8:75a753029f01551c
+               0    L2   0:9484000:1000 0:b00d000:1000 20000L/1000P F=61 B=237/237 cksum=00000086a45b2733:0001ef8868422ad0:03927179675562c8:6826a7fdfab4c3f2
+               0     L1  0:9483000:1000 0:b00c000:1000 20000L/1000P F=61 B=237/237 cksum=000000998d579faa:0002174ca5f934f5:03a96b27e3e8e981:4b95ef5df5cf9f6a
+               0      L0 0:91bf000:1000 0:16b1000:1000 4000L/1000P F=18 B=192/192 cksum=000000765bca3a24:00015baf0b70d746:0212685cc00c73bf:2e39facb8c7b6cad
+            4000      L0 0:9438000:1000 0:17ed000:1000 4000L/1000P F=5 B=233/233 cksum=0000002a5ef1a57e:000099589375f8ad:011673b68ca317cb:52436e35473b22b1
+           10000      L0 0:9482000:1000 0:b00b000:1000 4000L/1000P F=10 B=237/237 cksum=00000050a6e4d3d0:000109dbfdf7f5eb:01bcf042a58fb5aa:f7d2ec66545d397b
+           20000      L0 0:90b3000:1000 0:161a000:1000 4000L/1000P F=14 B=169/169 cksum=000000649d4a78da:000142c1aa6e1f47:0210914be85fc344:4c8b458294a5e45d
+           30000      L0 0:9394000:1000 0:1795000:1000 4000L/1000P F=14 B=222/222 cksum=00000068b42fd5d0:00015182622a9b75:022a7ed261a08ef8:6a6671999f5b41e9
+
+		segment [0000000000000200, 0000000000002600) size    9K
+		segment [0000000000004000, 0000000000004a00) size 2.50K
+		segment [0000000000010000, 0000000000011400) size    5K
+		segment [0000000000020000, 0000000000021c00) size    7K
+		segment [0000000000030000, 0000000000031c00) size    7K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -1    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 56 
+		0 = 1024000 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=237
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -2    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 56 
+		0 = 1024000 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=237
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -3    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 56 
+		0 = 1024000 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=237
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         1    1   128K     1K     8K     512     1K  100.00  ZFS master node (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1024 bytes, 13 entries
+
+		defaultprojectobjquota = 0 
+		ROOT = 34 
+		DELETE_QUEUE = 33 
+		defaultuserobjquota = 0 
+		utf8only = 0 
+		normalization = 0 
+		defaultprojectquota = 0 
+		VERSION = 5 
+		SA_ATTRS = 32 
+		defaultuserquota = 0 
+		defaultgroupobjquota = 0 
+		casesensitivity = 0 
+		defaultgroupquota = 0 
+Indirect blocks:
+               0 L0 0:ad000:1000 0:10ad000:1000 400L/400P F=1 B=15/15 cksum=00000013d6eaf94f:00000c39a927958a:00043c227926b0e2:0110fb02c9f21ef6
+
+		segment [0000000000000000, 0000000000000400) size    1K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         2    1   128K  1.50K     8K     512  1.50K  100.00  ZFS directory (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	43
+	mode	40755
+	size	24
+	parent	34
+	links	3
+	pflags	840800000144
+	projid	0
+	microzap: 1536 bytes, 22 entries
+
+		b4 = 258 (type: Regular File)
+		b18 = 132 (type: Regular File)
+		b12 = 265 (type: Regular File)
+		b15 = 130 (type: Regular File)
+		b9 = 389 (type: Regular File)
+		b3 = 7 (type: Regular File)
+		hard = 5 (type: Regular File)
+		b7 = 261 (type: Regular File)
+		b11 = 10 (type: Regular File)
+		b16 = 12 (type: Regular File)
+		b0 = 4 (type: Regular File)
+		b2 = 257 (type: Regular File)
+		b8 = 262 (type: Regular File)
+		b14 = 393 (type: Regular File)
+		b13 = 391 (type: Regular File)
+		sub = 3 (type: Directory)
+		b19 = 267 (type: Regular File)
+		b5 = 259 (type: Regular File)
+		b1 = 256 (type: Regular File)
+		b17 = 14 (type: Regular File)
+		b10 = 8 (type: Regular File)
+		b6 = 260 (type: Regular File)
+Indirect blocks:
+               0 L0 0:7129000:1000 0:127e000:1000 600L/600P F=1 B=46/46 cksum=00000010b5824ccd:00000daabb63fb6f:000722ac11459dce:02ca56adf2428c3b
+
+		segment [0000000000000000, 0000000000000600) size 1.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         3    1   128K    512      0     512    512  100.00  ZFS directory (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/sub
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	40755
+	size	3
+	parent	2
+	links	2
+	pflags	840800000144
+	projid	0
+	microzap: 512 bytes, 1 entries
+
+		link = 15 (type: Symbolic Link)
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/2fP B=46
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         4    1   128K    512     4K     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b0
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	512
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7083000:1000 200L/200P F=1 B=46/46 cksum=0000003fced8593b:000010d80a378685:0002ed98973b1a1e:006130700955870d
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         5    1   128K     2K     4K     512     2K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/hard
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	1704
+	parent	2
+	links	2
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7126000:1000 800L/800P F=1 B=46/46 cksum=0000005e92e4233a:00006d5cd4b29c31:004a3a879a1e6ec2:25270e18c07646f2
+
+		segment [0000000000000000, 0000000000000800) size    2K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         6    1   128K     4K     4K     512     4K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	3709
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:707f000:1000 1000L/1000P F=1 B=46/46 cksum=000000cdbdc8ced3:0001c555d6e41fcc:02674e6b0f7cd815:6e067bde034580f8
+
+		segment [0000000000000000, 0000000000001000) size    4K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         7    1   128K  6.50K     8K     512  6.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b3
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	6656
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7112000:2000 1a00L/1a00P F=1 B=46/46 cksum=00000349aaec45ab:000aac4b07b78a51:173b7dc437bddd7f:ff7c2e168fef9b29
+
+		segment [0000000000000000, 0000000000001a00) size 6.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         8    1   128K  20.5K    24K     512  20.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b10
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	20992
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:708c000:6000 5200L/5200P F=1 B=46/46 cksum=00000a394696d80e:00693c8c260d88f7:d167151c2971addd:2c9cca6501092f94
+
+		segment [0000000000000000, 0000000000005200) size 20.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         9    1   128K  47.5K    20K     512  47.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f11.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	48621
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7099000:5000 be00L/5000P F=1 B=46/46 cksum=0000049241dce098:002dcdfa6b2b04cc:32a04f4ecba4a245:1c1eff45b37dcddd
+
+		segment [0000000000000000, 000000000000be00) size 47.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        10    1   128K  22.5K    24K     512  22.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b11
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	23040
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70fc000:6000 5a00L/5a00P F=1 B=46/46 cksum=00000b52646f4b90:007f32d9ee9c2143:b75ccf3207e0ca20:0ca678d014fae04d
+
+		segment [0000000000000000, 0000000000005a00) size 22.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        11    1   128K   100K    44K     512   100K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f16.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	102756
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70aa000:b000 19200L/b000P F=1 B=46/46 cksum=0000097f218d621b:00d9d618b08feca5:6ecb0ddb40bf7566:8a5895cdd86f2c2b
+
+		segment [0000000000000000, 0000000000019200) size  100K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        12    1   128K  32.5K    36K     512  32.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b16
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	33280
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:704e000:9000 8200L/8200P F=1 B=46/46 cksum=000010381c3428a2:01080510014fd600:2b61251f3ba6241b:f635de901453e53c
+
+		segment [0000000000000000, 0000000000008200) size 32.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        13    1   128K   114K    48K     512   114K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f17.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	115989
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70b5000:c000 1c600L/c000P F=1 B=46/46 cksum=00000a9d5b404112:01022b0c5d70e10e:10dd9d4493893cb4:12e28fec846cbd4a
+
+		segment [0000000000000000, 000000000001c600) size  114K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        14    1   128K  34.5K    36K     512  34.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b17
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	35328
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70ec000:9000 8a00L/8a00P F=1 B=46/46 cksum=000011397cea3d11:012a5cfd68267e01:67614611ec823ba3:b0bf07925b6f72fd
+
+		segment [0000000000000000, 0000000000008a00) size 34.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        15    1   128K    512      0     512    512    0.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               185   bonus  System attributes
+	dnode flags: USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/sub/link
+	target	../f1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	120777
+	size	9
+	parent	3
+	links	1
+	pflags	40800000104
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        16    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	87
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:73ac000:1000 1800L/1000P F=1 B=87/87 cksum=0000009e870d521f:0001a702748742ce:0266879ae73c3383:7b8ae03b39f9ec0a
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        17    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	102
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:74e4000:1000 1e00L/1000P F=1 B=104/104 cksum=000000bc30f94d94:0001b25c57385b00:024f64a5fd1a0320:536b71925082ee53
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        18    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:39 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:39 2026
+	gen	188
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:91be000:1000 c00L/c00P F=1 B=192/192 cksum=000000a4d79a95aa:0000ffa18c7d852a:010142c8ac72feed:c21dac84d8beb2c2
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        32    1   128K    512      0     512    512  100.00  SA master node (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		REGISTRY = 35 
+		LAYOUTS = 36 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/41P B=15
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        33    1   128K    512      0     512    512  100.00  ZFS delete queue (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/1cP B=15
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        34    1   128K  2.50K     8K     512  2.50K  100.00  ZFS directory (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:35 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:35 2026
+	gen	15
+	mode	40755
+	size	35
+	parent	34
+	links	3
+	pflags	840800000144
+	projid	0
+	microzap: 2560 bytes, 33 entries
+
+		f14.txt = 392 (type: Regular File)
+		f13.txt = 266 (type: Regular File)
+		dir = 2 (type: Directory)
+		r1-1.txt = 395 (type: Regular File)
+		f0.txt = 128 (type: Regular File)
+		r2-0.txt = 18 (type: Regular File)
+		f7.txt = 387 (type: Regular File)
+		f9.txt = 263 (type: Regular File)
+		r0-1.txt = 135 (type: Regular File)
+		r1-0.txt = 268 (type: Regular File)
+		f12.txt = 264 (type: Regular File)
+		f15.txt = 394 (type: Regular File)
+		r0-0.txt = 134 (type: Regular File)
+		f8.txt = 388 (type: Regular File)
+		r2-1.txt = 396 (type: Regular File)
+		f6.txt = 386 (type: Regular File)
+		f1.txt = 129 (type: Regular File)
+		r0-3.txt = 17 (type: Regular File)
+		f2.txt = 5 (type: Regular File)
+		r2-2.txt = 397 (type: Regular File)
+		f5.txt = 385 (type: Regular File)
+		r1-3.txt = 269 (type: Regular File)
+		f16.txt = 11 (type: Regular File)
+		f11.txt = 9 (type: Regular File)
+		f18.txt = 131 (type: Regular File)
+		r2-3.txt = 137 (type: Regular File)
+		f4.txt = 384 (type: Regular File)
+		f3.txt = 6 (type: Regular File)
+		r0-2.txt = 16 (type: Regular File)
+		f19.txt = 133 (type: Regular File)
+		f10.txt = 390 (type: Regular File)
+		f17.txt = 13 (type: Regular File)
+		r1-2.txt = 136 (type: Regular File)
+Indirect blocks:
+               0 L0 0:9436000:1000 0:17eb000:1000 a00L/a00P F=1 B=233/233 cksum=00000026824f87b7:00003773e8255b02:002efea492bf4677:1d6004cc744392c4
+
+		segment [0000000000000000, 0000000000000a00) size 2.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        35    1   128K  1.50K     8K     512  1.50K  100.00  SA attr registration (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1536 bytes, 22 entries
+
+		ZPL_PAD =  2000000e : [32:0:14]
+		ZPL_MTIME =  10000001 : [16:0:1]
+		ZPL_DACL_ACES =  40013 : [0:4:19]
+		ZPL_CTIME =  10000002 : [16:0:2]
+		ZPL_FLAGS =  800000b : [8:0:11]
+		ZPL_SYMLINK =  30011 : [0:3:17]
+		ZPL_MODE =  8000005 : [8:0:5]
+		ZPL_SIZE =  8000006 : [8:0:6]
+		ZPL_XATTR =  8000009 : [8:0:9]
+		ZPL_GID =  800000d : [8:0:13]
+		ZPL_DACL_COUNT =  8000010 : [8:0:16]
+		ZPL_PARENT =  8000007 : [8:0:7]
+		ZPL_GEN =  8000004 : [8:0:4]
+		ZPL_LINKS =  8000008 : [8:0:8]
+		ZPL_SCANSTAMP =  20030012 : [32:3:18]
+		ZPL_ATIME =  10000000 : [16:0:0]
+		ZPL_PROJID =  8000015 : [8:0:21]
+		ZPL_ZNODE_ACL =  5803000f : [88:3:15]
+		ZPL_UID =  800000c : [8:0:12]
+		ZPL_DXATTR =  30014 : [0:3:20]
+		ZPL_RDEV =  800000a : [8:0:10]
+		ZPL_CRTIME =  10000003 : [16:0:3]
+Indirect blocks:
+               0 L0 0:af000:1000 0:10af000:1000 600L/600P F=1 B=15/15 cksum=000000127872116c:00000de5e3ed93b4:0006f1978b66cf50:02a714897b59349c
+
+		segment [0000000000000000, 0000000000000600) size 1.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        36    1   128K    16K    16K     512    32K  100.00  SA attr layouts (K=inherit) (Z=inherit=lz4)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 1
+	Fat ZAP stats:
+		Pointer table:
+			1024 elements
+			zt_blk: 0
+			zt_numblks: 0
+			zt_shift: 10
+			zt_blks_copied: 0
+			zt_nextblk: 0
+		ZAP entries: 3
+		Leaf blocks: 1
+		Total blocks: 2
+		zap_block_type: 0x8000000000000001
+		zap_magic: 0x2f52ab2ab
+		zap_salt: 0x1a46357e9
+		Leafs with 2^n pointers:
+			  9:      1 *
+		Blocks with n*5 entries:
+			  0:      1 *
+		Blocks n/10 full:
+			  1:      1 *
+		Entries with n chunks:
+			  4:      3 ***
+		Buckets with n entries:
+			  0:    509 ****************************************
+			  1:      3 *
+
+		2 = [ 5  6  4  12  13  7  11  0  1  2  3  8  21  16  19 ]
+		3 = [ 5  6  4  12  13  7  11  0  1  2  3  8  16  19 ]
+		4 = [ 5  6  4  12  13  7  11  0  1  2  3  8  16  19  17 ]
+Indirect blocks:
+               0 L0 0:709f000:1000 0:127c000:1000 4000L/1000P F=1 B=46/46 cksum=0000001247cd5622:000047d203001151:008d3b1db03dcc09:b95768f2555db5ac
+            4000 L0 0:709e000:1000 0:127b000:1000 4000L/1000P F=1 B=46/46 cksum=00000075de292ff9:000115060b10088f:0176635e16388abf:72209b59e7781375
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       128    1   128K    512      0     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	100
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/47P B=46
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       129    1   128K    512     4K     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	501
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7080000:1000 200L/200P F=1 B=46/46 cksum=0000001b8b6363d1:00000753c9f01c52:0001463f452abb18:002a8f4ce77ff70f
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       130    1   128K  30.5K    32K     512  30.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b15
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	31232
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7084000:8000 7a00L/7a00P F=1 B=46/46 cksum=00000f41a41ec083:00e7b84d6820fdeb:2ec8a756d4301b2a:c07f96f29b9a139d
+
+		segment [0000000000000000, 0000000000007a00) size 30.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       131    1   128K   127K    56K     512   127K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f18.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	130024
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70c6000:e000 1fc00L/e000P F=1 B=46/46 cksum=00000bf128eac522:0161cbb1d97fad35:ca7a0a69929008df:58baad238fd82d74
+
+		segment [0000000000000000, 000000000001fc00) size  127K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       132    1   128K  36.5K    40K     512  36.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b18
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	37376
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70e0000:a000 9200L/9200P F=1 B=46/46 cksum=0000125260840cc6:014d55b2d7782a99:d1ed40210dd5f338:3ac0a80c63674dc3
+
+		segment [0000000000000000, 0000000000009200) size 36.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       133    2   128K   128K    72K     512   256K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 1
+	path	/f19.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	144861
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L1  0:712d000:1000 0:1282000:1000 20000L/1000P F=2 B=46/46 cksum=0000008b8cb84fd1:0001fe0b057e4028:03a6ea49ca6dd457:79eefff2313bcadb
+               0  L0 0:7118000:e000 20000L/e000P F=1 B=46/46 cksum=00000c49841b3c0d:016a8c4662cce842:6b3210e82d8c14de:0ac9c0fda2074612
+           20000  L0 0:70ea000:2000 20000L/2000P F=1 B=46/46 cksum=000001d945a8f4e5:0007ed882108b4cb:14e12c411cb6ff9d:8763ce31aad01bb0
+
+		segment [0000000000000000, 0000000000040000) size  256K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       134    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	57
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7221000:1000 c00L/c00P F=1 B=61/61 cksum=000000a73f138f02:000101ddfae16de6:0103c36c209da157:c426c74d51c8a2d0
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       135    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	72
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:730b000:2000 1200L/1200P F=1 B=76/76 cksum=000000f1f3f7b1c7:00023106a6e8b15d:034e30082f3e83be:bb9b8655eefd8f88
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       136    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	153
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:77b6000:1000 1800L/1000P F=1 B=157/157 cksum=0000009d4b263daa:0001b02d1aa2156c:027e28fac0949f04:98ae1895ea21ac18
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       137    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:39 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:39 2026
+	gen	233
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:9481000:1000 1e00L/1000P F=1 B=237/237 cksum=000000c831d2db6d:0001d79369890fcb:02866338dfa7de60:8a6c6523e5c9bd3c
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       256    1   128K  2.50K     4K     512  2.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b1
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	2560
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7127000:1000 a00L/a00P F=1 B=46/46 cksum=00000149a8fecd10:00019a0c5066c949:0155d3d2dfa0f7a4:d6b3f6a41942eca8
+
+		segment [0000000000000000, 0000000000000a00) size 2.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       257    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b2
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	4608
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70d8000:2000 1200L/1200P F=1 B=46/46 cksum=0000024623351e74:000523ea5b166bc8:07bf56d2a24756a2:c0aa6c12cac8b59b
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       258    1   128K  8.50K    12K     512  8.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b4
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	8704
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7092000:3000 2200L/2200P F=1 B=46/46 cksum=00000449e81c7239:001262987c663103:34707e3032a56893:05c126b77b73fb0f
+
+		segment [0000000000000000, 0000000000002200) size 8.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       259    1   128K  10.5K    12K     512  10.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b5
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	10752
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:710f000:3000 2a00L/2a00P F=1 B=46/46 cksum=0000053d28a839e0:001b5b2f850a150a:5f9ab496c8b76918:11b7a2ab1214dd18
+
+		segment [0000000000000000, 0000000000002a00) size 10.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       260    1   128K  12.5K    16K     512  12.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b6
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	12800
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70d4000:4000 3200L/3200P F=1 B=46/46 cksum=0000063a15fb1b27:00268bd66fbbfab2:a04de05af1e2e369:0a7285ded8cb7700
+
+		segment [0000000000000000, 0000000000003200) size 12.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       261    1   128K  14.5K    16K     512  14.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b7
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	14848
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7020000:4000 3a00L/3a00P F=1 B=46/46 cksum=0000072779d1da52:003406a1df011c80:fbb4f1d2bb103e7a:7479553fdf12691c
+
+		segment [0000000000000000, 0000000000003a00) size 14.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       262    1   128K  16.5K    20K     512  16.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b8
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	16896
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7066000:5000 4200L/4200P F=1 B=46/46 cksum=00000856e926c8ca:0044c40f36c36afb:795d659da9233a06:7ade5a45263eaa5d
+
+		segment [0000000000000000, 0000000000004200) size 16.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       263    1   128K    32K    16K     512    32K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f9.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	32581
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7114000:4000 8000L/4000P F=1 B=46/46 cksum=00000303229de7ff:001c135bdeb72c20:99335d02e8e6ca25:2c3350184c3652a5
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       264    1   128K  56.5K    24K     512  56.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f12.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	57844
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70da000:6000 e200L/6000P F=1 B=46/46 cksum=00000566582de5ca:0042c991776f19af:15b0a2de400a6d97:9861eace1af0d2b1
+
+		segment [0000000000000000, 000000000000e200) size 56.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       265    1   128K  24.5K    28K     512  24.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b12
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	25088
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:705f000:7000 6200L/6200P F=1 B=46/46 cksum=00000c10375e1ce9:0094278350f5ef67:bf1d10e4debd167a:e77788632cc127db
+
+		segment [0000000000000000, 0000000000006200) size 24.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       266    1   128K  66.5K    28K     512  66.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f13.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	67869
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:706e000:7000 10a00L/7000P F=1 B=46/46 cksum=00000657af0d7350:00595a7b1e80202f:42c739a7342cb953:584801da865588c3
+
+		segment [0000000000000000, 0000000000010a00) size 66.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       267    1   128K  38.5K    40K     512  38.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b19
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	46
+	mode	100644
+	size	39424
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70a0000:a000 9a00L/9a00P F=1 B=46/46 cksum=000013330f950eff:0172121cff97d661:8bc145e255e39427:aa6e221d375bae37
+
+		segment [0000000000000000, 0000000000009a00) size 38.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       268    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	123
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:75e5000:1000 c00L/c00P F=1 B=127/127 cksum=000000a314febeb6:0000f9bc3a45d698:00fab6801c5389f1:bce23e24a3eeff56
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       269    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:39 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:39 2026
+	gen	168
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:90b2000:1000 1e00L/1000P F=1 B=169/169 cksum=000000c7fd0f6c0c:0001d4c2220442fe:02808d052d6d4293:847ca0609c2066fe
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       384    1   128K  6.50K     4K     512  6.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f4.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	6516
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7098000:1000 1a00L/1000P F=1 B=46/46 cksum=000000a60fb3faf4:0001a533ec2dc9f3:02534797697eab56:5eb29865574c8e06
+
+		segment [0000000000000000, 0000000000001a00) size 6.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       385    1   128K    10K     8K     512    10K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f5.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	10125
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7081000:2000 2800L/2000P F=1 B=46/46 cksum=000001075b9443c2:0006039771c12a5b:1265ea2813e0123d:09defb8cb13f6e70
+
+		segment [0000000000000000, 0000000000002800) size   10K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       386    1   128K  14.5K     8K     512  14.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f6.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	14536
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:701e000:2000 3a00L/2000P F=1 B=46/46 cksum=000001688fbe649d:0006f93777df5025:1392e91a62a2e18d:f235f4f108188d08
+
+		segment [0000000000000000, 0000000000003a00) size 14.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       387    1   128K  19.5K    12K     512  19.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f7.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	19749
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:706b000:3000 4e00L/3000P F=1 B=46/46 cksum=000001d23b7e4de9:000e864400f682b3:3f1bb99532f9d495:4d4588bcf093e8b4
+
+		segment [0000000000000000, 0000000000004e00) size 19.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       388    1   128K  25.5K    12K     512  25.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f8.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	25764
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7095000:3000 6600L/3000P F=1 B=46/46 cksum=0000025607bffd73:000fee4ba5cc583e:41d976501cc6e45e:59ea951f7a6c9725
+
+		segment [0000000000000000, 0000000000006600) size 25.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       389    1   128K  18.5K    20K     512  18.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b9
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	18944
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70c1000:5000 4a00L/4a00P F=1 B=46/46 cksum=000009326c59cda8:005582ecfe591405:124f5f0976bd2e80:4e750d962402330d
+
+		segment [0000000000000000, 0000000000004a00) size 18.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       390    1   128K  39.5K    20K     512  39.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f10.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	40200
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7102000:5000 9e00L/5000P F=1 B=46/46 cksum=000003962f2c86e8:002a4d7b2390b800:23586b16f3341dcd:3a25165e17a59d0a
+
+		segment [0000000000000000, 0000000000009e00) size 39.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       391    1   128K  26.5K    28K     512  26.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b13
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	27136
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:70f5000:7000 6a00L/6a00P F=1 B=46/46 cksum=00000d4b6574d768:00afb7f2426c785b:115318b8d5b50c8f:a5afe1c8c0fa50a6
+
+		segment [0000000000000000, 0000000000006a00) size 26.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       392    1   128K    77K    32K     512    77K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f14.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	78696
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7107000:8000 13400L/8000P F=1 B=46/46 cksum=0000074f63f8eb65:0074683c05fe67f2:d8ebf708279492f5:29c955bfd161bce6
+
+		segment [0000000000000000, 0000000000013400) size   77K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       393    1   128K  28.5K    32K     512  28.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b14
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	29184
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7057000:8000 7200L/7200P F=1 B=46/46 cksum=00000e482f672fb8:00cbdc87768be586:8d2972203a17f887:8ec3d6ee04db6d95
+
+		segment [0000000000000000, 0000000000007200) size 28.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       394    1   128K  88.5K    40K     512  88.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f15.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:37 2026
+	mtime	Fri Nov 27 14:54:37 2026
+	ctime	Fri Nov 27 14:54:37 2026
+	crtime	Fri Nov 27 14:54:37 2026
+	gen	46
+	mode	100644
+	size	90325
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:7075000:a000 16200L/a000P F=1 B=46/46 cksum=00000856a67c8897:00b37660c6af728c:613b2e1897393913:53d54c27c305d7d9
+
+		segment [0000000000000000, 0000000000016200) size 88.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       395    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:38 2026
+	mtime	Fri Nov 27 14:54:38 2026
+	ctime	Fri Nov 27 14:54:38 2026
+	crtime	Fri Nov 27 14:54:38 2026
+	gen	138
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:76cb000:2000 1200L/1200P F=1 B=142/142 cksum=000000fbbe16e163:000243f79048c3f1:036734057982ad94:d611447014fc8e3c
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       396    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:39 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:39 2026
+	gen	203
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:92a8000:2000 1200L/1200P F=1 B=207/207 cksum=000000f7ffbdf8e7:00023b1d13b8431f:035a8fa7afe7df7c:c940d614f35cceb5
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       397    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=lz4)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:39 2026
+	mtime	Fri Nov 27 14:54:39 2026
+	ctime	Fri Nov 27 14:54:39 2026
+	crtime	Fri Nov 27 14:54:39 2026
+	gen	218
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:9393000:1000 1800L/1000P F=1 B=222/222 cksum=000000924eacecbc:00018aa156a6891a:02402a9971d5a7b2:54ce34e802e65f40
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Dnode slots:
+	Total used:            61
+	Max used:             397
+	Percent empty:  84.634761
+

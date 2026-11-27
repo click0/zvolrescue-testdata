@@ -1,0 +1,34 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-slog'
+    state: 0
+    txg: 4
+    pool_guid: 12192555647927415504
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 4096
+    hostid: 401656158
+    hostname: 'runnervm3lb7s'
+    top_guid: 15509735456009775637
+    guid: 15509735456009775637
+    is_log: 1
+    vdev_children: 2
+    vdev_tree:
+        type: 'file'
+        id: 1
+        guid: 15509735456009775637
+        path: '/var/tmp/sat/members/log-0.img'
+        metaslab_array: 135
+        metaslab_shift: 24
+        ashift: 12
+        asize: 129499136
+        min_alloc: 4096
+        is_log: 1
+        create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

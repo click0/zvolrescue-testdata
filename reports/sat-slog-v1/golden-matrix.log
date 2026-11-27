@@ -1,0 +1,6 @@
+sat-slog-v1 pass       control-sat-slog                 expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-slog-v1 pass       member-sat-slog-log-gone         expected bit-exact | reconstructed actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-slog-v1 pass       member-sat-slog-log-zeroed       expected bit-exact | reconstructed actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan refused  report bit-exact
+sat-slog-v1 pass       member-sat-slog-mirror-half      expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-slog-v1: 100 manifest(s) written for another pool, not run here
+sat-slog-v1: 4 pass

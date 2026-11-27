@@ -1,0 +1,386 @@
+[
+ {
+  "id": "control-sat-slog",
+  "description": "Nothing damaged and nothing told, on the satellite with a separate intent log it never applied: the pool as it was when it froze: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-slog/vm/disk-8k": "ok",
+   "sat-slog/vm/disk-16k": "ok",
+   "sat-slog/vm/disk-sync": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-slog": "ok",
+    "sat-slog/fs": "ok",
+    "sat-slog/fs@s0": "ok",
+    "sat-slog/fs@s1": "ok",
+    "sat-slog/fs@s2": "ok",
+    "sat-slog/vm": "ok",
+    "sat-slog/vm@s0": "ok",
+    "sat-slog/vm@s1": "ok",
+    "sat-slog/vm@s2": "ok",
+    "sat-slog@s0": "ok",
+    "sat-slog@s1": "ok",
+    "sat-slog@s2": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 240": "ok",
+    "txg 240 features": "ok",
+    "txg 237": "ok",
+    "txg 237 features": "ok",
+    "txg 229": "ok",
+    "txg 229 features": "ok",
+    "txg 225": "ok",
+    "txg 225 features": "ok",
+    "txg 222": "ok",
+    "txg 222 features": "ok",
+    "txg 218": "ok",
+    "txg 218 features": "ok",
+    "txg 214": "ok",
+    "txg 214 features": "ok",
+    "txg 210": "ok",
+    "txg 210 features": "ok",
+    "txg 207": "ok",
+    "txg 207 features": "ok",
+    "txg 203": "ok",
+    "txg 203 features": "ok",
+    "txg 199": "ok",
+    "txg 199 features": "ok",
+    "txg 195": "ok",
+    "txg 195 features": "ok",
+    "txg 192": "ok",
+    "txg 192 features": "ok",
+    "txg 188": "ok",
+    "txg 188 features": "ok",
+    "txg 184": "ok",
+    "txg 184 features": "ok",
+    "txg 180": "ok",
+    "txg 180 features": "ok",
+    "txg 174": "ok",
+    "txg 174 features": "ok",
+    "txg 168": "ok",
+    "txg 168 features": "ok",
+    "txg 164": "ok",
+    "txg 164 features": "ok",
+    "txg 157": "ok",
+    "txg 157 features": "ok",
+    "txg 153": "ok",
+    "txg 153 features": "ok",
+    "txg 149": "ok",
+    "txg 149 features": "ok",
+    "txg 138": "ok",
+    "txg 138 features": "ok",
+    "txg 134": "ok",
+    "txg 134 features": "ok",
+    "txg 130": "ok",
+    "txg 130 features": "ok",
+    "txg 127": "ok",
+    "txg 127 features": "ok",
+    "txg 123": "ok",
+    "txg 123 features": "ok",
+    "txg 119": "ok",
+    "txg 119 features": "ok",
+    "txg 115": "ok",
+    "txg 115 features": "ok"
+   },
+   "txgs": [
+    115,
+    119,
+    123,
+    127,
+    130,
+    134,
+    138,
+    149,
+    153,
+    157,
+    164,
+    168,
+    174,
+    180,
+    184,
+    188,
+    192,
+    195,
+    199,
+    203,
+    207,
+    210,
+    214,
+    218,
+    222,
+    225,
+    229,
+    237,
+    240,
+    241
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-slog/vm/disk-16k": "ok",
+    "sat-slog/vm/disk-8k": "ok",
+    "sat-slog/vm/disk-sync": "ok"
+   },
+   "detail": {
+    "sat-slog/vm/disk-16k": [
+     "c0049, born at txg 229"
+    ],
+    "sat-slog/vm/disk-8k": [
+     "c0048, born at txg 225",
+     "70 candidate(s) of 8192 bytes born after txg 241, the newest an uberblock reached, set aside"
+    ],
+    "sat-slog/vm/disk-sync": [
+     "c0050, born at txg 233",
+     "70 candidate(s) of 8192 bytes born after txg 241, the newest an uberblock reached, set aside"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-file-0": "ok",
+    "uberblock txg 241": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-file-0": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-slog-v1"
+ },
+ {
+  "id": "member-sat-slog-log-gone",
+  "description": "The log device absent: nothing a reader of the pool's state needs",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-slog/vm/disk-8k": "ok",
+   "sat-slog/vm/disk-16k": "ok",
+   "sat-slog/vm/disk-sync": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-slog": "ok",
+    "sat-slog/fs": "ok",
+    "sat-slog/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    241
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 241": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-slog-v1"
+ },
+ {
+  "id": "member-sat-slog-log-zeroed",
+  "description": "The log device zeroed whole, its labels with it",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-slog/vm/disk-8k": "ok",
+   "sat-slog/vm/disk-16k": "ok",
+   "sat-slog/vm/disk-sync": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-slog": "ok",
+    "sat-slog/fs": "ok",
+    "sat-slog/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    241
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t1-file-0": "refused",
+    "uberblock txg 241": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-file-0": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-slog-v1"
+ },
+ {
+  "id": "member-sat-slog-mirror-half",
+  "description": "One half of the mirror absent, the log device there",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-slog/vm/disk-8k": "ok",
+   "sat-slog/vm/disk-16k": "ok",
+   "sat-slog/vm/disk-sync": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-slog": "ok",
+    "sat-slog/fs": "ok",
+    "sat-slog/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    241
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-1": "ok",
+    "label t1-file-0": "ok",
+    "uberblock txg 241": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t1-file-0": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-slog-v1"
+ }
+]

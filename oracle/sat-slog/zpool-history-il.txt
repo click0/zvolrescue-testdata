@@ -1,0 +1,166 @@
+History for 'sat-slog':
+2026-11-27.14:54:35 [txg:4] create pool version 5000; software version 1c702dd-dist; uts runnervm3lb7s 7.0.0-1020-azure #21-Ubuntu SMP PREEMPT Tue Oct 27 22:34:38 UTC 2026 x86_64 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set ashift=12 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set autotrim=0 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@async_destroy=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@empty_bpobj=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@lz4_compress=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@multi_vdev_crash_dump=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@spacemap_histogram=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@enabled_txg=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@hole_birth=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@extensible_dataset=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@embedded_data=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@filesystem_limits=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@large_blocks=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@large_dnode=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@sha512=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@skein=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@edonr=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@userobj_accounting=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@encryption=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@project_quota=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@device_removal=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@obsolete_counts=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@zpool_checkpoint=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@spacemap_v2=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@allocation_classes=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@resilver_defer=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@bookmark_v2=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@redaction_bookmarks=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@redacted_datasets=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@bookmark_written=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@log_spacemap=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@livelist=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@device_rebuild=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@zstd_compress=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@draid=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@zilsaxattr=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@head_errlog=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@blake3=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@block_cloning=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@vdev_zaps_v2=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@redaction_list_spill=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@raidz_expansion=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@fast_dedup=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@longname=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@large_microzap=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@dynamic_gang_header=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@block_cloning_endian=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:4] set feature@physical_rewrite=enabled [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:5] set sat-slog (54) snapdev=1 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:6] set sat-slog (54) compression=15 [on runnervm3lb7s]
+2026-11-27.14:54:35 zpool create -f -o ashift=12 -o autotrim=off -O compression=lz4 -O snapdev=visible sat-slog mirror /var/tmp/sat/members/mirror-0a.img /var/tmp/sat/members/mirror-0b.img log /var/tmp/sat/members/log-0.img [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:10] create sat-slog/vm (388)   [on runnervm3lb7s]
+2026-11-27.14:54:35 (6ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 zfs create sat-slog/vm [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:11] create sat-slog/vm/disk-8k (68)   [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:12] set sat-slog/vm/disk-8k (68) checksum=7 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:12] set sat-slog/vm/disk-8k (68) compression=15 [on runnervm3lb7s]
+2026-11-27.14:54:35 (14ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 sat-slog/vm/disk-8k [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:13] create sat-slog/vm/disk-16k (76)   [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:14] set sat-slog/vm/disk-16k (76) checksum=8 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:14] set sat-slog/vm/disk-16k (76) compression=2 [on runnervm3lb7s]
+2026-11-27.14:54:35 (14ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-slog/vm/disk-16k [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:15] create sat-slog/fs (84)   [on runnervm3lb7s]
+2026-11-27.14:54:35 (6ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 zfs create sat-slog/fs [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:16] create sat-slog/vm/disk-sync (396)   [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:17] set sat-slog/vm/disk-sync (396) checksum=7 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:17] set sat-slog/vm/disk-sync (396) compression=15 [on runnervm3lb7s]
+2026-11-27.14:54:35 [txg:17] set sat-slog/vm/disk-sync (396) sync=1 [on runnervm3lb7s]
+2026-11-27.14:54:35 (13ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            sync: 1
+            volblocksize: 8192
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 -o sync=always sat-slog/vm/disk-sync [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:35 [txg:18] set sat-slog/fs (84) sync=1 [on runnervm3lb7s]
+2026-11-27.14:54:35 zfs set sync=always sat-slog/fs [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog@s0 (170)   [on runnervm3lb7s]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog/vm@s0 (172)   [on runnervm3lb7s]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog/vm/disk-16k@s0 (174)   [on runnervm3lb7s]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog/vm/disk-sync@s0 (176)   [on runnervm3lb7s]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog/vm/disk-8k@s0 (178)   [on runnervm3lb7s]
+2026-11-27.14:54:38 [txg:108] snapshot sat-slog/fs@s0 (180)   [on runnervm3lb7s]
+2026-11-27.14:54:38 (15ms) ioctl snapshot
+    input:
+        snaps:
+            sat-slog@s0
+            sat-slog/vm@s0
+            sat-slog/vm/disk-16k@s0
+            sat-slog/vm/disk-sync@s0
+            sat-slog/vm/disk-8k@s0
+            sat-slog/fs@s0
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:38 zfs snapshot -r sat-slog@s0 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog@s1 (413)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog/vm@s1 (415)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog/vm/disk-16k@s1 (417)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog/vm/disk-sync@s1 (419)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog/vm/disk-8k@s1 (421)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:173] snapshot sat-slog/fs@s1 (423)   [on runnervm3lb7s]
+2026-11-27.14:54:39 (14ms) ioctl snapshot
+    input:
+        snaps:
+            sat-slog@s1
+            sat-slog/vm@s1
+            sat-slog/vm/disk-16k@s1
+            sat-slog/vm/disk-sync@s1
+            sat-slog/vm/disk-8k@s1
+            sat-slog/fs@s1
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:39 zfs snapshot -r sat-slog@s1 [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog@s2 (436)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog/vm@s2 (438)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog/vm/disk-16k@s2 (440)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog/vm/disk-sync@s2 (442)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog/vm/disk-8k@s2 (444)   [on runnervm3lb7s]
+2026-11-27.14:54:39 [txg:240] snapshot sat-slog/fs@s2 (446)   [on runnervm3lb7s]
+2026-11-27.14:54:39 (13ms) ioctl snapshot
+    input:
+        snaps:
+            sat-slog@s2
+            sat-slog/vm@s2
+            sat-slog/vm/disk-16k@s2
+            sat-slog/vm/disk-sync@s2
+            sat-slog/vm/disk-8k@s2
+            sat-slog/fs@s2
+        props:
+ [user 0 (root) on runnervm3lb7s:linux]
+2026-11-27.14:54:39 zfs snapshot -r sat-slog@s2 [user 0 (root) on runnervm3lb7s:linux]
+

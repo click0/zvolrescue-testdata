@@ -1,0 +1,65 @@
+{
+ "pool": "sat-slog",
+ "image_tag": "sat-slog-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "mirror",
+   "members": [
+    "t0-mirror-0",
+    "t0-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "kind": "file",
+   "members": [
+    "t1-file-0"
+   ],
+   "groups": [
+    {
+     "kind": "file",
+     "count": 1
+    }
+   ],
+   "log": true
+  }
+ ],
+ "members": {
+  "t0-mirror-0": {
+   "file": "mirror-0a.img",
+   "guid": "8808657967277783245",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t0-mirror-1": {
+   "file": "mirror-0b.img",
+   "guid": "6380058719821756061",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  },
+  "t1-file-0": {
+   "file": "log-0.img",
+   "guid": "15509735456009775637",
+   "top": 1,
+   "group": 0,
+   "group_kind": "file",
+   "index": 0
+  }
+ }
+}

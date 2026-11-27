@@ -1,0 +1,49 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-slog
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-slog
+ state: ONLINE
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-slog                                ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+	logs	
+	  /var/tmp/sat/members/log-0.img        ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                      MOUNTED  MOUNTPOINT                         USED  REFER
+sat-slog                  no       /var/tmp/sat/altroot/sat-slog     40.1M    96K
+sat-slog@s0               -        -                                    0B    96K
+sat-slog@s1               -        -                                    0B    96K
+sat-slog@s2               -        -                                    0B    96K
+sat-slog/fs               no       /var/tmp/sat/altroot/sat-slog/fs  1.24M  1.07M
+sat-slog/fs@s0            -        -                                   88K  1.03M
+sat-slog/fs@s1            -        -                                   80K  1.05M
+sat-slog/fs@s2            -        -                                    0B  1.07M
+sat-slog/vm               no       /var/tmp/sat/altroot/sat-slog/vm  37.8M    96K
+sat-slog/vm@s0            -        -                                    0B    96K
+sat-slog/vm@s1            -        -                                    0B    96K
+sat-slog/vm@s2            -        -                                    0B    96K
+sat-slog/vm/disk-16k      -        -                                 18.4M  16.1M
+sat-slog/vm/disk-16k@s0   -        -                                 1.14M  16.1M
+sat-slog/vm/disk-16k@s1   -        -                                  144K  16.1M
+sat-slog/vm/disk-16k@s2   -        -                                    0B  16.1M
+sat-slog/vm/disk-8k       -        -                                 9.66M  8.23M
+sat-slog/vm/disk-8k@s0    -        -                                  736K  8.22M
+sat-slog/vm/disk-8k@s1    -        -                                  224K  8.22M
+sat-slog/vm/disk-8k@s2    -        -                                    0B  8.23M
+sat-slog/vm/disk-sync     -        -                                 9.63M  8.21M
+sat-slog/vm/disk-sync@s0  -        -                                  728K  8.21M
+sat-slog/vm/disk-sync@s1  -        -                                  216K  8.21M
+sat-slog/vm/disk-sync@s2  -        -                                    0B  8.21M
+members: unchanged after the export (their sums against members.sha256)
