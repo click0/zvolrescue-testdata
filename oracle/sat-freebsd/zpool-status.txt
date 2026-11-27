@@ -1,0 +1,12 @@
+  pool: sat-freebsd
+ state: ONLINE
+config:
+
+	NAME           STATE     READ WRITE CKSUM
+	sat-freebsd    ONLINE       0     0     0
+	  raidz1-0     ONLINE       0     0     0
+	    gpt/fbsd0  ONLINE       0     0     0
+	    gpt/fbsd1  ONLINE       0     0     0
+	    gpt/fbsd2  ONLINE       0     0     0
+
+errors: No known data errors

@@ -1,0 +1,160 @@
+History for 'sat-freebsd':
+2026-11-27.16:56:24 [txg:4] create pool version 5000; software version zfs-2.4.2-0-g6330a45b0; uts freebsd 15.1-RELEASE-p6 1501000 amd64 [on freebsd]
+2026-11-27.16:56:24 [txg:4] set ashift=12 [on freebsd]
+2026-11-27.16:56:24 [txg:4] set autotrim=0 [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@async_destroy=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@empty_bpobj=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@lz4_compress=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@multi_vdev_crash_dump=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@spacemap_histogram=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@enabled_txg=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@hole_birth=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@extensible_dataset=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@embedded_data=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@bookmarks=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@filesystem_limits=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@large_blocks=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@large_dnode=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@sha512=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@skein=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@edonr=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@userobj_accounting=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@encryption=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@project_quota=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@device_removal=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@obsolete_counts=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@zpool_checkpoint=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@spacemap_v2=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@allocation_classes=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@resilver_defer=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@bookmark_v2=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@redaction_bookmarks=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@redacted_datasets=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@bookmark_written=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@log_spacemap=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@livelist=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@device_rebuild=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@zstd_compress=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@draid=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@zilsaxattr=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@head_errlog=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@blake3=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@block_cloning=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@vdev_zaps_v2=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@redaction_list_spill=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@raidz_expansion=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@fast_dedup=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@longname=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@large_microzap=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@dynamic_gang_header=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@block_cloning_endian=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:4] set feature@physical_rewrite=enabled [on freebsd]
+2026-11-27.16:56:24 [txg:5] set sat-freebsd (54) snapdev=1 [on freebsd]
+2026-11-27.16:56:24 [txg:6] set sat-freebsd (54) compression=15 [on freebsd]
+2026-11-27.16:56:24 zpool create -f -o ashift=12 -o autotrim=off -O compression=lz4 -O snapdev=visible sat-freebsd raidz1 gpt/fbsd0 gpt/fbsd1 gpt/fbsd2 [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:24 [txg:8] create sat-freebsd/vm (82)   [on freebsd]
+2026-11-27.16:56:24 (85ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:24 zfs create sat-freebsd/vm [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:24 [txg:10] create sat-freebsd/vm/disk-8k (387)   [on freebsd]
+2026-11-27.16:56:24 [txg:11] set sat-freebsd/vm/disk-8k (387) checksum=7 [on freebsd]
+2026-11-27.16:56:24 [txg:11] set sat-freebsd/vm/disk-8k (387) compression=15 [on freebsd]
+2026-11-27.16:56:24 (70ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            checksum: 7
+            compression: 15
+            volblocksize: 8192
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:24 zfs create -s -V 24M -b 8K -o checksum=fletcher4 -o compression=lz4 sat-freebsd/vm/disk-8k [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:24 [txg:12] create sat-freebsd/vm/disk-16k (394)   [on freebsd]
+2026-11-27.16:56:25 [txg:13] set sat-freebsd/vm/disk-16k (394) checksum=8 [on freebsd]
+2026-11-27.16:56:25 [txg:13] set sat-freebsd/vm/disk-16k (394) compression=2 [on freebsd]
+2026-11-27.16:56:25 (59ms) ioctl create
+    input:
+        type: 3
+        props:
+            volsize: 25165824
+            volblocksize: 16384
+            checksum: 8
+            compression: 2
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:25 zfs create -s -V 24M -b 16K -o checksum=sha256 -o compression=off sat-freebsd/vm/disk-16k [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:25 [txg:14] create sat-freebsd/fs (260)   [on freebsd]
+2026-11-27.16:56:25 (34ms) ioctl create
+    input:
+        type: 2
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:25 zfs create sat-freebsd/fs [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:26 [txg:72] snapshot sat-freebsd@s0 (403)   [on freebsd]
+2026-11-27.16:56:26 [txg:72] snapshot sat-freebsd/vm@s0 (405)   [on freebsd]
+2026-11-27.16:56:26 [txg:72] snapshot sat-freebsd/vm/disk-16k@s0 (407)   [on freebsd]
+2026-11-27.16:56:26 [txg:72] snapshot sat-freebsd/vm/disk-8k@s0 (409)   [on freebsd]
+2026-11-27.16:56:26 [txg:72] snapshot sat-freebsd/fs@s0 (411)   [on freebsd]
+2026-11-27.16:56:26 (33ms) ioctl snapshot
+    input:
+        snaps:
+            sat-freebsd@s0
+            sat-freebsd/vm@s0
+            sat-freebsd/vm/disk-16k@s0
+            sat-freebsd/vm/disk-8k@s0
+            sat-freebsd/fs@s0
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:26 zfs snapshot -r sat-freebsd@s0 [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:28 [txg:123] snapshot sat-freebsd@s1 (421)   [on freebsd]
+2026-11-27.16:56:28 [txg:123] snapshot sat-freebsd/vm@s1 (423)   [on freebsd]
+2026-11-27.16:56:28 [txg:123] snapshot sat-freebsd/vm/disk-16k@s1 (425)   [on freebsd]
+2026-11-27.16:56:28 [txg:123] snapshot sat-freebsd/vm/disk-8k@s1 (427)   [on freebsd]
+2026-11-27.16:56:28 [txg:123] snapshot sat-freebsd/fs@s1 (429)   [on freebsd]
+2026-11-27.16:56:28 (34ms) ioctl snapshot
+    input:
+        snaps:
+            sat-freebsd@s1
+            sat-freebsd/vm@s1
+            sat-freebsd/vm/disk-16k@s1
+            sat-freebsd/vm/disk-8k@s1
+            sat-freebsd/fs@s1
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:28 zfs snapshot -r sat-freebsd@s1 [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:29 [txg:174] snapshot sat-freebsd@s2 (102)   [on freebsd]
+2026-11-27.16:56:29 [txg:174] snapshot sat-freebsd/vm@s2 (104)   [on freebsd]
+2026-11-27.16:56:29 [txg:174] snapshot sat-freebsd/vm/disk-16k@s2 (106)   [on freebsd]
+2026-11-27.16:56:29 [txg:174] snapshot sat-freebsd/vm/disk-8k@s2 (108)   [on freebsd]
+2026-11-27.16:56:29 [txg:174] snapshot sat-freebsd/fs@s2 (110)   [on freebsd]
+2026-11-27.16:56:29 (34ms) ioctl snapshot
+    input:
+        snaps:
+            sat-freebsd@s2
+            sat-freebsd/vm@s2
+            sat-freebsd/vm/disk-16k@s2
+            sat-freebsd/vm/disk-8k@s2
+            sat-freebsd/fs@s2
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:29 zfs snapshot -r sat-freebsd@s2 [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:30 [txg:225] snapshot sat-freebsd@s3 (118)   [on freebsd]
+2026-11-27.16:56:30 [txg:225] snapshot sat-freebsd/vm@s3 (120)   [on freebsd]
+2026-11-27.16:56:30 [txg:225] snapshot sat-freebsd/vm/disk-16k@s3 (122)   [on freebsd]
+2026-11-27.16:56:30 [txg:225] snapshot sat-freebsd/vm/disk-8k@s3 (124)   [on freebsd]
+2026-11-27.16:56:30 [txg:225] snapshot sat-freebsd/fs@s3 (126)   [on freebsd]
+2026-11-27.16:56:30 (33ms) ioctl snapshot
+    input:
+        snaps:
+            sat-freebsd@s3
+            sat-freebsd/vm@s3
+            sat-freebsd/vm/disk-16k@s3
+            sat-freebsd/vm/disk-8k@s3
+            sat-freebsd/fs@s3
+        props:
+ [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:30 zfs snapshot -r sat-freebsd@s3 [user 0 (root) on freebsd:freebsd]
+2026-11-27.16:56:35 zpool export sat-freebsd [user 0 (root) on freebsd:freebsd]
+

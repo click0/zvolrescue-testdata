@@ -1,0 +1,50 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    FreeBSD 15.1-RELEASE-p6 amd64
+openzfs: zfs-2.4.2-1-FreeBSD_g6330a45b0 zfs-kmod-2.4.2-1-FreeBSD_g6330a45b0 
+import:  zpool import -d /dev/gpt -o readonly=on -o cachefile=none -R ALTROOT -N sat-freebsd
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro, its snapshots under .zfs/snapshot
+xattrs:  not read (no listxattr here)
+
+  pool: sat-freebsd
+ state: ONLINE
+config:
+
+	NAME           STATE     READ WRITE CKSUM
+	sat-freebsd    ONLINE       0     0     0
+	  raidz1-0     ONLINE       0     0     0
+	    gpt/fbsd0  ONLINE       0     0     0
+	    gpt/fbsd1  ONLINE       0     0     0
+	    gpt/fbsd2  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                        MOUNTED  MOUNTPOINT                            USED  REFER
+sat-freebsd                 no       /var/tmp/sat/altroot/sat-freebsd     36.0M   139K
+sat-freebsd@s0              -        -                                       0B   139K
+sat-freebsd@s1              -        -                                       0B   139K
+sat-freebsd@s2              -        -                                       0B   139K
+sat-freebsd@s3              -        -                                       0B   139K
+sat-freebsd/fs              no       /var/tmp/sat/altroot/sat-freebsd/fs  1.49M  1.17M
+sat-freebsd/fs@s0           -        -                                     117K  1.09M
+sat-freebsd/fs@s1           -        -                                     107K  1.12M
+sat-freebsd/fs@s2           -        -                                    85.2K  1.14M
+sat-freebsd/fs@s3           -        -                                       0B  1.17M
+sat-freebsd/vm              no       /var/tmp/sat/altroot/sat-freebsd/vm  33.5M   128K
+sat-freebsd/vm@s0           -        -                                       0B   128K
+sat-freebsd/vm@s1           -        -                                       0B   128K
+sat-freebsd/vm@s2           -        -                                       0B   128K
+sat-freebsd/vm@s3           -        -                                       0B   128K
+sat-freebsd/vm/disk-16k     -        -                                    19.6M  16.2M
+sat-freebsd/vm/disk-16k@s0  -        -                                    1.17M  16.2M
+sat-freebsd/vm/disk-16k@s1  -        -                                     170K  16.2M
+sat-freebsd/vm/disk-16k@s2  -        -                                     170K  16.2M
+sat-freebsd/vm/disk-16k@s3  -        -                                       0B  16.2M
+sat-freebsd/vm/disk-8k      -        -                                    13.7M  10.9M
+sat-freebsd/vm/disk-8k@s0   -        -                                     948K  10.9M
+sat-freebsd/vm/disk-8k@s1   -        -                                     266K  10.9M
+sat-freebsd/vm/disk-8k@s2   -        -                                     266K  10.9M
+sat-freebsd/vm/disk-8k@s3   -        -                                       0B  10.9M
+members: unchanged after the export (their sums against members.sha256)

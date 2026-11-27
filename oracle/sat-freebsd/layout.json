@@ -1,0 +1,56 @@
+{
+ "pool": "sat-freebsd",
+ "image_tag": "sat-freebsd-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "raidz1",
+   "members": [
+    "t0-raidz1-0",
+    "t0-raidz1-1",
+    "t0-raidz1-2"
+   ],
+   "groups": [
+    {
+     "kind": "raidz1",
+     "nparity": 1,
+     "count": 3
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-raidz1-0": {
+   "file": "fbsd0.img",
+   "guid": "1253989666723145043",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 0,
+   "offset": 1048576
+  },
+  "t0-raidz1-1": {
+   "file": "fbsd1.img",
+   "guid": "11829610632861824317",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 1,
+   "offset": 1048576
+  },
+  "t0-raidz1-2": {
+   "file": "fbsd2.img",
+   "guid": "12259499791927096513",
+   "top": 0,
+   "group": 0,
+   "group_kind": "raidz1",
+   "index": 2,
+   "offset": 1048576
+  }
+ }
+}

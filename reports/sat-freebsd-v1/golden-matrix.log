@@ -1,0 +1,6 @@
+sat-freebsd-v1 pass       control-sat-freebsd              expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-freebsd-v1 pass       data-sat-freebsd-one-member      expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-freebsd-v1 pass       member-sat-freebsd-missing-one   expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-freebsd-v1 pass       partition-sat-freebsd-gpt-zeroed expected bit-exact | reconstructed actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-freebsd-v1: 115 manifest(s) written for another pool, not run here
+sat-freebsd-v1: 4 pass

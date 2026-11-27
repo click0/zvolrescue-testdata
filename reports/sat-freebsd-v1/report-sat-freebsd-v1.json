@@ -1,0 +1,370 @@
+[
+ {
+  "id": "control-sat-freebsd",
+  "description": "Nothing damaged and nothing told, on a pool made on FreeBSD on GPT partitions: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-freebsd/vm/disk-8k": "ok",
+   "sat-freebsd/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-freebsd": "ok",
+    "sat-freebsd/fs": "ok",
+    "sat-freebsd/fs@s0": "ok",
+    "sat-freebsd/fs@s1": "ok",
+    "sat-freebsd/fs@s2": "ok",
+    "sat-freebsd/fs@s3": "ok",
+    "sat-freebsd/vm": "ok",
+    "sat-freebsd/vm@s0": "ok",
+    "sat-freebsd/vm@s1": "ok",
+    "sat-freebsd/vm@s2": "ok",
+    "sat-freebsd/vm@s3": "ok",
+    "sat-freebsd@s0": "ok",
+    "sat-freebsd@s1": "ok",
+    "sat-freebsd@s2": "ok",
+    "sat-freebsd@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 235": "ok",
+    "txg 235 features": "ok",
+    "txg 226": "ok",
+    "txg 226 features": "ok",
+    "txg 225": "ok",
+    "txg 225 features": "ok",
+    "txg 222": "ok",
+    "txg 222 features": "ok",
+    "txg 218": "ok",
+    "txg 218 features": "ok",
+    "txg 214": "ok",
+    "txg 214 features": "ok",
+    "txg 211": "ok",
+    "txg 211 features": "ok",
+    "txg 207": "ok",
+    "txg 207 features": "ok",
+    "txg 200": "ok",
+    "txg 200 features": "ok",
+    "txg 196": "ok",
+    "txg 196 features": "ok",
+    "txg 192": "ok",
+    "txg 192 features": "ok",
+    "txg 189": "ok",
+    "txg 189 features": "ok",
+    "txg 185": "ok",
+    "txg 185 features": "ok",
+    "txg 181": "ok",
+    "txg 181 features": "ok",
+    "txg 174": "ok",
+    "txg 174 features": "ok",
+    "txg 167": "ok",
+    "txg 167 features": "ok",
+    "txg 163": "ok",
+    "txg 163 features": "ok",
+    "txg 156": "ok",
+    "txg 156 features": "ok",
+    "txg 152": "ok",
+    "txg 152 features": "ok",
+    "txg 145": "ok",
+    "txg 145 features": "ok",
+    "txg 141": "ok",
+    "txg 141 features": "ok",
+    "txg 138": "ok",
+    "txg 138 features": "ok",
+    "txg 134": "ok",
+    "txg 134 features": "ok",
+    "txg 123": "ok",
+    "txg 123 features": "ok"
+   },
+   "txgs": [
+    123,
+    134,
+    138,
+    141,
+    145,
+    152,
+    156,
+    163,
+    167,
+    174,
+    181,
+    185,
+    189,
+    192,
+    196,
+    200,
+    207,
+    211,
+    214,
+    218,
+    222,
+    225,
+    226,
+    235,
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-freebsd/vm/disk-16k": "ok",
+    "sat-freebsd/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-freebsd/vm/disk-16k": [
+     "c0019, born at txg 218"
+    ],
+    "sat-freebsd/vm/disk-8k": [
+     "c0018, born at txg 214"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-freebsd-v1"
+ },
+ {
+  "id": "data-sat-freebsd-one-member",
+  "description": "Two fifths of the written space of one disk zeroed, on a pool made on FreeBSD",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-freebsd/vm/disk-8k": "ok",
+   "sat-freebsd/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-freebsd": "ok",
+    "sat-freebsd/fs": "ok",
+    "sat-freebsd/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-freebsd-v1"
+ },
+ {
+  "id": "member-sat-freebsd-missing-one",
+  "description": "One disk of the raidz1 absent, on a pool made on FreeBSD",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-freebsd/vm/disk-8k": "ok",
+   "sat-freebsd/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-freebsd": "ok",
+    "sat-freebsd/fs": "ok",
+    "sat-freebsd/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-freebsd-v1"
+ },
+ {
+  "id": "partition-sat-freebsd-gpt-zeroed",
+  "description": "The protective MBR and the primary GPT of one disk zeroed, its backup at the end kept",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-freebsd/vm/disk-8k": "ok",
+   "sat-freebsd/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-freebsd": "ok",
+    "sat-freebsd/fs": "ok",
+    "sat-freebsd/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    244
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-raidz1-0": "ok",
+    "label t0-raidz1-1": "ok",
+    "label t0-raidz1-2": "ok",
+    "uberblock txg 226": "ok",
+    "uberblock txg 244": "ok",
+    "rings t0-raidz1-0": "ok",
+    "rings t0-raidz1-1": "ok",
+    "rings t0-raidz1-2": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-freebsd-v1"
+ }
+]

@@ -1,0 +1,29 @@
+== sat-freebsd (sat-freebsd-v1)
+fbsd0 fbsd0.img 1048576
+fbsd1 fbsd1.img 1048576
+fbsd2 fbsd2.img 1048576
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== oracle
+== export
+split-capture: 2 MiB in 27 files, the largest sat-freebsd_vm_disk-8k@s3 (0 MiB)
+== files and history, the pool imported read-only
+sat-freebsd: 3 entries
+sat-freebsd@s0: 3 entries, the same as sat-freebsd
+sat-freebsd@s1: 3 entries, the same as sat-freebsd
+sat-freebsd@s2: 3 entries, the same as sat-freebsd
+sat-freebsd@s3: 3 entries, the same as sat-freebsd
+sat-freebsd/fs: 61 entries
+sat-freebsd/fs@s0: 49 entries
+sat-freebsd/fs@s1: 53 entries
+sat-freebsd/fs@s2: 57 entries
+sat-freebsd/fs@s3: 61 entries, the same as sat-freebsd/fs
+sat-freebsd/vm: 1 entries
+sat-freebsd/vm@s0: 1 entries, the same as sat-freebsd/vm
+sat-freebsd/vm@s1: 1 entries, the same as sat-freebsd/vm
+sat-freebsd/vm@s2: 1 entries, the same as sat-freebsd/vm
+sat-freebsd/vm@s3: 1 entries, the same as sat-freebsd/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

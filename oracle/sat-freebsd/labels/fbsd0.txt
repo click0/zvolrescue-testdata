@@ -1,0 +1,54 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-freebsd'
+    state: 1
+    txg: 244
+    pool_guid: 15693470013400882767
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 4096
+    hostid: 3132103097
+    hostname: 'freebsd'
+    top_guid: 15626751047849111352
+    guid: 1253989666723145043
+    vdev_children: 1
+    vdev_tree:
+        type: 'raidz'
+        id: 0
+        guid: 15626751047849111352
+        nparity: 1
+        metaslab_array: 71
+        metaslab_shift: 26
+        ashift: 12
+        asize: 986185728
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'disk'
+            id: 0
+            guid: 1253989666723145043
+            path: '/dev/gpt/fbsd0'
+            whole_disk: 1
+            create_txg: 4
+        children[1]:
+            type: 'disk'
+            id: 1
+            guid: 11829610632861824317
+            path: '/dev/gpt/fbsd1'
+            whole_disk: 1
+            create_txg: 4
+        children[2]:
+            type: 'disk'
+            id: 2
+            guid: 12259499791927096513
+            path: '/dev/gpt/fbsd2'
+            whole_disk: 1
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+    labels = 0 1 2 3 

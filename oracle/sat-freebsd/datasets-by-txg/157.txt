@@ -1,0 +1,37 @@
+Dataset mos [META], ID 0, cr_txg 4, 847K, 104 objects
+Dataset sat-freebsd/vm/disk-16k@s0 [ZVOL], ID 407, cr_txg 72, 16.2M, 2 objects
+Dataset sat-freebsd/vm/disk-16k@s1 [ZVOL], ID 425, cr_txg 123, 16.2M, 2 objects
+Dataset sat-freebsd/vm/disk-16k [ZVOL], ID 394, cr_txg 12, 16.2M, 2 objects
+Dataset sat-freebsd/vm/disk-8k@s1 [ZVOL], ID 427, cr_txg 123, 10.9M, 2 objects
+Dataset sat-freebsd/vm/disk-8k@s0 [ZVOL], ID 409, cr_txg 72, 10.9M, 2 objects
+Dataset sat-freebsd/vm/disk-8k [ZVOL], ID 387, cr_txg 10, 10.9M, 2 objects
+Dataset sat-freebsd/vm@s0 [ZPL], ID 405, cr_txg 72, 128K, 7 objects
+Dataset sat-freebsd/vm@s1 [ZPL], ID 423, cr_txg 123, 128K, 7 objects
+Dataset sat-freebsd/vm [ZPL], ID 82, cr_txg 8, 128K, 7 objects
+Dataset sat-freebsd/fs@s0 [ZPL], ID 411, cr_txg 72, 1.09M, 54 objects
+Dataset sat-freebsd/fs@s1 [ZPL], ID 429, cr_txg 123, 1.12M, 58 objects
+Dataset sat-freebsd/fs [ZPL], ID 260, cr_txg 14, 1.13M, 60 objects
+Dataset sat-freebsd@s0 [ZPL], ID 403, cr_txg 72, 139K, 9 objects
+Dataset sat-freebsd@s1 [ZPL], ID 421, cr_txg 123, 139K, 9 objects
+Dataset sat-freebsd [ZPL], ID 54, cr_txg 1, 139K, 9 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 9 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 9 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 0 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 0 is correct
+Verified indirect_refcount feature refcount of 0 is correct
