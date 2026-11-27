@@ -1,0 +1,15 @@
+id = "data-sat-freebsd-one-member"
+image = "sat-freebsd"
+description = "Two fifths of the written space of one disk zeroed, on a pool made on FreeBSD"
+classes = ["data"]
+
+[[damage]]
+member = "t0-raidz1-2"
+range = "data:20%..60%"
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

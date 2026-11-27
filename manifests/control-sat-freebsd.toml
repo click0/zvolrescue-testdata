@@ -1,0 +1,12 @@
+id = "control-sat-freebsd"
+image = "sat-freebsd"
+description = "Nothing damaged and nothing told, on a pool made on FreeBSD on GPT partitions: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# Each member is a whole disk, its GPT and boot partition before the vdev:
+# the tool is given the disks, and finds the pool on them.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

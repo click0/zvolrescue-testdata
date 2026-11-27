@@ -15,7 +15,7 @@ is counted by its case alone, and a class that damages no member
 (the control; metadata, every case of which aims at a block) has no
 rows here. An empty cell (—) is a combination no manifest tests.
 
-115 manifests.
+115 manifests; not counted, their pool having no oracle here: control-sat-freebsd, data-sat-freebsd-one-member, member-sat-freebsd-missing-one, partition-sat-freebsd-gpt-zeroed.
 
 ## Top-level vdevs, by class and position
 

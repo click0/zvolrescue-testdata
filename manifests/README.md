@@ -355,7 +355,7 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 115 manifests: 82 cover every class of SPEC §9.1's catalogue at least
+The 119 manifests: 82 cover every class of SPEC §9.1's catalogue at least
 once against the layout `image-v1` and `golden-v2` share: members
 `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`,
 `oracle/golden-v2/layout.json`); five of them name `golden-v2`, for what only it
@@ -370,7 +370,9 @@ blocks, the special and the dedup vdev, a raidz at each ashift, the log
 device, the rings a heartbeat writes into. And 7 are the older feature
 sets' (stage 3): a control and a member or data case each on a pool of
 OpenZFS 2.0's feature set, one with every feature disabled and one of
-version 28. Expected
+version 28; and 4 the pool made on FreeBSD on GPT partitions — a control,
+a disk absent, part of one zeroed and one disk's partition table zeroed.
+Expected
 outcomes are stated from ZFS redundancy, and against the published
 image every one applies and every one lands in its category: the
 reports of the runs are in [`reports/`](../reports/), and the Results

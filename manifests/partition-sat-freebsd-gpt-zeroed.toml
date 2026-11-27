@@ -1,0 +1,17 @@
+id = "partition-sat-freebsd-gpt-zeroed"
+image = "sat-freebsd"
+description = "The protective MBR and the primary GPT of one disk zeroed, its backup at the end kept"
+classes = ["partition"]
+
+[[damage]]
+member = "t0-raidz1-0"
+range = "0..20KiB"
+pattern = "zeros"
+
+[expect]
+# No data is there, and the vdev's labels are where they were: the tool
+# finds them without the table, as it would a disk whose table was lost.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

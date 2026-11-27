@@ -1,0 +1,14 @@
+id = "member-sat-freebsd-missing-one"
+image = "sat-freebsd"
+description = "One disk of the raidz1 absent, on a pool made on FreeBSD"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz1-1"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"
