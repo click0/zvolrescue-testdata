@@ -191,9 +191,26 @@ a member says otherwise of — every copy that verifies of the uberblock
 `zdb -u` printed, and each top-level vdev it assembled. Either way a
 wrong answer is a `defect`, whatever the manifest expects; a list that
 ends 4 naming the parts of the tree it could not read is `partial`, and
-a member none of whose labels read is `refused`. Neither has an
-expectation key: what is held is the rule alone, that nothing read is
-presented otherwise than zdb read it.
+a member none of whose labels read is `refused`. The features `list`
+reports are held against `zpool get feature@` and the refcounts zdb
+verified at that TXG; every slot of every label's uberblock ring that
+verifies against `zdb -lu` (`labels-uberblocks/`), unless it holds
+another TXG — a slot the damage forged, an older copy of a member — and
+on the control every slot. Neither has an expectation key: what is
+held is the rule alone, that nothing read is presented otherwise than
+zdb read it.
+
+### The report
+
+Every run of `dump` in a case writes to one evidence log, and
+`zvolreport build` makes a report of it, which `zvolreport verify` then
+checks: what the report says of each volume must be what the harness
+found — read whole with the oracle's SHA-256, blocks written as zeros
+and said so, refused and no extraction, a TXG passed over named in a
+warning — and everything it records must verify. On the control a byte
+of one output is turned over, and `verify` must fail that output (exit
+4). A report that says otherwise, or a verify that passes what changed,
+is a `defect`.
 
 ### Telling the tool something
 

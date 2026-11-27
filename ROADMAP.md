@@ -9,17 +9,20 @@ image never rebuilt in place, expectations derived from ZFS redundancy.
 
 ## Where things stand
 
-`image-v1` now tests three programs of five against what OpenZFS
-itself read of it, in every case of the matrix (`run-matrix.py` in
-zvolrescue): `zvolrescue` — the volumes `dump` writes, the datasets
-`list` names against `zdb -t T -d`, what `scan` reads of the labels,
-the uberblock and the vdevs against `zdb -l`, `zdb -u` and `zpool
-status` — `zvolfiles` against the kernel's reading of every filesystem,
-and `zvoltimeline` against `zpool history -il`. Not yet: `zvolcarve`,
-since nothing here says what the destroyed `vm/doomed` held last
-(`volumes.sha256` has it at `s0`–`s2` only), and `zvolreport`. The
-features zvolrescue has learned since the image was built have their
-cases (stage 1, item 4).
+`image-v1` now tests all five programs against what OpenZFS itself
+read of it (`run-matrix.py` in zvolrescue): in every case `zvolrescue`
+— the volumes `dump` writes, the datasets and the features `list`
+reports against `zdb -t T -d` and `zpool get`, what `scan` reads of the
+labels, every slot of their uberblock rings and the vdevs against `zdb
+-l`, `zdb -lu`, `zdb -u` and `zpool status` — `zvolfiles` against the
+kernel's reading of every filesystem, `zvoltimeline` against `zpool
+history -il`, and `zvolreport`, a report built of the case's evidence
+log and verified; where carving is what is left, `zvolcarve`, each live
+volume found by its bytes. What it cannot be told is what the destroyed
+`vm/doomed` held last (`volumes.sha256` has it at `s0`–`s2` only): that
+waits for an image whose builder hashes a volume before destroying it
+(stage 2). The features zvolrescue has learned since the image was
+built have their cases (stage 1, item 4).
 
 ## Publishing: one tag per pool, one download per need
 
@@ -104,8 +107,8 @@ Release: +0. Git: under 1 MB of text.
    exit status after a TXG passed over, 4 from `zvolfiles` where
    `zvolrescue dump` gave 0, is settled: 4 from every tool, the bytes
    judged (zvolrescue `4a95364`, `reports/image-v1-r4`, 70 of 70).
-   Left: `zvolreport`, judged by building and verifying a report of the
-   matrix's own evidence logs.
+   And `zvolreport`, judged by building and verifying a report of the
+   matrix's own evidence logs (item 7).
 6. *Done.* **Every matrix run's report kept here**
    (`reports/<tag>-rN/`), not only the first: `tools/add-report.py`
    lays a report out as the next run, with a README written from its
@@ -121,6 +124,16 @@ Release: +0. Git: under 1 MB of text.
    `zdb-u.txt` and `zpool-status.txt`; the control lists at every TXG
    of the ring zdb recorded. What each oracle file judges is in
    [oracle/README.md](oracle/README.md).
+8. *Done.* **The oracle completed, and judged in full**: every label's
+   uberblock ring (`labels-uberblocks/`, `zdb -lu`) and the uberblock
+   of the export (`zdb-u-export.txt`), captured offline from the
+   published members by `oracle-capture.yml` (`what =
+   labels-uberblocks`), every slot judged; the features `list` now
+   reports against `zpool get` and zdb's refcounts; `pool-facts.txt`
+   against the vdevs `scan` assembles; `zvolreport` and `zvolcarve`
+   judged. Unread now only `datasets.txt` and `datasets-exported.txt`,
+   the same listings as `datasets-by-txg/`, the pool properties no tool
+   reports, and the unpublished `image-v0-ztest` pools.
 
 ## Stage 2 — `golden-v2` and the satellites
 
