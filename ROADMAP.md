@@ -239,10 +239,18 @@ case rather than answering wrongly.
   build, the version-28 pool read whole by every program at every TXG
   of its rings. Published as `sat-compat20-v1`, `sat-nofeatures-v1` and
   `sat-v28-v1`, 0.19 GB, and judged every week with the others.
-* **A pool at scale**, `held_out` and in a tag of its own that a
+* *Done* (2026-11-27). **A pool at scale**, `held_out` and in a tag of its own that a
   regular run never fetches: thousands of snapshots and datasets
   (0.2–0.4 GB), or a large volume of content ZFS compresses
-  (1–3 GB).
+  (1–3 GB). The first: `sat-scale`, a mirror with 200 filesystems
+  under `fs` and ten rounds of recursive snapshots, 2,255 datasets and
+  snapshots — so many records that the pool's history wrapped and lost
+  the creation of 986 of them, which the harness now holds to
+  `zfs get createtxg,origin`. 2 manifests, 2 passed, the matrix over it
+  16½ minutes against under one for any other satellite. Published as
+  `sat-scale-v1`, 90 MB, and `held` in the published job: run by
+  `only: published-held-out` alone. The large compressible volume
+  stays undone.
 
 ## Stage 4 — coverage, stated
 

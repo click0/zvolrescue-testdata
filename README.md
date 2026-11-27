@@ -60,7 +60,9 @@ OpenZFS: `sat-compat20` (`compatibility=openzfs-2.0-linux`),
 0.19 GB, 7 manifests, 7 passed. And `sat-freebsd`, made on FreeBSD 15.1
 with the OpenZFS of its base system (2.4.2) on GPT partitions as its
 installer lays them out, the members whole disks — 45 MB, 4 manifests,
-4 passed.
+4 passed. And `sat-scale`, a pool at scale: 2,255 datasets and
+snapshots, its history wrapped — 90 MB, 2 manifests, both held out
+(`only: published-held-out`), 2 passed.
 
 **`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven
