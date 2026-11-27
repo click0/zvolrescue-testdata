@@ -1,0 +1,1718 @@
+Dataset sat-mmp/fs@s3 [ZPL], ID 173, cr_txg 236, 1.09M, 65 objects, rootbp DVA[0]=<0:836e000:1000> DVA[1]=<0:1792000:1000> [L0 DMU objset] fletcher4 uncompressed unencrypted LE contiguous unique double size=1000L/1000P birth=233L/233P fill=65 cksum=0000000e6ec40553:00002705b8e0d81e:0038132d7fcb6ee9:38e8a843d6435ea4
+
+    Deadlist: 80K (38.5K/38.5K comp), 4 entries
+
+    mintxg 0 -> obj 147: object 147, 0 blkptrs, 0
+
+    mintxg 1 -> obj 147: object 147, 0 blkptrs, 0
+
+    mintxg 81 -> obj 147: object 147, 0 blkptrs, 0
+
+    mintxg 132 -> obj 277: object 277, 13 blkptrs, 80K
+	0:4752000:1000 0:1615000:1000 4000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	EMBEDDED et=0 200L/3dP B=181
+	EMBEDDED et=0 200L/3dP B=181
+	EMBEDDED et=0 200L/3dP B=181
+	0:4759000:1000 0:161c000:1000 1000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4757000:1000 0:161a000:1000 20000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4756000:1000 0:1619000:1000 20000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4755000:1000 0:1618000:1000 20000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4754000:1000 0:1617000:1000 20000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4753000:1000 0:1616000:1000 20000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:4751000:1000 0:1614000:1000 4000L/1000P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:474f000:1000 0:1613000:1000 a00L/a00P F=0 B=181/181 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+	0:45aa000:1000 0:1567000:1000 4000L/1000P F=0 B=159/159 cksum=0000000000000000:0000000000000000:0000000000000000:0000000000000000
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         0    6   128K    16K    80K     512   208K   15.62  DMU dnode (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 12
+Indirect blocks:
+               0 L5      0:836c000:1000 0:1790000:1000 20000L/1000P F=65 B=233/233 cksum=0000008555d92ef2:0001ea56e332b717:03881cd2106e6ab6:5a702e63a087328f
+               0  L4     0:836b000:1000 0:178f000:1000 20000L/1000P F=65 B=233/233 cksum=00000085b0512f68:0001ec15e0fe2d9b:038c28b6a6f65110:6073222b9ea84881
+               0   L3    0:836a000:1000 0:178e000:1000 20000L/1000P F=65 B=233/233 cksum=00000088284460ec:0001f57389822c36:039e030db548fcb0:773d5a64abde6311
+               0    L2   0:8369000:1000 0:178d000:1000 20000L/1000P F=65 B=233/233 cksum=000000870579dbc4:0001f148f042daa5:0396523ab0e987a8:6db6e0aa54f6adc9
+               0     L1  0:8368000:1000 0:178c000:1000 20000L/1000P F=65 B=233/233 cksum=0000009816af9a97:0002126f0b42c9ab:03a0f9c05f23828a:415bac1e8ecce444
+               0      L0 0:8185000:1000 0:16e5000:1000 4000L/1000P F=11 B=211/211 cksum=000000565c0b8b2e:00011820dd46ce69:01cdf85b79574feb:043817df6c7a0b28
+            4000      L0 0:8367000:1000 0:178b000:1000 4000L/1000P F=5 B=233/233 cksum=0000002930f190fd:000094657f118fbb:010c43d48bcd527d:447c721d3e1d117c
+           10000      L0 0:467f000:1000 0:15bf000:1000 4000L/1000P F=19 B=170/170 cksum=000000817a63d37c:000179a0c3de18db:024052b1a7d15188:6257db0a75188d94
+           20000      L0 0:8366000:1000 0:178a000:1000 4000L/1000P F=15 B=233/233 cksum=0000006271f9b6b4:000134d4e1604c91:01f1050230afacb4:2216742a2867631a
+           30000      L0 0:44b0000:1000 0:1513000:1000 4000L/1000P F=15 B=148/148 cksum=00000066b096f697:00013fd761a7c071:01ff67c53d238af2:2ea223eaca9984cf
+
+		segment [0000000000000200, 0000000000001800) size 5.50K
+		segment [0000000000004000, 0000000000004a00) size 2.50K
+		segment [0000000000010000, 0000000000012600) size 9.50K
+		segment [0000000000020000, 0000000000021e00) size 7.50K
+		segment [0000000000030000, 0000000000031e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -1    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 60 
+		0 = 1046528 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=233
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -2    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 60 
+		0 = 1046528 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=233
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        -3    1   128K    512      0     512    512  100.00  ZFS user/group/project used (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		obj-0 = 60 
+		0 = 1046528 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/3dP B=233
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         1    1   128K     1K     8K     512     1K  100.00  ZFS master node (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1024 bytes, 13 entries
+
+		utf8only = 0 
+		defaultuserobjquota = 0 
+		casesensitivity = 0 
+		VERSION = 5 
+		defaultgroupquota = 0 
+		ROOT = 34 
+		defaultprojectobjquota = 0 
+		defaultuserquota = 0 
+		DELETE_QUEUE = 33 
+		normalization = 0 
+		defaultprojectquota = 0 
+		SA_ATTRS = 32 
+		defaultgroupobjquota = 0 
+Indirect blocks:
+               0 L0 0:ad000:1000 0:10ad000:1000 400L/400P F=1 B=15/15 cksum=00000013bf302df1:00000c221dd1ce44:0004306893edf088:010d12610c5c57f4
+
+		segment [0000000000000000, 0000000000000400) size    1K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         2    1   128K  1.50K     8K     512  1.50K  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	29
+	mode	40755
+	size	24
+	parent	34
+	links	3
+	pflags	840800000144
+	projid	0
+	microzap: 1536 bytes, 22 entries
+
+		b9 = 137 (type: Regular File)
+		b3 = 384 (type: Regular File)
+		b15 = 140 (type: Regular File)
+		b18 = 264 (type: Regular File)
+		b12 = 388 (type: Regular File)
+		b4 = 133 (type: Regular File)
+		b0 = 129 (type: Regular File)
+		b16 = 142 (type: Regular File)
+		b11 = 138 (type: Regular File)
+		b7 = 136 (type: Regular File)
+		b5 = 134 (type: Regular File)
+		b13 = 7 (type: Regular File)
+		sub = 3 (type: Directory)
+		b19 = 265 (type: Regular File)
+		hard = 256 (type: Regular File)
+		b14 = 390 (type: Regular File)
+		b2 = 131 (type: Regular File)
+		b8 = 260 (type: Regular File)
+		b6 = 385 (type: Regular File)
+		b10 = 387 (type: Regular File)
+		b17 = 263 (type: Regular File)
+		b1 = 130 (type: Regular File)
+Indirect blocks:
+               0 L0 0:5389000:1000 0:11f6000:1000 600L/600P F=1 B=34/34 cksum=000000109e86a4d3:00000d886fdbe2f2:00070904908af72b:02bd82ed88bc66dc
+
+		segment [0000000000000000, 0000000000000600) size 1.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         3    1   128K    512      0     512    512  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/sub
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	29
+	mode	40755
+	size	3
+	parent	2
+	links	2
+	pflags	840800000144
+	projid	0
+	microzap: 512 bytes, 1 entries
+
+		link = 8 (type: Symbolic Link)
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/2fP B=34
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         4    1   128K    512     4K     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	30
+	mode	100644
+	size	501
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:52ed000:1000 200L/200P F=1 B=30/30 cksum=0000001ad711714d:000006fd76f790a5:00012ff7c6c2fc84:0026ecc5b0f244c5
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         5    1   128K  25.5K    12K     512  25.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f8.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	25764
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53dc000:3000 6600L/3000P F=1 B=34/34 cksum=0000025f9cbf4efe:000ff4b84bb6f45c:414b791f3d23b3ea:5fa822aba859ce8d
+
+		segment [0000000000000000, 0000000000006600) size 25.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         6    1   128K  39.5K    20K     512  39.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f10.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	40200
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5332000:5000 9e00L/5000P F=1 B=34/34 cksum=000003ab0e52f9cd:002b62796a10d88e:295b4184e921d3e4:858e81a6b489e321
+
+		segment [0000000000000000, 0000000000009e00) size 39.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         7    1   128K  26.5K    28K     512  26.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b13
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	27136
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:537a000:7000 6a00L/6a00P F=1 B=34/34 cksum=00000d48eef88a21:00b0216f58c3c94c:195d501838114391:45784a50da9b5cd0
+
+		segment [0000000000000000, 0000000000006a00) size 26.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         8    1   128K    512      0     512    512    0.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               185   bonus  System attributes
+	dnode flags: USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/sub/link
+	target	../f1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	120777
+	size	9
+	parent	3
+	links	1
+	pflags	40800000104
+Indirect blocks:
+
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+         9    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	45
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:54cb000:1000 c00L/c00P F=1 B=45/45 cksum=000000a57195fa80:0000fc854e7a6270:00fcaea1056d0183:bdf7ba598fecfc34
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        10    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:12 2026
+	mtime	Fri Nov 27 14:55:12 2026
+	ctime	Fri Nov 27 14:55:12 2026
+	crtime	Fri Nov 27 14:55:12 2026
+	gen	181
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:4750000:1000 1e00L/1000P F=1 B=181/181 cksum=000000c4690baa62:0001bf3fafda4b34:0259298ffcfc86ae:565d434c56df7247
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        11    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r3-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:17 2026
+	mtime	Fri Nov 27 14:55:17 2026
+	ctime	Fri Nov 27 14:55:17 2026
+	crtime	Fri Nov 27 14:55:17 2026
+	gen	211
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:8000000:2000 1200L/1200P F=1 B=211/211 cksum=000000f857fcd435:00023b884e4f8e1c:035d8b39079d572e:ced99af31eab0422
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        32    1   128K    512      0     512    512  100.00  SA master node (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 2 entries
+
+		REGISTRY = 35 
+		LAYOUTS = 36 
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/41P B=15
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        33    1   128K    512      0     512    512  100.00  ZFS delete queue (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 512 bytes, 0 entries
+
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/1cP B=15
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        34    1   128K  2.50K     8K     512  2.50K  100.00  ZFS directory (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:54:58 2026
+	mtime	Fri Nov 27 14:55:17 2026
+	ctime	Fri Nov 27 14:55:17 2026
+	crtime	Fri Nov 27 14:54:58 2026
+	gen	15
+	mode	40755
+	size	39
+	parent	34
+	links	3
+	pflags	840800000144
+	projid	0
+	microzap: 2560 bytes, 37 entries
+
+		r1-2.txt = 396 (type: Regular File)
+		f10.txt = 6 (type: Regular File)
+		r3-3.txt = 270 (type: Regular File)
+		f17.txt = 143 (type: Regular File)
+		f19.txt = 393 (type: Regular File)
+		f3.txt = 132 (type: Regular File)
+		f4.txt = 257 (type: Regular File)
+		r0-2.txt = 144 (type: Regular File)
+		r2-3.txt = 10 (type: Regular File)
+		dir = 2 (type: Directory)
+		f18.txt = 392 (type: Regular File)
+		f16.txt = 141 (type: Regular File)
+		f11.txt = 261 (type: Regular File)
+		r3-2.txt = 269 (type: Regular File)
+		r1-3.txt = 397 (type: Regular File)
+		r2-2.txt = 146 (type: Regular File)
+		r0-3.txt = 145 (type: Regular File)
+		f5.txt = 258 (type: Regular File)
+		f2.txt = 256 (type: Regular File)
+		r2-1.txt = 267 (type: Regular File)
+		r0-0.txt = 9 (type: Regular File)
+		f8.txt = 5 (type: Regular File)
+		f1.txt = 4 (type: Regular File)
+		f6.txt = 135 (type: Regular File)
+		f12.txt = 262 (type: Regular File)
+		r3-1.txt = 11 (type: Regular File)
+		f15.txt = 391 (type: Regular File)
+		r1-0.txt = 266 (type: Regular File)
+		f7.txt = 259 (type: Regular File)
+		f0.txt = 128 (type: Regular File)
+		r0-1.txt = 394 (type: Regular File)
+		f9.txt = 386 (type: Regular File)
+		r2-0.txt = 398 (type: Regular File)
+		r1-1.txt = 395 (type: Regular File)
+		f14.txt = 139 (type: Regular File)
+		f13.txt = 389 (type: Regular File)
+		r3-0.txt = 268 (type: Regular File)
+Indirect blocks:
+               0 L0 0:8365000:1000 0:1789000:1000 a00L/a00P F=1 B=233/233 cksum=0000002b865535ea:000039b1cd3f51b9:00306974fe74be30:1e6c0b89f6c06c81
+
+		segment [0000000000000000, 0000000000000a00) size 2.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        35    1   128K  1.50K     8K     512  1.50K  100.00  SA attr registration (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	microzap: 1536 bytes, 22 entries
+
+		ZPL_UID =  800000c : [8:0:12]
+		ZPL_DXATTR =  30014 : [0:3:20]
+		ZPL_DACL_ACES =  40013 : [0:4:19]
+		ZPL_CRTIME =  10000003 : [16:0:3]
+		ZPL_ATIME =  10000000 : [16:0:0]
+		ZPL_LINKS =  8000008 : [8:0:8]
+		ZPL_DACL_COUNT =  8000010 : [8:0:16]
+		ZPL_MODE =  8000005 : [8:0:5]
+		ZPL_PROJID =  8000015 : [8:0:21]
+		ZPL_SIZE =  8000006 : [8:0:6]
+		ZPL_GEN =  8000004 : [8:0:4]
+		ZPL_PARENT =  8000007 : [8:0:7]
+		ZPL_CTIME =  10000002 : [16:0:2]
+		ZPL_MTIME =  10000001 : [16:0:1]
+		ZPL_SCANSTAMP =  20030012 : [32:3:18]
+		ZPL_GID =  800000d : [8:0:13]
+		ZPL_FLAGS =  800000b : [8:0:11]
+		ZPL_PAD =  2000000e : [32:0:14]
+		ZPL_ZNODE_ACL =  5803000f : [88:3:15]
+		ZPL_XATTR =  8000009 : [8:0:9]
+		ZPL_SYMLINK =  30011 : [0:3:17]
+		ZPL_RDEV =  800000a : [8:0:10]
+Indirect blocks:
+               0 L0 0:b0000:1000 0:10b0000:1000 600L/600P F=1 B=15/15 cksum=00000012ddf4f5af:00000e7d5d3e2fab:000762e6cb337859:02dfbc2961ac9cd9
+
+		segment [0000000000000000, 0000000000000600) size 1.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+        36    1   128K    16K    16K     512    32K  100.00  SA attr layouts (K=inherit) (Z=inherit=inherit)
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 1
+	Fat ZAP stats:
+		Pointer table:
+			1024 elements
+			zt_blk: 0
+			zt_numblks: 0
+			zt_shift: 10
+			zt_blks_copied: 0
+			zt_nextblk: 0
+		ZAP entries: 3
+		Leaf blocks: 1
+		Total blocks: 2
+		zap_block_type: 0x8000000000000001
+		zap_magic: 0x2f52ab2ab
+		zap_salt: 0x3bab05879
+		Leafs with 2^n pointers:
+			  9:      1 *
+		Blocks with n*5 entries:
+			  0:      1 *
+		Blocks n/10 full:
+			  1:      1 *
+		Entries with n chunks:
+			  4:      3 ***
+		Buckets with n entries:
+			  0:    509 ****************************************
+			  1:      3 *
+
+		4 = [ 5  6  4  12  13  7  11  0  1  2  3  8  16  19  17 ]
+		3 = [ 5  6  4  12  13  7  11  0  1  2  3  8  16  19 ]
+		2 = [ 5  6  4  12  13  7  11  0  1  2  3  8  21  16  19 ]
+Indirect blocks:
+               0 L0 0:5338000:1000 0:11f4000:1000 4000L/1000P F=1 B=34/34 cksum=000000125e2e56aa:0000482aa6702c09:008dead428cad3a1:ba3fdb009934a754
+            4000 L0 0:5339000:1000 0:11f5000:1000 4000L/1000P F=1 B=34/34 cksum=000000758360fdb7:000113aa444b1742:0173c8632c0f5295:6ecac270aa09fb5d
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       128    1   128K    512      0     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	29
+	mode	100644
+	size	100
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 EMBEDDED et=0 200L/47P B=30
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       129    1   128K    512     4K     512    512  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b0
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	30
+	mode	100644
+	size	512
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:52ee000:1000 200L/200P F=1 B=30/30 cksum=0000003ab66dc028:00000e7d2085f37e:00026c477134faad:004edf66e6f616e5
+
+		segment [0000000000000000, 0000000000000200) size   512
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       130    1   128K  2.50K     4K     512  2.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b1
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	30
+	mode	100644
+	size	2560
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5304000:1000 a00L/a00P F=1 B=32/32 cksum=0000013bc02dd106:0001925a2e750804:0151fa1ddec6e039:d4f4587a8983e772
+
+		segment [0000000000000000, 0000000000000a00) size 2.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       131    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b2
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	4608
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:515b000:2000 1200L/1200P F=1 B=34/34 cksum=0000023f43ed89eb:00051d1ad7e9ac77:07bc468254055ba6:c4c0aed2b8828849
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       132    1   128K     4K     4K     512     4K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	3709
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5337000:1000 1000L/1000P F=1 B=34/34 cksum=000000ce7e7fbb76:0001c8ac23f45c7a:0268607cfaaba998:69f0a5206bf0f142
+
+		segment [0000000000000000, 0000000000001000) size    4K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       133    1   128K  8.50K    12K     512  8.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b4
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	8704
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:532e000:3000 2200L/2200P F=1 B=34/34 cksum=0000044fe1de861d:001264206bab928c:343849a61652886e:27a50c5298d4af25
+
+		segment [0000000000000000, 0000000000002200) size 8.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       134    1   128K  10.5K    12K     512  10.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b5
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	10752
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5386000:3000 2a00L/2a00P F=1 B=34/34 cksum=000005295e82bfd1:001b1840331c0952:5f0af7e8b012bcb9:7dd3e2b9c70f3116
+
+		segment [0000000000000000, 0000000000002a00) size 10.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       135    1   128K  14.5K     8K     512  14.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f6.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	14536
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5154000:2000 3a00L/2000P F=1 B=34/34 cksum=0000016912c690ce:0006fc9642f78d5f:13afdf11522c3543:51319e08d132bc0c
+
+		segment [0000000000000000, 0000000000003a00) size 14.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       136    1   128K  14.5K    16K     512  14.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b7
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	14848
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5368000:4000 3a00L/3a00P F=1 B=34/34 cksum=000007597868e2f3:00353cdbff44de05:00b196774c10f182:e01705ae24b0edaa
+
+		segment [0000000000000000, 0000000000003a00) size 14.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       137    1   128K  18.5K    20K     512  18.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b9
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	18944
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:535e000:5000 4a00L/4a00P F=1 B=34/34 cksum=00000961f788d184:00579e0ff16af325:1ea1800e05da44db:caf1997278f7d6e6
+
+		segment [0000000000000000, 0000000000004a00) size 18.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       138    1   128K  22.5K    24K     512  22.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b11
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	23040
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53d4000:6000 5a00L/5a00P F=1 B=34/34 cksum=00000b4861bad142:007f5b3eb1c25766:bc5372edae21f54a:21db726fdfdde0da
+
+		segment [0000000000000000, 0000000000005a00) size 22.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       139    1   128K    77K    32K     512    77K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f14.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	78696
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5372000:8000 13400L/8000P F=1 B=34/34 cksum=000007366589b614:0072d8368fe6d243:c3c96011ac883d51:a6e5a0a55bdb0156
+
+		segment [0000000000000000, 0000000000013400) size   77K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       140    1   128K  30.5K    32K     512  30.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b15
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	31232
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:513c000:8000 7a00L/7a00P F=1 B=34/34 cksum=00000f4a29d47e1c:00e999ce0ac8ce05:46e1da1f7ea0b3ab:d68004a0ec04a22b
+
+		segment [0000000000000000, 0000000000007a00) size 30.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       141    1   128K   100K    44K     512   100K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f16.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	102756
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53c9000:b000 19200L/b000P F=1 B=34/34 cksum=000009ad0da6a7f4:00de508287b6cc6b:b2752af76e759f0a:f858d4ef6d2cb85d
+
+		segment [0000000000000000, 0000000000019200) size  100K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       142    1   128K  32.5K    36K     512  32.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b16
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	33280
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53a4000:9000 8200L/8200P F=1 B=34/34 cksum=000010396c72512c:01071fa3bdd98945:1feae46d0b07e4f0:5f4b9d12c3e4cf73
+
+		segment [0000000000000000, 0000000000008200) size 32.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       143    1   128K   114K    48K     512   114K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f17.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	115989
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5348000:c000 1c600L/c000P F=1 B=34/34 cksum=00000ad3b70e2fa9:010a11f933c5d9ab:9aec5ab2a7f14287:852ff841dde4e903
+
+		segment [0000000000000000, 000000000001c600) size  114K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       144    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:01 2026
+	mtime	Fri Nov 27 14:55:01 2026
+	ctime	Fri Nov 27 14:55:01 2026
+	crtime	Fri Nov 27 14:55:01 2026
+	gen	67
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:569d000:1000 1800L/1000P F=1 B=67/67 cksum=0000009c1dd2294e:0001a4f8f1ab9639:0267d698f592bd7f:7fcf233447ea0c0c
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       145    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:01 2026
+	mtime	Fri Nov 27 14:55:01 2026
+	ctime	Fri Nov 27 14:55:01 2026
+	crtime	Fri Nov 27 14:55:01 2026
+	gen	78
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5787000:1000 1e00L/1000P F=1 B=78/78 cksum=000000ccdcba9019:0001ea1e281ffd2b:02a8d7268741c44b:b457e0bb054b2f8a
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       146    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:12 2026
+	mtime	Fri Nov 27 14:55:12 2026
+	ctime	Fri Nov 27 14:55:12 2026
+	crtime	Fri Nov 27 14:55:12 2026
+	gen	170
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:467d000:1000 1800L/1000P F=1 B=170/170 cksum=0000009e5738f213:0001ab82de6f1763:0270d39535e2e1e3:87a0b8f423046aa7
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       256    1   128K     2K     4K     512     2K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/hard
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	33
+	mode	100644
+	size	1704
+	parent	2
+	links	2
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:538a000:1000 800L/800P F=1 B=34/34 cksum=0000005ec556bdba:00006f24ac1ff369:004c5e8a1529a072:26a212a887d23e48
+
+		segment [0000000000000000, 0000000000000800) size    2K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       257    1   128K  6.50K     4K     512  6.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f4.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	6516
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5331000:1000 1a00L/1000P F=1 B=34/34 cksum=000000a335881441:00019fbdd0bd3bbf:024e21fcf225ccb5:5c2a35af2e7cfc72
+
+		segment [0000000000000000, 0000000000001a00) size 6.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       258    1   128K    10K     8K     512    10K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f5.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	10125
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5370000:2000 2800L/2000P F=1 B=34/34 cksum=0000010512cc620e:0005fa4f01e27fee:12637a59ae1ee5d4:4e82cbc560e5cd5a
+
+		segment [0000000000000000, 0000000000002800) size   10K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       259    1   128K  19.5K    12K     512  19.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f7.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	19749
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:532b000:3000 4e00L/3000P F=1 B=34/34 cksum=000001d37f802c12:000e728425d58b0d:3e6b55cb95f71cb2:507dd029c67b2b7c
+
+		segment [0000000000000000, 0000000000004e00) size 19.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       260    1   128K  16.5K    20K     512  16.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b8
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	16896
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5381000:5000 4200L/4200P F=1 B=34/34 cksum=0000081e3e56f0e4:00438a6b8db6d3f8:741daa2d0c3ed9b3:8bdc4337df6b9aae
+
+		segment [0000000000000000, 0000000000004200) size 16.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       261    1   128K  47.5K    20K     512  47.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f11.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	48621
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5363000:5000 be00L/5000P F=1 B=34/34 cksum=0000048ae32da606:002e23e063532b20:348d7c8eb79e8f7c:9019f9ac900cb7fa
+
+		segment [0000000000000000, 000000000000be00) size 47.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       262    1   128K  56.5K    24K     512  56.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f12.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	57844
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53e0000:6000 e200L/6000P F=1 B=34/34 cksum=0000055090f4b68b:004145ce4f9e51c2:09eb0e45ec4ed8fd:169949e5152503e3
+
+		segment [0000000000000000, 000000000000e200) size 56.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       263    1   128K  34.5K    36K     512  34.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b17
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	35328
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5399000:9000 8a00L/8a00P F=1 B=34/34 cksum=000011549303a6f9:012b5e180cf88af0:6c55d01c92001ffe:cd290624d890c11c
+
+		segment [0000000000000000, 0000000000008a00) size 34.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       264    1   128K  36.5K    40K     512  36.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b18
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	37376
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:538f000:a000 9200L/9200P F=1 B=34/34 cksum=0000120a72ef8cd5:01498e88572a0dc9:ab0a88f5cd3cff09:7354a55cc286ec88
+
+		segment [0000000000000000, 0000000000009200) size 36.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       265    1   128K  38.5K    40K     512  38.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b19
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	39424
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:514a000:a000 9a00L/9a00P F=1 B=34/34 cksum=00001365c13963ff:017414c833adb66e:a2c6448676e9ab3e:e3da2f1330ec34a9
+
+		segment [0000000000000000, 0000000000009a00) size 38.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       266    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:06 2026
+	mtime	Fri Nov 27 14:55:06 2026
+	ctime	Fri Nov 27 14:55:06 2026
+	crtime	Fri Nov 27 14:55:06 2026
+	gen	96
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:40d0000:1000 c00L/c00P F=1 B=96/96 cksum=000000a7fd4f0e81:0001025dee5fbde4:0103d2c9f6b5c734:c40ab75945995a1f
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       267    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:12 2026
+	mtime	Fri Nov 27 14:55:12 2026
+	ctime	Fri Nov 27 14:55:12 2026
+	crtime	Fri Nov 27 14:55:12 2026
+	gen	159
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:4011000:2000 1200L/1200P F=1 B=159/159 cksum=000000fbdcb46237:00024353ee69dfe5:0367e1f998c0551b:d9b882cae3c2982a
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       268    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r3-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:17 2026
+	mtime	Fri Nov 27 14:55:17 2026
+	ctime	Fri Nov 27 14:55:17 2026
+	crtime	Fri Nov 27 14:55:17 2026
+	gen	200
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:8091000:1000 c00L/c00P F=1 B=200/200 cksum=000000a6c78b09aa:00010058a4fab711:01004a1587bd88bc:c02452579b3259e1
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       269    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r3-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:17 2026
+	mtime	Fri Nov 27 14:55:17 2026
+	ctime	Fri Nov 27 14:55:17 2026
+	crtime	Fri Nov 27 14:55:17 2026
+	gen	222
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:8275000:1000 1800L/1000P F=1 B=222/222 cksum=000000a1526d8c1f:0001b2461a805b58:027952fe1686f673:8fcb8852b05068e1
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       270    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r3-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:17 2026
+	mtime	Fri Nov 27 14:55:17 2026
+	ctime	Fri Nov 27 14:55:17 2026
+	crtime	Fri Nov 27 14:55:17 2026
+	gen	233
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:8364000:1000 1e00L/1000P F=1 B=233/233 cksum=000000bf322bfaf0:0001cb3276994ae0:02802f432a02e1ac:8cfc6f5111e5f414
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       384    1   128K  6.50K     8K     512  6.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b3
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	6656
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5159000:2000 1a00L/1a00P F=1 B=34/34 cksum=000003475b587414:000a983741a8bf3b:171fc5eae35e552b:e985fa1a66f4ae2f
+
+		segment [0000000000000000, 0000000000001a00) size 6.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       385    1   128K  12.5K    16K     512  12.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b6
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	12800
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:536c000:4000 3200L/3200P F=1 B=34/34 cksum=0000062f880864b5:00268afe0af9d6ec:a016a55b753b308f:26877bddcaca5bec
+
+		segment [0000000000000000, 0000000000003200) size 12.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       386    1   128K    32K    16K     512    32K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f9.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	32581
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:538b000:4000 8000L/4000P F=1 B=34/34 cksum=00000306bb18aa8a:001c4d530076f481:9b51a0b274f0d3a3:6a73786f1934bf2f
+
+		segment [0000000000000000, 0000000000008000) size   32K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       387    1   128K  20.5K    24K     512  20.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b10
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	20992
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5144000:6000 5200L/5200P F=1 B=34/34 cksum=00000a496ff58ab1:0068e4a69fb2b76c:ca2aa50a0cbcad16:bf922c97ad5a7b28
+
+		segment [0000000000000000, 0000000000005200) size 20.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       388    1   128K  24.5K    28K     512  24.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b12
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	25088
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53b4000:7000 6200L/6200P F=1 B=34/34 cksum=00000c362618c828:009536f931898721:bddc75326c456ecc:22655574c63c0f2d
+
+		segment [0000000000000000, 0000000000006200) size 24.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       389    1   128K  66.5K    28K     512  66.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f13.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	67869
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:53ad000:7000 10a00L/7000P F=1 B=34/34 cksum=00000672529c7c7f:0059d21ef621d4da:3f101b6defae4fb3:5e25ad4140dda50f
+
+		segment [0000000000000000, 0000000000010a00) size 66.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       390    1   128K  28.5K    32K     512  28.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/dir/b14
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	29184
+	parent	2
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:52bf000:8000 7200L/7200P F=1 B=34/34 cksum=00000e24fe15c70b:00c8f483552e3954:6cc9efe820e5ac59:9979e6ed3876df39
+
+		segment [0000000000000000, 0000000000007200) size 28.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       391    1   128K  88.5K    40K     512  88.5K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f15.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	90325
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:5354000:a000 16200L/a000P F=1 B=34/34 cksum=000008796f858202:00b6b462ec15b452:879390dd77316674:8bbcf6ed7534126d
+
+		segment [0000000000000000, 0000000000016200) size 88.5K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       392    1   128K   127K    56K     512   127K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/f18.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	130024
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:533a000:e000 1fc00L/e000P F=1 B=34/34 cksum=00000c2d8064758c:016685ff6243405d:05e81ac15c27a487:ec5a80cd1b4d9276
+
+		segment [0000000000000000, 000000000001fc00) size  127K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       393    2   128K   128K    72K     512   256K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 1
+	path	/f19.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	34
+	mode	100644
+	size	144861
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L1  0:53e6000:1000 0:11fa000:1000 20000L/1000P F=2 B=34/34 cksum=0000008ae1ae1736:0001fbabe88230a1:03a2b3990cad874d:74f089e6ab46f201
+               0  L0 0:53bb000:e000 20000L/e000P F=1 B=34/34 cksum=00000c4ae3ebdae3:016c8eee490d4d44:9afd8cae0ccafbc4:6bf54f5e22182df5
+           20000  L0 0:53a2000:2000 20000L/2000P F=1 B=34/34 cksum=000001cac3d70134:00078d08bfa816e4:13b53d62b0da822c:13ee24c95e6856d1
+
+		segment [0000000000000000, 0000000000040000) size  256K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       394    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r0-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:00 2026
+	mtime	Fri Nov 27 14:55:00 2026
+	ctime	Fri Nov 27 14:55:00 2026
+	crtime	Fri Nov 27 14:55:00 2026
+	gen	56
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:54ad000:2000 1200L/1200P F=1 B=56/56 cksum=000000f7f0b0418b:000239ab1ba86d18:0354f37f3ed1bbc0:bebeee7ce432b4b1
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       395    1   128K  4.50K     8K     512  4.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-1.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:06 2026
+	mtime	Fri Nov 27 14:55:06 2026
+	ctime	Fri Nov 27 14:55:06 2026
+	crtime	Fri Nov 27 14:55:06 2026
+	gen	107
+	mode	100644
+	size	4500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:400f000:2000 1200L/1200P F=1 B=107/107 cksum=000000fa0bd35471:000242238d4ae5f2:0363e2636ae8ff61:d099305492596143
+
+		segment [0000000000000000, 0000000000001200) size 4.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       396    1   128K     6K     4K     512     6K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-2.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:06 2026
+	mtime	Fri Nov 27 14:55:06 2026
+	ctime	Fri Nov 27 14:55:06 2026
+	crtime	Fri Nov 27 14:55:06 2026
+	gen	118
+	mode	100644
+	size	6000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:42b3000:1000 1800L/1000P F=1 B=118/118 cksum=0000009171b3dd99:000187d4d65e36fd:023ab784f103ba51:4dad20f7b6c04280
+
+		segment [0000000000000000, 0000000000001800) size    6K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       397    1   128K  7.50K     4K     512  7.50K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r1-3.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:06 2026
+	mtime	Fri Nov 27 14:55:06 2026
+	ctime	Fri Nov 27 14:55:06 2026
+	crtime	Fri Nov 27 14:55:06 2026
+	gen	129
+	mode	100644
+	size	7500
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:439f000:1000 1e00L/1000P F=1 B=129/129 cksum=000000c1f22b988c:0001c72b966dad61:02736c3bf96f06c7:7b39dfa7cb029429
+
+		segment [0000000000000000, 0000000000001e00) size 7.50K
+
+    Object  lvl   iblk   dblk  dsize  dnsize  lsize   %full  type
+       398    1   128K     3K     4K     512     3K  100.00  ZFS plain file (K=inherit) (Z=inherit=inherit)
+                                               176   bonus  System attributes
+	dnode flags: USED_BYTES USERUSED_ACCOUNTED USEROBJUSED_ACCOUNTED 
+	dnode maxblkid: 0
+	path	/r2-0.txt
+	uid     0
+	gid     0
+	atime	Fri Nov 27 14:55:11 2026
+	mtime	Fri Nov 27 14:55:11 2026
+	ctime	Fri Nov 27 14:55:11 2026
+	crtime	Fri Nov 27 14:55:11 2026
+	gen	148
+	mode	100644
+	size	3000
+	parent	34
+	links	1
+	pflags	840800000004
+	projid	0
+Indirect blocks:
+               0 L0 0:44ae000:1000 c00L/c00P F=1 B=148/148 cksum=000000a430e20b41:0000fc757e1719b7:00fce226b730f07e:be36b74cd1dbeafd
+
+		segment [0000000000000000, 0000000000000c00) size    3K
+
+    Dnode slots:
+	Total used:            65
+	Max used:             398
+	Percent empty:  83.668342
+

@@ -1,0 +1,315 @@
+[
+ {
+  "id": "control-sat-mmp",
+  "description": "Nothing damaged and nothing told, on the satellite with multihost=on: the uberblocks of its heartbeat in the rings: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-mmp/vm/disk-8k": "ok",
+   "sat-mmp/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-mmp": "ok",
+    "sat-mmp/fs": "ok",
+    "sat-mmp/fs@s0": "ok",
+    "sat-mmp/fs@s1": "ok",
+    "sat-mmp/fs@s2": "ok",
+    "sat-mmp/fs@s3": "ok",
+    "sat-mmp/vm": "ok",
+    "sat-mmp/vm@s0": "ok",
+    "sat-mmp/vm@s1": "ok",
+    "sat-mmp/vm@s2": "ok",
+    "sat-mmp/vm@s3": "ok",
+    "sat-mmp@s0": "ok",
+    "sat-mmp@s1": "ok",
+    "sat-mmp@s2": "ok",
+    "sat-mmp@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 259": "ok",
+    "txg 259 features": "ok",
+    "txg 258": "ok",
+    "txg 258 features": "ok",
+    "txg 257": "ok",
+    "txg 257 features": "ok",
+    "txg 256": "ok",
+    "txg 256 features": "ok",
+    "txg 255": "ok",
+    "txg 255 features": "ok",
+    "txg 254": "ok",
+    "txg 254 features": "ok",
+    "txg 253": "ok",
+    "txg 253 features": "ok",
+    "txg 252": "ok",
+    "txg 252 features": "ok",
+    "txg 251": "ok",
+    "txg 251 features": "ok",
+    "txg 250": "ok",
+    "txg 250 features": "ok",
+    "txg 249": "ok",
+    "txg 249 features": "ok",
+    "txg 248": "ok",
+    "txg 248 features": "ok",
+    "txg 247": "ok",
+    "txg 247 features": "ok",
+    "txg 246": "ok",
+    "txg 246 features": "ok",
+    "txg 245": "ok",
+    "txg 245 features": "ok",
+    "txg 244": "ok",
+    "txg 244 features": "ok",
+    "txg 243": "ok",
+    "txg 243 features": "ok",
+    "txg 242": "ok",
+    "txg 242 features": "ok",
+    "txg 241": "ok",
+    "txg 241 features": "ok",
+    "txg 240": "ok",
+    "txg 240 features": "ok",
+    "txg 239": "ok",
+    "txg 239 features": "ok",
+    "txg 238": "ok",
+    "txg 238 features": "ok",
+    "txg 237": "ok",
+    "txg 237 features": "ok",
+    "txg 236": "ok",
+    "txg 236 features": "ok",
+    "txg 235": "ok",
+    "txg 235 features": "ok",
+    "txg 234": "ok",
+    "txg 234 features": "ok",
+    "txg 233": "ok",
+    "txg 233 features": "ok",
+    "txg 232": "ok",
+    "txg 232 features": "ok",
+    "txg 231": "ok",
+    "txg 231 features": "ok",
+    "txg 230": "ok",
+    "txg 230 features": "ok"
+   },
+   "txgs": [
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-mmp/vm/disk-16k": "ok",
+    "sat-mmp/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-mmp/vm/disk-16k": [
+     "c0042, born at txg 229"
+    ],
+    "sat-mmp/vm/disk-8k": [
+     "c0041, born at txg 225"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 244": "ok",
+    "uberblock txg 260": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-mmp-v1"
+ },
+ {
+  "id": "labels-sat-mmp-rings-one-member",
+  "description": "Every uberblock ring of one half of the mirror zeroed, the heartbeat's slots with them",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-mmp/vm/disk-8k": "ok",
+   "sat-mmp/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-mmp": "ok",
+    "sat-mmp/fs": "ok",
+    "sat-mmp/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    260
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "uberblock txg 244": "ok",
+    "uberblock txg 260": "ok",
+    "rings t0-mirror-0": "refused",
+    "rings t0-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-mmp-v1"
+ },
+ {
+  "id": "member-sat-mmp-mirror-half",
+  "description": "One half of the mirror absent",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-mmp/vm/disk-8k": "ok",
+   "sat-mmp/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-mmp": "ok",
+    "sat-mmp/fs": "ok",
+    "sat-mmp/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    260
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "uberblock txg 244": "ok",
+    "uberblock txg 260": "ok",
+    "rings t0-mirror-0": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-mmp-v1"
+ }
+]

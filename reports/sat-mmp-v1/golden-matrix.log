@@ -1,0 +1,5 @@
+sat-mmp-v1 pass       control-sat-mmp                  expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-mmp-v1 pass       labels-sat-mmp-rings-one-member  expected bit-exact | reconstructed actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan refused  report bit-exact
+sat-mmp-v1 pass       member-sat-mmp-mirror-half       expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-mmp-v1: 101 manifest(s) written for another pool, not run here
+sat-mmp-v1: 3 pass

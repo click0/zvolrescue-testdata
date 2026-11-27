@@ -1,0 +1,48 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-mmp
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-mmp
+ state: ONLINE
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-mmp                                 ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                    MOUNTED  MOUNTPOINT                        USED  REFER
+sat-mmp                 no       /var/tmp/sat/altroot/sat-mmp     32.2M   104K
+sat-mmp@s0              -        -                                   0B   104K
+sat-mmp@s1              -        -                                   0B   104K
+sat-mmp@s2              -        -                                   0B   104K
+sat-mmp@s3              -        -                                   0B   104K
+sat-mmp/fs              no       /var/tmp/sat/altroot/sat-mmp/fs  1.34M  1.09M
+sat-mmp/fs@s0           -        -                                  80K  1.03M
+sat-mmp/fs@s1           -        -                                  80K  1.05M
+sat-mmp/fs@s2           -        -                                  80K  1.07M
+sat-mmp/fs@s3           -        -                                   0B  1.09M
+sat-mmp/vm              no       /var/tmp/sat/altroot/sat-mmp/vm  30.1M    96K
+sat-mmp/vm@s0           -        -                                   0B    96K
+sat-mmp/vm@s1           -        -                                   0B    96K
+sat-mmp/vm@s2           -        -                                   0B    96K
+sat-mmp/vm@s3           -        -                                   0B    96K
+sat-mmp/vm/disk-16k     -        -                                19.6M  16.1M
+sat-mmp/vm/disk-16k@s0  -        -                                1.14M  16.1M
+sat-mmp/vm/disk-16k@s1  -        -                                 144K  16.1M
+sat-mmp/vm/disk-16k@s2  -        -                                 144K  16.1M
+sat-mmp/vm/disk-16k@s3  -        -                                   0B  16.1M
+sat-mmp/vm/disk-8k      -        -                                10.4M  8.23M
+sat-mmp/vm/disk-8k@s0   -        -                                 744K  8.23M
+sat-mmp/vm/disk-8k@s1   -        -                                 232K  8.23M
+sat-mmp/vm/disk-8k@s2   -        -                                 232K  8.23M
+sat-mmp/vm/disk-8k@s3   -        -                                   0B  8.23M
+members: unchanged after the export (their sums against members.sha256)

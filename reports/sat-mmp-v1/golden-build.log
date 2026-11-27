@@ -1,0 +1,26 @@
+== sat-mmp (sat-mmp-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== oracle
+== export
+split-capture: 2 MiB in 27 files, the largest sat-mmp_vm_disk-8k@s3 (0 MiB)
+== files and history, the pool imported read-only
+sat-mmp: 3 entries
+sat-mmp@s0: 3 entries, the same as sat-mmp
+sat-mmp@s1: 3 entries, the same as sat-mmp
+sat-mmp@s2: 3 entries, the same as sat-mmp
+sat-mmp@s3: 3 entries, the same as sat-mmp
+sat-mmp/fs: 61 entries
+sat-mmp/fs@s0: 49 entries
+sat-mmp/fs@s1: 53 entries
+sat-mmp/fs@s2: 57 entries
+sat-mmp/fs@s3: 61 entries, the same as sat-mmp/fs
+sat-mmp/vm: 1 entries
+sat-mmp/vm@s0: 1 entries, the same as sat-mmp/vm
+sat-mmp/vm@s1: 1 entries, the same as sat-mmp/vm
+sat-mmp/vm@s2: 1 entries, the same as sat-mmp/vm
+sat-mmp/vm@s3: 1 entries, the same as sat-mmp/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md
