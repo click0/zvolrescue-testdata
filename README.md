@@ -57,7 +57,10 @@ manifests name them (`image = "sat-<name>"`), 26 passed. Three more of
 stage 3 carry the feature sets of older pools, made by the current
 OpenZFS: `sat-compat20` (`compatibility=openzfs-2.0-linux`),
 `sat-nofeatures` (`zpool create -d`) and `sat-v28` (pool version 28) —
-0.19 GB, 7 manifests, 7 passed.
+0.19 GB, 7 manifests, 7 passed. And `sat-freebsd`, made on FreeBSD 15.1
+with the OpenZFS of its base system (2.4.2) on GPT partitions as its
+installer lays them out, the members whole disks — 45 MB, 4 manifests,
+4 passed.
 
 **`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven

@@ -221,8 +221,15 @@ case rather than answering wrongly.
 
 ## Stage 3 — other systems and versions
 
-* **A pool made on FreeBSD** (its base OpenZFS, GPT and `gptid` as
-  FreeBSD writes them), on a slimmed recipe: 0.3–0.5 GB.
+* *Done* (2026-11-27). **A pool made on FreeBSD** (its base OpenZFS, GPT and `gptid` as
+  FreeBSD writes them), on a slimmed recipe: 0.3–0.5 GB. `sat-freebsd`:
+  `build-satellite.sh freebsd` in a FreeBSD 15.1 VM (`vmactions`), its
+  base OpenZFS 2.4.2, a raidz1 of three md-backed disks each with a GPT,
+  a freebsd-boot partition and a freebsd-zfs one labelled `gpt/fbsdN`,
+  the pool on the labels; the oracle captured there, the members whole
+  disks with their vdev's offset in `layout.json`; the matrix on the
+  runner. 4 manifests, 4 passed at the first build — the primary GPT of a
+  disk zeroed among them — and 45 MB, a slim recipe indeed.
 * *Done* (2026-11-27). **The feature sets of older pools** without older kernels:
   `zpool create -o compatibility=openzfs-2.0-linux`, `-d` and
   `-o version=28` on the current OpenZFS — three small pools, about

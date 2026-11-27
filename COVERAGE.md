@@ -15,7 +15,7 @@ is counted by its case alone, and a class that damages no member
 (the control; metadata, every case of which aims at a block) has no
 rows here. An empty cell (—) is a combination no manifest tests.
 
-115 manifests; not counted, their pool having no oracle here: control-sat-freebsd, data-sat-freebsd-one-member, member-sat-freebsd-missing-one, partition-sat-freebsd-gpt-zeroed.
+119 manifests.
 
 ## Top-level vdevs, by class and position
 
@@ -26,19 +26,19 @@ rows here. An empty cell (—) is a combination no manifest tests.
 | labels | at | — | — | — | — | — | — | — |
 | labels | past | — | — | — | — | — | — | — |
 | labels | ? | — | — | — | — | — | — | — |
-| partition | none | — | — | — | — | — | — | 1 |
+| partition | none | — | — | — | — | — | 1 | 1 |
 | partition | within | — | — | — | — | — | — | — |
 | partition | at | — | — | — | — | — | — | — |
 | partition | past | — | — | — | — | — | — | — |
 | partition | ? | — | — | — | — | — | — | 3 |
 | data | none | — | — | — | — | — | — | — |
 | data | within | — | — | — | — | — | — | 7 |
-| data | at | 1 | — | 1 | — | — | 1 | 2 |
+| data | at | 1 | — | 1 | — | — | 2 | 2 |
 | data | past | 1 | — | 1 | — | — | 1 | — |
 | data | ? | — | — | — | — | — | — | — |
 | member | none | — | — | — | — | — | — | — |
 | member | within | — | — | — | — | — | — | 1 |
-| member | at | — | — | 5 | — | 1 | 4 | 3 |
+| member | at | — | — | 5 | — | 1 | 5 | 3 |
 | member | past | — | 2 | 1 | 1 | 1 | — | 1 |
 | member | ? | — | — | — | — | — | — | 2 |
 | older-self | none | — | — | — | — | — | — | — |
@@ -66,10 +66,10 @@ the pool at all).
 | Class | none | within | at | past | ? | outcome decided |
 |---|---|---|---|---|---|---|
 | labels | 17 | — | — | — | — | 2 |
-| partition | 1 | — | — | — | 3 | 1 |
+| partition | 2 | — | — | — | 3 | 2 |
 | metadata | 2 | — | — | — | 10 | 0 |
-| data | — | 7 | 5 | 3 | 7 | 15 |
-| member | 3 | 1 | 11 | 3 | 2 | 18 |
+| data | — | 7 | 6 | 3 | 7 | 16 |
+| member | 3 | 1 | 12 | 3 | 2 | 19 |
 | older-self | — | — | — | — | 4 | 0 |
 | combo | 2 | 8 | 5 | 1 | 8 | 6 |
-| control | 12 | — | — | — | — | 0 |
+| control | 13 | — | — | — | — | 0 |
