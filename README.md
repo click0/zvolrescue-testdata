@@ -62,7 +62,9 @@ with the OpenZFS of its base system (2.4.2) on GPT partitions as its
 installer lays them out, the members whole disks — 45 MB, 4 manifests,
 4 passed. And `sat-scale`, a pool at scale: 2,255 datasets and
 snapshots, its history wrapped — 90 MB, 2 manifests, both held out
-(`only: published-held-out`), 2 passed.
+(`only: published-held-out`), 2 passed. And `sat-large`, a volume of
+10 GiB of 8K blocks, over 1.3 million of them, every one past 4 GiB in
+its members — 850 MB, 3 manifests, held out, 3 passed.
 
 **`image-v1`**, the first kernel-built golden image: one pool, `golden`, with
 mirror-2, raidz2-4 and draid1 top-level vdevs at `ashift` 12, eleven

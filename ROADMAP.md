@@ -249,8 +249,15 @@ case rather than answering wrongly.
   `zfs get createtxg,origin`. 2 manifests, 2 passed, the matrix over it
   16½ minutes against under one for any other satellite. Published as
   `sat-scale-v1`, 90 MB, and `held` in the published job: run by
-  `only: published-held-out` alone. The large compressible volume
-  stays undone.
+  `only: published-held-out` alone. And the second: `sat-large`, a
+  mirror of two 12 GiB members with `vm/big`, 10 GiB of 8K blocks under
+  zstd — text, media, and a database's preallocated pages that ZFS keeps
+  in their block pointers — 26.67 times compressed to 426 MB, over 1.3
+  million blocks under four levels of indirect blocks, every block of it
+  past 4 GiB in its members (4.5 GiB of zeros took the first metaslabs,
+  and were destroyed after it). 3 manifests, 3 passed — the 10 GiB carve
+  among them — at the first build to run its matrix, and 850 MB, `held`
+  like the other.
 
 ## Stage 4 — coverage, stated
 
