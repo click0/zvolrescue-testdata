@@ -1,0 +1,14 @@
+id = "member-sat-compat20-missing-one"
+image = "sat-compat20"
+description = "One member of the raidz1 absent, on a pool of OpenZFS 2.0's feature set"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz1-1"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

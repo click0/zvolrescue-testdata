@@ -1,0 +1,10 @@
+id = "control-sat-compat20"
+image = "sat-compat20"
+description = "Nothing damaged and nothing told, on a pool of OpenZFS 2.0's feature set (compatibility=openzfs-2.0-linux): every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

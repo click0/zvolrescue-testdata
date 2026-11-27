@@ -1,0 +1,17 @@
+id = "data-sat-v28-one-member"
+image = "sat-v28"
+description = "The written space of one raidz2 member zeroed, on a pool of version 28"
+classes = ["data"]
+
+[[damage]]
+member = "t0-raidz2-1"
+range = "data:0%.."
+pattern = "zeros"
+
+[expect]
+# Without hole_birth a hole has no birth TXG: what reads it must not take
+# a zeroed block pointer for one where the block was written.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

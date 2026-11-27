@@ -1,0 +1,14 @@
+id = "member-sat-nofeatures-mirror-half"
+image = "sat-nofeatures"
+description = "One half of the mirror absent, on a pool with every feature disabled"
+classes = ["member"]
+
+[[damage]]
+member = "t0-mirror-0"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

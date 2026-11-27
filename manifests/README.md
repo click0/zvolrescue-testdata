@@ -77,7 +77,7 @@ A satellite (`layout.json` says `satellite`) is a small pool built for
 one pool-level feature the golden pool does not have — a removed vdev, a
 checkpoint, a hot spare and an unfinished replacing, an expanded raidz,
 special and dedup vdevs, two ashifts, an intent log never applied,
-`multihost` — and runs only the manifests that name it: the others are
+`multihost`; and, of stage 3, the feature sets of older pools — and runs only the manifests that name it: the others are
 written for three top-level vdevs and every kind of dataset. Its members
 are named by their roles in its `layout.json` (`t0-mirror-0`,
 `t2-mirror-1`, …); a slot under replacement is the device that stands
@@ -355,17 +355,20 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 104 manifests: 78 cover every class of SPEC §9.1's catalogue at least
+The 111 manifests: 78 cover every class of SPEC §9.1's catalogue at least
 once against the layout `image-v1` and `golden-v2` share: members
 `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`,
 `oracle/golden-v2/layout.json`); five of them name `golden-v2`, for what only it
-holds, and are n/a on `image-v1`. The other 26 are the satellites': a
+holds, and are n/a on `image-v1`. 26 are the satellites': a
 control each, and for each the members and the data its feature puts
 where a reader must find them — the half of a mirror that took a
 removed vdev's blocks, the hot spare and the stale disk it stands in
 for, the disk being replaced beside one that holds only the newest
 blocks, the special and the dedup vdev, a raidz at each ashift, the log
-device, the rings a heartbeat writes into. Expected
+device, the rings a heartbeat writes into. And 7 are the older feature
+sets' (stage 3): a control and a member or data case each on a pool of
+OpenZFS 2.0's feature set, one with every feature disabled and one of
+version 28. Expected
 outcomes are stated from ZFS redundancy, and against the published
 image every one applies and every one lands in its category: the
 reports of the runs are in [`reports/`](../reports/), and the Results

@@ -1,0 +1,18 @@
+id = "member-sat-v28-two-missing"
+image = "sat-v28"
+description = "Two members of the raidz2 absent, on a pool of version 28"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz2-0"
+pattern = "missing"
+
+[[damage]]
+member = "t0-raidz2-3"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"
