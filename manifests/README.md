@@ -386,5 +386,22 @@ describes; an older copy of a member its release holds none of; an outcome
 that is not one of the four, or `defect`; an `id` that is not the
 file's name; and a count in this file that is not the number of
 manifests. Run it before a push: `python3 tools/lint-manifests.py`.
-It knows the format and the oracle, not ZFS: whether an expectation
-follows from the redundancy is still the writer's to get right.
+And it holds `expect.outcome` to the redundancy arithmetic
+(`tools/redundancy.py`): of every top-level vdev a manifest's damage
+reaches, on each image it is run against, the most members lost at any
+one place against the vdev's parity — a member absent or overwritten
+whole is lost everywhere, two overwritten over the same percentages of
+their written space lose the same rows, labels, the boot area and the
+slack lose no data. Past the parity of a vdev that holds data, the case
+expects a refusal (or the partial image it accepts); within it or at
+it, the data back. The arithmetic decides nothing where it cannot count —
+a member moved, grown or an older copy of itself, bits flipped over more
+members than the parity, a slot under replacement, a block aimed at by
+its pointer — nor for a case that tells the tool something, damages
+labels or damages nothing; there the expectation is the writer's to get
+right. It is computed rather than written into each manifest because it
+is the image's as much as the damage's: `member-missing-two` is at a
+raidz2's parity and past a raidz1's. `tools/coverage.py` tabulates it
+into [`COVERAGE.md`](../COVERAGE.md), class by kind of vdev by position,
+so that a combination no manifest tests is an empty cell; the workflow
+fails when that file is not what the manifests make of it.

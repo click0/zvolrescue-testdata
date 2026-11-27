@@ -39,6 +39,9 @@ import re
 import sys
 import tomllib
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import redundancy  # noqa: E402
+
 CLASSES = {"labels", "partition", "metadata", "data", "member", "older-self", "control"}
 OUTCOMES = {"recovered", "bit-exact", "reconstructed", "refused"}
 TOP_KEYS = {"id", "description", "classes", "damage", "expect", "held_out", "recovery", "image"}
@@ -65,6 +68,15 @@ class Image:
     def __init__(self, oracle):
         self.dir = oracle
         layout = json.load(open(os.path.join(oracle, "layout.json")))
+        # The class of a special or dedup vdev, which `zdb -C` (and a
+        # layout made from it) does not give, from `zpool status`.
+        status = os.path.join(oracle, "zpool-status.txt")
+        if os.path.exists(status):
+            bias = redundancy.biases(open(status, errors="replace").read())
+            for top in layout.get("tops", []):
+                if top["index"] in bias and not top.get("alloc_bias") and not top.get("log"):
+                    top["alloc_bias"] = bias[top["index"]]
+        self.layout = layout
         self.tag = layout.get("image_tag", "")
         self.members = layout["members"]
         self.kinds = {m["group_kind"] for m in self.members.values()}
@@ -277,6 +289,34 @@ def check_outcome(value, where):
     return out
 
 
+def check_redundancy(m, image):
+    """`expect.outcome`, as the harness picks it for this image (its
+    `by_group_kind` for the kinds the damage reaches), against what the
+    redundancy arithmetic leaves the case (redundancy.py), where that
+    decides."""
+    layout = getattr(image, "layout", None)
+    expect = m.get("expect")
+    if not layout or not isinstance(expect, dict) or "outcome" not in expect:
+        return []
+    tops, case = redundancy.assess(m, layout, image.member)
+    want = redundancy.implied(case, m)
+    if want is None:
+        return []
+    kinds = {image.members[r]["group_kind"] for d in m.get("damage", []) if "member" in d
+             for r in [image.member(d["member"])] if r}
+    outcome = expect["outcome"]
+    for kind, alt in expect.get("by_group_kind", {}).items():
+        if kind in kinds:
+            outcome = alt
+            break
+    accepted = [outcome] if isinstance(outcome, str) else list(outcome)
+    problem = redundancy.contradiction(want, accepted)
+    if not problem:
+        return []
+    at = ", ".join(f"top {t} ({v['kind']}): {v['lost']} lost of {v['parity']} to spare" for t, v in tops.items())
+    return [f"expect.outcome: {problem} ({at})"]
+
+
 def lint(path, images):
     """Every finding about one manifest file. A manifest is held to every
     oracle of the pool or the image its `image` names, and passes when
@@ -389,6 +429,8 @@ def lint_against(m, stem, image):
         evidence = expect.get("evidence", [])
         if not isinstance(evidence, list) or not all(isinstance(e, str) for e in evidence):
             out.append("expect.evidence is a list of strings")
+
+    out += check_redundancy(m, image)
 
     recovery = m.get("recovery", {})
     out += [f"recovery: key {k!r} is not in the format" for k in recovery if k not in RECOVERY_KEYS]

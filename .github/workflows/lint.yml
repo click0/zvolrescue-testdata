@@ -18,6 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: python3 --version && python3 tools/lint-manifests.py
+      # The redundancy arithmetic the linter holds every outcome to, and
+      # the coverage table it makes: its examples, and COVERAGE.md as the
+      # manifests make it.
+      - run: python3 -m doctest tools/redundancy.py
+      - run: python3 tools/coverage.py --check
       # What keeps a run's report as reports/<tag>-rN (tools/add-report.py,
       # called by zvolrescue's realworld.yml): its own examples.
       - run: python3 -m doctest tools/add-report.py

@@ -241,12 +241,25 @@ case rather than answering wrongly.
 
 Release: +0.
 
-* A table generated from the manifests: class × kind of top-level vdev ×
+* *Done* (2026-11-27). A table generated from the manifests: class × kind of top-level vdev ×
   where the damage sits against the redundancy (within it, at it, one
-  past it), so that an empty cell shows.
-* The redundancy arithmetic in the manifests themselves — what is lost
+  past it), so that an empty cell shows — [`COVERAGE.md`](COVERAGE.md),
+  written by `tools/coverage.py` and checked current on every push.
+* *Done*, computed rather than written. The redundancy arithmetic in the manifests themselves — what is lost
   per top-level vdev against its parity — so that the linter can check
-  that `expect.outcome` follows from it.
+  that `expect.outcome` follows from it. `tools/redundancy.py` computes
+  it from a manifest's damage and the layout of each image it is run
+  against, since it is the image's as much as the damage's (two members
+  absent are at a raidz2's parity and past a raidz1's), and the linter
+  holds every outcome to it where it decides: 38 of the 111 manifests;
+  the others move a member, use an older copy of one, aim at a block,
+  tell the tool something or damage labels, where finding the pool, not
+  its redundancy, decides. Its first run found two places it had to
+  learn rather than a manifest wrong: a dedup vdev holds nothing a
+  reader needs, and a case that damages nothing is about whether the
+  tool reads the pool at all. The table's empty cells are the next
+  manifests to write: no data case on a mirror or a dRAID, no member
+  case `within` a mirror, nothing past a dRAID but one combination.
 
 All sizes above are estimates from `image-v1`'s release: the volumes'
 content is pseudo-random and does not compress, so a compressed member
