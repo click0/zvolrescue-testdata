@@ -1,0 +1,16 @@
+  pool: sat-removal
+ state: ONLINE
+remove: Removal of vdev 1 copied 7.44M in 0h0m, completed on Fri Nov 27 14:55:37 2026
+	600 memory used for removed device mappings
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-removal                             ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+	  mirror-2                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-2a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-2b.img  ONLINE       0     0     0
+
+errors: No known data errors

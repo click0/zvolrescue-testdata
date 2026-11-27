@@ -1,0 +1,40 @@
+Dataset mos [META], ID 0, cr_txg 4, 852K, 126 objects
+Dataset sat-removal/vm/disk-16k@s0 [ZVOL], ID 84, cr_txg 73, 16.1M, 2 objects
+Dataset sat-removal/vm/disk-16k@s1 [ZVOL], ID 178, cr_txg 124, 16.1M, 2 objects
+Dataset sat-removal/vm/disk-16k [ZVOL], ID 261, cr_txg 13, 16.1M, 2 objects
+ds_remap_deadlist:
+Dataset sat-removal/vm/disk-8k@s0 [ZVOL], ID 86, cr_txg 73, 8.23M, 2 objects
+Dataset sat-removal/vm/disk-8k@s1 [ZVOL], ID 180, cr_txg 124, 8.23M, 2 objects
+Dataset sat-removal/vm/disk-8k [ZVOL], ID 162, cr_txg 11, 8.23M, 2 objects
+ds_remap_deadlist:
+Dataset sat-removal/vm@s0 [ZPL], ID 82, cr_txg 73, 96K, 6 objects
+Dataset sat-removal/vm@s1 [ZPL], ID 176, cr_txg 124, 96K, 6 objects
+Dataset sat-removal/vm [ZPL], ID 154, cr_txg 10, 96K, 6 objects
+Dataset sat-removal/fs@s0 [ZPL], ID 88, cr_txg 73, 1.03M, 53 objects
+Dataset sat-removal/fs@s1 [ZPL], ID 182, cr_txg 124, 1.05M, 57 objects
+Dataset sat-removal/fs [ZPL], ID 70, cr_txg 15, 1.06M, 60 objects
+ds_remap_deadlist:
+Dataset sat-removal@s0 [ZPL], ID 80, cr_txg 73, 104K, 8 objects
+Dataset sat-removal@s1 [ZPL], ID 174, cr_txg 124, 104K, 8 objects
+Dataset sat-removal [ZPL], ID 54, cr_txg 1, 104K, 8 objects
+Verified large_blocks feature refcount of 0 is correct
+Verified large_dnode feature refcount of 0 is correct
+Verified sha512 feature refcount of 0 is correct
+Verified skein feature refcount of 0 is correct
+Verified edonr feature refcount of 0 is correct
+Verified userobj_accounting feature refcount of 9 is correct
+Verified encryption feature refcount of 0 is correct
+Verified project_quota feature refcount of 9 is correct
+Verified redaction_bookmarks feature refcount of 0 is correct
+Verified redacted_datasets feature refcount of 0 is correct
+Verified bookmark_written feature refcount of 0 is correct
+Verified livelist feature refcount of 0 is correct
+Verified zstd_compress feature refcount of 0 is correct
+Verified zilsaxattr feature refcount of 0 is correct
+Verified blake3 feature refcount of 0 is correct
+Verified redaction_list_spill feature refcount of 0 is correct
+Verified longname feature refcount of 0 is correct
+Verified large_microzap feature refcount of 0 is correct
+Verified physical_rewrite feature refcount of 0 is correct
+Verified device_removal feature refcount of 1 is correct
+Verified indirect_refcount feature refcount of 6 is correct

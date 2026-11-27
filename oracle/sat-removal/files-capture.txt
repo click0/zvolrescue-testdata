@@ -1,0 +1,53 @@
+# How files.json and zpool-history-il.txt were captured
+
+builder: tests/golden/build-satellite.sh of zvolrescue (tests/golden/capture-files.py), right after the export
+host:    Linux 7.0.0-1020-azure x86_64
+openzfs: zfs-2.4.1-1ubuntu5.1 zfs-kmod-2.4.1-1ubuntu5.1 
+import:  zpool import -d MEMBERS -o readonly=on -o cachefile=none -R ALTROOT -N sat-removal
+keys:    zfs load-key -L file://oracle/keys/... for each encryption root
+mounts:  each filesystem alone, mount -t zfs -o ro,zfsutil, its snapshots under .zfs/snapshot
+
+  pool: sat-removal
+ state: ONLINE
+remove: Removal of vdev 1 copied 7.44M in 0h0m, completed on Fri Nov 27 14:55:37 2026
+	600 memory used for removed device mappings
+config:
+
+	NAME                                    STATE     READ WRITE CKSUM
+	sat-removal                             ONLINE       0     0     0
+	  mirror-0                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-0b.img  ONLINE       0     0     0
+	  mirror-2                              ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-2a.img  ONLINE       0     0     0
+	    /var/tmp/sat/members/mirror-2b.img  ONLINE       0     0     0
+
+errors: No known data errors
+
+NAME                        MOUNTED  MOUNTPOINT                            USED  REFER
+sat-removal                 no       /var/tmp/sat/altroot/sat-removal     32.4M   104K
+sat-removal@s0              -        -                                       0B   104K
+sat-removal@s1              -        -                                       0B   104K
+sat-removal@s2              -        -                                       0B   104K
+sat-removal@s3              -        -                                       0B   104K
+sat-removal/fs              no       /var/tmp/sat/altroot/sat-removal/fs  1.34M  1.09M
+sat-removal/fs@s0           -        -                                      88K  1.03M
+sat-removal/fs@s1           -        -                                      72K  1.05M
+sat-removal/fs@s2           -        -                                      80K  1.07M
+sat-removal/fs@s3           -        -                                       0B  1.09M
+sat-removal/vm              no       /var/tmp/sat/altroot/sat-removal/vm  30.1M    96K
+sat-removal/vm@s0           -        -                                       0B    96K
+sat-removal/vm@s1           -        -                                       0B    96K
+sat-removal/vm@s2           -        -                                       0B    96K
+sat-removal/vm@s3           -        -                                       0B    96K
+sat-removal/vm/disk-16k     -        -                                    19.6M  16.1M
+sat-removal/vm/disk-16k@s0  -        -                                    1.14M  16.1M
+sat-removal/vm/disk-16k@s1  -        -                                     144K  16.1M
+sat-removal/vm/disk-16k@s2  -        -                                     144K  16.1M
+sat-removal/vm/disk-16k@s3  -        -                                       0B  16.1M
+sat-removal/vm/disk-8k      -        -                                    10.4M  8.23M
+sat-removal/vm/disk-8k@s0   -        -                                     744K  8.23M
+sat-removal/vm/disk-8k@s1   -        -                                     232K  8.23M
+sat-removal/vm/disk-8k@s2   -        -                                     232K  8.23M
+sat-removal/vm/disk-8k@s3   -        -                                       0B  8.23M
+members: unchanged after the export (their sums against members.sha256)

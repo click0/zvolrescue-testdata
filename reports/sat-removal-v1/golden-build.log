@@ -1,0 +1,27 @@
+== sat-removal (sat-removal-v1)
+Warning: volblocksize (8192) is less than the default minimum block size (16384).
+To reduce wasted space a volblocksize of 16384 is recommended.
+== initial fill
+== mirror-1 removed
+== oracle
+== export
+split-capture: 3 MiB in 27 files, the largest mos (0 MiB)
+== files and history, the pool imported read-only
+sat-removal: 3 entries
+sat-removal@s0: 3 entries, the same as sat-removal
+sat-removal@s1: 3 entries, the same as sat-removal
+sat-removal@s2: 3 entries, the same as sat-removal
+sat-removal@s3: 3 entries, the same as sat-removal
+sat-removal/fs: 61 entries
+sat-removal/fs@s0: 49 entries
+sat-removal/fs@s1: 53 entries
+sat-removal/fs@s2: 57 entries
+sat-removal/fs@s3: 61 entries, the same as sat-removal/fs
+sat-removal/vm: 1 entries
+sat-removal/vm@s0: 1 entries, the same as sat-removal/vm
+sat-removal/vm@s1: 1 entries, the same as sat-removal/vm
+sat-removal/vm@s2: 1 entries, the same as sat-removal/vm
+sat-removal/vm@s3: 1 entries, the same as sat-removal/vm
+15 filesystems and snapshots, 204 files
+== release files
+== done: /var/tmp/sat/release, /var/tmp/sat/oracle, /var/tmp/sat/IMAGE.md

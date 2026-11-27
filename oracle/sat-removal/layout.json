@@ -1,0 +1,79 @@
+{
+ "pool": "sat-removal",
+ "image_tag": "sat-removal-v1",
+ "source": "kernel",
+ "kernel": true,
+ "volumes": true,
+ "satellite": true,
+ "ashift": 12,
+ "tops": [
+  {
+   "index": 0,
+   "kind": "mirror",
+   "members": [
+    "t0-mirror-0",
+    "t0-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "kind": "indirect",
+   "members": [],
+   "groups": []
+  },
+  {
+   "index": 2,
+   "kind": "mirror",
+   "members": [
+    "t2-mirror-0",
+    "t2-mirror-1"
+   ],
+   "groups": [
+    {
+     "kind": "mirror",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "members": {
+  "t0-mirror-0": {
+   "file": "mirror-0a.img",
+   "guid": "2359606382834788621",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t0-mirror-1": {
+   "file": "mirror-0b.img",
+   "guid": "8655014742448197897",
+   "top": 0,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  },
+  "t2-mirror-0": {
+   "file": "mirror-2a.img",
+   "guid": "16509741992241385170",
+   "top": 2,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 0
+  },
+  "t2-mirror-1": {
+   "file": "mirror-2b.img",
+   "guid": "7716550172825022561",
+   "top": 2,
+   "group": 0,
+   "group_kind": "mirror",
+   "index": 1
+  }
+ }
+}

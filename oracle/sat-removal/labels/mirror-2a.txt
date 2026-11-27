@@ -1,0 +1,45 @@
+------------------------------------
+LABEL 0 
+------------------------------------
+    version: 5000
+    name: 'sat-removal'
+    state: 1
+    txg: 280
+    pool_guid: 10622766988208435531
+    errata: 0
+    min_alloc: 4096
+    max_alloc: 4096
+    hostid: 442208350
+    hostname: 'runnervm3lb7s'
+    top_guid: 3280214024132125442
+    guid: 16509741992241385170
+    vdev_children: 3
+    vdev_tree:
+        type: 'mirror'
+        id: 2
+        guid: 3280214024132125442
+        metaslab_array: 139
+        metaslab_shift: 24
+        ashift: 12
+        asize: 263716864
+        min_alloc: 4096
+        is_log: 0
+        create_txg: 4
+        children[0]:
+            type: 'file'
+            id: 0
+            guid: 16509741992241385170
+            path: '/var/tmp/sat/members/mirror-2a.img'
+            create_txg: 4
+        children[1]:
+            type: 'file'
+            id: 1
+            guid: 7716550172825022561
+            path: '/var/tmp/sat/members/mirror-2b.img'
+            create_txg: 4
+    features_for_read:
+        com.delphix:hole_birth
+        com.delphix:embedded_data
+        com.klarasystems:vdev_zaps_v2
+        com.delphix:device_removal
+    labels = 0 1 2 3 

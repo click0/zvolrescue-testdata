@@ -1,0 +1,308 @@
+[
+ {
+  "id": "control-sat-removal",
+  "description": "Nothing damaged and nothing told, on the satellite of a removed vdev: what was on it read through the mapping the removal left: every volume, every file of every filesystem and snapshot, the history",
+  "expected": "bit-exact",
+  "notes": [],
+  "outcomes": {
+   "sat-removal/vm/disk-8k": "ok",
+   "sat-removal/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-removal": "ok",
+    "sat-removal/fs": "ok",
+    "sat-removal/fs@s0": "ok",
+    "sat-removal/fs@s1": "ok",
+    "sat-removal/fs@s2": "ok",
+    "sat-removal/fs@s3": "ok",
+    "sat-removal/vm": "ok",
+    "sat-removal/vm@s0": "ok",
+    "sat-removal/vm@s1": "ok",
+    "sat-removal/vm@s2": "ok",
+    "sat-removal/vm@s3": "ok",
+    "sat-removal@s0": "ok",
+    "sat-removal@s1": "ok",
+    "sat-removal@s2": "ok",
+    "sat-removal@s3": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok",
+    "txg 271": "ok",
+    "txg 271 features": "ok",
+    "txg 262": "ok",
+    "txg 262 features": "ok",
+    "txg 261": "ok",
+    "txg 261 features": "ok",
+    "txg 258": "ok",
+    "txg 258 features": "ok",
+    "txg 254": "ok",
+    "txg 254 features": "ok",
+    "txg 250": "ok",
+    "txg 250 features": "ok",
+    "txg 247": "ok",
+    "txg 247 features": "ok",
+    "txg 243": "ok",
+    "txg 243 features": "ok",
+    "txg 236": "ok",
+    "txg 236 features": "ok",
+    "txg 232": "ok",
+    "txg 232 features": "ok",
+    "txg 228": "ok",
+    "txg 228 features": "ok",
+    "txg 225": "ok",
+    "txg 225 features": "ok",
+    "txg 221": "ok",
+    "txg 221 features": "ok",
+    "txg 217": "ok",
+    "txg 217 features": "ok",
+    "txg 210": "ok",
+    "txg 210 features": "ok",
+    "txg 203": "ok",
+    "txg 203 features": "ok",
+    "txg 199": "ok",
+    "txg 199 features": "ok",
+    "txg 192": "ok",
+    "txg 192 features": "ok",
+    "txg 188": "ok",
+    "txg 188 features": "ok",
+    "txg 181": "ok",
+    "txg 181 features": "ok",
+    "txg 177": "ok",
+    "txg 177 features": "ok",
+    "txg 174": "ok",
+    "txg 174 features": "ok",
+    "txg 170": "ok",
+    "txg 170 features": "ok",
+    "txg 169": "ok",
+    "txg 169 features": "ok",
+    "txg 159": "ok",
+    "txg 159 features": "ok"
+   },
+   "txgs": [
+    159,
+    169,
+    170,
+    174,
+    177,
+    181,
+    188,
+    192,
+    199,
+    203,
+    210,
+    217,
+    221,
+    225,
+    228,
+    232,
+    236,
+    243,
+    247,
+    250,
+    254,
+    258,
+    261,
+    262,
+    271,
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok",
+    "verify tampered": "ok"
+   }
+  },
+  "carve": {
+   "expected": "every volume",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-removal/vm/disk-16k": "ok",
+    "sat-removal/vm/disk-8k": "ok"
+   },
+   "detail": {
+    "sat-removal/vm/disk-16k": [
+     "c0021, born at txg 254"
+    ],
+    "sat-removal/vm/disk-8k": [
+     "c0020, born at txg 250"
+    ]
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-0": "ok",
+    "label t0-mirror-1": "ok",
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-mirror-0": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "bit-exact",
+  "verdict": "pass",
+  "image": "sat-removal-v1"
+ },
+ {
+  "id": "member-sat-removal-a-whole-mirror",
+  "description": "Both halves of the first mirror absent: what was copied there from the removed vdev gone with the rest of it",
+  "expected": "refused | partial",
+  "notes": [],
+  "outcomes": {
+   "sat-removal/vm/disk-8k": "incomplete (blocks written as zeros)",
+   "sat-removal/vm/disk-16k": "incomplete (blocks written as zeros)"
+  },
+  "files": {
+   "expected": "not defect",
+   "actual": "partial",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-removal": "ok",
+    "sat-removal/fs": "incomplete (entries said not whole)",
+    "sat-removal/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "ok",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "ok",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "partial",
+  "verdict": "pass",
+  "image": "sat-removal-v1"
+ },
+ {
+  "id": "member-sat-removal-one-of-each-mirror",
+  "description": "One half of each mirror left after the removal gone: one absent, one zeroed whole",
+  "expected": "bit-exact | reconstructed",
+  "notes": [],
+  "outcomes": {
+   "sat-removal/vm/disk-8k": "ok",
+   "sat-removal/vm/disk-16k": "ok"
+  },
+  "files": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "reconstructed",
+   "verdict": "pass",
+   "outcomes": {
+    "sat-removal": "ok",
+    "sat-removal/fs": "ok",
+    "sat-removal/vm": "ok"
+   }
+  },
+  "datasets": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "newest": "ok",
+    "newest features": "ok"
+   },
+   "txgs": [
+    280
+   ]
+  },
+  "report": {
+   "expected": "not defect",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcomes": {
+    "report": "ok",
+    "verify": "ok"
+   }
+  },
+  "scan": {
+   "expected": "not defect",
+   "actual": "refused",
+   "verdict": "pass",
+   "outcomes": {
+    "label t0-mirror-1": "ok",
+    "label t2-mirror-0": "ok",
+    "label t2-mirror-1": "refused",
+    "uberblock txg 262": "ok",
+    "uberblock txg 280": "ok",
+    "rings t0-mirror-1": "ok",
+    "rings t2-mirror-0": "ok",
+    "rings t2-mirror-1": "refused",
+    "pool": "ok"
+   }
+  },
+  "timeline": {
+   "expected": "bit-exact | reconstructed",
+   "actual": "bit-exact",
+   "verdict": "pass",
+   "outcome": "ok"
+  },
+  "inputs_unchanged": true,
+  "actual": "reconstructed",
+  "verdict": "pass",
+  "image": "sat-removal-v1"
+ }
+]

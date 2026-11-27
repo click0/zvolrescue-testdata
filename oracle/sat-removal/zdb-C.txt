@@ -1,0 +1,93 @@
+
+MOS Configuration:
+        version: 5000
+        name: 'sat-removal'
+        state: 0
+        txg: 160
+        pool_guid: 10622766988208435531
+        errata: 0
+        min_alloc: 4096
+        max_alloc: 4096
+        hostid: 442208350
+        hostname: 'runnervm3lb7s'
+        com.delphix:has_per_vdev_zaps
+        vdev_children: 3
+        vdev_tree:
+            type: 'root'
+            id: 0
+            guid: 10622766988208435531
+            create_txg: 4
+            com.klarasystems:vdev_zap_root: 129
+            children[0]:
+                type: 'mirror'
+                id: 0
+                guid: 10621216688241444016
+                metaslab_array: 147
+                metaslab_shift: 24
+                ashift: 12
+                asize: 263716864
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 130
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 2359606382834788621
+                    path: '/var/tmp/sat/members/mirror-0a.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 131
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 8655014742448197897
+                    path: '/var/tmp/sat/members/mirror-0b.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 132
+            children[1]:
+                type: 'indirect'
+                id: 1
+                guid: 18241700732953410596
+                whole_disk: 0
+                metaslab_array: 0
+                metaslab_shift: 24
+                ashift: 12
+                asize: 263716864
+                min_alloc: 4096
+                is_log: 0
+                non_allocating: 1
+                com.delphix:indirect_object: 277
+                com.delphix:indirect_births: 279
+                create_txg: 4
+                com.delphix:vdev_zap_top: 133
+            children[2]:
+                type: 'mirror'
+                id: 2
+                guid: 3280214024132125442
+                metaslab_array: 139
+                metaslab_shift: 24
+                ashift: 12
+                asize: 263716864
+                min_alloc: 4096
+                is_log: 0
+                create_txg: 4
+                com.delphix:vdev_zap_top: 136
+                children[0]:
+                    type: 'file'
+                    id: 0
+                    guid: 16509741992241385170
+                    path: '/var/tmp/sat/members/mirror-2a.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 137
+                children[1]:
+                    type: 'file'
+                    id: 1
+                    guid: 7716550172825022561
+                    path: '/var/tmp/sat/members/mirror-2b.img'
+                    create_txg: 4
+                    com.delphix:vdev_zap_leaf: 138
+        features_for_read:
+            com.delphix:hole_birth
+            com.delphix:embedded_data
+            com.klarasystems:vdev_zaps_v2
+            com.delphix:device_removal

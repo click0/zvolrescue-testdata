@@ -1,0 +1,5 @@
+sat-removal-v1 pass       control-sat-removal              expected bit-exact      actual bit-exact  files bit-exact  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact  carve bit-exact
+sat-removal-v1 pass       member-sat-removal-a-whole-mirror expected refused | partial actual partial  files partial  timeline bit-exact  datasets bit-exact  scan bit-exact  report bit-exact
+sat-removal-v1 pass       member-sat-removal-one-of-each-mirror expected bit-exact | reconstructed actual reconstructed  files reconstructed  timeline bit-exact  datasets bit-exact  scan refused  report bit-exact
+sat-removal-v1: 101 manifest(s) written for another pool, not run here
+sat-removal-v1: 3 pass
