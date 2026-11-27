@@ -1,0 +1,13 @@
+id = "control-sat-slog"
+image = "sat-slog"
+description = "Nothing damaged and nothing told, on the satellite with a separate intent log it never applied: the pool as it was when it froze: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# The records in the log are what a replay would add (vm/disk-sync@replayed
+# in the oracle); the members hold the pool at the freeze, and that is
+# what every reader that does not replay the log must give.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

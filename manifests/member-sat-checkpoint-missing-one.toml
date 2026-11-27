@@ -1,0 +1,14 @@
+id = "member-sat-checkpoint-missing-one"
+image = "sat-checkpoint"
+description = "One raidz1 member absent, with a checkpoint in the pool"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz1-2"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

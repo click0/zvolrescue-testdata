@@ -1,0 +1,15 @@
+id = "data-sat-checkpoint-one-member"
+image = "sat-checkpoint"
+description = "The written space of one raidz1 member zeroed: the volumes now and at the checkpoint through parity"
+classes = ["data"]
+
+[[damage]]
+member = "t0-raidz1-1"
+range = "data:0%.."
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

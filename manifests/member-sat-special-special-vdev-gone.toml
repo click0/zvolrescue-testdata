@@ -1,0 +1,16 @@
+id = "member-sat-special-special-vdev-gone"
+image = "sat-special"
+description = "Both halves of the special mirror absent: every copy of the pool's metadata with them"
+classes = ["member"]
+
+[[damage]]
+member = "t1-mirror-0"
+pattern = "missing"
+
+[[damage]]
+member = "t1-mirror-1"
+pattern = "missing"
+
+[expect]
+outcome = "refused"
+volumes = "all"

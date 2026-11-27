@@ -14,7 +14,10 @@ on every push here:
     in an oracle of what it is written against: its `image` names a pool,
     by the name that pool's `layout.json` gives (`golden` where it names
     none), and then any image of that pool will do — on the others the
-    case is n/a — or one image by its tag (`golden-v2`);
+    case is n/a — or one image by its tag (`golden-v2`); a satellite's
+    manifests (`sat-<name>`) are here before its oracle is, the build
+    being judged by them, and until it comes they are held to the format
+    alone;
   * an older copy is `round6` (the copies the image's release holds) and
     named only for a member the release holds one of;
   * expected outcomes, of the volumes, of the files (`expect.files`,
@@ -122,6 +125,35 @@ class Image:
             if info["index"] == leaf:
                 return role
         return None
+
+
+UNBUILT_SAID = set()
+
+
+class Everything:
+    """A set that holds anything."""
+
+    def __contains__(self, item):
+        return True
+
+
+class Unbuilt:
+    """A satellite whose oracle is not here yet: what is built is judged
+    by its manifests, which are here first, so they are held to the
+    format alone until the oracle comes — no member, top-level vdev,
+    dataset or volume they name is checked, and a satellite has no older
+    copies."""
+
+    def __init__(self, pool):
+        self.dir, self.pool, self.tag = pool, pool, ""
+        self.members = {"?": {"file": "?", "group_kind": "?", "top": 0, "index": 0}}
+        self.kinds = self.tops = self.volumes = Everything()
+        self.datasets = None
+        self.files = self.history = self.zdb_c = True
+        self.older = set()
+
+    def member(self, spec):
+        return "?"
 
 
 def check_range(spec):
@@ -256,6 +288,11 @@ def lint(path, images):
     except tomllib.TOMLDecodeError as e:
         return [f"does not parse: {e}"]
     name = m.get("image", "golden")
+    if isinstance(name, str) and name not in images and name.startswith("sat-"):
+        if name not in UNBUILT_SAID:
+            UNBUILT_SAID.add(name)
+            print(f"{name}: no oracle here yet, its manifests held to the format alone", file=sys.stderr)
+        return lint_against(m, stem, Unbuilt(name))
     if not isinstance(name, str) or name not in images:
         return [f"key {k!r} is not in the format" for k in m if k not in TOP_KEYS] + \
             [f"image {name!r} names no pool or image an oracle here describes ({sorted(images)})"]

@@ -61,17 +61,30 @@ counts as the volume read: ZFS would have handed over the same. On the
 control it is bit-exact or a defect, like any volume.
 
 A manifest written for one pool alone names it: `image = "<pool>"`, by
-the name that pool's `layout.json` gives (`golden`, and a satellite's
-when there are satellites). It is then run against that pool and no
+the name that pool's `layout.json` gives (`golden`, or a satellite's,
+`sat-<name>`). It is then run against that pool and no
 other — every image of it: `image-v1` and `golden-v2` are both of
 `golden` — and the harness fetches nothing of another pool for it. One
 aimed at what a single image holds (a volume `image-v1` does not have)
 names that image by its tag instead: `image = "golden-v2"`. One that
 names none, as most manifests here do, is run against any pool the
-harness is given — the published images and the pools it builds with
-`ztest` on the spot — and is checked here against `golden`'s oracles,
-passing when one of them has everything it names (on the other it is
-n/a).
+harness is given but a satellite — the published golden images and the
+pools it builds with `ztest` on the spot — and is checked here against
+`golden`'s oracles, passing when one of them has everything it names
+(on the other it is n/a).
+
+A satellite (`layout.json` says `satellite`) is a small pool built for
+one pool-level feature the golden pool does not have — a removed vdev, a
+checkpoint, a hot spare and an unfinished replacing, an expanded raidz,
+special and dedup vdevs, two ashifts, an intent log never applied,
+`multihost` — and runs only the manifests that name it: the others are
+written for three top-level vdevs and every kind of dataset. Its members
+are named by their roles in its `layout.json` (`t0-mirror-0`,
+`t2-mirror-1`, …); a slot under replacement is the device that stands
+for it and, after a dot, each other device it holds (`t0-raidz2-2.1`,
+the hot spare beside the disk it stands in for). A satellite's manifests
+are here before its oracle is — the build is judged by them — and until
+the oracle comes the linter holds them to the format alone.
 
 Ranges are `start..end` in bytes with `KiB`/`MiB`/`GiB` suffixes; a
 negative start counts from the end of the member (`-512KiB..` is the last
@@ -276,7 +289,7 @@ there such a case is `n/a`.
 | `metadata` | MOS objset, a dataset's own objset, a dnode block of a volume's dataset, an indirect block of a volume's data object, the crypto key object of an encrypted volume — one copy and every copy (a volume's property ZAP on `image-v1` is embedded in its dnode's block pointer, so the dnode-block cases are its — see above); on `golden-v2`, two of the three copies of an indirect block of the `copies=2` volume |
 | `data` | one RAIDZ column, both mirror halves in different places, a gang header; one data block of a named volume — one piece, every piece — and every piece of an encrypted volume's block; on `golden-v2` (`image = "golden-v2"`), one piece of a 128K block, one and both copies of a block of the `copies=2` volume, and a block of the `checksum=off` volume |
 | `member` | whole member missing |
-| `control` | nothing at all: the image as published, every volume and every file of every filesystem and snapshot (`control-undamaged`) |
+| `control` | nothing at all: the image as published, every volume and every file of every filesystem and snapshot (`control-undamaged`), and the same of each satellite (`control-sat-<name>`) |
 | `older-self` | a member replaced by a consistent copy of itself from round 6 of the fill (the `round6-*` files of the release): one mirror half, both halves, two raidz2 columns, one dRAID child, and one stale beside one missing (`older-self-*.toml`, `combo-older-self-plus-member-gone.toml`) |
 
 Combinations are pairs and triples of variants across members and
@@ -342,11 +355,17 @@ expectations do not yet carry the redundancy arithmetic that would let
 them be judged against any shape — so these are rules for writing
 manifests, and the only place they are written down is here.
 
-The 78 manifests cover every class of SPEC §9.1's catalogue at least
+The 104 manifests: 78 cover every class of SPEC §9.1's catalogue at least
 once against the layout `image-v1` and `golden-v2` share: members
 `mirror-0a/0b`, `raidz2-0..3`, `draid1-0..3` (`oracle/golden/layout.json`,
-`oracle/golden-v2/layout.json`); five name `golden-v2`, for what only it
-holds, and are n/a on `image-v1`. Expected
+`oracle/golden-v2/layout.json`); five of them name `golden-v2`, for what only it
+holds, and are n/a on `image-v1`. The other 26 are the satellites': a
+control each, and for each the members and the data its feature puts
+where a reader must find them — the half of a mirror that took a
+removed vdev's blocks, the hot spare and the stale disk it stands in
+for, the disk being replaced beside one that holds only the newest
+blocks, the special and the dedup vdev, a raidz at each ashift, the log
+device, the rings a heartbeat writes into. Expected
 outcomes are stated from ZFS redundancy, and against the published
 image every one applies and every one lands in its category: the
 reports of the runs are in [`reports/`](../reports/), and the Results

@@ -1,0 +1,10 @@
+id = "control-sat-special"
+image = "sat-special"
+description = "Nothing damaged and nothing told, on the satellite with special and dedup vdevs: metadata and small blocks on the special mirror, the dedup table on its own: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

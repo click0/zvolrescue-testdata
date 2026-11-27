@@ -1,0 +1,14 @@
+id = "member-sat-mmp-mirror-half"
+image = "sat-mmp"
+description = "One half of the mirror absent"
+classes = ["member"]
+
+[[damage]]
+member = "t0-mirror-1"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

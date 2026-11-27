@@ -1,0 +1,14 @@
+id = "member-sat-slog-log-gone"
+image = "sat-slog"
+description = "The log device absent: nothing a reader of the pool's state needs"
+classes = ["member"]
+
+[[damage]]
+member = "t1-file-0"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

@@ -1,0 +1,12 @@
+id = "control-sat-removal"
+image = "sat-removal"
+description = "Nothing damaged and nothing told, on the satellite of a removed vdev: what was on it read through the mapping the removal left: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# Blocks written before the removal are still named by DVAs of the removed
+# vdev; read through the indirect mapping they are where it copied them.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

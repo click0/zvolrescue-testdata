@@ -1,0 +1,21 @@
+id = "combo-sat-spare-three-columns"
+image = "sat-spare"
+description = "Two disks absent and the disk being replaced too: three columns of every block older than the replacing"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz2-0"
+pattern = "missing"
+
+[[damage]]
+member = "t0-raidz2-1"
+pattern = "missing"
+
+[[damage]]
+member = "t0-raidz2-4"
+pattern = "missing"
+
+[expect]
+# Past raidz2's two for every block the new disk does not hold.
+outcome = "refused"
+volumes = "all"

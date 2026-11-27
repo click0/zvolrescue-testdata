@@ -1,0 +1,20 @@
+id = "member-sat-special-dedup-vdev-gone"
+image = "sat-special"
+description = "Both halves of the dedup mirror absent: the dedup table lost, and nothing a reader needs with it"
+classes = ["member"]
+
+[[damage]]
+member = "t2-mirror-0"
+pattern = "missing"
+
+[[damage]]
+member = "t2-mirror-1"
+pattern = "missing"
+
+[expect]
+# A deduplicated block's pointer names its copies like any other's; the
+# table is what a write consults, and a read never does.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

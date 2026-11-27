@@ -1,0 +1,10 @@
+id = "control-sat-ashift"
+image = "sat-ashift"
+description = "Nothing damaged and nothing told, on the satellite of a raidz1 at ashift 9 beside a raidz1 at ashift 13: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

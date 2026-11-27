@@ -1,0 +1,19 @@
+id = "member-sat-ashift-one-of-each"
+image = "sat-ashift"
+description = "One member of each raidz1 gone: absent at ashift 9, zeroed at ashift 13"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz1-1"
+pattern = "missing"
+
+[[damage]]
+member = "t1-raidz1-2"
+range = "0.."
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

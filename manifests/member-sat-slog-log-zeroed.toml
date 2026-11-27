@@ -1,0 +1,15 @@
+id = "member-sat-slog-log-zeroed"
+image = "sat-slog"
+description = "The log device zeroed whole, its labels with it"
+classes = ["member"]
+
+[[damage]]
+member = "t1-file-0"
+range = "0.."
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

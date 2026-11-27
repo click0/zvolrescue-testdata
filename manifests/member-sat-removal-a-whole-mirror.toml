@@ -1,0 +1,18 @@
+id = "member-sat-removal-a-whole-mirror"
+image = "sat-removal"
+description = "Both halves of the first mirror absent: what was copied there from the removed vdev gone with the rest of it"
+classes = ["member"]
+
+[[damage]]
+member = "t0-mirror-0"
+pattern = "missing"
+
+[[damage]]
+member = "t0-mirror-1"
+pattern = "missing"
+
+[expect]
+# A whole top-level vdev lost: the volumes' blocks on it are beyond any
+# copy, and a partial image counted and announced is the most there is.
+outcome = "refused"
+volumes = "all"

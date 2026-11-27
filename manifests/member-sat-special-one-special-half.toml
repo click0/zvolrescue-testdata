@@ -1,0 +1,14 @@
+id = "member-sat-special-one-special-half"
+image = "sat-special"
+description = "One half of the special mirror absent"
+classes = ["member"]
+
+[[damage]]
+member = "t1-mirror-0"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

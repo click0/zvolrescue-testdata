@@ -1,0 +1,14 @@
+id = "member-sat-spare-replacing-old-side-gone"
+image = "sat-spare"
+description = "The disk being replaced absent: slot 4 has only the new disk, which holds what the last round wrote and nothing older"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz2-4"
+pattern = "missing"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

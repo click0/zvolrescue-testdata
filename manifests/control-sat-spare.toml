@@ -1,0 +1,12 @@
+id = "control-sat-spare"
+image = "sat-spare"
+description = "Nothing damaged and nothing told, on the satellite with a hot spare at work and a replacing unfinished: each slot read from the device that holds the block: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# Slot 2 is the stale disk and the spare that replaced it, slot 4 the old
+# disk and a new one that holds only the last round: every device given.
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

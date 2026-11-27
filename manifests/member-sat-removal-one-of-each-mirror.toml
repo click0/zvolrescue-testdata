@@ -1,0 +1,19 @@
+id = "member-sat-removal-one-of-each-mirror"
+image = "sat-removal"
+description = "One half of each mirror left after the removal gone: one absent, one zeroed whole"
+classes = ["member"]
+
+[[damage]]
+member = "t0-mirror-0"
+pattern = "missing"
+
+[[damage]]
+member = "t2-mirror-1"
+range = "0.."
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

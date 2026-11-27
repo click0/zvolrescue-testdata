@@ -1,0 +1,15 @@
+id = "labels-sat-mmp-rings-one-member"
+image = "sat-mmp"
+description = "Every uberblock ring of one half of the mirror zeroed, the heartbeat's slots with them"
+classes = ["labels"]
+
+[[damage]]
+member = "t0-mirror-0"
+range = "label:all/rings"
+pattern = "zeros"
+
+[expect]
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

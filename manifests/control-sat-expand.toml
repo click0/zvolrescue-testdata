@@ -1,0 +1,13 @@
+id = "control-sat-expand"
+image = "sat-expand"
+description = "Nothing damaged and nothing told, on the satellite of an expanded raidz, which zvolrescue does not read: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# org.openzfs:raidz_expansion is active: a block born before the
+# expansion has its columns laid over the four disks, not where the
+# three-disk geometry puts them. Reading it as if it were not would give
+# the wrong bytes with no checksum objecting (SPEC F-70), so the one
+# right answer is to refuse.
+outcome = "refused"
+volumes = "all"

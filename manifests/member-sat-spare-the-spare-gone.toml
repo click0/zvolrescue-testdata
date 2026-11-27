@@ -1,0 +1,20 @@
+id = "member-sat-spare-the-spare-gone"
+image = "sat-spare"
+description = "The hot spare absent and one more disk: slot 2 has only the disk taken offline, stale for every block written since"
+classes = ["member"]
+
+[[damage]]
+member = "t0-raidz2-2.1"
+pattern = "missing"
+
+[[damage]]
+member = "t0-raidz2-0"
+pattern = "missing"
+
+[expect]
+# Blocks born before the disk went offline: one column absent. After: one
+# absent and one stale, which only its checksum tells - two of raidz2's two.
+outcome = "recovered"
+volumes = "all"
+files = "recovered"
+timeline = "recovered"

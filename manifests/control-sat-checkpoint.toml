@@ -1,0 +1,12 @@
+id = "control-sat-checkpoint"
+image = "sat-checkpoint"
+description = "Nothing damaged and nothing told, on the satellite with a pool checkpoint: the volumes as they are, and every volume at the checkpoint, the destroyed one among them: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+# The harness reads every volume again at the checkpoint's TXG, and the
+# volume destroyed after it without being told where (judge_dump).
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

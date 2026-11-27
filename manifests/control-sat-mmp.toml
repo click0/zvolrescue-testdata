@@ -1,0 +1,10 @@
+id = "control-sat-mmp"
+image = "sat-mmp"
+description = "Nothing damaged and nothing told, on the satellite with multihost=on: the uberblocks of its heartbeat in the rings: every volume, every file of every filesystem and snapshot, the history"
+classes = ["control"]
+
+[expect]
+outcome = "bit-exact"
+volumes = "all"
+files = "bit-exact"
+timeline = "bit-exact"

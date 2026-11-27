@@ -1,0 +1,19 @@
+id = "data-sat-ashift-two-of-ashift13"
+image = "sat-ashift"
+description = "Half the written space of two members of the ashift-13 raidz1 zeroed, at the same offsets"
+classes = ["data"]
+
+[[damage]]
+member = "t1-raidz1-0"
+range = "data:0%..50%"
+pattern = "zeros"
+
+[[damage]]
+member = "t1-raidz1-1"
+range = "data:0%..50%"
+pattern = "zeros"
+
+[expect]
+# Two of a raidz1's three columns where both are zeroed: past its one.
+outcome = "refused"
+volumes = "all"
