@@ -3,9 +3,9 @@
 
 The harness (`tests/golden/run-matrix.py` in zvolrescue) writes its
 verdicts to `report-<label>.json` and `.md` in its `--out` directory;
-`realworld.yml` there runs it against a published image every week and
-calls this to keep what came of it, and a run made by hand is kept the
-same way. The first run against a tag is `reports/<tag>/`, every later
+`realworld.yml` there, run by hand, runs it against a published image
+and calls this to keep what came of it, and a run of the harness made
+outside it is kept the same way. The first run against a tag is `reports/<tag>/`, every later
 one `reports/<tag>-r<N>/`, N one more than the highest there is. Into
 it go the two report files, the matrix's log when there is one, and a
 README.md written from the JSON: who ran it, against what, with which
@@ -83,7 +83,7 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
     ...     {"id": "c", "expected": "—", "actual": "n/a", "verdict": "n/a",
     ...      "notes": ["no such member"], "inputs_unchanged": True},
     ... ]
-    >>> text = summary(recs, "image-v1", "golden", 3, "", "`realworld.yml` in zvolrescue, the weekly run",
+    >>> text = summary(recs, "image-v1", "golden", 3, "", "`realworld.yml` in zvolrescue, run by hand",
     ...                "abcdef0123", "0123456789", 1722, False, "2026-11-30")
     >>> print(text.split("## ")[0].strip())  # doctest: +NORMALIZE_WHITESPACE
     # Damage matrix run: image-v1, run 3
@@ -92,7 +92,7 @@ def summary(records, tag, pool, number, run, by, tool, manifests, seconds, held_
     [IMAGE.md](../../IMAGE.md)), judged against the oracle in
     `oracle/golden/`.
     <BLANKLINE>
-    Run by `realworld.yml` in zvolrescue, the weekly run, on 2026-11-30.
+    Run by `realworld.yml` in zvolrescue, run by hand, on 2026-11-30.
     zvolrescue `abcdef0`, manifests at `0123456`: **3 manifests: pass 2,
     n/a 1**; inputs unchanged in every run; the held-out manifests not
     run; 1722 seconds.

@@ -83,8 +83,8 @@ did not know `dynamic_gang_header`; v0.9.9 reads it. The latest run is
 passed, none `n/a` — among them ten for a pool no uberblock or no label
 is left of, read at the headers `zvolcarve roots` finds and through the
 layout given by hand, one of which found a defect on its way to
-passing. Every run after it — the weekly one of `realworld.yml` in
-zvolrescue and any by hand — goes into the next `reports/image-v1-rN`,
+passing. Every run after it, of `realworld.yml` in zvolrescue started
+by hand, goes into the next `reports/image-v1-rN`,
 written by `tools/add-report.py`.
 [reports/image-v1-r3](reports/image-v1-r3/README.md), 70 manifests, all
 passed, is the first to judge `zvolfiles` and `zvoltimeline` as well,

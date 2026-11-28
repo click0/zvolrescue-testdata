@@ -45,7 +45,7 @@ back of it (stage 2). The features zvolrescue has learned since
 | `golden`, older-self manifests | (the same 2.51 GB) | the members and the older copies named, about 2.7 GB of `golden-v2` |
 | a satellite | — | 0.02–0.18 GB |
 
-The weekly and manual runs (`realworld.yml` in zvolrescue) become a
+The runs of `realworld.yml` in zvolrescue, all by hand, become a
 matrix: a job per pool, and `golden`'s manifests in a few shards, each
 fetching its pool from the release.
 
@@ -56,7 +56,7 @@ fetching its pool from the release.
 | A release file | under 2 GiB; no limit on a release's total size or on downloads | the largest member is 194 MB; fetching from a release costs nothing, so the same pool may be fetched by every shard |
 | A file in git | a warning above 50 MiB, refused above 100 MiB | `zdb-dddddd.txt` is past the warning: split it from `golden-v2` on |
 | A repository | best under 1 GB, strongly under 5 GB | text only; `.git` is 18 MB today |
-| Actions cache | 10 GB per repository; an entry not used for 7 days is evicted | a weekly run is at the edge of eviction, so the release, not the cache, is where a weekly run fetches from; drop an image's cache entry once its successor is pinned |
+| Actions cache | 10 GB per repository; an entry not used for 7 days is evicted | a run by hand can come after its entry is evicted, so the release, not the cache, is where a run fetches from; drop an image's cache entry once its successor is pinned |
 | A hosted runner (public repository) | 4 vCPU, 16 GB RAM, 14 GB SSD; a job up to 6 h; up to 256 jobs in a matrix, 20 at once | members decompress sparse — they take what is allocated — and a job holds one pool and the copies the harness damages |
 
 ## Stage 1 — on `image-v1`, no new image
@@ -116,7 +116,7 @@ Release: +0. Git: under 1 MB of text.
    JSON, and the published image's job of `realworld.yml` in zvolrescue
    calls it after every run on `main` and pushes the result with the
    token `publish-golden.yml` uses. That token (`TESTDATA_TOKEN`) is not
-   set yet, by choice: until it is, the weekly run leaves its report as
+   set yet, by choice: until it is, a run leaves its report as
    an artifact and runs are kept here by hand (`image-v1-r2` to `-r6`).
 7. *Done.* **`list` and `scan` judged against zdb's own records**,
    which the oracle had from the build and nothing read: every case
@@ -156,8 +156,8 @@ the manifests name; 100 MB of oracle text checked out, 82 MB of it
 older copies `older-self:round6`, which is either image's, and five name
 `golden-v2` by its tag for what it alone holds (`copies=2`,
 `checksum=off`, 128K blocks); `oracle/golden/` stays `image-v1`'s, and
-`realworld.yml` in zvolrescue judges both published images every week,
-a job each. On the control, the carve did not find `vm/doomed` among
+`realworld.yml` in zvolrescue judges both published images, run by
+hand, a job each. On the control, the carve did not find `vm/doomed` among
 the newest candidates of its block size: its blocks were freed nine
 rounds before the export.
 
@@ -182,8 +182,8 @@ members of 128 MiB running out of space to OpenZFS's slop: they are
 program, as it should be until zvolrescue reads a reflowed raidz. What
 it came to against the estimates: 0.59 GB of release in all (54 to
 97 MB each; 0.8 GB estimated), 43 MB of oracle text. `realworld.yml` in
-zvolrescue judges the eight every week beside the two golden images, a
-job each.
+zvolrescue judges the eight beside the two golden images, a job each,
+when it is run.
 
 Release: about 3.6 GB in all — `golden-v2` 2.8 GB with the older copies
 the manifests name, the satellites 0.8 GB — beside `image-v1`'s 2.51 GB,
@@ -238,7 +238,7 @@ case rather than answering wrongly.
   is a feature the pool lacks; 7 manifests, 7 passed at the first
   build, the version-28 pool read whole by every program at every TXG
   of its rings. Published as `sat-compat20-v1`, `sat-nofeatures-v1` and
-  `sat-v28-v1`, 0.19 GB, and judged every week with the others.
+  `sat-v28-v1`, 0.19 GB, and judged with the others.
 * *Done* (2026-11-27). **A pool at scale**, `held_out` and in a tag of its own that a
   regular run never fetches: thousands of snapshots and datasets
   (0.2–0.4 GB), or a large volume of content ZFS compresses
